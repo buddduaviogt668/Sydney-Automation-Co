@@ -1,121 +1,802 @@
 {
   "redirects": [
-    { "source": "/services/lighting-control",   "destination": "/lighting-control-repair-sydney.html", "permanent": true },
-    { "source": "/services/lighting-control/",  "destination": "/lighting-control-repair-sydney.html", "permanent": true },
-    { "source": "/products/dali-lighting-control",  "destination": "/dali-lighting-repair.html", "permanent": true },
-    { "source": "/products/dali-lighting-control/", "destination": "/dali-lighting-repair.html", "permanent": true },
-    { "source": "/products/clipsal-c-bus",   "destination": "/c-bus-programmer-sydney.html", "permanent": true },
-    { "source": "/products/clipsal-c-bus/",  "destination": "/c-bus-programmer-sydney.html", "permanent": true },
-    { "source": "/products/dynalite",        "destination": "/dynalite-programmer-sydney.html", "permanent": true },
-    { "source": "/products/dynalite/",       "destination": "/dynalite-programmer-sydney.html", "permanent": true },
-    { "source": "/products/rapix-lighting-control",  "destination": "/rapix-lighting-control.html", "permanent": true },
-    { "source": "/products/rapix-lighting-control/", "destination": "/rapix-lighting-control.html", "permanent": true },
-    { "source": "/services/smart-buildings",  "destination": "/services.html", "permanent": true },
-    { "source": "/services/smart-buildings/", "destination": "/services.html", "permanent": true },
-    { "source": "/contact-us",   "destination": "/contact.html", "permanent": true },
-    { "source": "/contact-us/",  "destination": "/contact.html", "permanent": true },
-    { "source": "/about-us",     "destination": "/about.html", "permanent": true },
-    { "source": "/about-us/",    "destination": "/about.html", "permanent": true },
-    { "source": "/Service",      "destination": "/services.html", "permanent": true },
-    { "source": "/Service/",     "destination": "/services.html", "permanent": true },
-    { "source": "/service",      "destination": "/services.html", "permanent": true },
-    { "source": "/service/",     "destination": "/services.html", "permanent": true },
-    { "source": "/smart-buildings",  "destination": "/services.html", "permanent": true },
-    { "source": "/smart-buildings/", "destination": "/services.html", "permanent": true },
-    { "source": "/Lighting-Control",  "destination": "/lighting-control-repair-sydney.html", "permanent": true },
-    { "source": "/Lighting-Control/", "destination": "/lighting-control-repair-sydney.html", "permanent": true },
-    { "source": "/how-lighting-automation-is-changing-industries-in-australia",  "destination": "/services.html", "permanent": true },
-    { "source": "/how-lighting-automation-is-changing-industries-in-australia/", "destination": "/services.html", "permanent": true },
-    { "source": "/why-dynalite-is-the-best-choice-for-building-automation",  "destination": "/dynalite-programmer-sydney.html", "permanent": true },
-    { "source": "/why-dynalite-is-the-best-choice-for-building-automation/", "destination": "/dynalite-programmer-sydney.html", "permanent": true },
-    { "source": "/5-reasons-sydney-homes-need-smart-lighting-in-2025",  "destination": "/", "permanent": true },
-    { "source": "/5-reasons-sydney-homes-need-smart-lighting-in-2025/", "destination": "/", "permanent": true },
-    { "source": "/shop",   "destination": "/", "permanent": true },
-    { "source": "/shop/",  "destination": "/", "permanent": true },
-    { "source": "/post-1",   "destination": "/", "permanent": true },
-    { "source": "/post-1/",  "destination": "/", "permanent": true },
-    { "source": "/services",    "destination": "/services.html", "permanent": true },
-    { "source": "/about",       "destination": "/about.html", "permanent": true },
-    { "source": "/projects",    "destination": "/projects.html", "permanent": true },
-    { "source": "/blog",        "destination": "/blog.html", "permanent": true },
-    { "source": "/guides",      "destination": "/guides.html", "permanent": true },
-    { "source": "/contact",     "destination": "/contact.html", "permanent": true },
-    { "source": "/locations",   "destination": "/locations.html", "permanent": true },
-    { "source": "/shire",       "destination": "/shire.html", "permanent": true },
-    { "source": "/electricians","destination": "/electricians.html", "permanent": true },
-    { "source": "/strata",      "destination": "/strata.html", "permanent": true },
-    { "source": "/privacy",     "destination": "/privacy-policy.html", "permanent": true },
-    { "source": "/cbus",        "destination": "/c-bus-programmer-sydney.html", "permanent": true },
-    { "source": "/dynalite",    "destination": "/dynalite-programmer-sydney.html", "permanent": true },
-    { "source": "/4-years-building-facilities-management-jll-pbmg",          "destination": "/4-years-building-facilities-management-jll-pbmg.html", "permanent": true },
-    { "source": "/c-bus-apple-homekit-sydney",                                "destination": "/c-bus-apple-homekit-sydney.html", "permanent": true },
-    { "source": "/c-bus-programmer-eastern-suburbs",                          "destination": "/c-bus-programmer-eastern-suburbs.html", "permanent": true },
-    { "source": "/c-bus-programmer-hills-district",                           "destination": "/c-bus-programmer-hills-district.html", "permanent": true },
-    { "source": "/c-bus-programmer-inner-west",                               "destination": "/c-bus-programmer-inner-west.html", "permanent": true },
-    { "source": "/c-bus-programmer-north-shore",                              "destination": "/c-bus-programmer-north-shore.html", "permanent": true },
-    { "source": "/c-bus-programmer-northern-beaches",                         "destination": "/c-bus-programmer-northern-beaches.html", "permanent": true },
-    { "source": "/c-bus-programmer-parramatta",                               "destination": "/c-bus-programmer-parramatta.html", "permanent": true },
-    { "source": "/c-bus-programmer-st-george",                                "destination": "/c-bus-programmer-st-george.html", "permanent": true },
-    { "source": "/c-bus-programmer-sutherland-shire",                         "destination": "/c-bus-programmer-sutherland-shire.html", "permanent": true },
-    { "source": "/c-bus-programmer-sydney-cbd",                               "destination": "/c-bus-programmer-sydney-cbd.html", "permanent": true },
-    { "source": "/c-bus-programmer-sydney",                                   "destination": "/c-bus-programmer-sydney.html", "permanent": true },
-    { "source": "/c-bus-repairs-sydney",                                      "destination": "/c-bus-repairs-sydney.html", "permanent": true },
-    { "source": "/cbus-automation-north-shore-sydney",                        "destination": "/cbus-automation-north-shore-sydney.html", "permanent": true },
-    { "source": "/cbus-dynalite-fault-finding-eastern-suburbs",               "destination": "/cbus-dynalite-fault-finding-eastern-suburbs.html", "permanent": true },
-    { "source": "/cbus-dynalite-planning-checklist-new-builds-menai",         "destination": "/cbus-dynalite-planning-checklist-new-builds-menai.html", "permanent": true },
-    { "source": "/cbus-dynalite-property-value-sutherland-shire",             "destination": "/cbus-dynalite-property-value-sutherland-shire.html", "permanent": true },
-    { "source": "/cbus-dynalite-renovating-building",                         "destination": "/cbus-dynalite-renovating-building.html", "permanent": true },
-    { "source": "/cbus-dynalite-upgrade-guide",                               "destination": "/cbus-dynalite-upgrade-guide.html", "permanent": true },
-    { "source": "/cbus-fault-finding-sutherland-shire",                       "destination": "/cbus-fault-finding-sutherland-shire.html", "permanent": true },
-    { "source": "/cbus-fault-finding-sydney",                                 "destination": "/cbus-fault-finding-sydney.html", "permanent": true },
-    { "source": "/cbus-repair-sydney",                                        "destination": "/cbus-repair-sydney.html", "permanent": true },
-    { "source": "/cbus-scene-programming-guide-sutherland-shire",             "destination": "/cbus-scene-programming-guide-sutherland-shire.html", "permanent": true },
-    { "source": "/cbus-scene-programming-sydney-home",                        "destination": "/cbus-scene-programming-sydney-home.html", "permanent": true },
-    { "source": "/cbus-specialist-sydney",                                    "destination": "/cbus-specialist-sydney.html", "permanent": true },
-    { "source": "/cbus-vs-dynalite",                                          "destination": "/cbus-vs-dynalite.html", "permanent": true },
-    { "source": "/cbus-not-working-sydney",                                   "destination": "/cbus-not-working-sydney.html", "permanent": true },
-    { "source": "/cbus-upgrade-sydney",                                       "destination": "/cbus-upgrade-sydney.html", "permanent": true },
-    { "source": "/dali-lighting-repair",                                      "destination": "/dali-lighting-repair.html", "permanent": true },
-    { "source": "/dali2-compliance-nsw-commercial",                           "destination": "/dali2-compliance-nsw-commercial.html", "permanent": true },
-    { "source": "/dynalite-cbus-specialists-sydney-cbd",                      "destination": "/dynalite-cbus-specialists-sydney-cbd.html", "permanent": true },
-    { "source": "/dynalite-fault-finding-sydney-common-faults",               "destination": "/dynalite-fault-finding-sydney-common-faults.html", "permanent": true },
-    { "source": "/dynalite-not-working-sydney",                               "destination": "/dynalite-not-working-sydney.html", "permanent": true },
-    { "source": "/dynalite-programmer-sydney",                                "destination": "/dynalite-programmer-sydney.html", "permanent": true },
-    { "source": "/dynalite-repair-sydney",                                    "destination": "/dynalite-repair-sydney.html", "permanent": true },
-    { "source": "/dynalite-vs-cbus-sydney",                                   "destination": "/dynalite-vs-cbus-sydney.html", "permanent": true },
-    { "source": "/emergency-repair-sydney",                                   "destination": "/emergency-repair-sydney.html", "permanent": true },
-    { "source": "/facility-managers-cbus-dynalite-dali-guide",                "destination": "/facility-managers-cbus-dynalite-dali-guide.html", "permanent": true },
-    { "source": "/how-to-choose-cbus-specialist-sydney",                      "destination": "/how-to-choose-cbus-specialist-sydney.html", "permanent": true },
-    { "source": "/lighting-control-eastern-suburbs-strata",                   "destination": "/lighting-control-eastern-suburbs-strata.html", "permanent": true },
-    { "source": "/lighting-control-repair-sydney",                            "destination": "/lighting-control-repair-sydney.html", "permanent": true },
-    { "source": "/privacy-policy",                                            "destination": "/privacy-policy.html", "permanent": true },
-    { "source": "/rapix-lighting-control",                                    "destination": "/rapix-lighting-control.html", "permanent": true },
-    { "source": "/strata-managers-lighting-control-sydney",                   "destination": "/strata-managers-lighting-control-sydney.html", "permanent": true },
-    { "source": "/sydney-electricians-cbus-dynalite-partnership",             "destination": "/sydney-electricians-cbus-dynalite-partnership.html", "permanent": true },
-    { "source": "/what-is-rapix-sydney-buildings",                            "destination": "/what-is-rapix-sydney-buildings.html", "permanent": true },
-    { "source": "/cbus-repair-mosman",                    "destination": "/cbus-repair-mosman.html", "permanent": true },
-    { "source": "/lighting-automation-vaucluse",          "destination": "/lighting-automation-vaucluse.html", "permanent": true },
-    { "source": "/smart-home-installation-bellevue-hill", "destination": "/smart-home-installation-bellevue-hill.html", "permanent": true },
-    { "source": "/cbus-programming-chatswood",            "destination": "/cbus-programming-chatswood.html", "permanent": true },
-    { "source": "/cbus-repair-killara",                   "destination": "/cbus-repair-killara.html", "permanent": true },
-    { "source": "/cbus-programmer-wahroonga",             "destination": "/cbus-programmer-wahroonga.html", "permanent": true },
-    { "source": "/dynalite-repair-turramurra",            "destination": "/dynalite-repair-turramurra.html", "permanent": true },
-    { "source": "/cbus-repair-pymble",                    "destination": "/cbus-repair-pymble.html", "permanent": true },
-    { "source": "/cbus-programming-lindfield",            "destination": "/cbus-programming-lindfield.html", "permanent": true },
-    { "source": "/smart-home-installation-gordon",        "destination": "/smart-home-installation-gordon.html", "permanent": true },
-    { "source": "/cbus-repair-roseville",                 "destination": "/cbus-repair-roseville.html", "permanent": true },
-    { "source": "/lighting-automation-st-ives",           "destination": "/lighting-automation-st-ives.html", "permanent": true },
-    { "source": "/cbus-programmer-hunters-hill",          "destination": "/cbus-programmer-hunters-hill.html", "permanent": true },
-    { "source": "/dynalite-repair-neutral-bay",           "destination": "/dynalite-repair-neutral-bay.html", "permanent": true },
-    { "source": "/cbus-repair-cremorne",                  "destination": "/cbus-repair-cremorne.html", "permanent": true },
-    { "source": "/smart-home-darling-point",              "destination": "/smart-home-darling-point.html", "permanent": true },
-    { "source": "/cbus-repair-double-bay",                "destination": "/cbus-repair-double-bay.html", "permanent": true },
-    { "source": "/dynalite-repair-woollahra",             "destination": "/dynalite-repair-woollahra.html", "permanent": true },
-    { "source": "/cbus-repair-lane-cove",                 "destination": "/cbus-repair-lane-cove.html", "permanent": true },
-    { "source": "/dynalite-cbus-artarmon",                "destination": "/dynalite-cbus-artarmon.html", "permanent": true },
-    { "source": "/cbus-smart-home-balmoral",              "destination": "/cbus-smart-home-balmoral.html", "permanent": true },
-    { "source": "/cbus-repair-edgecliff",                 "destination": "/cbus-repair-edgecliff.html", "permanent": true },
-    { "source": "/cbus-repair-kirribilli",                "destination": "/cbus-repair-kirribilli.html", "permanent": true },
-    { "source": "/lighting-control-rose-bay",             "destination": "/lighting-control-rose-bay.html", "permanent": true }
+    {
+      "source": "/(.*)",
+      "destination": "https://www.sydneyautomationco.com.au/$1",
+      "has": [
+        {
+          "type": "host",
+          "value": "sydneyautomationco.com.au"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/(.*)",
+      "destination": "https://www.sydneyautomationco.com.au/$1",
+      "has": [
+        {
+          "type": "header",
+          "key": "x-forwarded-proto",
+          "value": "http"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/services/lighting-control",
+      "destination": "/lighting-control-repair-sydney.html",
+      "permanent": true
+    },
+    {
+      "source": "/services/lighting-control/",
+      "destination": "/lighting-control-repair-sydney.html",
+      "permanent": true
+    },
+    {
+      "source": "/products/dali-lighting-control",
+      "destination": "/dali-lighting-repair.html",
+      "permanent": true
+    },
+    {
+      "source": "/products/dali-lighting-control/",
+      "destination": "/dali-lighting-repair.html",
+      "permanent": true
+    },
+    {
+      "source": "/products/clipsal-c-bus",
+      "destination": "/c-bus-programmer-sydney.html",
+      "permanent": true
+    },
+    {
+      "source": "/products/clipsal-c-bus/",
+      "destination": "/c-bus-programmer-sydney.html",
+      "permanent": true
+    },
+    {
+      "source": "/products/dynalite",
+      "destination": "/dynalite-programmer-sydney.html",
+      "permanent": true
+    },
+    {
+      "source": "/products/dynalite/",
+      "destination": "/dynalite-programmer-sydney.html",
+      "permanent": true
+    },
+    {
+      "source": "/products/rapix-lighting-control",
+      "destination": "/rapix-lighting-control.html",
+      "permanent": true
+    },
+    {
+      "source": "/products/rapix-lighting-control/",
+      "destination": "/rapix-lighting-control.html",
+      "permanent": true
+    },
+    {
+      "source": "/services/smart-buildings",
+      "destination": "/services.html",
+      "permanent": true
+    },
+    {
+      "source": "/services/smart-buildings/",
+      "destination": "/services.html",
+      "permanent": true
+    },
+    {
+      "source": "/contact-us",
+      "destination": "/contact.html",
+      "permanent": true
+    },
+    {
+      "source": "/contact-us/",
+      "destination": "/contact.html",
+      "permanent": true
+    },
+    {
+      "source": "/about-us",
+      "destination": "/about.html",
+      "permanent": true
+    },
+    {
+      "source": "/about-us/",
+      "destination": "/about.html",
+      "permanent": true
+    },
+    {
+      "source": "/Service",
+      "destination": "/services.html",
+      "permanent": true
+    },
+    {
+      "source": "/Service/",
+      "destination": "/services.html",
+      "permanent": true
+    },
+    {
+      "source": "/service",
+      "destination": "/services.html",
+      "permanent": true
+    },
+    {
+      "source": "/service/",
+      "destination": "/services.html",
+      "permanent": true
+    },
+    {
+      "source": "/smart-buildings",
+      "destination": "/services.html",
+      "permanent": true
+    },
+    {
+      "source": "/smart-buildings/",
+      "destination": "/services.html",
+      "permanent": true
+    },
+    {
+      "source": "/Lighting-Control",
+      "destination": "/lighting-control-repair-sydney.html",
+      "permanent": true
+    },
+    {
+      "source": "/Lighting-Control/",
+      "destination": "/lighting-control-repair-sydney.html",
+      "permanent": true
+    },
+    {
+      "source": "/how-lighting-automation-is-changing-industries-in-australia",
+      "destination": "/services.html",
+      "permanent": true
+    },
+    {
+      "source": "/how-lighting-automation-is-changing-industries-in-australia/",
+      "destination": "/services.html",
+      "permanent": true
+    },
+    {
+      "source": "/why-dynalite-is-the-best-choice-for-building-automation",
+      "destination": "/dynalite-programmer-sydney.html",
+      "permanent": true
+    },
+    {
+      "source": "/why-dynalite-is-the-best-choice-for-building-automation/",
+      "destination": "/dynalite-programmer-sydney.html",
+      "permanent": true
+    },
+    {
+      "source": "/5-reasons-sydney-homes-need-smart-lighting-in-2025",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/5-reasons-sydney-homes-need-smart-lighting-in-2025/",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/shop",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/shop/",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/post-1",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/post-1/",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/services",
+      "destination": "/services.html",
+      "permanent": true
+    },
+    {
+      "source": "/about",
+      "destination": "/about.html",
+      "permanent": true
+    },
+    {
+      "source": "/projects",
+      "destination": "/projects.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog",
+      "destination": "/blog.html",
+      "permanent": true
+    },
+    {
+      "source": "/guides",
+      "destination": "/guides.html",
+      "permanent": true
+    },
+    {
+      "source": "/contact",
+      "destination": "/contact.html",
+      "permanent": true
+    },
+    {
+      "source": "/locations",
+      "destination": "/locations.html",
+      "permanent": true
+    },
+    {
+      "source": "/shire",
+      "destination": "/shire.html",
+      "permanent": true
+    },
+    {
+      "source": "/electricians",
+      "destination": "/electricians.html",
+      "permanent": true
+    },
+    {
+      "source": "/strata",
+      "destination": "/strata.html",
+      "permanent": true
+    },
+    {
+      "source": "/privacy",
+      "destination": "/privacy-policy.html",
+      "permanent": true
+    },
+    {
+      "source": "/cbus",
+      "destination": "/c-bus-programmer-sydney.html",
+      "permanent": true
+    },
+    {
+      "source": "/dynalite",
+      "destination": "/dynalite-programmer-sydney.html",
+      "permanent": true
+    },
+    {
+      "source": "/4-years-building-facilities-management-jll-pbmg",
+      "destination": "/4-years-building-facilities-management-jll-pbmg.html",
+      "permanent": true
+    },
+    {
+      "source": "/c-bus-apple-homekit-sydney",
+      "destination": "/c-bus-apple-homekit-sydney.html",
+      "permanent": true
+    },
+    {
+      "source": "/c-bus-programmer-eastern-suburbs",
+      "destination": "/c-bus-programmer-eastern-suburbs.html",
+      "permanent": true
+    },
+    {
+      "source": "/c-bus-programmer-hills-district",
+      "destination": "/c-bus-programmer-hills-district.html",
+      "permanent": true
+    },
+    {
+      "source": "/c-bus-programmer-inner-west",
+      "destination": "/c-bus-programmer-inner-west.html",
+      "permanent": true
+    },
+    {
+      "source": "/c-bus-programmer-north-shore",
+      "destination": "/c-bus-programmer-north-shore.html",
+      "permanent": true
+    },
+    {
+      "source": "/c-bus-programmer-northern-beaches",
+      "destination": "/c-bus-programmer-northern-beaches.html",
+      "permanent": true
+    },
+    {
+      "source": "/c-bus-programmer-parramatta",
+      "destination": "/c-bus-programmer-parramatta.html",
+      "permanent": true
+    },
+    {
+      "source": "/c-bus-programmer-st-george",
+      "destination": "/c-bus-programmer-st-george.html",
+      "permanent": true
+    },
+    {
+      "source": "/c-bus-programmer-sutherland-shire",
+      "destination": "/c-bus-programmer-sutherland-shire.html",
+      "permanent": true
+    },
+    {
+      "source": "/c-bus-programmer-sydney-cbd",
+      "destination": "/c-bus-programmer-sydney-cbd.html",
+      "permanent": true
+    },
+    {
+      "source": "/c-bus-programmer-sydney",
+      "destination": "/c-bus-programmer-sydney.html",
+      "permanent": true
+    },
+    {
+      "source": "/c-bus-repairs-sydney",
+      "destination": "/c-bus-repairs-sydney.html",
+      "permanent": true
+    },
+    {
+      "source": "/cbus-automation-north-shore-sydney",
+      "destination": "/cbus-automation-north-shore-sydney.html",
+      "permanent": true
+    },
+    {
+      "source": "/cbus-dynalite-fault-finding-eastern-suburbs",
+      "destination": "/cbus-dynalite-fault-finding-eastern-suburbs.html",
+      "permanent": true
+    },
+    {
+      "source": "/cbus-dynalite-planning-checklist-new-builds-menai",
+      "destination": "/cbus-dynalite-planning-checklist-new-builds-menai.html",
+      "permanent": true
+    },
+    {
+      "source": "/cbus-dynalite-property-value-sutherland-shire",
+      "destination": "/cbus-dynalite-property-value-sutherland-shire.html",
+      "permanent": true
+    },
+    {
+      "source": "/cbus-dynalite-renovating-building",
+      "destination": "/cbus-dynalite-renovating-building.html",
+      "permanent": true
+    },
+    {
+      "source": "/cbus-dynalite-upgrade-guide",
+      "destination": "/cbus-dynalite-upgrade-guide.html",
+      "permanent": true
+    },
+    {
+      "source": "/cbus-fault-finding-sutherland-shire",
+      "destination": "/cbus-fault-finding-sutherland-shire.html",
+      "permanent": true
+    },
+    {
+      "source": "/cbus-fault-finding-sydney",
+      "destination": "/cbus-fault-finding-sydney.html",
+      "permanent": true
+    },
+    {
+      "source": "/cbus-repair-sydney",
+      "destination": "/cbus-repair-sydney.html",
+      "permanent": true
+    },
+    {
+      "source": "/cbus-scene-programming-guide-sutherland-shire",
+      "destination": "/cbus-scene-programming-guide-sutherland-shire.html",
+      "permanent": true
+    },
+    {
+      "source": "/cbus-scene-programming-sydney-home",
+      "destination": "/cbus-scene-programming-sydney-home.html",
+      "permanent": true
+    },
+    {
+      "source": "/cbus-specialist-sydney",
+      "destination": "/cbus-specialist-sydney.html",
+      "permanent": true
+    },
+    {
+      "source": "/cbus-vs-dynalite",
+      "destination": "/cbus-vs-dynalite.html",
+      "permanent": true
+    },
+    {
+      "source": "/cbus-not-working-sydney",
+      "destination": "/cbus-not-working-sydney.html",
+      "permanent": true
+    },
+    {
+      "source": "/cbus-upgrade-sydney",
+      "destination": "/cbus-upgrade-sydney.html",
+      "permanent": true
+    },
+    {
+      "source": "/dali-lighting-repair",
+      "destination": "/dali-lighting-repair.html",
+      "permanent": true
+    },
+    {
+      "source": "/dali2-compliance-nsw-commercial",
+      "destination": "/dali2-compliance-nsw-commercial.html",
+      "permanent": true
+    },
+    {
+      "source": "/dynalite-cbus-specialists-sydney-cbd",
+      "destination": "/dynalite-cbus-specialists-sydney-cbd.html",
+      "permanent": true
+    },
+    {
+      "source": "/dynalite-fault-finding-sydney-common-faults",
+      "destination": "/dynalite-fault-finding-sydney-common-faults.html",
+      "permanent": true
+    },
+    {
+      "source": "/dynalite-not-working-sydney",
+      "destination": "/dynalite-not-working-sydney.html",
+      "permanent": true
+    },
+    {
+      "source": "/dynalite-programmer-sydney",
+      "destination": "/dynalite-programmer-sydney.html",
+      "permanent": true
+    },
+    {
+      "source": "/dynalite-repair-sydney",
+      "destination": "/dynalite-repair-sydney.html",
+      "permanent": true
+    },
+    {
+      "source": "/dynalite-vs-cbus-sydney",
+      "destination": "/dynalite-vs-cbus-sydney.html",
+      "permanent": true
+    },
+    {
+      "source": "/emergency-repair-sydney",
+      "destination": "/emergency-repair-sydney.html",
+      "permanent": true
+    },
+    {
+      "source": "/facility-managers-cbus-dynalite-dali-guide",
+      "destination": "/facility-managers-cbus-dynalite-dali-guide.html",
+      "permanent": true
+    },
+    {
+      "source": "/how-to-choose-cbus-specialist-sydney",
+      "destination": "/how-to-choose-cbus-specialist-sydney.html",
+      "permanent": true
+    },
+    {
+      "source": "/lighting-control-eastern-suburbs-strata",
+      "destination": "/lighting-control-eastern-suburbs-strata.html",
+      "permanent": true
+    },
+    {
+      "source": "/lighting-control-repair-sydney",
+      "destination": "/lighting-control-repair-sydney.html",
+      "permanent": true
+    },
+    {
+      "source": "/privacy-policy",
+      "destination": "/privacy-policy.html",
+      "permanent": true
+    },
+    {
+      "source": "/rapix-lighting-control",
+      "destination": "/rapix-lighting-control.html",
+      "permanent": true
+    },
+    {
+      "source": "/strata-managers-lighting-control-sydney",
+      "destination": "/strata-managers-lighting-control-sydney.html",
+      "permanent": true
+    },
+    {
+      "source": "/sydney-electricians-cbus-dynalite-partnership",
+      "destination": "/sydney-electricians-cbus-dynalite-partnership.html",
+      "permanent": true
+    },
+    {
+      "source": "/what-is-rapix-sydney-buildings",
+      "destination": "/what-is-rapix-sydney-buildings.html",
+      "permanent": true
+    },
+    {
+      "source": "/cbus-repair-mosman",
+      "destination": "/cbus-repair-mosman.html",
+      "permanent": true
+    },
+    {
+      "source": "/lighting-automation-vaucluse",
+      "destination": "/lighting-automation-vaucluse.html",
+      "permanent": true
+    },
+    {
+      "source": "/smart-home-installation-bellevue-hill",
+      "destination": "/smart-home-installation-bellevue-hill.html",
+      "permanent": true
+    },
+    {
+      "source": "/cbus-programming-chatswood",
+      "destination": "/cbus-programming-chatswood.html",
+      "permanent": true
+    },
+    {
+      "source": "/cbus-repair-killara",
+      "destination": "/cbus-repair-killara.html",
+      "permanent": true
+    },
+    {
+      "source": "/cbus-programmer-wahroonga",
+      "destination": "/cbus-programmer-wahroonga.html",
+      "permanent": true
+    },
+    {
+      "source": "/dynalite-repair-turramurra",
+      "destination": "/dynalite-repair-turramurra.html",
+      "permanent": true
+    },
+    {
+      "source": "/cbus-repair-pymble",
+      "destination": "/cbus-repair-pymble.html",
+      "permanent": true
+    },
+    {
+      "source": "/cbus-programming-lindfield",
+      "destination": "/cbus-programming-lindfield.html",
+      "permanent": true
+    },
+    {
+      "source": "/smart-home-installation-gordon",
+      "destination": "/smart-home-installation-gordon.html",
+      "permanent": true
+    },
+    {
+      "source": "/cbus-repair-roseville",
+      "destination": "/cbus-repair-roseville.html",
+      "permanent": true
+    },
+    {
+      "source": "/lighting-automation-st-ives",
+      "destination": "/lighting-automation-st-ives.html",
+      "permanent": true
+    },
+    {
+      "source": "/cbus-programmer-hunters-hill",
+      "destination": "/cbus-programmer-hunters-hill.html",
+      "permanent": true
+    },
+    {
+      "source": "/dynalite-repair-neutral-bay",
+      "destination": "/dynalite-repair-neutral-bay.html",
+      "permanent": true
+    },
+    {
+      "source": "/cbus-repair-cremorne",
+      "destination": "/cbus-repair-cremorne.html",
+      "permanent": true
+    },
+    {
+      "source": "/smart-home-darling-point",
+      "destination": "/smart-home-darling-point.html",
+      "permanent": true
+    },
+    {
+      "source": "/cbus-repair-double-bay",
+      "destination": "/cbus-repair-double-bay.html",
+      "permanent": true
+    },
+    {
+      "source": "/dynalite-repair-woollahra",
+      "destination": "/dynalite-repair-woollahra.html",
+      "permanent": true
+    },
+    {
+      "source": "/cbus-repair-lane-cove",
+      "destination": "/cbus-repair-lane-cove.html",
+      "permanent": true
+    },
+    {
+      "source": "/dynalite-cbus-artarmon",
+      "destination": "/dynalite-cbus-artarmon.html",
+      "permanent": true
+    },
+    {
+      "source": "/cbus-smart-home-balmoral",
+      "destination": "/cbus-smart-home-balmoral.html",
+      "permanent": true
+    },
+    {
+      "source": "/cbus-repair-edgecliff",
+      "destination": "/cbus-repair-edgecliff.html",
+      "permanent": true
+    },
+    {
+      "source": "/cbus-repair-kirribilli",
+      "destination": "/cbus-repair-kirribilli.html",
+      "permanent": true
+    },
+    {
+      "source": "/lighting-control-rose-bay",
+      "destination": "/lighting-control-rose-bay.html",
+      "permanent": true
+    },
+    {
+      "source": "/cbus-repair-burradoo",
+      "destination": "/cbus-repair-burradoo.html",
+      "permanent": true
+    },
+    {
+      "source": "/cbus-repair-bowral",
+      "destination": "/cbus-repair-bowral.html",
+      "permanent": true
+    },
+    {
+      "source": "/cbus-repair-mittagong",
+      "destination": "/cbus-repair-mittagong.html",
+      "permanent": true
+    },
+    {
+      "source": "/cbus-repair-moss-vale",
+      "destination": "/cbus-repair-moss-vale.html",
+      "permanent": true
+    },
+    {
+      "source": "/cbus-repair-bundanoon",
+      "destination": "/cbus-repair-bundanoon.html",
+      "permanent": true
+    },
+    {
+      "source": "/cbus-repair-berrima",
+      "destination": "/cbus-repair-berrima.html",
+      "permanent": true
+    },
+    {
+      "source": "/cbus-repair-exeter",
+      "destination": "/cbus-repair-exeter.html",
+      "permanent": true
+    },
+    {
+      "source": "/cbus-repair-kiama",
+      "destination": "/cbus-repair-kiama.html",
+      "permanent": true
+    },
+    {
+      "source": "/cbus-repair-gerringong",
+      "destination": "/cbus-repair-gerringong.html",
+      "permanent": true
+    },
+    {
+      "source": "/cbus-repair-berry",
+      "destination": "/cbus-repair-berry.html",
+      "permanent": true
+    },
+    {
+      "source": "/cbus-repair-mount-keira",
+      "destination": "/cbus-repair-mount-keira.html",
+      "permanent": true
+    },
+    {
+      "source": "/cbus-repair-balgownie",
+      "destination": "/cbus-repair-balgownie.html",
+      "permanent": true
+    },
+    {
+      "source": "/cbus-repair-thirroul",
+      "destination": "/cbus-repair-thirroul.html",
+      "permanent": true
+    },
+    {
+      "source": "/favicon-head-tags",
+      "destination": "/favicon-head-tags.html",
+      "permanent": true
+    },
+    {
+      "source": "/index",
+      "destination": "/index.html",
+      "permanent": true
+    },
+    {
+      "source": "/cbus-repair-palm-beach",
+      "destination": "/cbus-repair-palm-beach.html",
+      "permanent": true
+    },
+    {
+      "source": "/cbus-repair-whale-beach",
+      "destination": "/cbus-repair-whale-beach.html",
+      "permanent": true
+    },
+    {
+      "source": "/cbus-repair-avalon-beach",
+      "destination": "/cbus-repair-avalon-beach.html",
+      "permanent": true
+    },
+    {
+      "source": "/cbus-repair-bayview",
+      "destination": "/cbus-repair-bayview.html",
+      "permanent": true
+    },
+    {
+      "source": "/cbus-repair-manly",
+      "destination": "/cbus-repair-manly.html",
+      "permanent": true
+    },
+    {
+      "source": "/cbus-repair-point-piper",
+      "destination": "/cbus-repair-point-piper.html",
+      "permanent": true
+    },
+    {
+      "source": "/cbus-repair-tamarama",
+      "destination": "/cbus-repair-tamarama.html",
+      "permanent": true
+    },
+    {
+      "source": "/cbus-repair-bronte",
+      "destination": "/cbus-repair-bronte.html",
+      "permanent": true
+    },
+    {
+      "source": "/cbus-repair-coogee",
+      "destination": "/cbus-repair-coogee.html",
+      "permanent": true
+    },
+    {
+      "source": "/cbus-repair-leura",
+      "destination": "/cbus-repair-leura.html",
+      "permanent": true
+    },
+    {
+      "source": "/cbus-repair-wentworth-falls",
+      "destination": "/cbus-repair-wentworth-falls.html",
+      "permanent": true
+    },
+    {
+      "source": "/cbus-repair-terrigal",
+      "destination": "/cbus-repair-terrigal.html",
+      "permanent": true
+    },
+    {
+      "source": "/cbus-repair-avoca-beach",
+      "destination": "/cbus-repair-avoca-beach.html",
+      "permanent": true
+    },
+    {
+      "source": "/strata-lighting-compliance-sydney",
+      "destination": "/strata-lighting-compliance-sydney.html",
+      "permanent": true
+    },
+    {
+      "source": "/real-estate-cbus-audit-sydney",
+      "destination": "/real-estate-cbus-audit-sydney.html",
+      "permanent": true
+    },
+    {
+      "source": "/building-manager-lighting-support-sydney",
+      "destination": "/building-manager-lighting-support-sydney.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog-dali-2-compliance-guide-sydney-building-managers",
+      "destination": "/blog-dali-2-compliance-guide-sydney-building-managers.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog-strata-lighting-energy-savings-sydney",
+      "destination": "/blog-strata-lighting-energy-savings-sydney.html",
+      "permanent": true
+    },
+    {
+      "source": "/rapix-emergency-lighting-sydney",
+      "destination": "/rapix-emergency-lighting-sydney.html",
+      "permanent": true
+    },
+    {
+      "source": "/emergency-lighting-compliance-afss-sydney",
+      "destination": "/emergency-lighting-compliance-afss-sydney.html",
+      "permanent": true
+    },
+    {
+      "source": "/emergency-lighting-hotels-hospitality-sydney",
+      "destination": "/emergency-lighting-hotels-hospitality-sydney.html",
+      "permanent": true
+    },
+    {
+      "source": "/emergency-lighting-train-stations-infrastructure-sydney",
+      "destination": "/emergency-lighting-train-stations-infrastructure-sydney.html",
+      "permanent": true
+    },
+    {
+      "source": "/led-upgrade-carpark-lighting-sydney",
+      "destination": "/led-upgrade-carpark-lighting-sydney.html",
+      "permanent": true
+    }
   ]
 }
