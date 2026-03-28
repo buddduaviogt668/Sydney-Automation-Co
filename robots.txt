@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://sydneyautomationco.com.au/sitemap.xml
+Sitemap: https://www.sydneyautomationco.com.au/sitemap.xml
