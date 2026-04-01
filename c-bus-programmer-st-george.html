@@ -57,7 +57,7 @@
       "Friday"
     ],
     "opens": "07:00",
-    "closes": "15:00"
+    "closes": "17:00"
   },
   "sameAs": [
     "https://www.instagram.com/sydneyautomationco/",
@@ -68,7 +68,7 @@
 </script>
 <style>
 /* DROPDOWN NAV */
-nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(14,31,61,0.97);border-bottom:1px solid #2a4a80;padding:0 24px;height:64px;display:flex;align-items:center;justify-content:space-between;font-family:'Barlow',sans-serif}
+nav{position:fixed;top:40px;left:0;right:0;z-index:1000;background:rgba(14,31,61,0.97);border-bottom:1px solid #2a4a80;padding:0 24px;height:64px;display:flex;align-items:center;justify-content:space-between;font-family:'Barlow',sans-serif}
 .logo{font-family:'Barlow Condensed',sans-serif;font-weight:900;text-transform:uppercase;line-height:1;cursor:pointer;display:inline-flex;flex-direction:column;text-decoration:none;color:inherit}
 .logo-main{font-size:20px;color:#fff;letter-spacing:1.5px;display:block}
 .logo-line{height:2px;background:#f07020;margin:4px 0;width:100%}
@@ -90,7 +90,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(14,31,61,0.
 .nav-dd-panel .dd-label{font-size:10px;font-weight:700;color:#4a6a9a;letter-spacing:2px;text-transform:uppercase;padding:6px 14px 2px}
 .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;background:none;border:none}
 .hamburger span{width:24px;height:2px;background:#f0f4ff;border-radius:2px;display:block;transition:all 0.3s}
-.mob-nav{display:none;position:fixed;top:64px;left:0;right:0;bottom:0;background:#0e1f3d;border-top:1px solid #2a4a80;z-index:999;overflow-y:auto;flex-direction:column}
+.mob-nav{display:none;position:fixed;top:104px;left:0;right:0;bottom:0;background:#0e1f3d;border-top:1px solid #2a4a80;z-index:999;overflow-y:auto;flex-direction:column}
 .mob-nav.open{display:flex}
 .mob-section{border-bottom:1px solid #1a3060}
 .mob-section-title{font-size:11px;font-weight:700;color:#4a6a9a;letter-spacing:2px;text-transform:uppercase;padding:14px 20px 6px}
@@ -109,13 +109,13 @@ a{color:inherit;text-decoration:none}
 @media(max-width:900px){}
 
 /* LAYOUT */
-.page{padding-top:80px;min-height:100vh}
+.page{padding-top:104px;min-height:100vh}
 .section{padding:64px 24px}
 .container{max-width:1200px;margin:0 auto}
 .container-sm{max-width:860px;margin:0 auto}
 
 /* HERO */
-.hero{padding:80px 24px 64px;background:linear-gradient(135deg,#001428 0%,#1e3a66 100%);border-bottom:1px solid #2a4a80}
+.hero{padding:40px 24px 64px;background:linear-gradient(135deg,#001428 0%,#1e3a66 100%);border-bottom:1px solid #2a4a80}
 .tag{display:inline-flex;align-items:center;gap:8px;background:rgba(240,112,32,0.15);color:#f07020;border:1px solid rgba(240,112,32,0.35);border-radius:50px;padding:6px 16px;font-size:13px;font-weight:700;margin-bottom:20px}
 h1{font-family:'Barlow Condensed',sans-serif;font-size:clamp(42px,6vw,76px);font-weight:900;line-height:1.0;margin-bottom:20px}
 h2{font-family:'Barlow Condensed',sans-serif;font-size:clamp(28px,4vw,44px);font-weight:900;line-height:1.05;margin-bottom:16px}
@@ -197,6 +197,16 @@ footer{background:#132647;border-top:1px solid #2a4a80;padding:48px 24px 32px}
 .hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
 .hamburger.open span:nth-child(2){opacity:0}
 .hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+/* ── ROTATING PROMO BANNER ── */
+#promo-banner{position:fixed;top:0;left:0;right:0;z-index:1100;height:40px;background:#f07020;display:flex;align-items:center;justify-content:center;gap:14px;font-family:'Barlow',sans-serif;overflow:hidden}
+#promo-banner .pb-text{font-size:13px;font-weight:700;color:#fff;white-space:nowrap;transition:opacity 0.4s}
+#promo-banner .pb-btn{background:#fff;color:#f07020;border:none;border-radius:5px;padding:5px 14px;font-size:12px;font-weight:800;cursor:pointer;white-space:nowrap;text-decoration:none;font-family:'Barlow',sans-serif;transition:background 0.2s,color 0.2s;flex-shrink:0}
+#promo-banner .pb-btn:hover{background:#0e1f3d;color:#fff}
+@media(max-width:600px){#promo-banner .pb-text{font-size:11px}#promo-banner .pb-btn{padding:4px 10px;font-size:11px}}
+/* Mega-menu two-column */
+.nav-dd-panel.mega{min-width:560px;display:none;grid-template-columns:1fr 1fr;gap:0 8px;padding:12px}
+.nav-dd.open .nav-dd-panel.mega{display:grid}
+.mega-col{}
 </style>
 <!-- Google Analytics GA4 -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-7EZFB6GRJ3"></script>
@@ -207,6 +217,11 @@ footer{background:#132647;border-top:1px solid #2a4a80;padding:48px 24px 32px}
   gtag('config', 'G-7EZFB6GRJ3');
 </script>
 </head><body>
+<!-- ROTATING PROMO BANNER -->
+<div id="promo-banner">
+  <span class="pb-text" id="pb-text"></span>
+  <a class="pb-btn" id="pb-btn" href="/contact.html">Book Now</a>
+</div>
 <nav>
   <a href="/" class="logo">
     <span class="logo-main">Sydney Automation Co.</span>
@@ -215,38 +230,55 @@ footer{background:#132647;border-top:1px solid #2a4a80;padding:48px 24px 32px}
   </a>
   <div class="nav-links">
 
-    <!-- SERVICES -->
+    <!-- SERVICES (mega 2-col) -->
     <div class="nav-dd" id="dd-services">
       <button class="nav-dd-trigger">Services</button>
-      <div class="nav-dd-panel wide">
-        <span class="dd-label">C-Bus</span>
-        <a href="/c-bus-programmer-sydney.html">C-Bus Programming</a>
-        <a href="/c-bus-repairs-sydney.html">C-Bus Repairs</a>
-        <a href="/cbus-upgrade-sydney.html">C-Bus Upgrades</a>
-        <a href="/cbus-fault-finding-sydney.html">C-Bus Fault Finding</a>
-        <a href="/cbus-specialist-sydney.html">C-Bus Specialist Sydney</a>
-        <a href="/c-bus-apple-homekit-sydney.html">C-Bus &amp; Apple HomeKit</a>
-        <div class="dd-divider"></div>
-        <span class="dd-label">Dynalite</span>
-        <a href="/dynalite-programmer-sydney.html">Dynalite Programming</a>
-        <a href="/dynalite-repair-sydney.html">Dynalite Repairs</a>
-        <a href="/dynalite-fault-finding-sydney-common-faults.html">Dynalite Fault Finding</a>
-        <div class="dd-divider"></div>
-        <span class="dd-label">Emergency Lighting</span>
-        <a href="/emergency-lighting-compliance-afss-sydney.html">AFSS / OC / PC Compliance</a>
-        <a href="/rapix-emergency-lighting-sydney.html">RAPIX Emergency Lighting</a>
-        <a href="/emergency-lighting-hotels-hospitality-sydney.html">Hotels &amp; Hospitality</a>
-        <a href="/emergency-lighting-train-stations-infrastructure-sydney.html">Train Stations &amp; Infrastructure</a>
-        <a href="/emergency-repair-sydney.html">Emergency Repair</a>
-        <div class="dd-divider"></div>
-        <span class="dd-label">DALI &amp; RAPIX</span>
-        <a href="/dali-lighting-repair.html">DALI Lighting Repair</a>
-        <a href="/dali2-compliance-nsw-commercial.html">DALI-2 Compliance NSW</a>
-        <a href="/rapix-lighting-control.html">RAPIX Lighting Control</a>
-        <a href="/what-is-rapix-sydney-buildings.html">What is RAPIX?</a>
-        <a href="/led-upgrade-carpark-lighting-sydney.html">LED Upgrades &amp; Car Parks</a>
-        <a href="/lighting-control-repair-sydney.html">Lighting Control Repair</a>
-        <a href="/services.html">All Services &#8594;</a>
+      <div class="nav-dd-panel mega">
+        <div class="mega-col">
+          <span class="dd-label">C-Bus</span>
+          <a href="/c-bus-programmer-sydney.html">C-Bus Programming</a>
+          <a href="/c-bus-repairs-sydney.html">C-Bus Repairs</a>
+          <a href="/cbus-upgrade-sydney.html">C-Bus Upgrades</a>
+          <a href="/cbus-fault-finding-sydney.html">C-Bus Fault Finding</a>
+          <a href="/cbus-specialist-sydney.html">C-Bus Specialist</a>
+          <a href="/c-bus-apple-homekit-sydney.html">C-Bus &amp; Apple HomeKit</a>
+          <div class="dd-divider"></div>
+          <span class="dd-label">Dynalite</span>
+          <a href="/dynalite-programmer-sydney.html">Dynalite Programming</a>
+          <a href="/dynalite-repair-sydney.html">Dynalite Repairs</a>
+          <a href="/dynalite-fault-finding-sydney-common-faults.html">Dynalite Fault Finding</a>
+          <div class="dd-divider"></div>
+          <span class="dd-label">Lighting Control</span>
+          <a href="/lighting-control-service-sydney.html">Lighting Control Service</a>
+          <a href="/lighting-control-repair-sydney.html">Lighting Control Repair</a>
+          <a href="/led-upgrade-carpark-lighting-sydney.html">LED Upgrades &amp; Car Parks</a>
+          <a href="/carpark-lighting-upgrades-sydney.html">Car Park Upgrades</a>
+          <a href="/building-lighting-upgrades-sydney.html">Building Lighting Upgrades</a>
+        </div>
+        <div class="mega-col">
+          <span class="dd-label">Emergency &amp; Compliance</span>
+          <a href="https://sydneyautomationco.online" target="_blank" rel="noopener">AFSS / OC / PC Compliance ↗</a>
+          <a href="/emergency-lighting-compliance-afss-sydney.html">Emergency Lighting AFSS</a>
+          <a href="/rapix-emergency-lighting-sydney.html">RAPIX Emergency Lighting</a>
+          <a href="/emergency-lighting-hotels-hospitality-sydney.html">Hotels &amp; Hospitality</a>
+          <a href="/emergency-lighting-train-stations-infrastructure-sydney.html">Train Stations &amp; Infrastructure</a>
+          <a href="/emergency-repair-sydney.html">Emergency Repair</a>
+          <div class="dd-divider"></div>
+          <span class="dd-label">DALI &amp; RAPIX</span>
+          <a href="/dali-lighting-repair.html">DALI Lighting Repair</a>
+          <a href="/dali2-compliance-nsw-commercial.html">DALI-2 Compliance NSW</a>
+          <a href="/rapix-lighting-control.html">RAPIX Lighting Control</a>
+          <a href="/what-is-rapix-sydney-buildings.html">What is RAPIX?</a>
+          <div class="dd-divider"></div>
+          <span class="dd-label">Maintenance &amp; Contracts</span>
+          <a href="/lighting-control-maintenance-sydney.html">Lighting Control Maintenance</a>
+          <a href="/cbus-maintenance-sydney.html">C-Bus Maintenance</a>
+          <a href="/dynalite-maintenance-sydney.html">Dynalite Maintenance</a>
+          <a href="/lighting-control-service-contract-sydney.html">Service Contracts</a>
+          <a href="/building-automation-maintenance-sydney.html">Building Automation</a>
+          <a href="/facilities-lighting-maintenance-sydney.html">Facilities Maintenance</a>
+          <a href="/services.html">All Services &#8594;</a>
+        </div>
       </div>
     </div>
 
@@ -330,8 +362,17 @@ footer{background:#132647;border-top:1px solid #2a4a80;padding:48px 24px 32px}
     <a href="/dynalite-fault-finding-sydney-common-faults.html">Dynalite Fault Finding</a>
   </div>
   <div class="mob-section">
-    <div class="mob-section-title">Emergency Lighting</div>
-    <a href="/emergency-lighting-compliance-afss-sydney.html">AFSS / OC / PC Compliance</a>
+    <div class="mob-section-title">Lighting Control</div>
+    <a href="/lighting-control-service-sydney.html">Lighting Control Service</a>
+    <a href="/lighting-control-repair-sydney.html">Lighting Control Repair</a>
+    <a href="/led-upgrade-carpark-lighting-sydney.html">LED Upgrades</a>
+    <a href="/carpark-lighting-upgrades-sydney.html">Car Park Upgrades</a>
+    <a href="/building-lighting-upgrades-sydney.html">Building Lighting Upgrades</a>
+  </div>
+  <div class="mob-section">
+    <div class="mob-section-title">Emergency &amp; Compliance</div>
+    <a href="https://sydneyautomationco.online" target="_blank" rel="noopener">AFSS / OC / PC Compliance ↗</a>
+    <a href="/emergency-lighting-compliance-afss-sydney.html">Emergency Lighting AFSS</a>
     <a href="/rapix-emergency-lighting-sydney.html">RAPIX Emergency Lighting</a>
     <a href="/emergency-lighting-hotels-hospitality-sydney.html">Hotels &amp; Hospitality</a>
     <a href="/emergency-lighting-train-stations-infrastructure-sydney.html">Train Stations &amp; Infrastructure</a>
@@ -343,7 +384,15 @@ footer{background:#132647;border-top:1px solid #2a4a80;padding:48px 24px 32px}
     <a href="/dali2-compliance-nsw-commercial.html">DALI-2 Compliance NSW</a>
     <a href="/rapix-lighting-control.html">RAPIX Lighting Control</a>
     <a href="/what-is-rapix-sydney-buildings.html">What is RAPIX?</a>
-    <a href="/led-upgrade-carpark-lighting-sydney.html">LED Upgrades</a>
+  </div>
+  <div class="mob-section">
+    <div class="mob-section-title">Maintenance &amp; Contracts</div>
+    <a href="/lighting-control-maintenance-sydney.html">Lighting Control Maintenance</a>
+    <a href="/cbus-maintenance-sydney.html">C-Bus Maintenance</a>
+    <a href="/dynalite-maintenance-sydney.html">Dynalite Maintenance</a>
+    <a href="/lighting-control-service-contract-sydney.html">Service Contracts</a>
+    <a href="/building-automation-maintenance-sydney.html">Building Automation</a>
+    <a href="/facilities-lighting-maintenance-sydney.html">Facilities Maintenance</a>
   </div>
   <div class="mob-section">
     <div class="mob-section-title">Service Areas</div>
@@ -351,9 +400,8 @@ footer{background:#132647;border-top:1px solid #2a4a80;padding:48px 24px 32px}
     <a href="/c-bus-programmer-north-shore.html">North Shore</a>
     <a href="/c-bus-programmer-eastern-suburbs.html">Eastern Suburbs</a>
     <a href="/c-bus-programmer-northern-beaches.html">Northern Beaches</a>
-    <a href="/c-bus-programmer-hills-district.html">Hills District</a>
-    <a href="/c-bus-programmer-parramatta.html">Parramatta</a>
-    <a href="/locations.html">All Areas &#8594;</a>
+    <a href="/c-bus-programmer-sydney-cbd.html">Sydney CBD</a>
+    <a href="/locations.html">All Service Areas</a>
   </div>
   <div class="mob-section">
     <div class="mob-section-title">Clients</div>
@@ -361,99 +409,17 @@ footer{background:#132647;border-top:1px solid #2a4a80;padding:48px 24px 32px}
     <a href="/building-manager-lighting-support-sydney.html">Building Managers</a>
     <a href="/facility-managers-cbus-dynalite-dali-guide.html">Facility Managers</a>
     <a href="/electricians.html">Electricians</a>
-    <a href="/real-estate-cbus-audit-sydney.html">Real Estate</a>
-    <a href="/strata.html">Strata &amp; FM Hub</a>
   </div>
   <div class="mob-section">
     <div class="mob-section-title">Resources</div>
     <a href="/blog.html">Blog</a>
     <a href="/guides.html">Guides</a>
-    <a href="/cbus-vs-dynalite.html">C-Bus vs Dynalite</a>
-    <a href="/how-to-choose-cbus-specialist-sydney.html">How to Choose a Specialist</a>
     <a href="/projects.html">Projects</a>
     <a href="/about.html">About</a>
-    <a href="/contact.html">Contact</a>
   </div>
-  <a href="/contact.html" class="mob-cta">Get a Free Quote &#8594;</a>
+  <a href="/contact.html" class="mob-cta">Free Quote — 0422 469 739</a>
 </div>
-<div class="page">
-  <div class="hero"><div class="container">
-    <div class="tag">📍 St George</div>
-    <h1><span class="accent">Same-Day</span> St George Area Sydney<br><span class="accent">C-Bus &amp; Dynalite Specialist</span></h1>
-    <p class="lead">Accredited C-Bus Programmer and Dynalite System Designer serving the St George area. Residential homes, strata buildings and commercial properties across Kogarah, Hurstville, Rockdale and surrounding suburbs.</p>
-    <div class="btns">
-      <a href="/contact.html" class="btn btn-primary">Get a Free Quote</a>
-      <a href="tel:0422469739" class="btn btn-outline">📞 0422 469 739</a>
-    </div>
-  </div></div>
-
-  <div class="section"><div class="container">
-    <div class="grid-2" style="gap:40px;margin-bottom:48px">
-      <div class="card">
-        <div class="icon-box">⚡</div>
-        <h3>C-Bus Services — St George</h3>
-        <ul style="color:#a8c0e0;padding-left:18px;font-size:14px;line-height:2.2;margin-top:10px">
-          <li>C-Bus fault finding &amp; diagnosis</li>
-          <li>Scene &amp; schedule programming</li>
-          <li>System commissioning</li>
-          <li>Relay module replacement</li>
-          <li>C-Bus system design &amp; upgrades</li>
-        </ul>
-      </div>
-      <div class="card">
-        <div class="icon-box">💡</div>
-        <h3>Dynalite Services — St George</h3>
-        <ul style="color:#a8c0e0;padding-left:18px;font-size:14px;line-height:2.2;margin-top:10px">
-          <li>Dynalite fault finding &amp; repair</li>
-          <li>Programming &amp; scene creation</li>
-          <li>DALI integration &amp; compliance</li>
-          <li>Controller replacement</li>
-          <li>Dynalite system design</li>
-        </ul>
-      </div>
-    </div>
-
-    <div style="background:#001428;border-radius:16px;padding:32px;margin-bottom:48px">
-      <h2 style="margin-bottom:16px">Why <span class="accent">Sydney Automation Co.</span> for St George?</h2>
-      <p style="color:#a8c0e0;line-height:1.85;max-width:800px">The St George area sits between our Sutherland Shire home base and the Sydney CBD, meaning fast response times and competitive rates. We regularly service C-Bus residential installs across Hurstville, Oatley and Mortdale, and Dynalite-equipped strata and commercial buildings across the Kogarah and Rockdale corridor. The area has a mix of older C-Bus 1 installs and newer residential developments — we're familiar with the full range.</p>
-    </div>
-
-    <div class="section-header">
-      <h2>Suburbs We Serve in <span class="accent">St George</span></h2>
-      <p class="dim">C-Bus and Dynalite fault finding, programming and commissioning across St George.</p>
-    </div>
-    <div class="suburb-grid" style="margin-bottom:48px"><div class="suburb-card"><h4>Kogarah</h4></div><div class="suburb-card"><h4>Hurstville</h4></div><div class="suburb-card"><h4>Rockdale</h4></div><div class="suburb-card"><h4>Brighton-Le-Sands</h4></div><div class="suburb-card"><h4>Bexley</h4></div><div class="suburb-card"><h4>Penshurst</h4></div><div class="suburb-card"><h4>Peakhurst</h4></div><div class="suburb-card"><h4>Beverley Park</h4></div><div class="suburb-card"><h4>Oatley</h4></div><div class="suburb-card"><h4>Mortdale</h4></div><div class="suburb-card"><h4>Lugarno</h4></div><div class="suburb-card"><h4>Riverwood</h4></div><div class="suburb-card"><h4>Narwee</h4></div><div class="suburb-card"><h4>Carlton</h4></div><div class="suburb-card"><h4>Allawah</h4></div></div>
-
-    <div class="grid-3" style="margin-bottom:48px">
-      <div class="card" style="text-align:center">
-        <div class="icon-box" style="margin:0 auto 12px">🎓</div>
-        <h4>Fully Accredited</h4>
-        <p class="dim" style="font-size:14px;margin-top:8px">Accredited C-Bus Programmer (Clipsal/Schneider) and Accredited Dynalite System Designer (Signify/Philips).</p>
-      </div>
-      <div class="card" style="text-align:center">
-        <div class="icon-box" style="margin:0 auto 12px">⚡</div>
-        <h4>Same-Day Available</h4>
-        <p class="dim" style="font-size:14px;margin-top:8px">We typically attend fault callouts same day. Based in Menai — fast response across all of Greater Sydney.</p>
-      </div>
-      <div class="card" style="text-align:center">
-        <div class="icon-box" style="margin:0 auto 12px">📋</div>
-        <h4>Fixed Pricing</h4>
-        <p class="dim" style="font-size:14px;margin-top:8px">We quote before we start. No surprises on the invoice. Documentation provided on completion.</p>
-      </div>
-    </div>
-
-    <div class="cta-band">
-      <h2>St George Area C-Bus or Dynalite Fault?</h2>
-      <p style="color:#a8c0e0;margin-bottom:28px;font-size:17px">Accredited C-Bus and Dynalite specialist. Same-day fault finding. Based in Menai, serving all of Greater Sydney.</p>
-      <div class="btns" style="justify-content:center">
-        <a href="/contact.html" class="btn btn-primary">Get a Free Quote</a>
-        <a href="tel:0422469739" class="btn btn-outline">📞 0422 469 739</a>
-      </div>
-    </div>
-  </div></div>
-</div>
-
-  <!-- Repair & Fault Links -->
+<!-- Repair & Fault Links -->
   <div style="background:#001428;border-top:1px solid #2a4a80;padding:32px 24px">
     <div class="container">
       <div style="font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:20px;margin-bottom:16px">C-Bus Problem? <span style="color:#f07020">Call Us Now.</span></div>
@@ -503,6 +469,7 @@ footer{background:#132647;border-top:1px solid #2a4a80;padding:48px 24px 32px}
   </div>
 </div>
 
+<div id="pb-body-offset" style="height:104px"></div>
 <section style="background:#0a1628;padding:40px 0;border-top:1px solid #2a4a80">
   <div class="container" style="max-width:1100px;margin:0 auto;padding:0 24px">
     <h3 style="font-family:Barlow Condensed,sans-serif;font-size:22px;font-weight:800;color:#f0f4ff;margin-bottom:20px">Related Services &amp; Areas</h3>
@@ -615,3 +582,35 @@ footer{background:#132647;border-top:1px solid #2a4a80;padding:48px 24px 32px}
 </a>
 
 
+
+<script>
+(function(){
+  var msgs=[
+    {t:"Need a C-Bus or Dynalite Technician?",      btn:"Book Now",          href:"/contact.html"},
+    {t:"Is Your C-Bus Not Working?",                 btn:"Book Fault Finding", href:"/cbus-fault-finding-sydney.html"},
+    {t:"Lights Flickering or Not Responding?",       btn:"Call Now",          href:"tel:0422469739"},
+    {t:"Same-Day Lighting Control Fault Finding",    btn:"Book Service",      href:"/contact.html"},
+    {t:"Strata & Commercial Lighting Specialists",   btn:"Request Quote",     href:"/contact.html"},
+    {t:"Maintenance & Service Contracts Available",  btn:"Find Out More",     href:"/lighting-control-service-contract-sydney.html"},
+    {t:"Emergency Lighting Repairs & Compliance",    btn:"Book Service",      href:"/emergency-lighting-compliance-afss-sydney.html"},
+    {t:"System Upgrades & Retrofits — Sydney Wide",  btn:"Get a Quote",       href:"/contact.html"},
+    {t:"AFSS / OC / PC Emergency Lighting",         btn:"Learn More",        href:"https://sydneyautomationco.online"},
+    {t:"Dynalite & C-Bus Repairs Across Sydney",     btn:"Book Repair",       href:"/contact.html"}
+  ];
+  var txt=document.getElementById('pb-text');
+  var btn=document.getElementById('pb-btn');
+  if(!txt||!btn) return;
+  var i=Math.floor(Math.random()*msgs.length);
+  function show(m){
+    txt.style.opacity=0;
+    setTimeout(function(){
+      txt.textContent=m.t;
+      btn.textContent=m.btn;
+      btn.href=m.href;
+      txt.style.opacity=1;
+    },400);
+  }
+  show(msgs[i]);
+  setInterval(function(){i=(i+1)%msgs.length;show(msgs[i]);},5000);
+})();
+</script>
