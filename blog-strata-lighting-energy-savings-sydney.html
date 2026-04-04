@@ -150,6 +150,14 @@ footer{background:#132647;border-top:1px solid #2a4a80;padding:48px 24px 32px}
 .nav-dd-panel.mega{min-width:560px;display:none;grid-template-columns:1fr 1fr;gap:0 8px;padding:12px}
 .nav-dd.open .nav-dd-panel.mega{display:grid}
 .mega-col{}
+
+/* WhatsApp button fixes */
+.wa-float,.whatsapp-float{z-index:200!important}
+@media(max-width:768px){
+  .wa-float{bottom:90px!important}
+  .whatsapp-float{bottom:90px!important}
+  body{padding-bottom:80px}
+}
 </style>
   <meta property="og:title" content="C-Bus & Dynalite Tips, Guides & Industry News | Sydney Automation Co.">
   <meta property="og:description" content="Expert articles on C-Bus programming, Dynalite fault finding, DALI compliance, and smart lighting control from Sydney's leading automation specialists.">
@@ -378,57 +386,46 @@ footer{background:#132647;border-top:1px solid #2a4a80;padding:48px 24px 32px}
   </div>
   <a href="/contact.html" class="mob-cta">Free Quote — 0422 469 739</a>
 </div><div style="height:104px"></div>
-
-<!-- Repair & Emergency Links -->
-  <div style="background:#001428;border-top:1px solid #2a4a80;padding:40px 24px">
-    <div class="container">
-      <div style="font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:22px;letter-spacing:0.5px;margin-bottom:20px">System Not Working? <span style="color:#f07020">We Fix It Fast.</span></div>
-      <div style="display:flex;flex-wrap:wrap;gap:10px">
-        <a href="/cbus-repair-sydney.html" style="background:#0d2444;color:#f07020;padding:12px 18px;border-radius:8px;font-weight:700;font-size:14px;text-decoration:none;border:1px solid #f0702040">🔧 C-Bus Repair Sydney</a>
-        <a href="/dynalite-repair-sydney.html" style="background:#0d2444;color:#f07020;padding:12px 18px;border-radius:8px;font-weight:700;font-size:14px;text-decoration:none;border:1px solid #f0702040">💡 Dynalite Repair Sydney</a>
-        <a href="/emergency-repair-sydney.html" style="background:#3a0a00;color:#ff6633;padding:12px 18px;border-radius:8px;font-weight:700;font-size:14px;text-decoration:none;border:1px solid #ff663340">🚨 Emergency Repair</a>
-        <a href="/lighting-control-repair-sydney.html" style="background:#0d2444;color:#a8c0e0;padding:12px 18px;border-radius:8px;font-weight:600;font-size:14px;text-decoration:none;border:1px solid #2a4a80">🌐 Lighting Control Repair</a>
-        <a href="/dali-lighting-repair.html" style="background:#0d2444;color:#a8c0e0;padding:12px 18px;border-radius:8px;font-weight:600;font-size:14px;text-decoration:none;border:1px solid #2a4a80">🔌 DALI Lighting Repair</a>
-        <a href="/cbus-not-working-sydney.html" style="background:#0d2444;color:#a8c0e0;padding:12px 18px;border-radius:8px;font-weight:600;font-size:14px;text-decoration:none;border:1px solid #2a4a80">❓ C-Bus Not Working?</a>
-        <a href="/dynalite-not-working-sydney.html" style="background:#0d2444;color:#a8c0e0;padding:12px 18px;border-radius:8px;font-weight:600;font-size:14px;text-decoration:none;border:1px solid #2a4a80">❓ Dynalite Not Working?</a>
-        <a href="/cbus-upgrade-sydney.html" style="background:#0d2444;color:#a8c0e0;padding:12px 18px;border-radius:8px;font-weight:600;font-size:14px;text-decoration:none;border:1px solid #2a4a80">⬆️ C-Bus Upgrade</a>
+<div class="page">
+  <div style="padding:80px 24px 0">
+    <div class="container-sm">
+      <a href="/blog.html" style="color:#a8c0e0;font-size:14px;display:inline-block;margin-bottom:24px">&#8592; All Articles</a>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;margin-bottom:20px">
+        <span style="background:rgba(240,112,32,0.12);color:#f07020;border:1px solid #f0702040;border-radius:50px;padding:4px 12px;font-size:12px;font-weight:700">Strata</span>
+        <span style="color:#6a8cb5;font-size:13px">Feb 2025 &middot; 8 min read</span>
+      </div>
+      <h1 style="font-family:'Barlow Condensed',sans-serif;font-size:clamp(32px,5vw,56px);font-weight:900;line-height:1.05;margin-bottom:20px">Strata Lighting Energy Savings<br><span style="color:#f07020">Sydney: C-Bus &amp; Dynalite Optimisation</span></h1>
+      <p style="font-size:18px;color:#a8c0e0;line-height:1.8;margin-bottom:40px;max-width:640px">How Sydney strata managers can use C-Bus and Dynalite optimisation to slash common area electricity bills, improve building value and satisfy levy-conscious owners.</p>
+    </div>
+  </div>
+  <div style="padding:0 24px 80px">
+    <div class="container-sm">
+      <div class="article-body">
+        <h2>The Common Area Lighting Problem in Sydney Strata</h2>
+        <p>Electricity costs in Sydney strata buildings have risen sharply over the past three years. For many OC committees, common area lighting — lobbies, corridors, car parks, stairwells, external paths — represents 40-60% of total building electricity consumption. The frustrating reality is that most of this lighting runs on fixed schedules that were set during building commissioning and never adjusted, meaning lights run at full brightness for 18+ hours a day regardless of actual occupancy.</p>
+        <h2>What C-Bus and Dynalite Can Actually Do for Your Levy</h2>
+        <p>Buildings with existing C-Bus or Dynalite systems have a significant advantage: the infrastructure for intelligent lighting control already exists. The question is whether it's being used correctly. In our experience working with Sydney strata buildings, most are using less than 30% of their system's capability. Common underutilised features include:</p>
+        <ul>
+          <li><strong>Occupancy-triggered scenes</strong> — dim corridors to 20% when unoccupied, bring to 100% on motion</li>
+          <li><strong>Daylight harvesting</strong> — reduce artificial lighting in lobbies as natural light increases</li>
+          <li><strong>Time-of-day scheduling</strong> — reduce car park lighting levels from midnight to 5am</li>
+          <li><strong>Astronomical clock integration</strong> — external lighting switches automatically at true sunrise/sunset</li>
+          <li><strong>Energy reporting</strong> — identify which circuits are drawing the most power and when</li>
+        </ul>
+        <h2>Real Numbers: What Sydney Strata Buildings Are Saving</h2>
+        <p>Across the Sydney strata buildings we've optimised, common area lighting energy consumption has reduced by 35-65% following C-Bus or Dynalite reprogramming — without any hardware upgrades. A typical 60-unit building in Sydney's Inner West spending $18,000 per year on common area electricity can realistically reduce this to $9,000-$12,000 with intelligent control optimisation. That saving flows directly to the owners through reduced levies.</p>
+        <h2>The LED + Control Combination</h2>
+        <p>If your strata building still has fluorescent or halogen fittings, combining an LED upgrade with C-Bus or Dynalite reprogramming delivers the best return. LED replacements alone typically save 40-50% on lighting energy. Combine that with intelligent scheduling and occupancy control, and total savings of 70-80% against baseline are achievable. For a building with $20,000 in annual lighting energy costs, payback on a combined LED and control upgrade is typically 2-4 years.</p>
+        <h2>Getting Your Strata Building Optimised</h2>
+        <p>The first step is a lighting control audit. We review your existing C-Bus or Dynalite programming, identify schedules that are wasting energy, map occupancy patterns to proposed new scenes, and provide a written report with projected energy savings and payback periods. This gives the OC committee the evidence they need to approve the works. Sydney Automation Co. works directly with strata managers and OC committees across Greater Sydney. Call <a href="tel:0422469739">0422 469 739</a> or <a href="/contact.html">contact us online</a> to discuss your building.</p>
+      </div>
+      <div style="background:#132647;border:1px solid #2a4a80;border-radius:16px;padding:32px;margin-top:48px">
+        <h3 style="font-family:'Barlow Condensed',sans-serif;font-size:24px;font-weight:900;margin-bottom:12px">Cut Your Strata Lighting Bills</h3>
+        <p style="color:#a8c0e0;margin-bottom:20px">We optimise C-Bus and Dynalite systems for Sydney strata buildings. Get a free energy audit scoping call.</p>
+        <a href="tel:0422469739" style="display:inline-flex;align-items:center;gap:8px;background:#f07020;color:#fff;padding:14px 28px;border-radius:10px;font-weight:700;font-size:16px;text-decoration:none">&#128222; Call 0422 469 739</a>
       </div>
     </div>
   </div>
-
-  <!-- Competitive Dominance Section -->
-  <div class="section" style="background:#152b4d;border-top:1px solid #2a4a80;border-bottom:1px solid #2a4a80">
-    <div class="container">
-      <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));gap:32px;padding:40px 0">
-        
-        <!-- Modernization Counter-Strike -->
-        <div style="background:rgba(255,255,255,0.03);padding:24px;border-radius:12px;border:1px solid rgba(240,112,32,0.2)">
-          <div style="color:#f07020;font-size:24px;margin-bottom:12px">Modernize & Voice Control</div>
-          <p style="font-size:15px;line-height:1.6;color:#a8c0e0">Don't let your C-Bus system feel dated. We integrate legacy systems with <strong>Apple HomeKit, Google Home, and Amazon Alexa</strong>. Control your lighting, blinds, and climate from your iPhone or Watch with remote access from anywhere.</p>
-        </div>
-
-        <!-- Technical Authority Wedge -->
-        <div style="background:rgba(255,255,255,0.03);padding:24px;border-radius:12px;border:1px solid rgba(240,112,32,0.2)">
-          <div style="color:#f07020;font-size:24px;margin-bottom:12px">Specialist Diagnostics</div>
-          <p style="font-size:15px;line-height:1.6;color:#a8c0e0">We fix the "unfixable." Using <strong>C-Bus Toolkit, PICED, and Dynalite System Builder</strong>, we perform deep-level network analysis, burden testing, and voltage drop diagnostics that general electricians cannot provide.</p>
-        </div>
-
-        <!-- Emergency Wedge -->
-        <div style="background:rgba(255,255,255,0.03);padding:24px;border-radius:12px;border:1px solid rgba(240,112,32,0.2)">
-          <div style="color:#f07020;font-size:24px;margin-bottom:12px">Emergency 24/7 Repairs</div>
-          <p style="font-size:15px;line-height:1.6;color:#a8c0e0">Lights won't turn off? Total system crash? We offer <strong>Priority Same-Day Service</strong> across Sydney for critical faults. Our vans are stocked with common C-Bus & Dynalite hardware for immediate replacement.</p>
-        </div>
-
-      </div>
-    </div>
-  </div>
-
-
-
-
-
-
-
 <footer>
   <div class="footer-grid">
     <div>
@@ -467,7 +464,7 @@ footer{background:#132647;border-top:1px solid #2a4a80;padding:48px 24px 32px}
     <span>© 2025 Sydney Automation Co. &mdash; Menai, Sutherland Shire NSW</span>
     <span>C-Bus Accredited &bull; Dynalite Accredited &bull; DALI Specialists</span>
   </div>
-<div id="pb-body-offset" style="height:104px"></div>
+
 <script>
 (function(){
   // Dropdown toggle
@@ -553,3 +550,5 @@ footer{background:#132647;border-top:1px solid #2a4a80;padding:48px 24px 32px}
   setInterval(function(){i=(i+1)%msgs.length;show(msgs[i]);},5000);
 })();
 </script>
+</body>
+</html>
