@@ -122,15 +122,16 @@ footer{background:#132647;border-top:1px solid #2a4a80;padding:48px 24px 32px}
 #promo-banner .pb-btn:hover{background:#0e1f3d;color:#fff}
 @media(max-width:600px){#promo-banner .pb-text{font-size:11px}#promo-banner .pb-btn{padding:4px 10px;font-size:11px}}
 /* Mega-menu two-column */
-.nav-dd-panel.mega{min-width:560px;display:none;grid-template-columns:1fr 1fr;gap:0 8px;padding:12px}
+.nav-dd-panel.mega{min-width:560px;max-width:calc(100vw - 48px);display:none;grid-template-columns:1fr 1fr;gap:0 8px;padding:12px;overflow-y:auto;max-height:80vh}
 .nav-dd.open .nav-dd-panel.mega{display:grid}
 .mega-col{}
 
 /* WhatsApp button fixes */
-.wa-float,.whatsapp-float{z-index:200!important}
+.wa-float,.whatsapp-float,.wa-fixed{z-index:400!important}
 @media(max-width:768px){
   .wa-float{bottom:90px!important}
   .whatsapp-float{bottom:90px!important}
+  .wa-fixed{bottom:90px!important}
   body{padding-bottom:80px}
 }
 </style>
@@ -343,7 +344,7 @@ footer{background:#132647;border-top:1px solid #2a4a80;padding:48px 24px 32px}
     <a href="/about.html">About</a>
   </div>
   <a href="/contact.html" class="mob-cta">Free Quote — 0422 469 739</a>
-</div><div style="height:104px"></div>
+</div>
 <div class="page">
   <div style="padding:64px 24px 0">
     <div class="container-sm">
@@ -498,10 +499,11 @@ footer{background:#132647;border-top:1px solid #2a4a80;padding:48px 24px 32px}
     @media (max-width: 600px) { .wa-msg { display: none; } }
   
 /* WhatsApp button fixes */
-.wa-float,.whatsapp-float{z-index:200!important}
+.wa-float,.whatsapp-float,.wa-fixed{z-index:400!important}
 @media(max-width:768px){
   .wa-float{bottom:90px!important}
   .whatsapp-float{bottom:90px!important}
+  .wa-fixed{bottom:90px!important}
   body{padding-bottom:80px}
 }
 </style>

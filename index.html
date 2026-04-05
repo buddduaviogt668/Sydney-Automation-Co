@@ -246,7 +246,7 @@ nav{position:fixed;top:40px;left:0;right:0;z-index:1000;background:rgba(14,31,61
 .nav-dd-panel.right{left:auto;right:0}
 .nav-dd-panel.wide{min-width:300px}
 /* Mega-menu two-column */
-.nav-dd-panel.mega{min-width:560px;display:none;grid-template-columns:1fr 1fr;gap:0 8px;padding:12px}
+.nav-dd-panel.mega{min-width:560px;max-width:calc(100vw - 48px);display:none;grid-template-columns:1fr 1fr;gap:0 8px;padding:12px;overflow-y:auto;max-height:80vh}
 .nav-dd.open .nav-dd-panel.mega{display:grid}
 .mega-col{}
 .nav-dd.open .nav-dd-panel{display:block}

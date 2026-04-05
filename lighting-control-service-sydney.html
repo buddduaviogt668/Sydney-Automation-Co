@@ -33,13 +33,13 @@
   "@type":["LocalBusiness","Electrician"],
   "@id":"https://sydneyautomationco.com.au#lighting-control-service-sydney",
   "name":"Sydney Automation Co.",
-  "description":'Expert lighting control service, fault finding, repair and recommissioning for C-Bus, Dynalite, DALI and RAPIX systems across Greater Sydney.',
+  "description": "Expert lighting control service, fault finding, repair and recommissioning for C-Bus, Dynalite, DALI and RAPIX systems across Greater Sydney.",
   "url":"https://sydneyautomationco.com.au/lighting-control-service-sydney.html",
   "telephone":"+61422469739",
   "email":"service@sydneyautomationco.com.au",
   "address":{"@type":"PostalAddress","streetAddress":"Menai","addressLocality":"Menai","addressRegion":"NSW","postalCode":"2234","addressCountry":"AU"},
   "areaServed":{"@type":"City","name":"Sydney NSW"},
-  "serviceType":'Lighting Control Service',
+  "serviceType": "Lighting Control Service",
   "priceRange":"$$",
   "currenciesAccepted":"AUD",
   "paymentAccepted":"Cash, Credit Card, Bank Transfer",
@@ -50,11 +50,11 @@
 <script type="application/ld+json">{
   "@context":"https://schema.org",
   "@type":"FAQPage",
-  "mainEntity":[{"@type":"Question","name":'What lighting control systems can you service?',"acceptedAnswer":{"@type":"Answer","text":'We service all major systems used in Sydney buildings: Clipsal C-Bus, Philips Dynalite, DALI and DALI-2, and RAPIX. We carry diagnostic software for all four systems and stock common replacement parts.'}},
-{"@type":"Question","name":"Can you service a lighting control system you didn't install?","acceptedAnswer":{"@type":"Answer","text":'Yes — most of our service work is on systems installed by others. We use manufacturer-level diagnostic software to interrogate the system, identify faults and repair without relying on original installation documentation.'}},
-{"@type":"Question","name":'How quickly can you attend a lighting control fault?',"acceptedAnswer":{"@type":"Answer","text":'We offer same-day attendance in most cases across Greater Sydney. For urgent faults in commercial or strata buildings, call us directly on 0422 469 739. Priority response is guaranteed for existing maintenance contract clients.'}},
-{"@type":"Question","name":"What's involved in recommissioning a lighting control system?","acceptedAnswer":{"@type":"Answer","text":'Recommissioning is required when a system has been disrupted — for example, after building works, a fit-out or a network fault. We reconnect all devices, restore or rebuild programming, test all scenes and zones, and provide a written recommissioning record.'}},
-{"@type":"Question","name":'Can you reprogram scenes and schedules on existing systems?',"acceptedAnswer":{"@type":"Answer","text":'Yes. Scene and schedule reprogramming is a core part of our service offering for all systems. Whether you need to add zones, adjust timers, change preset levels or add automation logic, we can update the programming on any C-Bus, Dynalite or DALI system.'}}]
+  "mainEntity":[{"@type":"Question","name": "What lighting control systems can you service?","acceptedAnswer":{"@type":"Answer","text": "We service all major systems used in Sydney buildings: Clipsal C-Bus, Philips Dynalite, DALI and DALI-2, and RAPIX. We carry diagnostic software for all four systems and stock common replacement parts."}},
+{"@type":"Question","name":"Can you service a lighting control system you didn't install?","acceptedAnswer":{"@type":"Answer","text": "Yes — most of our service work is on systems installed by others. We use manufacturer-level diagnostic software to interrogate the system, identify faults and repair without relying on original installation documentation."}},
+{"@type":"Question","name": "How quickly can you attend a lighting control fault?","acceptedAnswer":{"@type":"Answer","text": "We offer same-day attendance in most cases across Greater Sydney. For urgent faults in commercial or strata buildings, call us directly on 0422 469 739. Priority response is guaranteed for existing maintenance contract clients."}},
+{"@type":"Question","name":"What's involved in recommissioning a lighting control system?","acceptedAnswer":{"@type":"Answer","text": "Recommissioning is required when a system has been disrupted — for example, after building works, a fit-out or a network fault. We reconnect all devices, restore or rebuild programming, test all scenes and zones, and provide a written recommissioning record."}},
+{"@type":"Question","name": "Can you reprogram scenes and schedules on existing systems?","acceptedAnswer":{"@type":"Answer","text": "Yes. Scene and schedule reprogramming is a core part of our service offering for all systems. Whether you need to add zones, adjust timers, change preset levels or add automation logic, we can update the programming on any C-Bus, Dynalite or DALI system."}}]
 }</script>
 <script type="application/ld+json">{
   "@context":"https://schema.org",
@@ -62,7 +62,7 @@
   "itemListElement":[
     {"@type":"ListItem","position":1,"name":"Home","item":"https://sydneyautomationco.com.au"},
     {"@type":"ListItem","position":2,"name":"Services","item":"https://sydneyautomationco.com.au/services.html"},
-    {"@type":"ListItem","position":3,"name":'Lighting Control Service',"item":"https://sydneyautomationco.com.au/lighting-control-service-sydney.html"}
+    {"@type":"ListItem","position":3,"name": "Lighting Control Service","item":"https://sydneyautomationco.com.au/lighting-control-service-sydney.html"}
   ]
 }</script>
 <style>
@@ -177,15 +177,16 @@ footer{background:#132647;border-top:1px solid #2a4a80;padding:48px 24px 32px}
 #promo-banner .pb-btn:hover{background:#0e1f3d;color:#fff}
 @media(max-width:600px){#promo-banner .pb-text{font-size:11px}#promo-banner .pb-btn{padding:4px 10px;font-size:11px}}
 /* Mega-menu two-column */
-.nav-dd-panel.mega{min-width:560px;display:none;grid-template-columns:1fr 1fr;gap:0 8px;padding:12px}
+.nav-dd-panel.mega{min-width:560px;max-width:calc(100vw - 48px);display:none;grid-template-columns:1fr 1fr;gap:0 8px;padding:12px;overflow-y:auto;max-height:80vh}
 .nav-dd.open .nav-dd-panel.mega{display:grid}
 .mega-col{}
 
 /* WhatsApp button fixes */
-.wa-float,.whatsapp-float{z-index:200!important}
+.wa-float,.whatsapp-float,.wa-fixed{z-index:400!important}
 @media(max-width:768px){
   .wa-float{bottom:90px!important}
   .whatsapp-float{bottom:90px!important}
+  .wa-fixed{bottom:90px!important}
   body{padding-bottom:80px}
 }
 </style>
@@ -392,7 +393,7 @@ footer{background:#132647;border-top:1px solid #2a4a80;padding:48px 24px 32px}
     <a href="/about.html">About</a>
   </div>
   <a href="/contact.html" class="mob-cta">Free Quote — 0422 469 739</a>
-</div><div style="height:104px"></div>
+</div>
 <div class="page">
   <div class="hero">
     <div class="container">
@@ -590,7 +591,7 @@ footer{background:#132647;border-top:1px solid #2a4a80;padding:48px 24px 32px}
   </div>
 </div>
 
-<a href="https://wa.me/61422469739" target="_blank" style="position:fixed;bottom:24px;left:24px;background:#25d366;color:#fff;width:60px;height:60px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:32px;box-shadow:0 4px 12px rgba(0,0,0,0.3);z-index:400;transition:transform 0.2s">
+<a href="https://wa.me/61422469739" target="_blank" class="wa-fixed" style="position:fixed;bottom:24px;left:24px;background:#25d366;color:#fff;width:60px;height:60px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:32px;box-shadow:0 4px 12px rgba(0,0,0,0.3);z-index:400;transition:transform 0.2s">
   <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
 </a>
 <footer>
