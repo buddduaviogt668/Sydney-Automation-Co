@@ -148,6 +148,35 @@ footer{background:#132647;border-top:1px solid #2a4a80;padding:48px 24px 32px}
   .wa-fixed{bottom:90px!important}
   body{padding-bottom:80px}
 }
+
+/* ── ARTICLE BODY ── */
+.article-body{font-size:16px;line-height:1.9;color:#a8c0e0}
+.article-body p{margin-bottom:1.4em}
+.article-body strong{color:#f0f4ff;font-weight:700}
+.article-body h2{font-family:'Barlow Condensed',sans-serif;font-size:clamp(22px,3vw,32px);font-weight:900;color:#f0f4ff;margin:2em 0 0.6em}
+.article-body h3{font-family:'Barlow Condensed',sans-serif;font-size:20px;font-weight:800;color:#f0f4ff;margin:1.6em 0 0.5em}
+.article-body a{color:#f07020;text-decoration:underline}
+.article-body a:hover{color:#ff8533}
+.article-body ul,.article-body ol{padding-left:1.5em;margin-bottom:1.4em}
+.article-body li{margin-bottom:0.5em;color:#a8c0e0}
+/* ── GEORGE PHOTO ── */
+.george-img{width:100%;border-radius:16px;display:block}
+/* ── LOCATION/REGION LAYOUT ── */
+.region-block{margin-bottom:56px}
+.region-header{display:flex;align-items:center;gap:16px;margin-bottom:20px;padding:20px 24px;background:#132647;border:1px solid #2a4a80;border-radius:14px;flex-wrap:wrap}
+.region-emoji{font-size:28px;flex-shrink:0}
+.region-title{font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:900;color:#f0f4ff}
+.region-link{margin-left:auto;color:#f07020;font-size:14px;font-weight:700;white-space:nowrap}
+.region-link:hover{color:#ff8533}
+.suburb-links{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px}
+.suburb-link-card{background:#0d1e3c;border:1px solid #2a4a80;border-radius:12px;padding:16px 20px;transition:border-color 0.2s,background 0.2s}
+.suburb-link-card:hover{border-color:rgba(240,112,32,0.5);background:#132647}
+.s-name{font-family:'Barlow Condensed',sans-serif;font-size:18px;font-weight:900;color:#f0f4ff;margin-bottom:2px}
+.s-service{font-size:12px;font-weight:700;color:#f07020;text-transform:uppercase;letter-spacing:1px;margin-bottom:6px}
+.s-desc{font-size:13px;color:#a8c0e0;line-height:1.5;margin-bottom:8px}
+.s-arrow{font-size:12px;color:#4a6a9a;font-weight:600}
+a:hover .suburb-link-card .s-arrow{color:#f07020}
+
 </style>
 </head><body>
 <nav>
@@ -467,96 +496,6 @@ footer{background:#132647;border-top:1px solid #2a4a80;padding:48px 24px 32px}
       </div>
     </div>
   </div>
-
-  <!-- Competitive Dominance Section -->
-  <div class="section" style="background:#152b4d;border-top:1px solid #2a4a80;border-bottom:1px solid #2a4a80">
-    <div class="container">
-      <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));gap:32px;padding:40px 0">
-        <div style="background:rgba(255,255,255,0.03);padding:24px;border-radius:12px;border:1px solid rgba(240,112,32,0.2)">
-          <div style="color:#f07020;font-size:24px;margin-bottom:12px">Modernize &amp; Voice Control</div>
-          <p style="font-size:15px;line-height:1.6;color:#a8c0e0">Don't let your C-Bus system feel dated. We integrate legacy systems with <strong>Apple HomeKit, Google Home, and Amazon Alexa</strong>. Control your lighting, blinds, and climate from your iPhone or Watch with remote access from anywhere.</p>
-        </div>
-        <div style="background:rgba(255,255,255,0.03);padding:24px;border-radius:12px;border:1px solid rgba(240,112,32,0.2)">
-          <div style="color:#f07020;font-size:24px;margin-bottom:12px">Specialist Diagnostics</div>
-          <p style="font-size:15px;line-height:1.6;color:#a8c0e0">We fix the "unfixable." Using <strong>C-Bus Toolkit, PICED, and Dynalite Envision</strong>, we perform deep-level network analysis, burden testing, and voltage drop diagnostics that general electricians cannot provide.</p>
-        </div>
-        <div style="background:rgba(255,255,255,0.03);padding:24px;border-radius:12px;border:1px solid rgba(240,112,32,0.2)">
-          <div style="color:#f07020;font-size:24px;margin-bottom:12px">Emergency 24/7 Repairs</div>
-          <p style="font-size:15px;line-height:1.6;color:#a8c0e0">Lights won't turn off? Total system crash? We offer <strong>Priority Same-Day Service</strong> across Sydney for critical faults. Our vans are stocked with common C-Bus &amp; Dynalite hardware for immediate replacement.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-<footer>
-  <div class="footer-grid">
-    <div>
-      <div class="logo" style="margin-bottom:16px">
-        <span class="logo-main">Sydney Automation Co.</span>
-        <div class="logo-line"></div>
-        <span class="logo-sub">Lighting Control Specialists</span>
-      </div>
-      <p style="color:#a8c0e0;font-size:14px;line-height:1.7;max-width:340px">Accredited C-Bus Programmer and Dynalite System Designer. Based in Menai, serving all of Greater Sydney. Same-day fault finding. Fixed-price programming.</p>
-    </div>
-    <div>
-      <h4 style="font-family:'Barlow Condensed',sans-serif;font-weight:800;margin-bottom:16px;font-size:16px;letter-spacing:1px;text-transform:uppercase;color:#a8c0e0">Services</h4>
-      <div style="display:flex;flex-direction:column;gap:8px;font-size:14px">
-        <a href="c-bus-programmer-sydney.html" style="color:#a8c0e0" onmouseover="this.style.color='#f07020'" onmouseout="this.style.color='#a8c0e0'">C-Bus Programming</a>
-        <a href="dynalite-programmer-sydney.html" style="color:#a8c0e0" onmouseover="this.style.color='#f07020'" onmouseout="this.style.color='#a8c0e0'">Dynalite Systems</a>
-        <a href="services.html" style="color:#a8c0e0" onmouseover="this.style.color='#f07020'" onmouseout="this.style.color='#a8c0e0'">All Services</a>
-        <a href="electricians.html" style="color:#a8c0e0" onmouseover="this.style.color='#f07020'" onmouseout="this.style.color='#a8c0e0'">For Electricians</a>
-        <a href="strata.html" style="color:#a8c0e0" onmouseover="this.style.color='#f07020'" onmouseout="this.style.color='#a8c0e0'">Strata &amp; FM</a>
-      </div>
-    </div>
-    <div>
-      <h4 style="font-family:'Barlow Condensed',sans-serif;font-weight:800;margin-bottom:16px;font-size:16px;letter-spacing:1px;text-transform:uppercase;color:#a8c0e0">Contact</h4>
-      <div style="display:flex;flex-direction:column;gap:10px;font-size:14px;color:#a8c0e0">
-        <a href="tel:0422469739" style="color:#f07020;font-weight:700;font-size:16px">📞 0422 469 739</a>
-        <a href="/cdn-cgi/l/email-protection#adcac8c2dfcac8edded4c9c3c8d4ccd8d9c2c0ccd9c4c2c3cec283cec2c083ccd8" style="color:#a8c0e0"><span class="__cf_email__" data-cfemail="e384868c918486a3909a878d869a8296978c8e82978a8c8d808ccd808c8ecd8296">[email&#160;protected]</span></a>
-        <p>Menai, Sutherland Shire NSW 2234</p>
-        <p>Mon–Fri 7am–3pm</p>
-      </div>
-    </div>
-  </div>
-  <div class="footer-copy">
-    <span>© 2025 Sydney Automation Co. ABN 61 136 364 150. All rights reserved.</span>
-    <div style="display:flex;gap:16px">
-      <a href="privacy-policy.html" style="color:#6a8cb5" onmouseover="this.style.color='#f07020'" onmouseout="this.style.color='#6a8cb5'">Privacy Policy</a>
-      <a href="sitemap.xml" style="color:#6a8cb5" onmouseover="this.style.color='#f07020'" onmouseout="this.style.color='#6a8cb5'">Sitemap</a>
-    </div>
-  </div>
-</footer>
-
-<section class="faq-section" style="background:#0e1f3d;padding:48px 0">
-  <div class="container" style="max-width:860px;margin:0 auto;padding:0 24px">
-    <h2 style="font-family:'Barlow Condensed',sans-serif;font-size:32px;font-weight:900;color:#f0f4ff;margin-bottom:8px">Frequently Asked Questions</h2>
-    <p style="color:#a8c0e0;margin-bottom:32px">Common questions about our services. Can't find your answer? <a href="contact.html" style="color:#f07020">Contact us</a> or call <a href="tel:0422469739" style="color:#f07020">0422 469 739</a>.</p>
-    <div class="faq-list">
-  <div class="faq-item" style="border-bottom:1px solid #2a4a80;padding:16px 0">
-    <div class="faq-q" style="font-weight:700;color:#f0f4ff;font-size:16px;cursor:pointer;display:flex;justify-content:space-between;align-items:center">
-      Who is George Skarmoutsos?
-      <span style="color:#f07020;font-size:20px;flex-shrink:0;margin-left:12px">+</span>
-    </div>
-    <div class="faq-a" style="color:#a8c0e0;font-size:15px;line-height:1.7;margin-top:10px;display:none">George Skarmoutsos is the Founder and Director of Sydney Automation Co. He is an accredited C-Bus programmer and Dynalite system designer with over 15 years of experience, including a background in Clipsal technical support.</div>
-  </div>
-  <div class="faq-item" style="border-bottom:1px solid #2a4a80;padding:16px 0">
-    <div class="faq-q" style="font-weight:700;color:#f0f4ff;font-size:16px;cursor:pointer;display:flex;justify-content:space-between;align-items:center">
-      Where is Sydney Automation Co. based?
-      <span style="color:#f07020;font-size:20px;flex-shrink:0;margin-left:12px">+</span>
-    </div>
-    <div class="faq-a" style="color:#a8c0e0;font-size:15px;line-height:1.7;margin-top:10px;display:none">Sydney Automation Co. is based in Menai, Sutherland Shire, and services all of Greater Sydney.</div>
-  </div>
-  <div class="faq-item" style="border-bottom:1px solid #2a4a80;padding:16px 0">
-    <div class="faq-q" style="font-weight:700;color:#f0f4ff;font-size:16px;cursor:pointer;display:flex;justify-content:space-between;align-items:center">
-      What qualifications does Sydney Automation Co. hold?
-      <span style="color:#f07020;font-size:20px;flex-shrink:0;margin-left:12px">+</span>
-    </div>
-    <div class="faq-a" style="color:#a8c0e0;font-size:15px;line-height:1.7;margin-top:10px;display:none">George Skarmoutsos holds Clipsal C-Bus Programmer accreditation and Dynalite System Designer accreditation from Schneider Electric and Signify respectively.</div>
-  </div>
-    </div>
-  </div>
-</section>
-
 <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 document.querySelectorAll('.faq-q').forEach(function(q){
   q.addEventListener('click', function(){
