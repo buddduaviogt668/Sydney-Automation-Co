@@ -279,7 +279,7 @@ nav{position:fixed;top:40px;left:0;right:0;z-index:1000;background:#0e1f3d;borde
 #promo-banner .pb-btn{background:#fff;color:#f07020;border:none;border-radius:5px;padding:5px 14px;font-size:12px;font-weight:800;cursor:pointer;white-space:nowrap;text-decoration:none;font-family:'Barlow',sans-serif;transition:background 0.2s,color 0.2s;flex-shrink:0;z-index:1101;position:relative}
 #promo-banner .pb-btn:hover{background:#0e1f3d;color:#fff}
 @media(max-width:960px){nav{top:40px;height:80px;z-index:1000}.nav-phone-wrap{display:none}}
-@media(max-width:600px){#promo-banner{height:auto;z-index:1100;padding:8px 12px;gap:8px;flex-wrap:wrap;justify-content:space-between;min-height:40px}#promo-banner .pb-text{font-size:10px;font-weight:800;flex:1 1 auto;min-width:0;word-break:break-word}#promo-banner .pb-btn{padding:4px 8px;font-size:10px;flex-shrink:0;white-space:nowrap}nav{top:auto;height:64px;padding:0 16px;z-index:1000;margin-top:40px}.logo-main{font-size:16px;letter-spacing:1px}.logo-sub{font-size:8px;letter-spacing:2px}.logo-line{height:2px;margin:2px 0}.nav-phone-wrap{display:none}}
+@media(max-width:600px){#promo-banner{height:40px;z-index:1100;padding:0 8px;gap:6px;flex-wrap:nowrap;overflow:hidden;justify-content:center;min-height:40px}#promo-banner .pb-text{font-size:10px;font-weight:800;flex:1 1 auto;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}#promo-banner .pb-btn{padding:4px 8px;font-size:10px;flex-shrink:0;white-space:nowrap}nav{top:40px;height:64px;padding:0 16px;z-index:1000}.logo-main{font-size:16px;letter-spacing:1px}.logo-sub{font-size:8px;letter-spacing:2px}.logo-line{height:2px;margin:2px 0}.nav-phone-wrap{display:none}}
 /* Hide React-rendered nav inside #root to prevent duplication */
 #root nav { display: none !important; }
 </style>
@@ -620,7 +620,7 @@ nav{position:fixed;top:40px;left:0;right:0;z-index:1000;background:#0e1f3d;borde
     align-items: center;
     justify-content: center;
     gap: 10px;
-    padding: 15px 20px;
+    padding: 15px 20px calc(15px + env(safe-area-inset-bottom, 0px)) 20px;
     text-decoration: none;
     color: #0e1f3d;
     font-family: 'Barlow', sans-serif;
@@ -631,6 +631,7 @@ nav{position:fixed;top:40px;left:0;right:0;z-index:1000;background:#0e1f3d;borde
   @media (max-width: 768px) {
     #mob-call-bar { display: block; }
     .wa-float { bottom: 80px; }
+    #root { padding-bottom: 70px; }
   }
 </style>
 
