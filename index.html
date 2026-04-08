@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,500;0,600;1,400&family=Barlow+Condensed:wght@600;700;800;900&display=swap" rel="stylesheet"/>
-<style>body{margin:0;padding:0;background:#0e1f3d}#root{min-height:100vh;padding-top:104px}#loading{position:fixed;inset:0;background:#0e1f3d;display:flex;align-items:center;justify-content:center;z-index:9999;flex-direction:column;gap:16px;font-family:sans-serif;color:#a8c0e0}.spinner{width:40px;height:40px;border:3px solid #2a4a80;border-top-color:#f07020;border-radius:50%;animation:spin .8s linear infinite}@keyframes spin{to{transform:rotate(360deg)}}@media(max-width:768px){.grid2{grid-template-columns:1fr!important}.hide-mob{display:none!important}.show-mob{display:flex!important}}</style>
+<style>body{margin:0;padding:0;background:#0e1f3d}#root{min-height:100vh;padding-top:104px;box-sizing:border-box}#loading{position:fixed;inset:0;background:#0e1f3d;display:flex;align-items:center;justify-content:center;z-index:9999;flex-direction:column;gap:16px;font-family:sans-serif;color:#a8c0e0}.spinner{width:40px;height:40px;border:3px solid #2a4a80;border-top-color:#f07020;border-radius:50%;animation:spin .8s linear infinite}@keyframes spin{to{transform:rotate(360deg)}}@media(max-width:768px){.grid2{grid-template-columns:1fr!important}.hide-mob{display:none!important}.show-mob{display:flex!important}}</style>
 
 <!-- Google Search Console Verification -->
 <meta name="google-site-verification" content="99c59ffacd177339"/>
@@ -230,7 +230,7 @@ fbq('track', 'PageView');
 <style>
 /* ====== CANONICAL NAV CSS ====== */
 /* DROPDOWN NAV */
-nav{position:fixed;top:40px;left:0;right:0;z-index:1000;background:rgba(14,31,61,0.97);border-bottom:1px solid #2a4a80;padding:0 24px;height:64px;display:flex;align-items:center;justify-content:space-between;font-family:'Barlow',sans-serif}
+nav{position:fixed;top:40px;left:0;right:0;z-index:1000;background:rgba(14,31,61,0.97);border-bottom:1px solid #2a4a80;padding:0 24px;height:64px;display:flex;align-items:center;justify-content:space-between;font-family:'Barlow',sans-serif;box-sizing:border-box}
 .logo{font-family:'Barlow Condensed',sans-serif;font-weight:900;text-transform:uppercase;line-height:1;cursor:pointer;display:inline-flex;flex-direction:column;text-decoration:none;color:inherit;flex-shrink:0}
 .logo-main{font-size:17px;color:#fff;letter-spacing:1px;display:block;white-space:nowrap}
 .logo-line{height:2px;background:#f07020;margin:4px 0;width:100%}
@@ -268,11 +268,11 @@ nav{position:fixed;top:40px;left:0;right:0;z-index:1000;background:rgba(14,31,61
 .hamburger.open span:nth-child(2){opacity:0}
 .hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
 /* ── ROTATING PROMO BANNER ── */
-#promo-banner{position:fixed;top:0;left:0;right:0;z-index:1100;height:40px;background:#f07020;display:flex;align-items:center;justify-content:center;gap:14px;font-family:'Barlow',sans-serif;overflow:hidden}
-#promo-banner .pb-text{font-size:13px;font-weight:700;color:#fff;white-space:nowrap;transition:opacity 0.4s}
-#promo-banner .pb-btn{background:#fff;color:#f07020;border:none;border-radius:5px;padding:5px 14px;font-size:12px;font-weight:800;cursor:pointer;white-space:nowrap;text-decoration:none;font-family:'Barlow',sans-serif;transition:background 0.2s,color 0.2s;flex-shrink:0}
+#promo-banner{position:fixed;top:0;left:0;right:0;z-index:1100;height:40px;background:#f07020;display:flex;align-items:center;justify-content:center;gap:14px;font-family:'Barlow',sans-serif;overflow:visible;padding:0;margin:0}
+#promo-banner .pb-text{font-size:13px;font-weight:700;color:#fff;white-space:nowrap;transition:opacity 0.4s;flex:1;text-align:center;min-width:0}
+#promo-banner .pb-btn{background:#fff;color:#f07020;border:none;border-radius:5px;padding:5px 14px;font-size:12px;font-weight:800;cursor:pointer;white-space:nowrap;text-decoration:none;font-family:'Barlow',sans-serif;transition:background 0.2s,color 0.2s;flex-shrink:0;z-index:1101;position:relative}
 #promo-banner .pb-btn:hover{background:#0e1f3d;color:#fff}
-@media(max-width:600px){#promo-banner .pb-text{font-size:11px}#promo-banner .pb-btn{padding:4px 10px;font-size:11px}}
+@media(max-width:600px){#promo-banner .pb-text{font-size:11px}#promo-banner .pb-btn{padding:4px 10px;font-size:11px;margin-right:8px}}
 /* Hide React-rendered nav inside #root to prevent duplication */
 #root nav { display: none !important; }
 </style>
