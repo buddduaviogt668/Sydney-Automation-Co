@@ -256,7 +256,7 @@ nav{position:fixed;top:40px;left:0;right:0;z-index:1000;background:rgba(14,31,61
 .nav-dd-panel .dd-label{font-size:10px;font-weight:700;color:#4a6a9a;letter-spacing:2px;text-transform:uppercase;padding:6px 14px 2px}
 .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;background:none;border:none}
 .hamburger span{width:24px;height:2px;background:#f0f4ff;border-radius:2px;display:block;transition:all 0.3s}
-.mob-nav{display:none;position:fixed;top:104px;left:0;right:0;bottom:0;background:#0e1f3d;border-top:1px solid #2a4a80;z-index:999;overflow-y:auto;flex-direction:column}
+.mob-nav{display:none;position:fixed;top:104px;left:0;right:0;bottom:0;background:#0e1f3d;border-top:1px solid #2a4a80;z-index:998;overflow-y:auto;flex-direction:column}@media(max-width:600px){.mob-nav{top:96px;z-index:998}}
 .mob-nav.open{display:flex}
 .mob-section{border-bottom:1px solid #1a3060}
 .mob-section-title{font-size:11px;font-weight:700;color:#4a6a9a;letter-spacing:2px;text-transform:uppercase;padding:14px 20px 6px}
@@ -268,11 +268,12 @@ nav{position:fixed;top:40px;left:0;right:0;z-index:1000;background:rgba(14,31,61
 .hamburger.open span:nth-child(2){opacity:0}
 .hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
 /* ── ROTATING PROMO BANNER ── */
-#promo-banner{position:fixed;top:0;left:0;right:0;z-index:1100;height:40px;background:#f07020;display:flex;align-items:center;justify-content:center;gap:14px;font-family:'Barlow',sans-serif;overflow:visible;padding:0;margin:0}
+#promo-banner{position:fixed;top:0;left:0;right:0;z-index:1100;height:40px;background:#f07020;display:flex;align-items:center;justify-content:center;gap:14px;font-family:'Barlow',sans-serif;overflow:visible;padding:0;margin:0;will-change:transform}
 #promo-banner .pb-text{font-size:13px;font-weight:700;color:#fff;white-space:nowrap;transition:opacity 0.4s;flex:1;text-align:center;min-width:0}
 #promo-banner .pb-btn{background:#fff;color:#f07020;border:none;border-radius:5px;padding:5px 14px;font-size:12px;font-weight:800;cursor:pointer;white-space:nowrap;text-decoration:none;font-family:'Barlow',sans-serif;transition:background 0.2s,color 0.2s;flex-shrink:0;z-index:1101;position:relative}
 #promo-banner .pb-btn:hover{background:#0e1f3d;color:#fff}
-@media(max-width:600px){#promo-banner .pb-text{font-size:11px}#promo-banner .pb-btn{padding:4px 10px;font-size:11px;margin-right:8px}}
+@media(max-width:960px){nav{top:40px;height:64px;z-index:1000}}
+@media(max-width:600px){#promo-banner{height:40px;z-index:1100}#promo-banner .pb-text{font-size:11px}#promo-banner .pb-btn{padding:4px 10px;font-size:11px;margin-right:8px}nav{top:40px;height:56px;padding:0 16px;z-index:1000}.logo-main{font-size:14px}.logo-sub{font-size:8px}#root{padding-top:96px}}
 /* Hide React-rendered nav inside #root to prevent duplication */
 #root nav { display: none !important; }
 </style>
