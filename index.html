@@ -281,7 +281,7 @@ nav{position:fixed;top:40px;left:0;right:0;z-index:1000;background:#0e1f3d;borde
 @media(max-width:960px){nav{top:40px;height:80px;z-index:1000}.nav-phone-wrap{display:none}}
 @media(max-width:600px){#promo-banner{height:40px;z-index:1100;padding:0 8px;gap:6px;flex-wrap:nowrap;overflow:hidden;justify-content:center;min-height:40px}#promo-banner .pb-text{font-size:10px;font-weight:800;flex:1 1 auto;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}#promo-banner .pb-btn{padding:4px 8px;font-size:10px;flex-shrink:0;white-space:nowrap}nav{top:40px;height:64px;padding:0 16px;z-index:1000}.logo-main{font-size:16px;letter-spacing:1px}.logo-sub{font-size:8px;letter-spacing:2px}.logo-line{height:2px;margin:2px 0}.nav-phone-wrap{display:none}}
 /* Hide React-rendered nav inside #root to prevent duplication */
-#root nav { display: none !important; }
+#root > div[style*="z-index: 1001"] { display: none !important; }
 </style>
 
 <!-- ROTATING PROMO BANNER -->
@@ -630,8 +630,8 @@ nav{position:fixed;top:40px;left:0;right:0;z-index:1000;background:#0e1f3d;borde
   }
   @media (max-width: 768px) {
     #mob-call-bar { display: block; }
-    .wa-float { bottom: 80px; }
-    #root { padding-bottom: 70px; }
+    .wa-float { bottom: 90px; }
+#root { padding-bottom: 90px; }
   }
 </style>
 
