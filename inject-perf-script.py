@@ -2,80 +2,67 @@
 """
 inject-perf-script.py
 =====================
-Adds <script src="/perf-optimise.js" defer></script> before </body>
-in every .html file in the current directory and subdirectories.
+Does two things across all HTML files:
+1. Injects <script src="/perf-optimise.js" defer></script> before </body>
+2. Replaces blocking Google Fonts link with async preload version
 
-HOW TO USE:
-1. Clone your repo locally (or open terminal in your repo folder)
-2. Copy this script into the ROOT of your repo
-3. Run: python3 inject-perf-script.py
-4. Check the output — it will tell you exactly which files were updated
-5. Commit and push to GitHub
-
-SAFE TO RUN MULTIPLE TIMES — it checks if the tag already exists before adding it.
+SAFE TO RUN MULTIPLE TIMES - checks before modifying.
 """
 
 import os
 import glob
+import re
 
 SCRIPT_TAG = '<script src="/perf-optimise.js" defer></script>'
 INJECT_BEFORE = '</body>'
+
+OLD_FONTS = re.compile(
+    r'<link[^>]*href=["\']https://fonts\.googleapis\.com/css2\?[^"\']*Barlow[^"\']*["\'][^>]*>',
+    re.IGNORECASE
+)
+
+NEW_FONTS = '<link rel="preconnect" href="https://fonts.googleapis.com">\n<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600&family=Barlow+Condensed:wght@700;800&display=swap" onload="this.onload=null;this.rel=\'stylesheet\'">\n<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600&family=Barlow+Condensed:wght@700;800&display=swap"></noscript>'
 
 def process_file(filepath):
     with open(filepath, 'r', encoding='utf-8', errors='ignore') as f:
         content = f.read()
 
-    # Skip if already injected
-    if 'perf-optimise.js' in content:
-        return 'skipped'
+    changed = False
 
-    # Skip if no </body> tag
-    if INJECT_BEFORE not in content:
-        return 'no-body-tag'
+    # Fix 1: inject perf script before </body>
+    if 'perf-optimise.js' not in content:
+        if INJECT_BEFORE in content:
+            content = content.replace(INJECT_BEFORE, SCRIPT_TAG + '\n' + INJECT_BEFORE, 1)
+            changed = True
 
-    # Inject before </body>
-    updated = content.replace(INJECT_BEFORE, f'{SCRIPT_TAG}\n{INJECT_BEFORE}', 1)
+    # Fix 2: async Google Fonts
+    if 'onload="this.onload=null' not in content:
+        if OLD_FONTS.search(content):
+            content = OLD_FONTS.sub(NEW_FONTS, content)
+            changed = True
 
-    with open(filepath, 'w', encoding='utf-8') as f:
-        f.write(updated)
-
-    return 'updated'
+    if changed:
+        with open(filepath, 'w', encoding='utf-8') as f:
+            f.write(content)
+        return 'updated'
+    return 'skipped'
 
 def main():
-    # Find all HTML files in current directory and subdirectories
-    html_files = glob.glob('**/*.html', recursive=True) + glob.glob('*.html')
-    html_files = list(set(html_files))  # deduplicate
+    html_files = list(set(glob.glob('**/*.html', recursive=True) + glob.glob('*.html')))
     html_files.sort()
 
-    updated = []
-    skipped = []
-    no_body = []
+    updated, skipped = [], []
 
     for filepath in html_files:
         result = process_file(filepath)
         if result == 'updated':
             updated.append(filepath)
-        elif result == 'skipped':
+        else:
             skipped.append(filepath)
-        elif result == 'no-body-tag':
-            no_body.append(filepath)
 
-    print(f"\n✅ UPDATED ({len(updated)} files):")
-    for f in updated:
-        print(f"   {f}")
-
-    if skipped:
-        print(f"\n⏭️  SKIPPED — already has perf-optimise.js ({len(skipped)} files):")
-        for f in skipped:
-            print(f"   {f}")
-
-    if no_body:
-        print(f"\n⚠️  NO </body> TAG FOUND ({len(no_body)} files) — check these manually:")
-        for f in no_body:
-            print(f"   {f}")
-
-    print(f"\nDone. {len(updated)} files updated, {len(skipped)} skipped, {len(no_body)} need manual check.")
-    print("\nNext step: git add -A && git commit -m 'perf: inject perf-optimise.js across all pages' && git push")
+    print(f"\nUpdated {len(updated)} files, skipped {len(skipped)} files.")
+    if updated:
+        print("Next: git add -A && git commit -m 'perf: fonts async + perf script sitewide' && git push")
 
 if __name__ == '__main__':
     main()
