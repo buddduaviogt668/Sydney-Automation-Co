@@ -2,7 +2,8 @@ import os
 import re
 
 HTML_DIR = "."
-SCRIPT_TAG = '<script src="/perf-init.js" defer></script>'
+OLD_SCRIPT_TAG = '<script src="/perf-optimise.js" defer></script>'
+NEW_SCRIPT_TAG = '<script src="/perf-init.js" defer></script>'
 
 FB_INLINE_PATTERN = re.compile(
     r'<script[^>]*>!function\(f,b,e,v,n,t,s\).*?fbq\(\'track\', ?\'PageView\'\);?\s*</script>(\s*<noscript>[^<]*<img[^>]*facebook[^>]*>[^<]*</noscript>)?',
@@ -27,11 +28,17 @@ for root, dirs, files in os.walk(HTML_DIR):
                 content = f.read()
 
             original = content
+
+            # Remove hardcoded FB Pixel and Clarity
             content = FB_INLINE_PATTERN.sub('', content)
             content = CLARITY_INLINE_PATTERN.sub('', content)
 
-            if SCRIPT_TAG not in content and '</body>' in content:
-                content = content.replace('</body>', f'  {SCRIPT_TAG}\n</body>')
+            # Remove old perf-optimise.js tag
+            content = content.replace(OLD_SCRIPT_TAG, '')
+
+            # Inject perf-init.js if not already present
+            if NEW_SCRIPT_TAG not in content and '</body>' in content:
+                content = content.replace('</body>', f'  {NEW_SCRIPT_TAG}\n</body>')
 
             if content != original:
                 with open(fpath, 'w', encoding='utf-8') as f:
