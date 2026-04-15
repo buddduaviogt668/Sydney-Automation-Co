@@ -169,6 +169,66 @@ footer{background:#132647;border-top:1px solid #2a4a80;padding:48px 24px 32px}
 .nav-dd-panel.mega{min-width:560px;max-width:calc(100vw - 48px);display:none;grid-template-columns:1fr 1fr;gap:0 8px;padding:12px;overflow-y:auto;max-height:80vh}
 .nav-dd.open .nav-dd-panel.mega{display:grid}
 .mega-col{}
+<style>
+/* ── Unified floating CTA ── */
+.sac-float-cta {
+  position: fixed;
+  bottom: 28px;
+  right: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 9000;
+}
+.sac-float-cta a {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 13px 20px;
+  border-radius: 50px;
+  font-family: 'Barlow', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  text-decoration: none;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.25);
+  transition: transform 0.2s, box-shadow 0.2s;
+  white-space: nowrap;
+}
+.sac-float-cta a:hover { transform: translateY(-2px); box-shadow: 0 6px 22px rgba(0,0,0,0.32); }
+.sac-float-call { background: #e87722; color: #fff !important; }
+.sac-float-wa   { background: #25D366; color: #fff !important; }
+.sac-float-cta svg { flex-shrink: 0; }
+@media (max-width: 768px) {
+  .sac-float-cta { display: none !important; }
+  .sac-mob-bar { display: flex !important; }
+}
+.sac-mob-bar {
+  display: none;
+  position: fixed;
+  bottom: 0; left: 0; right: 0;
+  z-index: 9000;
+  background: #0d1a30;
+  border-top: 2px solid #e87722;
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+.sac-mob-bar a {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  padding: 14px 10px;
+  font-family: 'Barlow', sans-serif;
+  font-weight: 800;
+  font-size: 15px;
+  text-decoration: none;
+  color: #fff !important;
+}
+.sac-mob-bar .mob-call { background: #e87722; }
+.sac-mob-bar .mob-wa   { background: #25D366; }
+.sac-mob-bar a:active  { filter: brightness(0.9); }
+@media (min-width: 769px) { .sac-mob-bar { display: none !important; } }
+</style>
 </style>
 <!-- Google Analytics GA4 -->
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-7EZFB6GRJ3"></script>
@@ -683,7 +743,7 @@ footer{background:#132647;border-top:1px solid #2a4a80;padding:48px 24px 32px}
 </div>
 </div>
 <style>
-  .wa-float{position:fixed;bottom:24px;right:24px;z-index:9999;display:flex;align-items:center;gap:12px;text-decoration:none;transition:all 0.3s}
+  
   .wa-float:hover{transform:scale(1.05)}
   .wa-msg{background:white;color:#0e1f3d;padding:8px 16px;border-radius:12px;font-size:13px;font-weight:600;box-shadow:0 4px 15px rgba(0,0,0,0.1);border:1px solid #e2e8f0;position:relative}
   .wa-msg::after{content:'';position:absolute;right:-6px;top:50%;transform:translateY(-50%);border-left:6px solid white;border-top:6px solid transparent;border-bottom:6px solid transparent}
@@ -691,12 +751,12 @@ footer{background:#132647;border-top:1px solid #2a4a80;padding:48px 24px 32px}
   .wa-badge{position:absolute;top:-2px;right:-2px;background:#ff4400;color:white;font-size:10px;font-weight:900;width:18px;height:18px;border-radius:50%;display:flex;align-items:center;justify-content:center;border:2px solid #fff}
   @media(max-width:600px){.wa-msg{display:none}}
 
-/* WhatsApp button fixes */
-.wa-float,.whatsapp-float,.wa-fixed{z-index:400!important}
+
+
 @media(max-width:768px){
-  .wa-float{bottom:90px!important}
-  .whatsapp-float{bottom:90px!important}
-  .wa-fixed{bottom:90px!important}
+  
+  
+  
   body{padding-bottom:80px}
 }
 </style>

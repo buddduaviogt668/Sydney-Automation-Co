@@ -12,7 +12,67 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600&family=Barlow+Condensed:wght@700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'">
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600&family=Barlow+Condensed:wght@700;800&display=swap"></noscript>
-<style>body{margin:0;padding:0;background:#0e1f3d}#root{min-height:100vh}#loading{position:fixed;inset:0;background:#0e1f3d;display:flex;align-items:center;justify-content:center;z-index:9999;flex-direction:column;gap:16px;font-family:sans-serif;color:#a8c0e0}.spinner{width:40px;height:40px;border:3px solid #2a4a80;border-top-color:#f07020;border-radius:50%;animation:spin .8s linear infinite}@keyframes spin{to{transform:rotate(360deg)}}@media(max-width:768px){.grid2{grid-template-columns:1fr!important}.hide-mob{display:none!important}.show-mob{display:flex!important}}</style>
+<style>body{margin:0;padding:0;background:#0e1f3d}#root{min-height:100vh}#loading{position:fixed;inset:0;background:#0e1f3d;display:flex;align-items:center;justify-content:center;z-index:9999;flex-direction:column;gap:16px;font-family:sans-serif;color:#a8c0e0}.spinner{width:40px;height:40px;border:3px solid #2a4a80;border-top-color:#f07020;border-radius:50%;animation:spin .8s linear infinite}@keyframes spin{to{transform:rotate(360deg)}}@media(max-width:768px){.grid2{grid-template-columns:1fr!important}.hide-mob{display:none!important}.show-mob{display:flex!important}}<style>
+/* ── Unified floating CTA ── */
+.sac-float-cta {
+  position: fixed;
+  bottom: 28px;
+  right: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 9000;
+}
+.sac-float-cta a {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 13px 20px;
+  border-radius: 50px;
+  font-family: 'Barlow', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  text-decoration: none;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.25);
+  transition: transform 0.2s, box-shadow 0.2s;
+  white-space: nowrap;
+}
+.sac-float-cta a:hover { transform: translateY(-2px); box-shadow: 0 6px 22px rgba(0,0,0,0.32); }
+.sac-float-call { background: #e87722; color: #fff !important; }
+.sac-float-wa   { background: #25D366; color: #fff !important; }
+.sac-float-cta svg { flex-shrink: 0; }
+@media (max-width: 768px) {
+  .sac-float-cta { display: none !important; }
+  .sac-mob-bar { display: flex !important; }
+}
+.sac-mob-bar {
+  display: none;
+  position: fixed;
+  bottom: 0; left: 0; right: 0;
+  z-index: 9000;
+  background: #0d1a30;
+  border-top: 2px solid #e87722;
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+.sac-mob-bar a {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  padding: 14px 10px;
+  font-family: 'Barlow', sans-serif;
+  font-weight: 800;
+  font-size: 15px;
+  text-decoration: none;
+  color: #fff !important;
+}
+.sac-mob-bar .mob-call { background: #e87722; }
+.sac-mob-bar .mob-wa   { background: #25D366; }
+.sac-mob-bar a:active  { filter: brightness(0.9); }
+@media (min-width: 769px) { .sac-mob-bar { display: none !important; } }
+</style>
+</style>
 
 <!-- Google Search Console Verification -->
 <meta name="google-site-verification" content="99c59ffacd177339"/>
@@ -472,17 +532,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(14,31,61,0.
 
 <!-- WhatsApp Lead Weapon -->
 <style>
-  .wa-float {
-    position: fixed;
-    bottom: 24px;
-    right: 24px;
-    z-index: 9999;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    text-decoration: none;
-    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  }
+  
   .wa-float:hover { transform: scale(1.05); }
   .wa-msg {
     background: white;
@@ -546,14 +596,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(14,31,61,0.
   @media (max-width: 600px) { .wa-msg { display: none; } }
 </style>
 
-<a href="https://wa.me/61422469739?text=Hi%20George%2C%20I%20have%20a%20C-Bus%20or%20Dynalite%20issue.%20Can%20you%20help%3F" 
-   class="wa-float" target="_blank" rel="noopener">
-  <div class="wa-msg">Hi! Need C-Bus help? 👋</div>
-  <div class="wa-icon-box">
-    <div class="wa-badge">1</div>
-    <svg width="30" height="30" viewBox="0 0 24 24" fill="#fff"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.438 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.438-9.89 9.886-.001 2.125.593 3.456 1.574 5.111l-.973 3.558 3.589-.942zm9.366-7.312c-.12-.194-.443-.313-.927-.552-.484-.24-.2.85-.313-.1.1-.194.226-.34.339-.442l-.46-.356c-.194-.242-.313-.443-.1-.927-.239-.484-.443-.24-.927-.24h-.356c-.194 0-.313.12-.442.24l-1.611 1.611c-.34.339-.533.805-.533 1.304 0 .498.193.965.533 1.304l3.141 3.141c.339.34.806.533 1.304.533.499 0 .965-.193 1.304-.533l1.192-1.191c.12-.12.24-.34.24-.553 0-.212-.12-.442-.24-.553l-1.232-1.232z"></path></svg>
-  </div>
-</a><script>window.__GEORGE_PHOTO__="/george-photo.png";</script>
+<script>window.__GEORGE_PHOTO__="/george-photo.png";</script>
 <script>
 (() => {
   var __create = Object.create;

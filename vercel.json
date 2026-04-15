@@ -206,16 +206,6 @@
       "permanent": true
     },
     {
-      "source": "/services",
-      "destination": "/services.html",
-      "permanent": true
-    },
-    {
-      "source": "/services/",
-      "destination": "/services.html",
-      "permanent": true
-    },
-    {
       "source": "/services/:path*",
       "destination": "/services.html",
       "permanent": true
@@ -282,16 +272,6 @@
     },
     {
       "source": "/contact-us/amp/",
-      "destination": "/contact.html",
-      "permanent": true
-    },
-    {
-      "source": "/contact",
-      "destination": "/contact.html",
-      "permanent": true
-    },
-    {
-      "source": "/contact/",
       "destination": "/contact.html",
       "permanent": true
     },
@@ -411,26 +391,6 @@
       "permanent": true
     },
     {
-      "source": "/locations",
-      "destination": "/locations.html",
-      "permanent": true
-    },
-    {
-      "source": "/locations/",
-      "destination": "/locations.html",
-      "permanent": true
-    },
-    {
-      "source": "/projects",
-      "destination": "/projects.html",
-      "permanent": true
-    },
-    {
-      "source": "/projects/",
-      "destination": "/projects.html",
-      "permanent": true
-    },
-    {
       "source": "/smart-buildings",
       "destination": "/services.html",
       "permanent": true
@@ -468,31 +428,6 @@
     {
       "source": "/blog/amp/",
       "destination": "/blog.html",
-      "permanent": true
-    },
-    {
-      "source": "/blog",
-      "destination": "/blog.html",
-      "permanent": true
-    },
-    {
-      "source": "/electricians",
-      "destination": "/electricians.html",
-      "permanent": true
-    },
-    {
-      "source": "/electricians/",
-      "destination": "/electricians.html",
-      "permanent": true
-    },
-    {
-      "source": "/c-bus-programmer-parramatta",
-      "destination": "/c-bus-programmer-parramatta.html",
-      "permanent": true
-    },
-    {
-      "source": "/c-bus-programmer-parramatta/",
-      "destination": "/c-bus-programmer-parramatta.html",
       "permanent": true
     },
     {
