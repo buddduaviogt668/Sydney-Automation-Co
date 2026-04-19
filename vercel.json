@@ -52,392 +52,392 @@
     },
     {
       "source": "/products/clipsal-c-bus",
-      "destination": "/c-bus-programmer-sydney.html",
+      "destination": "/c-bus-programmer-sydney",
       "permanent": true
     },
     {
       "source": "/products/clipsal-c-bus/",
-      "destination": "/c-bus-programmer-sydney.html",
+      "destination": "/c-bus-programmer-sydney",
       "permanent": true
     },
     {
       "source": "/products/clipsal-c-bus/amp",
-      "destination": "/c-bus-programmer-sydney.html",
+      "destination": "/c-bus-programmer-sydney",
       "permanent": true
     },
     {
       "source": "/products/clipsal-c-bus/amp/",
-      "destination": "/c-bus-programmer-sydney.html",
+      "destination": "/c-bus-programmer-sydney",
       "permanent": true
     },
     {
       "source": "/products/dynalite",
-      "destination": "/dynalite-programmer-sydney.html",
+      "destination": "/dynalite-programmer-sydney",
       "permanent": true
     },
     {
       "source": "/products/dynalite/",
-      "destination": "/dynalite-programmer-sydney.html",
+      "destination": "/dynalite-programmer-sydney",
       "permanent": true
     },
     {
       "source": "/products/dynalite/amp",
-      "destination": "/dynalite-programmer-sydney.html",
+      "destination": "/dynalite-programmer-sydney",
       "permanent": true
     },
     {
       "source": "/products/dynalite/amp/",
-      "destination": "/dynalite-programmer-sydney.html",
+      "destination": "/dynalite-programmer-sydney",
       "permanent": true
     },
     {
       "source": "/products/dali-lighting-control",
-      "destination": "/dali-lighting-repair.html",
+      "destination": "/dali-lighting-repair",
       "permanent": true
     },
     {
       "source": "/products/dali-lighting-control/",
-      "destination": "/dali-lighting-repair.html",
+      "destination": "/dali-lighting-repair",
       "permanent": true
     },
     {
       "source": "/products/dali-lighting-control/amp",
-      "destination": "/dali-lighting-repair.html",
+      "destination": "/dali-lighting-repair",
       "permanent": true
     },
     {
       "source": "/products/dali-lighting-control/amp/",
-      "destination": "/dali-lighting-repair.html",
+      "destination": "/dali-lighting-repair",
       "permanent": true
     },
     {
       "source": "/products/rapix-lighting-control",
-      "destination": "/rapix-lighting-control.html",
+      "destination": "/rapix-lighting-control",
       "permanent": true
     },
     {
       "source": "/products/rapix-lighting-control/",
-      "destination": "/rapix-lighting-control.html",
+      "destination": "/rapix-lighting-control",
       "permanent": true
     },
     {
       "source": "/products/rapix-lighting-control/amp",
-      "destination": "/rapix-lighting-control.html",
+      "destination": "/rapix-lighting-control",
       "permanent": true
     },
     {
       "source": "/products/rapix-lighting-control/amp/",
-      "destination": "/rapix-lighting-control.html",
+      "destination": "/rapix-lighting-control",
       "permanent": true
     },
     {
       "source": "/products/amp",
-      "destination": "/services.html",
+      "destination": "/services",
       "permanent": true
     },
     {
       "source": "/products/amp/",
-      "destination": "/services.html",
+      "destination": "/services",
       "permanent": true
     },
     {
       "source": "/products",
-      "destination": "/services.html",
+      "destination": "/services",
       "permanent": true
     },
     {
       "source": "/products/",
-      "destination": "/services.html",
+      "destination": "/services",
       "permanent": true
     },
     {
       "source": "/products/:path*",
-      "destination": "/services.html",
+      "destination": "/services",
       "permanent": true
     },
     {
       "source": "/services/lighting-control",
-      "destination": "/lighting-control-service-sydney.html",
+      "destination": "/lighting-control-service-sydney",
       "permanent": true
     },
     {
       "source": "/services/lighting-control/",
-      "destination": "/lighting-control-service-sydney.html",
+      "destination": "/lighting-control-service-sydney",
       "permanent": true
     },
     {
       "source": "/services/lighting-control/amp",
-      "destination": "/lighting-control-service-sydney.html",
+      "destination": "/lighting-control-service-sydney",
       "permanent": true
     },
     {
       "source": "/services/lighting-control/amp/",
-      "destination": "/lighting-control-service-sydney.html",
+      "destination": "/lighting-control-service-sydney",
       "permanent": true
     },
     {
       "source": "/services/smart-buildings",
-      "destination": "/services.html",
+      "destination": "/services",
       "permanent": true
     },
     {
       "source": "/services/smart-buildings/",
-      "destination": "/services.html",
+      "destination": "/services",
       "permanent": true
     },
     {
       "source": "/services/smart-buildings/amp",
-      "destination": "/services.html",
+      "destination": "/services",
       "permanent": true
     },
     {
       "source": "/services/smart-buildings/amp/",
-      "destination": "/services.html",
+      "destination": "/services",
       "permanent": true
     },
     {
       "source": "/services/amp",
-      "destination": "/services.html",
+      "destination": "/services",
       "permanent": true
     },
     {
       "source": "/services/amp/",
-      "destination": "/services.html",
+      "destination": "/services",
       "permanent": true
     },
     {
       "source": "/services/:path*",
-      "destination": "/services.html",
+      "destination": "/services",
       "permanent": true
     },
     {
       "source": "/Service",
-      "destination": "/services.html",
+      "destination": "/services",
       "permanent": true
     },
     {
       "source": "/Service/",
-      "destination": "/services.html",
+      "destination": "/services",
       "permanent": true
     },
     {
       "source": "/Service/:path*",
-      "destination": "/services.html",
+      "destination": "/services",
       "permanent": true
     },
     {
       "source": "/service/amp",
-      "destination": "/services.html",
+      "destination": "/services",
       "permanent": true
     },
     {
       "source": "/service/amp/",
-      "destination": "/services.html",
+      "destination": "/services",
       "permanent": true
     },
     {
       "source": "/about-us",
-      "destination": "/about.html",
+      "destination": "/about",
       "permanent": true
     },
     {
       "source": "/about-us/",
-      "destination": "/about.html",
+      "destination": "/about",
       "permanent": true
     },
     {
       "source": "/about-us/amp",
-      "destination": "/about.html",
+      "destination": "/about",
       "permanent": true
     },
     {
       "source": "/about-us/amp/",
-      "destination": "/about.html",
+      "destination": "/about",
       "permanent": true
     },
     {
       "source": "/contact-us",
-      "destination": "/contact.html",
+      "destination": "/contact",
       "permanent": true
     },
     {
       "source": "/contact-us/",
-      "destination": "/contact.html",
+      "destination": "/contact",
       "permanent": true
     },
     {
       "source": "/contact-us/amp",
-      "destination": "/contact.html",
+      "destination": "/contact",
       "permanent": true
     },
     {
       "source": "/contact-us/amp/",
-      "destination": "/contact.html",
+      "destination": "/contact",
       "permanent": true
     },
     {
       "source": "/5-reasons-sydney-homes-need-smart-lighting-in-2025",
-      "destination": "/blog.html",
+      "destination": "/blog",
       "permanent": true
     },
     {
       "source": "/5-reasons-sydney-homes-need-smart-lighting-in-2025/",
-      "destination": "/blog.html",
+      "destination": "/blog",
       "permanent": true
     },
     {
       "source": "/5-reasons-sydney-homes-need-smart-lighting-in-2025/amp",
-      "destination": "/blog.html",
+      "destination": "/blog",
       "permanent": true
     },
     {
       "source": "/5-reasons-sydney-homes-need-smart-lighting-in-2025/amp/",
-      "destination": "/blog.html",
+      "destination": "/blog",
       "permanent": true
     },
     {
       "source": "/why-dynalite-is-the-best-choice-for-building-automation",
-      "destination": "/dynalite-programmer-sydney.html",
+      "destination": "/dynalite-programmer-sydney",
       "permanent": true
     },
     {
       "source": "/why-dynalite-is-the-best-choice-for-building-automation/",
-      "destination": "/dynalite-programmer-sydney.html",
+      "destination": "/dynalite-programmer-sydney",
       "permanent": true
     },
     {
       "source": "/why-dynalite-is-the-best-choice-for-building-automation/amp",
-      "destination": "/dynalite-programmer-sydney.html",
+      "destination": "/dynalite-programmer-sydney",
       "permanent": true
     },
     {
       "source": "/why-dynalite-is-the-best-choice-for-building-automation/amp/",
-      "destination": "/dynalite-programmer-sydney.html",
+      "destination": "/dynalite-programmer-sydney",
       "permanent": true
     },
     {
       "source": "/how-lighting-automation-is-changing-industries-in-australia",
-      "destination": "/blog.html",
+      "destination": "/blog",
       "permanent": true
     },
     {
       "source": "/how-lighting-automation-is-changing-industries-in-australia/",
-      "destination": "/blog.html",
+      "destination": "/blog",
       "permanent": true
     },
     {
       "source": "/how-lighting-automation-is-changing-industries-in-australia/amp",
-      "destination": "/blog.html",
+      "destination": "/blog",
       "permanent": true
     },
     {
       "source": "/how-lighting-automation-is-changing-industries-in-australia/amp/",
-      "destination": "/blog.html",
+      "destination": "/blog",
       "permanent": true
     },
     {
       "source": "/post-1",
-      "destination": "/blog.html",
+      "destination": "/blog",
       "permanent": true
     },
     {
       "source": "/post-1/",
-      "destination": "/blog.html",
+      "destination": "/blog",
       "permanent": true
     },
     {
       "source": "/post-1/amp",
-      "destination": "/blog.html",
+      "destination": "/blog",
       "permanent": true
     },
     {
       "source": "/post-1/amp/",
-      "destination": "/blog.html",
+      "destination": "/blog",
       "permanent": true
     },
     {
       "source": "/cbus",
-      "destination": "/c-bus-programmer-sydney.html",
+      "destination": "/c-bus-programmer-sydney",
       "permanent": true
     },
     {
       "source": "/cbus/",
-      "destination": "/c-bus-programmer-sydney.html",
+      "destination": "/c-bus-programmer-sydney",
       "permanent": true
     },
     {
       "source": "/cbus-repairs-sydney",
-      "destination": "/c-bus-repairs-sydney.html",
+      "destination": "/c-bus-repairs-sydney",
       "permanent": true
     },
     {
       "source": "/cbus-repairs-sydney/",
-      "destination": "/c-bus-repairs-sydney.html",
+      "destination": "/c-bus-repairs-sydney",
       "permanent": true
     },
     {
       "source": "/cbus-repairs-sydney.html",
-      "destination": "/c-bus-repairs-sydney.html",
+      "destination": "/c-bus-repairs-sydney",
       "permanent": true
     },
     {
       "source": "/dynalite",
-      "destination": "/dynalite-programmer-sydney.html",
+      "destination": "/dynalite-programmer-sydney",
       "permanent": true
     },
     {
       "source": "/dynalite/",
-      "destination": "/dynalite-programmer-sydney.html",
+      "destination": "/dynalite-programmer-sydney",
       "permanent": true
     },
     {
       "source": "/smart-buildings",
-      "destination": "/services.html",
+      "destination": "/services",
       "permanent": true
     },
     {
       "source": "/smart-buildings/",
-      "destination": "/services.html",
+      "destination": "/services",
       "permanent": true
     },
     {
       "source": "/Lighting-Control",
-      "destination": "/lighting-control-service-sydney.html",
+      "destination": "/lighting-control-service-sydney",
       "permanent": true
     },
     {
       "source": "/Lighting-Control/",
-      "destination": "/lighting-control-service-sydney.html",
+      "destination": "/lighting-control-service-sydney",
       "permanent": true
     },
     {
       "source": "/blog/:slug",
-      "destination": "/:slug.html",
+      "destination": "/:slug",
       "permanent": true
     },
     {
       "source": "/blog/:slug/",
-      "destination": "/:slug.html",
+      "destination": "/:slug",
       "permanent": true
     },
     {
       "source": "/blog/amp",
-      "destination": "/blog.html",
+      "destination": "/blog",
       "permanent": true
     },
     {
       "source": "/blog/amp/",
-      "destination": "/blog.html",
+      "destination": "/blog",
       "permanent": true
     },
     {
       "source": "/energy-efficiency",
-      "destination": "/services.html",
+      "destination": "/services",
       "permanent": true
     },
     {
       "source": "/energy-efficiency/",
-      "destination": "/services.html",
+      "destination": "/services",
       "permanent": true
     },
     {
@@ -482,22 +482,22 @@
     },
     {
       "source": "/smart-home-automation-sydney",
-      "destination": "/services.html",
+      "destination": "/services",
       "permanent": true
     },
     {
       "source": "/smart-home-automation-sydney/",
-      "destination": "/services.html",
+      "destination": "/services",
       "permanent": true
     },
     {
       "source": "/lighting-control",
-      "destination": "/lighting-control-service-sydney.html",
+      "destination": "/lighting-control-service-sydney",
       "permanent": true
     },
     {
       "source": "/lighting-control/",
-      "destination": "/lighting-control-service-sydney.html",
+      "destination": "/lighting-control-service-sydney",
       "permanent": true
     },
     {
@@ -542,17 +542,17 @@
     },
     {
       "source": "/category/:path*",
-      "destination": "/blog.html",
+      "destination": "/blog",
       "permanent": true
     },
     {
       "source": "/tag/:path*",
-      "destination": "/blog.html",
+      "destination": "/blog",
       "permanent": true
     },
     {
       "source": "/author/:path*",
-      "destination": "/about.html",
+      "destination": "/about",
       "permanent": true
     },
     {
