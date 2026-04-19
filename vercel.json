@@ -1,6 +1,17 @@
 {
   "redirects": [
     {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.sydneyautomationco.com.au"
+        }
+      ],
+      "destination": "https://sydneyautomationco.com.au/$1",
+      "permanent": true
+    },
+    {
       "source": "/shop",
       "destination": "/",
       "permanent": true
