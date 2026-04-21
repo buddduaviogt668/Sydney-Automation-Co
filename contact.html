@@ -27,6 +27,15 @@
 <meta name="geo.placename" content="Menai, Sutherland Shire, Sydney"/>
 <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1"/>
 
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'GA_MEASUREMENT_ID');
+</script>
+
 <style>
 /* DROPDOWN NAV */
 nav{position:fixed;top:40px;left:0;right:0;z-index:1000;background:rgba(14,31,61,0.97);border-bottom:1px solid #2a4a80;padding:0 24px;height:64px;display:flex;align-items:center;justify-content:space-between;font-family:'Barlow',sans-serif}
@@ -502,6 +511,43 @@ footer{background:#132647;border-top:1px solid #2a4a80;padding:48px 24px 32px}
             </div>
             <button onclick="submitForm(event)" class="btn btn-primary" style="font-size:16px;padding:16px 32px">Send Quote Request →</button>
           </form>
+
+          <!-- Newsletter Signup -->
+          <div style="margin-top:32px;padding:24px;background:#132647;border:1px solid #2a4a80;border-radius:12px">
+            <h3 style="margin-bottom:16px;font-size:18px">📧 Stay Updated</h3>
+            <p style="color:#a8c0e0;font-size:14px;margin-bottom:16px">Get tips on C-Bus maintenance, energy savings, and new features. No spam, unsubscribe anytime.</p>
+            <form onsubmit="signupNewsletter(event)" style="display:flex;gap:12px">
+              <input type="email" id="newsletter-email" placeholder="your@email.com" required style="flex:1;padding:12px 16px;background:#0e1f3d;border:1px solid #2a4a80;border-radius:8px;color:#f0f4ff;font-size:14px;font-family:Barlow,sans-serif;outline:none"/>
+              <button type="submit" class="btn btn-primary" style="padding:12px 20px;font-size:14px">Subscribe</button>
+            </form>
+            <script>
+            function signupNewsletter(e){
+              e.preventDefault();
+              var email = document.getElementById('newsletter-email').value;
+              window.open('mailto:service@sydneyautomationco.com.au?subject=Newsletter Signup&body=Please add me to the newsletter: ' + encodeURIComponent(email));
+              alert('Thanks! We\'ll add you to our newsletter.');
+            }
+            </script>
+          </div>
+
+          <!-- Newsletter Signup -->
+          <div style="margin-top:32px;padding:24px;background:#132647;border:1px solid #2a4a80;border-radius:12px">
+            <h3 style="margin-bottom:16px;font-size:18px">📧 Stay Updated</h3>
+            <p style="color:#a8c0e0;font-size:14px;margin-bottom:16px">Get tips on C-Bus maintenance, energy savings, and new features. No spam, unsubscribe anytime.</p>
+            <form onsubmit="signupNewsletter(event)" style="display:flex;gap:12px">
+              <input type="email" id="newsletter-email" placeholder="your@email.com" required style="flex:1;padding:12px 16px;background:#0e1f3d;border:1px solid #2a4a80;border-radius:8px;color:#f0f4ff;font-size:14px;font-family:Barlow,sans-serif;outline:none"/>
+              <button type="submit" class="btn btn-primary" style="padding:12px 20px;font-size:14px">Subscribe</button>
+            </form>
+            <script>
+            function signupNewsletter(e){
+              e.preventDefault();
+              var email = document.getElementById('newsletter-email').value;
+              window.open('mailto:service@sydneyautomationco.com.au?subject=Newsletter Signup&body=Please add me to the newsletter: ' + encodeURIComponent(email));
+              alert('Thanks! We\'ll add you to our newsletter.');
+            }
+            </script>
+          </div>
+
           <script>
           function submitForm(e){
             e.preventDefault();
