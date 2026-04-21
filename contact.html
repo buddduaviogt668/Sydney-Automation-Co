@@ -530,24 +530,6 @@ footer{background:#132647;border-top:1px solid #2a4a80;padding:48px 24px 32px}
             </script>
           </div>
 
-          <!-- Newsletter Signup -->
-          <div style="margin-top:32px;padding:24px;background:#132647;border:1px solid #2a4a80;border-radius:12px">
-            <h3 style="margin-bottom:16px;font-size:18px">📧 Stay Updated</h3>
-            <p style="color:#a8c0e0;font-size:14px;margin-bottom:16px">Get tips on C-Bus maintenance, energy savings, and new features. No spam, unsubscribe anytime.</p>
-            <form onsubmit="signupNewsletter(event)" style="display:flex;gap:12px">
-              <input type="email" id="newsletter-email" placeholder="your@email.com" required style="flex:1;padding:12px 16px;background:#0e1f3d;border:1px solid #2a4a80;border-radius:8px;color:#f0f4ff;font-size:14px;font-family:Barlow,sans-serif;outline:none"/>
-              <button type="submit" class="btn btn-primary" style="padding:12px 20px;font-size:14px">Subscribe</button>
-            </form>
-            <script>
-            function signupNewsletter(e){
-              e.preventDefault();
-              var email = document.getElementById('newsletter-email').value;
-              window.open('mailto:service@sydneyautomationco.com.au?subject=Newsletter Signup&body=Please add me to the newsletter: ' + encodeURIComponent(email));
-              alert('Thanks! We\'ll add you to our newsletter.');
-            }
-            </script>
-          </div>
-
           <script>
           function submitForm(e){
             e.preventDefault();
@@ -811,4 +793,5 @@ footer{background:#132647;border-top:1px solid #2a4a80;padding:48px 24px 32px}
 
   <script src="/perf-init.js" defer></script>
 </body></html>
+
 
