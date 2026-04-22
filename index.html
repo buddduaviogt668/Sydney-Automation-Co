@@ -15,7 +15,15 @@
 <noscript><link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600&amp;family=Barlow+Condensed:wght@700;800&amp;display=swap" rel="stylesheet"/></noscript>
 <style>body{margin:0;padding:0;background:#0e1f3d}#root{min-height:100vh;padding-top:120px;box-sizing:border-box;position:relative}
 @media(max-width:960px){#root{padding-top:104px!important}nav{background:#0e1f3d!important;height:64px!important;top:40px!important}}
-@media(max-width:768px){#root{padding-bottom:calc(100px + env(safe-area-inset-bottom,0px))!important;padding-top:104px!important}.wa-float{bottom:calc(85px + env(safe-area-inset-bottom,0px))!important;left:15px}#root div[style*="z-index: 999"]{display:none!important}}#loading{position:fixed;inset:0;background:#0e1f3d;display:flex;align-items:center;justify-content:center;z-index:9999;flex-direction:column;gap:16px;font-family:sans-serif;color:#a8c0e0}.spinner{width:40px;height:40px;border:3px solid #2a4a80;border-top-color:#f07020;border-radius:50%;animation:spin .8s linear infinite}@keyframes spin{to{transform:rotate(360deg)}}@media(max-width:768px){.grid2{grid-template-columns:1fr!important}.hide-mob{display:none!important}.show-mob{display:flex!important}}</style>
+@media(max-width:768px){#root{padding-bottom:calc(100px + env(safe-area-inset-bottom,0px))!important;padding-top:104px!important}.wa-float{bottom:calc(85px + env(safe-area-inset-bottom,0px))!important;left:15px}#root div[style*="z-index: 999"]{display:none!important}}#loading{position:fixed;inset:0;background:#0e1f3d;display:flex;align-items:center;justify-content:center;z-index:9999;flex-direction:column;gap:16px;font-family:sans-serif;color:#a8c0e0}.spinner{width:40px;height:40px;border:3px solid #2a4a80;border-top-color:#f07020;border-radius:50%;animation:spin .8s linear infinite}@keyframes spin{to{transform:rotate(360deg)}}@media(max-width:768px){.grid2{grid-template-columns:1fr!important}.hide-mob{display:none!important}.show-mob{display:flex!important}}
+/* ── Unified floating CTA ── */
+.sac-float-cta { position: fixed; bottom: 28px; right: 24px; display: flex; flex-direction: column; gap: 10px; z-index: 9000; }
+.sac-float-cta a { display: flex; align-items: center; gap: 9px; padding: 13px 20px; border-radius: 50px; font-family: 'Barlow', sans-serif; font-weight: 700; font-size: 14px; text-decoration: none; box-shadow: 0 4px 18px rgba(0,0,0,0.25); transition: transform 0.2s, box-shadow 0.2s; white-space: nowrap; }
+.sac-float-cta a:hover { transform: translateY(-2px); box-shadow: 0 6px 22px rgba(0,0,0,0.32); }
+.sac-float-call { background: #e87722; color: #fff !important; }
+.sac-float-wa { background: #25D366; color: #fff !important; }
+@media (max-width: 768px) { .sac-float-cta { display: none !important; } }
+</style>
 <!-- Google Search Console Verification -->
 <meta content="99c59ffacd177339" name="google-site-verification"/>
 <!-- Open Graph / Social Sharing -->
@@ -17003,6 +17011,12 @@ react/cjs/react-jsx-runtime.production.js:
   },5000);
 })();
 </script>
+
+  <script defer src="/perf-init.js"></script>
+<div class="sac-float-cta">
+  <a href="tel:0422469739" class="sac-float-call">📞 Call Now</a>
+  <a href="https://wa.me/61422469739" target="_blank" rel="noopener" class="sac-float-wa">💬 WhatsApp</a>
+</div>
 </body></html>
 
 
