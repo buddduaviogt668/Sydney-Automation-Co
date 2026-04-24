@@ -5,6 +5,28 @@
       "has": [
         {
           "type": "host",
+          "value": "www.sydneyautomationco.online"
+        }
+      ],
+      "destination": "https://sydneyautomationco.com.au/$1",
+      "permanent": true
+    },
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "sydneyautomationco.online"
+        }
+      ],
+      "destination": "https://sydneyautomationco.com.au/$1",
+      "permanent": true
+    },
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
           "value": "www.sydneyautomationco.com.au"
         }
       ],
