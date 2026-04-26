@@ -44,162 +44,62 @@
 <!-- Electrician Schema -->
 <script type="application/ld+json">{
   "@context": "https://schema.org",
-  "@type": "Electrician",
-  "@id": "https://sydneyautomationco.com.au/#business",
-  "name": "Sydney Automation Co.",
-  "description": "Accredited C-Bus programmers and Dynalite system designers based in Menai, Sutherland Shire. Same-day fault finding, repairs, and commissioning across Greater Sydney.",
-  "url": "https://sydneyautomationco.com.au",
-  "telephone": "+61422469739",
-  "email": "service@sydneyautomationco.com.au",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Menai",
-    "addressRegion": "NSW",
-    "postalCode": "2234",
-    "addressCountry": "AU"
-  },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": -34.0167,
-    "longitude": 151.0333
-  },
-  "areaServed": [
+  "@graph": [
     {
-      "@type": "City",
-      "name": "Sydney"
-    },
-    {
-      "@type": "AdministrativeArea",
-      "name": "Sutherland Shire"
-    },
-    {
-      "@type": "Neighborhood",
-      "name": "Menai"
-    },
-    {
-      "@type": "Neighborhood",
-      "name": "Cronulla"
-    },
-    {
-      "@type": "Neighborhood",
-      "name": "Miranda"
-    },
-    {
-      "@type": "Neighborhood",
-      "name": "Caringbah"
-    },
-    {
-      "@type": "Neighborhood",
-      "name": "Engadine"
-    },
-    {
-      "@type": "Neighborhood",
-      "name": "Sutherland"
-    },
-    {
-      "@type": "Neighborhood",
-      "name": "Hurstville"
-    },
-    {
-      "@type": "Neighborhood",
-      "name": "Eastern Suburbs"
-    },
-    {
-      "@type": "Neighborhood",
-      "name": "North Shore"
-    },
-    {
-      "@type": "Neighborhood",
-      "name": "Hills District"
-    }
-  ],
-  "hasOfferCatalog": {
-    "@type": "OfferCatalog",
-    "name": "Lighting Control Services",
-    "itemListElement": [
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "C-Bus Programming"
-        }
+      "@type": "Electrician",
+      "@id": "https://sydneyautomationco.com.au/#business",
+      "name": "Sydney Automation Co.",
+      "alternateName": "Sydney Automation",
+      "description": "Accredited C-Bus programmers and Dynalite system designers based in Menai, Sydney. Same-day fault finding, repairs, and commissioning across Greater Sydney.",
+      "url": "https://sydneyautomationco.com.au",
+      "telephone": "+61422469739",
+      "email": "service@sydneyautomationco.com.au",
+      "priceRange": "$$",
+      "image": "https://sydneyautomationco.com.au/og-image.jpg",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Menai",
+        "addressRegion": "NSW",
+        "postalCode": "2234",
+        "addressCountry": "AU"
       },
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "Dynalite System Programming"
-        }
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -34.0167,
+        "longitude": 151.0333
       },
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "Lighting Control Fault Finding"
-        }
-      },
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "C-Bus System Commissioning"
-        }
-      },
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "Smart Home Automation"
-        }
-      },
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "DALI Lighting Control"
-        }
-      }
-    ]
-  },
-  "image": "https://sydneyautomationco.com.au/og-image.jpg",
-  "priceRange": "$$",
-  "founder": {
-    "@type": "Person",
-    "name": "George Skarmoutsos"
-  },
-  "knowsAbout": [
-    "C-Bus",
-    "Dynalite",
-    "DALI",
-    "RAPIX",
-    "Lighting Control",
-    "Building Automation",
-    "Apple HomeKit"
-  ],
-  "openingHoursSpecification": [
-    {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": [
-        "Monday",
-        "Tuesday",
-        "Wednesday",
-        "Thursday",
-        "Friday"
+      "areaServed": [
+        { "@type": "City", "name": "Sydney", "@id": "https://www.wikidata.org/wiki/Q3133" },
+        { "@type": "AdministrativeArea", "name": "Sutherland Shire", "@id": "https://www.wikidata.org/wiki/Q1782298" },
+        { "@type": "Neighborhood", "name": "Menai" },
+        { "@type": "Neighborhood", "name": "Cronulla" },
+        { "@type": "Neighborhood", "name": "Miranda" }
       ],
-      "opens": "07:00",
-      "closes": "17:00"
+      "founder": {
+        "@type": "Person",
+        "@id": "https://sydneyautomationco.com.au/#founder",
+        "name": "George Skarmoutsos",
+        "jobTitle": "Accredited C-Bus & Dynalite Specialist",
+        "sameAs": [
+          "https://www.linkedin.com/in/george-skarmoutsos/",
+          "https://www.instagram.com/sydneyautomationco/"
+        ]
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5.0",
+        "reviewCount": "14",
+        "bestRating": "5"
+      },
+      "knowsAbout": ["C-Bus", "Dynalite", "DALI-2", "Lighting Control", "Building Automation", "Home Automation Sydney"]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://sydneyautomationco.com.au" },
+        { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://sydneyautomationco.com.au/#services" }
+      ]
     }
-  ],
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "5.0",
-    "reviewCount": "14",
-    "bestRating": "5"
-  },
-  "sameAs": [
-    "https://www.instagram.com/sydneyautomationco/",
-    "https://www.facebook.com/profile.php?id=61570407305417",
-    "https://www.linkedin.com/company/sydney-automation-co/"
   ]
 }</script>
 <!-- FAQ Schema -->
