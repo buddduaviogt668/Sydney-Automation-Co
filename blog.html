@@ -241,6 +241,38 @@ footer{background:#132647;border-top:1px solid #2a4a80;padding:48px 24px 32px}
 <meta name="twitter:card" content="summary_large_image" />
 
 <style>.blog-post{font-family:Barlow,sans-serif!important;color:#f0f4ff!important;background:#0e1f3d!important;line-height:1.7!important;max-width:720px!important;margin:0 auto!important}.blog-post h1{font-size:2rem!important;font-weight:800!important;color:#fff!important;margin:0 0 16px!important}.blog-post h2{font-size:1.5rem!important;font-weight:700!important;color:#fff!important;margin:32px 0 16px!important}.blog-post h3{font-size:1.25rem!important;font-weight:700!important;color:#f0f4ff!important;margin:24px 0 12px!important}.blog-post p{margin:0 0 16px!important;color:#c5d1e8!important;font-size:1.05rem!important}.blog-post a{color:#4da6ff!important;text-decoration:none!important;font-weight:600!important}.meta{color:#8a9ab6!important;font-size:0.95rem!important;margin:0 0 24px!important}</style>
+
+<style>
+  /* WhatsApp button - dark theme, no layout conflicts */
+  .whatsapp-btn, a[href*="wa.me"] {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    background: #25D366 !important;
+    color: white !important;
+    padding: 12px 20px !important;
+    border-radius: 6px !important;
+    text-decoration: none !important;
+    font-weight: 600 !important;
+    font-family: 'Barlow', sans-serif !important;
+    border: none !important;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2) !important;
+    transition: transform 0.2s ease !important;
+    white-space: nowrap !important;
+  }
+  .whatsapp-btn:hover, a[href*="wa.me"]:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3) !important;
+  }
+  /* Mobile responsive */
+  @media (max-width: 768px) {
+    .whatsapp-btn, a[href*="wa.me"] {
+      width: 100%;
+      justify-content: center;
+      padding: 14px 20px;
+    }
+  }
+</style>
 </head><body>
 <nav>
 <a class="logo" href="/">
@@ -739,6 +771,17 @@ footer{background:#132647;border-top:1px solid #2a4a80;padding:48px 24px 32px}
 </div>
 <div>
 <h4 style="font-family:'Barlow Condensed',sans-serif;font-weight:800;margin-bottom:16px;font-size:16px;letter-spacing:1px;text-transform:uppercase;color:#a8c0e0">Contact</h4>
+<a href="https://wa.me/61422469739" target="_blank" rel="noopener" 
+   style="display: inline-flex; align-items: center; gap: 8px; 
+          background: #25D366; color: white; 
+          padding: 12px 20px; border-radius: 6px; 
+          text-decoration: none; font-weight: 600; 
+          font-family: 'Barlow', sans-serif; 
+          border: none; box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+          transition: transform 0.2s ease;">
+  <span style="font-size: 1.2rem;">💬</span>
+  <span>Chat on WhatsApp</span>
+</a>
 <div style="display:flex;flex-direction:column;gap:10px;font-size:14px;color:#a8c0e0">
 <a href="tel:0422 469 739" style="color:#f07020;font-weight:700;font-size:16px">📞 0422 469 739</a>
 <a href="mailto:george@sydneyautomationco.com.au" style="color:#a8c0e0">george@sydneyautomationco.com.au</a>
@@ -789,7 +832,7 @@ footer{background:#132647;border-top:1px solid #2a4a80;padding:48px 24px 32px}
 <script defer="" src="/perf-init.js"></script>
 <div class="sac-float-cta">
 <a class="sac-float-call" href="tel:0422469739">📞 Call Now</a>
-<a class="sac-float-wa" href="https://wa.me/61422469739" rel="noopener" target="_blank">💬 WhatsApp</a>
+
 </div>
 
 <div class='blog-cta' style='margin:48px 0;padding:24px;background:#f8f9fa;border-radius:8px;text-align:center;border:1px solid #dee2e6;'>
