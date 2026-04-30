@@ -9,7 +9,8 @@
     "lint:fix": "eslint . --fix",
     "check-links": "linkinator . --recurse --skip 'https://*' --verbosity error",
     "prepare": "husky install",
-    "check-live": "powershell -File check-urls.ps1"
+    "check-live": "powershell -File check-urls.ps1",
+    "check-zombies": "powershell -File check-zombies.ps1"
   },
   "repository": {
     "type": "git",
