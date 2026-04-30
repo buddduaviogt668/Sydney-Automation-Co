@@ -58,7 +58,7 @@
       "closes": "18:00"
     }
   ],
-  "priceRange": "\$\$",
+  "priceRange": "$$",
   "areaServed": "Sydney",
   "sameAs": [
     "https://www.facebook.com/profile.php?id=61570407305417",
@@ -847,11 +847,11 @@ function submitLeadForm(event) {
 		showFormMessage('Please fill in all required fields.', 'error');
 		return;
 	}
-	if (!/^[0-9\s\-\+\(\)]{8,}$/.test(phone)) {
+	if (!/^[0-9s-+()]{8,}$/.test(phone)) {
 		showFormMessage('Please enter a valid phone number.', 'error');
 		return;
 	}
-	if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+	if (!/^[^s@]+@[^s@]+.[^s@]+$/.test(email)) {
 		showFormMessage('Please enter a valid email address.', 'error');
 		return;
 	}

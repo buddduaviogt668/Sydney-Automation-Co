@@ -71,7 +71,7 @@
       "closes": "18:00"
     }
   ],
-  "priceRange": "\$\$",
+  "priceRange": "$$",
   "areaServed": "Sydney",
   "sameAs": [
     "https://www.facebook.com/profile.php?id=61570407305417",
@@ -110,7 +110,7 @@
       "closes": "18:00"
     }
   ],
-  "priceRange": "\$\$",
+  "priceRange": "$$",
   "areaServed": "Sydney",
   "sameAs": [
     "https://www.facebook.com/profile.php?id=61570407305417",
@@ -175,7 +175,7 @@ fbq('track', 'PageView');
       "closes": "18:00"
     }
   ],
-  "priceRange": "\$\$",
+  "priceRange": "$$",
   "areaServed": "Sydney",
   "sameAs": [
     "https://www.facebook.com/profile.php?id=61570407305417",
@@ -796,7 +796,7 @@ nav{position:fixed;top:40px;left:0;right:0;z-index:1000;background:#0e1f3d;borde
       function ReactElement(type, key, props) {
         var refProp = props.ref;
         return {
-          $$typeof: REACT_ELEMENT_TYPE,
+          $typeof: REACT_ELEMENT_TYPE,
           type,
           key,
           ref: void 0 !== refProp ? refProp : null,
@@ -807,7 +807,7 @@ nav{position:fixed;top:40px;left:0;right:0;z-index:1000;background:#0e1f3d;borde
         return ReactElement(oldElement.type, newKey, oldElement.props);
       }
       function isValidElement(object) {
-        return "object" === typeof object && null !== object && object.$$typeof === REACT_ELEMENT_TYPE;
+        return "object" === typeof object && null !== object && object.$typeof === REACT_ELEMENT_TYPE;
       }
       function escape(key) {
         var escaperLookup = { "=": "=0", ":": "=2" };
@@ -855,7 +855,7 @@ nav{position:fixed;top:40px;left:0;right:0;z-index:1000;background:#0e1f3d;borde
               invokeCallback = true;
               break;
             case "object":
-              switch (children.$$typeof) {
+              switch (children.$typeof) {
                 case REACT_ELEMENT_TYPE:
                 case REACT_PORTAL_TYPE:
                   invokeCallback = true;
@@ -1032,7 +1032,7 @@ nav{position:fixed;top:40px;left:0;right:0;z-index:1000;background:#0e1f3d;borde
       };
       exports.createContext = function(defaultValue) {
         defaultValue = {
-          $$typeof: REACT_CONTEXT_TYPE,
+          $typeof: REACT_CONTEXT_TYPE,
           _currentValue: defaultValue,
           _currentValue2: defaultValue,
           _threadCount: 0,
@@ -1041,7 +1041,7 @@ nav{position:fixed;top:40px;left:0;right:0;z-index:1000;background:#0e1f3d;borde
         };
         defaultValue.Provider = defaultValue;
         defaultValue.Consumer = {
-          $$typeof: REACT_CONSUMER_TYPE,
+          $typeof: REACT_CONSUMER_TYPE,
           _context: defaultValue
         };
         return defaultValue;
@@ -1067,19 +1067,19 @@ nav{position:fixed;top:40px;left:0;right:0;z-index:1000;background:#0e1f3d;borde
         return { current: null };
       };
       exports.forwardRef = function(render) {
-        return { $$typeof: REACT_FORWARD_REF_TYPE, render };
+        return { $typeof: REACT_FORWARD_REF_TYPE, render };
       };
       exports.isValidElement = isValidElement;
       exports.lazy = function(ctor) {
         return {
-          $$typeof: REACT_LAZY_TYPE,
+          $typeof: REACT_LAZY_TYPE,
           _payload: { _status: -1, _result: ctor },
           _init: lazyInitializer
         };
       };
       exports.memo = function(type, compare) {
         return {
-          $$typeof: REACT_MEMO_TYPE,
+          $typeof: REACT_MEMO_TYPE,
           type,
           compare: void 0 === compare ? null : compare
         };
@@ -1498,7 +1498,7 @@ nav{position:fixed;top:40px;left:0;right:0;z-index:1000;background:#0e1f3d;borde
       function createPortal$1(children, containerInfo, implementation) {
         var key = 3 < arguments.length && void 0 !== arguments[3] ? arguments[3] : null;
         return {
-          $$typeof: REACT_PORTAL_TYPE,
+          $typeof: REACT_PORTAL_TYPE,
           key: null == key ? null : "" + key,
           children,
           containerInfo,
@@ -1790,7 +1790,7 @@ nav{position:fixed;top:40px;left:0;right:0;z-index:1000;background:#0e1f3d;borde
       function getComponentNameFromType(type) {
         if (null == type) return null;
         if ("function" === typeof type)
-          return type.$$typeof === REACT_CLIENT_REFERENCE ? null : type.displayName || type.name || null;
+          return type.$typeof === REACT_CLIENT_REFERENCE ? null : type.displayName || type.name || null;
         if ("string" === typeof type) return type;
         switch (type) {
           case REACT_FRAGMENT_TYPE:
@@ -1807,7 +1807,7 @@ nav{position:fixed;top:40px;left:0;right:0;z-index:1000;background:#0e1f3d;borde
             return "Activity";
         }
         if ("object" === typeof type)
-          switch (type.$$typeof) {
+          switch (type.$typeof) {
             case REACT_PORTAL_TYPE:
               return "Portal";
             case REACT_CONTEXT_TYPE:
@@ -2365,7 +2365,7 @@ nav{position:fixed;top:40px;left:0;right:0;z-index:1000;background:#0e1f3d;borde
           allNativeEvents.add(dependencies[registrationName]);
       }
       var VALID_ATTRIBUTE_NAME_REGEX = RegExp(
-        "^[:A-Z_a-z\\u00C0-\\u00D6\\u00D8-\\u00F6\\u00F8-\\u02FF\\u0370-\\u037D\\u037F-\\u1FFF\\u200C-\\u200D\\u2070-\\u218F\\u2C00-\\u2FEF\\u3001-\\uD7FF\\uF900-\\uFDCF\\uFDF0-\\uFFFD][:A-Z_a-z\\u00C0-\\u00D6\\u00D8-\\u00F6\\u00F8-\\u02FF\\u0370-\\u037D\\u037F-\\u1FFF\\u200C-\\u200D\\u2070-\\u218F\\u2C00-\\u2FEF\\u3001-\\uD7FF\\uF900-\\uFDCF\\uFDF0-\\uFFFD\\-.0-9\\u00B7\\u0300-\\u036F\\u203F-\\u2040]*$"
+        "^[:A-Z_a-z\\u00C0-\\u00D6\\u00D8-\\u00F6\\u00F8-\\u02FF\\u0370-\\u037D\\u037F-\\u1FFF\\u200C-\\u200D\\u2070-\\u218F\\u2C00-\\u2FEF\\u3001-\\uD7FF\\uF900-\\uFDCF\\uFDF0-\\uFFFD][:A-Z_a-z\\u00C0-\\u00D6\\u00D8-\\u00F6\\u00F8-\\u02FF\\u0370-\\u037D\\u037F-\\u1FFF\\u200C-\\u200D\\u2070-\\u218F\\u2C00-\\u2FEF\\u3001-\\uD7FF\\uF900-\\uFDCF\\uFDF0-\\uFFFD\-.0-9\\u00B7\\u0300-\\u036F\\u203F-\\u2040]*$"
       );
       var illegalAttributeNameCache = {};
       var validatedAttributeNameCache = {};
@@ -2507,7 +2507,7 @@ nav{position:fixed;top:40px;left:0;right:0;z-index:1000;background:#0e1f3d;borde
           return doc.body;
         }
       }
-      var escapeSelectorAttributeValueInsideDoubleQuotesRegex = /[\n"\\]/g;
+      var escapeSelectorAttributeValueInsideDoubleQuotesRegex = /[\n"\]/g;
       function escapeSelectorAttributeValueInsideDoubleQuotes(value) {
         return value.replace(
           escapeSelectorAttributeValueInsideDoubleQuotesRegex,
@@ -3540,7 +3540,7 @@ nav{position:fixed;top:40px;left:0;right:0;z-index:1000;background:#0e1f3d;borde
               return type = createFiberImplClass(19, pendingProps, key, mode), type.elementType = REACT_SUSPENSE_LIST_TYPE, type.lanes = lanes, type;
             default:
               if ("object" === typeof type && null !== type)
-                switch (type.$$typeof) {
+                switch (type.$typeof) {
                   case REACT_CONTEXT_TYPE:
                     fiberTag = 10;
                     break a;
@@ -3953,7 +3953,7 @@ nav{position:fixed;top:40px;left:0;right:0;z-index:1000;background:#0e1f3d;borde
       var scheduleCallback$2 = Scheduler.unstable_scheduleCallback;
       var NormalPriority = Scheduler.unstable_NormalPriority;
       var CacheContext = {
-        $$typeof: REACT_CONTEXT_TYPE,
+        $typeof: REACT_CONTEXT_TYPE,
         Consumer: null,
         Provider: null,
         _currentValue: null,
@@ -4132,7 +4132,7 @@ nav{position:fixed;top:40px;left:0;right:0;z-index:1000;background:#0e1f3d;borde
         workInProgress2.ref = void 0 !== element ? element : null;
       }
       function throwOnInvalidObjectTypeImpl(returnFiber, newChild) {
-        if (newChild.$$typeof === REACT_LEGACY_ELEMENT_TYPE)
+        if (newChild.$typeof === REACT_LEGACY_ELEMENT_TYPE)
           throw Error(formatProdErrorMessage(525));
         returnFiber = Object.prototype.toString.call(newChild);
         throw Error(
@@ -4197,7 +4197,7 @@ nav{position:fixed;top:40px;left:0;right:0;z-index:1000;background:#0e1f3d;borde
               lanes,
               element.key
             );
-          if (null !== current && (current.elementType === elementType || "object" === typeof elementType && null !== elementType && elementType.$$typeof === REACT_LAZY_TYPE && resolveLazy(elementType) === current.type))
+          if (null !== current && (current.elementType === elementType || "object" === typeof elementType && null !== elementType && elementType.$typeof === REACT_LAZY_TYPE && resolveLazy(elementType) === current.type))
             return current = useFiber(current, element.props), coerceRef(current, element), current.return = returnFiber, current;
           current = createFiberFromTypeAndProps(
             element.type,
@@ -4238,7 +4238,7 @@ nav{position:fixed;top:40px;left:0;right:0;z-index:1000;background:#0e1f3d;borde
               lanes
             ), newChild.return = returnFiber, newChild;
           if ("object" === typeof newChild && null !== newChild) {
-            switch (newChild.$$typeof) {
+            switch (newChild.$typeof) {
               case REACT_ELEMENT_TYPE:
                 return lanes = createFiberFromTypeAndProps(
                   newChild.type,
@@ -4266,7 +4266,7 @@ nav{position:fixed;top:40px;left:0;right:0;z-index:1000;background:#0e1f3d;borde
               ), newChild.return = returnFiber, newChild;
             if ("function" === typeof newChild.then)
               return createChild(returnFiber, unwrapThenable(newChild), lanes);
-            if (newChild.$$typeof === REACT_CONTEXT_TYPE)
+            if (newChild.$typeof === REACT_CONTEXT_TYPE)
               return createChild(
                 returnFiber,
                 readContextDuringReconciliation(returnFiber, newChild),
@@ -4281,7 +4281,7 @@ nav{position:fixed;top:40px;left:0;right:0;z-index:1000;background:#0e1f3d;borde
           if ("string" === typeof newChild && "" !== newChild || "number" === typeof newChild || "bigint" === typeof newChild)
             return null !== key ? null : updateTextNode(returnFiber, oldFiber, "" + newChild, lanes);
           if ("object" === typeof newChild && null !== newChild) {
-            switch (newChild.$$typeof) {
+            switch (newChild.$typeof) {
               case REACT_ELEMENT_TYPE:
                 return newChild.key === key ? updateElement(returnFiber, oldFiber, newChild, lanes) : null;
               case REACT_PORTAL_TYPE:
@@ -4298,7 +4298,7 @@ nav{position:fixed;top:40px;left:0;right:0;z-index:1000;background:#0e1f3d;borde
                 unwrapThenable(newChild),
                 lanes
               );
-            if (newChild.$$typeof === REACT_CONTEXT_TYPE)
+            if (newChild.$typeof === REACT_CONTEXT_TYPE)
               return updateSlot(
                 returnFiber,
                 oldFiber,
@@ -4313,7 +4313,7 @@ nav{position:fixed;top:40px;left:0;right:0;z-index:1000;background:#0e1f3d;borde
           if ("string" === typeof newChild && "" !== newChild || "number" === typeof newChild || "bigint" === typeof newChild)
             return existingChildren = existingChildren.get(newIdx) || null, updateTextNode(returnFiber, existingChildren, "" + newChild, lanes);
           if ("object" === typeof newChild && null !== newChild) {
-            switch (newChild.$$typeof) {
+            switch (newChild.$typeof) {
               case REACT_ELEMENT_TYPE:
                 return existingChildren = existingChildren.get(
                   null === newChild.key ? newIdx : newChild.key
@@ -4341,7 +4341,7 @@ nav{position:fixed;top:40px;left:0;right:0;z-index:1000;background:#0e1f3d;borde
                 unwrapThenable(newChild),
                 lanes
               );
-            if (newChild.$$typeof === REACT_CONTEXT_TYPE)
+            if (newChild.$typeof === REACT_CONTEXT_TYPE)
               return updateFromMap(
                 existingChildren,
                 returnFiber,
@@ -4438,7 +4438,7 @@ nav{position:fixed;top:40px;left:0;right:0;z-index:1000;background:#0e1f3d;borde
         function reconcileChildFibersImpl(returnFiber, currentFirstChild, newChild, lanes) {
           "object" === typeof newChild && null !== newChild && newChild.type === REACT_FRAGMENT_TYPE && null === newChild.key && (newChild = newChild.props.children);
           if ("object" === typeof newChild && null !== newChild) {
-            switch (newChild.$$typeof) {
+            switch (newChild.$typeof) {
               case REACT_ELEMENT_TYPE:
                 a: {
                   for (var key = newChild.key; null !== currentFirstChild; ) {
@@ -4458,7 +4458,7 @@ nav{position:fixed;top:40px;left:0;right:0;z-index:1000;background:#0e1f3d;borde
                           returnFiber = lanes;
                           break a;
                         }
-                      } else if (currentFirstChild.elementType === key || "object" === typeof key && null !== key && key.$$typeof === REACT_LAZY_TYPE && resolveLazy(key) === currentFirstChild.type) {
+                      } else if (currentFirstChild.elementType === key || "object" === typeof key && null !== key && key.$typeof === REACT_LAZY_TYPE && resolveLazy(key) === currentFirstChild.type) {
                         deleteRemainingChildren(
                           returnFiber,
                           currentFirstChild.sibling
@@ -4547,7 +4547,7 @@ nav{position:fixed;top:40px;left:0;right:0;z-index:1000;background:#0e1f3d;borde
                 unwrapThenable(newChild),
                 lanes
               );
-            if (newChild.$$typeof === REACT_CONTEXT_TYPE)
+            if (newChild.$typeof === REACT_CONTEXT_TYPE)
               return reconcileChildFibersImpl(
                 returnFiber,
                 currentFirstChild,
@@ -4984,7 +4984,7 @@ nav{position:fixed;top:40px;left:0;right:0;z-index:1000;background:#0e1f3d;borde
       function use(usable) {
         if (null !== usable && "object" === typeof usable) {
           if ("function" === typeof usable.then) return useThenable(usable);
-          if (usable.$$typeof === REACT_CONTEXT_TYPE) return readContext(usable);
+          if (usable.$typeof === REACT_CONTEXT_TYPE) return readContext(usable);
         }
         throw Error(formatProdErrorMessage(438, String(usable)));
       }
@@ -7069,8 +7069,8 @@ nav{position:fixed;top:40px;left:0;right:0;z-index:1000;background:#0e1f3d;borde
                 ));
               else {
                 if (void 0 !== current && null !== current) {
-                  var $$typeof = current.$$typeof;
-                  if ($$typeof === REACT_FORWARD_REF_TYPE) {
+                  var $typeof = current.$typeof;
+                  if ($typeof === REACT_FORWARD_REF_TYPE) {
                     workInProgress2.tag = 11;
                     workInProgress2 = updateForwardRef(
                       null,
@@ -7080,7 +7080,7 @@ nav{position:fixed;top:40px;left:0;right:0;z-index:1000;background:#0e1f3d;borde
                       renderLanes2
                     );
                     break a;
-                  } else if ($$typeof === REACT_MEMO_TYPE) {
+                  } else if ($typeof === REACT_MEMO_TYPE) {
                     workInProgress2.tag = 14;
                     workInProgress2 = updateMemoComponent(
                       null,
@@ -7106,14 +7106,14 @@ nav{position:fixed;top:40px;left:0;right:0;z-index:1000;background:#0e1f3d;borde
               renderLanes2
             );
           case 1:
-            return props = workInProgress2.type, $$typeof = resolveClassComponentProps(
+            return props = workInProgress2.type, $typeof = resolveClassComponentProps(
               props,
               workInProgress2.pendingProps
             ), updateClassComponent(
               current,
               workInProgress2,
               props,
-              $$typeof,
+              $typeof,
               renderLanes2
             );
           case 3:
@@ -7125,7 +7125,7 @@ nav{position:fixed;top:40px;left:0;right:0;z-index:1000;background:#0e1f3d;borde
               if (null === current) throw Error(formatProdErrorMessage(387));
               props = workInProgress2.pendingProps;
               var prevState = workInProgress2.memoizedState;
-              $$typeof = prevState.element;
+              $typeof = prevState.element;
               cloneUpdateQueue(current, workInProgress2);
               processUpdateQueue(workInProgress2, props, null, renderLanes2);
               var nextState = workInProgress2.memoizedState;
@@ -7152,12 +7152,12 @@ nav{position:fixed;top:40px;left:0;right:0;z-index:1000;background:#0e1f3d;borde
                     renderLanes2
                   );
                   break a;
-                } else if (props !== $$typeof) {
-                  $$typeof = createCapturedValueAtFiber(
+                } else if (props !== $typeof) {
+                  $typeof = createCapturedValueAtFiber(
                     Error(formatProdErrorMessage(424)),
                     workInProgress2
                   );
-                  queueHydrationError($$typeof);
+                  queueHydrationError($typeof);
                   workInProgress2 = mountHostRootWithoutHydrating(
                     current,
                     workInProgress2,
@@ -7190,7 +7190,7 @@ nav{position:fixed;top:40px;left:0;right:0;z-index:1000;background:#0e1f3d;borde
                 }
               else {
                 resetHydrationState();
-                if (props === $$typeof) {
+                if (props === $typeof) {
                   workInProgress2 = bailoutOnAlreadyFinishedWork(
                     current,
                     workInProgress2,
@@ -7222,7 +7222,7 @@ nav{position:fixed;top:40px;left:0;right:0;z-index:1000;background:#0e1f3d;borde
               workInProgress2.type,
               workInProgress2.pendingProps,
               rootInstanceStackCursor.current
-            ), hydrationParentFiber = workInProgress2, rootOrSingletonContext = true, $$typeof = nextHydratableInstance, isSingletonScope(workInProgress2.type) ? (previousHydratableOnEnteringScopedSingleton = $$typeof, nextHydratableInstance = getNextHydratable(props.firstChild)) : nextHydratableInstance = $$typeof), reconcileChildren(
+            ), hydrationParentFiber = workInProgress2, rootOrSingletonContext = true, $typeof = nextHydratableInstance, isSingletonScope(workInProgress2.type) ? (previousHydratableOnEnteringScopedSingleton = $typeof, nextHydratableInstance = getNextHydratable(props.firstChild)) : nextHydratableInstance = $typeof), reconcileChildren(
               current,
               workInProgress2,
               workInProgress2.pendingProps.children,
@@ -7230,29 +7230,29 @@ nav{position:fixed;top:40px;left:0;right:0;z-index:1000;background:#0e1f3d;borde
             ), markRef(current, workInProgress2), null === current && (workInProgress2.flags |= 4194304), workInProgress2.child;
           case 5:
             if (null === current && isHydrating) {
-              if ($$typeof = props = nextHydratableInstance)
+              if ($typeof = props = nextHydratableInstance)
                 props = canHydrateInstance(
                   props,
                   workInProgress2.type,
                   workInProgress2.pendingProps,
                   rootOrSingletonContext
-                ), null !== props ? (workInProgress2.stateNode = props, hydrationParentFiber = workInProgress2, nextHydratableInstance = getNextHydratable(props.firstChild), rootOrSingletonContext = false, $$typeof = true) : $$typeof = false;
-              $$typeof || throwOnHydrationMismatch(workInProgress2);
+                ), null !== props ? (workInProgress2.stateNode = props, hydrationParentFiber = workInProgress2, nextHydratableInstance = getNextHydratable(props.firstChild), rootOrSingletonContext = false, $typeof = true) : $typeof = false;
+              $typeof || throwOnHydrationMismatch(workInProgress2);
             }
             pushHostContext(workInProgress2);
-            $$typeof = workInProgress2.type;
+            $typeof = workInProgress2.type;
             prevState = workInProgress2.pendingProps;
             nextState = null !== current ? current.memoizedProps : null;
             props = prevState.children;
-            shouldSetTextContent($$typeof, prevState) ? props = null : null !== nextState && shouldSetTextContent($$typeof, nextState) && (workInProgress2.flags |= 32);
-            null !== workInProgress2.memoizedState && ($$typeof = renderWithHooks(
+            shouldSetTextContent($typeof, prevState) ? props = null : null !== nextState && shouldSetTextContent($typeof, nextState) && (workInProgress2.flags |= 32);
+            null !== workInProgress2.memoizedState && ($typeof = renderWithHooks(
               current,
               workInProgress2,
               TransitionAwareHostComponent,
               null,
               null,
               renderLanes2
-            ), HostTransitionContext._currentValue = $$typeof);
+            ), HostTransitionContext._currentValue = $typeof);
             markRef(current, workInProgress2);
             reconcileChildren(current, workInProgress2, props, renderLanes2);
             return workInProgress2.child;
@@ -7311,7 +7311,7 @@ nav{position:fixed;top:40px;left:0;right:0;z-index:1000;background:#0e1f3d;borde
           case 10:
             return props = workInProgress2.pendingProps, pushProvider(workInProgress2, workInProgress2.type, props.value), reconcileChildren(current, workInProgress2, props.children, renderLanes2), workInProgress2.child;
           case 9:
-            return $$typeof = workInProgress2.type._context, props = workInProgress2.pendingProps.children, prepareToReadContext(workInProgress2), $$typeof = readContext($$typeof), props = props($$typeof), workInProgress2.flags |= 1, reconcileChildren(current, workInProgress2, props, renderLanes2), workInProgress2.child;
+            return $typeof = workInProgress2.type._context, props = workInProgress2.pendingProps.children, prepareToReadContext(workInProgress2), $typeof = readContext($typeof), props = props($typeof), workInProgress2.flags |= 1, reconcileChildren(current, workInProgress2, props, renderLanes2), workInProgress2.child;
           case 14:
             return updateMemoComponent(
               current,
@@ -7340,7 +7340,7 @@ nav{position:fixed;top:40px;left:0;right:0;z-index:1000;background:#0e1f3d;borde
               workInProgress2.pendingProps
             );
           case 24:
-            return prepareToReadContext(workInProgress2), props = readContext(CacheContext), null === current ? ($$typeof = peekCacheFromPool(), null === $$typeof && ($$typeof = workInProgressRoot, prevState = createCache(), $$typeof.pooledCache = prevState, prevState.refCount++, null !== prevState && ($$typeof.pooledCacheLanes |= renderLanes2), $$typeof = prevState), workInProgress2.memoizedState = { parent: props, cache: $$typeof }, initializeUpdateQueue(workInProgress2), pushProvider(workInProgress2, CacheContext, $$typeof)) : (0 !== (current.lanes & renderLanes2) && (cloneUpdateQueue(current, workInProgress2), processUpdateQueue(workInProgress2, null, null, renderLanes2), suspendIfUpdateReadFromEntangledAsyncAction()), $$typeof = current.memoizedState, prevState = workInProgress2.memoizedState, $$typeof.parent !== props ? ($$typeof = { parent: props, cache: props }, workInProgress2.memoizedState = $$typeof, 0 === workInProgress2.lanes && (workInProgress2.memoizedState = workInProgress2.updateQueue.baseState = $$typeof), pushProvider(workInProgress2, CacheContext, props)) : (props = prevState.cache, pushProvider(workInProgress2, CacheContext, props), props !== $$typeof.cache && propagateContextChanges(
+            return prepareToReadContext(workInProgress2), props = readContext(CacheContext), null === current ? ($typeof = peekCacheFromPool(), null === $typeof && ($typeof = workInProgressRoot, prevState = createCache(), $typeof.pooledCache = prevState, prevState.refCount++, null !== prevState && ($typeof.pooledCacheLanes |= renderLanes2), $typeof = prevState), workInProgress2.memoizedState = { parent: props, cache: $typeof }, initializeUpdateQueue(workInProgress2), pushProvider(workInProgress2, CacheContext, $typeof)) : (0 !== (current.lanes & renderLanes2) && (cloneUpdateQueue(current, workInProgress2), processUpdateQueue(workInProgress2, null, null, renderLanes2), suspendIfUpdateReadFromEntangledAsyncAction()), $typeof = current.memoizedState, prevState = workInProgress2.memoizedState, $typeof.parent !== props ? ($typeof = { parent: props, cache: props }, workInProgress2.memoizedState = $typeof, 0 === workInProgress2.lanes && (workInProgress2.memoizedState = workInProgress2.updateQueue.baseState = $typeof), pushProvider(workInProgress2, CacheContext, props)) : (props = prevState.cache, pushProvider(workInProgress2, CacheContext, props), props !== $typeof.cache && propagateContextChanges(
               workInProgress2,
               [CacheContext],
               renderLanes2,
@@ -7519,7 +7519,7 @@ nav{position:fixed;top:40px;left:0;right:0;z-index:1000;background:#0e1f3d;borde
                         break;
                       case "script":
                         nextResource = ownerDocument.createElement("div");
-                        nextResource.innerHTML = "\x3cscript><\/script>";
+                        nextResource.innerHTML = "x3cscript><\/script>";
                         nextResource = nextResource.removeChild(
                           nextResource.firstChild
                         );
@@ -11121,7 +11121,7 @@ nav{position:fixed;top:40px;left:0;right:0;z-index:1000;background:#0e1f3d;borde
             if ("function" === typeof value) {
               domElement.setAttribute(
                 key,
-                "javascript:throw new Error('A React form was unexpectedly submitted. If you called form.submit() manually, consider using form.requestSubmit() instead. If you\\'re trying to use event.stopPropagation() in a submit event handler, consider also calling event.preventDefault().')"
+                "javascript:throw new Error('A React form was unexpectedly submitted. If you called form.submit() manually, consider using form.requestSubmit() instead. If you\'re trying to use event.stopPropagation() in a submit event handler, consider also calling event.preventDefault().')"
               );
               break;
             } else
@@ -12663,7 +12663,7 @@ nav{position:fixed;top:40px;left:0;right:0;z-index:1000;background:#0e1f3d;borde
         }
       }
       var HostTransitionContext = {
-        $$typeof: REACT_CONTEXT_TYPE,
+        $typeof: REACT_CONTEXT_TYPE,
         Provider: null,
         Consumer: null,
         _currentValue: sharedNotPendingObject,
@@ -13186,7 +13186,7 @@ nav{position:fixed;top:40px;left:0;right:0;z-index:1000;background:#0e1f3d;borde
         }
         for (; 0 < queuedExplicitHydrationTargets.length && (i = queuedExplicitHydrationTargets[0], null === i.blockedOn); )
           attemptExplicitHydrationTarget(i), null === i.blockedOn && queuedExplicitHydrationTargets.shift();
-        i = (unblocked.ownerDocument || unblocked).$$reactFormReplay;
+        i = (unblocked.ownerDocument || unblocked).$reactFormReplay;
         if (null != i)
           for (queuedTarget = 0; queuedTarget < i.length; queuedTarget += 3) {
             var form = i[queuedTarget], submitterOrAction = i[queuedTarget + 1], formProps = form[internalPropsKey] || null;
@@ -13420,7 +13420,7 @@ nav{position:fixed;top:40px;left:0;right:0;z-index:1000;background:#0e1f3d;borde
         } else maybeKey = config;
         config = maybeKey.ref;
         return {
-          $$typeof: REACT_ELEMENT_TYPE,
+          $typeof: REACT_ELEMENT_TYPE,
           type,
           key,
           ref: void 0 !== config ? config : null,
@@ -13550,7 +13550,7 @@ nav{position:fixed;top:40px;left:0;right:0;z-index:1000;background:#0e1f3d;borde
             "telephone": "+61422469739",
             "email": "service@sydneyautomationco.com.au",
             "image": "https://sydneyautomationco.com.au/og-image.jpg",
-            "priceRange": "$$",
+            "priceRange": "$",
             "areaServed": ["Menai", "Sutherland Shire", "Sydney", "NSW"],
             "address": { "@type": "PostalAddress", "addressLocality": "Menai", "addressRegion": "NSW", "postalCode": "2234", "addressCountry": "AU" },
             "geo": { "@type": "GeoCoordinates", "latitude": -34.0167, "longitude": 151.0333 },
@@ -15000,7 +15000,7 @@ Call George on **0422 469 739**. Or email service@sydneyautomationco.com.au. I p
         /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: "fadeUp", children: [
           /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { display: "inline-flex", alignItems: "center", gap: 8, background: `${C.accent}20`, border: `1px solid ${C.accent}50`, borderRadius: 50, padding: "7px 16px", marginBottom: 24 }, children: [
             /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { style: { width: 9, height: 9, borderRadius: "50%", background: C.accent, display: "inline-block", animation: "blink 1.5s infinite" } }),
-            /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { style: { fontSize: 13, fontWeight: 700, color: C.accent, letterSpacing: "0.4px" }, children: "Based in Menai \xB7 Sutherland Shire \xB7 Sydney Wide" })
+            /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { style: { fontSize: 13, fontWeight: 700, color: C.accent, letterSpacing: "0.4px" }, children: "Based in Menai xB7 Sutherland Shire xB7 Sydney Wide" })
           ] }),
           /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h1", { style: { fontSize: "clamp(38px,5vw,64px)", fontWeight: 900, lineHeight: 1, marginBottom: 12, letterSpacing: "-0.5px" }, children: [
             "C-Bus & Dynalite",
@@ -15011,9 +15011,9 @@ Call George on **0422 469 739**. Or email service@sydneyautomationco.com.au. I p
           ] }),
           /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { fontSize: 16, fontWeight: 700, marginBottom: 16, letterSpacing: "0.2px" }, children: [
             /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { style: { color: C.accent }, children: "Menai" }),
-            /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { style: { color: C.border, margin: "0 10px" }, children: "\xB7" }),
+            /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { style: { color: C.border, margin: "0 10px" }, children: "xB7" }),
             /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { style: { color: C.accent }, children: "Sutherland Shire" }),
-            /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { style: { color: C.border, margin: "0 10px" }, children: "\xB7" }),
+            /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { style: { color: C.border, margin: "0 10px" }, children: "xB7" }),
             /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { style: { color: C.accent }, children: "Greater Sydney" })
           ] }),
           /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { display: "inline-flex", alignItems: "center", gap: 10, background: C.accent, padding: "10px 20px", borderRadius: 8, marginBottom: 20 }, children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { style: { fontFamily: "'Barlow Condensed',sans-serif", fontWeight: 900, fontSize: 17, color: C.navy, letterSpacing: "0.5px" }, children: "SYSTEM DOWN? WE FIX IT SAME-DAY." }) }),
@@ -15090,7 +15090,7 @@ Call George on **0422 469 739**. Or email service@sydneyautomationco.com.au. I p
     ] });
   }
   function TrustBar() {
-    const items = ["Menai \xB7 Sutherland Shire \xB7 Greater Sydney", "C-Bus & Dynalite Fault Finding Experts", "15+ Years Industry Experience", "Fully Insured & Licensed", "Mon\u2013Fri Availability", "Same-Day Shire Callouts"];
+    const items = ["Menai xB7 Sutherland Shire xB7 Greater Sydney", "C-Bus & Dynalite Fault Finding Experts", "15+ Years Industry Experience", "Fully Insured & Licensed", "Mon\u2013Fri Availability", "Same-Day Shire Callouts"];
     return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { background: `linear-gradient(90deg,${C.navyCard},${C.navyBright},${C.navyCard})`, borderTop: `1px solid ${C.border}`, borderBottom: `1px solid ${C.border}`, padding: "16px 5%", overflow: "hidden" }, children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { display: "flex", gap: 36, justifyContent: "center", flexWrap: "wrap" }, children: items.map((item) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { style: { fontSize: 13, fontWeight: 700, color: C.text, whiteSpace: "nowrap" }, children: item }, item)) }) });
   }
 
@@ -15373,7 +15373,7 @@ Call George on **0422 469 739**. Or email service@sydneyautomationco.com.au. I p
           /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { width: 48, height: 48, borderRadius: 12, background: "rgba(255,255,255,0.2)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }, children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Star, { size: 24, color: C.navy, fill: C.navy }) }),
           /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [
             /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { fontFamily: "'Barlow Condensed',sans-serif", fontWeight: 900, fontSize: 20, color: C.navy, lineHeight: 1.1 }, children: "Leave Us a Review" }),
-            /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { fontSize: 13, color: C.navy, opacity: 0.75, marginTop: 3 }, children: "Takes 30 seconds \xB7 Helps us enormously" })
+            /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { fontSize: 13, color: C.navy, opacity: 0.75, marginTop: 3 }, children: "Takes 30 seconds xB7 Helps us enormously" })
           ] }),
           /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowRight, { size: 20, color: C.navy, style: { marginLeft: "auto", flexShrink: 0 } })
         ] }) }),
@@ -15441,7 +15441,7 @@ Call George on **0422 469 739**. Or email service@sydneyautomationco.com.au. I p
       /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 16, marginBottom: 26 }, children: [
         /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h2", { style: { fontSize: 30, fontWeight: 900 }, children: [
           /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { style: { color: C.accent }, children: "Menai Based" }),
-          " \xB7 Sydney Wide Coverage"
+          " xB7 Sydney Wide Coverage"
         ] }),
         /* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", { className: "btn-ghost", onClick: () => nav("locations"), style: { padding: "10px 20px", fontSize: 13 }, children: "All Service Areas \u2192" })
       ] }),
@@ -15544,7 +15544,7 @@ Call George on **0422 469 739**. Or email service@sydneyautomationco.com.au. I p
             /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { position: "absolute", bottom: 0, left: 0, right: 0, padding: "20px", background: "linear-gradient(transparent,rgba(11,22,40,0.97))", textAlign: "center" }, children: [
               /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { fontSize: 20, fontWeight: 900, fontFamily: "'Barlow Condensed',sans-serif", color: "#fff" }, children: "George Skarmoutsos" }),
               /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { fontSize: 12, color: "#f07020", fontWeight: 700, marginTop: 2 }, children: "Founder & Director" }),
-              /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { fontSize: 11, color: "rgba(168,192,224,0.8)", marginTop: 2 }, children: "Sydney Automation Co \xB7 Menai, NSW" })
+              /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { fontSize: 11, color: "rgba(168,192,224,0.8)", marginTop: 2 }, children: "Sydney Automation Co xB7 Menai, NSW" })
             ] })
           ] }),
           /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { display: "flex", flexDirection: "column", gap: 8, marginTop: 16 }, children: [
@@ -15663,17 +15663,17 @@ Call George on **0422 469 739**. Or email service@sydneyautomationco.com.au. I p
   }
   function BlogContent({ text, nav, onPost }) {
     function renderInline(str, keyBase) {
-      const linkPattern = /\[([^\]]+)\]\(([^)]+)\)/g;
-      const boldPattern = /\*\*(.+?)\*\*/g;
+      const linkPattern = /[([^]]+)](([^)]+))/g;
+      const boldPattern = /**(.+?)**/g;
       const segments = [];
       let combined = str;
       const tokens = [];
       let last = 0;
       const allMatches = [];
       let m;
-      const rLink = /\[([^\]]+)\]\(([^)]+)\)/g;
+      const rLink = /[([^]]+)](([^)]+))/g;
       while ((m = rLink.exec(str)) !== null) allMatches.push({ start: m.index, end: m.index + m[0].length, type: "link", text: m[1], url: m[2] });
-      const rBold = /\*\*(.+?)\*\*/g;
+      const rBold = /**(.+?)**/g;
       while ((m = rBold.exec(str)) !== null) {
         const overlap = allMatches.some(a => m.index >= a.start && m.index < a.end);
         if (!overlap) allMatches.push({ start: m.index, end: m.index + m[0].length, type: "bold", text: m[1] });
@@ -15716,12 +15716,12 @@ Call George on **0422 469 739**. Or email service@sydneyautomationco.com.au. I p
       });
     }
     return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { fontSize: 15, color: "rgba(168,192,224,0.85)", lineHeight: 1.9 }, children: text.split("\n\n").map((para, i) => {
-      const stripped = para.replace(/\*\*/g, "").replace(/\[([^\]]+)\]\([^)]+\)/g, "$1");
+      const stripped = para.replace(/**/g, "").replace(/[([^]]+)]([^)]+)/g, "$1");
       if (para.startsWith("**") && para.endsWith("**") && para.split("**").length === 3) {
         return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", { style: { fontSize: 18, fontWeight: 700, color: "#f0f4ff", margin: "24px 0 10px" }, children: stripped }, i);
       }
       const rendered = renderInline(para, String(i));
-      if (para.match(/^\d\./)) {
+      if (para.match(/^d./)) {
         return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { style: { marginBottom: 12, paddingLeft: 16, borderLeft: `2px solid rgba(240,112,32,0.4)` }, children: rendered }, i);
       }
       return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { style: { marginBottom: 14 }, children: rendered }, i);
@@ -15790,7 +15790,7 @@ Call George on **0422 469 739**. Or email service@sydneyautomationco.com.au. I p
             /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { style: { background: `${C.blue}20`, color: C.blueLight, borderRadius: 50, padding: "4px 12px", fontSize: 11, fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.5px" }, children: p.cat }),
             /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", { style: { fontSize: 12, color: C.textDim }, children: [
               p.read,
-              " read \xB7 ",
+              " read xB7 ",
               p.date
             ] }),
             p.suburb && /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", { style: { display: "flex", alignItems: "center", gap: 4, fontSize: 12, color: C.textDim }, children: [
@@ -15804,7 +15804,7 @@ Call George on **0422 469 739**. Or email service@sydneyautomationco.com.au. I p
             /* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", { loading: "lazy", src: GEORGE_PHOTO, alt: "George Skarmoutsos", style: { width: 48, height: 48, borderRadius: "50%", objectFit: "cover", objectPosition: "center top", border: `2px solid ${C.accent}40` } }),
             /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [
               /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { fontWeight: 800, fontSize: 14 }, children: "George Skarmoutsos" }),
-              /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { fontSize: 12, color: C.textDim }, children: "Founder, Sydney Automation Co. \xB7 Accredited C-Bus Programmer & Dynalite System Designer" })
+              /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { fontSize: 12, color: C.textDim }, children: "Founder, Sydney Automation Co. xB7 Accredited C-Bus Programmer & Dynalite System Designer" })
             ] })
           ] }),
           /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BlogContent, { text: p.content, nav, onPost: setSelected }),
@@ -15891,7 +15891,7 @@ Call George on **0422 469 739**. Or email service@sydneyautomationco.com.au. I p
                   /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { style: { background: `${C.blue}20`, color: C.blueLight, borderRadius: 50, padding: "3px 10px", fontSize: 10, fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.5px" }, children: p.cat }),
                   /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", { style: { fontSize: 11, color: C.textDim }, children: [
                     p.read,
-                    " \xB7 ",
+                    " xB7 ",
                     p.date
                   ] })
                 ] }),
@@ -16747,13 +16747,13 @@ Call George on **0422 469 739**. Or email service@sydneyautomationco.com.au. I p
       /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "stripe-divider", style: { marginBottom: 20 } }),
       /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { display: "flex", justifyContent: "space-between", flexWrap: "wrap", gap: 12, fontSize: 12, color: C.textMuted }, children: [
         /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", { children: [
-          "\xA9 ",
+          "xA9 ",
           (/* @__PURE__ */ new Date()).getFullYear(),
-          " Sydney Automation Co \xB7 Based in Menai, Sutherland Shire, NSW \xB7 ABN: 61 136 364 150"
+          " Sydney Automation Co xB7 Based in Menai, Sutherland Shire, NSW xB7 ABN: 61 136 364 150"
         ] }),
         /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", { children: [
           (0, import_jsx_runtime.jsx)("span", { onClick: () => nav("privacy"), style: { color: "inherit", textDecoration: "underline", cursor: "pointer" }, children: "Privacy Policy" }),
-          " \xB7 *Same-day subject to availability. Accredited C-Bus Programmer & Dynalite System Designer. ABN 61 136 364 150."
+          " xB7 *Same-day subject to availability. Accredited C-Bus Programmer & Dynalite System Designer. ABN 61 136 364 150."
         ] })
       ] })
     ] }) });
