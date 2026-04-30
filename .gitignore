@@ -16,3 +16,10 @@ dist/
 
 # Logs
 *.log
+# Cursor AI Editor
+.cursor/
+.cursorrules
+.cursorignore
+.cursorindexingignore
+.cursorworktrees
+.cursorhistory
