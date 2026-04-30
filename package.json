@@ -1,0 +1,28 @@
+{
+  "name": "sydney-automation-co",
+  "version": "1.0.0",
+  "description": "Claude: quick follow-up tweak to enable PR",
+  "main": "perf-init.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/buddduaviogt668/Sydney-Automation-Co.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/buddduaviogt668/Sydney-Automation-Co/issues"
+  },
+  "homepage": "https://github.com/buddduaviogt668/Sydney-Automation-Co#readme",
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.2.1",
+    "globals": "^17.5.0"
+  }
+}
