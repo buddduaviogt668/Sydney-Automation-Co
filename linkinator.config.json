@@ -1,0 +1,13 @@
+﻿{
+  "recurse": true,
+  "skip": "https://*",
+  "verbosity": "error",
+  "directoryListing": false,
+  "retry": true,
+  "retryErrors": true,
+  "retryErrorsCount": 3,
+  "retryErrorsJitter": 1000,
+  "markdown": false,
+  "serverRoot": ".",
+  "fileExtensions": [".html"]
+}
