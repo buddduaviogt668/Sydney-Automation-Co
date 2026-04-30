@@ -1,96 +1,12 @@
 ﻿{
   "cleanUrls": true,
   "trailingSlash": false,
-  "redirects": [
-    {
-      "source": "/(.*)",
-      "has": [{ "type": "host", "value": "www.sydneyautomationco.com.au" }],
-      "destination": "https://sydneyautomationco.com.au/$1",
-      "permanent": true
-    },
-    {
-      "source": "/Service/:path*",
-      "destination": "/services",
-      "permanent": true
-    },
-    {
-      "source": "/services/:path*",
-      "destination": "/services",
-      "permanent": true
-    },
-    {
-      "source": "/products/:path*",
-      "destination": "/services",
-      "permanent": true
-    },
-    {
-      "source": "/shop/:path*",
-      "destination": "/",
-      "permanent": true
-    },
-    {
-      "source": "/cart",
-      "destination": "/",
-      "permanent": true
-    },
-    {
-      "source": "/checkout",
-      "destination": "/",
-      "permanent": true
-    },
-    {
-      "source": "/my-account/:path*",
-      "destination": "/contact",
-      "permanent": true
-    },
-    {
-      "source": "/wp-admin/:path*",
-      "destination": "/",
-      "permanent": true
-    },
-    {
-      "source": "/wp-content/:path*",
-      "destination": "/",
-      "permanent": true
-    },
-    {
-      "source": "/wp-includes/:path*",
-      "destination": "/",
-      "permanent": true
-    },
-    {
-      "source": "/xmlrpc.php",
-      "destination": "/",
-      "permanent": true
-    },
-    {
-      "source": "/category/:path*",
-      "destination": "/blog",
-      "permanent": true
-    },
-    {
-      "source": "/tag/:path*",
-      "destination": "/blog",
-      "permanent": true
-    },
-    {
-      "source": "/author/:path*",
-      "destination": "/about",
-      "permanent": true
-    },
-    {
-      "source": "/feed/:path*",
-      "destination": "/",
-      "permanent": true
-    }
-  ],
   "headers": [
     {
       "source": "/(.*)",
       "headers": [
         { "key": "X-Frame-Options", "value": "SAMEORIGIN" },
-        { "key": "X-Content-Type-Options", "value": "nosniff" },
-        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" }
+        { "key": "X-Content-Type-Options", "value": "nosniff" }
       ]
     }
   ]
