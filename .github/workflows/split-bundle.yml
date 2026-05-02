@@ -1,0 +1,92 @@
+name: Split Inline Bundle
+
+on:
+  workflow_dispatch:
+
+jobs:
+  split:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Extract bundle and update index.html
+        run: |
+          python3 << 'PYEOF'
+          import re
+
+          with open('index.html', 'r', encoding='utf-8') as f:
+              html = f.read()
+
+          # Find the large inline script (the React bundle)
+          pattern = re.compile(r'<script(?! src)[^>]*>(.*?)</script>', re.DOTALL)
+          matches = list(pattern.finditer(html))
+
+          big = None
+          for m in matches:
+              if len(m.group(1)) > 100_000:
+                  big = m
+                  break
+
+          if not big:
+              print("ERROR: Could not find large inline script")
+              exit(1)
+
+          bundle_content = big.group(1)
+          print(f"Extracted bundle: {len(bundle_content):,} bytes")
+
+          # Write bundle.js
+          with open('bundle.js', 'w', encoding='utf-8') as f:
+              f.write(bundle_content)
+
+          # Replace inline script with external reference
+          new_tag = '<script src="/bundle.js" defer></script>'
+          new_html = html[:big.start()] + new_tag + html[big.end():]
+
+          with open('index.html', 'w', encoding='utf-8') as f:
+              f.write(new_html)
+
+          print("Done. index.html updated, bundle.js created.")
+          PYEOF
+
+      - name: Add cache headers for bundle.js in vercel.json
+        run: |
+          python3 << 'PYEOF'
+          import json, os
+
+          vj_path = 'vercel.json'
+          if not os.path.exists(vj_path):
+              config = {}
+          else:
+              with open(vj_path, 'r') as f:
+                  config = json.load(f)
+
+          headers = config.get('headers', [])
+
+          # Check if bundle.js header already exists
+          already = any(h.get('source') == '/bundle.js' for h in headers)
+          if not already:
+              headers.append({
+                  "source": "/bundle.js",
+                  "headers": [
+                      {"key": "Cache-Control", "value": "public, max-age=31536000, immutable"}
+                  ]
+              })
+              config['headers'] = headers
+              with open(vj_path, 'w') as f:
+                  json.dump(config, f, indent=2)
+              print("vercel.json updated with cache header for bundle.js")
+          else:
+              print("Cache header for bundle.js already present")
+          PYEOF
+
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add index.html bundle.js vercel.json
+          git commit -m "perf: extract inline React bundle to external bundle.js for caching"
+          git push
