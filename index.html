@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en"><head>
 <meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <meta content="Accredited C-Bus programmer and Dynalite system designer based in Menai, Sydney. Same-day fault finding, repairs and commissioning. Call 0422 469 739." name="description"/>
@@ -9,10 +10,12 @@
 <link href="/favicon.png" rel="apple-touch-icon"/>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link as="style" href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600&amp;family=Barlow+Condensed:wght@700;800&amp;display=swap" onload="this.onload=null;this.rel='stylesheet'" rel="preload"/>
 <noscript><link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600&amp;family=Barlow+Condensed:wght@700;800&amp;display=swap" rel="stylesheet"/></noscript>
 <style>body{margin:0;padding:0;background:#0e1f3d}#root{min-height:100vh;padding-top:120px;box-sizing:border-box;position:relative}
-@media(max-width:960px){#root{padding-top:104px!important}nav{background:#0e1f3d!important;height:80px!important;top:40px!important}}
+@media(max-width:960px){#root{padding-top:104px!important}nav{background:#0e1f3d!important;height:64px!important;top:40px!important}}
 @media(max-width:768px){#root{padding-bottom:calc(100px + env(safe-area-inset-bottom,0px))!important;padding-top:104px!important}.wa-float{bottom:calc(85px + env(safe-area-inset-bottom,0px))!important;left:15px}#root div[style*="z-index: 999"]{display:none!important}}#loading{position:fixed;inset:0;background:#0e1f3d;display:flex;align-items:center;justify-content:center;z-index:9999;flex-direction:column;gap:16px;font-family:sans-serif;color:#a8c0e0}.spinner{width:40px;height:40px;border:3px solid #2a4a80;border-top-color:#f07020;border-radius:50%;animation:spin .8s linear infinite}@keyframes spin{to{transform:rotate(360deg)}}@media(max-width:768px){.grid2{grid-template-columns:1fr!important}.hide-mob{display:none!important}.show-mob{display:flex!important}}
 /* ── Unified floating CTA ── */
 .sac-float-cta { position: fixed; bottom: 28px; right: 24px; display: flex; flex-direction: column; gap: 10px; z-index: 9000; }
@@ -77,67 +80,42 @@
   ]
 }
 </script>
-<!-- FAQ Rich Results Schema -->
+<!-- FAQ Schema -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
+  "@type": "LocalBusiness",
+  "name": "Sydney Automation Co.",
+  "url": "https://sydneyautomationco.com.au/",
+  "telephone": "+61422469739",
+  "email": "service@sydneyautomationco.com.au",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Menai",
+    "addressLocality": "Menai",
+    "addressRegion": "NSW",
+    "postalCode": "2234",
+    "addressCountry": "AU"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": -34.0167,
+    "longitude": 151.0167
+  },
+  "openingHoursSpecification": [
     {
-      "@type": "Question",
-      "name": "What is the difference between C-Bus and Dynalite?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "C-Bus is made by Clipsal/Schneider Electric and is common in Australian residential and commercial buildings. Dynalite is made by Philips/Signify and is more common in hospitality, hotels and large commercial projects. Both are professional lighting control systems. Sydney Automation Co. is accredited in both."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How much does C-Bus programming cost in Sydney?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "C-Bus programming costs vary depending on system size and complexity. Sydney Automation Co. offers fixed-price programming packages starting from a standard call-out rate. Contact us on 0422 469 739 for a free quote."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Can you provide same-day C-Bus or Dynalite repairs?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. We offer same-day fault finding and repairs across Greater Sydney including the Sutherland Shire, Eastern Suburbs, North Shore, Northern Beaches, Inner West, and CBD. Call 0422 469 739 for priority service."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Do you service DALI and RAPIX lighting systems?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. We service DALI-2 compliant lighting systems, RAPIX emergency lighting, and integrated DALI/Dynalite/C-Bus installations across commercial buildings, hotels, and infrastructure projects in Sydney."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What areas of Sydney do you cover?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "We are based in Menai, Sutherland Shire and cover all of Greater Sydney including the Eastern Suburbs, North Shore, Northern Beaches, Inner West, Hills District, Parramatta, St George, and Sydney CBD. No travel surcharge within the Sutherland Shire."
-      }
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "07:00",
+      "closes": "18:00"
     }
-  ]
-}
-</script>
-<!-- Breadcrumb Schema -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Home",
-      "item": "https://sydneyautomationco.com.au/"
-    }
+  ],
+  "priceRange": "$$",
+  "areaServed": "Sydney",
+  "sameAs": [
+    "https://www.facebook.com/profile.php?id=61570407305417",
+    "https://www.instagram.com/sydneyautomationco/",
+    "https://www.linkedin.com/company/sydney-automation-co/"
   ]
 }
 </script>
@@ -168,6 +146,46 @@ fbq('init', '1836885369871029');
 fbq('track', 'PageView');
 </script>
 <noscript><img alt="Facebook Pixel Pageview" height="1" loading="lazy" src="https://www.facebook.com/tr?id=1836885369871029&amp;ev=PageView&amp;noscript=1" style="display:none" width="1"/></noscript>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Sydney Automation Co.",
+  "url": "https://sydneyautomationco.com.au/",
+  "telephone": "+61422469739",
+  "email": "service@sydneyautomationco.com.au",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Menai",
+    "addressLocality": "Menai",
+    "addressRegion": "NSW",
+    "postalCode": "2234",
+    "addressCountry": "AU"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": -34.0167,
+    "longitude": 151.0167
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "07:00",
+      "closes": "18:00"
+    }
+  ],
+  "priceRange": "$$",
+  "areaServed": "Sydney",
+  "sameAs": [
+    "https://www.facebook.com/profile.php?id=61570407305417",
+    "https://www.instagram.com/sydneyautomationco/",
+    "https://www.linkedin.com/company/sydney-automation-co/"
+  ]
+}
+</script>
+<meta content="Sydney Automation Co provides expert lighting control services in index. Specialising in C-Bus, Dynalite, DALI, and emergency lighting compliance across..." name="description"/>
+<meta content="summary_large_image" name="twitter:card"/>
 <style>
   /* WhatsApp button - dark theme, no layout conflicts */
   .whatsapp-btn, a[href*="wa.me"] {
@@ -197,41 +215,6 @@ fbq('track', 'PageView');
       justify-content: center;
       padding: 14px 20px;
     }
-  }
-</style>
-<style>
-  /* PREMIUM UI BOOSTERS */
-  .card, .tm-card {
-    backdrop-filter: blur(12px) !important;
-    background: rgba(255, 255, 255, 0.03) !important;
-    border: 1px solid rgba(255, 255, 255, 0.08) !important;
-    transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) !important;
-  }
-  .card:hover, .tm-card:hover {
-    background: rgba(255, 255, 255, 0.06) !important;
-    border-color: rgba(240, 112, 32, 0.4) !important;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 20px rgba(240, 112, 32, 0.1) !important;
-    transform: translateY(-8px) !important;
-  }
-  .btn-primary {
-    box-shadow: 0 4px 15px rgba(240, 112, 32, 0.3) !important;
-    transition: all 0.3s ease !important;
-  }
-  .btn-primary:hover {
-    box-shadow: 0 8px 25px rgba(240, 112, 32, 0.5) !important;
-    transform: scale(1.02) !important;
-  }
-  nav {
-    backdrop-filter: blur(20px) !important;
-    background: rgba(11, 22, 40, 0.85) !important;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
-  }
-  @keyframes fadeInUp {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-  section {
-    animation: fadeInUp 0.8s cubic-bezier(0.165, 0.84, 0.44, 1) both;
   }
 </style>
 </head><body>
@@ -341,7 +324,7 @@ nav{position:fixed;top:40px;left:0;right:0;z-index:1000;background:#0e1f3d;borde
 #promo-banner .pb-btn{background:#fff;color:#f07020;border:none;border-radius:5px;padding:5px 14px;font-size:12px;font-weight:800;cursor:pointer;white-space:nowrap;text-decoration:none;font-family:'Barlow',sans-serif;transition:background 0.2s,color 0.2s;flex-shrink:0;z-index:1101;position:relative}
 #promo-banner .pb-btn:hover{background:#0e1f3d;color:#fff}
 @media(max-width:960px){nav{top:40px;height:80px;z-index:1000}.nav-phone-wrap{display:none}}
-@media(max-width:600px){#promo-banner{height:40px;z-index:1100;padding:0 8px;gap:6px;flex-wrap:nowrap;overflow:hidden;justify-content:center;min-height:40px}#promo-banner .pb-text{font-size:10px;font-weight:800;flex:1 1 auto;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}#promo-banner .pb-btn{padding:4px 8px;font-size:10px;flex-shrink:0;white-space:nowrap}nav{top:40px;height:80px;padding:0 16px;z-index:1000}.logo-main{font-size:16px;letter-spacing:1px}.logo-sub{font-size:8px;letter-spacing:2px}.logo-line{height:2px;margin:2px 0}.nav-phone-wrap{display:none}}
+@media(max-width:600px){#promo-banner{height:40px;z-index:1100;padding:0 8px;gap:6px;flex-wrap:nowrap;overflow:hidden;justify-content:center;min-height:40px}#promo-banner .pb-text{font-size:10px;font-weight:800;flex:1 1 auto;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}#promo-banner .pb-btn{padding:4px 8px;font-size:10px;flex-shrink:0;white-space:nowrap}nav{top:40px;height:64px;padding:0 16px;z-index:1000}.logo-main{font-size:16px;letter-spacing:1px}.logo-sub{font-size:8px;letter-spacing:2px}.logo-line{height:2px;margin:2px 0}.nav-phone-wrap{display:none}}
 /* Hide React-rendered navs inside #root — prevents double nav on desktop scroll */
 #root nav[style*="position: fixed"] { display: none !important; }
 #root div[style*="z-index: 1001"] { display: none !important; }
@@ -654,6 +637,7 @@ nav{position:fixed;top:40px;left:0;right:0;z-index:1000;background:#0e1f3d;borde
     95% { transform: translateY(-5px); }
   }
   @media (max-width: 600px) { .wa-msg { display: none; } }
+
   /* Sticky mobile call bar */
   #mob-call-bar {
     display: none;
@@ -810,228 +794,45 @@ nav{position:fixed;top:40px;left:0;right:0;z-index:1000;background:#0e1f3d;borde
 <div class="sac-float-cta">
 <a class="sac-float-call" href="tel:0422469739">📞 Call Now</a>
 </div>
-<!-- ===== PREMIUM TESTIMONIALS CAROUSEL ===== -->
-<section id="testimonials" style="background:#0e1f3d;padding:80px 0;overflow:hidden;border-top:1px solid rgba(240,112,32,0.1);">
-  <div class="container" style="max-width:1200px;margin:0 auto;padding:0 24px;">
-    <div style="text-align:center;margin-bottom:48px;">
-      <span style="color:#f07020;font-weight:700;letter-spacing:3px;text-transform:uppercase;font-size:12px;display:block;margin-bottom:12px;">CLIENT REVIEWS</span>
-      <h2 style="color:#fff;font-size:clamp(32px,5vw,46px);margin:0;font-family:'Barlow Condensed',sans-serif;font-weight:900;line-height:1.1;">TRUSTED ACROSS SYDNEY</h2>
-      <div style="width:60px;height:4px;background:#f07020;margin:24px auto;"></div>
-    </div>
-    <div class="tm-viewport" style="position:relative;margin:0 -200vw;">
-      <div id="tm-track" style="display:flex;gap:24px;padding:20px 200vw;overflow-x:auto;scroll-behavior:smooth;scroll-snap-type:x mandatory;scrollbar-width:none;-ms-overflow-style:none;">
-        <!-- Review 1 -->
-        <div class="tm-card">
-          <div class="tm-stars">★★★★★</div>
-          <p class="tm-text">"Literally a lifesaver… George came out in 24 hours, diagnosed the problem with the CBUS system that two previous 'specialists' couldn't — fixed it — and then checked in two days later to make sure it was still working."</p>
-          <div class="tm-footer">
-            <div class="tm-author">Adam Ziino</div>
-            <div class="tm-role">C-Bus Repair, Little Bay</div>
-          </div>
-        </div>
-        <!-- Review 2 -->
-        <div class="tm-card">
-          <div class="tm-stars">★★★★★</div>
-          <p class="tm-text">"Highly recommended! George was amazing — came out at last notice when all our office lights went on the blink, found the problem in our C-Bus system, rush-ordered the parts, and had everything back up within no time."</p>
-          <div class="tm-footer">
-            <div class="tm-author">Phillipa Brown</div>
-            <div class="tm-role">Winten Property Group — North Sydney</div>
-          </div>
-        </div>
-        <!-- Review 3 -->
-        <div class="tm-card">
-          <div class="tm-stars">★★★★★</div>
-          <p class="tm-text">"Extremely happy with the C-Bus automation services. They helped repair and reprogram our Clipsal C-Bus lighting system which had ongoing faults that previous electricians couldn't resolve. Very responsive."</p>
-          <div class="tm-footer">
-            <div class="tm-author">Vasilios Tsopanas</div>
-            <div class="tm-role">C-Bus Fault Finding, Marrickville</div>
-          </div>
-        </div>
-        <!-- Review 4 -->
-        <div class="tm-card">
-          <div class="tm-stars">★★★★★</div>
-          <p class="tm-text">"Honest and reliable C-Bus installer in Sydney. Extremely knowledgeable and took the time to explain our C-Bus options clearly without rushing us. The quality of the installation was excellent."</p>
-          <div class="tm-footer">
-            <div class="tm-author">Helen Poulos</div>
-            <div class="tm-role">Ask Allied Health — Earlwood</div>
-          </div>
-        </div>
-        <!-- Review 5 -->
-        <div class="tm-card">
-          <div class="tm-stars">★★★★★</div>
-          <p class="tm-text">"Fantastic service. George resolved all issues and reprogrammed our Clipsal C-Bus system with custom options — above and beyond our expectations. Great efficient work with sharp pricing."</p>
-          <div class="tm-footer">
-            <div class="tm-author">Easyfix Electrics</div>
-            <div class="tm-role">Commercial Client, Matraville</div>
-          </div>
-        </div>
-        <!-- Review 6 -->
-        <div class="tm-card">
-          <div class="tm-stars">★★★★★</div>
-          <p class="tm-text">"I recently hired Sydney Automation to upgrade our home with a fully automated lighting system and the experience was fantastic! Professional, knowledgeable, and customised the system perfectly."</p>
-          <div class="tm-footer">
-            <div class="tm-author">Tim Reyes</div>
-            <div class="tm-role">Home Automation, Norwest</div>
-          </div>
-        </div>
-        <!-- Review 7 -->
-        <div class="tm-card">
-          <div class="tm-stars">★★★★★</div>
-          <p class="tm-text">"George was really helpful in my system set up. As someone who knew nothing about this space, he guided me to the right programs and got it all installed hassle free. 10/10."</p>
-          <div class="tm-footer">
-            <div class="tm-author">Imran Hamidi</div>
-            <div class="tm-role">Laing + Simmons East Group — Potts Point</div>
-          </div>
-        </div>
-        <!-- Review 8 -->
-        <div class="tm-card">
-          <div class="tm-stars">★★★★★</div>
-          <p class="tm-text">"Sydney Automation Co. provides outstanding smart lighting solutions, combining impressive technology with excellent customer service. I highly recommend them for office automation!"</p>
-          <div class="tm-footer">
-            <div class="tm-author">Miro Krpelán</div>
-            <div class="tm-role">Katalyst Facilities Management — Bondi</div>
-          </div>
-        </div>
-        <!-- Review 9 -->
-        <div class="tm-card">
-          <div class="tm-stars">★★★★★</div>
-          <p class="tm-text">"During a recent home renovation George and the team fitted out my media room. We couldn't be happier with the all round service — the lighting set up in particular is incredible!"</p>
-          <div class="tm-footer">
-            <div class="tm-author">Jamie Patterson</div>
-            <div class="tm-role">Residential Client, Lugarno</div>
-          </div>
-        </div>
-        <!-- Review 10 -->
-        <div class="tm-card">
-          <div class="tm-stars">★★★★★</div>
-          <p class="tm-text">"George was highly professional and prompt in fixing the CBUS issues we had downstairs — very knowledgeable, highly recommended."</p>
-          <div class="tm-footer">
-            <div class="tm-author">Robert</div>
-            <div class="tm-role">C-Bus Fault Finding, Maroubra</div>
-          </div>
-        </div>
-      </div>
-      <!-- Controls -->
-      <div class="tm-controls">
-        <button onclick="tmSlide(-1)" class="tm-btn">←</button>
-        <button onclick="tmSlide(1)" class="tm-btn">→</button>
-      </div>
-    </div>
-    <div style="text-align:center;margin-top:40px;">
-      <a href="https://g.page/r/CQK7ChOgqNZ2EBM/review" target="_blank" class="tm-google-link">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_\"Color\"_Logo.svg" style="height:18px;vertical-align:middle;margin-right:8px;" alt="Google">
-        LEAVE A 5-STAR REVIEW
+<!-- ===== STATIC TESTIMONIALS SECTION ===== -->
+<section id="testimonials" style="background:#f5f7fa;padding:64px 20px;">
+<div style="max-width:1100px;margin:0 auto;">
+<p style="text-align:center;color:#e87722;font-weight:700;letter-spacing:2px;text-transform:uppercase;font-size:13px;margin-bottom:8px;">WHAT CLIENTS SAY</p>
+<h2 style="text-align:center;color:#0d1a30;font-size:clamp(26px,4vw,38px);margin:0 0 8px;font-family:'Barlow Condensed',sans-serif;font-weight:800;">Trusted Across Sydney</h2>
+<p style="text-align:center;color:#555;margin:0 0 40px;font-family:'Barlow',sans-serif;">10 five-star Google reviews — and counting.</p>
+<div id="tm-track" style="display:flex;gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding-bottom:16px;scrollbar-width:none;">
+<div class="tm-card"><div class="tm-stars">★★★★★</div><p class="tm-text">"Literally a lifesaver… George came out in 24 hours, diagnosed the problem with the CBUS system that two previous 'specialists' couldn't — fixed it — and then checked in two days later to make sure it was still working. This is your guy for all CBUS and installation works."</p><div class="tm-author">Adam Ziino</div><div class="tm-role">Residential Client — C-Bus Repair, Little Bay</div></div>
+<div class="tm-card"><div class="tm-stars">★★★★★</div><p class="tm-text">"Highly recommended! George was amazing — came out at last notice when all our office lights went on the blink, found the problem in our C-Bus system, rush-ordered the parts, and had everything back up within no time. We now have him as our go-to expert for all things C-Bus."</p><div class="tm-author">Phillipa Brown</div><div class="tm-role">Winten Property Group — C-Bus Repair, North Sydney</div></div>
+<div class="tm-card"><div class="tm-stars">★★★★★</div><p class="tm-text">"Extremely happy with the C-Bus automation services. They helped repair and reprogram our Clipsal C-Bus lighting system which had ongoing faults that previous electricians couldn't resolve. Very responsive, explained the issues clearly, and went the extra mile."</p><div class="tm-author">Vasilios Tsopanas</div><div class="tm-role">Residential Client — C-Bus Fault Finding, Marrickville</div></div>
+<div class="tm-card"><div class="tm-stars">★★★★★</div><p class="tm-text">"Honest and reliable C-Bus installer in Sydney. Extremely knowledgeable and took the time to explain our C-Bus options clearly without rushing us. The quality of the installation and products was excellent and we're very happy with the end result."</p><div class="tm-author">Helen Poulos</div><div class="tm-role">Ask Allied Health — C-Bus Client, Earlwood</div></div>
+<div class="tm-card"><div class="tm-stars">★★★★★</div><p class="tm-text">"Fantastic service. George resolved all issues and reprogrammed our Clipsal C-Bus system with custom options — above and beyond our expectations. Great efficient work with sharp pricing. Highly recommended!"</p><div class="tm-author">Easyfix Electrics</div><div class="tm-role">Commercial Client — C-Bus Repair, Matraville</div></div>
+<div class="tm-card"><div class="tm-stars">★★★★★</div><p class="tm-text">"I recently hired Sydney Automation to upgrade our home with a fully automated lighting system and the experience was fantastic! Professional, knowledgeable, and customised the system to perfectly suit our needs. Highly recommended."</p><div class="tm-author">Tim Reyes</div><div class="tm-role">Residential Client — Home Automation, Norwest</div></div>
+<div class="tm-card"><div class="tm-stars">★★★★★</div><p class="tm-text">"George was really helpful in my system set up. As someone who knew nothing about this space, he guided me to the right programs and got it all installed hassle free. I've since recommended him to several friends and family. 10/10."</p><div class="tm-author">Imran Hamidi</div><div class="tm-role">Laing + Simmons East Group — System Setup, Potts Point</div></div>
+<div class="tm-card"><div class="tm-stars">★★★★★</div><p class="tm-text">"Sydney Automation Co. provides outstanding smart lighting solutions, combining impressive technology with excellent customer service. I highly recommend them to anyone considering office automation!"</p><div class="tm-author">Miro Krpelán</div><div class="tm-role">Katalyst Facilities Management — Office Automation, Bondi Junction</div></div>
+<div class="tm-card"><div class="tm-stars">★★★★★</div><p class="tm-text">"During a recent home renovation George and the team fitted out my media room. We couldn't be happier with the all round service — the lighting set up in particular is incredible!"</p><div class="tm-author">Jamie Patterson</div><div class="tm-role">Residential Client — Media Room, Lugarno</div></div>
+<div class="tm-card"><div class="tm-stars">★★★★★</div><p class="tm-text">"George was highly professional and prompt in fixing the CBUS issues we had downstairs — very knowledgeable, highly recommended."</p><div class="tm-author">Robert</div><div class="tm-role">Residential Client — C-Bus Fault Finding, Maroubra</div></div>
+</div>
+<div style="text-align:center;margin-top:20px;display:flex;justify-content:center;gap:12px;">
+<button onclick="tmScroll(-1)" style="background:#0d1a30;color:#fff;border:none;border-radius:50%;width:40px;height:40px;font-size:18px;cursor:pointer;">←</button>
+<button onclick="tmScroll(1)" style="background:#0d1a30;color:#fff;border:none;border-radius:50%;width:40px;height:40px;font-size:18px;cursor:pointer;">→</button>
+</div>
+<p style="text-align:center;margin-top:28px;">
+<a href="https://g.page/r/CQK7ChOgqNZ2EBM/review" rel="noopener" style="background:#e87722;color:#fff;padding:12px 28px;border-radius:6px;text-decoration:none;font-weight:700;font-size:15px;font-family:'Barlow',sans-serif;" target="_blank">
+        ⭐ Leave a Google Review
       </a>
-    </div>
-  </div>
+</p>
+</div>
 </section>
 <style>
-  .tm-viewport { position: relative; width: 100%; }
-  #tm-track::-webkit-scrollbar { display: none; }
-  .tm-card {
-    flex: 0 0 380px;
-    scroll-snap-align: center;
-    background: rgba(255,255,255,0.03);
-    border: 1px solid rgba(255,255,255,0.08);
-    backdrop-filter: blur(10px);
-    border-radius: 20px;
-    padding: 40px 32px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-    position: relative;
-  }
-  .tm-card:hover {
-    background: rgba(255,255,255,0.06);
-    border-color: rgba(240,112,32,0.3);
-    transform: translateY(-5px);
-  }
-  .tm-stars { color: #f07020; font-size: 16px; letter-spacing: 4px; }
-  .tm-text {
-    color: #e2e8f0;
-    font-size: 16px;
-    line-height: 1.7;
-    margin: 0;
-    font-family: 'Barlow', sans-serif;
-    font-style: italic;
-    flex-grow: 1;
-  }
-  .tm-footer { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; }
-  .tm-author { font-weight: 800; color: #fff; font-size: 16px; font-family: 'Barlow Condensed', sans-serif; text-transform: uppercase; letter-spacing: 1px; }
-  .tm-role { font-size: 13px; color: #a8c0e0; font-family: 'Barlow', sans-serif; margin-top: 4px; }
-  .tm-controls {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    right: 0;
-    transform: translateY(-50%);
-    display: flex;
-    justify-content: space-between;
-    padding: 0 20px;
-    pointer-events: none;
-    z-index: 10;
-  }
-  .tm-btn {
-    width: 48px;
-    height: 48px;
-    background: #f07020;
-    color: #fff;
-    border: none;
-    border-radius: 50%;
-    font-size: 20px;
-    cursor: pointer;
-    pointer-events: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 4px 15px rgba(240,112,32,0.4);
-    transition: all 0.2s;
-  }
-  .tm-btn:hover { transform: scale(1.1); background: #ff8533; }
-  .tm-google-link {
-    display: inline-block;
-    padding: 14px 32px;
-    background: transparent;
-    border: 2px solid #f07020;
-    color: #f07020;
-    text-decoration: none;
-    font-weight: 800;
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 14px;
-    letter-spacing: 1px;
-    border-radius: 50px;
-    transition: all 0.3s;
-  }
-  .tm-google-link:hover { background: #f07020; color: #fff; }
-  @media (max-width: 768px) {
-    .tm-card { flex: 0 0 85vw; padding: 32px 24px; }
-    .tm-controls { display: none; }
-  }
+  #tm-track::-webkit-scrollbar{display:none}
+  .tm-card{flex:0 0 340px;scroll-snap-align:start;background:#fff;border-radius:12px;padding:28px 24px;box-shadow:0 2px 12px rgba(0,0,0,.07);display:flex;flex-direction:column;gap:12px}
+  .tm-stars{color:#f5a623;font-size:18px;letter-spacing:2px}
+  .tm-text{color:#333;font-size:14.5px;line-height:1.65;flex:1;margin:0;font-family:'Barlow',sans-serif}
+  .tm-author{font-weight:700;color:#0d1a30;font-size:15px;font-family:'Barlow',sans-serif}
+  .tm-role{font-size:12.5px;color:#777;font-family:'Barlow',sans-serif}
+  @media(max-width:600px){.tm-card{flex:0 0 88vw}}
 </style>
-<script>
-  (function(){
-    const track = document.getElementById('tm-track');
-    let isPaused = false;
-    window.tmSlide = function(d) {
-      const cardWidth = track.querySelector('.tm-card').offsetWidth + 24;
-      track.scrollBy({ left: d * cardWidth, behavior: 'smooth' });
-    };
-    // Auto-play logic
-    setInterval(() => {
-      if(isPaused) return;
-      const cardWidth = track.querySelector('.tm-card').offsetWidth + 24;
-      if (track.scrollLeft + track.offsetWidth >= track.scrollWidth - 10) {
-        track.scrollTo({ left: 0, behavior: 'smooth' });
-      } else {
-        track.scrollBy({ left: cardWidth, behavior: 'smooth' });
-      }
-    }, 5000);
-    track.addEventListener('mouseenter', () => isPaused = true);
-    track.addEventListener('mouseleave', () => isPaused = false);
-    track.addEventListener('touchstart', () => isPaused = true);
-  })();
-</script>
-<!-- ===== /PREMIUM TESTIMONIALS CAROUSEL ===== -->
+<script>function tmScroll(d){document.getElementById("tm-track").scrollBy({left:d*360,behavior:"smooth"})}</script>
+<!-- ===== /STATIC TESTIMONIALS SECTION ===== -->
 <!-- Deploy trigger: 2026-04-30 18:08:10 -->
 </body></html>
