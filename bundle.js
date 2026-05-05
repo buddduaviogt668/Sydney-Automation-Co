@@ -15128,7 +15128,7 @@ ${form.message}`);
             /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Icon, { i: Phone, size: 16, color: C.navy }),
             "Call  0422 469 739"
           ] }) }),
-          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", { className: "btn-ghost", onClick: () => nav("contact"), style: { padding: "14px 28px" }, children: "Get a Free Quote" })
+          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", { className: "btn-ghost", onClick: () => nav("contact"), style: { padding: "14px 28px" }, children: "Fix My System Today — Call 0422 469 739" })
         ] })
       ] }) }),
       /* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", { style: { padding: "72px 5%", background: C.navyCard, borderBottom: `1px solid ${C.border}` }, children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { maxWidth: 1100, margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 1fr", gap: 60, alignItems: "center" }, className: "grid2", children: [
@@ -15184,7 +15184,7 @@ ${form.message}`);
             /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Icon, { i: Phone, size: 18, color: C.navy }),
             "0422 469 739"
           ] }) }),
-          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", { className: "btn-ghost", onClick: () => nav("contact"), style: { padding: "16px 32px", fontSize: 16 }, children: "Get a Free Quote" })
+          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", { className: "btn-ghost", onClick: () => nav("contact"), style: { padding: "16px 32px", fontSize: 16 }, children: "Fix My System Today — Call 0422 469 739" })
         ] })
       ] }) })
     ] });
@@ -15352,7 +15352,7 @@ ${form.message}`);
             /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Icon, { i: Phone, size: 18, color: C.navy }),
             "0422 469 739"
           ] }) }),
-          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", { className: "btn-ghost", onClick: () => nav("contact"), style: { padding: "16px 32px", fontSize: 16 }, children: "Get a Free Quote" })
+          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", { className: "btn-ghost", onClick: () => nav("contact"), style: { padding: "16px 32px", fontSize: 16 }, children: "Fix My System Today — Call 0422 469 739" })
         ] })
       ] }) })
     ] });
