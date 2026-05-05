@@ -5,7 +5,7 @@
 AI-Powered C-Bus Fault Finding: How Sydney Buildings Are Cutting Downtime by 70%
 ================================================================================
 
-🔧 Troubleshooting • 📅 Mar 15, 2026 • ⏱ 6 min read
+🔧 Troubleshooting • 📅 May 05, 2026 • ⏱ 6 min read
 
 **TL;DR:** AI diagnostics can predict C-Bus failures before they happen. Here's how Sydney strata managers and facility teams are using predictive analytics to avoid after-hours callouts.
 

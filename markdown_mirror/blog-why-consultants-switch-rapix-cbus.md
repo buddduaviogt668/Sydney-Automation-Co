@@ -5,7 +5,7 @@
 Why "Smart Building" Consultants in Sydney Are Switching to RAPIX + C-Bus Hybrids
 =================================================================================
 
-🏢 Commercial • 📅 Apr 9, 2026 • ⏱ 5 min read
+🏢 Commercial • 📅 May 05, 2026 • ⏱ 5 min read
 
 **TL;DR:** RAPIX is dominating mid-to-large commercial builds for a reason: lower commissioning time, built-in diagnostics, and seamless C-Bus integration. Here's what Sydney specifiers need to know.
 

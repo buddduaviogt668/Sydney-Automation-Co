@@ -167,7 +167,7 @@ Resources
 [← All Articles](/blog)
 
 Strata
-Feb 2026 · 8 min read
+May 2026 · 8 min read
 
 Strata Lighting Energy Savings Sydney: C-Bus & Dynalite Optimisation
 ====================================================================

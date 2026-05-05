@@ -165,7 +165,7 @@ Resources
 [← All Articles](/blog)
 
 Commercial
-📅 Apr 9, 2025
+📅 May 05, 2026
 ⏱ 5 min read
 
 What Is RAPIX and Why More Sydney Buildings Are Switching to It
@@ -252,7 +252,7 @@ Menai, Sutherland Shire NSW 2234
 
 Mon–Fri 7am–5pm
 
-© 2025 Sydney Automation Co. ABN 61 136 364 150. All rights reserved.
+© 2026 Sydney Automation Co. ABN 61 136 364 150. All rights reserved.
 
 [Privacy Policy](/privacy-policy)
 [Sitemap](/sitemap.xml)

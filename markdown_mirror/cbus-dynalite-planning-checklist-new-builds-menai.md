@@ -165,7 +165,7 @@ Resources
 [← All Articles](/blog)
 
 Planning
-📅 Nov 18, 2024
+📅 May 05, 2026
 ⏱ 9 min read
 
 C-Bus and Dynalite Planning Checklist for New Builds in Menai and t...
@@ -265,7 +265,7 @@ Menai, Sutherland Shire NSW 2234
 
 Mon–Fri 7am–5pm
 
-© 2025 Sydney Automation Co. ABN 61 136 364 150. All rights reserved.
+© 2026 Sydney Automation Co. ABN 61 136 364 150. All rights reserved.
 
 [Privacy Policy](/privacy-policy)
 [Sitemap](/sitemap.xml)

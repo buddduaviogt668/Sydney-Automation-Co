@@ -165,7 +165,7 @@ Resources
 [← All Articles](/blog)
 
 Investment
-📅 Dec 20, 2024
+📅 May 05, 2026
 ⏱ 7 min read
 
 Does C-Bus or Dynalite Automation Add Value to Sutherland Shire Pro...
@@ -254,7 +254,7 @@ Menai, Sutherland Shire NSW 2234
 
 Mon–Fri 7am–5pm
 
-© 2025 Sydney Automation Co. ABN 61 136 364 150. All rights reserved.
+© 2026 Sydney Automation Co. ABN 61 136 364 150. All rights reserved.
 
 [Privacy Policy](/privacy-policy)
 [Sitemap](/sitemap.xml)

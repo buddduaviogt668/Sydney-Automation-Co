@@ -311,7 +311,7 @@ Serving Tamarama & All Surrounding Suburbs
 
 Based in Menai, Sutherland Shire — servicing all of Greater Sydney. We are in Tamarama and the Eastern Suburbs regularly.
 
-#### Tamarama 2026
+#### TaMay 2026
 
 Primary coverage — same-day response available
 
@@ -407,7 +407,7 @@ Accredited C-Bus and Dynalite specialists based in Menai, Sutherland Shire. Same
 [Contact](/contact)
 [Privacy Policy](/privacy-policy)
 
-© 2025 Sydney Automation Co. — Menai, Sutherland Shire NSW
+© 2026 Sydney Automation Co. — Menai, Sutherland Shire NSW
 C-Bus Accredited • Dynalite Accredited • DALI Specialists
 
 Part of our C-Bus Repairs Sydney service

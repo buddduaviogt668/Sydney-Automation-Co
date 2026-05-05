@@ -5,7 +5,7 @@
 The 2026 Sydney Automation Stack: C-Bus + Dynalite + AI + HomeKit
 =================================================================
 
-🏠 Residential • 📅 Apr 2, 2026 • ⏱ 7 min read
+🏠 Residential • 📅 May 05, 2026 • ⏱ 7 min read
 
 **TL;DR:** The best Sydney homes in 2026 don't choose between C-Bus, Dynalite, or Apple HomeKit — they layer them intelligently. Here's how to future-proof without overcomplicating.
 

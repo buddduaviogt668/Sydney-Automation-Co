@@ -453,7 +453,7 @@ Accredited C-Bus and Dynalite specialists based in Menai, Sutherland Shire. Same
 [Contact](/contact)
 [Privacy Policy](/privacy-policy)
 
-© 2025 Sydney Automation Co. — Menai, Sutherland Shire NSW
+© 2026 Sydney Automation Co. — Menai, Sutherland Shire NSW
 C-Bus Accredited • Dynalite Accredited • DALI Specialists
 
 ### Related Services

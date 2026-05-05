@@ -5,7 +5,7 @@
 Future-Proofing Your Sutherland Shire Home: C-Bus Upgrades That Actually Add Value in 2026
 ==========================================================================================
 
-🏡 Residential • 📅 Feb 27, 2026 • ⏱ 6 min read
+🏡 Residential • 📅 May 05, 2026 • ⏱ 6 min read
 
 **TL;DR:** Not all smart home upgrades move the needle on property value. In the Shire, C-Bus reliability, energy zoning, and compliance-ready lighting control consistently appraise higher than gimmicky app-based hubs.
 

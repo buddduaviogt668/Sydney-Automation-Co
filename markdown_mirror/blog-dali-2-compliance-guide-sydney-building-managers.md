@@ -167,7 +167,7 @@ Resources
 [← All Articles](/blog)
 
 Compliance
-Mar 2026 · 7 min read
+May 2026 · 7 min read
 
 DALI-2 Compliance Guide for Sydney Building Managers
 ====================================================
@@ -182,7 +182,7 @@ DALI-2 (Digital Addressable Lighting Interface version 2) is the current interna
 NCC 2022 and DALI-2 Requirements in NSW
 ---------------------------------------
 
-The NCC 2022 updates that came into effect in October 2023 introduced stricter requirements for energy monitoring and lighting control in commercial buildings. For buildings over a certain floor area, the code now effectively requires addressable lighting control systems — and DALI-2 is the dominant compliant technology. Key requirements include:
+The NCC 2022 updates that came into effect in May 2026 introduced stricter requirements for energy monitoring and lighting control in commercial buildings. For buildings over a certain floor area, the code now effectively requires addressable lighting control systems — and DALI-2 is the dominant compliant technology. Key requirements include:
 
 * Individual luminaire addressability and dimming capability
 * Occupancy sensor integration for automatic light level adjustment

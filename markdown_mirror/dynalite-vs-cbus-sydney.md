@@ -165,7 +165,7 @@ Resources
 [← All Articles](/blog)
 
 Comparison
-📅 Jan 28, 2025
+📅 May 05, 2026
 ⏱ 8 min read
 
 Dynalite vs C-Bus: Which Lighting Control System Is Right for Your ...

@@ -165,7 +165,7 @@ Resources
 [← All Articles](/blog)
 
 Strata & FM
-📅 Mar 12, 2025
+📅 May 05, 2026
 ⏱ 9 min read
 
 4 Years in Building Facilities Management: What I Learnt at JLL and...

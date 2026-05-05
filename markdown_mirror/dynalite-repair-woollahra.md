@@ -189,7 +189,7 @@ Philips Dynalite repair and fault finding specialists serving Woollahra and the 
 ✓ Clipsal C-Bus Accredited
 ✓ Dynalite Accredited
 ✓ Same-Day Available
-✓ Serving Woollahra 2025
+✓ Serving Woollahra 2026
 
 ✓ Clipsal C-Bus Accredited
 
@@ -317,7 +317,7 @@ Serving Woollahra & All Surrounding Suburbs
 
 Based in Menai, Sutherland Shire — servicing all of Greater Sydney. We are in Woollahra and the Eastern Suburbs regularly.
 
-#### Woollahra 2025
+#### Woollahra 2026
 
 Primary coverage — same-day response available
 
@@ -413,7 +413,7 @@ Menai, Sutherland Shire NSW 2234
 
 Mon–Fri 7am–5pm
 
-© 2025 Sydney Automation Co. ABN 61 136 364 150. All rights reserved.
+© 2026 Sydney Automation Co. ABN 61 136 364 150. All rights reserved.
 
 [Privacy Policy](/privacy-policy)
 [Sitemap](/sitemap.xml)

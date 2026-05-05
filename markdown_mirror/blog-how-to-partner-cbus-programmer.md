@@ -5,7 +5,7 @@
 Automation Specialists: How to Partner with a C-Bus Programmer (Without Licensing Grey Areas)
 =============================================================================================
 
-🤝 Trade • 📅 Mar 19, 2026 • ⏱ 4 min read
+🤝 Trade • 📅 May 05, 2026 • ⏱ 4 min read
 
 **TL;DR:** Sydney Automation Co. holds no electrical licence. We don't touch cable, switchboards, or fittings. We program, troubleshoot, and design C-Bus/Dynalite logic — so licensed Automation Specialists can scale without compliance risk.
 
