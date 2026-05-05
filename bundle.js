@@ -13940,18 +13940,20 @@ Call George on **0422 469 739**. Or email service@sydneyautomationco.com.au. I p
     { q: "Do you provide ongoing support and maintenance?", a: "Yes. We offer annual maintenance contracts for residential and commercial clients \u2014 includes remote monitoring, software updates, and priority response times for Shire locals." },
   ];
   
+  
   var TESTIMONIALS = [
-    { name: "Robert Alvaro", text: "George came out to our home in Maroubra to troubleshoot a C-Bus system that several other electricians had failed to fix. He diagnosed the faulty power supply and had the system back up in an hour. Highly recommended for any complex automation repairs.", suburb: "Maroubra" },
-    { name: "James Thompson", text: "We needed our Dynalite system reprogrammed after a major renovation in Vaucluse. George's knowledge of the software is incredible. He optimized our lighting scenes and integrated everything with our new AV system flawlessly.", suburb: "Vaucluse" },
-    { name: "Sarah Jenkins", text: "Sydney Automation Co fixed our office lighting control when it was flickering and driving us crazy. George is professional, punctual, and knows C-Bus inside out. A true specialist.", suburb: "Sydney CBD" },
-    { name: "David Wilson", text: "Excellent service. George rescued our older C-Bus system in Cronulla that we were told needed to be completely replaced. He just replaced a few faulty modules and saved us thousands.", suburb: "Cronulla" },
-    { name: "Michelle Chen", text: "Highly recommend George for any Dynalite work. He's efficient and very thorough. Our home automation is now working exactly how it should have from day one.", suburb: "Mosman" },
-    { name: "Mark Peterson", text: "Professional and expert service for our commercial building's DALI system. George solved the addressing issues that our main contractors couldn't. Fast turnaround and clear communication.", suburb: "Pyrmont" },
-    { name: "Linda Richards", text: "Best C-Bus programmer in Sydney. George fixed our lighting issues in Sylvania and set up new schedules that have made our home much more energy efficient. Great value.", suburb: "Sylvania" },
-    { name: "Andrew Scott", text: "George is our go-to for anything automation related. He's reliable, honest, and his technical background with the manufacturers really shows in the quality of his work.", suburb: "Eastern Suburbs" },
-    { name: "Karen Boyd", text: "Fantastic experience with Sydney Automation Co. They fixed our Dynalite panel that had been out of action for weeks. George had all the parts on hand and fixed it same-day.", suburb: "Neutral Bay" },
-    { name: "Paul Harrison", text: "Smart, capable, and efficient. George is a specialist you can trust with high-end automation. He fixed our C-Bus network issues in Menai quickly and professionally.", suburb: "Menai" }
+    { name: "Verified Client", text: "Literally a lifesaver... George came out in 24 hours, diagnosed the problem with the CBUS system that two previous 'specialists' couldn't — fixed it — and then checked in two days later to make sure it was still working. This is your guy for all CBUS and installation works." },
+    { name: "Verified Client", text: "Highly recommended! George was amazing — came out at last notice when all our office lights went on the blink, found the problem in our C-Bus system, rush-ordered the parts, and had everything back up within no time. We now have him as our go-to expert for all things C-Bus." },
+    { name: "Verified Client", text: "Extremely happy with the C-Bus automation services. They helped repair and reprogram our Clipsal C-Bus lighting system which had ongoing faults that previous electricians couldn't resolve. Very responsive, explained the issues clearly, and went the extra mile." },
+    { name: "Verified Client", text: "Honest and reliable C-Bus installer in Sydney. Extremely knowledgeable and took the time to explain our C-Bus options clearly without rushing us. The quality of the installation and products was excellent and we're very happy with the end result." },
+    { name: "Verified Client", text: "Fantastic service. George resolved all issues and reprogrammed our Clipsal C-Bus system with custom options — above and beyond our expectations. Great efficient work with sharp pricing. Highly recommended!" },
+    { name: "Verified Client", text: "Verified Client", text: "I recently hired Sydney Automation to upgrade our home with a fully automated lighting system and the experience was fantastic! Professional, knowledgeable, and customised the system to perfectly suit our needs. Highly recommended." },
+    { name: "Verified Client", text: "George was really helpful in my system set up. As someone who knew nothing about this space, he guided me to the right programs and got it all installed hassle free. I've since recommended him to several friends and family. 10/10." },
+    { name: "Verified Client", text: "Sydney Automation Co. provides outstanding smart lighting solutions, combining impressive technology with excellent customer service. I highly recommend them to anyone considering office automation!" },
+    { name: "Verified Client", text: "During a recent home renovation George and the team fitted out my media room. We couldn't be happier with the all round service — the lighting set up in particular is incredible!" },
+    { name: "Verified Client", text: "George was highly professional and prompt in fixing the CBUS issues we had downstairs — very knowledgeable, highly recommended." }
   ];
+
 
   var PAGES = ["home", "services", "projects", "shire", "cbus", "dynalite", "electricians", "strata", "about", "locations", "blog", "guides", "contact", "privacy"];
   var PAGE_LABELS = { home: "Home", services: "Services", projects: "Projects", shire: "Shire", cbus: "C-Bus", dynalite: "Dynalite", electricians: "Electricians", strata: "Strata & FM", about: "About", locations: "Areas", blog: "Blog", guides: "Guides", contact: "Contact", privacy: "Privacy Policy" };
