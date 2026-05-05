@@ -12891,7 +12891,41 @@
     }, [page, post]);
     return null;
   }
-  var C = {
+  /* 
+  /* PREMIUM UI BOOSTERS */
+  .card, .tm-card {
+    backdrop-filter: blur(12px) !important;
+    background: rgba(255, 255, 255, 0.03) !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) !important;
+  }
+  .card:hover, .tm-card:hover {
+    background: rgba(255, 255, 255, 0.06) !important;
+    border-color: rgba(240, 112, 32, 0.4) !important;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 20px rgba(240, 112, 32, 0.1) !important;
+    transform: translateY(-8px) !important;
+  }
+  .btn-primary {
+    box-shadow: 0 4px 15px rgba(240, 112, 32, 0.3) !important;
+    transition: all 0.3s ease !important;
+  }
+  .btn-primary:hover {
+    box-shadow: 0 8px 25px rgba(240, 112, 32, 0.5) !important;
+    transform: scale(1.02) !important;
+  }
+  nav {
+    backdrop-filter: blur(20px) !important;
+    background: rgba(11, 22, 40, 0.85) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+  }
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  section {
+    animation: fadeInUp 0.8s cubic-bezier(0.165, 0.84, 0.44, 1) both;
+  }
+ */ var C = {
     navy: "#0e1f3d",
     navyCard: "#132647",
     navyLight: "#1a3259",
@@ -13112,7 +13146,7 @@ The searches that lead people to a C-Bus specialist typically include: “C-Bus 
 
 If you’ve checked the obvious — circuit breakers, C-Bus power supply, physical connections — and the system is still misbehaving, it’s time to call an Accredited C-Bus Programmer. George Skarmoutsos is an Accredited C-Bus Programmer based in Menai, covering all of Greater Sydney. Same-day fault finding is available across the Sutherland Shire, Eastern Suburbs, North Shore and CBD.
 
-You might also find these guides useful: see our [Dynalite Fault Finding Sydney: The 5 Most Common Faults](/blog/dynalite-fault-finding-sydney-common-faults) for comparison, or read about [How to Choose a C-Bus Specialist in Sydney](/blog/how-to-choose-cbus-specialist-sydney) before booking.
+You might also find these guides useful: see our [Dynalite Fault Finding Sydney: The 5 Most Common Faults](/dynalite-fault-finding-sydney-common-faults) for comparison, or read about [How to Choose a C-Bus Specialist in Sydney](/how-to-choose-cbus-specialist-sydney) before booking.
 
 Sydney Automation Co. provides C-Bus fault finding, repair and reprogramming across Greater Sydney. Call George on 0422 469 739 or email service@sydneyautomationco.com.au for same-day availability. See our [C-Bus services page](/cbus) for the full range of C-Bus fault finding, programming and commissioning services.`
     },
@@ -13153,12 +13187,12 @@ The critical point: both systems require specialist programmers. An electrician 
 
 George Skarmoutsos holds both accreditations — Accredited C-Bus Programmer (Clipsal/Schneider Electric) and Accredited Dynalite System Designer (Signify/Philips). He is one of a small number of specialists in Sydney who works across both platforms, which means he can give you genuinely unbiased advice rather than recommending the platform he happens to know.
 
-If you’re specifying a project in Sydney and need honest guidance on C-Bus vs Dynalite, call George on 0422 469 739. Visit our [C-Bus page](/cbus) or [Dynalite page](/dynalite) for full service details. There’s no obligation and no sales pitch — just accurate technical advice from someone who has commissioned hundreds of systems on both platforms. You can also read our [DALI-2 Compliance for NSW Commercial Buildings](/blog/dali2-compliance-nsw-commercial) if your project has commercial emergency lighting requirements.
+If you’re specifying a project in Sydney and need honest guidance on C-Bus vs Dynalite, call George on 0422 469 739. Visit our [C-Bus page](/cbus) or [Dynalite page](/dynalite) for full service details. There’s no obligation and no sales pitch — just accurate technical advice from someone who has commissioned hundreds of systems on both platforms. You can also read our [DALI-2 Compliance for NSW Commercial Buildings](/dali2-compliance-nsw-commercial) if your project has commercial emergency lighting requirements.
 
 **Related Articles**
 
-- [C-Bus Fault Finding in Sydney: What to Check](/blog/cbus-fault-finding-sydney)
-- [C-Bus Scene Programming Guide for Sutherland Shire Homeowners](/blog/cbus-scene-programming-guide-sutherland-shire)`
+- [C-Bus Fault Finding in Sydney: What to Check](/cbus-fault-finding-sydney)
+- [C-Bus Scene Programming Guide for Sutherland Shire Homeowners](/cbus-scene-programming-guide-sutherland-shire)`
     },
     {
       title: "DALI-2 Compliance for NSW Commercial Buildings: What You Need to Know in 2025",
@@ -13197,12 +13231,12 @@ To demonstrate compliance you need: each emergency luminaire individually addres
 
 Searches in this category include: “DALI-2 emergency lighting Sydney”, “NCC 2022 emergency lighting compliance NSW”, “DALI emergency lighting commissioning Sydney”, “DALI-2 test report Sydney”, and “emergency lighting compliance commercial building Sydney”.
 
-For DALI-2 emergency lighting commissioning, compliance audits and test reports across Sydney — Sutherland Shire, CBD, Eastern Suburbs, North Shore and beyond — contact Sydney Automation Co. on 0422 469 739 or service@sydneyautomationco.com.au. See our [Strata & FM services](/strata) for full details on compliance work we do for managed buildings. Also see our [Lighting Control for Eastern Suburbs Apartments and Strata Buildings](/blog/lighting-control-eastern-suburbs-strata) for related compliance information.
+For DALI-2 emergency lighting commissioning, compliance audits and test reports across Sydney — Sutherland Shire, CBD, Eastern Suburbs, North Shore and beyond — contact Sydney Automation Co. on 0422 469 739 or service@sydneyautomationco.com.au. See our [Strata & FM services](/strata) for full details on compliance work we do for managed buildings. Also see our [Lighting Control for Eastern Suburbs Apartments and Strata Buildings](/lighting-control-eastern-suburbs-strata) for related compliance information.
 
 **Related Articles**
 
-- [Facility Managers: A Practical Guide to C-Bus, Dynalite and DALI](/blog/facility-managers-cbus-dynalite-dali-guide)
-- [Strata Managers: Who to Call When Your Building’s Lighting Control System Fails](/blog/strata-managers-lighting-control-sydney)`
+- [Facility Managers: A Practical Guide to C-Bus, Dynalite and DALI](/facility-managers-cbus-dynalite-dali-guide)
+- [Strata Managers: Who to Call When Your Building’s Lighting Control System Fails](/strata-managers-lighting-control-sydney)`
     },
     {
       title: "Does C-Bus or Dynalite Automation Add Value to Sutherland Shire Properties?",
@@ -13239,12 +13273,12 @@ Before listing a property with automation, it is worth having the system audited
 
 Common searches include: “C-Bus add property value Sydney”, “smart home value Sutherland Shire”, “Dynalite prestige property Sydney”, “home automation investment Sydney”, and “C-Bus house sale Sydney”.
 
-Sydney Automation Co. offers pre-sale automation audits and reprogramming across the Sutherland Shire and Greater Sydney. Call 0422 469 739 — or visit our [services page](/services) or [Sutherland Shire page](/shire) to learn more. See our [C-Bus Scene Programming Guide for Sutherland Shire Homeowners](/blog/cbus-scene-programming-guide-sutherland-shire) for more on what a well-configured system looks like.
+Sydney Automation Co. offers pre-sale automation audits and reprogramming across the Sutherland Shire and Greater Sydney. Call 0422 469 739 — or visit our [services page](/services) or [Sutherland Shire page](/shire) to learn more. See our [C-Bus Scene Programming Guide for Sutherland Shire Homeowners](/cbus-scene-programming-guide-sutherland-shire) for more on what a well-configured system looks like.
 
 **Related Articles**
 
-- [C-Bus Scene Programming Guide for Sutherland Shire Homeowners](/blog/cbus-scene-programming-guide-sutherland-shire)
-- [C-Bus and Dynalite Planning Checklist for New Builds in Menai](/blog/cbus-dynalite-planning-checklist-new-builds-menai)`
+- [C-Bus Scene Programming Guide for Sutherland Shire Homeowners](/cbus-scene-programming-guide-sutherland-shire)
+- [C-Bus and Dynalite Planning Checklist for New Builds in Menai](/cbus-dynalite-planning-checklist-new-builds-menai)`
     },
     {
       title: "C-Bus Scene Programming Guide for Sutherland Shire Homeowners",
@@ -13285,12 +13319,12 @@ People searching for this topic use: “C-Bus scene programming Sydney”, “ho
 
 **Menai and Sutherland Shire C-Bus Support**
 
-George is based in Menai and provides same-day C-Bus programming and reprogramming services across the Sutherland Shire — including Cronulla, Miranda, Caringbah, Gymea, Engadine, Jannali and surrounding suburbs. Call 0422 469 739 or email service@sydneyautomationco.com.au. Visit our [C-Bus page](/cbus) for the full list of programming and commissioning services. Also read our [How to Choose a C-Bus Specialist in Sydney](/blog/how-to-choose-cbus-specialist-sydney) before you book.
+George is based in Menai and provides same-day C-Bus programming and reprogramming services across the Sutherland Shire — including Cronulla, Miranda, Caringbah, Gymea, Engadine, Jannali and surrounding suburbs. Call 0422 469 739 or email service@sydneyautomationco.com.au. Visit our [C-Bus page](/cbus) for the full list of programming and commissioning services. Also read our [How to Choose a C-Bus Specialist in Sydney](/how-to-choose-cbus-specialist-sydney) before you book.
 
 **Related Articles**
 
-- [C-Bus Fault Finding in Sydney: What to Check](/blog/cbus-fault-finding-sydney)
-- [C-Bus and Dynalite Planning Checklist for New Builds in Menai](/blog/cbus-dynalite-planning-checklist-new-builds-menai)`
+- [C-Bus Fault Finding in Sydney: What to Check](/cbus-fault-finding-sydney)
+- [C-Bus and Dynalite Planning Checklist for New Builds in Menai](/cbus-dynalite-planning-checklist-new-builds-menai)`
     },
     {
       title: "C-Bus and Dynalite Planning Checklist for New Builds in Menai and the Sutherland Shire",
@@ -13343,7 +13377,7 @@ Before handover: engage programmer for commissioning; allow at least two days fo
 
 Common searches: “C-Bus new build planning Sydney”, “Dynalite specification checklist”, “C-Bus conduit requirements”, “C-Bus MEC location Sydney”, “new build smart home automation Sutherland Shire”.
 
-Sydney Automation Co. provides design consultation for new builds and major renovations across Greater Sydney. Early involvement costs less and avoids expensive rectification later. Call George on 0422 469 739 — or visit our [C-Bus page](/cbus) and [Dynalite page](/dynalite) for full service details. Read our [Dynalite vs C-Bus: Which Lighting Control System Is Right for Your Project?](/blog/dynalite-vs-cbus-sydney) to understand which system suits your project.`
+Sydney Automation Co. provides design consultation for new builds and major renovations across Greater Sydney. Early involvement costs less and avoids expensive rectification later. Call George on 0422 469 739 — or visit our [C-Bus page](/cbus) and [Dynalite page](/dynalite) for full service details. Read our [Dynalite vs C-Bus: Which Lighting Control System Is Right for Your Project?](/dynalite-vs-cbus-sydney) to understand which system suits your project.`
     },
     {
       title: "Why C-Bus Fault Finding in the Sutherland Shire Is Different to the Rest of Sydney",
@@ -13378,7 +13412,7 @@ The Sutherland Shire is not homogeneous. A C-Bus installation in a 1990s brick h
 
 Searches that bring Shire homeowners to us: “C-Bus not working Sutherland Shire”, “C-Bus programmer Menai”, “Dynalite fault finding Cronulla”, “smart lighting repair Miranda”, “C-Bus scene not working Caringbah”, “lighting control fault Engadine”.
 
-For same-day fault finding across the Shire, call 0422 469 739. Visit our [Sutherland Shire page](/shire) to see the suburbs we service and our local response times. See also our [C-Bus Fault Finding in Sydney: What to Check](/blog/cbus-fault-finding-sydney) and our [Dynalite vs C-Bus: Which Lighting Control System Is Right for Your Project?](/blog/dynalite-vs-cbus-sydney) for more background.`
+For same-day fault finding across the Shire, call 0422 469 739. Visit our [Sutherland Shire page](/shire) to see the suburbs we service and our local response times. See also our [C-Bus Fault Finding in Sydney: What to Check](/cbus-fault-finding-sydney) and our [Dynalite vs C-Bus: Which Lighting Control System Is Right for Your Project?](/dynalite-vs-cbus-sydney) for more background.`
     },
     {
       title: "Dynalite Fault Finding Sydney: The 5 Most Common Faults We See On-Site",
@@ -13415,12 +13449,12 @@ Large commercial sites and prestige homes often integrate Dynalite with a BMS or
 
 If you have a Dynalite fault on a Sydney site, call George on 0422 469 739. Same-day service available for commercial and urgent residential.
 
-For Dynalite fault finding across Sydney — CBD, Eastern Suburbs, North Shore, Sutherland Shire — call 0422 469 739. Visit our [Dynalite services page](/dynalite) for full details on Dynalite fault finding, commissioning and programming. See also our [Dynalite vs C-Bus: Which Lighting Control System](/blog/dynalite-vs-cbus-sydney) and [DALI-2 Compliance for NSW Commercial Buildings](/blog/dali2-compliance-nsw-commercial).
+For Dynalite fault finding across Sydney — CBD, Eastern Suburbs, North Shore, Sutherland Shire — call 0422 469 739. Visit our [Dynalite services page](/dynalite) for full details on Dynalite fault finding, commissioning and programming. See also our [Dynalite vs C-Bus: Which Lighting Control System](/dynalite-vs-cbus-sydney) and [DALI-2 Compliance for NSW Commercial Buildings](/dali2-compliance-nsw-commercial).
 
 **Related Articles**
 
-- [Strata Managers: Who to Call When Your Building’s Lighting Control System Fails](/blog/strata-managers-lighting-control-sydney)
-- [Facility Managers: A Practical Guide to C-Bus, Dynalite and DALI](/blog/facility-managers-cbus-dynalite-dali-guide)`
+- [Strata Managers: Who to Call When Your Building’s Lighting Control System Fails](/strata-managers-lighting-control-sydney)
+- [Facility Managers: A Practical Guide to C-Bus, Dynalite and DALI](/facility-managers-cbus-dynalite-dali-guide)`
     },
     {
       title: "A Message to Sydney Electricians: Here's How We Can Work Together",
@@ -13455,12 +13489,12 @@ Accredited C-Bus Programmer with full Clipsal/Schneider Electric toolkit. Accred
 
 If you're an electrician in the Sutherland Shire, Eastern Suburbs, North Shore, CBD or anywhere across Sydney and you want a reliable automation specialist to refer to, call George directly on 0422 469 739 or email service@sydneyautomationco.com.au. Let's talk.
 
-To start a trade relationship, call George directly on 0422 469 739. Visit our dedicated [electricians partner page](/electricians) for full details on how we work with Sydney electrical contractors. Many Sydney electricians have George on speed dial for C-Bus and Dynalite jobs. Read our [C-Bus Fault Finding in Sydney: What to Check](/blog/cbus-fault-finding-sydney) to understand the kinds of jobs we handle.
+To start a trade relationship, call George directly on 0422 469 739. Visit our dedicated [electricians partner page](/electricians) for full details on how we work with Sydney electrical contractors. Many Sydney electricians have George on speed dial for C-Bus and Dynalite jobs. Read our [C-Bus Fault Finding in Sydney: What to Check](/cbus-fault-finding-sydney) to understand the kinds of jobs we handle.
 
 **Related Articles**
 
-- [C-Bus Fault Finding in Sydney: What to Check](/blog/cbus-fault-finding-sydney)
-- [Dynalite Fault Finding Sydney: The 5 Most Common Faults](/blog/dynalite-fault-finding-sydney-common-faults)`
+- [C-Bus Fault Finding in Sydney: What to Check](/cbus-fault-finding-sydney)
+- [Dynalite Fault Finding Sydney: The 5 Most Common Faults](/dynalite-fault-finding-sydney-common-faults)`
     },
     {
       title: "C-Bus Scene Programming: How to Get the Most Out of Your Sydney Home",
@@ -13499,7 +13533,7 @@ The most appreciated C-Bus feature in Sydney homes isn't scenes \u2014 it's sche
 
 If your C-Bus system feels like it's running at 20% of its potential, call George on 0422 469 739. He offers a system audit and reprogramming service across Sydney \u2014 same day, fixed price on simple jobs.
 
-Sydney Automation Co. provides C-Bus scene programming and reprogramming across Greater Sydney. Call George on 0422 469 739. Visit our [C-Bus services page](/cbus) to see the full range of C-Bus programming and fault finding services available. Also see our [C-Bus and Dynalite Planning Checklist for New Builds](/blog/cbus-dynalite-planning-checklist-new-builds-menai) and [C-Bus Fault Finding in Sydney: What to Check](/blog/cbus-fault-finding-sydney).
+Sydney Automation Co. provides C-Bus scene programming and reprogramming across Greater Sydney. Call George on 0422 469 739. Visit our [C-Bus services page](/cbus) to see the full range of C-Bus programming and fault finding services available. Also see our [C-Bus and Dynalite Planning Checklist for New Builds](/cbus-dynalite-planning-checklist-new-builds-menai) and [C-Bus Fault Finding in Sydney: What to Check](/cbus-fault-finding-sydney).
 
 **Getting Professional Help**
 
@@ -13542,7 +13576,7 @@ No website with real project photos. Vague descriptions like "smart home expert"
 
 Sydney Automation Co. is fully accredited, locally based, and transparent about what we can and can't do. Call 0422 469 739 or email service@sydneyautomationco.com.au.
 
-George Skarmoutsos is an Accredited C-Bus Programmer and Accredited Dynalite System Designer based in Menai. Call 0422 469 739. See also [C-Bus Fault Finding in Sydney: What to Check](/blog/cbus-fault-finding-sydney) and our [Dynalite vs C-Bus: Which Lighting Control System Is Right for Your Project?](/blog/dynalite-vs-cbus-sydney).
+George Skarmoutsos is an Accredited C-Bus Programmer and Accredited Dynalite System Designer based in Menai. Call 0422 469 739. See also [C-Bus Fault Finding in Sydney: What to Check](/cbus-fault-finding-sydney) and our [Dynalite vs C-Bus: Which Lighting Control System Is Right for Your Project?](/dynalite-vs-cbus-sydney).
 
 Visit our [C-Bus page](/cbus), [Dynalite page](/dynalite) and [locations page](/locations) to see full service listings and areas covered.`
     },
@@ -13573,7 +13607,7 @@ George has worked on RAPIX installations across Sydney commercial sites, and the
 
 If you're specifying lighting control for a commercial building above a few thousand square metres in Sydney, RAPIX is worth considering alongside Dynalite. For smaller commercial, C-Bus or Dynalite will still serve you better. For any help specifying or commissioning a RAPIX system in Sydney, contact Sydney Automation Co. on 0422 469 739.
 
-For RAPIX specification, commissioning and fault finding in Sydney, call George on 0422 469 739. See our [C-Bus page](/cbus) and [Dynalite page](/dynalite) for full service listings, and our [locations page](/locations) for areas covered. Also see our [DALI-2 Compliance for NSW Commercial Buildings](/blog/dali2-compliance-nsw-commercial) for related commercial lighting control information.
+For RAPIX specification, commissioning and fault finding in Sydney, call George on 0422 469 739. See our [C-Bus page](/cbus) and [Dynalite page](/dynalite) for full service listings, and our [locations page](/locations) for areas covered. Also see our [DALI-2 Compliance for NSW Commercial Buildings](/dali2-compliance-nsw-commercial) for related commercial lighting control information.
 
 **RAPIX and DALI: The Compliance Advantage**
 
@@ -13583,8 +13617,8 @@ For RAPIX specification and commissioning in Sydney, call George on 0422 469 739
 
 **Related Articles**
 
-- [Strata Managers: Who to Call When Your Building’s Lighting Control System Fails](/blog/strata-managers-lighting-control-sydney)
-- [Facility Managers: A Practical Guide to C-Bus, Dynalite and DALI](/blog/facility-managers-cbus-dynalite-dali-guide)`
+- [Strata Managers: Who to Call When Your Building’s Lighting Control System Fails](/strata-managers-lighting-control-sydney)
+- [Facility Managers: A Practical Guide to C-Bus, Dynalite and DALI](/facility-managers-cbus-dynalite-dali-guide)`
     },
     {
       title: "C-Bus and Dynalite Fault Finding in Sydney\u2019s Eastern Suburbs: What We See Most",
@@ -13617,12 +13651,12 @@ If you have a C-Bus or Dynalite fault in Paddington, Bondi, Randwick, Woollahra,
 
 Searches: “C-Bus programmer Eastern Suburbs Sydney”, “Dynalite fault finding Paddington”, “C-Bus repair Bondi”, “smart lighting Double Bay”, “C-Bus specialist Woollahra”.
 
-Call George on 0422 469 739 for same-day service across Paddington, Bondi, Woollahra, Double Bay, Potts Point, Elizabeth Bay, Darlinghurst, Randwick and Coogee. See also our [Lighting Control for Eastern Suburbs Apartments and Strata Buildings](/blog/lighting-control-eastern-suburbs-strata) and [C-Bus Fault Finding in Sydney: What to Check](/blog/cbus-fault-finding-sydney).
+Call George on 0422 469 739 for same-day service across Paddington, Bondi, Woollahra, Double Bay, Potts Point, Elizabeth Bay, Darlinghurst, Randwick and Coogee. See also our [Lighting Control for Eastern Suburbs Apartments and Strata Buildings](/lighting-control-eastern-suburbs-strata) and [C-Bus Fault Finding in Sydney: What to Check](/cbus-fault-finding-sydney).
 
 **Related Articles**
 
-- [C-Bus and Dynalite Planning Checklist for New Builds in Menai](/blog/cbus-dynalite-planning-checklist-new-builds-menai)
-- [Dynalite Fault Finding Sydney: The 5 Most Common Faults](/blog/dynalite-fault-finding-sydney-common-faults)
+- [C-Bus and Dynalite Planning Checklist for New Builds in Menai](/cbus-dynalite-planning-checklist-new-builds-menai)
+- [Dynalite Fault Finding Sydney: The 5 Most Common Faults](/dynalite-fault-finding-sydney-common-faults)
 
 For commercial CBD lighting control work, see our full [services page](/services) and [Strata & FM page](/strata).`
     },
@@ -13661,12 +13695,12 @@ For C-Bus or Dynalite fault finding, programming or commissioning in the Sydney 
 
 Searches: “Dynalite specialist Sydney CBD”, “C-Bus commercial Sydney”, “lighting control commercial building Sydney”, “Dynalite programmer Barangaroo”, “C-Bus fault finding Surry Hills”.
 
-Call 0422 469 739 for CBD commercial lighting control. See our [services page](/services) and [Strata & FM page](/strata) for the full range of commercial work. See also our [DALI-2 Compliance for NSW Commercial Buildings](/blog/dali2-compliance-nsw-commercial) and [Dynalite vs C-Bus: Which Lighting Control System Is Right for Your Project?](/blog/dynalite-vs-cbus-sydney).
+Call 0422 469 739 for CBD commercial lighting control. See our [services page](/services) and [Strata & FM page](/strata) for the full range of commercial work. See also our [DALI-2 Compliance for NSW Commercial Buildings](/dali2-compliance-nsw-commercial) and [Dynalite vs C-Bus: Which Lighting Control System Is Right for Your Project?](/dynalite-vs-cbus-sydney).
 
 **Related Articles**
 
-- [C-Bus Automation on the North Shore](/blog/cbus-automation-north-shore-sydney)
-- [Does C-Bus or Dynalite Add Value to Sutherland Shire Properties?](/blog/cbus-dynalite-property-value-sutherland-shire)`
+- [C-Bus Automation on the North Shore](/cbus-automation-north-shore-sydney)
+- [Does C-Bus or Dynalite Add Value to Sutherland Shire Properties?](/cbus-dynalite-property-value-sutherland-shire)`
     },
     {
       title: "C-Bus Automation on the North Shore: Prestige Homes, Older Systems, New Standards",
@@ -13703,12 +13737,12 @@ For C-Bus service, fault finding or upgrades across Mosman, Cremorne, Neutral Ba
 
 Searches: “C-Bus programmer North Shore Sydney”, “C-Bus fault finding Mosman”, “C-Bus repair Chatswood”, “smart home automation Pymble”, “C-Bus upgrade North Shore”.
 
-Call George on 0422 469 739 for North Shore C-Bus service. Visit our [C-Bus page](/cbus) and [locations page](/locations) for areas and services covered. across Mosman, Cremorne, Kirribilli, Chatswood, Pymble, Gordon, Killara, Wahroonga and Turramurra. See our [C-Bus Fault Finding in Sydney: What to Check](/blog/cbus-fault-finding-sydney) and [Does C-Bus or Dynalite Add Value to Sutherland Shire Properties?](/blog/cbus-dynalite-property-value-sutherland-shire).
+Call George on 0422 469 739 for North Shore C-Bus service. Visit our [C-Bus page](/cbus) and [locations page](/locations) for areas and services covered. across Mosman, Cremorne, Kirribilli, Chatswood, Pymble, Gordon, Killara, Wahroonga and Turramurra. See our [C-Bus Fault Finding in Sydney: What to Check](/cbus-fault-finding-sydney) and [Does C-Bus or Dynalite Add Value to Sutherland Shire Properties?](/cbus-dynalite-property-value-sutherland-shire).
 
 **Related Articles**
 
-- [C-Bus and Dynalite Fault Finding in Sydney’s Eastern Suburbs](/blog/cbus-dynalite-fault-finding-eastern-suburbs)
-- [Does C-Bus or Dynalite Add Value to Sutherland Shire Properties?](/blog/cbus-dynalite-property-value-sutherland-shire)`
+- [C-Bus and Dynalite Fault Finding in Sydney’s Eastern Suburbs](/cbus-dynalite-fault-finding-eastern-suburbs)
+- [Does C-Bus or Dynalite Add Value to Sutherland Shire Properties?](/cbus-dynalite-property-value-sutherland-shire)`
     },
     {
       title: "Lighting Control for Eastern Suburbs Apartments and Strata Buildings: A Practical Guide",
@@ -13749,12 +13783,12 @@ Eastern Suburbs strata buildings constructed before 2022 may have emergency ligh
 
 Searches: “strata lighting control Sydney”, “Dynalite strata building Eastern Suburbs”, “C-Bus apartment common area”, “emergency lighting compliance strata NSW”, “lighting control Potts Point strata”.
 
-Call 0422 469 739 — or visit our [Strata & FM page](/strata) for full details on what we offer for strata buildings. See our [Strata Managers: Who to Call When Your Building’s Lighting Control System Fails](/blog/strata-managers-lighting-control-sydney) and [DALI-2 Compliance for NSW Commercial Buildings](/blog/dali2-compliance-nsw-commercial).
+Call 0422 469 739 — or visit our [Strata & FM page](/strata) for full details on what we offer for strata buildings. See our [Strata Managers: Who to Call When Your Building’s Lighting Control System Fails](/strata-managers-lighting-control-sydney) and [DALI-2 Compliance for NSW Commercial Buildings](/dali2-compliance-nsw-commercial).
 
 **Related Articles**
 
-- [C-Bus and Dynalite Fault Finding in Sydney’s Eastern Suburbs](/blog/cbus-dynalite-fault-finding-eastern-suburbs)
-- [Strata Managers: Who to Call When Your Building’s Lighting Control System Fails](/blog/strata-managers-lighting-control-sydney)`
+- [C-Bus and Dynalite Fault Finding in Sydney’s Eastern Suburbs](/cbus-dynalite-fault-finding-eastern-suburbs)
+- [Strata Managers: Who to Call When Your Building’s Lighting Control System Fails](/strata-managers-lighting-control-sydney)`
     },
     {
       title: "Strata Managers: Who to Call When Your Building\u2019s Lighting Control System Fails",
@@ -13787,7 +13821,7 @@ For strata lighting control faults across Sydney \u2014 Eastern Suburbs, North S
 
 Searches: “strata manager lighting control Sydney”, “C-Bus strata building fault”, “Dynalite common area fault Sydney”, “lighting control specialist strata NSW”, “who fixes C-Bus in strata buildings Sydney”.
 
-See also our [Facility Managers: A Practical Guide to C-Bus, Dynalite and DALI](/blog/facility-managers-cbus-dynalite-dali-guide) and [DALI-2 Compliance for NSW Commercial Buildings](/blog/dali2-compliance-nsw-commercial) for related reading.
+See also our [Facility Managers: A Practical Guide to C-Bus, Dynalite and DALI](/facility-managers-cbus-dynalite-dali-guide) and [DALI-2 Compliance for NSW Commercial Buildings](/dali2-compliance-nsw-commercial) for related reading.
 
 **What Strata Managers Should Keep on File**
 
@@ -13830,7 +13864,7 @@ For lighting control maintenance, compliance support or fault response across Sy
 
 Searches: “facility manager lighting control Sydney”, “commercial building C-Bus maintenance”, “Dynalite planned maintenance Sydney”, “DALI emergency lighting facility management”, “[NABERS](https://www.nabers.gov.au/) energy efficiency lighting control”.
 
-See also our [Strata Managers: Who to Call When Your Building](/blog/strata-managers-lighting-control-sydney) and [DALI-2 Compliance for NSW Commercial Buildings](/blog/dali2-compliance-nsw-commercial) for related information.
+See also our [Strata Managers: Who to Call When Your Building](/strata-managers-lighting-control-sydney) and [DALI-2 Compliance for NSW Commercial Buildings](/dali2-compliance-nsw-commercial) for related information.
 
 **Service Agreements for Sydney Facilities**
 
@@ -13921,14 +13955,14 @@ If your building has a C-Bus, Dynalite, RAPIX or DALI lighting control system an
 
 I offer a free initial phone consultation for strata and facility management clients. No obligation. No sales pitch. Just a straight conversation about what your building has, what\u2019s going wrong, and what your realistic options are.
 
-For more on what we do for strata and FM clients, see the [Strata & FM page](/strata) and our [Facility Managers: A Practical Guide to C-Bus, Dynalite and DALI](/blog/facility-managers-cbus-dynalite-dali-guide). For DALI-2 emergency lighting compliance specifically, read our [DALI-2 Compliance for NSW Commercial Buildings](/blog/dali2-compliance-nsw-commercial).
+For more on what we do for strata and FM clients, see the [Strata & FM page](/strata) and our [Facility Managers: A Practical Guide to C-Bus, Dynalite and DALI](/facility-managers-cbus-dynalite-dali-guide). For DALI-2 emergency lighting compliance specifically, read our [DALI-2 Compliance for NSW Commercial Buildings](/dali2-compliance-nsw-commercial).
 
 Call George on **0422 469 739**. Or email service@sydneyautomationco.com.au. I pick up the phone.
 
 **Related Articles**
 
-- [Why C-Bus Fault Finding in the Sutherland Shire Is Different](/blog/cbus-fault-finding-sutherland-shire)
-- [C-Bus and Dynalite Planning Checklist for New Builds in Menai](/blog/cbus-dynalite-planning-checklist-new-builds-menai)`
+- [Why C-Bus Fault Finding in the Sutherland Shire Is Different](/cbus-fault-finding-sutherland-shire)
+- [C-Bus and Dynalite Planning Checklist for New Builds in Menai](/cbus-dynalite-planning-checklist-new-builds-menai)`
     }
   ];
   var FAQS = [
@@ -13941,45 +13975,73 @@ Call George on **0422 469 739**. Or email service@sydneyautomationco.com.au. I p
   ];
   var TESTIMONIALS = [
     {
-      name: "Helen Poulos",
-      role: "Residential C-Bus Client — Earlwood",
+      name: "Adam Ziino",
+      role: "Residential Client - Little Bay",
       stars: 5,
-      text: "Honest and reliable C-Bus installer in Sydney. Extremely knowledgeable and took the time to explain our C-Bus options clearly without rushing us. The quality of the installation and products was excellent and we’re very happy with the end result. Highly recommended.",
+      text: "Literally a lifesaver... George came out in 24 hours, diagnosed the problem with the CBUS system that two previous 'specialists' couldn't - fixed it - and then checked in two days later to make sure it was still working.",
+      source: "Google"
+    },
+    {
+      name: "Phillipa Brown",
+      role: "Winten Property Group - North Sydney",
+      stars: 5,
+      text: "Highly recommended! George was amazing - came out at last notice when all our office lights went on the blink, found the problem in our C-Bus system, rush-ordered the parts, and had everything back up within no time.",
       source: "Google"
     },
     {
       name: "Vasilios Tsopanas",
-      role: "Commercial Client — C-Bus Fault Finding, Marrickville",
+      role: "Residential Client - Marrickville",
       stars: 5,
-      text: "I am extremely happy with the C-Bus automation services provided by Sydney Automation Co. They helped repair and reprogram our Clipsal C-Bus lighting control system, which had ongoing faults that previous electricians couldn’t resolve. Very responsive, explained the issues clearly, and went the extra mile to make sure the system was stable across the whole site. Excellent service at a very competitive price.",
+      text: "Extremely happy with the C-Bus automation services. They helped repair and reprogram our Clipsal C-Bus lighting system which had ongoing faults that previous electricians couldn't resolve. Very responsive.",
+      source: "Google"
+    },
+    {
+      name: "Helen Poulos",
+      role: "Ask Allied Health - Earlwood",
+      stars: 5,
+      text: "Honest and reliable C-Bus installer in Sydney. Extremely knowledgeable and took the time to explain our C-Bus options clearly without rushing us. The quality of the installation was excellent.",
+      source: "Google"
+    },
+    {
+      name: "Easyfix Electrics",
+      role: "Commercial Client - Matraville",
+      stars: 5,
+      text: "Fantastic service. George resolved all issues and reprogrammed our Clipsal C-Bus system with custom options - above and beyond our expectations. Great efficient work with sharp pricing.",
       source: "Google"
     },
     {
       name: "Tim Reyes",
-      role: "Residential Client — Home Automation, Norwest",
+      role: "Residential Client - Norwest",
       stars: 5,
-      text: "I recently hired Sydney Automation to upgrade our home with a fully automated lighting system and the experience was fantastic! The team was professional, knowledgeable, and customised the system to perfectly suit our needs. I highly recommend Sydney Automation for anyone seeking high-quality electrical systems.",
-      source: "Google"
-    },
-    {
-      name: "Miro Krpelán",
-      role: "Local Guide — Office Automation, Bondi Junction",
-      stars: 5,
-      text: "Sydney Automation Co. provides outstanding smart lighting solutions, combining impressive technology with excellent customer service. From my experience, I highly recommend them to anyone considering office automation!",
-      source: "Google"
-    },
-    {
-      name: "Jamie Patterson",
-      role: "Residential Client — Media Room, Lugarno",
-      stars: 5,
-      text: "During a recent home renovation George and the team fitted out my media room. We couldn’t be happier with the all round service, the lighting set up in particular is incredible!",
+      text: "I recently hired Sydney Automation to upgrade our home with a fully automated lighting system and the experience was fantastic! Professional, knowledgeable, and customised the system perfectly.",
       source: "Google"
     },
     {
       name: "Imran Hamidi",
-      role: "Residential Client — System Setup, Potts Point",
+      role: "Laing + Simmons East Group - Potts Point",
       stars: 5,
-      text: "George was really helpful in my system set up. As someone who knew nothing about this space, he was able to guide me to the right programs and get it all installed hassle free. I’ve since recommended him to several friends and family, and wouldn’t hesitate to recommend him again. 10/10.",
+      text: "George was really helpful in my system set up. As someone who knew nothing about this space, he guided me to the right programs and got it all installed hassle free. 10/10.",
+      source: "Google"
+    },
+    {
+      name: "Miro Krpelan",
+      role: "Katalyst Facilities Management - Bondi Junction",
+      stars: 5,
+      text: "Sydney Automation Co. provides outstanding smart lighting solutions, combining impressive technology with excellent customer service. I highly recommend them for office automation!",
+      source: "Google"
+    },
+    {
+      name: "Jamie Patterson",
+      role: "Residential Client - Lugarno",
+      stars: 5,
+      text: "During a recent home renovation George and the team fitted out my media room. We couldn't be happier with the all round service - the lighting set up in particular is incredible!",
+      source: "Google"
+    },
+    {
+      name: "Robert",
+      role: "Residential Client - Maroubra",
+      stars: 5,
+      text: "George was highly professional and prompt in fixing the CBUS issues we had downstairs - very knowledgeable, highly recommended.",
       source: "Google"
     }
   ];
@@ -14123,6 +14185,33 @@ ${form.message}`);
       /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ServicesGrid, { nav }),
       /* @__PURE__ */ (0, import_jsx_runtime.jsx)(HowItWorks, {}),
       /* @__PURE__ */ (0, import_jsx_runtime.jsx)(TestimonialsSection, {}),
+      /* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", { className: "section", style: { background: C.navy, borderTop: `1px solid ${C.border}` }, children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: "container", style: { display: "grid", gridTemplateColumns: "1fr 1.5fr", gap: 64, alignItems: "center" }, children: [
+        /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [
+          /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { width: "100%", aspectRatio: "3/4", borderRadius: 24, border: `1px solid ${C.border}`, position: "relative", overflow: "hidden", boxShadow: `0 20px 40px rgba(0,0,0,0.3)` }, children: [
+            /* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", { src: "/george-photo.png", alt: "George Skarmoutsos", style: { width: "100%", height: "100%", objectFit: "cover", objectPosition: "center top" } }),
+            /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { position: "absolute", bottom: 0, left: 0, right: 0, padding: 24, background: "linear-gradient(transparent, rgba(14,31,61,0.95))", textAlign: "center" }, children: [
+              /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { fontSize: 22, fontWeight: 900, fontFamily: "'Barlow Condensed',sans-serif" }, children: "George Skarmoutsos" }),
+              /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { fontSize: 13, color: C.accent, fontWeight: 700, marginTop: 4 }, children: "Founder & Lead Programmer" })
+            ] })
+          ] }),
+          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { display: "flex", flexDirection: "column", gap: 10, marginTop: 20 }, children: [
+            { label: "Accredited C-Bus Programmer", color: "#00A651" },
+            { label: "Accredited Dynalite Designer", color: "#0068B5" },
+            { label: "Former Clipsal Technical Support", color: C.accent }
+          ].map((b, i) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { display: "flex", alignItems: "center", gap: 10, background: C.navyCard, border: `1px solid ${C.border}`, borderRadius: 10, padding: "10px 14px" }, children: [
+            /* @__PURE__ */ (0, import_jsx_runtime.jsx)(CheckCircle, { size: 16, color: b.color }),
+            /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { style: { fontSize: 13, fontWeight: 600 }, children: b.label })
+          ] }, i)) })
+        ] }),
+        /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [
+          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "tag", children: "Expertise You Can Trust" }),
+          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", { style: { fontSize: "clamp(32px,4vw,52px)", fontWeight: 900, marginBottom: 24, lineHeight: 1.1 }, children: "The Specialist General Electricians Call." }),
+          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { style: { fontSize: 18, color: C.textDim, lineHeight: 1.8, marginBottom: 24 }, children: "With over 15 years in the lighting control industry — including time spent in technical support for Clipsal themselves — I provide the deep-level programming and fault-finding expertise that general electricians and automation companies often lack." }),
+          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { style: { fontSize: 16, color: C.textDim, lineHeight: 1.7, marginBottom: 32 }, children: "Based in Menai, I service the Sutherland Shire and Greater Sydney, specializing in restoring C-Bus and Dynalite systems to perfect operation. We don't just 'try' to fix it — we guarantee the solution." }),
+          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", { className: "btn-primary", onClick: () => nav("about"), children: "Learn More About George" })
+        ] })
+      ] }) })
+,
       /* @__PURE__ */ (0, import_jsx_runtime.jsx)(LocationsStrip, { nav }),
       /* @__PURE__ */ (0, import_jsx_runtime.jsx)(FaqSection, { activeFaq, setActiveFaq }),
       /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ContactSection, { form, setForm, sendEmail })
@@ -14324,7 +14413,7 @@ ${form.message}`);
 
   function PartnerLogoStrip() {
     function Chip({ children, minW }) {
-      return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { padding: "10px 24px", background: "#fff", borderRadius: 10, display: "flex", alignItems: "center", justifyContent: "center", minWidth: minW || 140, height: 64 }, children });
+      return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { padding: "10px 24px", background: "#fff", borderRadius: 10, display: "flex", alignItems: "center", justifyContent: "center", minWidth: minW || 140, height: 80 }, children });
     }
     const logos = [
       {
@@ -14561,27 +14650,34 @@ ${form.message}`);
           /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowRight, { size: 20, color: C.textDim, style: { marginLeft: "auto", flexShrink: 0 } })
         ] }) })
       ] }),
-      /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { borderTop: `1px solid ${C.border}`, paddingTop: 48 }, children: [
-        /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { textAlign: "center", marginBottom: 32 }, children: [
-          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "tag", style: { background: "linear-gradient(135deg,#833ab4,#fd1d1d,#fcb045)", color: "#fff", border: "none", marginBottom: 14 }, children: "Follow Along" }),
-          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", { style: { fontSize: 28, fontWeight: 900, marginBottom: 8 }, children: "We're on Instagram" }),
-          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { style: { color: C.textDim, fontSize: 14, marginBottom: 8 }, children: "Behind-the-scenes projects, tips and real work from across Sydney" })
+      
+      /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("section", { className: "section", style: { background: C.navyCard, borderTop: `1px solid ${C.border}` }, children: [
+        /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { textAlign: "center", marginBottom: 56 }, children: [
+          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "tag", children: "Our Portfolio" }),
+          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", { style: { fontSize: 42, fontWeight: 900, marginBottom: 12 }, children: "Recent Project Highlights" }),
+          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { style: { color: C.textDim, fontSize: 16 }, children: "Delivering lighting control excellence across Sydney's commercial and prestige residential sectors." })
         ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { maxWidth: 560, margin: "0 auto", background: C.navy, border: `1px solid ${C.border}`, borderRadius: 20, overflow: "hidden" }, children: [
-          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { height: 80, background: "linear-gradient(135deg,#833ab4,#fd1d1d,#fcb045)", position: "relative", display: "flex", alignItems: "flex-end", padding: "0 24px 0" } }),
-          /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { padding: "0 24px 28px", marginTop: -28 }, children: [
-            /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { display: "flex", alignItems: "flex-end", justifyContent: "space-between", marginBottom: 16 }, children: [
-              /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { width: 64, height: 64, borderRadius: "50%", border: `3px solid ${C.navy}`, overflow: "hidden", background: "linear-gradient(135deg,#833ab4,#fcb045)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }, children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("svg", { width: "30", height: "30", viewBox: "0 0 24 24", fill: "none", stroke: "white", strokeWidth: "2", strokeLinecap: "round", strokeLinejoin: "round", children: [
-                /* @__PURE__ */ (0, import_jsx_runtime.jsx)("rect", { x: "2", y: "2", width: "20", height: "20", rx: "5" }),
-                /* @__PURE__ */ (0, import_jsx_runtime.jsx)("path", { d: "M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" }),
-                /* @__PURE__ */ (0, import_jsx_runtime.jsx)("line", { x1: "17.5", y1: "6.5", x2: "17.51", y2: "6.5" })
-              ] }) }),
-              /* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", { href: INSTA, target: "_blank", rel: "noreferrer", style: { textDecoration: "none" }, children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", { style: { padding: "9px 22px", borderRadius: 8, border: "none", cursor: "pointer", fontFamily: "inherit", fontWeight: 800, fontSize: 13, color: "#fff", background: "linear-gradient(135deg,#833ab4,#fd1d1d,#fcb045)" }, children: "Follow" }) })
-            ] }),
-            /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { fontWeight: 900, fontSize: 16, marginBottom: 2 }, children: "@sydneyautomationco" }),
-            /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { fontSize: 13, color: C.textDim, marginBottom: 14 }, children: "Sydney Automation Co. \xB7 C-Bus & Dynalite Specialists \xB7 Menai, NSW" }),
-            /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { fontSize: 13, color: C.textDim, lineHeight: 1.7 }, children: "C-Bus & Dynalite fault finding, programming and commissioning across Sydney. Based in Menai. Follow for project updates and lighting control tips." })
-          ] }),
+        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "container", style: { display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: 24, marginBottom: 48 }, children: [
+          { title: "Winten Property Group", suburb: "North Sydney", img: "/winten-01-new-c-bus-spacelogic-relays.jpg", tag: "C-Bus Upgrade" },
+          { title: "WSU Campus", suburb: "Parramatta", img: "/wsu-01-studio-1-3-39-level-3.jpg", tag: "Blind Control" },
+          { title: "Kebia Importex", suburb: "Ingleburn", img: "/kebia-01.jpg", tag: "SpaceLogic Relay" }
+        , { title: "Uluru Meeting Place", suburb: "Yulara, NT", img: "/og-image.jpg", tag: "Coming Soon", opacity: 0.7 } ].map((p, i) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: "card", style: { padding: 0, overflow: "hidden", cursor: "pointer" }, onClick: () => nav("projects"), children: [
+          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { height: 220, overflow: "hidden" }, children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", { src: p.img, alt: p.title, style: { width: "100%", height: "100%", objectFit: "cover", transition: "transform 0.5s" } }) }),
+          /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { padding: 24 }, children: [
+            /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { fontSize: 11, fontWeight: 800, color: C.accent, textTransform: "uppercase", letterSpacing: 1, marginBottom: 8 }, children: p.tag }),
+            /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", { style: { fontSize: 20, fontWeight: 900, marginBottom: 4 }, children: p.title }),
+            /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { fontSize: 13, color: C.textDim }, children: p.suburb })
+          ] })
+        ] }, i)) }),
+        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { textAlign: "center" }, children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", { className: "btn-outline", onClick: () => nav("projects"), children: "View All Projects" }) }) ] }), 
+      /* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", { className: "section", style: { background: "#060b14", textAlign: "center" }, children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: "container", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", { style: { fontSize: 38, fontWeight: 900, marginBottom: 20 }, children: "Don't Rip It Out. We Resurrect Legacy Systems." }),
+        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { style: { color: C.textDim, fontSize: 18, maxWidth: 800, margin: "0 auto 32px" }, children: "Have you been told your old C-Bus or Dynalite system is 'obsolete' and needs a full replacement? Most systems can be restored to perfect operation with expert programming and modern gateway integration. We specialize in legacy system rescue." }),
+        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", { className: "btn-outline", onClick: () => nav("contact"), children: "Get a Free System Rescue Audit" })
+      ] }) })
+
+      ] })
+,
           /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: 2, margin: "0 0 0 0" }, children: [
             { label: "C-Bus Wiring", icon: "\u26A1", bg: "linear-gradient(135deg,#0e2d5a,#1a4a8a)" },
             { label: "Dynalite Panel", icon: "\u{1F4A1}", bg: "linear-gradient(135deg,#0a2a5e,#0068B5)" },
@@ -15158,7 +15254,7 @@ ${form.message}`);
             /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Icon, { i: Phone, size: 16, color: C.navy }),
             "Call  0422 469 739"
           ] }) }),
-          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", { className: "btn-ghost", onClick: () => nav("contact"), style: { padding: "14px 28px" }, children: "Get a Free Quote" })
+          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", { className: "btn-ghost", onClick: () => nav("contact"), style: { padding: "14px 28px" }, children: "Fix My System Today — Call 0422 469 739" })
         ] })
       ] }) }),
       /* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", { style: { padding: "72px 5%", background: C.navyCard, borderBottom: `1px solid ${C.border}` }, children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { maxWidth: 1100, margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 1fr", gap: 60, alignItems: "center" }, className: "grid2", children: [
@@ -15214,7 +15310,7 @@ ${form.message}`);
             /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Icon, { i: Phone, size: 18, color: C.navy }),
             "0422 469 739"
           ] }) }),
-          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", { className: "btn-ghost", onClick: () => nav("contact"), style: { padding: "16px 32px", fontSize: 16 }, children: "Get a Free Quote" })
+          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", { className: "btn-ghost", onClick: () => nav("contact"), style: { padding: "16px 32px", fontSize: 16 }, children: "Fix My System Today — Call 0422 469 739" })
         ] })
       ] }) })
     ] });
@@ -15382,7 +15478,7 @@ ${form.message}`);
             /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Icon, { i: Phone, size: 18, color: C.navy }),
             "0422 469 739"
           ] }) }),
-          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", { className: "btn-ghost", onClick: () => nav("contact"), style: { padding: "16px 32px", fontSize: 16 }, children: "Get a Free Quote" })
+          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", { className: "btn-ghost", onClick: () => nav("contact"), style: { padding: "16px 32px", fontSize: 16 }, children: "Fix My System Today — Call 0422 469 739" })
         ] })
       ] }) })
     ] });

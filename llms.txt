@@ -5,33 +5,33 @@
 ## Services
 
 * [Sydney Automation Co.](https://sydneyautomationco.com.au/): Accredited C-Bus and Dynalite specialists providing same-day fault finding and repairs across Greater Sydney.
-* [Services — C-Bus, Dynalite & Smart Lighting](https://sydneyautomationco.com.au/services.html): Comprehensive lighting control services including RAPIX/DALI, smart home integration, and design consultation based in Menai.
-* [C-Bus Programmer Sydney](https://sydneyautomationco.com.au/c-bus-programmer-sydney.html): Expert Clipsal C-Bus programming, commissioning, and fault finding services by a former Clipsal technical support specialist.
-* [Dynalite Programmer Sydney](https://sydneyautomationco.com.au/dynalite-programmer-sydney.html): Accredited Dynalite system designer offering professional programming and DALI integration for commercial and residential buildings.
-* [C-Bus Repair Sydney](https://sydneyautomationco.com.au/cbus-repair-sydney.html): Dedicated C-Bus system repair services with a high first-visit fix rate for all Clipsal automation hardware.
-* [Dynalite Repair Sydney](https://sydneyautomationco.com.au/dynalite-repair-sydney.html): Specialist Philips Dynalite repairs for hotels, commercial offices, and strata properties throughout the Sydney region.
-* [Emergency Repair Sydney](https://sydneyautomationco.com.au/emergency-repair-sydney.html): Rapid response emergency lighting control repairs for C-Bus, Dynalite, DALI, and RAPIX system failures.
-* [C-Bus Upgrade Sydney](https://sydneyautomationco.com.au/cbus-upgrade-sydney.html): Modernisation services for existing C-Bus systems, adding mobile app control, touchscreens, and energy-efficient sensors.
-* [Strata & Facility Managers](https://sydneyautomationco.com.au/strata.html): Tailored automation support for managed buildings, focusing on compliance, documentation, and common area lighting reliability.
-* [Electricians Partnership](https://sydneyautomationco.com.au/electricians.html): Specialist backup for Sydney electricians, offering referral programs and technical support for complex automation projects.
+* [Services — C-Bus, Dynalite & Smart Lighting](https://sydneyautomationco.com.au/services): Comprehensive lighting control services including RAPIX/DALI, smart home integration, and design consultation based in Menai.
+* [C-Bus Programmer Sydney](https://sydneyautomationco.com.au/c-bus-programmer-sydney): Expert Clipsal C-Bus programming, commissioning, and fault finding services by a former Clipsal technical support specialist.
+* [Dynalite Programmer Sydney](https://sydneyautomationco.com.au/dynalite-programmer-sydney): Accredited Dynalite system designer offering professional programming and DALI integration for commercial and residential buildings.
+* [C-Bus Repair Sydney](https://sydneyautomationco.com.au/cbus-repair-sydney): Dedicated C-Bus system repair services with a high first-visit fix rate for all Clipsal automation hardware.
+* [Dynalite Repair Sydney](https://sydneyautomationco.com.au/dynalite-repair-sydney): Specialist Philips Dynalite repairs for hotels, commercial offices, and strata properties throughout the Sydney region.
+* [Emergency Repair Sydney](https://sydneyautomationco.com.au/emergency-repair-sydney): Rapid response emergency lighting control repairs for C-Bus, Dynalite, DALI, and RAPIX system failures.
+* [C-Bus Upgrade Sydney](https://sydneyautomationco.com.au/cbus-upgrade-sydney): Modernisation services for existing C-Bus systems, adding mobile app control, touchscreens, and energy-efficient sensors.
+* [Strata & Facility Managers](https://sydneyautomationco.com.au/strata): Tailored automation support for managed buildings, focusing on compliance, documentation, and common area lighting reliability.
+* [Electricians Partnership](https://sydneyautomationco.com.au/electricians): Specialist backup for Sydney electricians, offering referral programs and technical support for complex automation projects.
 
 ## About
 
-* [About George Skarmoutsos](https://sydneyautomationco.com.au/about.html): Profile of founder George Skarmoutsos, an accredited lighting control specialist with extensive experience in Schneider and Philips systems.
-* [Projects — Commercial C-Bus Installations](https://sydneyautomationco.com.au/projects.html): Portfolio of successful automation projects including commercial upgrades and automated blind control systems.
+* [About George Skarmoutsos](https://sydneyautomationco.com.au/about): Profile of founder George Skarmoutsos, an accredited lighting control specialist with extensive experience in Schneider and Philips systems.
+* [Projects — Commercial C-Bus Installations](https://sydneyautomationco.com.au/projects): Portfolio of successful automation projects including commercial upgrades and automated blind control systems.
 
 ## Resources
 
-* [Blog — C-Bus & Dynalite Articles](https://sydneyautomationco.com.au/blog.html): Technical guides, industry news, and expert tips on maintaining and optimizing lighting control systems.
-* [C-Bus & Dynalite Guides](https://sydneyautomationco.com.au/guides.html): Knowledge base featuring renovation planning guides and technical comparisons for property owners.
-* [C-Bus vs Dynalite Comparison](https://sydneyautomationco.com.au/cbus-vs-dynalite.html): An honest technical comparison of leading lighting control platforms to help users choose the right system.
+* [Blog — C-Bus & Dynalite Articles](https://sydneyautomationco.com.au/blog): Technical guides, industry news, and expert tips on maintaining and optimizing lighting control systems.
+* [C-Bus & Dynalite Guides](https://sydneyautomationco.com.au/guides): Knowledge base featuring renovation planning guides and technical comparisons for property owners.
+* [C-Bus vs Dynalite Comparison](https://sydneyautomationco.com.au/cbus-vs-dynalite): An honest technical comparison of leading lighting control platforms to help users choose the right system.
 
 ## Locations
 
-* [Service Areas](https://sydneyautomationco.com.au/locations.html): Directory of service locations across Greater Sydney, including dedicated support for major residential and commercial hubs.
-* [Sutherland Shire Specialist](https://sydneyautomationco.com.au/shire.html): Local C-Bus and Dynalite services based in Menai, offering same-day callouts with no travel surcharge for Shire residents.
-* [Eastern Suburbs Specialist](https://sydneyautomationco.com.au/c-bus-programmer-eastern-suburbs.html): Expert automation support for prestige properties in Bondi, Vaucluse, Double Bay, and surrounding suburbs.
-* [North Shore Specialist](https://sydneyautomationco.com.au/c-bus-programmer-north-shore.html): Specialized programming and repair services for North Shore suburbs including Mosman, Chatswood, and Pymble.
+* [Service Areas](https://sydneyautomationco.com.au/locations): Directory of service locations across Greater Sydney, including dedicated support for major residential and commercial hubs.
+* [Sutherland Shire Specialist](https://sydneyautomationco.com.au/shire): Local C-Bus and Dynalite services based in Menai, offering same-day callouts with no travel surcharge for Shire residents.
+* [Eastern Suburbs Specialist](https://sydneyautomationco.com.au/c-bus-programmer-eastern-suburbs): Expert automation support for prestige properties in Bondi, Vaucluse, Double Bay, and surrounding suburbs.
+* [North Shore Specialist](https://sydneyautomationco.com.au/c-bus-programmer-north-shore): Specialized programming and repair services for North Shore suburbs including Mosman, Chatswood, and Pymble.
 
 ## Key Facts
 
