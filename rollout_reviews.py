@@ -1,4 +1,5 @@
 import os
+import re
 
 # The full Premium Carousel HTML + CSS + JS block
 CAROUSEL_BLOCK = """<!-- ===== PREMIUM TESTIMONIALS CAROUSEL ===== -->
@@ -112,6 +113,15 @@ CAROUSEL_BLOCK = """<!-- ===== PREMIUM TESTIMONIALS CAROUSEL ===== -->
           </div>
         </div>
 
+        <div class="tm-card">
+          <div class="tm-stars">★★★★★</div>
+          <p class="tm-text">"High quality and fair price. Project delivered on time."</p>
+          <div class="tm-footer">
+            <div class="tm-author">Fady Geagea</div>
+            <div class="tm-role">Residential Client, Sydney</div>
+          </div>
+        </div>
+
       </div>
 
       <div class="tm-controls">
@@ -175,8 +185,7 @@ CAROUSEL_BLOCK = """<!-- ===== PREMIUM TESTIMONIALS CAROUSEL ===== -->
     track.addEventListener('mouseleave', () => isPaused = false);
   })();
 </script>
-<!-- ===== /PREMIUM TESTIMONIALS CAROUSEL ===== -->
-"""
+<!-- ===== /PREMIUM TESTIMONIALS CAROUSEL ===== -->"""
 
 files_to_update = [
     'c-bus-programmer-sydney.html',
@@ -184,14 +193,26 @@ files_to_update = [
     'dynalite-programmer-sydney.html'
 ]
 
+# Pattern to find existing carousel blocks
+pattern = re.compile(r'<!-- ===== PREMIUM TESTIMONIALS CAROUSEL ===== -->.*?<!-- ===== /PREMIUM TESTIMONIALS CAROUSEL ===== -->', re.DOTALL)
+
 for filename in files_to_update:
-    if not os.path.exists(filename): continue
-    with open(filename, 'r', encoding='utf-8') as f:
+    file_path = filename
+    if not os.path.exists(file_path): 
+        print(f"Skipping {filename}")
+        continue
+        
+    with open(file_path, 'r', encoding='utf-8') as f:
         content = f.read()
     
-    # Insert before the closing body tag
-    if '</body>' in content:
-        content = content.replace('</body>', CAROUSEL_BLOCK + '\n</body>')
-        with open(filename, 'w', encoding='utf-8') as f:
-            f.write(content)
-        print(f"SUCCESS: Added carousel to {filename}")
+    # Remove all existing blocks
+    new_content = pattern.sub('', content)
+    
+    # Insert new block before </body>
+    if '</body>' in new_content:
+        new_content = new_content.replace('</body>', '\n' + CAROUSEL_BLOCK + '\n</body>')
+        with open(file_path, 'w', encoding='utf-8') as f:
+            f.write(new_content)
+        print(f"SUCCESS: Updated carousel in {filename}")
+    else:
+        print(f"ERROR: </body> not found in {filename}")

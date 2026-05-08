@@ -1,0 +1,1076 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Accredited C-Bus &amp; Dynalite specialist Sydney. Home automation, smart home systems, lighting control, repairs &amp; fault finding. Call George 0422 469 739." name="description"/>
+<link href="/sitemap.xml" rel="sitemap" title="Sitemap" type="application/xml"/>
+<link href="https://sydneyautomationco.com.au/" rel="canonical"/>
+<title>Sydney Automation Co. | C-Bus &amp; Dynalite Automation...</title>
+<link href="/favicon.png" rel="icon" type="image/png"/>
+<link href="/favicon.png" rel="apple-touch-icon"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600&amp;family=Barlow+Condensed:wght@700;800&amp;display=swap" onload="this.onload=null;this.rel='stylesheet'" rel="preload"/>
+<noscript><link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600&amp;family=Barlow+Condensed:wght@700;800&amp;display=swap" rel="stylesheet"/></noscript>
+<style>body{margin:0;padding:0;background:#0e1f3d}#root{min-height:100vh;padding-top:120px;box-sizing:border-box;position:relative}
+@media(max-width:960px){#root{padding-top:104px!important}nav{background:#0e1f3d!important;height:64px!important;top:40px!important}}
+@media(max-width:768px){#root{padding-bottom:calc(100px + env(safe-area-inset-bottom,0px))!important;padding-top:104px!important}.wa-float{bottom:calc(85px + env(safe-area-inset-bottom,0px))!important;left:15px}#root div[style*="z-index: 999"]{display:none!important}}#loading{position:fixed;inset:0;background:#0e1f3d;display:flex;align-items:center;justify-content:center;z-index:9999;flex-direction:column;gap:16px;font-family:sans-serif;color:#a8c0e0}.spinner{width:40px;height:40px;border:3px solid #2a4a80;border-top-color:#f07020;border-radius:50%;animation:spin .8s linear infinite}@keyframes spin{to{transform:rotate(360deg)}}@media(max-width:768px){.grid2{grid-template-columns:1fr!important}.hide-mob{display:none!important}.show-mob{display:flex!important}}
+/* ── Unified floating CTA ── */
+.sac-float-cta { position: fixed; bottom: 28px; right: 24px; display: flex; flex-direction: column; gap: 10px; z-index: 9000; }
+.sac-float-cta a { display: flex; align-items: center; gap: 9px; padding: 13px 20px; border-radius: 50px; font-family: 'Barlow', sans-serif; font-weight: 700; font-size: 14px; text-decoration: none; box-shadow: 0 4px 18px rgba(0,0,0,0.25); transition: transform 0.2s, box-shadow 0.2s; white-space: nowrap; }
+.sac-float-cta a:hover { transform: translateY(-2px); box-shadow: 0 6px 22px rgba(0,0,0,0.32); }
+.sac-float-call { background: #e87722; color: #fff !important; }
+.sac-float-wa { background: #25D366; color: #fff !important; }
+@media (max-width: 768px) { .sac-float-cta { display: none !important; } }
+</style>
+<!-- Google Search Console Verification -->
+<meta content="99c59ffacd177339" name="google-site-verification"/>
+<!-- Open Graph / Social Sharing -->
+<meta content="website" property="og:type"/>
+<meta content="https://sydneyautomationco.com.au/" property="og:url"/>
+<meta content="C-Bus &amp; Dynalite Specialists Sydney | Sydney Automation Co." property="og:title"/>
+<meta content="Accredited C-Bus &amp; Dynalite specialist Sydney. Home automation, smart home systems, lighting control, repairs &amp; fault finding. Call George 0422 469 739." property="og:description"/>
+<meta content="https://sydneyautomationco.com.au/og-image.jpg" property="og:image"/>
+<meta content="en_AU" property="og:locale"/>
+<meta content="Sydney Automation Co." property="og:site_name"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="AU-NSW" name="geo.region"/>
+<meta content="Menai, Sutherland Shire, Sydney" name="geo.placename"/>
+<meta content="-34.0167;151.0333" name="geo.position"/>
+<meta content="-34.0167, 151.0333" name="ICBM"/>
+<meta content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" name="robots"/>
+<!-- LocalBusiness + Electrician Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Sydney Automation Co.",
+  "description": "Accredited C-Bus programmers and Dynalite system designers based in Menai, Sutherland Shire. Same-day fault finding, repairs and programming across Greater Sydney.",
+  "url": "https://sydneyautomationco.com.au/",
+  "telephone": "+61422469739",
+  "email": "service@sydneyautomationco.com.au",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Menai",
+    "addressRegion": "NSW",
+    "postalCode": "2234",
+    "addressCountry": "AU"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": -34.0167,
+    "longitude": 151.0167
+  },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "07:00", "closes": "17:00" }
+  ],
+  "areaServed": {
+    "@type": "AdministrativeArea",
+    "name": "Greater Sydney"
+  },
+  "priceRange": "$$",
+  "currenciesAccepted": "AUD",
+  "paymentAccepted": "Cash, Credit Card, Bank Transfer",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5.0",
+    "reviewCount": "14",
+    "bestRating": "5"
+  },
+  "sameAs": [
+    "https://www.instagram.com/sydneyautomationco/",
+    "https://www.facebook.com/profile.php?id=61570407305417",
+    "https://www.linkedin.com/company/sydney-automation-co/"
+  ]
+}
+</script>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "Electrician",
+  "@id": "https://sydneyautomationco.com.au/#business",
+  "name": "Sydney Automation Co.",
+  "description": "Accredited C-Bus programmers, cbus specialists, and Dynalite system designers specialising in cbus repairs, C-Bus programming, lighting control commissioning, fault finding, system upgrades, and smart home automation across Greater Sydney.",
+  "url": "https://sydneyautomationco.com.au",
+  "telephone": "+61422469739",
+  "email": "service@sydneyautomationco.com.au",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Menai",
+    "addressRegion": "NSW",
+    "postalCode": "2234",
+    "addressCountry": "AU"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": -34.0167,
+    "longitude": 151.0333
+  },
+  "areaServed": [
+    {
+      "@type": "City",
+      "name": "Sydney"
+    },
+    {
+      "@type": "AdministrativeArea",
+      "name": "Sutherland Shire"
+    },
+    {
+      "@type": "Neighborhood",
+      "name": "Menai"
+    },
+    {
+      "@type": "Neighborhood",
+      "name": "Cronulla"
+    },
+    {
+      "@type": "Neighborhood",
+      "name": "Miranda"
+    },
+    {
+      "@type": "Neighborhood",
+      "name": "Caringbah"
+    },
+    {
+      "@type": "Neighborhood",
+      "name": "Engadine"
+    },
+    {
+      "@type": "Neighborhood",
+      "name": "Sutherland"
+    },
+    {
+      "@type": "Neighborhood",
+      "name": "Hurstville"
+    },
+    {
+      "@type": "Neighborhood",
+      "name": "Eastern Suburbs"
+    },
+    {
+      "@type": "Neighborhood",
+      "name": "North Shore"
+    },
+    {
+      "@type": "Neighborhood",
+      "name": "Hills District"
+    }
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Lighting Control Services",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "C-Bus Programming"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Dynalite System Programming"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Lighting Control Fault Finding"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "C-Bus System Commissioning"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Smart Home Automation"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "DALI Lighting Control"
+        }
+      }
+    ]
+  },
+  "image": "https://sydneyautomationco.com.au/og-image.jpg",
+  "priceRange": "$$",
+  "founder": {
+    "@type": "Person",
+    "name": "George Skarmoutsos"
+  },
+  "sameAs": [
+    "https://www.instagram.com/sydneyautomationco/",
+    "https://www.facebook.com/profile.php?id=61570407305417",
+    "https://www.linkedin.com/company/sydney-automation-co/"
+  ],
+  "knowsAbout": [
+    "C-Bus",
+    "CBus",
+    "Cbus",
+    "Clipsal C-Bus",
+    "C-Bus Repairs",
+    "Cbus Repairs",
+    "C-Bus Programming",
+    "Cbus Programming",
+    "C-Bus Specialist",
+    "Cbus Specialist",
+    "Dynalite",
+    "RAPIX",
+    "DALI",
+    "Smart Lighting",
+    "Building Automation",
+    "Apple HomeKit C-Bus"
+  ],
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday"
+      ],
+      "opens": "07:00",
+      "closes": "17:00"
+    }
+  ]
+}</script>
+<!-- FAQ Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How much does C-Bus programming cost in Sydney?",
+      "acceptedAnswer": {"@type": "Answer", "text": "C-Bus programming costs in Sydney typically range from $150-$250/hour depending on system complexity. A standard residential commissioning job usually runs 4-8 hours. Contact Sydney Automation Co. on 0422 469 739 for a tailored quote."}
+    },
+    {
+      "@type": "Question",
+      "name": "Do you offer same-day C-Bus fault finding in Sydney?",
+      "acceptedAnswer": {"@type": "Answer", "text": "Yes. Sydney Automation Co. offers same-day and urgent call-out services for C-Bus and Dynalite fault finding across Greater Sydney. Call 0422 469 739 to check availability."}
+    },
+    {
+      "@type": "Question",
+      "name": "Are you accredited C-Bus programmers?",
+      "acceptedAnswer": {"@type": "Answer", "text": "Yes. Sydney Automation Co. are accredited Clipsal C-Bus programmers and Dynalite system designers based in Menai, Sutherland Shire."}
+    },
+    {
+      "@type": "Question",
+      "name": "Can you fix a C-Bus system programmed by another contractor?",
+      "acceptedAnswer": {"@type": "Answer", "text": "Yes. We regularly take over C-Bus and Dynalite systems programmed by other contractors, including fault finding, reprogramming, and full system audits across Greater Sydney."}
+    },
+    {
+      "@type": "Question",
+      "name": "Do you do C-Bus repairs in Sydney?",
+      "acceptedAnswer": {"@type": "Answer", "text": "Yes. Sydney Automation Co. provides same-day cbus repairs and C-Bus fault finding across Greater Sydney. We are accredited cbus specialists based in Menai, Sutherland Shire. Call 0422 469 739."}
+    },
+    {
+      "@type": "Question",
+      "name": "What is a C-Bus specialist?",
+      "acceptedAnswer": {"@type": "Answer", "text": "A C-Bus specialist — or cbus specialist — is a Clipsal-accredited programmer qualified to program, commission, and repair C-Bus lighting control systems. Sydney Automation Co. holds full C-Bus accreditation and Dynalite accreditation, one of few dual-accredited specialists in Sydney."}
+    },
+    {
+      "@type": "Question",
+      "name": "Can you integrate C-Bus with Apple HomeKit in Sydney?",
+      "acceptedAnswer": {"@type": "Answer", "text": "Yes. Sydney Automation Co. integrates existing C-Bus systems with Apple HomeKit across Sydney. As accredited cbus programmers we configure both the bridge hardware and the C-Bus programming layer correctly. Call 0422 469 739."}
+    }
+  ]
+}
+</script>
+<!-- Google Analytics GA4 -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-7EZFB6GRJ3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-7EZFB6GRJ3');
+</script>
+<!-- Microsoft Clarity -->
+<script type="text/javascript">
+(function(c,l,a,r,i,t,y){
+    c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+    t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+    y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+})(window, document, "clarity", "script", "w5e5flrwbd");
+</script>
+<!-- Meta Pixel -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1836885369871029');
+fbq('track', 'PageView');
+</script>
+<noscript><img alt="Tr?Id=1836885369871029&amp;Ev=Pageview&amp;Noscript=1" height="1" loading="lazy" src="https://www.facebook.com/tr?id=1836885369871029&amp;ev=PageView&amp;noscript=1" style="display:none" width="1"/></noscript>
+</head><body>
+<!-- Site navigation - visible footer links also serve as crawl anchors -->
+<noscript>
+<div style="background:#0e1f3d;color:#a8c0e0;padding:16px;font-family:sans-serif;font-size:13px">
+<strong style="color:#fff">Sydney Automation Co.</strong> — Accredited C-Bus &amp; Dynalite Specialists, Menai NSW. Call 0422 469 739.<br/>
+<a href="/c-bus-programmer-sydney" style="color:#f07020">C-Bus Programming Sydney</a>  | 
+    <a href="/c-bus-repairs-sydney" style="color:#f07020">C-Bus Repairs Sydney</a>  | 
+    <a href="/dynalite-programmer-sydney" style="color:#f07020">Dynalite Programmer Sydney</a>  | 
+    <a href="/contact" style="color:#f07020">Contact</a>  | 
+    <a href="/privacy-policy" style="color:#f07020">Privacy Policy</a>
+<div style="margin-top:12px">
+<h1>Sydney Automation Co. — Accredited C-Bus &amp; Dynalite Specialist Sydney</h1>
+<h2>C-Bus Programming, Repairs &amp; Fault Finding Across Sydney</h2>
+<div style="background:#fff7f0;border:1px solid #e87722;border-radius:6px;padding:1rem 1.5rem;margin:1.5rem 0;">
+  <strong style="color:#0d1a30;">C-Bus Repairs Sydney</strong> — also searched as <strong>CBus Repairs Sydney</strong>. 
+  Hardware faults, corrupted programming, relay failures. Same-day callouts across Greater Sydney. 
+  <a href="/c-bus-repairs-sydney" style="color:#e87722;font-weight:600;">Book C-Bus repairs →</a>
+</div>
+<p>George Skarmoutsos and the team at Sydney Automation Co. provide expert C-Bus and Dynalite lighting control programming, commissioning, repairs, and fault finding across Sydney including Sutherland Shire, North Shore, Eastern Suburbs, Northern Beaches, and CBD.</p>
+</div>
+</div>
+</noscript>
+<!-- CANONICAL NAV INJECTION - Full 4-dropdown nav rendered before React -->
+<style>
+/* ====== CANONICAL NAV CSS ====== */
+/* DROPDOWN NAV */
+nav{position:fixed;top:40px;left:0;right:0;z-index:1000;background:#0e1f3d;border-bottom:1px solid #2a4a80;padding:0 24px;height:80px;display:flex;align-items:center;justify-content:space-between;font-family:'Barlow',sans-serif;box-sizing:border-box;box-shadow:0 2px 10px rgba(0,0,0,0.3)}
+.logo{font-family:'Barlow Condensed',sans-serif;font-weight:900;text-transform:uppercase;line-height:1;cursor:pointer;display:inline-flex;flex-direction:column;text-decoration:none;color:inherit;flex-shrink:0}
+.logo-main{font-size:24px;color:#fff;letter-spacing:1.5px;display:block;white-space:nowrap}
+.logo-line{height:4px;background:linear-gradient(90deg,#f07020,#f5a623,#4a90d9,#f07020);background-size:200% 100%;animation:shimmer 3s linear infinite;margin:4px 0;width:100%}
+.logo-sub{font-size:11px;color:#a8c0e0;letter-spacing:4px}
+.nav-phone-wrap{display:flex;flex-direction:column;align-items:flex-end;margin-right:20px;flex:1}
+.nav-phone{font-family:'Barlow Condensed',sans-serif;font-size:28px;font-weight:800;color:#f07020;text-decoration:none;display:flex;align-items:center;gap:8px;transition:color 0.2s}
+.nav-phone:hover{color:#ff8533}
+.nav-phone-label{font-size:10px;color:#a8c0e0;text-transform:uppercase;letter-spacing:1px;font-weight:700}
+.nav-links{display:flex;align-items:center;gap:2px;flex-wrap:nowrap}
+.nav-links>a,.nav-dd-trigger{font-size:13px;font-weight:600;color:#a8c0e0;padding:6px 10px;border-radius:6px;white-space:nowrap;transition:color 0.2s,background 0.2s;text-decoration:none;cursor:pointer;background:none;border:none;font-family:'Barlow',sans-serif;display:flex;align-items:center;gap:4px}
+.nav-links>a:hover,.nav-dd-trigger:hover,.nav-links>a.active,.nav-dd-trigger.active{color:#f0f4ff;background:rgba(240,112,32,0.15)}
+.nav-cta{background:#f07020!important;color:#fff!important;border-radius:8px;padding:8px 16px!important;font-size:13px;font-weight:700;text-decoration:none;white-space:nowrap}
+.nav-cta:hover{background:#ff8533!important}
+.nav-dd{position:relative}
+.nav-dd-trigger::after{content:'▾';font-size:10px;opacity:0.6}
+.nav-dd-panel{display:none;position:absolute;top:calc(100% + 8px);left:0;min-width:240px;background:#0d1e3c;border:1px solid #2a4a80;border-radius:10px;padding:8px;z-index:2000;box-shadow:0 8px 32px rgba(0,0,0,0.4)}
+.nav-dd-panel.right{left:auto;right:0}
+.nav-dd-panel.wide{min-width:300px}
+/* Mega-menu two-column */
+.nav-dd-panel.mega{min-width:560px;max-width:calc(100vw - 48px);display:none;grid-template-columns:1fr 1fr;gap:0 8px;padding:12px;overflow-y:auto;max-height:80vh}
+.nav-dd.open .nav-dd-panel.mega{display:grid}
+.mega-col{}
+.nav-dd.open .nav-dd-panel{display:block}
+.nav-dd-panel a{display:block;padding:9px 14px;border-radius:7px;font-size:13px;font-weight:600;color:#a8c0e0;text-decoration:none;transition:all 0.15s;white-space:nowrap}
+.nav-dd-panel a:hover{background:rgba(240,112,32,0.15);color:#f0f4ff}
+.nav-dd-panel .dd-divider{height:1px;background:#2a4a80;margin:6px 0}
+.nav-dd-panel .dd-label{font-size:10px;font-weight:700;color:#4a6a9a;letter-spacing:2px;text-transform:uppercase;padding:6px 14px 2px}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;background:none;border:none}
+.hamburger span{width:24px;height:2px;background:#f0f4ff;border-radius:2px;display:block;transition:all 0.3s}
+.mob-nav{display:none;position:fixed;top:120px;left:0;right:0;bottom:0;background:#0e1f3d;border-top:1px solid #2a4a80;z-index:998;overflow-y:auto;flex-direction:column}@media(max-width:600px){.mob-nav{top:104px;z-index:998}}
+.mob-nav.open{display:flex}
+.mob-section{border-bottom:1px solid #1a3060}
+.mob-section-title{font-size:11px;font-weight:700;color:#4a6a9a;letter-spacing:2px;text-transform:uppercase;padding:14px 20px 6px}
+.mob-nav a{display:block;padding:11px 20px;font-size:15px;font-weight:600;color:#a8c0e0;text-decoration:none;border-bottom:1px solid rgba(42,74,128,0.3)}
+.mob-nav a:hover{background:#132647;color:#f0f4ff}
+.mob-nav .mob-cta{background:#f07020;color:#fff;margin:16px;border-radius:8px;text-align:center;padding:14px}
+@media(max-width:960px){.nav-links{display:none}.hamburger{display:flex}}
+.hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.hamburger.open span:nth-child(2){opacity:0}
+.hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+/* ── ROTATING PROMO BANNER ── */
+#promo-banner{position:fixed;top:0;left:0;right:0;z-index:1100;height:40px;background:#f07020;display:flex;align-items:center;justify-content:center;gap:14px;font-family:'Barlow',sans-serif;overflow:hidden;padding:0 24px;margin:0;will-change:transform;box-sizing:border-box}
+#promo-banner .pb-text{font-size:13px;font-weight:700;color:#fff;white-space:nowrap;transition:opacity 0.4s;flex:0 1 auto;text-align:center}
+#promo-banner .pb-btn{background:#fff;color:#f07020;border:none;border-radius:5px;padding:5px 14px;font-size:12px;font-weight:800;cursor:pointer;white-space:nowrap;text-decoration:none;font-family:'Barlow',sans-serif;transition:background 0.2s,color 0.2s;flex-shrink:0;z-index:1101;position:relative}
+#promo-banner .pb-btn:hover{background:#0e1f3d;color:#fff}
+@media(max-width:960px){nav{top:40px;height:80px;z-index:1000}.nav-phone-wrap{display:none}}
+@media(max-width:600px){#promo-banner{height:40px;z-index:1100;padding:0 8px;gap:6px;flex-wrap:nowrap;overflow:hidden;justify-content:center;min-height:40px}#promo-banner .pb-text{font-size:10px;font-weight:800;flex:1 1 auto;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}#promo-banner .pb-btn{padding:4px 8px;font-size:10px;flex-shrink:0;white-space:nowrap}nav{top:40px;height:64px;padding:0 16px;z-index:1000}.logo-main{font-size:16px;letter-spacing:1px}.logo-sub{font-size:8px;letter-spacing:2px}.logo-line{height:2px;margin:2px 0}.nav-phone-wrap{display:none}}
+/* Hide React-rendered navs inside #root — prevents double nav on desktop scroll */
+#root nav[style*="position: fixed"] { display: none !important; }
+#root div[style*="z-index: 1001"] { display: none !important; }
+</style>
+<!-- ROTATING PROMO BANNER -->
+<div id="promo-banner">
+<span class="pb-text" id="pb-text"></span>
+<a class="pb-btn" href="tel:+61422469739" id="pb-btn">📞 Call Now</a>
+</div>
+<nav>
+<a class="logo" href="/">
+<span class="logo-main">Sydney Automation Co.</span>
+<span class="logo-line"></span>
+<span class="logo-sub">Lighting Control Specialists</span>
+</a>
+<div class="nav-phone-wrap">
+<span class="nav-phone-label">Direct Service Line</span>
+<a class="nav-phone" href="tel:+61422469739">0422 469 739</a>
+</div>
+<div class="nav-links">
+<!-- SERVICES (mega 2-col) -->
+<div class="nav-dd" id="dd-services">
+<button class="nav-dd-trigger">Services</button>
+<div class="nav-dd-panel mega">
+<div class="mega-col">
+<span class="dd-label">C-Bus</span>
+<a href="/c-bus-programmer-sydney">C-Bus Programming</a>
+<a href="/c-bus-repairs-sydney">C-Bus Repairs Sydney</a>
+<a href="/cbus-upgrade-sydney">C-Bus Upgrades</a>
+<a href="/cbus-fault-finding-sydney">C-Bus Fault Finding</a>
+<a href="/cbus-specialist-sydney">C-Bus Specialist</a>
+<a href="/c-bus-apple-homekit-sydney">C-Bus &amp; Apple HomeKit</a>
+<div class="dd-divider"></div>
+<span class="dd-label">Dynalite</span>
+<a href="/dynalite-programmer-sydney">Dynalite Programming</a>
+<a href="/dynalite-repair-sydney">Dynalite Repairs</a>
+<a href="/dynalite-fault-finding-sydney-common-faults">Dynalite Fault Finding</a>
+<div class="dd-divider"></div>
+<span class="dd-label">Lighting Control</span>
+<a href="/lighting-control-service-sydney">Lighting Control Service</a>
+<a href="/lighting-control-repair-sydney">Lighting Control Repair</a>
+<a href="/led-upgrade-carpark-lighting-sydney">LED Upgrades &amp; Car Parks</a>
+<a href="/carpark-lighting-upgrades-sydney">Car Park Upgrades</a>
+<a href="/building-lighting-upgrades-sydney">Building Lighting Upgrades</a>
+</div>
+<div class="mega-col">
+<span class="dd-label">Emergency &amp; Compliance</span>
+<a href="https://sydneyautomationco.online" rel="noopener" target="_blank">AFSS / OC / PC Compliance ↗</a>
+<a href="/emergency-lighting-compliance-afss-sydney">Emergency Lighting AFSS</a>
+<a href="/rapix-emergency-lighting-sydney">RAPIX Emergency Lighting</a>
+<a href="/emergency-lighting-hotels-hospitality-sydney">Hotels &amp; Hospitality</a>
+<a href="/emergency-lighting-train-stations-infrastructure-sydney">Train Stations &amp; Infrastructure</a>
+<a href="/emergency-repair-sydney">Emergency Repair</a>
+<div class="dd-divider"></div>
+<span class="dd-label">DALI &amp; RAPIX</span>
+<a href="/dali-lighting-repair">DALI Lighting Repair</a>
+<a href="/dali2-compliance-nsw-commercial">DALI-2 Compliance NSW</a>
+<a href="/rapix-lighting-control">RAPIX Lighting Control</a>
+<a href="/what-is-rapix-sydney-buildings">What is RAPIX?</a>
+<div class="dd-divider"></div>
+<span class="dd-label">Maintenance &amp; Contracts</span>
+<a href="/lighting-control-maintenance-sydney">Lighting Control Maintenance</a>
+<a href="/cbus-maintenance-sydney">C-Bus Maintenance</a>
+<a href="/dynalite-maintenance-sydney">Dynalite Maintenance</a>
+<a href="/lighting-control-service-contract-sydney">Service Contracts</a>
+<a href="/building-automation-maintenance-sydney">Building Automation</a>
+<a href="/facilities-lighting-maintenance-sydney">Facilities Maintenance</a>
+<a href="/services">All Services →</a>
+</div>
+</div>
+</div>
+<!-- AREAS -->
+<div class="nav-dd" id="dd-areas">
+<button class="nav-dd-trigger">Areas</button>
+<div class="nav-dd-panel">
+<span class="dd-label">Sydney Regions</span>
+<a href="/c-bus-programmer-sutherland-shire">Sutherland Shire</a>
+<a href="/c-bus-programmer-north-shore">North Shore</a>
+<a href="/c-bus-programmer-eastern-suburbs">Eastern Suburbs</a>
+<a href="/c-bus-programmer-inner-west">Inner West</a>
+<a href="/c-bus-programmer-northern-beaches">Northern Beaches</a>
+<a href="/c-bus-programmer-hills-district">Hills District</a>
+<a href="/c-bus-programmer-parramatta">Parramatta</a>
+<a href="/c-bus-programmer-st-george">St George</a>
+<a href="/c-bus-programmer-sydney-cbd">Sydney CBD</a>
+<div class="dd-divider"></div>
+<a href="/shire">Sutherland Shire Hub</a>
+<a href="/locations">All Service Areas →</a>
+</div>
+</div>
+<!-- CLIENTS -->
+<div class="nav-dd" id="dd-clients">
+<button class="nav-dd-trigger">Clients</button>
+<div class="nav-dd-panel right">
+<a href="/strata-managers-lighting-control-sydney">Strata Managers</a>
+<a href="/building-manager-lighting-support-sydney">Building Managers</a>
+<a href="/facility-managers-cbus-dynalite-dali-guide">Facility Managers</a>
+<a href="/electricians">Electricians</a>
+<a href="/sydney-electricians-cbus-dynalite-partnership">Electrician Partnership</a>
+<a href="/real-estate-cbus-audit-sydney">Real Estate Agents</a>
+<a href="/strata-lighting-compliance-sydney">Strata Compliance</a>
+<a href="/strata">Strata &amp; FM Hub</a>
+</div>
+</div>
+<!-- RESOURCES -->
+<div class="nav-dd" id="dd-resources">
+<button class="nav-dd-trigger">Resources</button>
+<div class="nav-dd-panel right">
+<span class="dd-label">Guides &amp; Blog</span>
+<a href="/blog">Blog</a>
+<a href="/guides">Guides</a>
+<a href="/cbus-vs-dynalite">C-Bus vs Dynalite</a>
+<a href="/dynalite-vs-cbus-sydney">Dynalite vs C-Bus</a>
+<a href="/how-to-choose-cbus-specialist-sydney">How to Choose a C-Bus Specialist</a>
+<a href="/cbus-dynalite-upgrade-guide">C-Bus &amp; Dynalite Upgrade Guide</a>
+<a href="/blog-dali-2-compliance-guide-sydney-building-managers">DALI-2 Compliance Guide</a>
+<a href="/blog-strata-lighting-energy-savings-sydney">Strata Energy Savings</a>
+<div class="dd-divider"></div>
+<span class="dd-label">Company</span>
+<a href="/projects">Projects</a>
+<a href="/about">About</a>
+<a href="/4-years-building-facilities-management-jll-pbmg">George's Background</a>
+</div>
+</div>
+<a href="/contact">Contact</a>
+<a class="nav-cta" href="tel:0422469739">📞 Call Now</a>
+</div>
+<button aria-label="Menu" class="hamburger" id="hamburger">
+<span></span><span></span><span></span>
+</button>
+</nav>
+<div class="mob-nav" id="mobNav">
+<div class="mob-section">
+<div class="mob-section-title">C-Bus Services</div>
+<a href="/c-bus-programmer-sydney">C-Bus Programming</a>
+<a href="/c-bus-repairs-sydney">C-Bus Repairs Sydney</a>
+<a href="/cbus-upgrade-sydney">C-Bus Upgrades</a>
+<a href="/cbus-fault-finding-sydney">C-Bus Fault Finding</a>
+<a href="/cbus-specialist-sydney">C-Bus Specialist</a>
+<a href="/c-bus-apple-homekit-sydney">C-Bus &amp; Apple HomeKit</a>
+</div>
+<div class="mob-section">
+<div class="mob-section-title">Dynalite Services</div>
+<a href="/dynalite-programmer-sydney">Dynalite Programming</a>
+<a href="/dynalite-repair-sydney">Dynalite Repairs</a>
+<a href="/dynalite-fault-finding-sydney-common-faults">Dynalite Fault Finding</a>
+</div>
+<div class="mob-section">
+<div class="mob-section-title">Emergency Lighting</div>
+<a href="/emergency-lighting-compliance-afss-sydney">AFSS / OC / PC Compliance</a>
+<a href="/rapix-emergency-lighting-sydney">RAPIX Emergency Lighting</a>
+<a href="/emergency-lighting-hotels-hospitality-sydney">Hotels &amp; Hospitality</a>
+<a href="/emergency-lighting-train-stations-infrastructure-sydney">Train Stations &amp; Infrastructure</a>
+<a href="/emergency-repair-sydney">Emergency Repair</a>
+</div>
+<div class="mob-section">
+<div class="mob-section-title">DALI &amp; RAPIX</div>
+<a href="/dali-lighting-repair">DALI Lighting Repair</a>
+<a href="/dali2-compliance-nsw-commercial">DALI-2 Compliance NSW</a>
+<a href="/rapix-lighting-control">RAPIX Lighting Control</a>
+<a href="/what-is-rapix-sydney-buildings">What is RAPIX?</a>
+<a href="/led-upgrade-carpark-lighting-sydney">LED Upgrades</a>
+</div>
+<div class="mob-section">
+<div class="mob-section-title">Service Areas</div>
+<a href="/c-bus-programmer-sutherland-shire">Sutherland Shire</a>
+<a href="/c-bus-programmer-north-shore">North Shore</a>
+<a href="/c-bus-programmer-eastern-suburbs">Eastern Suburbs</a>
+<a href="/c-bus-programmer-northern-beaches">Northern Beaches</a>
+<a href="/c-bus-programmer-hills-district">Hills District</a>
+<a href="/c-bus-programmer-parramatta">Parramatta</a>
+<a href="/locations">All Areas →</a>
+</div>
+<div class="mob-section">
+<div class="mob-section-title">Clients</div>
+<a href="/strata-managers-lighting-control-sydney">Strata Managers</a>
+<a href="/building-manager-lighting-support-sydney">Building Managers</a>
+<a href="/facility-managers-cbus-dynalite-dali-guide">Facility Managers</a>
+<a href="/electricians">Electricians</a>
+<a href="/real-estate-cbus-audit-sydney">Real Estate</a>
+<a href="/strata">Strata &amp; FM Hub</a>
+</div>
+<div class="mob-section">
+<div class="mob-section-title">Resources</div>
+<a href="/blog">Blog</a>
+<a href="/guides">Guides</a>
+<a href="/cbus-vs-dynalite">C-Bus vs Dynalite</a>
+<a href="/how-to-choose-cbus-specialist-sydney">How to Choose a Specialist</a>
+<a href="/projects">Projects</a>
+<a href="/about">About</a>
+<a href="/contact">Contact</a>
+</div>
+<a class="mob-cta" href="tel:+61422469739">📞 Call Now — Same Day Response</a>
+</div>
+<div id="pb-body-offset" style="display:none"></div>
+<script>
+(function(){
+  // Dropdown toggle
+  document.querySelectorAll('.nav-dd').forEach(function(dd){
+    var trigger = dd.querySelector('.nav-dd-trigger');
+    if(!trigger) return;
+    trigger.addEventListener('click', function(e){
+      e.stopPropagation();
+      var isOpen = dd.classList.contains('open');
+      // close all
+      document.querySelectorAll('.nav-dd.open').forEach(function(d){ d.classList.remove('open'); });
+      if(!isOpen){ dd.classList.add('open'); }
+    });
+  });
+  // Close on outside click
+  document.addEventListener('click', function(){
+    document.querySelectorAll('.nav-dd.open').forEach(function(d){ d.classList.remove('open'); });
+  });
+  // Hamburger
+  var ham = document.getElementById('hamburger');
+  var mob = document.getElementById('mobNav');
+  if(ham && mob){
+    ham.addEventListener('click', function(e){
+      e.stopPropagation();
+      var open = mob.classList.toggle('open');
+      ham.classList.toggle('open', open);
+    });
+    // Close mob nav on link click
+    mob.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click', function(){
+        mob.classList.remove('open');
+        ham.classList.remove('open');
+      });
+    });
+  }
+  // Close mob nav on outside click
+  document.addEventListener('click', function(e){
+    if(mob && !mob.contains(e.target) && ham && !ham.contains(e.target)){
+      mob.classList.remove('open');
+      if(ham) ham.classList.remove('open');
+    }
+  });
+})();
+</script>
+<!-- /CANONICAL NAV INJECTION -->
+<div id="loading"><div class="spinner"></div><div style="font-size:13px;letter-spacing:1px;margin-top:8px">SYDNEY AUTOMATION CO.</div></div>
+<div id="root"></div>
+<!-- WhatsApp Lead Weapon -->
+<style>
+  .wa-float {
+    position: fixed;
+    bottom: 24px;
+    left: 24px;
+    z-index: 400;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  .wa-float:hover { transform: scale(1.05); }
+  .wa-msg {
+    background: white;
+    color: #0e1f3d;
+    padding: 8px 16px;
+    border-radius: 12px;
+    font-size: 13px;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    border: 1px solid #e2e8f0;
+    position: relative;
+    animation: waBounce 5s infinite;
+  }
+  .wa-msg::after {
+    content: '';
+    position: absolute;
+    right: -6px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-left: 6px solid white;
+    border-top: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+  }
+  .wa-icon-box {
+    width: 56px;
+    height: 56px;
+    background: #25d366;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+    position: relative;
+  }
+  .wa-badge {
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    background: #ff4400;
+    color: white;
+    font-size: 10px;
+    font-weight: 900;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #fff;
+    animation: pulse 2s infinite;
+  }
+  @keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(255, 68, 0, 0.7); }
+    70% { box-shadow: 0 0 0 10px rgba(255, 68, 0, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(255, 68, 0, 0); }
+  }
+  @keyframes waBounce {
+    0%, 90%, 100% { transform: translateY(0); }
+    95% { transform: translateY(-5px); }
+  }
+  @media (max-width: 600px) { .wa-msg { display: none; } }
+
+  /* Sticky mobile call bar */
+  #mob-call-bar {
+    display: none;
+    position: fixed;
+    bottom: 0; left: 0; right: 0;
+    z-index: 10000;
+    background: linear-gradient(135deg, #f07020, #f0a020);
+    box-shadow: 0 -4px 20px rgba(240,112,32,0.45);
+  }
+  #mob-call-bar a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 15px 20px calc(15px + env(safe-area-inset-bottom, 0px)) 20px;
+    text-decoration: none;
+    color: #0e1f3d;
+    font-family: 'Barlow', sans-serif;
+    font-weight: 900;
+    font-size: 17px;
+    letter-spacing: 0.5px;
+  }
+  @media (max-width: 768px) {
+     #root div[style*="z-index: 999"] { display: none !important; }
+    #mob-call-bar { display: block; }
+    .wa-float { bottom: 90px; }
+#root { padding-bottom: 90px; }
+  }
+</style>
+<a class="wa-float" href="https://wa.me/61422469739?text=Hi%20George%2C%20I%20have%20a%20C-Bus%20or%20Dynalite%20issue.%20Can%20you%20help%3F" rel="noopener" target="_blank">
+<div class="wa-msg">📞 Call or 💬 SMS George</div>
+<div class="wa-icon-box">
+<div class="wa-badge">1</div>
+<svg fill="#fff" height="30" viewbox="0 0 24 24" width="30"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.438 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.438-9.89 9.886-.001 2.125.593 3.456 1.574 5.111l-.973 3.558 3.589-.942zm9.366-7.312c-.12-.194-.443-.313-.927-.552-.484-.24-.2.85-.313-.1.1-.194.226-.34.339-.442l-.46-.356c-.194-.242-.313-.443-.1-.927-.239-.484-.443-.24-.927-.24h-.356c-.194 0-.313.12-.442.24l-1.611 1.611c-.34.339-.533.805-.533 1.304 0 .498.193.965.533 1.304l3.141 3.141c.339.34.806.533 1.304.533.499 0 .965-.193 1.304-.533l1.192-1.191c.12-.12.24-.34.24-.553 0-.212-.12-.442-.24-.553l-1.232-1.232z"></path></svg>
+</div>
+</a><!-- Sticky mobile call bar -->
+<div id="mob-call-bar">
+<a href="tel:0422469739">
+    📞 TAP TO CALL — 0422 469 739
+  </a>
+</div>
+<script>window.__GEORGE_PHOTO__="/george-photo.png";</script>
+<script>
+(() => {
+  var __create = Object.create;
+  var __defProp = Object.defineProperty;
+  var __defProps = Object.defineProperties;
+  var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
+  var __getOwnPropDescs = Object.getOwnPropertyDescriptors;
+  var __getOwnPropNames = Object.getOwnPropertyNames;
+  var __getOwnPropSymbols = Object.getOwnPropertySymbols;
+  var __getProtoOf = Object.getPrototypeOf;
+  var __hasOwnProp = Object.prototype.hasOwnProperty;
+  var __propIsEnum = Object.prototype.propertyIsEnumerable;
+  var __defNormalProp = (obj, key, value) => key in obj ? __defProp(obj, key, { enumerable: true, configurable: true, writable: true, value }) : obj[key] = value;
+  var __spreadValues = (a, b) => {
+    for (var prop in b || (b = {}))
+      if (__hasOwnProp.call(b, prop))
+        __defNormalProp(a, prop, b[prop]);
+    if (__getOwnPropSymbols)
+      for (var prop of __getOwnPropSymbols(b)) {
+        if (__propIsEnum.call(b, prop))
+          __defNormalProp(a, prop, b[prop]);
+      }
+    return a;
+  };
+  var __spreadProps = (a, b) => __defProps(a, __getOwnPropDescs(b));
+  var __commonJS = (cb, mod) => function __require() {
+    return mod || (0, cb[__getOwnPropNames(cb)[0]])((mod = { exports: {} }).exports, mod), mod.exports;
+  };
+  var __copyProps = (to, from, except, desc) => {
+    if (from && typeof from === "object" || typeof from === "function") {
+      for (let key of __getOwnPropNames(from))
+        if (!__hasOwnProp.call(to, key) && key !== except)
+          __defProp(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc(from, key)) || desc.enumerable });
+    }
+    return to;
+  };
+  var __toESM = (mod, isNodeMode, target) => (target = mod != null ? __create(__getProtoOf(mod)) : {}, __copyProps(
+    // If the importer is in node compatibility mode or this is not an ESM
+    // file that has been converted to a CommonJS file using a Babel-
+    // compatible transform (i.e. "__esModule" has not been set), then set
+    // "default" to the CommonJS "module.exports" for node compatibility.
+    isNodeMode || !mod || !mod.__esModule ? __defProp(target, "default", { value: mod, enumerable: true }) : target,
+    mod
+  ));
+
+  // .npm-global/lib/node_modules/react/cjs/react.production.js
+  var require_react_production = __commonJS({
+    ".npm-global/lib/node_modules/react/cjs/react.production.js"(exports) {
+      "use strict";
+      var REACT_ELEMENT_TYPE = /* @__PURE__ */ Symbol.for("react.transitional.element");
+      var REACT_PORTAL_TYPE = /* @__PURE__ */ Symbol.for("react.portal");
+      var REACT_FRAGMENT_TYPE = /* @__PURE__ */ Symbol.for("react.fragment");
+      var REACT_STRICT_MODE_TYPE = /* @__PURE__ */ Symbol.for("react.strict_mode");
+      var REACT_PROFILER_TYPE = /* @__PURE__ */ Symbol.for("react.profiler");
+      var REACT_CONSUMER_TYPE = /* @__PURE__ */ Symbol.for("react.consumer");
+      var REACT_CONTEXT_TYPE = /* @__PURE__ */ Symbol.for("react.context");
+      var REACT_FORWARD_REF_TYPE = /* @__PURE__ */ Symbol.for("react.forward_ref");
+      var REACT_SUSPENSE_TYPE = /* @__PURE__ */ Symbol.for("react.suspense");
+      var REACT_MEMO_TYPE = /* @__PURE__ */ Symbol.for("react.memo");
+      var REACT_LAZY_TYPE = /* @__PURE__ */ Symbol.for("react.lazy");
+      var REACT_ACTIVITY_TYPE = /* @__PURE__ */ Symbol.for("react.activity");
+      var MAYBE_ITERATOR_SYMBOL = Symbol.iterator;
+      function getIteratorFn(maybeIterable) {
+        if (null === maybeIterable || "object" !== typeof maybeIterable) return null;
+        maybeIterable = MAYBE_ITERATOR_SYMBOL && maybeIterable[MAYBE_ITERATOR_SYMBOL] || maybeIterable["@@iterator"];
+        return "function" === typeof maybeIterable ? maybeIterable : null;
+      }
+      var ReactNoopUpdateQueue = {
+        isMounted: function() {
+          return false;
+        },
+        enqueueForceUpdate: function() {
+        },
+        enqueueReplaceState: function() {
+        },
+        enqueueSetState: function() {
+        }
+      };
+      var assign = Object.assign;
+      var emptyObject = {};
+      function Component(props, context, updater) {
+        this.props = props;
+        this.context = context;
+        this.refs = emptyObject;
+        this.updater = updater || ReactNoopUpdateQueue;
+      }
+      Component.prototype.isReactComponent = {};
+      Component.prototype.setState = function(partialState, callback) {
+        if ("object" !== typeof partialState && "function" !== typeof partialState && null != partialState)
+          throw Error(
+            "takes an object of state variables to update or a function which returns an object of state variables."
+          );
+        this.updater.enqueueSetState(this, partialState, callback, "setState");
+      };
+      Component.prototype.forceUpdate = function(callback) {
+        this.updater.enqueueForceUpdate(this, callback, "forceUpdate");
+      };
+      function ComponentDummy() {
+      }
+      ComponentDummy.prototype = Component.prototype;
+      function PureComponent(props, context, updater) {
+        this.props = props;
+        this.context = context;
+        this.refs = emptyObject;
+        this.updater = updater || ReactNoopUpdateQueue;
+      }
+      var pureComponentPrototype = PureComponent.prototype = new ComponentDummy();
+      pureComponentPrototype.constructor = PureComponent;
+      assign(pureComponentPrototype, Component.prototype);
+      pureComponentPrototype.isPureReactComponent = true;
+      var isArrayImpl = Array.isArray;
+      function noop() {
+      }
+      var ReactSharedInternals = { H: null, A: null, T: null, S: null };
+      var hasOwnProperty = Object.prototype.hasOwnProperty;
+      function ReactElement(type, key, props) {
+        var refProp = props.ref;
+        return {
+          $$typeof: REACT_ELEMENT_TYPE,
+          type,
+          key,
+          ref: void 0 !== refProp ? refProp : null,
+          props
+        };
+      }
+      function cloneAndReplaceKey(oldElement, newKey) {
+        return ReactElement(oldElement.type, newKey, oldElement.props);
+      }
+      function isValidElement(object) {
+        return "object" === typeof object && null !== object && object.$$typeof === REACT_ELEMENT_TYPE;
+      }
+      function escape(key) {
+        var escaperLookup = { "=": "=0", ":": "=2" };
+        return "$" + key.replace(/[=:]/g, function(match) {
+          return escaperLookup[match];
+        });
+      }
+      var userProvidedKeyEscapeRegex = /\/+/g;
+      function getElementKey(element, index) {
+        return "object" === typeof element && null !== element && null != element.key ? escape("" + element.key) : index.toString(36);
+      }
+      function resolveThenable(thenable) {
+        switch (thenable.status) {
+          case "fulfilled":
+            return thenable.value;
+          case "rejected":
+            throw thenable.reason;
+          default:
+            switch ("string" === typeof thenable.status ? thenable.then(noop, noop) : (thenable.status = "pending", thenable.then(
+              function(fulfilledValue) {
+                "pending" === thenable.status && (thenable.status = "fulfilled", thenable.value = fulfilledValue);
+              },
+              function(error) {
+                "pending" === thenable.status && (thenable.status = "rejected", thenable.reason = error);
+              }
+            )), thenable.status) {
+              case "fulfilled":
+                return thenable.value;
+              case "rejected":
+                throw thenable.reason;
+            }
+        }
+        throw thenable;
+      }
+      function mapIntoArray(children, array, escapedPrefix, nameSoFar, callback) {
+        var type = typeof children;
+        if ("undefined" === type || "boolean" === type) children = null;
+        var invokeCallback = false;
+        if (null === children) invokeCallback = true;
+        else
+          switch (type) {
+            case "bigint":
+            case "string":
+            case "number":
+              invokeCallback = true;
+              break;
+            case "object":
+              switch (children.$$typeof) {
+                case REACT_ELEMENT_TYPE:
+                case REACT_PORTAL_TYPE:
+                  invokeCallback = true;
+                  break;
+                case REACT_LAZY_TYPE:
+                  return invokeCallback = children._init, mapIntoArray(
+                    invokeCallback(children._payload),
+                    array,
+                    escapedPrefix,
+                    nameSoFar,
+                    callback
+                  );
+              }
+          }
+        if (invokeCallback)
+          return callback = callback(children), invokeCallback = "" === nameSoFar ? "." + getElementKey(children, 0) : nameSoFar, isArrayImpl(callback) ? (escapedPrefix = "", null != invokeCallback && (escapedPrefix = invokeCallback.replace(userProvidedKeyEscapeRegex, "$&/") + "/"), mapIntoArray(callback, array, escapedPrefix, "", function(c) {
+            return c;
+          })) : null != callback && (isValidElement(callback) && (callback = cloneAndReplaceKey(
+            callback,
+            escapedPrefix + (null == callback.key || children && children.key === callback.key ? "" : ("" + callback.key).replace(
+              userProvidedKeyEscapeRegex,
+              "$&/"
+            ) + "/") + invokeCallback
+          )), array.push(callback)), 1;
+        invokeCallback = 0;
+        var nextNamePrefix = "" === nameSoFar ? "." : nameSoFar + ":";
+        if (isArrayImpl(children))
+          for (var i = 0; i < children.length; i++)
+            nameSoFar = children[i], type = nextNamePrefix + getElementKey(nameSoFar, i), invokeCallback += mapIntoArray(
+              nameSoFar,
+              array,
+              escapedPrefix,
+              type,
+              callback
+            );
+        else if (i = getIteratorFn(children), "function" === typeof i)
+          for (children = i.call(children), i = 0; !(nameSoFar = children.next()).done; )
+            nameSoFar = nameSoFar.value, type = nextNamePrefix + getElementKey(nameSoFar, i++), invokeCallback += mapIntoArray(
+              nameSoFar,
+              array,
+              escapedPrefix,
+              type,
+              callback
+            );
+        else if ("object" === type) {
+          if ("function" === typeof children.then)
+            return mapIntoArray(
+              resolveThenable(children),
+              array,
+              escapedPrefix,
+              nameSoFar,
+              callback
+            );
+          array = String(children);
+          throw Error(
+            "Objects are not valid as a React child (found: " + ("[object Object]" === array ? "object with keys {" + Object.keys(children).join(", ") + "}" : array) + "). If you meant to render a collection of children, use an array instead."
+          );
+        }
+        return invokeCallback;
+      }
+      function mapChildren(children, func, context) {
+        if (null == children) return children;
+        var result = [], count = 0;
+        mapIntoArray(children, result, "", "", function(child) {
+          return func.call(context, child, count++);
+        });
+        return result;
+      }
+      function lazyInitializer(payload) {
+        if (-1 === payload._status) {
+          var ctor = payload._result;
+          ctor = ctor();
+          ctor.then(
+            function(moduleObject) {
+              if (0 === payload._status || -1 === payload._status)
+                payload._status = 1, payload._result = moduleObject;
+            },
+            function(error) {
+              if (0 === payload._status || -1 === payload._status)
+                payload._status = 2, payload._result = error;
+            }
+          );
+          -1 === payload._status && (payload._status = 0, payload._result = ctor);
+        }
+        if (1 === payload._status) return payload._result.default;
+        throw payload._result;
+      }
+      var reportGlobalError = "function" === typeof reportError ? reportError : function(error) {
+        if ("object" === typeof window && "function" === typeof window.ErrorEvent) {
+          var event = new window.ErrorEvent("error", {
+            bubbles: true,
+            cancelable: true,
+            message: "object" === typeof error && null !== error && "string" === typeof error.message ? String(error.message) : String(error),
+            error
+          });
+          if (!window.dispatchEvent(event)) return;
+        } else if ("object" === typeof process && "function" === typeof process.emit) {
+          process.emit("uncaughtException", error);
+          return;
+        }
+        console.error(error);
+      };
+      var Children = {
+        map: mapChildren,
+        forEach: function(children, forEachFunc, forEachContext) {
+          mapChildren(
+            children,
+            function() {
+              forEachFunc.apply(this, arguments);
+            },
+            forEachContext
+          );
+        },
+        count: function(children) {
+          var n = 0;
+          mapChildren(children, function() {
+            n++;
+          });
+          return n;
+        },
+        toArray: function(children) {
+          return mapChildren(children, function(child) {
+            return child;
+          }) || [];
+        },
+        only: function(children) {
+          if (!isValidElement(children))
+            throw Error(
+              "React.Children.only expected to receive a single React element child."
+            );
+          return children;
+        }
+      };
+      exports.Activity = REACT_ACTIVITY_TYPE;
+      exports.Children = Children;
+      exports.Component = Component;
+      exports.Fragment = REACT_FRAGMENT_TYPE;
+      exports.Profiler = REACT_PROFILER_TYPE;
+      exports.PureComponent = PureComponent;
+      exports.StrictMode = REACT_STRICT_MODE_TYPE;
+      exports.Suspense = REACT_SUSPENSE_TYPE;
+      exports.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE = ReactSharedInternals;
+      exports.__COMPILER_RUNTIME = {
+        __pro

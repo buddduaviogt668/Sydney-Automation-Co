@@ -68,7 +68,7 @@
 }
 </script>
 
-<!-- AggregateRating Schema (11 Reviews) -->
+<!-- AggregateRating Schema (13 Reviews) -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -77,7 +77,7 @@
   "aggregateRating": {
     "@type": "AggregateRating",
     "ratingValue": "5.0",
-    "reviewCount": "11"
+    "reviewCount": "13"
   }
 }
 </script>
@@ -274,14 +274,27 @@ footer { background: #132647; border-top: 1px solid #2a4a80; padding: 48px 24px 
 /* TESTIMONIALS */
 .tm-container { margin: 48px 0; }
 .tm-header { text-align: center; margin-bottom: 40px; }
-.tm-track { display: flex; gap: 20px; overflow-x: auto; scroll-snap-type: x mandatory; padding: 20px 0; margin: 0 -24px; padding-left: 24px; padding-right: 24px; }
+.tm-track { display: flex; gap: 24px; overflow-x: auto; scroll-snap-type: x mandatory; padding: 20px 0; margin: 0 -24px; padding-left: 24px; padding-right: 24px; scroll-behavior: smooth; }
 .tm-track::-webkit-scrollbar { display: none; }
-.tm-card { flex: 0 0 340px; scroll-snap-align: start; background: #fff; border-radius: 12px; padding: 28px 24px; box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07); display: flex; flex-direction: column; gap: 12px; }
-.tm-stars { color: #f5a623; font-size: 18px; letter-spacing: 2px; }
-.tm-text { color: #333; font-size: 14.5px; line-height: 1.65; flex: 1; margin: 0; font-family: 'Barlow', sans-serif; }
-.tm-author { font-weight: 700; color: #0d1a30; font-size: 15px; font-family: 'Barlow', sans-serif; }
-.tm-role { font-size: 12.5px; color: #777; font-family: 'Barlow', sans-serif; }
-@media(max-width: 600px) { .tm-card { flex: 0 0 88vw; } }
+.tm-card { 
+  flex: 0 0 380px; 
+  scroll-snap-align: center; 
+  background: rgba(255, 255, 255, 0.03); 
+  border: 1px solid rgba(255, 255, 255, 0.08); 
+  backdrop-filter: blur(10px); 
+  border-radius: 20px; 
+  padding: 40px 32px; 
+  display: flex; 
+  flex-direction: column; 
+  gap: 20px; 
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1); 
+}
+.tm-card:hover { background: rgba(255, 255, 255, 0.06); border-color: rgba(240, 112, 32, 0.3); transform: translateY(-5px); }
+.tm-stars { color: #f07020; font-size: 16px; letter-spacing: 4px; }
+.tm-text { color: #e2e8f0; font-size: 16px; line-height: 1.7; margin: 0; font-family: 'Barlow', sans-serif; font-style: italic; flex-grow: 1; }
+.tm-author { font-weight: 800; color: #fff; font-size: 16px; font-family: 'Barlow Condensed', sans-serif; text-transform: uppercase; letter-spacing: 1px; }
+.tm-role { font-size: 13px; color: #a8c0e0; font-family: 'Barlow', sans-serif; margin-top: 4px; }
+@media(max-width: 600px) { .tm-card { flex: 0 0 85vw; } }
 
 /* FAQ */
 .faq-item { border: 1px solid #2a4a80; border-radius: 12px; margin-bottom: 8px; overflow: hidden; }
@@ -530,7 +543,7 @@ footer { background: #132647; border-top: 1px solid #2a4a80; padding: 48px 24px 
 <!-- TRUST BAR -->
 <div class="trust-bar">
   <div class="trust-bar-inner">
-    <div class="trust-item"><span class="dot">⭐</span> <strong>5.0 Rating</strong> — 12 Google Reviews</div>
+    <div class="trust-item"><span class="dot">⭐</span> <strong>5.0 Rating</strong> — 13 Google Reviews</div>
     <div class="trust-item"><span class="dot">✓</span> 100+ Systems Serviced</div>
     <div class="trust-item"><span class="dot">✓</span> 15+ Years Experience</div>
     <div class="trust-item"><span class="dot">✓</span> Same-Day Response</div>
@@ -606,7 +619,7 @@ footer { background: #132647; border-top: 1px solid #2a4a80; padding: 48px 24px 
       </div>
       <div class="card">
         <div class="badge">Parramatta</div>
-        <h3 style="margin-top: 12px;">WSU Automation</h3>
+        <h3 style="margin-top: 12px;">WSU 1 Parramatta Square</h3>
         <p class="dim" style="margin-bottom: 16px;">Automated blind control system with full C-Bus integration across multiple levels.</p>
         <a href="/projects" class="btn btn-primary" style="width: 100%; text-align: center;">View Project →</a>
       </div>
@@ -690,9 +703,15 @@ footer { background: #132647; border-top: 1px solid #2a4a80; padding: 48px 24px 
         <p class="tm-author">Jim Vassil</p>
         <p class="tm-role">Kebia Importex</p>
       </div>
+      <div class="tm-card">
+        <div class="tm-stars">★★★★★</div>
+        <p class="tm-text">"High quality and fair price. Project delivered on time."</p>
+        <p class="tm-author">Fady Geagea</p>
+        <p class="tm-role">Residential Client, Sydney</p>
+      </div>
     </div>
     <div style="text-align: center; margin-top: 24px;">
-      <a href="https://g.page/r/CQK7ChOgqNZ2EBM/review" class="btn btn-outline">See All 11 Reviews on Google →</a>
+      <a href="https://g.page/r/CQK7ChOgqNZ2EBM/review" class="btn btn-outline">See All 13 Reviews on Google →</a>
     </div>
   </div>
 </div>
@@ -851,7 +870,7 @@ var msgs=[
   {t:"Is Your C-Bus Not Working?", btn:"📞 Call Now", href:"tel:0422469739"},
   {t:"Lights Flickering or Not Responding?", btn:"Call Now", href:"tel:0422469739"},
   {t:"Same-Day Lighting Control Fault Finding", btn:"📞 Call Now", href:"tel:0422469739"},
-  {t:"⭐ 5.0 Google Rating — 11 Reviews", btn:"See Reviews", href:"https://g.page/r/CQK7ChOgqNZ2EBM/review"},
+  {t:"⭐ 5.0 Google Rating — 13 Reviews", btn:"See Reviews", href:"https://g.page/r/CQK7ChOgqNZ2EBM/review"},
   {t:"Strata & Commercial Lighting Specialists", btn:"📞 Call Now", href:"tel:0422469739"},
   {t:"Maintenance & Service Contracts Available", btn:"Find Out More", href:"/lighting-control-service-contract-sydney"},
   {t:"Emergency Lighting Repairs & Compliance", btn:"Book Service", href:"/emergency-lighting-compliance-afss-sydney"},
