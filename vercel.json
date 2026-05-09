@@ -635,6 +635,11 @@
       "source": "/page/:path*",
       "destination": "/",
       "permanent": true
+    },
+    {
+      "source": "/(.+)\\.html",
+      "destination": "/$1",
+      "permanent": true
     }
   ],
   "headers": [
@@ -670,15 +675,6 @@
     },
     {
       "source": "/robots.txt",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=3600, must-revalidate"
-        }
-      ]
-    },
-    {
-      "source": "/(.*)\\.html",
       "headers": [
         {
           "key": "Cache-Control",
