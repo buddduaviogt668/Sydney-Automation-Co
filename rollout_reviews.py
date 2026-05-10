@@ -113,15 +113,6 @@ CAROUSEL_BLOCK = """<!-- ===== PREMIUM TESTIMONIALS CAROUSEL ===== -->
           </div>
         </div>
 
-        <div class="tm-card">
-          <div class="tm-stars">★★★★★</div>
-          <p class="tm-text">"High quality and fair price. Project delivered on time."</p>
-          <div class="tm-footer">
-            <div class="tm-author">Fady Geagea</div>
-            <div class="tm-role">Residential Client, Sydney</div>
-          </div>
-        </div>
-
       </div>
 
       <div class="tm-controls">
@@ -172,6 +163,7 @@ CAROUSEL_BLOCK = """<!-- ===== PREMIUM TESTIMONIALS CAROUSEL ===== -->
     const track = document.getElementById('tm-track');
     let isPaused = false;
     window.tmSlide = function(d) {
+      if(!track) return;
       const cardWidth = track.querySelector('.tm-card').offsetWidth + 24;
       track.scrollBy({ left: d * cardWidth, behavior: 'smooth' });
     };
@@ -187,32 +179,51 @@ CAROUSEL_BLOCK = """<!-- ===== PREMIUM TESTIMONIALS CAROUSEL ===== -->
 </script>
 <!-- ===== /PREMIUM TESTIMONIALS CAROUSEL ===== -->"""
 
-files_to_update = [
-    'c-bus-programmer-sydney.html',
-    'c-bus-repairs-sydney.html',
-    'dynalite-programmer-sydney.html'
-]
+def update_file(filepath):
+    try:
+        with open(filepath, 'r', encoding='utf-8') as f:
+            content = f.read()
 
-# Pattern to find existing carousel blocks
-pattern = re.compile(r'<!-- ===== PREMIUM TESTIMONIALS CAROUSEL ===== -->.*?<!-- ===== /PREMIUM TESTIMONIALS CAROUSEL ===== -->', re.DOTALL)
+        original_content = content
 
-for filename in files_to_update:
-    file_path = filename
-    if not os.path.exists(file_path): 
-        print(f"Skipping {filename}")
-        continue
+        # 1. REMOVE PREVIOUS MARKED BLOCKS (Idempotency)
+        content = re.sub(r'<!-- ===== PREMIUM TESTIMONIALS CAROUSEL ===== -->.*?<!-- ===== /PREMIUM TESTIMONIALS CAROUSEL ===== -->', '', content, flags=re.DOTALL)
+
+        # 2. REMOVE LEGACY/UNMARKED TESTIMONIAL SECTIONS
+        # a. Standard section id="testimonials"
+        content = re.sub(r'<section id="testimonials".*?</section>', '', content, flags=re.DOTALL)
         
-    with open(file_path, 'r', encoding='utf-8') as f:
-        content = f.read()
-    
-    # Remove all existing blocks
-    new_content = pattern.sub('', content)
-    
-    # Insert new block before </body>
-    if '</body>' in new_content:
-        new_content = new_content.replace('</body>', '\n' + CAROUSEL_BLOCK + '\n</body>')
-        with open(file_path, 'w', encoding='utf-8') as f:
-            f.write(new_content)
-        print(f"SUCCESS: Updated carousel in {filename}")
-    else:
-        print(f"ERROR: </body> not found in {filename}")
+        # b. Homepage style legacy sections (div class="section" with "What Our Clients Say")
+        content = re.sub(r'<!-- TESTIMONIALS -->.*?What Our <span class="accent">Clients Say</span>.*?</div>\s*</div>\s*</div>', '', content, flags=re.DOTALL)
+        
+        # c. Any section containing "What Our Clients Say"
+        content = re.sub(r'<div class="section">\s*<div class="container">\s*<div class="section-header">\s*<h2>What Our <span class="accent">Clients Say</span></h2>.*?</div>\s*</div>\s*</div>', '', content, flags=re.DOTALL)
+
+        # d. Catch-all for any tag with id="tm-track" that isn't already inside a marked block
+        content = re.sub(r'<div[^>]*id="tm-track".*?</div>\s*</div>\s*</div>', '', content, flags=re.DOTALL)
+
+        # 3. Update reviewCount to 11 in schema
+        content = re.sub(r'("reviewCount":\s*)"\d+"', r'\1"11"', content)
+        
+        # 4. Add the new block before </body>
+        if '</body>' in content:
+            content = content.replace('</body>', CAROUSEL_BLOCK + '\n</body>')
+        
+        # Only write if changed
+        if content != original_content:
+            with open(filepath, 'w', encoding='utf-8') as f:
+                f.write(content)
+            return True
+    except Exception as e:
+        print(f"ERROR processing {filepath}: {e}")
+    return False
+
+# Main rollout
+html_files = [f for f in os.listdir('.') if f.endswith('.html')]
+count = 0
+for f in html_files:
+    if update_file(f):
+        count += 1
+        print(f"UPDATED: {f}")
+
+print(f"DONE: Rolled out to {count} files.")
