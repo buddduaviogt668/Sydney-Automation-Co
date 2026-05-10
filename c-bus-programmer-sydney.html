@@ -852,6 +852,7 @@ document.querySelectorAll('.faq-q').forEach(function(q){
 
 
 
+
 <!-- ===== PREMIUM TESTIMONIALS CAROUSEL ===== -->
 <section id="testimonials" style="background:#0e1f3d;padding:80px 0;overflow:hidden;border-top:1px solid rgba(240,112,32,0.1);">
   <div class="container" style="max-width:1200px;margin:0 auto;padding:0 24px;">
@@ -963,15 +964,6 @@ document.querySelectorAll('.faq-q').forEach(function(q){
           </div>
         </div>
 
-        <div class="tm-card">
-          <div class="tm-stars">★★★★★</div>
-          <p class="tm-text">"High quality and fair price. Project delivered on time."</p>
-          <div class="tm-footer">
-            <div class="tm-author">Fady Geagea</div>
-            <div class="tm-role">Residential Client, Sydney</div>
-          </div>
-        </div>
-
       </div>
 
       <div class="tm-controls">
@@ -1022,6 +1014,7 @@ document.querySelectorAll('.faq-q').forEach(function(q){
     const track = document.getElementById('tm-track');
     let isPaused = false;
     window.tmSlide = function(d) {
+      if(!track) return;
       const cardWidth = track.querySelector('.tm-card').offsetWidth + 24;
       track.scrollBy({ left: d * cardWidth, behavior: 'smooth' });
     };
