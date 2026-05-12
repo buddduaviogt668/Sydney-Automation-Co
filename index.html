@@ -530,23 +530,45 @@ footer { background: #132647; border-top: 1px solid #2a4a80; padding: 48px 24px 
 <!-- HERO -->
 <div class="hero">
   <div class="container">
-    <div class="tag">Accredited Specialists</div>
-    <h1>Sydney's Leading C-Bus & Dynalite <span class="accent">Lighting Control Experts</span></h1>
-    <p class="lead">Same-day fault finding, repairs & commissioning across Greater Sydney. Accredited C-Bus Programmer & Dynalite System Designer. Call 0422 469 739.</p>
+    <div class="tag" style="background: rgba(39, 174, 96, 0.2); color: #2ecc71; border: 1px solid #2ecc71; display: inline-flex; align-items: center; gap: 6px; font-weight: 800; letter-spacing: 1px;">
+      <span style="width: 8px; height: 8px; background: #2ecc71; border-radius: 50%; display: inline-block; animation: pulse 2s infinite;"></span>
+      AVAILABLE FOR SAME-DAY RESPONSE
+    </div>
+    <h1>Sydney's Elite C-Bus & Dynalite <span class="accent">Specialist Engineering</span></h1>
+    <p class="lead">System crashed? Lights stuck ON? We solve the complex lighting faults that regular electricians can't. Accredited C-Bus & Dynalite experts serving Greater Sydney.</p>
     <div class="btns">
-      <a class="btn btn-primary" href="/contact">Get Quote</a>
-      <a class="btn btn-outline" href="tel:0422469739">📞 Call Now</a>
+      <a class="btn btn-primary" href="tel:0422469739" style="font-size: 18px; padding: 18px 36px;">🚨 CALL FOR REPAIR: 0422 469 739</a>
+      <a class="btn btn-outline" href="/cbus-fault-finder">Try Interactive Fault Finder</a>
     </div>
   </div>
 </div>
 
+<style>
+@keyframes pulse {
+  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(46, 204, 113, 0.7); }
+  70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(46, 204, 113, 0); }
+  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(46, 204, 113, 0); }
+}
+</style>
+
 <!-- TRUST BAR -->
-<div class="trust-bar">
+<div class="trust-bar" style="background: rgba(240,112,32,0.1); border-bottom: 1px solid rgba(240,112,32,0.2);">
   <div class="trust-bar-inner">
-    <div class="trust-item"><span class="dot">⭐</span> <strong>5.0 Rating</strong> — 13 Google Reviews</div>
-    <div class="trust-item"><span class="dot">✓</span> 100+ Systems Serviced</div>
-    <div class="trust-item"><span class="dot">✓</span> 15+ Years Experience</div>
-    <div class="trust-item"><span class="dot">✓</span> Same-Day Response</div>
+    <div class="trust-item"><strong>Unrivaled Reputation:</strong> 13 Perfect 5-Star Reviews</div>
+    <div class="trust-item"><span class="dot">✓</span> Former Clipsal National Support</div>
+    <div class="trust-item"><span class="dot">✓</span> Vans Stocked with C-Bus Modules</div>
+    <div class="trust-item"><span class="dot">✓</span> Emergency Fault Specialists</div>
+  </div>
+</div>
+
+<!-- INTERACTIVE TOOL WEDGE -->
+<div class="section" style="background: #001f3d; padding: 60px 0; border-bottom: 2px solid #f07020;">
+  <div class="container" style="display: flex; align-items: center; justify-content: space-between; gap: 40px; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 300px;">
+      <h2 style="margin: 0 0 12px; font-size: 32px; font-family: 'Barlow Condensed', sans-serif;">Stop the Guesswork. <span class="accent">Diagnose Your System Now.</span></h2>
+      <p class="dim" style="font-size: 18px; margin: 0;">Don't wait hours for a technician. Use our <strong>Interactive C-Bus Fault Finder</strong> to identify the problem in under 60 seconds.</p>
+    </div>
+    <a href="/cbus-fault-finder" class="btn btn-primary" style="background: #f07020; padding: 20px 40px; font-size: 16px; box-shadow: 0 10px 20px rgba(240,112,32,0.3); font-weight: 900;">Launch Interactive Diagnostic →</a>
   </div>
 </div>
 
