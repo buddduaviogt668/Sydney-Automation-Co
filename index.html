@@ -1653,6 +1653,303 @@ footer { background: #132647; border-top: 1px solid #2a4a80; padding: 48px 24px 
 
 </div>
 
+<!-- ===== PREMIUM TESTIMONIALS CAROUSEL ===== -->
+<style>
+  .tm-section {
+    padding: 100px 0;
+    background: #001428;
+    position: relative;
+    overflow: hidden;
+  }
+  /* Animated Background Glow */
+  .tm-bg-glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(240,112,32,0.1) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: 1;
+    animation: tmPulse 8s infinite alternate;
+  }
+  @keyframes tmPulse {
+    0% { transform: translate(-50%, -50%) scale(1); opacity: 0.5; }
+    100% { transform: translate(-50%, -50%) scale(1.5); opacity: 0.8; }
+  }
+
+  .tm-viewport { 
+    position: relative; 
+    width: 100%; 
+    z-index: 2;
+  }
+  
+  #tm-track {
+    display: flex;
+    gap: 24px;
+    padding: 40px 20px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  #tm-track::-webkit-scrollbar { display: none; }
+
+  .tm-card {
+    flex: 0 0 400px;
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 24px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+    position: relative;
+    cursor: grab;
+  }
+  .tm-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 24px;
+    padding: 1px;
+    background: linear-gradient(135deg, rgba(255,255,255,0.2) 0%, transparent 50%, rgba(240,112,32,0.3) 100%);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+  }
+
+  .tm-card:hover {
+    transform: translateY(-12px) scale(1.02);
+    background: rgba(255, 255, 255, 0.06);
+    border-color: rgba(240, 112, 32, 0.5);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4), 0 0 20px rgba(240,112,32,0.15);
+  }
+
+  .tm-stars { 
+    color: #f07020; 
+    font-size: 14px; 
+    letter-spacing: 3px;
+    filter: drop-shadow(0 0 5px rgba(240,112,32,0.5));
+  }
+  
+  .tm-text { 
+    color: #e2e8f0; 
+    font-size: 17px; 
+    line-height: 1.8; 
+    margin: 0; 
+    font-family: 'Barlow', sans-serif; 
+    font-style: italic; 
+    flex-grow: 1;
+    position: relative;
+  }
+  .tm-text::before {
+    content: '"';
+    position: absolute;
+    top: -20px;
+    left: -10px;
+    font-size: 60px;
+    color: rgba(240,112,32,0.1);
+    font-family: serif;
+  }
+
+  .tm-footer { 
+    border-top: 1px solid rgba(255,255,255,0.08); 
+    padding-top: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .tm-info { flex: 1; }
+  .tm-author { 
+    font-weight: 800; 
+    color: #fff; 
+    font-size: 18px; 
+    font-family: 'Barlow Condensed', sans-serif; 
+    text-transform: uppercase; 
+    letter-spacing: 1px; 
+    margin-bottom: 4px;
+  }
+  .tm-role { 
+    font-size: 13px; 
+    color: #a8c0e0; 
+    font-family: 'Barlow', sans-serif; 
+  }
+  
+  .tm-verified {
+    background: rgba(39, 174, 96, 0.1);
+    color: #2ecc71;
+    padding: 4px 10px;
+    border-radius: 50px;
+    font-size: 10px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: 1px solid rgba(39, 174, 96, 0.3);
+  }
+
+  .tm-controls { 
+    display: flex; 
+    justify-content: center; 
+    gap: 20px;
+    margin-top: 50px;
+  }
+  .tm-btn { 
+    width: 56px; 
+    height: 56px; 
+    background: rgba(255,255,255,0.05); 
+    color: #fff; 
+    border: 1px solid rgba(255,255,255,0.1); 
+    border-radius: 50%; 
+    font-size: 20px; 
+    cursor: pointer; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    transition: all 0.3s;
+    backdrop-filter: blur(10px);
+  }
+  .tm-btn:hover { 
+    background: #f07020; 
+    border-color: #f07020;
+    box-shadow: 0 0 20px rgba(240,112,32,0.4);
+    transform: scale(1.1);
+  }
+
+  .tm-google-link { 
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 16px 40px; 
+    background: linear-gradient(135deg, #f07020 0%, #d35400 100%); 
+    color: #fff; 
+    text-decoration: none; 
+    font-weight: 800; 
+    font-family: 'Barlow Condensed', sans-serif; 
+    font-size: 16px; 
+    letter-spacing: 1px; 
+    border-radius: 50px; 
+    transition: all 0.3s; 
+    box-shadow: 0 10px 30px rgba(240,112,32,0.3);
+  }
+  .tm-google-link:hover { 
+    transform: translateY(-3px);
+    box-shadow: 0 15px 40px rgba(240,112,32,0.5);
+  }
+
+  @media (max-width: 768px) { 
+    .tm-card { flex: 0 0 320px; padding: 30px; } 
+    .tm-controls { display: none; } 
+  }
+</style>
+
+<section class="tm-section" id="reviews">
+  <div class="tm-bg-glow"></div>
+  <div class="container" style="position:relative; z-index: 2;">
+    <div class="section-header" style="margin-bottom: 60px;">
+      <span style="color: #f07020; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; font-size: 13px;">Customer Success</span>
+      <h2 style="font-family: 'Barlow Condensed', sans-serif; font-size: clamp(32px, 5vw, 56px); font-weight: 900; line-height: 1.1; margin-bottom: 20px;">The <span class="accent">Wall of Proof</span></h2>
+      <p class="dim" style="max-width: 650px; margin: 0 auto; font-size: 17px;">Trusted by Sydney's leading facility managers, residential strata, and luxury homeowners.</p>
+    </div>
+
+    <div class="tm-viewport">
+      <div id="tm-track">
+        
+        <div class="tm-card">
+          <div class="tm-stars">★★★★★</div>
+          <p class="tm-text">"Highly recommended! George was amazing — came out at last notice when all our office lights went on the blink, found the problem in our C-Bus system, rush-ordered the parts, and had everything back up within no time."</p>
+          <div class="tm-footer">
+            <div class="tm-info">
+              <div class="tm-author">Phillipa Brown</div>
+              <div class="tm-role">Winten Property Group — North Sydney</div>
+            </div>
+            <div class="tm-verified">Verified</div>
+          </div>
+        </div>
+
+        <div class="tm-card">
+          <div class="tm-stars">★★★★★</div>
+          <p class="tm-text">"Extremely happy with the C-Bus automation services. They helped repair and reprogram our Clipsal C-Bus lighting system which had ongoing faults that previous electricians couldn't resolve. Very responsive."</p>
+          <div class="tm-footer">
+            <div class="tm-info">
+              <div class="tm-author">Vasilios Tsopanas</div>
+              <div class="tm-role">C-Bus Fault Finding, Marrickville</div>
+            </div>
+            <div class="tm-verified">Verified</div>
+          </div>
+        </div>
+
+        <div class="tm-card">
+          <div class="tm-stars">★★★★★</div>
+          <p class="tm-text">"Honest and reliable C-Bus installer in Sydney. Extremely knowledgeable and took the time to explain our C-Bus options clearly without rushing us. The quality of the installation was excellent."</p>
+          <div class="tm-footer">
+            <div class="tm-info">
+              <div class="tm-author">Helen Poulos</div>
+              <div class="tm-role">Ask Allied Health — Earlwood</div>
+            </div>
+            <div class="tm-verified">Verified</div>
+          </div>
+        </div>
+
+        <div class="tm-card">
+          <div class="tm-stars">★★★★★</div>
+          <p class="tm-text">"Fantastic service. George resolved all issues and reprogrammed our Clipsal C-Bus system with custom options — above and beyond our expectations. Great efficient work with sharp pricing."</p>
+          <div class="tm-footer">
+            <div class="tm-info">
+              <div class="tm-author">Easyfix Electrics</div>
+              <div class="tm-role">Commercial Client, Matraville</div>
+            </div>
+            <div class="tm-verified">Verified</div>
+          </div>
+        </div>
+
+        <div class="tm-card">
+          <div class="tm-stars">★★★★★</div>
+          <p class="tm-text">"I recently hired Sydney Automation to upgrade our home with a fully automated lighting system and the experience was fantastic! Professional, knowledgeable, and customised the system perfectly."</p>
+          <div class="tm-footer">
+            <div class="tm-info">
+              <div class="tm-author">Tim Reyes</div>
+              <div class="tm-role">Home Automation, Norwest</div>
+            </div>
+            <div class="tm-verified">Verified</div>
+          </div>
+        </div>
+
+        <div class="tm-card">
+          <div class="tm-stars">★★★★★</div>
+          <p class="tm-text">"George was really helpful in my system set up. As someone who knew nothing about this space, he guided me to the right programs and got it all installed hassle free. 10/10."</p>
+          <div class="tm-footer">
+            <div class="tm-info">
+              <div class="tm-author">Imran Hamidi</div>
+              <div class="tm-role">Laing + Simmons East Group — Potts Point</div>
+            </div>
+            <div class="tm-verified">Verified</div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="tm-controls">
+        <button onclick="tmSlide(-1)" class="tm-btn">←</button>
+        <button onclick="tmSlide(1)" class="tm-btn">→</button>
+      </div>
+    </div>
+
+    <div style="text-align:center;margin-top:60px;">
+      <a href="https://g.page/r/CQK7ChOgqNZ2EBM/review" target="_blank" class="tm-google-link">
+        <span>LEAVE A 5-STAR GOOGLE REVIEW</span>
+      </a>
+    </div>
+  </div>
+</section>
+
 <!-- FOOTER -->
 <footer>
   <div class="footer-grid">
@@ -2133,6 +2430,5 @@ document.querySelectorAll('.faq-q').forEach(function(q){
     });
   })();
 </script>
-<!-- ===== /PREMIUM TESTIMONIALS CAROUSEL ===== -->
-</body>
+<!-- ===== /PREMIUM TESTIMONIALS CAROUSEL ===== --></body>
 </html>
