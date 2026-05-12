@@ -634,84 +634,323 @@ footer { background: #132647; border-top: 1px solid #2a4a80; padding: 48px 24px 
 
 
 <!-- MEET THE EXPERT -->
-<div class="section" style="background: #0a1628; border-top: 1px solid #2a4a80; border-bottom: 1px solid #2a4a80;">
-  <div class="container">
-    <div class="section-header">
-      <div class="tag">Meet the Expert</div>
-      <h2>Why Work With <span class="accent">George?</span></h2>
-      <p class="dim" style="font-size: 16px; max-width: 620px; margin: 0 auto;">Accredited specialist — not just another electrician who dabbles in automation.</p>
-    </div>
-    <div class="expert-grid">
+<style>
+/* Expert Section */
+.expert-section {
+  padding: 80px 24px;
+  background: linear-gradient(160deg, #060f1e 0%, #0d1f3c 50%, #0a1628 100%);
+  border-top: 1px solid rgba(240,112,32,0.2);
+  border-bottom: 1px solid rgba(240,112,32,0.2);
+  overflow: hidden;
+  position: relative;
+}
+.expert-section::before {
+  content: '';
+  position: absolute;
+  top: -120px;
+  right: -120px;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(240,112,32,0.07) 0%, transparent 70%);
+  pointer-events: none;
+}
+.expert-inner { max-width: 1200px; margin: 0 auto; }
+.expert-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(240,112,32,0.12);
+  color: #f07020;
+  border: 1px solid rgba(240,112,32,0.35);
+  border-radius: 50px;
+  padding: 6px 16px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+.expert-heading {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: clamp(32px, 5vw, 52px);
+  font-weight: 900;
+  line-height: 1.05;
+  color: #f0f4ff;
+  margin-bottom: 12px;
+}
+.expert-subhead {
+  font-size: 16px;
+  color: #6a8cb5;
+  margin-bottom: 56px;
+  max-width: 580px;
+}
+.expert-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 56px;
+  align-items: start;
+}
+/* Photo panel */
+.expert-photo-panel {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 14px;
+}
+.expert-photo-main {
+  grid-column: 1 / 2;
+  grid-row: 1 / 3;
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 2px solid rgba(240,112,32,0.3);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+}
+.expert-photo-main img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  min-height: 420px;
+  transition: transform 0.5s ease;
+}
+.expert-photo-main:hover img { transform: scale(1.03); }
+.expert-photo-main::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 60%, rgba(10,22,40,0.7) 100%);
+  pointer-events: none;
+}
+.expert-photo-secondary {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 2px solid rgba(240,112,32,0.2);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.35);
+  position: relative;
+}
+.expert-photo-secondary img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  min-height: 200px;
+  transition: transform 0.5s ease;
+}
+.expert-photo-secondary:hover img { transform: scale(1.04); }
+/* Stat card */
+.expert-stat-card {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+  background: rgba(255,255,255,0.03);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(240,112,32,0.25);
+  border-radius: 16px;
+  padding: 20px 16px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+.expert-stat-item {
+  text-align: center;
+  padding: 12px 8px;
+  background: rgba(240,112,32,0.06);
+  border-radius: 10px;
+  border: 1px solid rgba(240,112,32,0.12);
+}
+.expert-stat-num {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 34px;
+  font-weight: 900;
+  color: #f07020;
+  line-height: 1;
+}
+.expert-stat-lbl {
+  font-size: 10px;
+  color: #6a8cb5;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-top: 4px;
+}
+/* Bio panel */
+.expert-bio-name {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 28px;
+  font-weight: 900;
+  color: #f07020;
+  letter-spacing: 1px;
+  margin-bottom: 2px;
+}
+.expert-bio-title {
+  font-size: 13px;
+  color: #6a8cb5;
+  font-weight: 600;
+  margin-bottom: 28px;
+}
+.expert-bio-text {
+  color: #a8c0e0;
+  line-height: 1.85;
+  font-size: 15px;
+  margin-bottom: 16px;
+}
+.expert-cred {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 15px 20px;
+  background: rgba(255,255,255,0.03);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(42,74,128,0.6);
+  border-radius: 12px;
+  margin-bottom: 10px;
+  transition: border-color 0.2s, background 0.2s;
+}
+.expert-cred:hover {
+  border-color: rgba(240,112,32,0.4);
+  background: rgba(240,112,32,0.05);
+}
+.expert-cred-icon {
+  width: 36px;
+  height: 36px;
+  background: rgba(240,112,32,0.15);
+  border: 1px solid rgba(240,112,32,0.3);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  flex-shrink: 0;
+}
+.expert-cred-name { font-weight: 700; color: #f0f4ff; font-size: 14px; }
+.expert-cred-sub { font-size: 11px; color: #6a8cb5; margin-top: 1px; }
+.expert-cta-row { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 28px; }
 
-      <!-- Photos -->
-      <div class="expert-photos">
-        <img src="/george-photo.png" alt="George Skarmoutsos — C-Bus & Dynalite Specialist at work on commercial automation panel, Sydney" style="width: 100%; border-radius: 14px; object-fit: cover; aspect-ratio: 3/4; border: 2px solid rgba(240,112,32,0.25);" loading="lazy"/>
-        <div style="display: flex; flex-direction: column; gap: 16px;">
-          <div style="background: #132647; border: 1px solid rgba(240,112,32,0.3); border-radius: 14px; padding: 20px; text-align: center;">
-            <div style="font-family: 'Barlow Condensed', sans-serif; font-size: 52px; font-weight: 900; color: #f07020; line-height: 1;">15+</div>
-            <div style="font-size: 13px; color: #a8c0e0; margin-top: 6px;">Years Experience</div>
+/* Fade-in on scroll */
+.fade-up { opacity: 0; transform: translateY(28px); transition: opacity 0.7s ease, transform 0.7s ease; }
+.fade-up.visible { opacity: 1; transform: translateY(0); }
+
+@media(max-width: 900px) {
+  .expert-layout { grid-template-columns: 1fr; gap: 40px; }
+  .expert-photo-panel { grid-template-columns: 1fr 1fr; grid-template-rows: auto auto; }
+  .expert-photo-main { grid-column: 1/2; grid-row: 1/2; }
+  .expert-photo-main img { min-height: 260px; }
+  .expert-photo-secondary { grid-column: 2/3; grid-row: 1/2; }
+  .expert-photo-secondary img { min-height: 260px; }
+  .expert-stat-card { grid-column: 1/3; grid-row: 2/3; grid-template-columns: repeat(4, 1fr); }
+}
+@media(max-width: 560px) {
+  .expert-photo-panel { grid-template-columns: 1fr; }
+  .expert-photo-main { grid-column: 1/2; }
+  .expert-photo-secondary { grid-column: 1/2; grid-row: 2/3; }
+  .expert-photo-secondary img { min-height: 200px; }
+  .expert-stat-card { grid-column: 1/2; grid-row: 3/4; grid-template-columns: repeat(2, 1fr); }
+}
+</style>
+
+<section class="expert-section" id="meet-george">
+  <div class="expert-inner">
+    <div style="text-align: center; margin-bottom: 20px;">
+      <div class="expert-label">⚡ Meet the Expert</div>
+      <h2 class="expert-heading">Why Work With <span class="accent">George?</span></h2>
+      <p class="expert-subhead" style="margin: 0 auto;">Accredited specialist with manufacturer-level inside knowledge — not just another electrician who dabbles.</p>
+    </div>
+
+    <div class="expert-layout">
+
+      <!-- LEFT: Photo Panel -->
+      <div class="expert-photo-panel fade-up">
+        <!-- Main large photo: George facing camera, working on orange panel -->
+        <div class="expert-photo-main">
+          <img
+            src="/george-onsite-1.jpg"
+            alt="George Skarmoutsos, founder of Sydney Automation Co., diagnosing a commercial C-Bus automation panel on-site in Sydney"
+            loading="lazy"
+          />
+        </div>
+        <!-- Secondary: back of shirt showing Sydney Automation Co. branding -->
+        <div class="expert-photo-secondary">
+          <img
+            src="/george-onsite-2.jpg"
+            alt="George Skarmoutsos on-site — Sydney Automation Co. uniform, commercial automation commissioning"
+            loading="lazy"
+          />
+        </div>
+        <!-- Stat mini-cards -->
+        <div class="expert-stat-card">
+          <div class="expert-stat-item">
+            <div class="expert-stat-num">15+</div>
+            <div class="expert-stat-lbl">Years</div>
           </div>
-          <div style="background: #132647; border: 1px solid rgba(240,112,32,0.3); border-radius: 14px; padding: 20px; text-align: center;">
-            <div style="font-family: 'Barlow Condensed', sans-serif; font-size: 52px; font-weight: 900; color: #f07020; line-height: 1;">100+</div>
-            <div style="font-size: 13px; color: #a8c0e0; margin-top: 6px;">Systems Serviced</div>
+          <div class="expert-stat-item">
+            <div class="expert-stat-num">100+</div>
+            <div class="expert-stat-lbl">Systems</div>
           </div>
-          <div style="background: #132647; border: 1px solid rgba(240,112,32,0.3); border-radius: 14px; padding: 20px; text-align: center;">
-            <div style="font-family: 'Barlow Condensed', sans-serif; font-size: 36px; font-weight: 900; color: #f07020; line-height: 1;">5.0 ⭐</div>
-            <div style="font-size: 13px; color: #a8c0e0; margin-top: 6px;">Google Rating</div>
+          <div class="expert-stat-item">
+            <div class="expert-stat-num">5.0</div>
+            <div class="expert-stat-lbl">Rating ⭐</div>
+          </div>
+          <div class="expert-stat-item">
+            <div class="expert-stat-num">13</div>
+            <div class="expert-stat-lbl">Reviews</div>
           </div>
         </div>
       </div>
 
-      <!-- Bio -->
-      <div>
-        <p style="color: #f07020; font-weight: 800; font-family: 'Barlow Condensed', sans-serif; font-size: 20px; letter-spacing: 0.5px; margin-bottom: 4px;">GEORGE SKARMOUTSOS</p>
-        <p style="color: #6a8cb5; font-size: 13px; margin-bottom: 24px; font-weight: 600;">Founder & Director — Sydney Automation Co., Menai NSW</p>
+      <!-- RIGHT: Bio -->
+      <div class="fade-up" style="transition-delay: 0.15s;">
+        <div class="expert-bio-name">GEORGE SKARMOUTSOS</div>
+        <div class="expert-bio-title">Founder & Director — Sydney Automation Co. · Menai, NSW</div>
 
-        <p style="color: #a8c0e0; line-height: 1.85; margin-bottom: 18px;">George began his career inside <strong style="color: #f0f4ff;">Clipsal/Schneider Electric</strong>, working in national technical support and technical sales for the C-Bus division — giving him an inside understanding of these systems that no external electrician can match.</p>
+        <p class="expert-bio-text">George began his career <strong style="color: #f0f4ff;">inside Clipsal/Schneider Electric</strong>, progressing through national technical support and technical sales roles within the C-Bus division. Working directly with integrators, consultants, and end users across Australia gave him a deep, practical understanding no external contractor can replicate.</p>
 
-        <p style="color: #a8c0e0; line-height: 1.85; margin-bottom: 24px;">Over 15 years he's delivered hundreds of live commercial projects across Dynalite, C-Bus, DALI, RAPIX and Schneider systems — from design and programming through to fault finding, compliance rectification, and handover. His clients include property groups, universities, facilities managers and strata bodies across Greater Sydney.</p>
+        <p class="expert-bio-text" style="margin-bottom: 28px;">Over 15 years he's delivered hundreds of live commercial projects — design, programming, fault finding, compliance rectification, and handover — across <strong style="color: #f0f4ff;">Dynalite, C-Bus, DALI, RAPIX and Schneider</strong> systems. His clients include Winten Property Group, WSU, strata bodies, hospitals, and facilities managers across Greater Sydney.</p>
 
-        <div style="display: flex; flex-direction: column; gap: 12px; margin-bottom: 28px;">
-          <div style="display: flex; align-items: center; gap: 12px; padding: 14px 18px; background: #132647; border: 1px solid #2a4a80; border-radius: 10px;">
-            <span style="color: #f07020; font-size: 18px;">✓</span>
-            <div>
-              <span style="font-weight: 700; color: #f0f4ff;">Accredited C-Bus Programmer</span>
-              <span style="color: #6a8cb5; font-size: 12px; margin-left: 8px;">Clipsal / Schneider Electric</span>
-            </div>
+        <div class="expert-cred">
+          <div class="expert-cred-icon">🏆</div>
+          <div>
+            <div class="expert-cred-name">Accredited C-Bus Programmer</div>
+            <div class="expert-cred-sub">Clipsal / Schneider Electric — manufacturer accreditation</div>
           </div>
-          <div style="display: flex; align-items: center; gap: 12px; padding: 14px 18px; background: #132647; border: 1px solid #2a4a80; border-radius: 10px;">
-            <span style="color: #f07020; font-size: 18px;">✓</span>
-            <div>
-              <span style="font-weight: 700; color: #f0f4ff;">Accredited Dynalite System Designer</span>
-              <span style="color: #6a8cb5; font-size: 12px; margin-left: 8px;">Signify / Philips</span>
-            </div>
+        </div>
+        <div class="expert-cred">
+          <div class="expert-cred-icon">✦</div>
+          <div>
+            <div class="expert-cred-name">Accredited Dynalite System Designer</div>
+            <div class="expert-cred-sub">Signify / Philips — system design certification</div>
           </div>
-          <div style="display: flex; align-items: center; gap: 12px; padding: 14px 18px; background: #132647; border: 1px solid #2a4a80; border-radius: 10px;">
-            <span style="color: #f07020; font-size: 18px;">✓</span>
-            <div>
-              <span style="font-weight: 700; color: #f0f4ff;">Former Clipsal National Technical Support</span>
-              <span style="color: #6a8cb5; font-size: 12px; margin-left: 8px;">Industry Insider</span>
-            </div>
+        </div>
+        <div class="expert-cred">
+          <div class="expert-cred-icon">📡</div>
+          <div>
+            <div class="expert-cred-name">Former Clipsal National Technical Support</div>
+            <div class="expert-cred-sub">Industry insider — manufacturer-side experience</div>
           </div>
         </div>
 
-        <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+        <div class="expert-cta-row">
           <a class="btn btn-primary" href="/about">Full Background →</a>
-          <a class="btn btn-outline" href="tel:0422469739">📞 Call George</a>
+          <a class="btn btn-outline" href="tel:0422469739">📞 Call George Direct</a>
         </div>
       </div>
 
     </div>
   </div>
-</div>
-<style>
-.expert-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; max-width: 1100px; margin: 0 auto; }
-.expert-photos { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-@media(max-width: 860px) {
-  .expert-grid { grid-template-columns: 1fr !important; }
-  .expert-photos { grid-template-columns: 1fr 1fr !important; }
-}
-</style>
+</section>
+
+<script>
+// Fade-up on scroll for expert section
+(function(){
+  var els = document.querySelectorAll('.fade-up');
+  if(!els.length) return;
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('visible'); io.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  els.forEach(function(el){ io.observe(el); });
+})();
+</script>
 
 <!-- FAQ -->
 <div class="section" style="background: #001428;">
