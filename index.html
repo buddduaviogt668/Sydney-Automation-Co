@@ -818,52 +818,154 @@ footer { background: #132647; border-top: 1px solid #2a4a80; padding: 48px 24px 
   </div>
 </div>
 
-<!-- SERVICES -->
-<div class="section">
+<!-- INTERGALACTIC SERVICES SECTION -->
+<style>
+  .services-section {
+    padding: 100px 0;
+    background: radial-gradient(circle at 10% 10%, rgba(240,112,32,0.05) 0%, transparent 40%), #001428;
+    position: relative;
+    overflow: hidden;
+  }
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 32px;
+    position: relative;
+    z-index: 2;
+  }
+  .service-card {
+    background: rgba(255, 255, 255, 0.02);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 32px;
+    padding: 60px 40px;
+    transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    min-height: 480px;
+  }
+  .service-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(240,112,32,0.15) 0%, transparent 60%, rgba(46, 204, 113, 0.05) 100%);
+    opacity: 0;
+    transition: opacity 0.6s;
+  }
+  .service-card:hover {
+    transform: translateY(-20px) scale(1.02);
+    border-color: rgba(240,112,32,0.5);
+    background: rgba(255, 255, 255, 0.04);
+    box-shadow: 0 40px 80px rgba(0,0,0,0.6), 0 0 30px rgba(240,112,32,0.15);
+  }
+  .service-card:hover::before { opacity: 1; }
+  
+  .service-icon-box {
+    width: 90px;
+    height: 90px;
+    background: rgba(240,112,32,0.08);
+    border: 1px solid rgba(240,112,32,0.2);
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    transition: all 0.5s;
+    position: relative;
+    z-index: 2;
+  }
+  .service-card:hover .service-icon-box {
+    background: #f07020;
+    transform: rotateY(180deg);
+    box-shadow: 0 0 30px rgba(240,112,32,0.6);
+  }
+  
+  .service-badge {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    background: rgba(240,112,32,0.1);
+    color: #f07020;
+    padding: 6px 14px;
+    border-radius: 50px;
+    font-size: 10px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border: 1px solid rgba(240,112,32,0.3);
+    z-index: 2;
+  }
+
+  .service-footer-link {
+    margin-top: auto;
+    color: #f07020;
+    font-weight: 900;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s;
+    z-index: 2;
+  }
+  .service-card:hover .service-footer-link { gap: 20px; color: #fff; }
+</style>
+
+<section class="services-section" id="services">
   <div class="container">
-    <div class="section-header">
-      <h2>Our <span class="accent">Services</span></h2>
+    <div class="section-header" style="margin-bottom: 80px;">
+      <span style="color: #f07020; font-weight: 800; letter-spacing: 3px; text-transform: uppercase; font-size: 13px; display: block; margin-bottom: 15px;">Elite Technical Tier</span>
+      <h2 style="font-size: clamp(36px, 5vw, 56px); line-height: 1.1;">Advanced <span class="accent">Specialist</span> Services</h2>
+      <p class="dim" style="max-width: 700px; margin: 20px auto 0; font-size: 18px; line-height: 1.8;">From corrupted logic recovery to enterprise-scale network design, we provide the deep-level technical layer for Sydney's most complex lighting control systems.</p>
     </div>
-    <div class="grid-3">
-      <div class="card">
-        <div class="icon-box">💡</div>
-        <h3>C-Bus Programming</h3>
-        <p class="dim">Professional programming, repairs, upgrades and fault finding for Clipsal C-Bus systems across commercial and residential projects.</p>
-        <a href="/c-bus-programmer-sydney" style="color: #f07020; font-weight: 700;">Learn More →</a>
+
+    <div class="services-grid">
+      
+      <!-- C-BUS -->
+      <div class="service-card">
+        <div class="service-badge">Clipsal Certified</div>
+        <div class="service-icon-box">💡</div>
+        <h3 style="color:#fff; font-family: 'Barlow Condensed', sans-serif; font-size: 32px; margin: 0; position: relative; z-index: 2;">C-Bus Specialist Programming</h3>
+        <p class="dim" style="line-height: 1.8; font-size: 16px; margin: 0; position: relative; z-index: 2;">Advanced logic repair, Pascal scripting, and network optimization for residential and commercial Clipsal C-Bus systems. We solve the persistent faults others can't find.</p>
+        <a href="/c-bus-programmer-sydney" class="service-footer-link">Explore Technical Details →</a>
       </div>
-      <div class="card">
-        <div class="icon-box">🔧</div>
-        <h3>Dynalite Specialists</h3>
-        <p class="dim">Accredited Dynalite system design, commissioning, maintenance and emergency repairs for Philips/Signify systems.</p>
-        <a href="/dynalite-programmer-sydney" style="color: #f07020; font-weight: 700;">Learn More →</a>
+
+      <!-- DYNALITE -->
+      <div class="service-card">
+        <div class="service-badge">Philips Accredited</div>
+        <div class="service-icon-box">🔧</div>
+        <h3 style="color:#fff; font-family: 'Barlow Condensed', sans-serif; font-size: 32px; margin: 0; position: relative; z-index: 2;">Dynalite System Engineering</h3>
+        <p class="dim" style="line-height: 1.8; font-size: 16px; margin: 0; position: relative; z-index: 2;">High-level commissioning and maintenance using <strong>Dynalite System Builder</strong>. Expert support for commercial buildings, luxury retail, and residential strata.</p>
+        <a href="/dynalite-programmer-sydney" class="service-footer-link">Explore Technical Details →</a>
       </div>
-      <div class="card">
-        <div class="icon-box">🚨</div>
-        <h3>Emergency Lighting</h3>
-        <p class="dim">DALI-2 compliance, AFSS certification support and emergency lighting repairs for commercial buildings and strata.</p>
-        <a href="/emergency-lighting-compliance-afss-sydney" style="color: #f07020; font-weight: 700;">Learn More →</a>
+
+      <!-- DALI -->
+      <div class="service-card">
+        <div class="service-badge">Compliance Expert</div>
+        <div class="service-icon-box">🚨</div>
+        <h3 style="color:#fff; font-family: 'Barlow Condensed', sans-serif; font-size: 32px; margin: 0; position: relative; z-index: 2;">Emergency Lighting DALI-2</h3>
+        <p class="dim" style="line-height: 1.8; font-size: 16px; margin: 0; position: relative; z-index: 2;">Automated testing systems, AFSS certification support, and rapid diagnostic of non-compliant DALI networks in high-density commercial environments.</p>
+        <a href="/emergency-lighting-compliance-afss-sydney" class="service-footer-link">Explore Technical Details →</a>
       </div>
-      <div class="card">
-        <div class="icon-box">⚡</div>
-        <h3>Fault Finding</h3>
-        <p class="dim">Same-day diagnostic and fault finding for non-responsive lighting systems. Rapid response across Greater Sydney.</p>
-        <a href="/cbus-fault-finder" style="color: #f07020; font-weight: 700; display: block; margin-top: 8px;">Try Interactive Fault Finder →</a>
+
+      <!-- FAULT FINDING -->
+      <div class="service-card">
+        <div class="service-badge">Urgent Response</div>
+        <div class="service-icon-box">⚡</div>
+        <h3 style="color:#fff; font-family: 'Barlow Condensed', sans-serif; font-size: 32px; margin: 0; position: relative; z-index: 2;">Physical Fault Analysis</h3>
+        <p class="dim" style="line-height: 1.8; font-size: 16px; margin: 0; position: relative; z-index: 2;">Using physical <strong>Network Analysers</strong> and Oscilloscopes to identify bus voltage issues, clock collisions, and burden errors that cause system instability.</p>
+        <a href="/cbus-fault-finder" class="service-footer-link">Launch Diagnostic Tool →</a>
       </div>
-      <div class="card">
-        <div class="icon-box">🎚️</div>
-        <h3>DALI & RAPIX</h3>
-        <p class="dim">DALI-2 lighting repair, RAPIX control systems and commercial building automation for modern installations.</p>
-        <a href="/dali-lighting-repair" style="color: #f07020; font-weight: 700;">Learn More →</a>
-      </div>
-      <div class="card">
-        <div class="icon-box">📋</div>
-        <h3>Maintenance Contracts</h3>
-        <p class="dim">Planned maintenance, service contracts and ongoing support for strata, facilities and commercial clients.</p>
-        <a href="/lighting-control-service-contract-sydney" style="color: #f07020; font-weight: 700;">Learn More →</a>
-      </div>
+
     </div>
   </div>
-</div>
+</section>
 
 <!-- HOW IT WORKS: 3-STEP DIAGNOSTIC -->
 <div class="section" style="background: linear-gradient(180deg, #0a1628 0%, #001428 100%); padding: 80px 0;">
@@ -918,41 +1020,178 @@ footer { background: #132647; border-top: 1px solid #2a4a80; padding: 48px 24px 
   </div>
 </div>
 
-<!-- FEATURED PROJECTS -->
-<div class="section" style="background: #001428; border-top: 1px solid #2a4a80; border-bottom: 1px solid #2a4a80;">
+<!-- INTERGALACTIC PROJECTS -->
+<style>
+  .project-dossier-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+    gap: 40px;
+  }
+  .project-card {
+    background: #001f3d;
+    border: 1px solid rgba(255,255,255,0.05);
+    border-radius: 24px;
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+  }
+  .project-card:hover {
+    transform: scale(1.03);
+    border-color: #f07020;
+    box-shadow: 0 40px 100px rgba(0,0,0,0.7);
+  }
+  .project-image-wrap {
+    height: 240px;
+    background: #0a1628;
+    position: relative;
+    overflow: hidden;
+    border-bottom: 1px solid rgba(240,112,32,0.2);
+  }
+  .project-image-wrap::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(0deg, rgba(0,20,40,0.9) 0%, transparent 100%);
+    z-index: 1;
+  }
+  .project-content {
+    padding: 32px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    position: relative;
+  }
+  .project-location-gps {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 11px;
+    color: #f07020;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  .gps-pulse {
+    width: 8px;
+    height: 8px;
+    background: #f07020;
+    border-radius: 50%;
+    position: relative;
+    box-shadow: 0 0 10px #f07020;
+  }
+  .gps-pulse::after {
+    content: '';
+    position: absolute;
+    inset: -4px;
+    border: 1px solid #f07020;
+    border-radius: 50%;
+    animation: gpsPulse 2s infinite;
+  }
+  @keyframes gpsPulse {
+    0% { transform: scale(1); opacity: 1; }
+    100% { transform: scale(3); opacity: 0; }
+  }
+  .project-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 32px;
+    color: #fff;
+    margin: 0;
+    line-height: 1.1;
+  }
+  .project-description {
+    font-size: 16px;
+    color: #a8c0e0;
+    line-height: 1.7;
+    margin: 0;
+  }
+  .project-meta-box {
+    margin-top: auto;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.05);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+</style>
+
+<section class="section" style="background: #001428; border-top: 1px solid rgba(240,112,32,0.1);">
   <div class="container">
-    <div class="section-header">
-      <h2>Recent <span class="accent">Projects</span></h2>
-      <p class="dim" style="font-size: 16px; max-width: 600px; margin: 0 auto;">Commercial C-Bus and Dynalite installations across Greater Sydney.</p>
+    <div class="section-header" style="margin-bottom: 70px;">
+      <span style="color: #f07020; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; font-size: 13px;">On-Site Dossiers</span>
+      <h2 style="margin-top: 10px;">Featured <span class="accent">Deployments</span></h2>
+      <p class="dim" style="max-width: 600px; margin: 0 auto;">Live field reports from Sydney's most complex C-Bus & Dynalite troubleshooting missions.</p>
     </div>
-    <div class="grid-3">
-      <div class="card" style="display: flex; flex-direction: column;">
-        <div class="badge">North Sydney</div>
-        <h3 style="margin-top: 12px;">Winten Property Group</h3>
-        <p style="font-size: 12px; color: #6a8cb5; margin-bottom: 8px; font-weight: 600;">📍 100 Arthur St, North Sydney NSW 2060</p>
-        <p class="dim" style="margin-bottom: 16px; flex: 1;">C-Bus SpaceLogic relay upgrade. Existing relays were malfunctioning, causing lights to randomly switch on/off.</p>
-        <a href="/projects" class="btn btn-primary" style="width: 100%; text-align: center; margin-top: auto;">View Project →</a>
+
+    <div class="project-dossier-grid">
+      
+      <!-- PROJECT 1 -->
+      <div class="project-card">
+        <div class="project-image-wrap">
+          <div style="padding: 20px;">
+            <div class="badge" style="background: rgba(240,112,32,0.2); color: #f07020; border: 1px solid #f07020;">C-Bus SpaceLogic</div>
+          </div>
+        </div>
+        <div class="project-content">
+          <div class="project-location-gps">
+            <div class="gps-pulse"></div>
+            NORTH SYDNEY, NSW
+          </div>
+          <h3 class="project-title">Winten Property Group</h3>
+          <p class="project-description">Mission-critical relay overhaul. Rescued a malfunctioning lighting network spanning multiple commercial levels. Re-established 100% system uptime.</p>
+          <div class="project-meta-box">
+            <a href="/projects" class="btn btn-primary" style="background: transparent; border: 1px solid #f07020; color: #f07020; padding: 12px 24px; font-size: 12px; font-weight: 900;">DEBRIEF REPORT →</a>
+          </div>
+        </div>
       </div>
-      <div class="card" style="display: flex; flex-direction: column;">
-        <div class="badge">Ingleburn</div>
-        <h3 style="margin-top: 12px;">Kebia Importex</h3>
-        <p style="font-size: 12px; color: #6a8cb5; margin-bottom: 8px; font-weight: 600;">📍 Ingleburn NSW 2565</p>
-        <p class="dim" style="margin-bottom: 16px; flex: 1;">C-Bus modernization. Faulty 12-channel relay causing lights to flicker across warehouse areas.</p>
-        <a href="/projects" class="btn btn-primary" style="width: 100%; text-align: center; margin-top: auto;">View Project →</a>
+
+      <!-- PROJECT 2 -->
+      <div class="project-card">
+        <div class="project-image-wrap">
+          <div style="padding: 20px;">
+            <div class="badge" style="background: rgba(240,112,32,0.2); color: #f07020; border: 1px solid #f07020;">Dynalite System Builder</div>
+          </div>
+        </div>
+        <div class="project-content">
+          <div class="project-location-gps">
+            <div class="gps-pulse"></div>
+            INGLEBURN, NSW
+          </div>
+          <h3 class="project-title">Kebia Importex</h3>
+          <p class="project-description">Warehouse-scale modernization. Identified and resolved high-load relay flickering. Re-programmed logic for industrial efficiency.</p>
+          <div class="project-meta-box">
+            <a href="/projects" class="btn btn-primary" style="background: transparent; border: 1px solid #f07020; color: #f07020; padding: 12px 24px; font-size: 12px; font-weight: 900;">DEBRIEF REPORT →</a>
+          </div>
+        </div>
       </div>
-      <div class="card" style="display: flex; flex-direction: column;">
-        <div class="badge">Parramatta</div>
-        <h3 style="margin-top: 12px;">WSU 1 Parramatta Square</h3>
-        <p style="font-size: 12px; color: #6a8cb5; margin-bottom: 8px; font-weight: 600;">📍 1 Parramatta Square, Parramatta NSW 2150</p>
-        <p class="dim" style="margin-bottom: 16px; flex: 1;">Automated blind control system with full C-Bus integration across multiple levels.</p>
-        <a href="/projects" class="btn btn-primary" style="width: 100%; text-align: center; margin-top: auto;">View Project →</a>
+
+      <!-- PROJECT 3 -->
+      <div class="project-card">
+        <div class="project-image-wrap">
+          <div style="padding: 20px;">
+            <div class="badge" style="background: rgba(240,112,32,0.2); color: #f07020; border: 1px solid #f07020;">C-Bus Blind Control</div>
+          </div>
+        </div>
+        <div class="project-content">
+          <div class="project-location-gps">
+            <div class="gps-pulse"></div>
+            PARRAMATTA, NSW
+          </div>
+          <h3 class="project-title">WSU Parramatta Square</h3>
+          <p class="project-description">Integrated shade & light synchronization. Advanced programming of automated blind sequences across the university's flagship campus.</p>
+          <div class="project-meta-box">
+            <a href="/projects" class="btn btn-primary" style="background: transparent; border: 1px solid #f07020; color: #f07020; padding: 12px 24px; font-size: 12px; font-weight: 900;">DEBRIEF REPORT →</a>
+          </div>
+        </div>
       </div>
-    </div>
-    <div style="text-align: center; margin-top: 40px;">
-      <a class="btn btn-outline" href="/projects">View All Projects →</a>
+
     </div>
   </div>
-</div>
+</section>
 
 
 
