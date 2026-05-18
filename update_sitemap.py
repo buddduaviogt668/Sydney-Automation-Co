@@ -1,4 +1,4 @@
-﻿import xml.etree.ElementTree as ET
+import xml.etree.ElementTree as ET
 import datetime
 
 # Define namespace
@@ -17,7 +17,8 @@ new_pages = [
     "lighting-control-rose-bay",
     "smart-home-installation-bellevue-hill",
     "c-bus-programmer-caringbah",
-    "c-bus-programmer-engadine"
+    "c-bus-programmer-engadine",
+    "c-bus-programmer-eastern-suburbs"
 ]
 
 existing_urls = [url.find('sm:loc', ns).text for url in root.findall('sm:url', ns)]
