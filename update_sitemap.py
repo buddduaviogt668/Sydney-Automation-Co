@@ -18,7 +18,10 @@ new_pages = [
     "smart-home-installation-bellevue-hill",
     "c-bus-programmer-caringbah",
     "c-bus-programmer-engadine",
-    "c-bus-programmer-eastern-suburbs"
+    "c-bus-programmer-eastern-suburbs",
+    "c-bus-dynalite-menai",
+    "cbus-fault-finder",
+    "products"
 ]
 
 existing_urls = [url.find('sm:loc', ns).text for url in root.findall('sm:url', ns)]

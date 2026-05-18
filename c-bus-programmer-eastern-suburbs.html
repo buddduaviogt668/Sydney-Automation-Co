@@ -126,7 +126,6 @@
     .mob-nav a:hover{background:#132647;color:#f0f4ff}
     .mob-nav .mob-cta{background:#f07020;color:#fff;margin:16px;border-radius:8px;text-align:center;padding:14px}
     @media(max-width:960px){.nav-links{display:none}.hamburger{display:flex}}
-    .mob-@media(max-width:960px){}
     *{box-sizing:border-box;margin:0;padding:0}
     body{font-family:'Barlow',sans-serif;background:#0e1f3d;color:#f0f4ff;min-height:100vh}
     a{color:inherit;text-decoration:none}
@@ -662,6 +661,7 @@
 </div>
 </div>
 </div>
+</div>
 
 <!-- Competitive Dominance Section -->
 <div class="section" style="background:#152b4d;border-top:1px solid #2a4a80;border-bottom:1px solid #2a4a80">
@@ -938,6 +938,35 @@
     </div>
   </div>
 </section>
+
+<style>
+  .tm-viewport { position: relative; width: 100%; }
+  #tm-track::-webkit-scrollbar { display: none; }
+  .tm-card {
+    flex: 0 0 380px;
+    scroll-snap-align: center;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.08);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 40px 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  }
+  .tm-card:hover { background: rgba(255,255,255,0.06); border-color: rgba(240,112,32,0.3); transform: translateY(-5px); }
+  .tm-stars { color: #f07020; font-size: 16px; letter-spacing: 4px; }
+  .tm-text { color: #e2e8f0; font-size: 16px; line-height: 1.7; margin: 0; font-family: 'Barlow', sans-serif; font-style: italic; flex-grow: 1; }
+  .tm-footer { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; }
+  .tm-author { font-weight: 800; color: #fff; font-size: 16px; font-family: 'Barlow Condensed', sans-serif; text-transform: uppercase; letter-spacing: 1px; }
+  .tm-role { font-size: 13px; color: #a8c0e0; font-family: 'Barlow', sans-serif; margin-top: 4px; }
+  .tm-controls { position: absolute; top: 50%; left: 0; right: 0; transform: translateY(-50%); display: flex; justify-content: space-between; padding: 0 20px; pointer-events: none; z-index: 10; }
+  .tm-btn { width: 48px; height: 48px; background: #f07020; color: #fff; border: none; border-radius: 50%; font-size: 20px; cursor: pointer; pointer-events: auto; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 15px rgba(240,112,32,0.4); }
+  .tm-google-link { display: inline-block; padding: 14px 32px; background: transparent; border: 2px solid #f07020; color: #f07020; text-decoration: none; font-weight: 800; font-family: 'Barlow Condensed', sans-serif; font-size: 14px; letter-spacing: 1px; border-radius: 50px; transition: all 0.3s; }
+  .tm-google-link:hover { background: #f07020; color: #fff; }
+  @media (max-width: 768px) { .tm-card { flex: 0 0 85vw; } .tm-controls { display: none; } }
+</style>
 
 <script>
   (function(){
