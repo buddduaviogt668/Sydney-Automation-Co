@@ -1,38 +1,44 @@
-import os
+﻿import xml.etree.ElementTree as ET
+import datetime
 
-sitemap_path = 'sitemap.xml'
-with open(sitemap_path, 'r', encoding='utf-8') as f:
-    lines = f.readlines()
+# Define namespace
+ET.register_namespace('', 'http://www.sitemaps.org/schemas/sitemap/0.9')
 
-# New entries
-new_urls = [
-    "https://sydneyautomationco.com.au/blog-ai-cbus-fault-finding-sydney",
-    "https://sydneyautomationco.com.au/blog-future-automation-sydney-2026",
-    "https://sydneyautomationco.com.au/blog-how-to-partner-cbus-programmer",
-    "https://sydneyautomationco.com.au/blog-sutherland-shire-cbus-value-2026",
-    "https://sydneyautomationco.com.au/blog-why-consultants-switch-rapix-cbus"
+tree = ET.parse("sitemap.xml")
+root = tree.getroot()
+
+# The namespace
+ns = {'sm': 'http://www.sitemaps.org/schemas/sitemap/0.9'}
+
+new_pages = [
+    "automation-sydney",
+    "hospitality-automation-sydney",
+    "cbus-programming-chatswood",
+    "lighting-control-rose-bay",
+    "smart-home-installation-bellevue-hill",
+    "c-bus-programmer-caringbah",
+    "c-bus-programmer-engadine"
 ]
 
-# Find the last </urlset>
-last_line_idx = -1
-for i, line in enumerate(lines):
-    if '</urlset>' in line:
-        last_line_idx = i
-        break
+existing_urls = [url.find('sm:loc', ns).text for url in root.findall('sm:url', ns)]
 
-if last_line_idx != -1:
-    new_entries = []
-    for url in new_urls:
-        new_entries.append('  <url>\n')
-        new_entries.append(f'    <loc>{url}</loc>\n')
-        new_entries.append('    <lastmod>2026-05-06</lastmod>\n')
-        new_entries.append('    <changefreq>weekly</changefreq>\n')
-        new_entries.append('    <priority>0.7</priority>\n')
-        new_entries.append('  </url>\n')
-    
-    lines = lines[:last_line_idx] + new_entries + lines[last_line_idx:]
+added = 0
+for page in new_pages:
+    loc = f"https://sydneyautomationco.com.au/{page}"
+    if loc not in existing_urls:
+        url_elem = ET.SubElement(root, "url")
+        loc_elem = ET.SubElement(url_elem, "loc")
+        loc_elem.text = loc
+        
+        lastmod_elem = ET.SubElement(url_elem, "lastmod")
+        lastmod_elem.text = datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%S+00:00")
+        
+        priority_elem = ET.SubElement(url_elem, "priority")
+        priority_elem.text = "0.80"
+        added += 1
 
-with open(sitemap_path, 'w', encoding='utf-8') as f:
-    f.writelines(lines)
-
-print("Sitemap updated with blog posts.")
+if added > 0:
+    tree.write("sitemap.xml", encoding="utf-8", xml_declaration=True)
+    print(f"Added {added} pages to sitemap")
+else:
+    print("No new pages to add")
