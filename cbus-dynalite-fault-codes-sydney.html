@@ -272,6 +272,47 @@ a:hover .suburb-link-card .s-arrow{color:#f07020}
 }
 </script>
 <style>.blog-post{font-family:Barlow,sans-serif!important;color:#f0f4ff!important;background:#0e1f3d!important;line-height:1.7!important;max-width:720px!important;margin:0 auto!important}.blog-post h1{font-size:2rem!important;font-weight:800!important;color:#fff!important;margin:0 0 16px!important}.blog-post h2{font-size:1.5rem!important;font-weight:700!important;color:#fff!important;margin:32px 0 16px!important}.blog-post h3{font-size:1.25rem!important;font-weight:700!important;color:#f0f4ff!important;margin:24px 0 12px!important}.blog-post p{margin:0 0 16px!important;color:#c5d1e8!important;font-size:1.05rem!important}.blog-post a{color:#4da6ff!important;text-decoration:none!important;font-weight:600!important}.meta{color:#8a9ab6!important;font-size:0.95rem!important;margin:0 0 24px!important}</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What does a flashing red LED on my C-Bus PCI interface mean?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A flashing red LED on a Clipsal C-Bus PC Interface (5500PC / 5500PCI) indicates a critical network clock collapse or network burden failure. Without a stable system clock, all smart keypads and touchscreens across the building become unresponsive. This requires immediate accredited diagnosis and rectification."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is my C-Bus relay making a buzzing noise?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A buzzing or chattering noise from a C-Bus relay enclosure indicates severe internal contactor arcing and carbon buildup. This creates extreme electrical resistance, excessive heat generation, and represents a serious thermal fire risk within your switchboard. The relay module requires urgent drop-in replacement."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "My C-Bus Toolkit software cannot connect — how do I fix this?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Common causes of C-Bus Toolkit connection failures include: the C-Gate Server background service has crashed (check Windows Services), the USB-to-Serial adapter COM port number does not match the Toolkit settings, or the physical PC Interface is not receiving 22V DC bus power. Visit cbusnotworking.com.au for step-by-step troubleshooting."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What causes a Dynalite keypad to go completely unresponsive?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "An unresponsive Signify Dynalite keypad is typically caused by: a failed 15V DC power supply within the central DDBC or DDRC controller, a broken Cat5e DyNet RS-485 bus cable, or a firmware lockup caused by an electrical storm surge. Check that the DyNet indicator LED on your controller is pulsing steadily."
+      }
+    }
+  ]
+}
+</script>
 </head><body>
 <!-- ROTATING PROMO BANNER -->
 <div id="promo-banner">
