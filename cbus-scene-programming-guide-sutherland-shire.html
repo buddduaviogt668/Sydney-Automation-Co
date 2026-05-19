@@ -803,7 +803,7 @@ footer{background:#132647;border-top:1px solid #2a4a80;padding:48px 24px 32px}
 
 <!-- AI Assistant Widget -->
 <style>
-.sac-ai-widget { position: fixed; bottom: 30px; right: 30px; z-index: 9999; display: flex; flex-direction: column; align-items: flex-end; font-family: 'Inter', sans-serif; }
+.sac-ai-widget { position: fixed; bottom: 30px; left: 30px; z-index: 9999; display: flex; flex-direction: column; align-items: flex-start; font-family: 'Inter', sans-serif; }
 .sac-ai-toggle { width: 60px; height: 60px; background: linear-gradient(135deg, #f07020, #ff8c42); border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 15px rgba(240, 112, 32, 0.4); cursor: pointer; transition: transform 0.3s; }
 .sac-ai-toggle:hover { transform: scale(1.1); }
 .sac-ai-toggle svg { color: white; width: 30px; height: 30px; }
@@ -821,7 +821,7 @@ footer{background:#132647;border-top:1px solid #2a4a80;padding:48px 24px 32px}
 </style>
 <div class="sac-ai-widget">
   <div class="sac-ai-chat-window" id="sacAiWindow">
-    <div class="sac-ai-chat-header"><h4>George - AI Virtual Assistant</h4><span class="sac-ai-close" onclick="document.getElementById('sacAiWindow').style.display='none'">×</span></div>
+    <div class="sac-ai-chat-header"><h4>Sparky - The AI Diagnostics Tech</h4><span class="sac-ai-close" onclick="document.getElementById('sacAiWindow').style.display='none'">×</span></div>
     <div class="sac-ai-chat-body" id="sacAiBody"><div class="sac-ai-msg bot">Hi! I'm the Sydney Automation Co virtual assistant. Are you having an issue with a C-Bus or Dynalite system today?</div></div>
     <div class="sac-ai-chat-input"><input type="text" id="sacAiInput" placeholder="Type your question..." onkeypress="if(event.key === 'Enter') sendSacMsg()"><button onclick="sendSacMsg()">Send</button></div>
   </div>
@@ -857,7 +857,7 @@ function sendSacMsg() {
   const uDiv = document.createElement('div'); uDiv.className = 'sac-ai-msg user'; uDiv.textContent = input.value; body.appendChild(uDiv);
   input.value = ''; body.scrollTop = body.scrollHeight;
   setTimeout(() => {
-    const bDiv = document.createElement('div'); bDiv.className = 'sac-ai-msg bot'; bDiv.innerHTML = "Thanks for reaching out! Our AI assistant is currently being upgraded. For immediate assistance with C-Bus or Dynalite, please call George directly at <a href='tel:0422469739' style='color:#f07020'>0422 469 739</a>.";
+    const bDiv = document.createElement('div'); bDiv.className = 'sac-ai-msg bot'; bDiv.innerHTML = "Thanks for reaching out! Our AI assistant is currently being upgraded. For immediate assistance with C-Bus or Dynalite, please call our human engineers directly at <a href='tel:0422469739' style='color:#f07020'>0422 469 739</a>.";
     body.appendChild(bDiv); body.scrollTop = body.scrollHeight;
   }, 1000);
 }
