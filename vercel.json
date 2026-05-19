@@ -165,18 +165,8 @@
       "permanent": true
     },
     {
-      "source": "/products",
-      "destination": "/services",
-      "permanent": true
-    },
-    {
-      "source": "/products/",
-      "destination": "/services",
-      "permanent": true
-    },
-    {
-      "source": "/products/:path*",
-      "destination": "/services",
+      "source": "/products/:path+",
+      "destination": "/products",
       "permanent": true
     },
     {
