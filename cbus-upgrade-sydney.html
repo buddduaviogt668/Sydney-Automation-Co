@@ -986,5 +986,6 @@ let exitTriggered = false;
 document.addEventListener('mouseleave', (e) => { if(e.clientY < 0 && !exitTriggered) { exitTriggered = true; document.getElementById('sacExitPopup').style.display = 'flex'; }});
 function submitExit() { document.getElementById('sacExitPopup').innerHTML = "<div class='sac-exit-modal'><h2>Request Sent!</h2><p>George will call you back shortly.</p><button onclick=\"document.getElementById('sacExitPopup').style.display='none'\" style='padding:10px 20px; background:#f07020; border:none; border-radius:5px; color:white; cursor:pointer;'>Close</button></div>"; }
 </script>
+<script src="/chatbot.js"></script>
 </body>
 </html>
