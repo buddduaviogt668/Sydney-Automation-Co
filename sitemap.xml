@@ -1760,4 +1760,28 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
+
+  <url>
+    <loc>https://sydneyautomation.com.au/smart-home-automation-earlwood.html</loc>
+    <lastmod>2026-05-25</lastmod>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://sydneyautomation.com.au/smart-home-automation-maroubra.html</loc>
+    <lastmod>2026-05-25</lastmod>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://sydneyautomation.com.au/electrician-partner-the-rocks.html</loc>
+    <lastmod>2026-05-25</lastmod>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://sydneyautomation.com.au/electrician-partner-cronulla.html</loc>
+    <lastmod>2026-05-25</lastmod>
+    <priority>0.80</priority>
+  </url>
 </urlset>
