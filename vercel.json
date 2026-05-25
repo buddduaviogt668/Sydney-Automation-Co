@@ -382,17 +382,17 @@
     },
     {
       "source": "/cbus-repairs-sydney",
-      "destination": "/c-bus-repairs-sydney",
+      "destination": "/cbus-repair-sydney",
       "permanent": true
     },
     {
       "source": "/cbus-repairs-sydney/",
-      "destination": "/c-bus-repairs-sydney",
+      "destination": "/cbus-repair-sydney",
       "permanent": true
     },
     {
       "source": "/cbus-repairs-sydney.html",
-      "destination": "/c-bus-repairs-sydney",
+      "destination": "/cbus-repair-sydney",
       "permanent": true
     },
     {
@@ -618,6 +618,36 @@
     {
       "source": "/(.+)\\.html",
       "destination": "/$1",
+      "permanent": true
+    },
+    {
+      "source": "/cbus-not-working-sydney",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/cbus-not-working-sydney.html",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/cbus-fault-finding-sydney",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/cbus-fault-finding-sydney.html",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/c-bus-repairs-sydney",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/c-bus-repairs-sydney.html",
+      "destination": "/cbus-repair-sydney",
       "permanent": true
     }
   ],
