@@ -649,6 +649,16 @@
       "source": "/c-bus-repairs-sydney.html",
       "destination": "/cbus-repair-sydney",
       "permanent": true
+    },
+    {
+      "source": "/dynalite-not-working-sydney",
+      "destination": "/dynalite-repair-sydney.html",
+      "permanent": true
+    },
+    {
+      "source": "/dynalite-fault-finding-sydney-common-faults",
+      "destination": "/dynalite-repair-sydney.html",
+      "permanent": true
     }
   ],
   "headers": [
