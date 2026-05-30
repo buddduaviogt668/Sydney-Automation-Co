@@ -1654,7 +1654,7 @@
   <!-- TRUST BAR -->
   <div class="trust-bar" style="background: rgba(240,112,32,0.1); border-bottom: 1px solid rgba(240,112,32,0.2);">
     <div class="trust-bar-inner">
-      <div class="trust-item"><strong>Unrivaled Reputation:</strong> 13 Perfect 5-Star Reviews</div>
+      <div class="trust-item"><strong>Unrivaled Reputation:</strong> 14 Perfect 5-Star Reviews</div>
       <div class="trust-item"><span class="dot">✓</span> Former Clipsal National Support</div>
       <div class="trust-item"><span class="dot">✓</span> Parts Sourced &amp; Ordered Same-Day</div>
       <div class="trust-item"><span class="dot">✓</span> Emergency Fault Specialists</div>
@@ -2562,7 +2562,7 @@
               <div class="expert-stat-lbl">Rating ⭐</div>
             </div>
             <div class="expert-stat-item">
-              <div class="expert-stat-num">13</div>
+              <div class="expert-stat-num">14</div>
               <div class="expert-stat-lbl">Reviews</div>
             </div>
           </div>
@@ -2832,7 +2832,6 @@
       gap: 24px;
       padding: 40px 20px;
       overflow-x: auto;
-      scroll-behavior: smooth;
       -ms-overflow-style: none;
       scrollbar-width: none;
     }
@@ -3442,47 +3441,50 @@
       });
     });
 
-    // Testimonial Carousel Engine
+    // Testimonial Carousel — true infinite marquee via cloning
     (function () {
       const track = document.getElementById('tm-track');
       if (!track) return;
+
+      // Clone all cards and append so we always have content to scroll into
+      const origCards = Array.from(track.children);
+      origCards.forEach(function(card) {
+        const clone = card.cloneNode(true);
+        clone.setAttribute('aria-hidden', 'true');
+        track.appendChild(clone);
+      });
+
       let isPaused = false;
       let scrollSpeed = 0.8;
-      let scrollPos = 0;
+      // Start at 0 — original set starts here, clones follow
+      track.scrollLeft = 0;
 
       function animateScroll() {
-        if (!isPaused && track) {
-          scrollPos += scrollSpeed;
-          if (scrollPos >= track.scrollWidth - track.offsetWidth) {
-            scrollPos = 0;
+        if (!isPaused) {
+          track.scrollLeft += scrollSpeed;
+          // When we've scrolled past the original set, silently jump back to start
+          const halfWidth = track.scrollWidth / 2;
+          if (track.scrollLeft >= halfWidth) {
+            track.scrollLeft -= halfWidth;
           }
-          track.scrollLeft = scrollPos;
         }
         requestAnimationFrame(animateScroll);
       }
 
       requestAnimationFrame(animateScroll);
 
-      track.addEventListener('mouseenter', () => isPaused = true);
-      track.addEventListener('mouseleave', () => {
-        isPaused = false;
-        scrollPos = track.scrollLeft;
-      });
+      track.addEventListener('mouseenter', function() { isPaused = true; });
+      track.addEventListener('mouseleave', function() { isPaused = false; });
+      track.addEventListener('touchstart', function() { isPaused = true; }, { passive: true });
+      track.addEventListener('touchend', function() { isPaused = false; });
 
-      window.tmSlide = function (d) {
-        if (!track) return;
+      window.tmSlide = function(d) {
         const card = track.querySelector('.tm-card');
         if (!card) return;
-        const cardWidth = card.offsetWidth + 24;
-        track.scrollBy({ left: d * cardWidth, behavior: 'smooth' });
-        setTimeout(() => { scrollPos = track.scrollLeft; }, 600);
+        isPaused = true;
+        track.scrollLeft += d * (card.offsetWidth + 24);
+        setTimeout(function() { isPaused = false; }, 800);
       };
-
-      track.addEventListener('touchstart', () => isPaused = true);
-      track.addEventListener('touchend', () => {
-        isPaused = false;
-        scrollPos = track.scrollLeft;
-      });
     })();
   </script>
 
