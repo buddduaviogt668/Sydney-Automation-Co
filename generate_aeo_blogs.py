@@ -146,7 +146,7 @@ for blog in blogs:
   <div class="container-sm">
     <div class="tag">{blog['category']}</div>
     <h1>{blog['title']}</h1>
-    <div class="meta" style="margin-top:16px;">{blog['date']} • By George Gaskas</div>
+    <div class="meta" style="margin-top:16px;">{blog['date']} • By George Skarmoutsos</div>
   </div>
 </div>
 <div class="section" style="padding-top:0;">
