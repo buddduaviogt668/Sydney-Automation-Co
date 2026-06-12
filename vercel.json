@@ -426,16 +426,6 @@
       "permanent": true
     },
     {
-      "source": "/blog/:slug",
-      "destination": "/:slug",
-      "permanent": true
-    },
-    {
-      "source": "/blog/:slug/",
-      "destination": "/:slug",
-      "permanent": true
-    },
-    {
       "source": "/blog/amp",
       "destination": "/blog",
       "permanent": true
@@ -652,12 +642,12 @@
     },
     {
       "source": "/dynalite-not-working-sydney",
-      "destination": "/dynalite-repair-sydney.html",
+      "destination": "/dynalite-repair-sydney",
       "permanent": true
     },
     {
       "source": "/dynalite-fault-finding-sydney-common-faults",
-      "destination": "/dynalite-repair-sydney.html",
+      "destination": "/dynalite-repair-sydney",
       "permanent": true
     }
   ],
