@@ -1,50 +1,58 @@
 import os
 import xml.etree.ElementTree as ET
-import datetime
+from datetime import datetime
 
-# Define namespace
-ET.register_namespace('', 'http://www.sitemaps.org/schemas/sitemap/0.9')
-
-tree = ET.parse("sitemap.xml")
-root = tree.getroot()
-
-ns = {'sm': 'http://www.sitemaps.org/schemas/sitemap/0.9'}
-existing_urls = [url.find('sm:loc', ns).text for url in root.findall('sm:url', ns) if url.find('sm:loc', ns) is not None]
-
-html_files = [f for f in os.listdir('.') if f.endswith('.html')]
-exclude = ['404.html', 'suburb-directory-snippet.html']
-
-added = 0
-for f in html_files:
-    if f in exclude:
-        continue
+def update_sitemap():
+    """Add new suburb and blog pages to sitemap.xml"""
+    sitemap_path = "/home/ubuntu/Sydney-Automation-Co/sitemap.xml"
     
-    # Special case: index.html -> https://sydneyautomationco.com.au/
-    if f == 'index.html':
-        loc = "https://sydneyautomationco.com.au/"
-    else:
-        loc = f"https://sydneyautomationco.com.au/{f[:-5]}"
-        
-    if loc not in existing_urls:
-        url_elem = ET.SubElement(root, "url")
-        loc_elem = ET.SubElement(url_elem, "loc")
-        loc_elem.text = loc
-        
-        lastmod_elem = ET.SubElement(url_elem, "lastmod")
-        lastmod_elem.text = datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%S+00:00")
-        
-        priority = "0.80"
-        if f.startswith('c-bus-programmer-') or f.startswith('dynalite-programmer-'):
-            priority = "0.70"
-        elif f == 'index.html':
-            priority = "1.00"
-            
-        priority_elem = ET.SubElement(url_elem, "priority")
-        priority_elem.text = priority
-        added += 1
+    # Parse existing sitemap
+    tree = ET.parse(sitemap_path)
+    root = tree.getroot()
+    
+    # Define namespace
+    ns = {'sitemap': 'http://www.sitemaps.org/schemas/sitemap/0.9'}
+    ET.register_namespace('', 'http://www.sitemaps.org/schemas/sitemap/0.9')
+    
+    # Find all suburb pages
+    suburb_pages = []
+    for filename in os.listdir("/home/ubuntu/Sydney-Automation-Co"):
+        if filename.endswith("-cbus-dynalite-repair-sydney.html"):
+            suburb_pages.append(filename)
+    
+    # Find all blog pages
+    blog_pages = []
+    blog_dir = "/home/ubuntu/Sydney-Automation-Co/blog"
+    if os.path.exists(blog_dir):
+        for filename in os.listdir(blog_dir):
+            if filename.endswith(".html"):
+                blog_pages.append(filename)
+    
+    # Add suburb pages to sitemap
+    for page in suburb_pages:
+        page_slug = page.replace(".html", "")
+        url_elem = ET.SubElement(root, '{http://www.sitemaps.org/schemas/sitemap/0.9}url')
+        loc = ET.SubElement(url_elem, '{http://www.sitemaps.org/schemas/sitemap/0.9}loc')
+        loc.text = f"https://sydneyautomationco.com.au/{page_slug}"
+        changefreq = ET.SubElement(url_elem, '{http://www.sitemaps.org/schemas/sitemap/0.9}changefreq')
+        changefreq.text = "weekly"
+        priority = ET.SubElement(url_elem, '{http://www.sitemaps.org/schemas/sitemap/0.9}priority')
+        priority.text = "0.8"
+    
+    # Add blog pages to sitemap
+    for page in blog_pages:
+        page_slug = page.replace(".html", "")
+        url_elem = ET.SubElement(root, '{http://www.sitemaps.org/schemas/sitemap/0.9}url')
+        loc = ET.SubElement(url_elem, '{http://www.sitemaps.org/schemas/sitemap/0.9}loc')
+        loc.text = f"https://sydneyautomationco.com.au/blog/{page_slug}"
+        changefreq = ET.SubElement(url_elem, '{http://www.sitemaps.org/schemas/sitemap/0.9}changefreq')
+        changefreq.text = "weekly"
+        priority = ET.SubElement(url_elem, '{http://www.sitemaps.org/schemas/sitemap/0.9}priority')
+        priority.text = "0.7"
+    
+    # Write updated sitemap
+    tree.write(sitemap_path, encoding='utf-8', xml_declaration=True)
+    print(f"Updated sitemap with {len(suburb_pages)} suburb pages and {len(blog_pages)} blog pages")
 
-if added > 0:
-    tree.write("sitemap.xml", encoding="utf-8", xml_declaration=True)
-    print(f"SUCCESS: Added {added} missing pages to sitemap.xml")
-else:
-    print("Sitemap is already up to date. No new pages to add.")
+if __name__ == "__main__":
+    update_sitemap()
