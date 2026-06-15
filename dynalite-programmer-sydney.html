@@ -356,12 +356,58 @@ footer{background:#132647;border-top:1px solid #2a4a80;padding:48px 24px 32px}
 
 </head>
 <body>
+  <!-- STICKY TOP CTA BAR -->
+  <div id="sticky-cta-bar" style="
+    position:fixed;top:0;left:0;right:0;z-index:99999;
+    background:linear-gradient(90deg,#0a2240 0%,#1a3a6e 100%);
+    display:flex;align-items:center;justify-content:center;gap:16px;
+    padding:10px 20px;box-shadow:0 2px 12px rgba(0,0,0,0.4);
+    font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  ">
+    <span style="color:#f0c040;font-size:13px;font-weight:600;white-space:nowrap;">
+      ⚡ Same-Day C-Bus &amp; Dynalite Repair — Available Today
+    </span>
+    <a href="tel:0422469739" style="
+      background:#e8330a;color:#fff;text-decoration:none;
+      padding:7px 18px;border-radius:4px;font-size:13px;font-weight:700;
+      white-space:nowrap;transition:background 0.2s;
+    " onclick="gtag&&gtag('event','click',{event_category:'CTA',event_label:'sticky-call'})">
+      📞 Call George
+    </a>
+    <a href="/book-service" style="
+      background:#fff;color:#0a2240;text-decoration:none;
+      padding:7px 18px;border-radius:4px;font-size:13px;font-weight:700;
+      white-space:nowrap;border:2px solid #fff;
+    " onclick="gtag&&gtag('event','click',{event_category:'CTA',event_label:'sticky-book'})">
+      Book Online →
+    </a>
+    <button onclick="document.getElementById('sticky-cta-bar').style.display='none'" style="
+      background:none;border:none;color:rgba(255,255,255,0.5);
+      cursor:pointer;font-size:18px;line-height:1;margin-left:8px;padding:0;
+    " aria-label="Close">×</button>
+  </div>
+  <style>
+    /* Push body content below sticky bar */
+    body { padding-top: 44px !important; }
+    @media (max-width: 600px) {
+      #sticky-cta-bar { flex-wrap: wrap; gap: 8px; padding: 8px 12px; }
+      #sticky-cta-bar span { font-size: 11px; }
+      #sticky-cta-bar a { font-size: 12px; padding: 6px 12px; }
+      body { padding-top: 72px !important; }
+    }
+  </style>
+
 <nav>
 <a class="logo" href="/">
 <span class="logo-main">Sydney Automation Co.</span>
 <span class="logo-line"></span>
 <span class="logo-sub">Lighting Control Specialists</span>
 </a>
+    <div class="nav-phone-wrap">
+      <span class="nav-phone-label">Direct Service Line</span>
+      <a class="nav-phone" href="tel:+61422469739">0422 469 739</a>
+    </div>
+  
 <div class="nav-links">
 <a href="/">Home</a>
 <!-- SERVICES (mega 2-col) -->
