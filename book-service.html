@@ -184,104 +184,85 @@
     <div style="display:grid;grid-template-columns:1fr 320px;gap:32px;margin-top:-20px;padding-bottom:60px;">
 
       <!-- FORM -->
-      <div>
-        <div class="form-card" id="form-wrap">
-          <div class="step-label">Step 1 of 1 — Takes 60 seconds</div>
-          <h2>Tell George About Your Fault</h2>
+        <div>
 
-          <form id="booking-form" onsubmit="handleSubmit(event)" novalidate>
+          <!-- HOW IT WORKS: 3 steps -->
+          <div style="margin-bottom:32px;">
+            <h2 style="font-family:'Barlow Condensed',sans-serif;font-size:26px;font-weight:800;color:#0a1f3d;margin-bottom:24px;">How this works</h2>
 
-            <!-- SYSTEM TYPE -->
-            <div class="field">
-              <label>What system needs fixing?</label>
-              <div class="system-grid">
-                <div>
-                  <input type="radio" name="system" id="sys-cbus" value="C-Bus (Clipsal)" class="sys-opt" required>
-                  <label for="sys-cbus" class="sys-label"><span class="icon">💡</span>C-Bus</label>
-                </div>
-                <div>
-                  <input type="radio" name="system" id="sys-dynalite" value="Dynalite (Signify)" class="sys-opt">
-                  <label for="sys-dynalite" class="sys-label"><span class="icon">🔆</span>Dynalite</label>
-                </div>
-                <div>
-                  <input type="radio" name="system" id="sys-dali" value="DALI / DALI-2" class="sys-opt">
-                  <label for="sys-dali" class="sys-label"><span class="icon">🏢</span>DALI</label>
-                </div>
-                <div>
-                  <input type="radio" name="system" id="sys-rapix" value="RAPIX" class="sys-opt">
-                  <label for="sys-rapix" class="sys-label"><span class="icon">🔗</span>RAPIX</label>
-                </div>
-                <div>
-                  <input type="radio" name="system" id="sys-homekit" value="HomeKit / Smart Home" class="sys-opt">
-                  <label for="sys-homekit" class="sys-label"><span class="icon">🏠</span>HomeKit</label>
-                </div>
-                <div>
-                  <input type="radio" name="system" id="sys-other" value="Not sure / Other" class="sys-opt">
-                  <label for="sys-other" class="sys-label"><span class="icon">❓</span>Not sure</label>
-                </div>
+            <div style="display:flex;gap:16px;margin-bottom:20px;">
+              <div style="width:40px;height:40px;border-radius:50%;background:#f07020;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:16px;flex-shrink:0;font-family:'Barlow Condensed',sans-serif;">1</div>
+              <div>
+                <h3 style="font-size:18px;font-weight:800;color:#0a1f3d;margin-bottom:6px;">Secure Deposit via Stripe</h3>
+                <p style="color:#555;line-height:1.6;font-size:15px;">Pay a <strong>$150 priority deposit</strong> via Stripe. Fully credited toward your final invoice — no extra charges without your approval.</p>
               </div>
             </div>
 
-            <!-- URGENCY -->
-            <div class="field">
-              <label>How urgent is this?</label>
-              <div class="urgency-grid">
-                <div>
-                  <input type="radio" name="urgency" id="urg-today" value="Today — emergency" class="urgency-opt" required>
-                  <label for="urg-today" class="urgency-label"><span class="icon">🔴</span>Today</label>
-                </div>
-                <div>
-                  <input type="radio" name="urgency" id="urg-week" value="This week" class="urgency-opt">
-                  <label for="urg-week" class="urgency-label"><span class="icon">🟠</span>This week</label>
-                </div>
-                <div>
-                  <input type="radio" name="urgency" id="urg-flex" value="Flexible — quote first" class="urgency-opt">
-                  <label for="urg-flex" class="urgency-label"><span class="icon">🟢</span>Flexible</label>
-                </div>
+            <div style="display:flex;gap:16px;margin-bottom:20px;">
+              <div style="width:40px;height:40px;border-radius:50%;background:#f07020;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:16px;flex-shrink:0;font-family:'Barlow Condensed',sans-serif;">2</div>
+              <div>
+                <h3 style="font-size:18px;font-weight:800;color:#0a1f3d;margin-bottom:6px;">Pick Your Time Slot</h3>
+                <p style="color:#555;line-height:1.6;font-size:15px;">Immediately after payment you are redirected to George's live calendar — choose an available same-day or next-day slot.</p>
               </div>
             </div>
 
-            <!-- CONTACT DETAILS -->
-            <div class="field-row">
-              <div class="field">
-                <label>Your Name</label>
-                <input type="text" name="name" placeholder="John Smith" required>
-              </div>
-              <div class="field">
-                <label>Best Phone Number</label>
-                <input type="tel" name="phone" placeholder="04XX XXX XXX" required>
+            <div style="display:flex;gap:16px;margin-bottom:28px;">
+              <div style="width:40px;height:40px;border-radius:50%;background:#f07020;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:16px;flex-shrink:0;font-family:'Barlow Condensed',sans-serif;">3</div>
+              <div>
+                <h3 style="font-size:18px;font-weight:800;color:#0a1f3d;margin-bottom:6px;">George Diagnoses &amp; Fixes</h3>
+                <p style="color:#555;line-height:1.6;font-size:15px;">George arrives fully equipped with manufacturer diagnostic software and common replacement parts. Most faults resolved in one visit.</p>
               </div>
             </div>
+          </div>
 
-            <div class="field-row">
-              <div class="field">
-                <label>Email</label>
-                <input type="email" name="email" placeholder="john@email.com">
-              </div>
-              <div class="field">
-                <label>Suburb</label>
-                <input type="text" name="suburb" placeholder="e.g. Mosman, Surry Hills" required>
-              </div>
+          <!-- STRIPE PAYMENT CARD -->
+          <div style="background:#fff;border-radius:16px;padding:40px 36px;box-shadow:0 8px 40px rgba(0,0,0,0.12);text-align:center;border:2px solid #e8edf5;">
+
+            <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(39,174,96,0.1);border:1px solid #2ecc71;color:#27ae60;border-radius:20px;padding:6px 16px;font-size:12px;font-weight:800;letter-spacing:1px;margin-bottom:20px;">
+              🔒 SECURE CHECKOUT — STRIPE
             </div>
 
-            <!-- ISSUE DESCRIPTION -->
-            <div class="field">
-              <label>Describe the fault</label>
-              <textarea name="issue" placeholder="e.g. C-Bus lights stuck on, can't access programming, zones not responding after power outage..." required></textarea>
+            <div style="font-family:'Barlow Condensed',sans-serif;font-size:36px;font-weight:900;color:#0a1f3d;margin-bottom:4px;text-transform:uppercase;letter-spacing:0.5px;">Priority Booking Deposit</div>
+            <div style="font-size:52px;font-weight:900;color:#0a1f3d;font-family:'Barlow Condensed',sans-serif;margin:12px 0 4px;">$150</div>
+            <p style="color:#4a6a9a;margin-bottom:32px;font-size:15px;font-weight:600;">Fully credited toward your final repair invoice.</p>
+
+            <a href="https://buy.stripe.com/bJeeVcfQB17w5YNaS600001"
+               style="display:block;background:#635BFF;color:#fff;font-size:18px;font-weight:800;padding:20px 40px;border-radius:10px;text-decoration:none;box-shadow:0 10px 24px rgba(99,91,255,0.35);transition:all 0.2s;font-family:'Barlow Condensed',sans-serif;letter-spacing:0.5px;"
+               onmouseover="this.style.background='#4f46e5';this.style.transform='translateY(-2px)'"
+               onmouseout="this.style.background='#635BFF';this.style.transform='none'">
+              💳 &nbsp;Pay Deposit via Stripe
+            </a>
+
+            <div style="display:flex;justify-content:center;gap:20px;margin-top:20px;opacity:0.5;">
+              <span style="font-size:22px;">🔒</span>
+              <span style="font-size:22px;">💳</span>
+              <span style="font-size:22px;">🍎</span>
             </div>
 
-            <button type="submit" class="submit-btn">
-              📲 SEND TO GEORGE VIA WHATSAPP →
-            </button>
-            <p class="footnote">
-              Prefer email? <a href="mailto:george@sydneyautomationco.com.au">george@sydneyautomationco.com.au</a><br>
-              Or call direct: <a href="tel:0422469739">0422 469 739</a>
-            </p>
-          </form>
+            <p style="font-size:12px;color:#999;margin-top:16px;">Visa, Mastercard, Amex &amp; Apple Pay accepted. Stripe-secured.</p>
+          </div>
+
+          <!-- PRICING TRANSPARENCY -->
+          <div style="background:#f4f7fc;border:1px solid #dde3ee;padding:24px;border-radius:10px;margin-top:20px;">
+            <h4 style="color:#0a1f3d;margin-bottom:10px;font-size:16px;font-weight:800;">Why a deposit?</h4>
+            <p style="color:#555;font-size:14px;line-height:1.65;margin-bottom:14px;">As a specialist (not a generalist electrician), George's time is strictly allocated. The deposit ensures same-day availability for serious enquiries and eliminates no-shows so he can maintain rapid response across Greater Sydney.</p>
+            <div style="background:#fff;border-left:4px solid #f07020;padding:14px 18px;border-radius:4px;">
+              <h5 style="color:#0a1f3d;margin-bottom:6px;font-size:14px;font-weight:800;">Transparent Pricing</h5>
+              <p style="color:#555;font-size:13px;line-height:1.6;margin:0;">Standard rate: <strong>$150/hr, 3-hour minimum call-out ($450)</strong>. Your $150 deposit is <strong>fully credited</strong> to the invoice — you only pay the balance on completion.</p>
+            </div>
+          </div>
+
+          <!-- PREFER TO CALL? -->
+          <div style="text-align:center;margin-top:24px;padding:20px;background:#001428;border-radius:10px;">
+            <p style="color:rgba(255,255,255,0.7);font-size:14px;margin-bottom:10px;">Prefer to speak first?</p>
+            <a href="tel:0422469739" style="display:inline-flex;align-items:center;gap:10px;background:#e8330a;color:#fff;text-decoration:none;padding:14px 28px;border-radius:6px;font-weight:800;font-size:17px;font-family:'Barlow Condensed',sans-serif;">
+              📞 Call George — 0422 469 739
+            </a>
+          </div>
+
         </div>
-      </div>
 
-      <!-- SIDEBAR -->
+        <!-- SIDEBAR -->
       <div class="sidebar" style="margin-top:-20px;">
         <!-- George card -->
         <div class="info-card">
@@ -325,10 +306,10 @@
           <div style="position:relative;z-index:1;">
           <h3>What happens next</h3>
           <ul>
-            <li>George receives your WhatsApp message instantly</li>
-            <li>He'll reply within 30 mins during business hours</li>
-            <li>Confirm a time slot that works for you</li>
-            <li>$150 deposit (credited to invoice) secures the booking</li>
+            <li>Stripe payment confirms your priority booking</li>
+            <li>You're redirected to George's live calendar</li>
+            <li>Pick your same-day or next-day slot</li>
+            <li>$150 deposit is fully credited to your invoice</li>
             <li>George arrives with the right tools &amp; parts</li>
           </ul>
         </div>
@@ -336,66 +317,6 @@
 
     </div>
   </div>
-
-  <script>
-  function handleSubmit(e) {
-    e.preventDefault();
-    const form = e.target;
-    
-    // Collect all form data
-    const system = form.querySelector('input[name="system"]:checked')?.value || 'Not specified';
-    const urgency = form.querySelector('input[name="urgency"]:checked')?.value || 'Not specified';
-    const name = form.querySelector('input[name="name"]').value;
-    const phone = form.querySelector('input[name="phone"]').value;
-    const email = form.querySelector('input[name="email"]').value;
-    const suburb = form.querySelector('input[name="suburb"]').value;
-    const issue = form.querySelector('textarea[name="issue"]').value;
-
-    // Validate required fields
-    if (!system || system === 'Not specified') { alert('Please select your system type'); return; }
-    if (!urgency || urgency === 'Not specified') { alert('Please select urgency'); return; }
-    if (!name) { alert('Please enter your name'); return; }
-    if (!phone) { alert('Please enter your phone number'); return; }
-    if (!suburb) { alert('Please enter your suburb'); return; }
-    if (!issue) { alert('Please describe the fault'); return; }
-
-    // Build WhatsApp message
-    const msg = [
-      '🔧 *New Service Booking Request*',
-      '',
-      '📍 *System:* ' + system,
-      '⚡ *Urgency:* ' + urgency,
-      '',
-      '👤 *Name:* ' + name,
-      '📞 *Phone:* ' + phone,
-      '📧 *Email:* ' + (email || 'Not provided'),
-      '🏙️ *Suburb:* ' + suburb,
-      '',
-      '🔍 *Fault Description:*',
-      issue,
-      '',
-      '_Sent via sydneyautomationco.com.au_'
-    ].join('\n');
-
-    const waUrl = 'https://wa.me/61422469739?text=' + encodeURIComponent(msg.replace(/\\n/g, '\n'));
-    
-    // Open WhatsApp
-    window.open(waUrl, '_blank');
-
-    // Show thank you state
-    document.getElementById('form-wrap').innerHTML = `
-      <div class="thanks-card">
-        <div class="check">✅</div>
-        <h2>Message sent to George!</h2>
-        <p>WhatsApp has opened with your booking request pre-filled. Hit <strong>Send</strong> in WhatsApp and George will reply within 30 minutes.</p>
-        <p style="margin-bottom:24px;">Didn't open? <a href="${waUrl}" style="color:#1e3a66;font-weight:700;">Tap here to send on WhatsApp</a></p>
-        <a href="tel:0422469739" style="display:inline-block;background:#e8330a;color:#fff;text-decoration:none;padding:14px 28px;border-radius:6px;font-weight:700;font-size:16px;margin-bottom:12px;">📞 Call George Instead</a>
-        <br>
-        <a href="/" style="color:#1e3a66;font-size:14px;font-weight:600;">← Back to homepage</a>
-      </div>
-    `;
-  }
-  </script>
 
   </body>
   </html>
