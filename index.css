@@ -111,3 +111,8 @@ footer{background:#132647;border-top:1px solid #2a4a80;padding:48px 24px 32px}
 @media(max-width:768px){
   body{padding-bottom:80px}
 }
+  .nav-phone-wrap{display:flex;flex-direction:column;align-items:center;gap:1px;text-align:center}
+  .nav-phone-label{font-size:9px;font-weight:700;color:#4a6a9a;letter-spacing:1.5px;text-transform:uppercase;font-family:'Barlow',sans-serif}
+  .nav-phone{font-family:'Barlow Condensed',sans-serif;font-size:15px;font-weight:900;color:#f07020;letter-spacing:0.5px;text-decoration:none}
+  .nav-phone:hover{color:#ff8533}
+  @media(max-width:960px){.nav-phone-wrap{display:none}}
