@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <meta name="description" content="Get an instant estimate for C-Bus and Dynalite repairs, upgrades, and programming in Sydney. Free online calculator — no sign-up required. Call George for a fixed-price quote."/>
+  <link rel="canonical" href="https://sydneyautomationco.com.au/cbus-dynalite-cost-calculator"/>
+  <title>C-Bus & Dynalite Repair Cost Calculator Sydney 2026 | Sydney Automation Co.</title>
+  <link href="/favicon.png" rel="icon" type="image/png"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600&family=Barlow+Condensed:wght@700;800&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="/index.css">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-7EZFB6GRJ3"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-7EZFB6GRJ3');</script>
+  <style>
+    body{background:#0e1f3d}
+    .calc-wrap{max-width:820px;margin:0 auto;padding:48px 24px 80px}
+    .step-bar{display:flex;gap:4px;margin-bottom:40px}
+    .step-pip{flex:1;height:4px;border-radius:2px;background:rgba(255,255,255,0.08);transition:background 0.3s}
+    .step-pip.done{background:#f07020}
+    .step-pip.active{background:#f0c040}
+    .calc-card{background:#132647;border:1px solid #2a4a80;border-radius:18px;padding:36px 40px;animation:fadeUp 0.3s ease}
+    @keyframes fadeUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+    @media(max-width:600px){.calc-card{padding:24px 20px}}
+    .step-label{color:#f0c040;font-size:11px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;margin-bottom:10px;font-family:'Barlow Condensed',sans-serif}
+    .step-q{color:#fff;font-size:1.5rem;font-weight:800;margin-bottom:8px;font-family:'Barlow Condensed',sans-serif;line-height:1.2}
+    .step-hint{color:#6a8cb5;font-size:0.88rem;margin-bottom:28px;font-family:'Barlow',sans-serif;line-height:1.6}
+    .opt-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px}
+    .opt{border:2px solid #2a4a80;border-radius:12px;padding:18px 20px;cursor:pointer;transition:all 0.18s;font-family:'Barlow',sans-serif}
+    .opt:hover{border-color:#f07020;background:rgba(240,112,32,0.08)}
+    .opt.selected{border-color:#f07020;background:rgba(240,112,32,0.12)}
+    .opt-icon{font-size:1.6rem;margin-bottom:8px}
+    .opt-name{font-weight:700;color:#f0f4ff;font-size:0.95rem;margin-bottom:3px}
+    .opt-desc{font-size:0.8rem;color:#6a8cb5;line-height:1.5}
+    .nav-btns{display:flex;gap:12px;margin-top:28px;flex-wrap:wrap}
+    .btn-next{background:#f07020;color:#fff;border:none;border-radius:8px;padding:13px 28px;font-weight:700;font-size:1rem;cursor:pointer;font-family:'Barlow Condensed',sans-serif;letter-spacing:0.5px;transition:background 0.2s}
+    .btn-next:hover{background:#ff8533}
+    .btn-next:disabled{background:#2a4a80;color:#4a6a9a;cursor:not-allowed}
+    .btn-back{background:transparent;color:#a8c0e0;border:1px solid #2a4a80;border-radius:8px;padding:13px 20px;font-weight:600;font-size:0.95rem;cursor:pointer;font-family:'Barlow',sans-serif;transition:all 0.2s}
+    .btn-back:hover{border-color:#f07020;color:#f07020}
+    /* Result */
+    .result-wrap{display:none}
+    .price-box{background:linear-gradient(135deg,rgba(240,112,32,0.12),rgba(14,31,61,0.6));border:1px solid rgba(240,112,32,0.3);border-radius:16px;padding:32px;text-align:center;margin-bottom:28px}
+    .price-range{font-family:'Barlow Condensed',sans-serif;font-size:3rem;font-weight:900;color:#f07020;line-height:1}
+    .price-label{color:#a8c0e0;font-size:0.9rem;margin-top:6px;font-family:'Barlow',sans-serif}
+    .breakdown{display:grid;gap:10px;margin-bottom:24px}
+    .breakdown-row{display:flex;justify-content:space-between;align-items:center;padding:12px 16px;background:rgba(255,255,255,0.03);border:1px solid rgba(42,74,128,0.4);border-radius:10px;font-family:'Barlow',sans-serif}
+    .br-label{color:#a8c0e0;font-size:0.9rem}
+    .br-val{color:#f0f4ff;font-weight:700;font-size:0.95rem}
+    .disclaimer{font-size:0.8rem;color:#4a6a9a;line-height:1.6;font-family:'Barlow',sans-serif;text-align:center;margin-top:16px}
+    .result-ctas{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:24px}
+    .cta-primary{background:#f07020;color:#fff;padding:15px 32px;border-radius:10px;font-weight:700;text-decoration:none;font-family:'Barlow Condensed',sans-serif;font-size:1.05rem;letter-spacing:0.5px}
+    .cta-secondary{background:transparent;border:2px solid #2a4a80;color:#a8c0e0;padding:14px 24px;border-radius:10px;font-weight:700;text-decoration:none;font-family:'Barlow Condensed',sans-serif;font-size:1rem}
+    .tags-row{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px}
+    .tag-chip{background:rgba(255,255,255,0.05);border:1px solid #2a4a80;border-radius:20px;padding:5px 14px;font-size:12px;font-weight:600;color:#a8c0e0;font-family:'Barlow',sans-serif}
+  </style>
+</head>
+<body>
+  <div id="sticky-cta-bar" style="position:fixed;top:0;left:0;right:0;z-index:99999;background:linear-gradient(90deg,#0a2240 0%,#1a3a6e 100%);display:flex;align-items:center;justify-content:center;gap:16px;padding:10px 20px;box-shadow:0 2px 12px rgba(0,0,0,0.4);font-family:'Barlow',sans-serif;">
+    <span style="color:#f0c040;font-size:13px;font-weight:600;white-space:nowrap;">⚡ Get a Fixed-Price Quote — Call George Today</span>
+    <a href="tel:0422469739" style="background:#e8330a;color:#fff;text-decoration:none;padding:7px 18px;border-radius:4px;font-size:13px;font-weight:700;white-space:nowrap;">📞 Call George</a>
+    <a href="/book-service" style="background:#fff;color:#0a2240;text-decoration:none;padding:7px 18px;border-radius:4px;font-size:13px;font-weight:700;white-space:nowrap;border:2px solid #fff;">Book Online →</a>
+    <button onclick="document.getElementById('sticky-cta-bar').style.display='none'" style="background:none;border:none;color:rgba(255,255,255,0.5);cursor:pointer;font-size:18px;line-height:1;margin-left:8px;padding:0;">×</button>
+  </div>
+  <style>body{padding-top:44px!important}@media(max-width:600px){#sticky-cta-bar{flex-wrap:wrap;gap:8px;padding:8px 12px}#sticky-cta-bar span{font-size:11px}#sticky-cta-bar a{font-size:12px;padding:6px 12px}body{padding-top:72px!important}}</style>
+
+  <nav>
+    <a class="logo" href="/"><span class="logo-main">Sydney Automation Co.</span><span class="logo-line"></span><span class="logo-sub">Lighting Control Specialists</span></a>
+    <div class="nav-phone-wrap"><span class="nav-phone-label">Direct Service Line</span><a class="nav-phone" href="tel:+61422469739">0422 469 739</a></div>
+    <div class="nav-links">
+      <a href="/">Home</a>
+      <a href="/cbus-repair-sydney">C-Bus Repairs</a>
+      <a href="/dynalite-repair-sydney">Dynalite Repairs</a>
+      <a href="/guides">Guides</a>
+      <a href="/contact">Contact</a>
+      <a class="nav-cta" href="tel:0422469739">📞 Call Now</a>
+    </div>
+    <button aria-label="Menu" class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+  </nav>
+  <div id="mobNav" class="mob-nav">
+    <div class="mob-section"><div class="mob-section-title">Services</div><a href="/cbus-repair-sydney">C-Bus Repairs</a><a href="/dynalite-repair-sydney">Dynalite Repairs</a><a href="/emergency-repair-sydney">Emergency Repair</a></div>
+    <a href="tel:0422469739" class="mob-cta">📞 0422 469 739</a>
+  </div>
+
+  <section style="background:linear-gradient(135deg,#0a2240 0%,#1a3a6e 100%);padding:64px 24px 48px;text-align:center">
+    <p style="color:#f0c040;font-size:11px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;margin-bottom:10px;font-family:'Barlow Condensed',sans-serif;">FREE INSTANT ESTIMATE</p>
+    <h1 style="color:#fff;font-size:clamp(1.8rem,5vw,2.8rem);font-weight:800;margin-bottom:14px;line-height:1.2;font-family:'Barlow Condensed',sans-serif;">C-Bus & Dynalite Cost Calculator</h1>
+    <p style="color:#a8c0e0;font-size:1rem;line-height:1.7;max-width:600px;margin:0 auto;font-family:'Barlow',sans-serif;">Answer 5 quick questions and get an instant ballpark estimate for your job — repairs, upgrades, programming, or fault finding. No sign-up. No obligations. Fixed-price quotes always available.</p>
+  </section>
+
+  <div class="calc-wrap">
+    <div class="step-bar" id="step-bar"></div>
+    <div id="steps-container"></div>
+    <div class="result-wrap" id="result-wrap"></div>
+  </div>
+
+  <footer>
+    <div class="footer-grid">
+      <div><div class="logo" style="margin-bottom:16px"><span class="logo-main">Sydney Automation Co.</span><div class="logo-line"></div><span class="logo-sub">Lighting Control Specialists</span></div><p style="color:#a8c0e0;font-size:14px;line-height:1.7;max-width:340px">Same-day C-Bus & Dynalite specialists across Sydney. Fixed-price quotes. No call-out surprises.</p></div>
+      <div><h4 style="font-family:'Barlow Condensed',sans-serif;font-weight:800;margin-bottom:16px;font-size:16px;letter-spacing:1px;text-transform:uppercase;color:#a8c0e0">Tools</h4><div style="display:flex;flex-direction:column;gap:8px;font-size:14px"><a href="/cbus-fault-finder" style="color:#a8c0e0">C-Bus Fault Finder</a><a href="/service-area-heatmap" style="color:#a8c0e0">Area Heat Map</a><a href="/lighting-control-upgrade-quiz" style="color:#a8c0e0">Upgrade Quiz</a><a href="/guides" style="color:#a8c0e0">Learning Centre</a></div></div>
+      <div><h4 style="font-family:'Barlow Condensed',sans-serif;font-weight:800;margin-bottom:16px;font-size:16px;letter-spacing:1px;text-transform:uppercase;color:#a8c0e0">Contact</h4><div style="display:flex;flex-direction:column;gap:10px;font-size:14px;color:#a8c0e0"><a href="tel:0422469739" style="color:#f07020;font-weight:700;font-size:16px">📞 0422 469 739</a><a href="mailto:service@sydneyautomationco.com.au" style="color:#a8c0e0">service@sydneyautomationco.com.au</a><p>Mon–Fri 7am–5pm</p></div></div>
+    </div>
+    <div class="footer-copy"><span>© 2026 Sydney Automation Co. ABN 61 136 364 150.</span></div>
+  </footer>
+
+  <script src="/nav.js"></script>
+  <script>
+  const STEPS = [
+    {
+      id:'system', label:'Step 1 of 5', question:'What system do you have?', hint:'Not sure? Look for "C-Bus" or "Clipsal" labels on keypads or the switchboard. Dynalite systems often have "Philips" or "DyNet" labels.',
+      options:[
+        {icon:'🔵',name:'C-Bus (Clipsal)',desc:'Clipsal or Schneider Electric C-Bus system',val:'cbus'},
+        {icon:'🟠',name:'Dynalite (Philips)',desc:'Philips Dynalite or Signify system',val:'dynalite'},
+        {icon:'🟡',name:'DALI System',desc:'DALI or DALI-2 lighting control',val:'dali'},
+        {icon:'❓',name:"Not Sure",desc:'George can identify your system on arrival',val:'unknown'},
+      ]
+    },
+    {
+      id:'jobtype', label:'Step 2 of 5', question:'What type of work do you need?', hint:'Select the option that best describes your situation. You can discuss specifics with George on the call.',
+      options:[
+        {icon:'🔧',name:'Fault Finding & Repair',desc:'Something stopped working or is behaving oddly',val:'repair',base:[350,850]},
+        {icon:'💻',name:'Programming Only',desc:'Scenes, schedules, or groups need reprogramming',val:'programming',base:[280,650]},
+        {icon:'⬆️',name:'Upgrade / Expansion',desc:'Adding devices, zones, or modernising the system',val:'upgrade',base:[800,2500]},
+        {icon:'🆕',name:'New Installation',desc:'Installing a new lighting control system',val:'newinstall',base:[2500,8000]},
+        {icon:'🚨',name:'Emergency Repair',desc:'Total failure — system not responding at all',val:'emergency',base:[450,950]},
+        {icon:'✅',name:'Compliance Audit',desc:'AFSS, DALI-2, or building compliance check',val:'compliance',base:[400,900]},
+      ]
+    },
+    {
+      id:'size', label:'Step 3 of 5', question:'How large is the property?', hint:'This affects how long the job will take and how many devices may be involved.',
+      options:[
+        {icon:'🏠',name:'Small Apartment',desc:'1–2 bed, up to 80m²',val:'small',mult:0.7},
+        {icon:'🏡',name:'Mid-Size Home',desc:'3–4 bed, 80–250m²',val:'medium',mult:1.0},
+        {icon:'🏘️',name:'Large Residence',desc:'5+ bed or >250m²',val:'large',mult:1.5},
+        {icon:'🏢',name:'Small Commercial',desc:'Office, retail, up to 500m²',val:'smallcomm',mult:1.3},
+        {icon:'🏬',name:'Medium Commercial',desc:'500–2000m²',val:'medcomm',mult:2.0},
+        {icon:'🏗️',name:'Large / Strata',desc:'Multi-floor, strata or industrial',val:'largecomm',mult:3.0},
+      ]
+    },
+    {
+      id:'urgency', label:'Step 4 of 5', question:'How urgent is the job?', hint:'George offers same-day emergency response for critical failures.',
+      options:[
+        {icon:'🔴',name:'Emergency — Today',desc:'Total failure, safety issue, or tenant complaint',val:'emergency',surcharge:200},
+        {icon:'🟠',name:'This Week',desc:'Affecting daily operations, needs prompt attention',val:'urgent',surcharge:0},
+        {icon:'🟡',name:'Within 2 Weeks',desc:'Causing inconvenience but manageable for now',val:'soon',surcharge:-50},
+        {icon:'🟢',name:'Flexible Timing',desc:'Planning ahead — no rush',val:'flexible',surcharge:-100},
+      ]
+    },
+    {
+      id:'access', label:'Step 5 of 5', question:'What is your access situation?', hint:'Access to the switchboard and all affected areas is needed for most jobs.',
+      options:[
+        {icon:'🔑',name:'Full Access Available',desc:'Switchboard, all zones, and access panels',val:'full',mult:1.0},
+        {icon:'🏗️',name:'Restricted Access',desc:'Ceilings, switchboards, or areas require special access',val:'restricted',mult:1.2},
+        {icon:'🏢',name:'Strata / Managed Building',desc:'Coordination with building manager required',val:'strata',mult:1.15},
+        {icon:'🌐',name:'Remote Only (IP Access)',desc:'Programming via network — no site visit needed',val:'remote',mult:0.6},
+      ]
+    }
+  ];
+
+  let answers = {};
+  let currentStep = 0;
+
+  function renderStepBar() {
+    const bar = document.getElementById('step-bar');
+    bar.innerHTML = STEPS.map((_, i) => {
+      let cls = i < currentStep ? 'done' : i === currentStep ? 'active' : '';
+      return `<div class="step-pip ${cls}"></div>`;
+    }).join('');
+  }
+
+  function renderStep() {
+    renderStepBar();
+    const s = STEPS[currentStep];
+    const sel = answers[s.id];
+    document.getElementById('steps-container').innerHTML = `
+      <div class="calc-card">
+        <div class="step-label">${s.label}</div>
+        <div class="step-q">${s.question}</div>
+        <div class="step-hint">${s.hint}</div>
+        <div class="opt-grid">
+          ${s.options.map(o=>`
+            <div class="opt${sel===o.val?' selected':''}" onclick="selectOpt('${s.id}','${o.val}')">
+              <div class="opt-icon">${o.icon}</div>
+              <div class="opt-name">${o.name}</div>
+              <div class="opt-desc">${o.desc}</div>
+            </div>
+          `).join('')}
+        </div>
+        <div class="nav-btns">
+          ${currentStep>0?`<button class="btn-back" onclick="prevStep()">← Back</button>`:''}
+          <button class="btn-next" id="btn-next" onclick="nextStep()" ${!sel?'disabled':''}>
+            ${currentStep===STEPS.length-1?'Calculate My Estimate →':'Next →'}
+          </button>
+        </div>
+      </div>
+    `;
+  }
+
+  window.selectOpt = function(stepId, val) {
+    answers[stepId] = val;
+    renderStep();
+  };
+
+  window.nextStep = function() {
+    if (currentStep < STEPS.length - 1) { currentStep++; renderStep(); }
+    else { showResult(); }
+  };
+
+  window.prevStep = function() {
+    if (currentStep > 0) { currentStep--; renderStep(); }
+  };
+
+  function showResult() {
+    document.getElementById('steps-container').innerHTML = '';
+    document.getElementById('step-bar').innerHTML = STEPS.map(()=>`<div class="step-pip done"></div>`).join('');
+
+    // Calculate estimate
+    const jobOpt = STEPS[1].options.find(o=>o.val===answers.jobtype) || {base:[400,900]};
+    const [baseMin, baseMax] = jobOpt.base || [400,900];
+    const sizeOpt = STEPS[2].options.find(o=>o.val===answers.size) || {mult:1.0};
+    const urgencyOpt = STEPS[3].options.find(o=>o.val===answers.urgency) || {surcharge:0};
+    const accessOpt = STEPS[4].options.find(o=>o.val===answers.access) || {mult:1.0};
+
+    let low = Math.round((baseMin * sizeOpt.mult * accessOpt.mult + urgencyOpt.surcharge) / 50) * 50;
+    let high = Math.round((baseMax * sizeOpt.mult * accessOpt.mult + urgencyOpt.surcharge) / 50) * 50;
+    if (low < 200) low = 200; if (high < low + 200) high = low + 200;
+
+    const systemLabels = {cbus:'C-Bus (Clipsal)',dynalite:'Dynalite (Philips)',dali:'DALI System',unknown:'Lighting Control System'};
+    const jobtypeLabels = {repair:'Fault Finding & Repair',programming:'Programming',upgrade:'Upgrade / Expansion',newinstall:'New Installation',emergency:'Emergency Repair',compliance:'Compliance Audit'};
+    const sizeLabels = {small:'Small Apartment',medium:'Mid-Size Home',large:'Large Residence',smallcomm:'Small Commercial',medcomm:'Medium Commercial',largecomm:'Large / Strata Building'};
+
+    const selectedTags = [
+      systemLabels[answers.system] || 'Unknown System',
+      jobtypeLabels[answers.jobtype] || '',
+      sizeLabels[answers.size] || '',
+    ].filter(Boolean);
+
+    const isEmergency = answers.urgency === 'emergency';
+    const isRemote = answers.access === 'remote';
+
+    const rw = document.getElementById('result-wrap');
+    rw.style.display = 'block';
+    rw.innerHTML = `
+      <div class="calc-card" style="animation:fadeUp 0.4s ease">
+        <div class="step-label">YOUR ESTIMATE</div>
+        <div class="step-q" style="margin-bottom:20px">Here's your instant ballpark</div>
+        <div class="tags-row">${selectedTags.map(t=>`<span class="tag-chip">${t}</span>`).join('')}</div>
+        <div class="price-box">
+          <div class="price-range">$${low.toLocaleString()} – $${high.toLocaleString()}</div>
+          <div class="price-label">Indicative range incl. GST · Fixed-price quote always available on request</div>
+        </div>
+        <div class="breakdown">
+          <div class="breakdown-row"><span class="br-label">Base job type</span><span class="br-val">${jobtypeLabels[answers.jobtype]||'–'}</span></div>
+          <div class="breakdown-row"><span class="br-label">Property size factor</span><span class="br-val">${sizeLabels[answers.size]||'–'}</span></div>
+          ${isEmergency?`<div class="breakdown-row"><span class="br-label">Emergency surcharge</span><span class="br-val" style="color:#f07020">+$200 (same-day response)</span></div>`:''}
+          ${isRemote?`<div class="breakdown-row"><span class="br-label">Remote access discount</span><span class="br-val" style="color:#64b464">No travel required</span></div>`:''}
+          <div class="breakdown-row"><span class="br-label">Travel</span><span class="br-val">Included in fixed-price</span></div>
+          <div class="breakdown-row"><span class="br-label">Parts (if required)</span><span class="br-val">Quoted separately before proceeding</span></div>
+        </div>
+        <div style="background:rgba(240,192,64,0.08);border:1px solid rgba(240,192,64,0.2);border-radius:12px;padding:16px 20px;margin-bottom:20px">
+          <p style="color:#f0c040;font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:6px;font-family:'Barlow Condensed',sans-serif;">George's Fixed-Price Guarantee</p>
+          <p style="color:#a8c0e0;font-size:0.88rem;line-height:1.6;font-family:'Barlow',sans-serif;">You'll always receive a firm price before any work begins. No surprises, no hourly billing that blows out. If the scope changes, you're informed and asked to approve before George proceeds.</p>
+        </div>
+        <div class="result-ctas">
+          <a href="tel:0422469739" class="cta-primary" onclick="gtag&&gtag('event','click',{event_category:'Calculator',event_label:'call-after-calc'})">📞 Lock In a Fixed Price — 0422 469 739</a>
+          <a href="/book-service" class="cta-secondary">Book Online →</a>
+        </div>
+        <div class="disclaimer">This estimate is indicative only and based on typical Sydney job rates as of June 2026. Actual price depends on system condition, parts required, and access. George provides a firm fixed price before starting any work.</div>
+        <div style="margin-top:24px;text-align:center"><button onclick="restartCalc()" style="background:none;border:none;color:#4a6a9a;font-size:13px;cursor:pointer;font-family:'Barlow',sans-serif;text-decoration:underline">↺ Start over</button></div>
+      </div>
+    `;
+    gtag && gtag('event', 'calculator_complete', { job_type: answers.jobtype, system: answers.system });
+  }
+
+  window.restartCalc = function() {
+    answers = {}; currentStep = 0;
+    document.getElementById('result-wrap').style.display = 'none';
+    renderStep();
+  };
+
+  renderStep();
+  </script>
+</body>
+</html>
