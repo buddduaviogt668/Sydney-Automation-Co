@@ -1262,7 +1262,62 @@
         background-position: 200% center;
       }
     }
-  </style>
+  
+      /* ===== HERO KEN BURNS ANIMATION ===== */
+      .hero {
+        position: relative;
+        overflow: hidden;
+        padding: 120px 24px 100px !important;
+        background: #001428 !important;
+        border-bottom: none !important;
+      }
+      .hero-bg {
+        position: absolute;
+        inset: -8%;
+        z-index: 0;
+        animation: kenburns 22s ease-in-out infinite alternate;
+        will-change: transform;
+      }
+      .hero-bg-img {
+        position: absolute;
+        inset: 0;
+        background-size: cover;
+        background-position: center 30%;
+        transition: opacity 4s ease;
+      }
+      .hero-bg-img.primary {
+        background-image: url('/hero-sydney-bridge.png');
+        opacity: 1;
+      }
+      .hero-bg-img.secondary {
+        background-image: url('/hero-sydney-night.png');
+        opacity: 0;
+      }
+      .hero-bg-overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          160deg,
+          rgba(0,10,30,0.78) 0%,
+          rgba(0,20,55,0.65) 50%,
+          rgba(0,10,30,0.72) 100%
+        );
+        z-index: 1;
+      }
+      @keyframes kenburns {
+        0%   { transform: scale(1.00) translate(0%, 0%); }
+        33%  { transform: scale(1.08) translate(-1.5%, 1%); }
+        66%  { transform: scale(1.12) translate(1%, -0.5%); }
+        100% { transform: scale(1.05) translate(-0.5%, 1.5%); }
+      }
+      .hero .container {
+        position: relative;
+        z-index: 2;
+      }
+      /* Ensure text remains crisp over image */
+      .hero h1 { text-shadow: 0 2px 20px rgba(0,0,0,0.5); }
+      .hero .lead { text-shadow: 0 1px 8px rgba(0,0,0,0.4); }
+    </style>
   <link rel="stylesheet" href="/index.css">
 </head>
 
@@ -1516,6 +1571,12 @@
 
     <!-- HERO -->
     <div class="hero">
+        <!-- Ken Burns background -->
+        <div class="hero-bg" id="hero-bg">
+          <div class="hero-bg-img primary" id="hero-primary"></div>
+          <div class="hero-bg-img secondary" id="hero-secondary"></div>
+        </div>
+        <div class="hero-bg-overlay"></div>
       <div class="container">
         <div class="tag"
           style="background: rgba(39, 174, 96, 0.2); color: #2ecc71; border: 1px solid #2ecc71; display: inline-flex; align-items: center; gap: 6px; font-weight: 800; letter-spacing: 1px;">
@@ -3603,6 +3664,21 @@
 
 
   <script src="/chatbot.js"></script>
+
+    <!-- Ken Burns crossfade between hero images -->
+    <script>
+      (function() {
+        var primary = document.getElementById('hero-primary');
+        var secondary = document.getElementById('hero-secondary');
+        if (!primary || !secondary) return;
+        var showSecondary = false;
+        setInterval(function() {
+          showSecondary = !showSecondary;
+          primary.style.opacity = showSecondary ? '0' : '1';
+          secondary.style.opacity = showSecondary ? '1' : '0';
+        }, 10000);
+      })();
+    </script>
 </body>
 
 
