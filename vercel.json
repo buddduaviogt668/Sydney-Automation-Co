@@ -3,6 +3,256 @@
   "trailingSlash": false,
   "redirects": [
     {
+      "source": "/c-bus-programming-sydney",
+      "destination": "/c-bus-programmer-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/cbus-programming-sydney",
+      "destination": "/c-bus-programmer-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/cbus-programming-sydney.html",
+      "destination": "/c-bus-programmer-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/c-bus-fault-finding-sydney",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/c-bus-fault-finding-sydney.html",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/dynalite-programming-sydney",
+      "destination": "/dynalite-programmer-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/dynalite-programming-sydney.html",
+      "destination": "/dynalite-programmer-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/dali-lighting-control-sydney",
+      "destination": "/dali-lighting-repair",
+      "permanent": true
+    },
+    {
+      "source": "/dali-lighting-control-sydney.html",
+      "destination": "/dali-lighting-repair",
+      "permanent": true
+    },
+    {
+      "source": "/home-automation-sydney",
+      "destination": "/c-bus-programmer-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/home-automation-sydney.html",
+      "destination": "/c-bus-programmer-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/smart-home-sydney",
+      "destination": "/c-bus-programmer-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/smart-home-sydney.html",
+      "destination": "/c-bus-programmer-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/lighting-control-sydney",
+      "destination": "/lighting-control-service-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/lighting-control-sydney.html",
+      "destination": "/lighting-control-service-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/building-automation-sydney",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/building-automation-sydney.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/portfolio",
+      "destination": "/projects",
+      "permanent": true
+    },
+    {
+      "source": "/portfolio/",
+      "destination": "/projects",
+      "permanent": true
+    },
+    {
+      "source": "/news",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/news/",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/gallery",
+      "destination": "/about",
+      "permanent": true
+    },
+    {
+      "source": "/gallery/",
+      "destination": "/about",
+      "permanent": true
+    },
+    {
+      "source": "/product/cbus",
+      "destination": "/products",
+      "permanent": true
+    },
+    {
+      "source": "/product/dynalite",
+      "destination": "/products",
+      "permanent": true
+    },
+    {
+      "source": "/product/:slug",
+      "destination": "/products",
+      "permanent": true
+    },
+    {
+      "source": "/cbus-sydney",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/cbus-sydney.html",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/dynalite-sydney",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/dynalite-sydney.html",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/get-quote",
+      "destination": "/book-service",
+      "permanent": true
+    },
+    {
+      "source": "/get-quote/",
+      "destination": "/book-service",
+      "permanent": true
+    },
+    {
+      "source": "/free-quote",
+      "destination": "/book-service",
+      "permanent": true
+    },
+    {
+      "source": "/free-quote/",
+      "destination": "/book-service",
+      "permanent": true
+    },
+    {
+      "source": "/quote",
+      "destination": "/book-service",
+      "permanent": true
+    },
+    {
+      "source": "/quote/",
+      "destination": "/book-service",
+      "permanent": true
+    },
+    {
+      "source": "/enquire",
+      "destination": "/book-service",
+      "permanent": true
+    },
+    {
+      "source": "/enquiry",
+      "destination": "/book-service",
+      "permanent": true
+    },
+    {
+      "source": "/request-quote",
+      "destination": "/book-service",
+      "permanent": true
+    },
+    {
+      "source": "/support",
+      "destination": "/contact",
+      "permanent": true
+    },
+    {
+      "source": "/support/",
+      "destination": "/contact",
+      "permanent": true
+    },
+    {
+      "source": "/faq",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/faq/",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/C-Bus-Repairs-Sydney",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/CBUS",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/Dynalite",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/c-bus-service-sydney",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/cbus-service-sydney",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/dynalite-service-sydney",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/automation-service-sydney",
+      "destination": "/",
+      "permanent": true
+    },
+    {
       "source": "/(.*)",
       "has": [
         {
