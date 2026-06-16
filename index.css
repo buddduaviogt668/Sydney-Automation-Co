@@ -116,3 +116,7 @@ footer{background:#132647;border-top:1px solid #2a4a80;padding:48px 24px 32px}
   .nav-phone{font-family:'Barlow Condensed',sans-serif;font-size:15px;font-weight:900;color:#f07020;letter-spacing:0.5px;text-decoration:none}
   .nav-phone:hover{color:#ff8533}
   @media(max-width:960px){.nav-phone-wrap{display:none}}
+  /* Fix mob-nav position on mobile (taller sticky bar = more offset needed) */
+  @media(max-width:600px){.mob-nav{top:148px!important}}
+  /* Hide legacy floating CTA elements — superseded by #sticky-cta-bar */
+  .sac-float-cta,.sac-mob-bar{display:none!important}
