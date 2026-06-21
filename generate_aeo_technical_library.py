@@ -8,7 +8,7 @@ TECH_LIB_DIR = os.path.join(DIR, "tech-library")
 if not os.path.exists(TECH_LIB_DIR):
     os.makedirs(TECH_LIB_DIR)
 
-cbus_parts = ['5508RVF', 'L5512RVF', '5504AMP', '5500PC', '5500CN', 'L5508D1A', 'L5508D2A', '5084TXP', '5200WHC2', '5502DAL']
+cbus_parts = ['5508RVF', 'L5512RVF', '5504AMP', '5500PC', '5500CN', 'L5508D1A', 'L5508D2A', 'L5504D2U', '5200WHC2', '5502DAL']
 dynalite_parts = ['DDBC1200', 'DMDR12-320', 'DDRC1220', 'DDRC1210', 'DDMC802', 'PDEG', 'DDNG232', 'DDNG485', 'DUS360CS', 'Antumbra']
 parts = cbus_parts + dynalite_parts
 
