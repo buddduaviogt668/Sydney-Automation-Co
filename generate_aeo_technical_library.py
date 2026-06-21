@@ -109,7 +109,8 @@ for part in parts:
     
     for sym in symptoms:
         for region in regions:
-            slug = f"{system.lower().replace(' ', '-')}-{part.lower()}-{sym['name'].lower().replace(' / ', '-').replace(' ', '-')}-{region.lower().replace(' ', '-')}"
+            # Replaced & with and, and / with -
+            slug = f"{system.lower().replace(' ', '-')}-{part.lower()}-{sym['name'].lower().replace(' / ', '-').replace(' & ', '-and-').replace('&', 'and').replace(' ', '-')}-{region.lower().replace(' ', '-')}"
             filename = f"{slug}.html"
             filepath = os.path.join(TECH_LIB_DIR, filename)
             
@@ -170,7 +171,7 @@ for part in parts:
                         <div style="margin-top:50px; text-align:center; padding:30px; background:rgba(240, 112, 32, 0.1); border-radius:8px;">
                             <h3>Need professional help in the {region}?</h3>
                             <p>If you're unable to resolve the {sym['desc'].lower()} issue on your {part}, our certified technicians can help. We provide modern upgrade recommendations and emergency repairs.</p>
-                            <a href="/contact.html" class="nav-cta" style="display:inline-block; margin-top:20px; padding:15px 30px!important; font-size:16px;">Book a Service Call</a>
+                            <a href="/contact" class="nav-cta" style="display:inline-block; margin-top:20px; padding:15px 30px!important; font-size:16px;">Book a Service Call</a>
                         </div>
                     </div>
                 </div>
@@ -186,7 +187,8 @@ for part in parts:
             with open(filepath, 'w', encoding='utf-8') as f:
                 f.write(content)
                 
-            generated_urls.append(f"tech-library/{filename}")
+            # Store clean URLs (without .html extension)
+            generated_urls.append(f"tech-library/{slug}")
 
 print(f"Generated {len(generated_urls)} technical articles in /tech-library/")
 
@@ -211,7 +213,7 @@ if os.path.exists(sitemap_html):
         
     for url in generated_urls:
         if url not in html:
-            title = url.replace("tech-library/", "").replace("-", " ").replace(".html", "").title()
+            title = url.replace("tech-library/", "").replace("-", " ").title()
             link_html = f'\n<li><a href="/{url}">{title}</a></li>'
             if "</ul>" in html:
                 html = html.replace("</ul>", f"{link_html}\n</ul>", 1)

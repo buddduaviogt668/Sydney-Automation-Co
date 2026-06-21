@@ -68,7 +68,9 @@ for key, links in sorted(grouped.items()):
     html_body.append(f'<h2 style="margin-bottom:20px;">{key} Troubleshooting Guides</h2>')
     html_body.append('<div style="display:grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 15px;">')
     for link in links:
-        html_body.append(f'<a href="/tech-library/{link["filename"]}" style="display:block; padding:10px; background:rgba(255,255,255,0.05); border-radius:6px; font-size:14px; text-decoration:none; color:#a8c0e0;">{link["title"]}</a>')
+        # Strip .html extension for clean URL
+        clean_url = link["filename"].replace(".html", "")
+        html_body.append(f'<a href="/tech-library/{clean_url}" style="display:block; padding:10px; background:rgba(255,255,255,0.05); border-radius:6px; font-size:14px; text-decoration:none; color:#a8c0e0;">{link["title"]}</a>')
     html_body.append('</div></div>')
 
 html_body.append('</div></div>')
