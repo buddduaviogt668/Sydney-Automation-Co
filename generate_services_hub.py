@@ -6,6 +6,8 @@ with open('seo/page_categories.json') as f:
 
 def fmt_name(slug):
     """Convert slug to readable label."""
+    if slug == "tech-library.html":
+        return "Search Technical Library (480+ Guides)"
     return slug.replace('-', ' ').replace('cbus', 'C-Bus').replace('dynalite', 'Dynalite').replace('nsw', 'NSW').replace('sydney', 'Sydney').replace('afss', 'AFSS').title()
 
 def build_link_grid(pages, base_url="https://sydneyautomationco.com.au"):
@@ -37,6 +39,13 @@ sections = [
         "title": "Emergency Fault Code Diagnostics",
         "desc": "Dedicated diagnostic pages for every critical C-Bus and Dynalite error symptom — from flashing PCI indicator LEDs to buzzing relay contactors and toolkit connection failures.",
         "pages": cats["fault"]
+    },
+    {
+        "id": "tech-library",
+        "icon": "📚",
+        "title": "Technical Troubleshooting Library (480+ Guides)",
+        "desc": "Detailed component-level troubleshooting guides for every combination of Clipsal C-Bus and Signify Dynalite hardware parts and failure symptoms.",
+        "pages": ["tech-library.html"]
     },
     {
         "id": "commercial",
@@ -158,6 +167,7 @@ html = f"""<!DOCTYPE html>
   <a href="#core">Core Services</a>
   <a href="#strategic">Specialist Hubs</a>
   <a href="#fault">Fault Diagnostics</a>
+  <a href="#tech-library">Technical Library</a>
   <a href="#commercial">Commercial & Strata</a>
   <a href="#blogs">Expert Blogs</a>
   <a href="#cbus">C-Bus Suburbs</a>
