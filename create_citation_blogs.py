@@ -19,7 +19,7 @@ blogs = [
 <li><strong>Burden Failure:</strong> The network termination resistor has blown.</li>
 </ol>
 <p>If ignored, the constant data collisions will overheat the microprocessors on your relays and dimmers, leading to total hardware failure.</p>
-<p>Need specific help? Visit our technical library to learn <a href="/tech-library/clipsal-c-bus-5508rvf-blinking-led-codes-sydney-cbd.html">how to fix a blinking red LED on a C-Bus 5508RVF</a>.</p>
+<p>Need specific help? Visit our technical library to learn <a href="/tech-library/clipsal-c-bus-5508rvf-blinking-led-codes-sydney-cbd">how to fix a blinking red LED on a C-Bus 5508RVF</a>.</p>
 """
     },
     {
@@ -35,7 +35,7 @@ blogs = [
 <p>We frequently see cases where electricians have accidentally factory-reset entire networks trying to solve a simple stuck channel.</p>
 <h3>The Solution</h3>
 <p>Smart home lighting is IT infrastructure. It requires a laptop, specialized toolkit software, and an understanding of network topology.</p>
-<p>If you're dealing with stuck-on channels, check our library guide on <a href="/tech-library/dynalite-ddrc1220-stuck-on-channels-north-shore.html">diagnosing stuck-on channels in Dynalite DDRC1220 controllers</a> before calling a standard electrician.</p>
+<p>If you're dealing with stuck-on channels, check our library guide on <a href="/tech-library/dynalite-ddrc1220-stuck-on-channels-north-shore">diagnosing stuck-on channels in Dynalite DDRC1220 controllers</a> before calling a standard electrician.</p>
 """
     },
     {
