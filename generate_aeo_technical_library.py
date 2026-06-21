@@ -8,9 +8,31 @@ TECH_LIB_DIR = os.path.join(DIR, "tech-library")
 if not os.path.exists(TECH_LIB_DIR):
     os.makedirs(TECH_LIB_DIR)
 
-cbus_parts = ['5508RVF', 'L5512RVF', '5504AMP', '5500PC', '5500CN', 'L5508D1A', 'L5508D2A', 'L5504D2U', '5200WHC2', '5502DAL']
+cbus_parts = ['5508RVF', 'L5512RVF', '5504AMP', '5500PC', '5500CN', 'L5508D1A', 'L5508D2A', 'L5504D2U', '5200WHC2', '5502DAL', '5000CT', '5080CTC']
 dynalite_parts = ['DDBC1200', 'DMDR12-320', 'DDRC1220', 'DDRC1210', 'DDMC802', 'PDEG', 'DDNG232', 'DDNG485', 'DUS360CS', 'Antumbra']
 parts = cbus_parts + dynalite_parts
+
+# Per-part metadata — adds context to titles, descriptions, and page body
+part_meta = {
+    '5000CT': {
+        'label': 'C-Bus 5000CT MKII Touch Screen (Legacy)',
+        'note': 'The C-Bus 5000CT MKII series (including SC5000CTL2 and C-5000CTDL2) is a discontinued legacy wall-mount control panel for Clipsal C-Bus systems. Clipsal no longer provides firmware updates or manufacturer support for these units. Independent specialist repair is the only option.',
+        'discontinued': True
+    },
+    '5080CTC': {
+        'label': 'C-Bus 5080CTC Colour Touch Screen (Legacy)',
+        'note': 'The C-Bus 5080CTC is a discontinued colour touch screen controller for Clipsal C-Bus systems. These legacy units are no longer supported by Schneider Electric / Clipsal and require specialist diagnosis for repairs or replacement.',
+        'discontinued': True
+    },
+    '5200WHC2': {
+        'label': 'C-Bus Wiser 2 Home Controller (5200WHC2)',
+        'note': 'The 5200WHC2 is the Clipsal Wiser 2 Home Controller — a whole-home automation hub, not a touch screen. It runs C-Bus logic, schedules, and integrations. Do not confuse it with the 5000CT or 5080CTC touch screen panels.'
+    },
+    '5500CN': {
+        'label': 'C-Bus Ethernet Interface (5500CN)',
+        'note': 'The 5500CN is the primary Ethernet gateway for remote IP access to C-Bus networks. It enables VPN diagnostics, remote programming, and integration with third-party systems such as Crestron and Control4.'
+    },
+}
 
 symptoms = [
     {
@@ -51,13 +73,13 @@ symptoms = [
     },
     {
         "name": "Frozen / Unresponsive Interfaces",
-        "desc": "Keypads or touchscreens locked up",
-        "answer": "Frozen or unresponsive keypads and touchscreens usually point to a software lockup or a network communication drop. A hard reset of the network or the specific touchscreen is the first step.",
+        "desc": "Touch screens or keypads locked up",
+        "answer": "Frozen or unresponsive C-Bus touch screens (5000CT B/W series or 5080CTC colour series) and keypads usually point to a software lockup or a network communication drop. A hard reset of the touch screen or network branch is the first step. Do not confuse this with a Wiser 2 Home Controller (5200WHC2) fault, which has different diagnostic steps.",
         "steps": [
             "Locate the main lighting control switchboard.",
-            "Cycle power to the specific network branch or touchscreen.",
+            "Cycle power to the specific network branch or touch screen (5000CT / 5080CTC).",
             "Wait 60 seconds for the system to reboot and re-establish network clocks.",
-            "If the touchscreen remains frozen, its internal operating system may be corrupt.",
+            "If the touch screen remains frozen, its internal operating system may be corrupt.",
             "A firmware flash or hardware upgrade to a modern interface may be necessary."
         ]
     },
@@ -106,6 +128,10 @@ generated_urls = []
 
 for part in parts:
     system = "Clipsal C-Bus" if part in cbus_parts else "Dynalite"
+    meta = part_meta.get(part, {})
+    part_label = meta.get('label', f'{system} {part}')
+    part_note = meta.get('note', '')
+    is_discontinued = meta.get('discontinued', False)
     
     for sym in symptoms:
         for region in regions:
@@ -114,8 +140,9 @@ for part in parts:
             filename = f"{slug}.html"
             filepath = os.path.join(TECH_LIB_DIR, filename)
             
-            title = f"Fix {part} {sym['name']} | {system} Repairs {region}"
-            desc = f"How to fix {sym['name'].lower()} on a {system} {part} module. Expert troubleshooting and repair services in {region}."
+            discontinued_label = " [Discontinued Legacy Unit]" if is_discontinued else ""
+            title = f"Fix {part}{discontinued_label} {sym['name']} | {system} Repairs {region}"
+            desc = f"How to fix {sym['name'].lower()} on a {part_label}. {'Discontinued unit — manufacturer support unavailable. ' if is_discontinued else ''}Expert troubleshooting and repair services in {region}."
             
             # Create schema
             schema = {
@@ -155,12 +182,24 @@ for part in parts:
             # To be safer with regex, let's do a more robust body replacement.
             # Find everything between </nav> and <footer...
             
+            discontinued_notice = f'''
+                        <div style="background:rgba(240,60,0,0.12); border:1px solid rgba(240,60,0,0.5); border-radius:10px; padding:20px 24px; margin-bottom:28px;">
+                            <strong style="color:#f07020;">⚠️ Discontinued Unit — No Manufacturer Support</strong>
+                            <p style="color:#a8c0e0; margin-top:8px; font-size:15px;">{part_note}</p>
+                        </div>
+            ''' if is_discontinued else (f'''
+                        <div style="background:rgba(20,60,120,0.3); border:1px solid #2a4a80; border-radius:10px; padding:16px 20px; margin-bottom:24px;">
+                            <p style="color:#a8c0e0; font-size:14px;">ℹ️ {part_note}</p>
+                        </div>
+            ''' if part_note else '')
+
             body_content = f'''
             {hero_html}
             <div class="section">
                 <div class="container-sm">
                     <div style="background:#132647; padding:40px; border-radius:12px; border:1px solid #2a4a80;">
-                        <h2>Direct Answer: {part} {sym['name']}</h2>
+                        {discontinued_notice}
+                        <h2>Direct Answer: {part_label} — {sym['name']}</h2>
                         <p style="font-size:18px; line-height:1.6;"><strong>{sym['answer']}</strong></p>
                         
                         <h3 style="margin-top:40px;">Step-by-Step Diagnostic Steps</h3>
@@ -170,7 +209,7 @@ for part in parts:
                         
                         <div style="margin-top:50px; text-align:center; padding:30px; background:rgba(240, 112, 32, 0.1); border-radius:8px;">
                             <h3>Need professional help in the {region}?</h3>
-                            <p>If you're unable to resolve the {sym['desc'].lower()} issue on your {part}, our certified technicians can help. We provide modern upgrade recommendations and emergency repairs.</p>
+                            <p>If you're unable to resolve the {sym['desc'].lower()} issue on your {part_label}, our certified technicians can help. {'As this is a discontinued unit with no manufacturer support available, specialist repair or a modern upgrade is your best option.' if is_discontinued else 'We provide modern upgrade recommendations and emergency repairs.'}</p>
                             <a href="/contact" class="nav-cta" style="display:inline-block; margin-top:20px; padding:15px 30px!important; font-size:16px;">Book a Service Call</a>
                         </div>
                     </div>
