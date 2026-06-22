@@ -68,7 +68,7 @@ VERTICALS = [
     ("coworking-spaces-and-serviced-offices", "Coworking Spaces and Serviced Offices", "coworking", [
         "Coworking tenants expect polished, responsive lighting — scene faults or flickering in a premium coworking space drives members to competitors.",
         "Serviced office operators need lighting that works flawlessly across dozens of independent spaces — C-Bus makes this manageable.",
-        "We programme and repair C-Bus systems for coworking spaces across Sydney, including after-hours scheduling to avoid disrupting members.",
+        "We programme and repair C-Bus systems for coworking spaces across Sydney, including scheduling during standard hours or custom timings by request to avoid disrupting members.",
         "Emergency lighting compliance for coworking facilities — full AS 2293 testing and AFSS documentation provided."
     ]),
     ("retirement-villages", "Retirement Villages", "retirement village", [
@@ -254,7 +254,7 @@ def build_page(v_slug, v_name, v_desc, suburb, sys_slug, sys_name, fault_slug, f
         <h3>FAQ — {v_name} in {suburb}</h3>
         <div class="faq"><h4>How quickly can you fix {fault_name} for {v_name} in {suburb}?</h4><p>We offer priority SLA-backed commercial response for {v_name} in {suburb}. Technicians arrive fully equipped on the first visit wherever possible.</p></div>
         <div class="faq"><h4>Are you accredited to service {v_name} in {suburb}?</h4><p>Yes. We hold all required licences and insurances. Full compliance documentation and tax invoices provided after every job.</p></div>
-        <div class="faq"><h4>Do you offer after-hours {sys_name} repair?</h4><p>Yes — early mornings, evenings, and weekends available to avoid disrupting {suburb} {v_desc} operations.</p></div>
+        <div class="faq"><h4>Do you offer after-hours {sys_name} repair?</h4><p>We book standard appointments between 7:00 AM and 5:00 PM on weekdays, but can organize custom timings under special circumstances if needed.</p></div>
         <div class="faq"><h4>Can you integrate {sys_name} with BMS, HVAC, or access control?</h4><p>Absolutely. We have experience integrating {sys_name} with building management systems and other infrastructure in {v_name} environments across {suburb} and Greater Sydney.</p></div>
       </div>
     </section>

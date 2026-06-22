@@ -39,13 +39,13 @@ VERTICALS = [
     ("universities-and-tafes", "Universities and TAFEs", "university", [
         "Lecture theatres, labs, libraries, and open learning spaces all require independent lighting zones — a C-Bus fault disrupts hundreds of students.",
         "TAFE and university campuses span multiple buildings, often on ageing C-Bus infrastructure that needs specialist knowledge to diagnose remotely.",
-        "We provide SLA-backed automation support for educational institutions, with after-hours scheduling to avoid disrupting classes.",
+        "We provide SLA-backed automation support for educational institutions, with scheduling during school holidays or arranging custom timings by request.",
         "From lecture theatre scene programming to emergency lighting compliance, we handle the full scope of university automation needs."
     ]),
     ("hotels-and-serviced-apartments", "Hotels and Serviced Apartments", "hotel", [
         "Guest experience depends on perfect lighting automation — room scenes, corridors, lobbies, and conference rooms must all work flawlessly.",
         "A C-Bus or Dynalite fault in a hotel costs more than repair time — it costs you TripAdvisor reviews and repeat bookings.",
-        "We provide discreet, after-hours repair services for hotels, ensuring zero guest disturbance while restoring full system functionality.",
+        "We provide discreet repair services for hotels, scheduled during standard hours or custom timings by request, ensuring zero guest disturbance while restoring full system functionality.",
         "Our team handles everything from guestroom lighting scenes to ballroom DALI systems and AFSS emergency compliance."
     ]),
     ("childcare-centres", "Childcare Centres", "childcare", [
@@ -82,7 +82,7 @@ VERTICALS = [
         "Sporting venues require broadcast-quality lighting control, emergency evacuation systems, and crowd-safe scene management — all automated.",
         "A lighting fault during an event is a liability. We offer priority response SLAs for sporting venues and community facilities.",
         "We service C-Bus, DALI, and Dynalite systems in sporting venues — from community rugby clubs to multi-court indoor arenas.",
-        "Emergency egress lighting in grandstands and indoor venues must comply with AS 2293. We provide full testing and AFSS certification."
+        "Emergency egress lighting in grandstands and indoor venues must comply with AS 2293. We prepare your system to be fully compliant-ready for official audits."
     ]),
 ]
 
@@ -194,7 +194,7 @@ def build_page(vertical_slug, vertical_name, vertical_desc, suburb, system_slug,
         {{
           "@type": "Question",
           "name": "Do you work after-hours for {vertical_name} in {suburb}?",
-          "acceptedAnswer": {{"@type": "Answer", "text": "Yes. We understand that {vertical_name} often cannot afford downtime during operating hours. We offer flexible scheduling including early mornings, evenings, and weekends in {suburb}."}}
+          "acceptedAnswer": {{"@type": "Answer", "text": "Our standard booking hours are between 7:00 AM and 5:00 PM on weekdays. If your facility requires scheduling outside these hours to minimize disruption, we can arrange custom timings under special circumstances by request."}}
         }}
       ]
     }}
@@ -290,7 +290,7 @@ def build_page(vertical_slug, vertical_name, vertical_desc, suburb, system_slug,
                     </div>
                     <div style="background:rgba(255,255,255,0.03);border:1px solid rgba(240,112,32,0.2);border-radius:8px;padding:20px;">
                         <h4 style="color:#f07020;margin-top:0;">🕐 Flexible Scheduling</h4>
-                        <p style="font-size:14px;">Early morning, evening, and weekend appointments to minimise disruption to {vertical_name} operations in {suburb}.</p>
+                        <p style="font-size:14px;">Appointments scheduled between 7:00 AM and 5:00 PM on weekdays, with custom timings arranged for special circumstances.</p>
                     </div>
                 </div>
             </div>
@@ -301,7 +301,7 @@ def build_page(vertical_slug, vertical_name, vertical_desc, suburb, system_slug,
                 <h3>Frequently Asked Questions — {vertical_name} in {suburb}</h3>
                 <div class="faq-item"><h4>How quickly can you fix {fault_name} for {vertical_name} in {suburb}?</h4><p>We offer priority SLA-backed response for commercial facilities in {suburb}. Our technicians arrive fully equipped to diagnose and resolve {system_name} faults on the first visit wherever possible.</p></div>
                 <div class="faq-item"><h4>Are your {system_name} services compliant for {vertical_name}?</h4><p>Yes. We hold all required accreditations and insurances for servicing {vertical_name}, providing complete compliance documentation and tax invoices after every job.</p></div>
-                <div class="faq-item"><h4>Do you work after-hours for {vertical_name} in {suburb}?</h4><p>Yes. We understand that {vertical_name} often cannot afford downtime during operating hours. We offer flexible scheduling including early mornings, evenings, and weekends in {suburb}.</p></div>
+                <div class="faq-item"><h4>Do you work after-hours for {vertical_name} in {suburb}?</h4><p>Our standard booking hours are between 7:00 AM and 5:00 PM on weekdays. If your facility requires scheduling outside these hours to minimize disruption, we can arrange custom timings under special circumstances by request.</p></div>
                 <div class="faq-item"><h4>Can you integrate {system_name} with BMS or access control at our {suburb} facility?</h4><p>Absolutely. We have experience integrating {system_name} with building management systems, access control, HVAC, and AV equipment in {vertical_name} environments across {suburb} and Greater Sydney.</p></div>
             </div>
         </section>

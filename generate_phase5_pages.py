@@ -34,7 +34,7 @@ VERTICALS = [
         "Lighting is the centrepiece of any event — a C-Bus or Dynalite fault mid-function is a catastrophe that costs you bookings and reputation.",
         "We programme bespoke scene sequences for weddings, galas, and corporate events, with Rapix integration for wireless control.",
         "Our SLA-backed response means a DALI-2 or C-Bus fault before your biggest event gets fixed before doors open — guaranteed.",
-        "Full AFSS emergency lighting compliance for public assembly venues — we provide AS 2293 testing and certification."
+        "Full AFSS emergency lighting compliance for public assembly venues — we help prepare your hardware and controllers for official inspections."
     ]),
     ("funeral-homes-and-memorial-chapels", "Funeral Homes and Memorial Chapels", "funeral home", [
         "Lighting in a funeral home must work flawlessly, every service — a C-Bus or Dynalite scene failure during a service is unacceptable.",
@@ -45,13 +45,13 @@ VERTICALS = [
     ("nightclubs-and-late-night-venues", "Nightclubs and Late-Night Venues", "nightclub", [
         "A C-Bus or Rapix lighting fault during trading hours on a Saturday night is a $10,000+ loss — we fix lighting control fast.",
         "We programme DMX-linked C-Bus and Rapix scenes for nightclubs and entertainment venues, covering bar lighting, dance floors, and entry zones.",
-        "Our after-hours emergency response is built for hospitality — we're available when venues need us most, not just 9 to 5.",
+        "Our support is tailored for hospitality — we book standard weekdays 7am-5pm and can organize custom timings for special circumstances.",
         "DALI-2 architectural lighting, Dynalite dimmer repair, and AFSS compliance for licensed venues — full scope covered."
     ]),
     ("private-schools-and-colleges", "Private Schools and Independent Colleges", "private school", [
         "C-Bus and Dynalite systems in private schools manage classrooms, theatres, sports halls, and libraries — a fault disrupts hundreds of students.",
-        "We provide after-hours and school holiday scheduling so repairs never disrupt class time or scheduled events.",
-        "Emergency lighting compliance under AS 2293 is mandatory in educational buildings — we handle full AFSS testing and certification.",
+        "We provide school holiday scheduling or custom timings by request so repairs never disrupt class time or scheduled events.",
+        "Emergency lighting compliance under AS 2293 is mandatory in educational buildings — we resolve component and bus faults to prepare your system for testing.",
         "Our team has experience with the scale and complexity of multi-building independent school campuses across Sydney."
     ]),
     ("community-halls-and-neighbourhood-centres", "Community Halls and Neighbourhood Centres", "community hall", [
@@ -256,7 +256,7 @@ def build_page(v_slug, v_name, v_desc, suburb, sys_slug, sys_name, fault_slug, f
           <div class="card"><h4>C-Bus Diagnostics</h4><p>Full C-Bus network scan using Clipsal manufacturer toolkit. Every unit, every zone addressed and verified.</p></div>
           <div class="card"><h4>Dynalite Diagnostics</h4><p>Dynalite DyNet protocol analysis — identifying faults at controller, dimmer, and bus level without disrupting other zones.</p></div>
           <div class="card"><h4>DALI-2 &amp; Rapix</h4><p>DALI-2 bus commissioning, driver replacement, and Rapix wireless integration. Full system restore with zero scene loss.</p></div>
-          <div class="card"><h4>AFSS Compliance</h4><p>AS 2293 emergency lighting testing, AFSS logbook completion, and compliance certification for {v_name}.</p></div>
+          <div class="card"><h4>AFSS Compliance</h4><p>compliance-ready preparation, including DALI programming, battery replacements, and exit light repairs for {v_name}.</p></div>
           <div class="card"><h4>Scene Programming</h4><p>Custom lighting scene programming for {v_name} — from basic on/off to multi-zone theatrical scenes.</p></div>
           <div class="card"><h4>After-Hours Scheduling</h4><p>Early morning, evening, and weekend appointments to minimise disruption to {suburb} {v_desc} operations.</p></div>
         </div>
@@ -269,7 +269,7 @@ def build_page(v_slug, v_name, v_desc, suburb, sys_slug, sys_name, fault_slug, f
         <div class="faq"><h4>Do you repair C-Bus, Dynalite, DALI-2, and Rapix for {v_name} in {suburb}?</h4><p>Yes. We specialise exclusively in C-Bus, Dynalite, DALI-2, and Rapix lighting control systems for commercial facilities including {v_name} across {suburb} and all of Greater Sydney.</p></div>
         <div class="faq"><h4>How fast can you respond to {fault_name} at a {v_name} in {suburb}?</h4><p>We offer SLA-backed priority commercial response. Our technicians arrive with manufacturer diagnostic toolkits and common replacement modules — most faults resolved on the first visit.</p></div>
         <div class="faq"><h4>Can you program C-Bus or Dynalite scenes for a {v_name}?</h4><p>Absolutely — scene programming is one of our core services. We program C-Bus, Dynalite, DALI-2, and Rapix for {v_name} from simple zones to complex multi-scene environments in {suburb}.</p></div>
-        <div class="faq"><h4>Do you provide AFSS emergency lighting compliance for {v_name} in {suburb}?</h4><p>Yes. We perform AS 2293 annual testing, complete AFSS logbooks, and provide full compliance certification. All documentation is provided for facility management records.</p></div>
+        <div class="faq"><h4>Do you provide AFSS emergency lighting compliance for {v_name} in {suburb}?</h4><p>No, we are not a certifying body. We do not perform official AS 2293 annual testing or issue AFSS compliance certifications. Instead, we assist by repairing lighting control hardware, reprogramming DALI controllers, changing failed exit signs and battery fittings (directly or via contracted electricians), and resolving DALI bus faults so that your facility is fully prepared for official third-party audits.</p></div>
       </div>
     </section>
 
