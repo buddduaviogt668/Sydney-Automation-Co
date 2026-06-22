@@ -116,6 +116,6 @@ sitemap_path = os.path.join(BASE_DIR, 'sitemap.xml')
 with open(sitemap_path, 'w', encoding='utf-8') as f:
     f.write(sitemap_xml)
 
-print(f'✅ sitemap.xml rebuilt with {len(entries)} URLs')
+print(f'Done: sitemap.xml rebuilt with {len(entries)} URLs')
 print(f'   File size: {os.path.getsize(sitemap_path) / 1024:.1f} KB')
 print(f'   Saved to: {sitemap_path}')

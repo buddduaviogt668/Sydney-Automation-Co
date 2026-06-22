@@ -20,6 +20,35 @@ def clean_url(s):
     s = re.sub(r'[\s\-]+', '-', s)
     return s.strip('-')
 
+NAV_HTML = """<nav style="background:#001226;padding:10px 0;text-align:center;border-bottom:1px solid rgba(255,255,255,0.08);position:sticky;top:44px;z-index:9000;">
+  <div style="max-width:1200px;margin:0 auto;display:flex;justify-content:center;gap:24px;flex-wrap:wrap;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-size:14px;">
+    <a href="/" style="color:#a8c0e0;text-decoration:none;padding:6px 10px;" onmouseover="this.style.color='#f07020'" onmouseout="this.style.color='#a8c0e0'">Home</a>
+    <a href="/automation-sydney" style="color:#a8c0e0;text-decoration:none;padding:6px 10px;" onmouseover="this.style.color='#f07020'" onmouseout="this.style.color='#a8c0e0'">Automation</a>
+    <a href="/afss-emergency-lighting-services" style="color:#a8c0e0;text-decoration:none;padding:6px 10px;" onmouseover="this.style.color='#f07020'" onmouseout="this.style.color='#a8c0e0'">Emergency Lighting</a>
+    <a href="/blog" style="color:#a8c0e0;text-decoration:none;padding:6px 10px;" onmouseover="this.style.color='#f07020'" onmouseout="this.style.color='#a8c0e0'">Blog</a>
+    <a href="/about" style="color:#a8c0e0;text-decoration:none;padding:6px 10px;" onmouseover="this.style.color='#f07020'" onmouseout="this.style.color='#a8c0e0'">About</a>
+    <a href="/book-service" style="background:#f07020;color:#fff;text-decoration:none;padding:6px 16px;border-radius:4px;font-weight:700;">Book Service</a>
+    <a href="tel:0422469739" style="color:#4da6ff;text-decoration:none;padding:6px 10px;font-weight:600;">0422 469 739</a>
+  </div>
+</nav>"""
+
+BRAND_BLOCK = """    <div class="container">
+      <div style="background:rgba(0,20,50,0.9);border:1px solid rgba(77,166,255,0.25);border-radius:10px;padding:18px 22px;margin:18px 0;">
+        <p style="color:#4da6ff;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:10px;">Lighting Control Systems We Specialise In</p>
+        <div style="display:flex;flex-wrap:wrap;gap:9px;">
+          <a href="/automation-sydney" style="background:#001f3d;color:#f07020;padding:6px 14px;border-radius:20px;font-weight:700;font-size:13px;text-decoration:none;border:1px solid rgba(240,112,32,0.4);">C-Bus</a>
+          <a href="/automation-sydney" style="background:#001f3d;color:#f07020;padding:6px 14px;border-radius:20px;font-weight:700;font-size:13px;text-decoration:none;border:1px solid rgba(240,112,32,0.4);">Dynalite</a>
+          <a href="/automation-sydney" style="background:#001f3d;color:#f07020;padding:6px 14px;border-radius:20px;font-weight:700;font-size:13px;text-decoration:none;border:1px solid rgba(240,112,32,0.4);">DALI-2</a>
+          <a href="/automation-sydney" style="background:#001f3d;color:#f07020;padding:6px 14px;border-radius:20px;font-weight:700;font-size:13px;text-decoration:none;border:1px solid rgba(240,112,32,0.4);">Rapix</a>
+          <span style="background:#001f3d;color:#a8c0e0;padding:6px 14px;border-radius:20px;font-size:12px;border:1px solid rgba(255,255,255,0.1);">Emergency Lighting</span>
+          <span style="background:#001f3d;color:#a8c0e0;padding:6px 14px;border-radius:20px;font-size:12px;border:1px solid rgba(255,255,255,0.1);">AFSS AS 2293</span>
+          <span style="background:#001f3d;color:#a8c0e0;padding:6px 14px;border-radius:20px;font-size:12px;border:1px solid rgba(255,255,255,0.1);">Lighting Scene Programming</span>
+          <span style="background:#001f3d;color:#a8c0e0;padding:6px 14px;border-radius:20px;font-size:12px;border:1px solid rgba(255,255,255,0.1);">DALI Bus Repair</span>
+        </div>
+        <p style="color:#a8c0e0;font-size:11px;margin-top:10px;margin-bottom:0;">We service <strong style="color:#fff;">lighting control systems only</strong> — C-Bus, Dynalite, DALI-2, and Rapix. Not general electrical, not IT, not HVAC.</p>
+      </div>
+    </div>"""
+
 TEMPLATE = """<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -152,6 +181,8 @@ TEMPLATE = """<!DOCTYPE html>
         </div>
     </header>
 
+    {nav_html}
+
     <main>
         <section class="hero">
             <div class="container">
@@ -160,6 +191,8 @@ TEMPLATE = """<!DOCTYPE html>
                 <a href="/book-service" class="cta-button">Book Your Same-Day Service Call &#8594;</a>
             </div>
         </section>
+
+        {brand_block}
 
         <div class="container">
             <div class="alert-bar">
@@ -243,7 +276,7 @@ TEMPLATE = """<!DOCTYPE html>
   </div>
 </div>
 
-<footer>
+    <footer>
         <div class="container">
             <p>&copy; 2026 Sydney Automation Co. ABN 61 136 364 150. All rights reserved. Serving {suburb} and Greater Sydney.</p>
             <p><a href="tel:+61422469739" style="color: #f07020;">0422 469 739</a> &nbsp;|&nbsp; <a href="mailto:george@sydneyautomationco.com.au" style="color: #4da6ff;">george@sydneyautomationco.com.au</a> &nbsp;|&nbsp; <a href="https://sydneyautomationco.com.au" style="color: #4da6ff;">sydneyautomationco.com.au</a></p>
@@ -266,7 +299,9 @@ def main():
                     suburb=suburb,
                     system=system,
                     fault=fault,
-                    slug=slug
+                    slug=slug,
+                    nav_html=NAV_HTML,
+                    brand_block=BRAND_BLOCK
                 )
                 
                 with open(filepath, "w", encoding="utf-8") as f:
