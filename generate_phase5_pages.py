@@ -1,0 +1,484 @@
+"""
+generate_phase5_pages.py
+Phase 5 — push past 12,000 pages.
+
+New verticals (not used before):
+  - Function & Event Centres
+  - Funeral Homes & Memorial Chapels
+  - Nightclubs & Late-Night Venues
+  - Private Schools & Independent Colleges
+  - Community Halls & Neighbourhood Centres
+  - Aquatic Centres & Indoor Pools
+  - Libraries & Cultural Institutions
+  - Shopping Centre Food Courts
+
+New suburbs batch 3 (30 fresh suburbs):
+  Cronulla, Woolooware, Kingsgrove, Beverly Hills, Penshurst,
+  Rockdale, Kogarah, Ramsgate, Beverley Park, Peakhurst,
+  Frenchs Forest, Forestville, Warringah, Dee Why, Collaroy,
+  Narrabeen, Mona Vale, Warriewood, Terrey Hills, Duffys Forest,
+  Kellyville, Rouse Hill, Box Hill, Marsden Park, Riverstone,
+  Schofields, Quakers Hill, Lalor Park, Seven Hills, Toongabbie
+
+Systems & Faults same set.
+8 verticals x 30 suburbs x 3 systems x 4 faults = 2,880 + 8 hubs = 2,888 pages
+"""
+
+import os, glob as gb, re
+from datetime import datetime
+
+BASE_DIR = r'C:\Users\gaska\Documents\antigravity\lucid-babbage\Sydney-Automation-Co'
+
+VERTICALS = [
+    ("function-and-event-centres", "Function and Event Centres", "function centre", [
+        "Lighting is the centrepiece of any event — a C-Bus or Dynalite fault mid-function is a catastrophe that costs you bookings and reputation.",
+        "We programme bespoke scene sequences for weddings, galas, and corporate events, with Rapix integration for wireless control.",
+        "Our SLA-backed response means a DALI-2 or C-Bus fault before your biggest event gets fixed before doors open — guaranteed.",
+        "Full AFSS emergency lighting compliance for public assembly venues — we provide AS 2293 testing and certification."
+    ]),
+    ("funeral-homes-and-memorial-chapels", "Funeral Homes and Memorial Chapels", "funeral home", [
+        "Lighting in a funeral home must work flawlessly, every service — a C-Bus or Dynalite scene failure during a service is unacceptable.",
+        "We programme sensitive, dignified lighting scenes for chapels, viewing rooms, and reception spaces using C-Bus and Dynalite.",
+        "Our technicians work with the utmost respect and discretion in funeral home environments — always scheduled to avoid service times.",
+        "Emergency lighting compliance under AS 2293 is required for chapels with public access — we provide full AFSS certification."
+    ]),
+    ("nightclubs-and-late-night-venues", "Nightclubs and Late-Night Venues", "nightclub", [
+        "A C-Bus or Rapix lighting fault during trading hours on a Saturday night is a $10,000+ loss — we fix lighting control fast.",
+        "We programme DMX-linked C-Bus and Rapix scenes for nightclubs and entertainment venues, covering bar lighting, dance floors, and entry zones.",
+        "Our after-hours emergency response is built for hospitality — we're available when venues need us most, not just 9 to 5.",
+        "DALI-2 architectural lighting, Dynalite dimmer repair, and AFSS compliance for licensed venues — full scope covered."
+    ]),
+    ("private-schools-and-colleges", "Private Schools and Independent Colleges", "private school", [
+        "C-Bus and Dynalite systems in private schools manage classrooms, theatres, sports halls, and libraries — a fault disrupts hundreds of students.",
+        "We provide after-hours and school holiday scheduling so repairs never disrupt class time or scheduled events.",
+        "Emergency lighting compliance under AS 2293 is mandatory in educational buildings — we handle full AFSS testing and certification.",
+        "Our team has experience with the scale and complexity of multi-building independent school campuses across Sydney."
+    ]),
+    ("community-halls-and-neighbourhood-centres", "Community Halls and Neighbourhood Centres", "community hall", [
+        "Community halls serve diverse users — councils, sports clubs, charities, and events — requiring flexible lighting scene programming.",
+        "C-Bus and Dynalite systems in community facilities are often ageing and rarely maintained — we specialise in bringing them back to spec.",
+        "Our services include full AS 2293 emergency lighting compliance for publicly used community buildings.",
+        "We hold all accreditations required for government-funded community facilities and provide procurement-ready invoicing."
+    ]),
+    ("aquatic-centres-and-indoor-pools", "Aquatic Centres and Indoor Pools", "aquatic centre", [
+        "Aquatic centre lighting must withstand high humidity, chlorine exposure, and heavy use — C-Bus and DALI-2 systems require specialist care.",
+        "Emergency lighting in pool buildings and change rooms must comply with AS 2293 — a missed compliance event is a serious liability.",
+        "We service C-Bus, Dynalite, and DALI-2 lighting systems in aquatic environments, using IP-rated diagnostics and components.",
+        "Our technicians are experienced in aquatic facility environments — we work safely around live pool operations."
+    ]),
+    ("libraries-and-cultural-institutions", "Libraries and Cultural Institutions", "library", [
+        "Libraries and galleries require precise lighting control — C-Bus daylight harvesting, reading zone dimming, and artwork illumination all need expert programming.",
+        "C-Bus and Dynalite faults in cultural institutions disrupt public services and can affect heritage collections requiring specific lux levels.",
+        "We service government and privately-funded libraries, galleries, and museums — providing compliant, documented repair services.",
+        "AFSS emergency lighting compliance for public cultural institutions — full AS 2293 testing and certification provided."
+    ]),
+    ("shopping-centre-food-courts", "Shopping Centre Food Courts", "food court", [
+        "Food court lighting operates across tenancies, common areas, and service corridors — C-Bus and DALI-2 faults affect multiple operators simultaneously.",
+        "We work with shopping centre facility managers to deliver fast, minimal-disruption C-Bus and Dynalite repairs during trading hours or overnight.",
+        "Scene programming for food courts — opening, trading, cleaning, and after-hours modes — all programmed precisely with C-Bus.",
+        "AFSS emergency lighting compliance for shopping centre common areas — full AS 2293 documentation provided to centre management."
+    ]),
+]
+
+SUBURBS = [
+    "Cronulla", "Woolooware", "Kingsgrove", "Beverly Hills", "Penshurst",
+    "Rockdale", "Kogarah", "Ramsgate", "Beverley Park", "Peakhurst",
+    "Frenchs Forest", "Forestville", "Dee Why", "Collaroy", "Narrabeen",
+    "Mona Vale", "Warriewood", "Terrey Hills", "Kellyville", "Rouse Hill",
+    "Box Hill", "Marsden Park", "Riverstone", "Schofields", "Quakers Hill",
+    "Lalor Park", "Seven Hills", "Toongabbie", "Merrylands", "Greystanes",
+]
+
+SYSTEMS = [
+    ("c-bus", "C-Bus"),
+    ("dynalite", "Dynalite"),
+    ("dali-2", "DALI-2"),
+]
+
+FAULTS = [
+    ("afss-emergency-lighting-compliance", "AFSS Emergency Lighting Non-Compliance"),
+    ("automated-schedule-and-timeclock-drift", "Automated Schedule and Timeclock Drift"),
+    ("daylight-harvesting-and-sensor-failure", "Daylight Harvesting and Sensor Failure"),
+    ("network-communication-and-bus-crashes", "Network Communication and Bus Crashes"),
+]
+
+NAV_HTML = '''<nav style="background:#001226;padding:10px 0;text-align:center;border-bottom:1px solid rgba(255,255,255,0.08);position:sticky;top:44px;z-index:9000;">
+  <div style="max-width:1200px;margin:0 auto;display:flex;justify-content:center;gap:24px;flex-wrap:wrap;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-size:14px;">
+    <a href="/" style="color:#a8c0e0;text-decoration:none;padding:6px 10px;" onmouseover="this.style.color='#f07020'" onmouseout="this.style.color='#a8c0e0'">Home</a>
+    <a href="/automation-sydney" style="color:#a8c0e0;text-decoration:none;padding:6px 10px;" onmouseover="this.style.color='#f07020'" onmouseout="this.style.color='#a8c0e0'">Automation</a>
+    <a href="/afss-emergency-lighting-services" style="color:#a8c0e0;text-decoration:none;padding:6px 10px;" onmouseover="this.style.color='#f07020'" onmouseout="this.style.color='#a8c0e0'">Emergency Lighting</a>
+    <a href="/blog" style="color:#a8c0e0;text-decoration:none;padding:6px 10px;" onmouseover="this.style.color='#f07020'" onmouseout="this.style.color='#a8c0e0'">Blog</a>
+    <a href="/about" style="color:#a8c0e0;text-decoration:none;padding:6px 10px;" onmouseover="this.style.color='#f07020'" onmouseout="this.style.color='#a8c0e0'">About</a>
+    <a href="/book-service" style="background:#f07020;color:#fff;text-decoration:none;padding:6px 16px;border-radius:4px;font-weight:700;">Book Service</a>
+    <a href="tel:0422469739" style="color:#4da6ff;text-decoration:none;padding:6px 10px;font-weight:600;">0422 469 739</a>
+  </div>
+</nav>'''
+
+BRAND_BLOCK = '''    <div class="container">
+      <div style="background:rgba(0,20,50,0.9);border:1px solid rgba(77,166,255,0.25);border-radius:10px;padding:18px 22px;margin:18px 0;">
+        <p style="color:#4da6ff;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:10px;">Lighting Control Systems We Specialise In</p>
+        <div style="display:flex;flex-wrap:wrap;gap:9px;">
+          <a href="/automation-sydney" style="background:#001f3d;color:#f07020;padding:6px 14px;border-radius:20px;font-weight:700;font-size:13px;text-decoration:none;border:1px solid rgba(240,112,32,0.4);">C-Bus</a>
+          <a href="/automation-sydney" style="background:#001f3d;color:#f07020;padding:6px 14px;border-radius:20px;font-weight:700;font-size:13px;text-decoration:none;border:1px solid rgba(240,112,32,0.4);">Dynalite</a>
+          <a href="/automation-sydney" style="background:#001f3d;color:#f07020;padding:6px 14px;border-radius:20px;font-weight:700;font-size:13px;text-decoration:none;border:1px solid rgba(240,112,32,0.4);">DALI-2</a>
+          <a href="/automation-sydney" style="background:#001f3d;color:#f07020;padding:6px 14px;border-radius:20px;font-weight:700;font-size:13px;text-decoration:none;border:1px solid rgba(240,112,32,0.4);">Rapix</a>
+          <span style="background:#001f3d;color:#a8c0e0;padding:6px 14px;border-radius:20px;font-size:12px;border:1px solid rgba(255,255,255,0.1);">Emergency Lighting</span>
+          <span style="background:#001f3d;color:#a8c0e0;padding:6px 14px;border-radius:20px;font-size:12px;border:1px solid rgba(255,255,255,0.1);">AFSS AS 2293</span>
+          <span style="background:#001f3d;color:#a8c0e0;padding:6px 14px;border-radius:20px;font-size:12px;border:1px solid rgba(255,255,255,0.1);">Lighting Scene Programming</span>
+          <span style="background:#001f3d;color:#a8c0e0;padding:6px 14px;border-radius:20px;font-size:12px;border:1px solid rgba(255,255,255,0.1);">DALI Bus Repair</span>
+        </div>
+        <p style="color:#a8c0e0;font-size:11px;margin-top:10px;margin-bottom:0;">We service <strong style="color:#fff;">lighting control systems only</strong> — C-Bus, Dynalite, DALI-2, and Rapix. Not general electrical, not IT, not HVAC.</p>
+      </div>
+    </div>'''
+
+
+def make_slug(*parts):
+    s = '-'.join(p.lower() for p in parts)
+    s = s.replace(' ', '-').replace('&', 'and').replace(',', '').replace("'", '').replace('/', '-')
+    return re.sub(r'-+', '-', s)
+
+
+def build_page(v_slug, v_name, v_desc, suburb, sys_slug, sys_name, fault_slug, fault_name, facts):
+    page_slug = make_slug(v_slug, suburb, sys_slug, fault_slug)
+    filename = page_slug + ".html"
+    canonical = f"https://sydneyautomationco.com.au/{page_slug}"
+    title = f"{sys_name} Lighting Control — {fault_name} for {v_name} in {suburb} | Sydney Automation Co."
+    meta_desc = (
+        f"C-Bus, Dynalite, DALI-2, and Rapix lighting control repair for {v_name} in {suburb}. "
+        f"Specialist {sys_name} {fault_name} service. SLA-backed. Call 0422 469 739."
+    )
+    facts_html = ''.join(f'<li style="margin-bottom:11px;">{f}</li>' for f in facts)
+
+    html = f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>{title}</title>
+  <meta name="description" content="{meta_desc}">
+  <meta name="keywords" content="C-Bus {suburb}, Dynalite {suburb}, DALI-2 {suburb}, Rapix {suburb}, lighting control {suburb}, {v_name} lighting automation Sydney">
+  <link rel="canonical" href="{canonical}">
+  <link rel="stylesheet" href="/style.css">
+  <script type="application/ld+json">
+  {{"@context":"https://schema.org","@type":"LocalBusiness",
+    "name":"Sydney Automation Co.","description":"{meta_desc}",
+    "url":"{canonical}","telephone":"+61422469739",
+    "areaServed":{{"@type":"Place","name":"{suburb}","addressRegion":"NSW","addressCountry":"AU"}},
+    "hasOfferCatalog":{{"@type":"OfferCatalog","name":"C-Bus Dynalite DALI-2 Rapix Lighting Control for {v_name}",
+      "itemListElement":[
+        {{"@type":"Offer","itemOffered":{{"@type":"Service","name":"C-Bus Lighting Control Repair {suburb}"}}}},
+        {{"@type":"Offer","itemOffered":{{"@type":"Service","name":"Dynalite Lighting Control Repair {suburb}"}}}},
+        {{"@type":"Offer","itemOffered":{{"@type":"Service","name":"DALI-2 Lighting Control Repair {suburb}"}}}},
+        {{"@type":"Offer","itemOffered":{{"@type":"Service","name":"Rapix Lighting Control {suburb}"}}}}
+      ]}}}}
+  </script>
+  <script type="application/ld+json">
+  {{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+    {{"@type":"Question","name":"Do you repair C-Bus, Dynalite, DALI-2, and Rapix lighting systems for {v_name} in {suburb}?",
+      "acceptedAnswer":{{"@type":"Answer","text":"Yes. Sydney Automation Co. specialises exclusively in C-Bus, Dynalite, DALI-2, and Rapix lighting control systems for commercial facilities including {v_name} across {suburb} and Greater Sydney."}}}},
+    {{"@type":"Question","name":"How quickly can you fix {fault_name} at a {v_name} in {suburb}?",
+      "acceptedAnswer":{{"@type":"Answer","text":"We offer SLA-backed priority response for {v_name} in {suburb}. Our technicians arrive with manufacturer diagnostic toolkits and common replacement modules on every call-out."}}}},
+    {{"@type":"Question","name":"Can you program C-Bus or Dynalite lighting scenes for {v_name}?",
+      "acceptedAnswer":{{"@type":"Answer","text":"Absolutely. Scene programming is one of our core services — from simple on/off zones to complex multi-scene environments. We program C-Bus, Dynalite, DALI-2, and Rapix for {v_name} across {suburb}."}}}}
+  ]}}
+  </script>
+  <style>
+    body{{font-family:Arial,sans-serif;line-height:1.6;margin:0;background:#0a1628;color:#a8c0e0;padding-top:44px}}
+    .container{{max-width:1200px;margin:0 auto;padding:20px}}
+    header{{background:#001f3d;color:#fff;padding:1rem 0;text-align:center}}
+    header h1{{margin:0;font-size:2em}}
+    .hero{{background:linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url('/images/hero-bg.jpg') no-repeat center/cover;color:#fff;padding:80px 0;text-align:center}}
+    .hero h2{{font-size:2.1em;margin-bottom:16px}}
+    .hero p{{font-size:1.05em;margin-bottom:26px;max-width:760px;margin-left:auto;margin-right:auto}}
+    .btn{{background:#f07020;color:#fff;padding:12px 26px;text-decoration:none;border-radius:5px;font-weight:bold;display:inline-block}}
+    .btn-ghost{{background:transparent;border:2px solid #f07020;color:#f07020;padding:10px 22px;text-decoration:none;border-radius:5px;font-weight:bold;display:inline-block}}
+    .section{{padding:48px 0;border-bottom:1px solid rgba(255,255,255,0.05)}}
+    .section h3{{color:#fff;font-size:1.65em;margin-bottom:14px}}
+    .faq{{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);padding:18px;margin-bottom:12px;border-radius:8px}}
+    .faq h4{{color:#fff;margin-top:0;font-size:1em}}
+    .alert{{background:rgba(240,112,32,0.12);border-left:4px solid #f07020;padding:16px;margin:20px 0;border-radius:4px}}
+    .grid{{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:18px}}
+    .card{{background:rgba(255,255,255,0.03);border:1px solid rgba(240,112,32,0.2);border-radius:8px;padding:16px}}
+    .card h4{{color:#f07020;margin-top:0;font-size:0.95em}}
+    .cta-box{{background:linear-gradient(135deg,rgba(240,112,32,0.1),rgba(77,166,255,0.05));border:2px solid #f07020;border-radius:12px;padding:26px;margin:32px 0;text-align:center}}
+    .cta-box h3{{color:#fff;margin-top:0}}
+    footer{{background:#001f3d;color:#a8c0e0;text-align:center;padding:16px 0;margin-top:32px}}
+  </style>
+</head>
+<body>
+  <div id="sb" style="position:fixed;top:0;left:0;right:0;z-index:99999;background:linear-gradient(90deg,#0a2240,#1a3a6e);display:flex;align-items:center;justify-content:center;gap:16px;padding:8px 18px;box-shadow:0 2px 12px rgba(0,0,0,0.4);font-family:-apple-system,sans-serif;">
+    <span style="color:#f0c040;font-size:12px;font-weight:600;">C-Bus &bull; Dynalite &bull; DALI-2 &bull; Rapix Lighting Control Specialists</span>
+    <a href="tel:0422469739" style="background:#e8330a;color:#fff;text-decoration:none;padding:5px 14px;border-radius:4px;font-size:12px;font-weight:700;">Call George</a>
+    <a href="/book-service" style="background:#fff;color:#0a2240;text-decoration:none;padding:5px 14px;border-radius:4px;font-size:12px;font-weight:700;border:2px solid #fff;">Book Online</a>
+    <button onclick="document.getElementById('sb').style.display='none'" style="background:none;border:none;color:rgba(255,255,255,0.5);cursor:pointer;font-size:16px;padding:0;">x</button>
+  </div>
+
+  <header>
+    <div class="container">
+      <h1>Sydney Automation Co.</h1>
+      <p>C-Bus &bull; Dynalite &bull; DALI-2 &bull; Rapix Lighting Control Specialists</p>
+    </div>
+  </header>
+
+  {NAV_HTML}
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h2>C-Bus &amp; Dynalite Lighting Control — {fault_name} for {v_name} in {suburb}</h2>
+        <p>Expert <strong>C-Bus, Dynalite, DALI-2, and Rapix lighting control</strong> repair for {v_name} in {suburb}. We fix {fault_name} with SLA-backed B2B response and full compliance documentation.</p>
+        <a href="/book-service" class="btn">Book Priority Call-Out &rarr;</a>
+      </div>
+    </section>
+
+{BRAND_BLOCK}
+
+    <div class="container">
+      <div class="alert">
+        <p style="color:#fff;font-weight:700;font-size:15px;">C-Bus, Dynalite or DALI-2 Fault in {suburb}? Call: <span style="color:#f07020;font-size:17px;">0422 469 739</span></p>
+        <p style="color:#a8c0e0;margin-top:6px;font-size:13px;">Certified C-Bus, Dynalite, DALI-2 &amp; Rapix technicians. SLA-backed response for {v_name} in {suburb}.</p>
+      </div>
+    </div>
+
+    <section class="section">
+      <div class="container">
+        <h3>Why {v_name} in {suburb} Need a C-Bus &amp; Dynalite Specialist</h3>
+        <p>When a {v_desc} experiences {fault_name} in their C-Bus, Dynalite, DALI-2, or Rapix lighting system, a generic electrician simply cannot fix it. These systems require manufacturer-specific diagnostic software, programming tools, and hands-on experience.</p>
+        <p>Sydney Automation Co. is Sydney's dedicated C-Bus, Dynalite, DALI-2, and Rapix specialist — we bring the right tools and the right knowledge to every {v_desc} job in {suburb}.</p>
+        <ul style="padding-left:20px;">{facts_html}</ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h3>Our Lighting Control Repair Process</h3>
+        <div class="grid">
+          <div class="card"><h4>C-Bus Diagnostics</h4><p>Full C-Bus network scan using Clipsal manufacturer toolkit. Every unit, every zone addressed and verified.</p></div>
+          <div class="card"><h4>Dynalite Diagnostics</h4><p>Dynalite DyNet protocol analysis — identifying faults at controller, dimmer, and bus level without disrupting other zones.</p></div>
+          <div class="card"><h4>DALI-2 &amp; Rapix</h4><p>DALI-2 bus commissioning, driver replacement, and Rapix wireless integration. Full system restore with zero scene loss.</p></div>
+          <div class="card"><h4>AFSS Compliance</h4><p>AS 2293 emergency lighting testing, AFSS logbook completion, and compliance certification for {v_name}.</p></div>
+          <div class="card"><h4>Scene Programming</h4><p>Custom lighting scene programming for {v_name} — from basic on/off to multi-zone theatrical scenes.</p></div>
+          <div class="card"><h4>After-Hours Scheduling</h4><p>Early morning, evening, and weekend appointments to minimise disruption to {suburb} {v_desc} operations.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h3>Frequently Asked Questions</h3>
+        <div class="faq"><h4>Do you repair C-Bus, Dynalite, DALI-2, and Rapix for {v_name} in {suburb}?</h4><p>Yes. We specialise exclusively in C-Bus, Dynalite, DALI-2, and Rapix lighting control systems for commercial facilities including {v_name} across {suburb} and all of Greater Sydney.</p></div>
+        <div class="faq"><h4>How fast can you respond to {fault_name} at a {v_name} in {suburb}?</h4><p>We offer SLA-backed priority commercial response. Our technicians arrive with manufacturer diagnostic toolkits and common replacement modules — most faults resolved on the first visit.</p></div>
+        <div class="faq"><h4>Can you program C-Bus or Dynalite scenes for a {v_name}?</h4><p>Absolutely — scene programming is one of our core services. We program C-Bus, Dynalite, DALI-2, and Rapix for {v_name} from simple zones to complex multi-scene environments in {suburb}.</p></div>
+        <div class="faq"><h4>Do you provide AFSS emergency lighting compliance for {v_name} in {suburb}?</h4><p>Yes. We perform AS 2293 annual testing, complete AFSS logbooks, and provide full compliance certification. All documentation is provided for facility management records.</p></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h3>Transparent Pricing</h3>
+        <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(280px,1fr));">
+          <div class="card">
+            <h4>Commercial Rate Card</h4>
+            <ul style="list-style:none;padding:0;font-size:14px;">
+              <li style="margin-bottom:8px;">C-Bus / Dynalite Diagnosis: $150/hr</li>
+              <li style="margin-bottom:8px;">DALI-2 / Rapix Programming: $150/hr</li>
+              <li style="margin-bottom:8px;">AFSS Emergency Lighting: $150/hr + 15%</li>
+              <li style="margin-bottom:8px;">Minimum Call-Out: 3 hrs ($450)</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h4>Our B2B Guarantee</h4>
+            <p style="font-size:13px;line-height:1.6;">We arrive with Clipsal C-Bus toolkit, Dynalite DyNet analyser, and DALI-2 commissioning tools. No work proceeds without site approval. Full tax invoice and compliance report every job.</p>
+            <div style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap;">
+              <a href="/book-service" class="btn" style="padding:8px 16px;font-size:13px;">Book $450 Diagnostic</a>
+              <a href="tel:0422469739" class="btn-ghost" style="padding:6px 14px;font-size:13px;">0422 469 739</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="cta-box">
+        <h3>Fix {fault_name} at Your {suburb} {v_desc.title()} Today</h3>
+        <p style="color:#a8c0e0;margin-bottom:18px;">C-Bus, Dynalite, DALI-2, Rapix — we fix it all. Don't let a lighting control fault disrupt your operations.</p>
+        <a href="/book-service" class="btn">Book B2B Service &amp; Pay Deposit &rarr;</a>
+        <p style="color:#4da6ff;font-size:12px;margin-top:10px;">Priority response &nbsp;|&nbsp; Certified technicians &nbsp;|&nbsp; Tax invoices &nbsp;|&nbsp; Compliance docs</p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Sydney Automation Co. ABN 61 136 364 150. C-Bus, Dynalite, DALI-2 &amp; Rapix lighting control for {v_name} in {suburb}, NSW.</p>
+      <p><a href="tel:+61422469739" style="color:#f07020;">0422 469 739</a> &nbsp;|&nbsp; <a href="mailto:george@sydneyautomationco.com.au" style="color:#4da6ff;">george@sydneyautomationco.com.au</a></p>
+      <p style="font-size:11px;margin-top:8px;">
+        <a href="/" style="color:#a8c0e0;margin:0 8px;">Home</a>
+        <a href="/automation-sydney" style="color:#a8c0e0;margin:0 8px;">C-Bus Automation</a>
+        <a href="/afss-emergency-lighting-services" style="color:#a8c0e0;margin:0 8px;">Emergency Lighting</a>
+        <a href="/blog" style="color:#a8c0e0;margin:0 8px;">Blog</a>
+        <a href="/book-service" style="color:#a8c0e0;margin:0 8px;">Book Service</a>
+      </p>
+    </div>
+  </footer>
+</body>
+</html>"""
+    return filename, html, canonical
+
+
+def build_hub(v_slug, v_name, v_desc, facts, suburbs):
+    filename = f"{v_slug}-c-bus-dynalite-lighting-control-sydney.html"
+    canonical = f"https://sydneyautomationco.com.au/{v_slug}-c-bus-dynalite-lighting-control-sydney"
+    title = f"{v_name} C-Bus, Dynalite, DALI-2 & Rapix Lighting Control Sydney | Sydney Automation Co."
+    meta_desc = f"Expert C-Bus, Dynalite, DALI-2, and Rapix lighting control repair for {v_name} across Sydney. SLA-backed B2B service. Call 0422 469 739."
+    facts_html = ''.join(f'<li style="margin-bottom:11px;color:#a8c0e0;">{f}</li>' for f in facts)
+    suburb_links = ' &nbsp;|&nbsp; '.join(
+        f'<a href="/{v_slug}-{s.lower().replace(" ","-")}-c-bus-afss-emergency-lighting-compliance" style="color:#4da6ff;text-decoration:none;">{s}</a>'
+        for s in suburbs
+    )
+    html = f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>{title}</title>
+  <meta name="description" content="{meta_desc}">
+  <meta name="keywords" content="C-Bus {v_name} Sydney, Dynalite {v_name} Sydney, DALI-2 {v_name} Sydney, Rapix lighting {v_name}">
+  <link rel="canonical" href="{canonical}">
+  <link rel="stylesheet" href="/style.css">
+  <script type="application/ld+json">
+  {{"@context":"https://schema.org","@type":"LocalBusiness","name":"Sydney Automation Co.",
+    "description":"{meta_desc}","url":"{canonical}","telephone":"+61422469739",
+    "areaServed":{{"@type":"Place","name":"Sydney","addressRegion":"NSW","addressCountry":"AU"}}}}
+  </script>
+  <style>
+    body{{font-family:Arial,sans-serif;line-height:1.6;margin:0;background:#0a1628;color:#a8c0e0;padding-top:44px}}
+    .container{{max-width:1200px;margin:0 auto;padding:20px}}
+    header{{background:#001f3d;color:#fff;padding:1rem 0;text-align:center}}
+    .hero{{background:linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url('/images/hero-bg.jpg') no-repeat center/cover;color:#fff;padding:80px 0;text-align:center}}
+    .btn{{background:#f07020;color:#fff;padding:12px 26px;text-decoration:none;border-radius:5px;font-weight:bold;display:inline-block}}
+    .section{{padding:48px 0;border-bottom:1px solid rgba(255,255,255,0.05)}}
+    .section h2,.section h3{{color:#fff}}
+    footer{{background:#001f3d;color:#a8c0e0;text-align:center;padding:16px 0;margin-top:32px}}
+  </style>
+</head>
+<body>
+  <div id="sb" style="position:fixed;top:0;left:0;right:0;z-index:99999;background:linear-gradient(90deg,#0a2240,#1a3a6e);display:flex;align-items:center;justify-content:center;gap:16px;padding:8px 18px;box-shadow:0 2px 12px rgba(0,0,0,0.4);font-family:-apple-system,sans-serif;">
+    <span style="color:#f0c040;font-size:12px;font-weight:600;">C-Bus &bull; Dynalite &bull; DALI-2 &bull; Rapix — {v_name} Specialists</span>
+    <a href="tel:0422469739" style="background:#e8330a;color:#fff;text-decoration:none;padding:5px 14px;border-radius:4px;font-size:12px;font-weight:700;">Call George</a>
+    <a href="/book-service" style="background:#fff;color:#0a2240;text-decoration:none;padding:5px 14px;border-radius:4px;font-size:12px;font-weight:700;border:2px solid #fff;">Book Online</a>
+    <button onclick="document.getElementById('sb').style.display='none'" style="background:none;border:none;color:rgba(255,255,255,0.5);cursor:pointer;font-size:16px;padding:0;">x</button>
+  </div>
+  <header><div class="container"><h1>Sydney Automation Co.</h1><p>C-Bus &bull; Dynalite &bull; DALI-2 &bull; Rapix Lighting Control Specialists</p></div></header>
+  {NAV_HTML}
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h2>{v_name} — C-Bus, Dynalite, DALI-2 &amp; Rapix Lighting Control, Sydney</h2>
+        <p>Sydney's specialist for {v_name} C-Bus, Dynalite, DALI-2, and Rapix lighting control. SLA-backed B2B response, AFSS compliance, and scene programming across all Sydney suburbs.</p>
+        <a href="/book-service" class="btn">Book a Priority Call-Out &rarr;</a>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <h3>Why {v_name} Trust Sydney Automation Co.</h3>
+        <ul style="padding-left:20px;">{facts_html}</ul>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <h3>Suburbs We Service for {v_name}</h3>
+        <p style="line-height:2.2;">{suburb_links}</p>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container" style="text-align:center;">
+        <h3>Book Your C-Bus, Dynalite or DALI-2 Service</h3>
+        <p style="max-width:560px;margin:0 auto 22px;font-size:15px;">Minimum 3-hour call-out ($450). Tax invoices. Certified technicians. C-Bus, Dynalite, DALI-2, Rapix.</p>
+        <a href="/book-service" class="btn" style="margin-right:12px;">Book Online</a>
+        <a href="tel:0422469739" style="background:transparent;border:2px solid #f07020;color:#f07020;padding:10px 22px;text-decoration:none;border-radius:5px;font-weight:bold;display:inline-block;">Call 0422 469 739</a>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Sydney Automation Co. ABN 61 136 364 150. C-Bus, Dynalite, DALI-2 &amp; Rapix lighting control for {v_name}, Sydney NSW.</p>
+      <p style="font-size:11px;margin-top:8px;">
+        <a href="/" style="color:#a8c0e0;margin:0 8px;">Home</a>
+        <a href="/automation-sydney" style="color:#a8c0e0;margin:0 8px;">C-Bus Automation</a>
+        <a href="/afss-emergency-lighting-services" style="color:#a8c0e0;margin:0 8px;">Emergency Lighting</a>
+        <a href="/blog" style="color:#a8c0e0;margin:0 8px;">Blog</a>
+        <a href="/book-service" style="color:#a8c0e0;margin:0 8px;">Book Service</a>
+      </p>
+    </div>
+  </footer>
+</body>
+</html>"""
+    return filename, html, canonical
+
+
+# ── GENERATE ──────────────────────────────────────────────────────────────────
+generated = 0
+
+for v_slug, v_name, v_desc, v_facts in VERTICALS:
+    hub_fn, hub_html, _ = build_hub(v_slug, v_name, v_desc, v_facts, SUBURBS)
+    hub_path = os.path.join(BASE_DIR, hub_fn)
+    if not os.path.exists(hub_path):
+        with open(hub_path, 'w', encoding='utf-8') as f:
+            f.write(hub_html)
+        generated += 1
+        print(f"[HUB] {hub_fn}")
+
+    for suburb in SUBURBS:
+        for sys_slug, sys_name in SYSTEMS:
+            for fault_slug, fault_name in FAULTS:
+                filename, html, _ = build_page(
+                    v_slug, v_name, v_desc, suburb,
+                    sys_slug, sys_name, fault_slug, fault_name, v_facts
+                )
+                filepath = os.path.join(BASE_DIR, filename)
+                if not os.path.exists(filepath):
+                    with open(filepath, 'w', encoding='utf-8') as fh:
+                        fh.write(html)
+                    generated += 1
+
+print(f"\nGenerated {generated} new pages")
+
+# Rebuild sitemap
+TODAY = datetime.now().strftime('%Y-%m-%d')
+BASE_URL = 'https://sydneyautomationco.com.au'
+EXCLUDE = {'test.html', 'old_index.html', '404.html'}
+
+all_html = [f for f in gb.glob(os.path.join(BASE_DIR, '*.html')) if os.path.basename(f) not in EXCLUDE]
+blog_dir = os.path.join(BASE_DIR, 'blog')
+if os.path.isdir(blog_dir):
+    all_html += [f for f in gb.glob(os.path.join(blog_dir, '*.html')) if os.path.basename(f) not in EXCLUDE]
+
+def get_p(fp):
+    n = os.path.basename(fp)
+    if n in ('index.html','about.html','book-service.html','automation-sydney.html',
+              'afss-emergency-lighting-services.html','blog.html','automation-companies-sydney.html'):
+        return '1.0','weekly'
+    if any(k in n for k in ['c-bus-dynalite-lighting-control-sydney','lighting-automation-sydney',
+                              'cbus-dynalite-repair','dynalite-repair-sydney']):
+        return '0.8','monthly'
+    if n.startswith('blog-') or 'blog/' in fp:
+        return '0.7','monthly'
+    return '0.6','monthly'
+
+def url_p(fp):
+    rel = os.path.relpath(fp, BASE_DIR).replace('\\','/')
+    return '/' if rel == 'index.html' else '/' + rel[:-5]
+
+entries = [
+    f'  <url>\n    <loc>{BASE_URL}{url_p(fp)}</loc>\n    <lastmod>{TODAY}</lastmod>\n    <changefreq>{cf}</changefreq>\n    <priority>{p}</priority>\n  </url>'
+    for fp in sorted(all_html) for p, cf in [get_p(fp)]
+]
+
+sm = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n\n' + '\n'.join(entries) + '\n\n</urlset>'
+sm_path = os.path.join(BASE_DIR, 'sitemap.xml')
+with open(sm_path, 'w', encoding='utf-8') as f:
+    f.write(sm)
+
+total = len(gb.glob(os.path.join(BASE_DIR, '*.html')))
+print(f"Sitemap rebuilt: {len(entries)} URLs | {round(os.path.getsize(sm_path)/1024,1)} KB")
+print(f"Total HTML pages: {total}")
