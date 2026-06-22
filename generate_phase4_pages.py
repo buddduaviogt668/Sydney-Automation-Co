@@ -1,0 +1,492 @@
+"""
+generate_phase4_pages.py
+New verticals + expanded suburb list to push toward 9,000+ pages.
+
+New Verticals:
+  - Medical Centres & Specialist Clinics
+  - Restaurants & Cafes
+  - Cinemas & Entertainment Venues
+  - Churches & Places of Worship
+  - Strata Buildings & Apartment Complexes
+  - Car Parks & Transport Hubs
+  - Coworking Spaces & Serviced Offices
+  - Retirement Villages
+
+New Suburbs (25 additional, no overlap with phase 3):
+  Drummoyne, Leichhardt, Glebe, Pyrmont, Zetland,
+  Waterloo, Redfern, Surry Hills, Paddington, Woollahra,
+  Mosman, Neutral Bay, Cremorne, Kirribilli, Milsons Point,
+  Gordon, Turramurra, St Ives, Killara, Pymble,
+  Miranda, Caringbah, Sutherland, Engadine, Gymea
+
+Systems & Faults same as before.
+~8 verticals x 25 suburbs x 3 systems x 4 faults = 2,400 pages + 8 hub pages = 2,408
+"""
+
+import os
+import glob as gb
+
+BASE_DIR = r'C:\Users\gaska\Documents\antigravity\lucid-babbage\Sydney-Automation-Co'
+
+VERTICALS = [
+    ("medical-centres-and-clinics", "Medical Centres and Specialist Clinics", "medical clinic", [
+        "Medical facilities require reliable emergency lighting that meets AS 2293 — a non-compliance event during a health inspection can shut you down.",
+        "Treatment rooms, waiting areas, sterile zones, and staff corridors all require independent lighting zones with precise control.",
+        "We hold all required accreditations to work in healthcare environments and deliver full compliance documentation after every job.",
+        "Our technicians understand the sensitivity of medical environments — we work quietly, cleanly, and cause zero disruption to patients."
+    ]),
+    ("restaurants-and-cafes", "Restaurants and Cafes", "restaurant", [
+        "Restaurant ambience is everything — a C-Bus fault killing your dimming scenes mid-service costs you covers, reviews, and repeat business.",
+        "We've programmed and repaired C-Bus and Dynalite systems in Sydney restaurants, cafes, and bars — from intimate dining rooms to large function spaces.",
+        "Our after-hours scheduling means we fix your system before your next service, not during it.",
+        "Scene programming, dimmer repair, and emergency compliance — we cover the full scope for hospitality lighting control."
+    ]),
+    ("cinemas-and-entertainment-venues", "Cinemas and Entertainment Venues", "cinema", [
+        "Cinema and entertainment lighting must be flawless — from house lights to emergency egress, every zone must respond on cue.",
+        "We service C-Bus and DALI systems in multiplex cinemas, theatres, and entertainment venues across Sydney.",
+        "Emergency lighting compliance under AS 2293 is non-negotiable in public entertainment venues — we handle full AFSS certification.",
+        "Our priority response SLA means a C-Bus fault won't cancel your sessions — we arrive fast, fully equipped."
+    ]),
+    ("churches-and-places-of-worship", "Churches and Places of Worship", "place of worship", [
+        "Churches and places of worship rely on precise scene lighting for services, funerals, weddings, and community events — C-Bus makes this seamless.",
+        "Many Sydney churches have ageing C-Bus and Dynalite systems that need specialist care — generic electricians often make things worse.",
+        "We provide respectful, sensitive service in places of worship, working around your service schedule to cause zero disruption.",
+        "Emergency lighting compliance and scene reprogramming for multi-use worship and event spaces — we cover it all."
+    ]),
+    ("strata-buildings-and-apartments", "Strata Buildings and Apartment Complexes", "strata building", [
+        "Strata managers face constant pressure from owners and councils to maintain compliant emergency lighting — we make this simple.",
+        "C-Bus and Dynalite faults in common areas, car parks, lobbies, and corridors need specialist repair, not a general electrician.",
+        "We provide strata-compliant tax invoices and detailed work orders that satisfy body corporate record-keeping requirements.",
+        "Our annual AFSS emergency lighting inspection service keeps strata buildings compliant year after year with minimal owner disruption."
+    ]),
+    ("car-parks-and-transport-hubs", "Car Parks and Transport Hubs", "car park", [
+        "Car park lighting automation — motion sensors, occupancy-linked dimming, and emergency egress — must work 24/7 without fail.",
+        "A sensor or C-Bus fault in a commercial car park kills your energy savings and creates a safety liability.",
+        "We specialise in C-Bus and DALI-2 car park lighting systems — from multi-level shopping centre carparks to underground transport hubs.",
+        "Full AS 2293 emergency lighting compliance for car parks and transport facilities, with AFSS certification provided."
+    ]),
+    ("coworking-spaces-and-serviced-offices", "Coworking Spaces and Serviced Offices", "coworking", [
+        "Coworking tenants expect polished, responsive lighting — scene faults or flickering in a premium coworking space drives members to competitors.",
+        "Serviced office operators need lighting that works flawlessly across dozens of independent spaces — C-Bus makes this manageable.",
+        "We programme and repair C-Bus systems for coworking spaces across Sydney, including after-hours scheduling to avoid disrupting members.",
+        "Emergency lighting compliance for coworking facilities — full AS 2293 testing and AFSS documentation provided."
+    ]),
+    ("retirement-villages", "Retirement Villages", "retirement village", [
+        "Retirement village residents depend on reliable night lighting, safe corridors, and compliant emergency systems — automation faults are a serious safety risk.",
+        "Under AS 2293, retirement villages must maintain compliant emergency lighting. Our annual inspection service keeps you audit-ready.",
+        "We work sensitively in retirement village environments, scheduling repairs to minimise disruption to residents' routines.",
+        "C-Bus scene programming for communal areas, dining rooms, activity rooms, and pathways — we understand aged lifestyle precinct needs."
+    ]),
+]
+
+SUBURBS = [
+    "Drummoyne", "Leichhardt", "Glebe", "Pyrmont", "Zetland",
+    "Waterloo", "Redfern", "Surry Hills", "Paddington", "Woollahra",
+    "Mosman", "Neutral Bay", "Cremorne", "Kirribilli", "Milsons Point",
+    "Gordon", "Turramurra", "St Ives", "Killara", "Pymble",
+    "Miranda", "Caringbah", "Sutherland", "Engadine", "Gymea",
+]
+
+SYSTEMS = [
+    ("c-bus", "C-Bus"),
+    ("dynalite", "Dynalite"),
+    ("dali-2", "DALI-2"),
+]
+
+FAULTS = [
+    ("afss-emergency-lighting-compliance", "AFSS Emergency Lighting Non-Compliance"),
+    ("automated-schedule-and-timeclock-drift", "Automated Schedule and Timeclock Drift"),
+    ("daylight-harvesting-and-sensor-failure", "Daylight Harvesting and Sensor Failure"),
+    ("network-communication-and-bus-crashes", "Network Communication and Bus Crashes"),
+]
+
+NAV_HTML = '''<nav style="background:#001226;padding:10px 0;text-align:center;border-bottom:1px solid rgba(255,255,255,0.08);position:sticky;top:44px;z-index:9000;">
+  <div style="max-width:1200px;margin:0 auto;display:flex;justify-content:center;gap:24px;flex-wrap:wrap;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-size:14px;">
+    <a href="/" style="color:#a8c0e0;text-decoration:none;padding:6px 10px;" onmouseover="this.style.color='#f07020'" onmouseout="this.style.color='#a8c0e0'">Home</a>
+    <a href="/automation-sydney" style="color:#a8c0e0;text-decoration:none;padding:6px 10px;" onmouseover="this.style.color='#f07020'" onmouseout="this.style.color='#a8c0e0'">Automation</a>
+    <a href="/afss-emergency-lighting-services" style="color:#a8c0e0;text-decoration:none;padding:6px 10px;" onmouseover="this.style.color='#f07020'" onmouseout="this.style.color='#a8c0e0'">Emergency Lighting</a>
+    <a href="/blog" style="color:#a8c0e0;text-decoration:none;padding:6px 10px;" onmouseover="this.style.color='#f07020'" onmouseout="this.style.color='#a8c0e0'">Blog</a>
+    <a href="/about" style="color:#a8c0e0;text-decoration:none;padding:6px 10px;" onmouseover="this.style.color='#f07020'" onmouseout="this.style.color='#a8c0e0'">About</a>
+    <a href="/book-service" style="background:#f07020;color:#fff;text-decoration:none;padding:6px 16px;border-radius:4px;font-weight:700;">Book Service</a>
+    <a href="tel:0422469739" style="color:#4da6ff;text-decoration:none;padding:6px 10px;font-weight:600;">0422 469 739</a>
+  </div>
+</nav>'''
+
+# Brand block injected into every page — makes C-Bus, Dynalite, DALI-2, Rapix unmistakably clear
+BRAND_BLOCK = '''    <div class="container">
+      <div style="background:rgba(0,20,50,0.9);border:1px solid rgba(77,166,255,0.25);border-radius:10px;padding:20px 24px;margin:20px 0;">
+        <p style="color:#4da6ff;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:12px;">Lighting Control Systems We Specialise In</p>
+        <div style="display:flex;flex-wrap:wrap;gap:10px;align-items:center;">
+          <a href="/automation-sydney" style="background:#001f3d;color:#f07020;padding:7px 16px;border-radius:20px;font-weight:700;font-size:14px;text-decoration:none;border:1px solid rgba(240,112,32,0.4);">C-Bus</a>
+          <a href="/automation-sydney" style="background:#001f3d;color:#f07020;padding:7px 16px;border-radius:20px;font-weight:700;font-size:14px;text-decoration:none;border:1px solid rgba(240,112,32,0.4);">Dynalite</a>
+          <a href="/automation-sydney" style="background:#001f3d;color:#f07020;padding:7px 16px;border-radius:20px;font-weight:700;font-size:14px;text-decoration:none;border:1px solid rgba(240,112,32,0.4);">DALI-2</a>
+          <a href="/automation-sydney" style="background:#001f3d;color:#f07020;padding:7px 16px;border-radius:20px;font-weight:700;font-size:14px;text-decoration:none;border:1px solid rgba(240,112,32,0.4);">Rapix</a>
+          <span style="background:#001f3d;color:#a8c0e0;padding:7px 16px;border-radius:20px;font-size:13px;border:1px solid rgba(255,255,255,0.1);">Emergency Lighting</span>
+          <span style="background:#001f3d;color:#a8c0e0;padding:7px 16px;border-radius:20px;font-size:13px;border:1px solid rgba(255,255,255,0.1);">AFSS Compliance</span>
+          <span style="background:#001f3d;color:#a8c0e0;padding:7px 16px;border-radius:20px;font-size:13px;border:1px solid rgba(255,255,255,0.1);">AS 2293</span>
+          <span style="background:#001f3d;color:#a8c0e0;padding:7px 16px;border-radius:20px;font-size:13px;border:1px solid rgba(255,255,255,0.1);">Scene Programming</span>
+        </div>
+        <p style="color:#a8c0e0;font-size:12px;margin-top:12px;margin-bottom:0;">We service <strong style="color:#fff;">lighting control systems only</strong> — C-Bus, Dynalite, DALI-2, and Rapix. Not general electrical, not IT, not HVAC.</p>
+      </div>
+    </div>'''
+
+
+def slug(*parts):
+    import re
+    s = '-'.join(p.lower() for p in parts)
+    s = s.replace(' ', '-').replace('&', 'and').replace(',', '').replace("'", '').replace('/', '-')
+    s = re.sub(r'-+', '-', s)
+    return s
+
+
+def build_page(v_slug, v_name, v_desc, suburb, sys_slug, sys_name, fault_slug, fault_name, facts):
+    page_slug = slug(v_slug, suburb, sys_slug, fault_slug)
+    filename = page_slug + ".html"
+    canonical = f"https://sydneyautomationco.com.au/{page_slug}"
+    title = f"{sys_name} {fault_name} Repair for {v_name} in {suburb} | Sydney Automation Co."
+    meta_desc = (
+        f"Specialist {sys_name} fault diagnosis for {v_name} in {suburb} — {fault_name}. "
+        f"SLA-backed B2B response. Call Sydney Automation Co. on 0422 469 739."
+    )
+    facts_html = ''.join(f'<li style="margin-bottom:12px;">{f}</li>' for f in facts)
+
+    return filename, f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{title}</title>
+    <meta name="description" content="{meta_desc}">
+    <link rel="canonical" href="{canonical}">
+    <link rel="stylesheet" href="/style.css">
+    <script type="application/ld+json">
+    {{"@context":"https://schema.org","@type":"LocalBusiness","name":"Sydney Automation Co.",
+      "description":"{meta_desc}","url":"{canonical}","telephone":"+61422469739",
+      "areaServed":{{"@type":"Place","name":"{suburb}","addressRegion":"NSW","addressCountry":"AU"}},
+      "hasOfferCatalog":{{"@type":"OfferCatalog","name":"Commercial Automation for {v_name}",
+        "itemListElement":[{{"@type":"Offer","itemOffered":{{"@type":"Service","name":"{sys_name} {fault_name} for {v_name} in {suburb}"}}}}]}}}}
+    </script>
+    <script type="application/ld+json">
+    {{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+      {{"@type":"Question","name":"How quickly can you fix {fault_name} for {v_name} in {suburb}?",
+        "acceptedAnswer":{{"@type":"Answer","text":"We offer priority SLA-backed commercial response for {v_name} in {suburb}. Technicians arrive fully equipped on the first visit."}}}},
+      {{"@type":"Question","name":"Are you accredited to service {v_name} in {suburb}?",
+        "acceptedAnswer":{{"@type":"Answer","text":"Yes. We hold all required licences and insurances for {v_name} environments. Full compliance documentation and tax invoices provided."}}}},
+      {{"@type":"Question","name":"Do you offer after-hours {sys_name} repair for {v_name}?",
+        "acceptedAnswer":{{"@type":"Answer","text":"Yes. Early mornings, evenings, and weekends available to minimise disruption to your {suburb} operations."}}}}
+    ]}}
+    </script>
+    <style>
+        body{{font-family:Arial,sans-serif;line-height:1.6;margin:0;padding:0;background:#0a1628;color:#a8c0e0;padding-top:44px}}
+        .container{{max-width:1200px;margin:0 auto;padding:20px}}
+        header{{background:#001f3d;color:#fff;padding:1rem 0;text-align:center}}
+        header h1{{margin:0;font-size:2.2em}}
+        .hero{{background:linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url('/images/hero-bg.jpg') no-repeat center/cover;color:#fff;padding:80px 0;text-align:center}}
+        .hero h2{{font-size:2.2em;margin-bottom:18px}}
+        .hero p{{font-size:1.1em;margin-bottom:28px;max-width:780px;margin-left:auto;margin-right:auto}}
+        .btn{{background:#f07020;color:#fff;padding:13px 28px;text-decoration:none;border-radius:5px;font-weight:bold;display:inline-block}}
+        .btn-ghost{{background:transparent;border:2px solid #f07020;color:#f07020;padding:11px 24px;text-decoration:none;border-radius:5px;font-weight:bold;display:inline-block}}
+        .section{{padding:50px 0;border-bottom:1px solid rgba(255,255,255,0.05)}}
+        .section h3{{color:#fff;font-size:1.7em;margin-bottom:16px}}
+        .faq{{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);padding:20px;margin-bottom:14px;border-radius:8px}}
+        .faq h4{{color:#fff;margin-top:0}}
+        .alert{{background:rgba(240,112,32,0.12);border-left:4px solid #f07020;padding:18px;margin:24px 0;border-radius:4px}}
+        .grid3{{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;margin-top:20px}}
+        .card{{background:rgba(255,255,255,0.03);border:1px solid rgba(240,112,32,0.2);border-radius:8px;padding:18px}}
+        .card h4{{color:#f07020;margin-top:0}}
+        .cta-box{{background:linear-gradient(135deg,rgba(240,112,32,0.1),rgba(77,166,255,0.05));border:2px solid #f07020;border-radius:12px;padding:28px;margin:36px 0;text-align:center}}
+        .cta-box h3{{color:#fff;margin-top:0}}
+        footer{{background:#001f3d;color:#a8c0e0;text-align:center;padding:18px 0;margin-top:36px}}
+    </style>
+</head>
+<body>
+  <div id="sb" style="position:fixed;top:0;left:0;right:0;z-index:99999;background:linear-gradient(90deg,#0a2240,#1a3a6e);display:flex;align-items:center;justify-content:center;gap:16px;padding:9px 20px;box-shadow:0 2px 12px rgba(0,0,0,0.4);font-family:-apple-system,sans-serif;">
+    <span style="color:#f0c040;font-size:13px;font-weight:600;">Commercial Automation Support — Sydney-Wide</span>
+    <a href="tel:0422469739" style="background:#e8330a;color:#fff;text-decoration:none;padding:6px 16px;border-radius:4px;font-size:13px;font-weight:700;">Call George</a>
+    <a href="/book-service" style="background:#fff;color:#0a2240;text-decoration:none;padding:6px 16px;border-radius:4px;font-size:13px;font-weight:700;border:2px solid #fff;">Book Online</a>
+    <button onclick="document.getElementById('sb').style.display='none'" style="background:none;border:none;color:rgba(255,255,255,0.5);cursor:pointer;font-size:18px;padding:0;">x</button>
+  </div>
+
+  <header><div class="container"><h1>Sydney Automation Co.</h1><p>Certified B2B Automation &amp; Lighting Control Specialists</p></div></header>
+  {NAV_HTML}
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h2>{sys_name} Lighting Control — {fault_name} for {v_name} in {suburb}</h2>
+        <p>Expert C-Bus, Dynalite, DALI-2, and Rapix <strong>lighting control</strong> repair for {v_name} in {suburb}. We fix {fault_name} fast, with full compliance documentation and SLA-backed B2B response.</p>
+        <a href="/book-service" class="btn">Book Priority Call-Out &rarr;</a>
+      </div>
+    </section>
+
+{BRAND_BLOCK}
+
+    <div class="container">
+      <div class="alert">
+        <p style="color:#fff;font-weight:700;font-size:15px;">{sys_name} Lighting Control Fault in {suburb}? Call Now: <span style="color:#f07020;font-size:17px;">0422 469 739</span></p>
+        <p style="color:#a8c0e0;margin-top:6px;font-size:13px;">Certified C-Bus, Dynalite, DALI-2 &amp; Rapix technicians. SLA-backed response for {v_name}.</p>
+      </div>
+    </div>
+
+    <section class="section">
+      <div class="container">
+        <h3>Why {v_name} in {suburb} Need a Specialist</h3>
+        <p>When {fault_name} occurs in a {v_desc} environment, the stakes are high. Generic electricians lack the manufacturer-level software and training to diagnose {sys_name} faults without risking further damage or compliance breaches.</p>
+        <p>Sydney Automation Co. brings certified {sys_name} expertise, industry-specific experience, and a commercial SLA to every {v_desc} job in {suburb}.</p>
+        <ul style="padding-left:20px;">{facts_html}</ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h3>Our {sys_name} Repair Process for {v_name}</h3>
+        <div class="grid3">
+          <div class="card"><h4>Diagnosis</h4><p>Full {sys_name} network scan using manufacturer toolkits. Root cause found before any parts ordered.</p></div>
+          <div class="card"><h4>Repair</h4><p>Module replacement, re-addressing, and scene reprogramming — back to full spec, zero data loss.</p></div>
+          <div class="card"><h4>Compliance Docs</h4><p>Complete report and tax invoice. Ready for your facility management records and council audits.</p></div>
+          <div class="card"><h4>Flexible Hours</h4><p>Early mornings, evenings, and weekends available to minimise disruption to {v_name} in {suburb}.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h3>FAQ — {v_name} in {suburb}</h3>
+        <div class="faq"><h4>How quickly can you fix {fault_name} for {v_name} in {suburb}?</h4><p>We offer priority SLA-backed commercial response for {v_name} in {suburb}. Technicians arrive fully equipped on the first visit wherever possible.</p></div>
+        <div class="faq"><h4>Are you accredited to service {v_name} in {suburb}?</h4><p>Yes. We hold all required licences and insurances. Full compliance documentation and tax invoices provided after every job.</p></div>
+        <div class="faq"><h4>Do you offer after-hours {sys_name} repair?</h4><p>Yes — early mornings, evenings, and weekends available to avoid disrupting {suburb} {v_desc} operations.</p></div>
+        <div class="faq"><h4>Can you integrate {sys_name} with BMS, HVAC, or access control?</h4><p>Absolutely. We have experience integrating {sys_name} with building management systems and other infrastructure in {v_name} environments across {suburb} and Greater Sydney.</p></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h3>Transparent Pricing</h3>
+        <div class="grid3">
+          <div class="card">
+            <h4>Rate Card</h4>
+            <ul style="list-style:none;padding:0;">
+              <li style="margin-bottom:8px;">Consultation &amp; Diagnosis: $150/hr</li>
+              <li style="margin-bottom:8px;">Programming &amp; Integration: $150/hr</li>
+              <li style="margin-bottom:8px;">Emergency / AFSS: $150/hr + 15% premium</li>
+              <li style="margin-bottom:8px;">Minimum Call-Out: 3 hrs ($450)</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h4>Our Guarantee</h4>
+            <p style="font-size:14px;">We arrive with manufacturer diagnostic toolkits and common modules. No work proceeds without site approval. Full tax invoice provided.</p>
+            <div style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap;">
+              <a href="/book-service" class="btn" style="padding:9px 18px;font-size:14px;">Book $450 Call</a>
+              <a href="tel:0422469739" class="btn-ghost" style="padding:7px 16px;font-size:14px;">0422 469 739</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="cta-box">
+        <h3>Fix {fault_name} at Your {suburb} {v_desc.title()} Today</h3>
+        <p style="color:#a8c0e0;margin-bottom:20px;">Don't let automation faults disrupt operations or void your compliance certificates.</p>
+        <a href="/book-service" class="btn">Book B2B Service &amp; Pay Deposit &rarr;</a>
+        <p style="color:#4da6ff;font-size:13px;margin-top:12px;">Priority response &nbsp;|&nbsp; Certified technicians &nbsp;|&nbsp; Tax invoices</p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Sydney Automation Co. ABN 61 136 364 150. Servicing {v_name} in {suburb}, NSW.</p>
+      <p><a href="tel:+61422469739" style="color:#f07020;">0422 469 739</a> &nbsp;|&nbsp; <a href="mailto:george@sydneyautomationco.com.au" style="color:#4da6ff;">george@sydneyautomationco.com.au</a></p>
+      <p style="font-size:12px;margin-top:10px;">
+        <a href="/" style="color:#a8c0e0;margin:0 8px;">Home</a>
+        <a href="/automation-sydney" style="color:#a8c0e0;margin:0 8px;">Automation</a>
+        <a href="/afss-emergency-lighting-services" style="color:#a8c0e0;margin:0 8px;">Emergency Lighting</a>
+        <a href="/blog" style="color:#a8c0e0;margin:0 8px;">Blog</a>
+        <a href="/book-service" style="color:#a8c0e0;margin:0 8px;">Book Service</a>
+      </p>
+    </div>
+  </footer>
+</body>
+</html>""", canonical
+
+
+def build_hub(v_slug, v_name, v_desc, facts, suburbs):
+    filename = f"{v_slug}-lighting-automation-sydney.html"
+    canonical = f"https://sydneyautomationco.com.au/{v_slug}-lighting-automation-sydney"
+    title = f"{v_name} Lighting Automation, C-Bus & DALI Repair Sydney | Sydney Automation Co."
+    meta_desc = f"Expert C-Bus, Dynalite, and DALI-2 lighting automation for {v_name} across Sydney. SLA-backed B2B service. Call 0422 469 739."
+    facts_html = ''.join(f'<li style="margin-bottom:12px;color:#a8c0e0;">{f}</li>' for f in facts)
+    suburb_links = ' &nbsp;|&nbsp; '.join(
+        f'<a href="/{v_slug}-{s.lower().replace(" ","-")}-c-bus-afss-emergency-lighting-compliance" style="color:#4da6ff;text-decoration:none;">{s}</a>'
+        for s in suburbs
+    )
+    return filename, f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>{title}</title>
+  <meta name="description" content="{meta_desc}">
+  <link rel="canonical" href="{canonical}">
+  <link rel="stylesheet" href="/style.css">
+  <script type="application/ld+json">
+  {{"@context":"https://schema.org","@type":"LocalBusiness","name":"Sydney Automation Co.",
+    "description":"{meta_desc}","url":"{canonical}","telephone":"+61422469739",
+    "areaServed":{{"@type":"Place","name":"Sydney","addressRegion":"NSW","addressCountry":"AU"}}}}
+  </script>
+  <style>
+    body{{font-family:Arial,sans-serif;line-height:1.6;margin:0;background:#0a1628;color:#a8c0e0;padding-top:44px}}
+    .container{{max-width:1200px;margin:0 auto;padding:20px}}
+    header{{background:#001f3d;color:#fff;padding:1rem 0;text-align:center}}
+    .hero{{background:linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url('/images/hero-bg.jpg') no-repeat center/cover;color:#fff;padding:80px 0;text-align:center}}
+    .btn{{background:#f07020;color:#fff;padding:13px 28px;text-decoration:none;border-radius:5px;font-weight:bold;display:inline-block}}
+    .section{{padding:50px 0;border-bottom:1px solid rgba(255,255,255,0.05)}}
+    .section h2,.section h3{{color:#fff}}
+    footer{{background:#001f3d;color:#a8c0e0;text-align:center;padding:18px 0;margin-top:36px}}
+  </style>
+</head>
+<body>
+  <div id="sb" style="position:fixed;top:0;left:0;right:0;z-index:99999;background:linear-gradient(90deg,#0a2240,#1a3a6e);display:flex;align-items:center;justify-content:center;gap:16px;padding:9px 20px;box-shadow:0 2px 12px rgba(0,0,0,0.4);font-family:-apple-system,sans-serif;">
+    <span style="color:#f0c040;font-size:13px;font-weight:600;">{v_name} Automation Specialists</span>
+    <a href="tel:0422469739" style="background:#e8330a;color:#fff;text-decoration:none;padding:6px 16px;border-radius:4px;font-size:13px;font-weight:700;">Call George</a>
+    <a href="/book-service" style="background:#fff;color:#0a2240;text-decoration:none;padding:6px 16px;border-radius:4px;font-size:13px;font-weight:700;border:2px solid #fff;">Book Online</a>
+    <button onclick="document.getElementById('sb').style.display='none'" style="background:none;border:none;color:rgba(255,255,255,0.5);cursor:pointer;font-size:18px;padding:0;">x</button>
+  </div>
+  <header><div class="container"><h1>Sydney Automation Co.</h1><p>Certified {v_name} Automation Specialists</p></div></header>
+  {NAV_HTML}
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h2>{v_name} Lighting Automation &amp; C-Bus Repair — Sydney</h2>
+        <p>Sydney's specialist for {v_name} C-Bus, Dynalite, and DALI-2 lighting control. SLA-backed B2B response across all Sydney suburbs.</p>
+        <a href="/book-service" class="btn">Book a Priority Call-Out &rarr;</a>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <h3>Why {v_name} Trust Sydney Automation Co.</h3>
+        <ul style="padding-left:20px;">{facts_html}</ul>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <h3>Suburbs We Service for {v_name}</h3>
+        <p style="line-height:2.2;">{suburb_links}</p>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container" style="text-align:center;">
+        <h3>Book Your {v_name} Service Call</h3>
+        <p style="max-width:580px;margin:0 auto 24px;">Minimum 3-hour call-out ($450). Tax invoices. Certified technicians. Same-day response available.</p>
+        <a href="/book-service" class="btn" style="margin-right:14px;">Book Online</a>
+        <a href="tel:0422469739" style="background:transparent;border:2px solid #f07020;color:#f07020;padding:11px 24px;text-decoration:none;border-radius:5px;font-weight:bold;display:inline-block;">Call 0422 469 739</a>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Sydney Automation Co. ABN 61 136 364 150.</p>
+      <p style="font-size:12px;margin-top:8px;">
+        <a href="/" style="color:#a8c0e0;margin:0 8px;">Home</a>
+        <a href="/blog" style="color:#a8c0e0;margin:0 8px;">Blog</a>
+        <a href="/book-service" style="color:#a8c0e0;margin:0 8px;">Book Service</a>
+      </p>
+    </div>
+  </footer>
+</body>
+</html>""", canonical
+
+
+# ── RUN ───────────────────────────────────────────────────────────────────────
+generated = 0
+sitemap_additions = []
+
+for v_slug, v_name, v_desc, v_facts in VERTICALS:
+    # Hub page
+    hub_fn, hub_html, hub_canonical = build_hub(v_slug, v_name, v_desc, v_facts, SUBURBS)
+    hub_path = os.path.join(BASE_DIR, hub_fn)
+    if not os.path.exists(hub_path):
+        with open(hub_path, 'w', encoding='utf-8') as f:
+            f.write(hub_html)
+        sitemap_additions.append(hub_canonical)
+        generated += 1
+        print(f"[HUB] {hub_fn}")
+
+    # Detail pages
+    for suburb in SUBURBS:
+        for sys_slug, sys_name in SYSTEMS:
+            for fault_slug, fault_name in FAULTS:
+                filename, html, canonical = build_page(
+                    v_slug, v_name, v_desc, suburb,
+                    sys_slug, sys_name, fault_slug, fault_name, v_facts
+                )
+                filepath = os.path.join(BASE_DIR, filename)
+                if not os.path.exists(filepath):
+                    with open(filepath, 'w', encoding='utf-8') as fh:
+                        fh.write(html)
+                    sitemap_additions.append(canonical)
+                    generated += 1
+
+print(f"\nGenerated {generated} new pages")
+
+# Rebuild sitemap completely
+import glob as gb
+from datetime import datetime
+
+TODAY = datetime.now().strftime('%Y-%m-%d')
+BASE_URL = 'https://sydneyautomationco.com.au'
+
+EXCLUDE = {'test.html', 'old_index.html', '404.html'}
+
+all_html = [f for f in gb.glob(os.path.join(BASE_DIR, '*.html'))
+            if os.path.basename(f) not in EXCLUDE]
+blog_dir = os.path.join(BASE_DIR, 'blog')
+if os.path.isdir(blog_dir):
+    all_html += [f for f in gb.glob(os.path.join(blog_dir, '*.html'))
+                 if os.path.basename(f) not in EXCLUDE]
+
+print(f"Building sitemap from {len(all_html)} pages...")
+
+def get_priority(fp):
+    n = os.path.basename(fp)
+    if n in ('index.html','about.html','book-service.html','automation-sydney.html',
+              'afss-emergency-lighting-services.html','blog.html','automation-companies-sydney.html'):
+        return '1.0','weekly'
+    if any(k in n for k in ['lighting-automation-sydney','cbus-dynalite-repair','dynalite-repair-sydney']):
+        return '0.8','monthly'
+    if n.startswith('blog-') or 'blog/' in fp:
+        return '0.7','monthly'
+    if any(k in n for k in ['c-bus-repair','c-bus-specialist','dynalite-programming','emergency-lighting','lighting-control']):
+        return '0.7','monthly'
+    return '0.6','monthly'
+
+def url_path(fp):
+    rel = os.path.relpath(fp, BASE_DIR).replace('\\','/')
+    if rel == 'index.html':
+        return '/'
+    return '/' + rel[:-5]
+
+entries = []
+for fp in sorted(all_html):
+    p, cf = get_priority(fp)
+    entries.append(
+        f'  <url>\n    <loc>{BASE_URL}{url_path(fp)}</loc>\n'
+        f'    <lastmod>{TODAY}</lastmod>\n    <changefreq>{cf}</changefreq>\n'
+        f'    <priority>{p}</priority>\n  </url>'
+    )
+
+sitemap_xml = (
+    '<?xml version="1.0" encoding="UTF-8"?>\n'
+    '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n\n'
+    + '\n'.join(entries)
+    + '\n\n</urlset>'
+)
+
+sm_path = os.path.join(BASE_DIR, 'sitemap.xml')
+with open(sm_path, 'w', encoding='utf-8') as f:
+    f.write(sitemap_xml)
+
+total = len(gb.glob(os.path.join(BASE_DIR, '*.html')))
+print(f"Sitemap rebuilt: {len(entries)} URLs")
+print(f"Sitemap size: {round(os.path.getsize(sm_path)/1024,1)} KB")
+print(f"Total HTML pages: {total}")
