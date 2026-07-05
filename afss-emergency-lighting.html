@@ -105,7 +105,7 @@
 	a { color: inherit; text-decoration: none; }
 	img { max-width: 100%; display: block; }
 	/* ===================== NAVIGATION ===================== */
-	nav { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: rgba(14,31,61,0.97); border-bottom: 1px solid #2a4a80; padding: 0 24px; height: 64px; display: flex; align-items: center; justify-content: space-between; backdrop-filter: blur(8px); }
+	nav { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: rgba(14,31,61,0.97); border-bottom: 1px solid #2a4a80; padding: 0 24px; height: 64px; display: flex; align-items: center; justify-content: space-between; }
 	.logo { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; text-transform: uppercase; line-height: 1; cursor: pointer; display: inline-flex; flex-direction: column; text-decoration: none; color: inherit; flex-shrink: 0; }
 	.logo-main { font-size: 17px; color: #fff; letter-spacing: 1px; display: block; white-space: nowrap; }
 	.logo-line { height: 2px; background: #f07020; margin: 4px 0; width: 100%; }
@@ -293,7 +293,7 @@
       ⚡ Same-Day C-Bus &amp; Dynalite Repair — Available Today
     </span>
     <a href="tel:0422469739" style="
-      background:#e8330a;color:#fff;text-decoration:none;
+      background:#f07020;color:#fff;text-decoration:none;
       padding:7px 18px;border-radius:4px;font-size:13px;font-weight:700;
       white-space:nowrap;transition:background 0.2s;
     " onclick="gtag&&gtag('event','click',{event_category:'CTA',event_label:'sticky-call'})">
@@ -676,6 +676,15 @@
 <span>© 2026 Sydney Automation Co. All rights reserved.</span>
 <span>Based in Menai, Sutherland Shire · Serving Greater Sydney · <a href="https://www.sydneyautomationco.com.au">sydneyautomationco.com.au</a></span>
 </div>
+
+        <div class='semantic-links' style='margin-top:30px; padding:20px; background:rgba(240,112,32,0.05); border-radius:8px; border-left:4px solid #f07020;'>
+            <h4 style='margin-top:0; color:#fff; font-size:16px;'>Expertise & Related Technical Knowledge</h4>
+            <ul style='list-style:none; padding:0; margin:0;'>
+                <li style='margin-bottom:8px;'><a href='/afss-emergency-lighting-services.html' style='color:#f07020; text-decoration:none; font-weight:500;'>&#8594; Emergency Lighting Compliance</a></li>
+                <li style='margin-bottom:8px;'><a href='/afss-emergency-lighting-services.html' style='color:#f07020; text-decoration:none; font-weight:500;'>&#8594; Emergency Lighting Repair</a></li>
+            </ul>
+        </div>
+
 </footer>
 <!-- ===================== SCRIPTS ===================== -->
 <script>
@@ -758,7 +767,18 @@ document.addEventListener('DOMContentLoaded', () => {
 		splitGrids.forEach(el => {
 			if (window.innerWidth < 900) {
 				el.style.gridTemplateColumns = '1f
-</script><!-- ===== PREMIUM TESTIMONIALS CAROUSEL ===== -->
+</script>
+<div class="insta-proof" style="margin:0 0 48px;padding:28px;background:linear-gradient(135deg,rgba(240,112,32,0.06),rgba(14,31,61,0.3));border:1px solid rgba(240,112,32,0.2);border-radius:16px;text-align:center;">
+  <div style="font-size:36px;margin-bottom:8px">📸</div>
+  <h3 style="color:#fff;margin:0 0 8px;font-family:'Barlow Condensed',sans-serif;font-size:20px;">See Our Work on Instagram</h3>
+  <p style="color:#a8c0e0;font-size:14px;margin:0 0 16px;max-width:500px;margin-left:auto;margin-right:auto;">Real C-Bus &amp; Dynalite repairs, site walkthroughs, and compliance inspections — filmed on the job around Sydney.</p>
+  <div style="display:flex;justify-content:center;gap:12px;flex-wrap:wrap;">
+    <a href="https://www.instagram.com/sydneyautomationco/" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;padding:12px 24px;background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);color:#fff;border-radius:8px;text-decoration:none;font-weight:700;font-size:14px;">Follow @sydneyautomationco</a>
+    <a href="tel:+61422469739" style="display:inline-flex;align-items:center;gap:8px;padding:12px 24px;background:#f07020;color:#fff;border-radius:8px;text-decoration:none;font-weight:700;font-size:14px;">Call 0422 469 739</a>
+  </div>
+</div>
+
+<!-- ===== PREMIUM TESTIMONIALS CAROUSEL ===== -->
 <section id="testimonials" style="background:#0e1f3d;padding:80px 0;overflow:hidden;border-top:1px solid rgba(240,112,32,0.1);">
   <div class="container" style="max-width:1200px;margin:0 auto;padding:0 24px;">
     <div style="text-align:center;margin-bottom:48px;">
@@ -893,7 +913,6 @@ document.addEventListener('DOMContentLoaded', () => {
     scroll-snap-align: center;
     background: rgba(255,255,255,0.03);
     border: 1px solid rgba(255,255,255,0.08);
-    backdrop-filter: blur(10px);
     border-radius: 20px;
     padding: 40px 32px;
     display: flex;

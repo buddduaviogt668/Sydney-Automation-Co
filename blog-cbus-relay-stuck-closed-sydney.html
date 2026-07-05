@@ -1,0 +1,1837 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+
+
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <meta name="description" content="LEDs blinking on your C-Bus or Dynalite system? George explains common causes and how to diagnose relay, dimmer and DALI network faults. Clipsal-accredited, same-day service." />
+  <link href="/sitemap.xml" rel="sitemap" title="Sitemap" type="application/xml" />
+  <link rel="canonical" href="https://sydneyautomationco.com.au/blog-blinking-leds-lighting-network" />
+  <title>C-Bus Relay Stuck Closed? Diagnosis & Repair | Sydney Automation Co.</title>
+  <link href="/favicon.png" rel="icon" type="image/png" />
+  <link href="/favicon.png" rel="apple-touch-icon" />
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+  <link as="style"
+    href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600&family=Barlow+Condensed:wght@700;800&display=swap"
+    onload="this.onload=null;this.rel='stylesheet'" rel="preload" />
+  <noscript>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600&family=Barlow+Condensed:wght@700;800&display=swap"
+      rel="stylesheet" />
+  </noscript>
+  <meta content="website" property="og:type" />
+  <meta content="https://sydneyautomationco.com.au/blog-blinking-leds-lighting-network" property="og:url" />
+  <meta content="C-Bus & DALI Lighting Control Specialists Sydney | Sydney Automation Co" property="og:title" />
+  <meta
+    content="Accredited C-Bus & Signify Dynalite specialist Sydney. Lighting control, repairs & fault finding. Call George 0422 469 739."
+    property="og:description" />
+  <meta property="og:image" content="https://sydneyautomationco.com.au/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://sydneyautomationco.com.au/og-image.png">
+  <meta content="en_AU" property="og:locale" />
+  <meta content="Sydney Automation Co." property="og:site_name" />
+  <meta content="summary_large_image" name="twitter:card" />
+  <meta content="AU-NSW" name="geo.region" />
+  <meta content="Menai, Sutherland Shire, Sydney" name="geo.placename" />
+  <meta content="-34.0167;151.0333" name="geo.position" />
+  <meta content="-34.0167, 151.0333" name="ICBM" />
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  <meta content="99c59ffacd177339" name="google-site-verification" />
+
+  <!-- LocalBusiness Schema -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Sydney Automation Co.",
+  "url": "https://sydneyautomationco.com.au/",
+  "telephone": "+61422469739",
+  "email": "service@sydneyautomationco.com.au",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Menai",
+    "addressLocality": "Menai",
+    "addressRegion": "NSW",
+    "postalCode": "2234",
+    "addressCountry": "AU"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": -34.0167,
+    "longitude": 151.0167
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "07:00",
+      "closes": "18:00"
+    }
+  ],
+  "priceRange": "$$",
+  "areaServed": "Sydney",
+  "sameAs": [
+    "https://www.facebook.com/profile.php?id=61570407305417",
+    "https://www.instagram.com/sydneyautomationco/",
+    "https://www.linkedin.com/company/sydney-automation-co/"
+  ]
+}
+</script>
+
+  <!-- AggregateRating Schema (14 Reviews) -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Sydney Automation Co.",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5.0",
+    "reviewCount": "14"
+  },
+  "review": [
+    {
+      "@type": "Review",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Liao Calvin"
+      },
+      "reviewBody": "Highly recommend George for any C-Bus programming needs! He is exceptionally professional, knowledgeable, and efficient. He completed the programming flawlessly and took the time to ensure everything was running perfectly. If you want the job done right the first time, George is the person to go to. Exceptional service!"
+    },
+    {
+      "@type": "Review",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Adam Ziino"
+      },
+      "reviewBody": "Literally a lifesaver… George came out in 24 hours, diagnosed the problem with the CBUS system that two previous 'specialists' couldn't — fixed it — and then checked in two days later to make sure it was still working."
+    }
+  ]
+}
+</script>
+
+  <!-- FAQ Schema for Featured Snippets -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is C-Bus programming?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "C-Bus is a professional lighting control system by Clipsal/Schneider Electric. It allows automated control of lights, blinds, and other electrical devices across commercial and residential buildings. We provide C-Bus programming, repairs, and system upgrades across Sydney."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How quickly can you fix a C-Bus system?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We offer same-day fault finding and emergency repairs across Greater Sydney. Most issues are diagnosed and resolved within 24 hours. Contact us on 0422 469 739 for urgent support."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What areas do you service?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We service Greater Sydney including Menai, Sutherland Shire, Cronulla, Miranda, Engadine, Kirrawee, North Shore, Eastern Suburbs, and Sydney CBD. We offer mobile callouts and emergency support across all regions."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are you accredited for DALI-2 and emergency lighting?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": ""
+      }
+    }
+  ]
+}
+</script>
+
+  <!-- Google Analytics GA4 -->
+  <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-7EZFB6GRJ3"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-7EZFB6GRJ3');
+  </script>
+
+  <!-- Microsoft Clarity -->
+  <script type="text/javascript">
+    (function (c, l, a, r, i, t, y) {
+      c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+      t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+      y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+    })(window, document, "clarity", "script", "w5e5flrwbd");
+  </script>
+
+  <!-- Meta Pixel -->
+  <script>
+    !function (f, b, e, v, n, t, s) {
+      if (f.fbq) return; n = f.fbq = function () {
+        n.callMethod ?
+          n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+      }; if (!f._fbq) f._fbq = n;
+      n.push = n; n.loaded = !0; n.version = '2.0'; n.queue = []; t = b.createElement(e); t.async = !0;
+      t.src = v; s = b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s)
+    }(window,
+      document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1836885369871029');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img alt="Facebook Pixel" height="1" loading="lazy"
+      src="https://www.facebook.com/tr?id=1836885369871029&ev=PageView&noscript=1" style="display:none"
+      width="1" /></noscript>
+
+  <style>
+    /* Atmospheric Glows (Kolosseum Style) */
+    .ambience-glow {
+      position: fixed;
+      width: 60vw;
+      height: 60vw;
+      border-radius: 50%;
+      filter: blur(120px);
+      z-index: -1;
+      opacity: 0.15;
+      pointer-events: none;
+      animation: ambientFloat 20s infinite alternate ease-in-out;
+    }
+
+    .glow-blue {
+      background: radial-gradient(circle, #2a4a80 0%, transparent 70%);
+      top: -10%;
+      left: -10%;
+    }
+
+    .glow-orange {
+      background: radial-gradient(circle, #f07020 0%, transparent 70%);
+      bottom: -10%;
+      right: -10%;
+      animation-delay: -10s;
+    }
+
+    @keyframes ambientFloat {
+      0% {
+        transform: translate(0, 0) scale(1);
+      }
+
+      100% {
+        transform: translate(10%, 5%) scale(1.1);
+      }
+    }
+
+    /* Infinite Marquee */
+    .marquee-wrapper {
+      background: rgba(255, 255, 255, 0.02);
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      padding: 30px 0;
+      overflow: hidden;
+      white-space: nowrap;
+      position: relative;
+    }
+
+    .marquee-content {
+      display: inline-block;
+      animation: marqueeRun 30s linear infinite;
+    }
+
+
+
+
+
+
+
+
+    .marquee-item {
+      display: inline-flex;
+      align-items: center;
+      margin: 0 60px;
+      color: rgba(255, 255, 255, 0.6);
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 20px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      transition: all 0.3s;
+      text-decoration: none;
+    }
+
+    .marquee-item:hover {
+      color: #f07020;
+      transform: scale(1.05);
+    }
+
+    .marquee-item img {
+      height: 32px;
+      margin-right: 15px;
+      object-fit: contain;
+      filter: grayscale(100%) brightness(200%) opacity(70%);
+      transition: all 0.3s;
+    }
+
+    .marquee-item:hover img {
+      filter: grayscale(0%) brightness(100%) opacity(100%);
+    }
+
+    @keyframes marqueeRun {
+      0% {
+        transform: translateX(0);
+      }
+
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+
+    /* Testimonial Badge Update */
+    .tm-badge-google {
+      position: absolute;
+      top: 25px;
+      right: 25px;
+      width: 24px;
+      height: 24px;
+      background: white;
+      border-radius: 50%;
+      padding: 4px;
+      box-shadow: 0 0 15px rgba(240, 112, 32, 0.4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 5;
+    }
+
+    .tm-badge-google svg {
+      width: 16px;
+      height: 16px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Barlow', sans-serif;
+      background: #0e1f3d;
+      color: #f0f4ff;
+      min-height: 100vh;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* NAVIGATION */
+    nav {
+      position: fixed;
+      top: 40px;
+      left: 0;
+      right: 0;
+      z-index: 1150;
+      background: #0e1f3d;
+      border-bottom: 1px solid #2a4a80;
+      padding: 0 24px;
+      height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 900;
+      text-transform: uppercase;
+      line-height: 1;
+      cursor: pointer;
+      display: inline-flex;
+      flex-direction: column;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .logo-main {
+      font-size: 24px;
+      color: #fff;
+      letter-spacing: 1.5px;
+      display: block;
+      white-space: nowrap;
+    }
+
+    .logo-line {
+      height: 4px;
+      background: linear-gradient(90deg, #f07020, #f5a623, #4a90d9, #f07020);
+      background-size: 200% 100%;
+      animation: shimmer 3s linear infinite;
+      margin: 4px 0;
+      width: 100%;
+    }
+
+    .logo-sub {
+      font-size: 11px;
+      color: #a8c0e0;
+      letter-spacing: 4px;
+    }
+
+    .nav-phone-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      margin-right: 20px;
+      flex: 1;
+    }
+
+    .nav-phone {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 28px;
+      font-weight: 800;
+      color: #f07020;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: color 0.2s;
+    }
+
+    .nav-phone:hover {
+      color: #ff8533;
+    }
+
+    .nav-phone-label {
+      font-size: 10px;
+      color: #a8c0e0;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: 700;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 2px;
+      flex-wrap: nowrap;
+    }
+
+    .nav-links>a,
+    .nav-dd-trigger {
+      font-size: 13px;
+      font-weight: 600;
+      color: #a8c0e0;
+      padding: 6px 10px;
+      border-radius: 6px;
+      white-space: nowrap;
+      transition: color 0.2s, background 0.2s;
+      text-decoration: none;
+      cursor: pointer;
+      border: none;
+      background: none;
+    }
+
+    .nav-links>a:hover,
+    .nav-dd-trigger:hover,
+    .nav-links>a.active,
+    .nav-dd-trigger.active {
+      color: #f0f4ff;
+      background: rgba(240, 112, 32, 0.15);
+    }
+
+    .nav-cta {
+      background: #f07020 !important;
+      color: #fff !important;
+      border-radius: 8px;
+      padding: 8px 16px !important;
+      font-size: 13px;
+      font-weight: 700;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .nav-cta:hover {
+      background: #ff8533 !important;
+    }
+
+    .nav-dd {
+      position: relative;
+    }
+
+    .nav-dd-trigger::after {
+      content: '▾';
+      font-size: 10px;
+      opacity: 0.6;
+    }
+
+    .nav-dd-panel {
+      display: none;
+      position: absolute;
+      top: calc(100% + 8px);
+      left: 0;
+      min-width: 240px;
+      background: #0d1e3c;
+      border: 1px solid #2a4a80;
+      border-radius: 10px;
+      padding: 8px;
+      z-index: 2000;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    }
+
+    .nav-dd-panel.right {
+      left: auto;
+      right: 0;
+    }
+
+    .nav-dd-panel.mega {
+      min-width: 560px;
+      max-width: calc(100vw - 48px);
+      display: none;
+      grid-template-columns: 1fr 1fr;
+      gap: 0 8px;
+      padding: 12px;
+      overflow-y: auto;
+      max-height: 80vh;
+    }
+
+    .nav-dd.open .nav-dd-panel.mega {
+      display: grid;
+    }
+
+    .nav-dd.open .nav-dd-panel {
+      display: block;
+    }
+
+    .nav-dd-panel a {
+      display: block;
+      padding: 9px 14px;
+      border-radius: 7px;
+      font-size: 13px;
+      font-weight: 600;
+      color: #a8c0e0;
+      text-decoration: none;
+      transition: all 0.15s;
+      white-space: nowrap;
+    }
+
+    .nav-dd-panel a:hover {
+      background: rgba(240, 112, 32, 0.15);
+      color: #f0f4ff;
+    }
+
+    .nav-dd-panel .dd-divider {
+      height: 1px;
+      background: #2a4a80;
+      margin: 6px 0;
+    }
+
+    .nav-dd-panel .dd-label {
+      font-size: 10px;
+      font-weight: 700;
+      color: #4a6a9a;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 6px 14px 2px;
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 8px;
+      background: none;
+      border: none;
+    }
+
+    .hamburger span {
+      width: 24px;
+      height: 2px;
+      background: #f0f4ff;
+      border-radius: 2px;
+      display: block;
+      transition: all 0.3s;
+    }
+
+    .mob-nav {
+      display: none;
+      position: fixed;
+      top: 120px;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: #0e1f3d;
+      border-top: 1px solid #2a4a80;
+      z-index: 998;
+      overflow-y: auto;
+      flex-direction: column;
+    }
+
+    .mob-nav.open {
+      display: flex;
+    }
+
+    .mob-section {
+      border-bottom: 1px solid #1a3060;
+    }
+
+    .mob-section-title {
+      font-size: 11px;
+      font-weight: 700;
+      color: #4a6a9a;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 14px 20px 6px;
+    }
+
+    .mob-nav a {
+      display: block;
+      padding: 11px 20px;
+      font-size: 15px;
+      font-weight: 600;
+      color: #a8c0e0;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(42, 74, 128, 0.3);
+    }
+
+    .mob-nav a:hover {
+      background: #132647;
+      color: #f0f4ff;
+    }
+
+    .mob-nav .mob-cta {
+      background: #f07020;
+      color: #fff;
+      margin: 16px;
+      border-radius: 8px;
+      text-align: center;
+      padding: 14px;
+    }
+
+    @media(max-width: 960px) {
+      .nav-links {
+        display: none;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+    }
+
+    .hamburger.open span:nth-child(1) {
+      transform: translateY(7px) rotate(45deg);
+    }
+
+    .hamburger.open span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .hamburger.open span:nth-child(3) {
+      transform: translateY(-7px) rotate(-45deg);
+    }
+
+    /* PROMO BANNER */
+    #promo-banner {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1100;
+      height: 40px;
+      background: #f07020;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      font-family: 'Barlow', sans-serif;
+      overflow: hidden;
+    }
+
+    #promo-banner .pb-text {
+      font-size: 13px;
+      font-weight: 700;
+      color: #fff;
+      white-space: nowrap;
+      transition: opacity 0.4s;
+      flex: 0 1 auto;
+      text-align: center;
+    }
+
+    #promo-banner .pb-btn {
+      background: #fff;
+      color: #f07020;
+      border: none;
+      border-radius: 5px;
+      padding: 5px 14px;
+      font-size: 12px;
+      font-weight: 800;
+      cursor: pointer;
+      white-space: nowrap;
+      text-decoration: none;
+      font-family: 'Barlow', sans-serif;
+    }
+
+    #promo-banner .pb-btn:hover {
+      background: #0e1f3d;
+      color: #fff;
+    }
+
+    @media(max-width: 960px) {
+      nav {
+        top: 40px;
+        height: 80px;
+        z-index: 1150;
+      }
+
+      .nav-phone-wrap {
+        display: none;
+      }
+    }
+
+    @media(max-width: 600px) {
+      #promo-banner {
+        height: 40px;
+        z-index: 1100;
+        padding: 0 8px;
+        gap: 6px;
+        flex-wrap: nowrap;
+        overflow: hidden;
+        justify-content: center;
+        min-height: 40px;
+      }
+
+      #promo-banner .pb-text {
+        font-size: 10px;
+      }
+
+      #promo-banner .pb-btn {
+        padding: 3px 8px;
+        font-size: 10px;
+      }
+    }
+
+    /* PAGE LAYOUT */
+    .page {
+      padding-top: 120px;
+      min-height: 100vh;
+    }
+
+    .section {
+      padding: 64px 24px;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .container-sm {
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    /* HERO */
+    .hero {
+      padding: 40px 24px 64px;
+      background: linear-gradient(135deg, #001428 0%, #1e3a66 100%);
+      border-bottom: 1px solid #2a4a80;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(240, 112, 32, 0.15);
+      color: #f07020;
+      border: 1px solid rgba(240, 112, 32, 0.35);
+      border-radius: 50px;
+      padding: 6px 16px;
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+
+    h1 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: clamp(42px, 6vw, 76px);
+      font-weight: 900;
+      line-height: 1.0;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: clamp(28px, 4vw, 44px);
+      font-weight: 900;
+      line-height: 1.05;
+      margin-bottom: 16px;
+    }
+
+    h3 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 22px;
+      font-weight: 800;
+      margin-bottom: 10px;
+    }
+
+    h4 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 18px;
+      font-weight: 800;
+      margin-bottom: 8px;
+    }
+
+    .accent {
+      color: #f07020;
+    }
+
+    .dim {
+      color: #a8c0e0;
+    }
+
+    .lead {
+      font-size: 18px;
+      color: #a8c0e0;
+      line-height: 1.8;
+      max-width: 640px;
+      margin-bottom: 32px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 28px;
+      border-radius: 10px;
+      font-weight: 700;
+      font-size: 15px;
+      cursor: pointer;
+      border: none;
+      transition: all 0.2s;
+      text-decoration: none;
+    }
+
+    .btn-primary {
+      background: #f07020;
+      color: #fff;
+      box-shadow: 0 0 20px rgba(240, 112, 32, 0.2);
+    }
+
+    .btn-primary:hover {
+      background: #ff8533;
+      transform: translateY(-2px);
+      box-shadow: 0 0 30px rgba(240, 112, 32, 0.4);
+    }
+
+    .btn-outline {
+      background: rgba(255, 255, 255, 0.03);
+      color: #f0f4ff;
+      border: 1.5px solid rgba(255, 255, 255, 0.1);
+      }
+
+    .btn-outline:hover {
+      border-color: #f07020;
+      color: #f07020;
+      background: rgba(240, 112, 32, 0.05);
+    }
+
+    .btns {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-top: 10px;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 20px;
+      padding: 32px;
+      transition: all 0.3s ease;
+    }
+
+    .card:hover {
+      border-color: rgba(240, 112, 32, 0.4);
+      transform: translateY(-4px);
+      background: rgba(255, 255, 255, 0.06);
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .grid-4 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    @media(max-width: 900px) {
+
+      .grid-2,
+      .grid-3,
+      .grid-4 {
+        grid-template-columns: 1fr !important;
+      }
+    }
+
+    @media(max-width: 600px) {
+      .section {
+        padding: 48px 16px;
+      }
+
+      .hero {
+        padding: 60px 16px 48px;
+      }
+
+      h1 {
+        font-size: 38px;
+      }
+    }
+
+    .icon-box {
+      width: 52px;
+      height: 52px;
+      border-radius: 14px;
+      background: rgba(240, 112, 32, 0.12);
+      border: 1px solid rgba(240, 112, 32, 0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 16px;
+      font-size: 22px;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 4px 12px;
+      border-radius: 50px;
+      font-size: 12px;
+      font-weight: 700;
+      background: rgba(240, 112, 32, 0.15);
+      color: #f07020;
+      border: 1px solid rgba(240, 112, 32, 0.3);
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+
+    .section-header .tag {
+      margin: 0 auto 16px;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #132647;
+      border-top: 1px solid #2a4a80;
+      padding: 48px 24px 32px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 40px;
+      max-width: 1200px;
+      margin: 0 auto 40px;
+    }
+
+    .footer-copy {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding-top: 32px;
+      border-top: 1px solid #2a4a80;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      font-size: 13px;
+      color: #6a8cb5;
+    }
+
+    @media(max-width: 700px) {
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* STATS */
+    .stat-box {
+      background: #132647;
+      border: 1px solid #2a4a80;
+      border-radius: 16px;
+      padding: 28px;
+      text-align: center;
+    }
+
+    .stat-num {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 52px;
+      font-weight: 900;
+      color: #f07020;
+      line-height: 1;
+    }
+
+    .stat-label {
+      font-size: 14px;
+      color: #a8c0e0;
+      margin-top: 8px;
+    }
+
+    .trust-bar {
+      background: #132647;
+      border-top: 1px solid #2a4a80;
+      border-bottom: 1px solid #2a4a80;
+      padding: 20px 24px;
+    }
+
+    .trust-bar-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 14px;
+      font-weight: 600;
+      color: #a8c0e0;
+    }
+
+    .trust-item .dot {
+      color: #f07020;
+      font-size: 16px;
+    }
+
+    /* CTA BAND */
+    .cta-band {
+      background: linear-gradient(135deg, rgba(240, 112, 32, 0.15), rgba(14, 31, 61, 0.8));
+      border: 1px solid rgba(240, 112, 32, 0.3);
+      border-radius: 20px;
+      padding: 48px 40px;
+      text-align: center;
+      margin: 48px 0;
+    }
+
+    /* TESTIMONIALS */
+    .tm-container {
+      margin: 48px 0;
+    }
+
+    .tm-header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .tm-track {
+      display: flex;
+      gap: 24px;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      padding: 20px 0;
+      margin: 0 -24px;
+      padding-left: 24px;
+      padding-right: 24px;
+      scroll-behavior: smooth;
+    }
+
+    .tm-track::-webkit-scrollbar {
+      display: none;
+    }
+
+    .tm-card {
+      flex: 0 0 380px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 20px;
+      padding: 40px 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    }
+
+    .tm-card:hover {
+      background: rgba(255, 255, 255, 0.06);
+      border-color: rgba(240, 112, 32, 0.3);
+      transform: translateY(-5px);
+    }
+
+    .tm-stars {
+      color: #f07020;
+      font-size: 16px;
+      letter-spacing: 4px;
+    }
+
+    .tm-text {
+      color: #e2e8f0;
+      font-size: 16px;
+      line-height: 1.7;
+      margin: 0;
+      font-family: 'Barlow', sans-serif;
+      font-style: italic;
+      flex-grow: 1;
+    }
+
+    .tm-author {
+      font-weight: 800;
+      color: #fff;
+      font-size: 16px;
+      font-family: 'Barlow Condensed', sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .tm-role {
+      font-size: 13px;
+      color: #a8c0e0;
+      font-family: 'Barlow', sans-serif;
+      margin-top: 4px;
+    }
+
+    @media(max-width: 600px) {
+      .tm-card {
+        flex: 0 0 85vw;
+      }
+    }
+
+    /* FAQ */
+    .faq-item {
+      border: 1px solid #2a4a80;
+      border-radius: 12px;
+      margin-bottom: 8px;
+      overflow: hidden;
+    }
+
+    .faq-q {
+      padding: 18px 20px;
+      cursor: pointer;
+      font-weight: 600;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      line-height: 1.5;
+    }
+
+    .faq-q:hover {
+      background: rgba(240, 112, 32, 0.08);
+    }
+
+    .faq-a {
+      padding: 0 20px 18px;
+      color: #a8c0e0;
+      line-height: 1.7;
+      display: none;
+    }
+
+    .faq-item.open .faq-a {
+      display: block;
+    }
+
+    .faq-item.open .faq-q {
+      color: #f07020;
+    }
+
+    /* FLOATING CTA */
+    .sac-float-cta {
+      position: fixed;
+      bottom: 100px;
+      right: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      z-index: 990;
+    }
+
+    .sac-float-cta a {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      padding: 13px 20px;
+      border-radius: 50px;
+      font-family: 'Barlow', sans-serif;
+      font-weight: 700;
+      font-size: 14px;
+      text-decoration: none;
+      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.25);
+      transition: transform 0.2s, box-shadow 0.2s;
+      white-space: nowrap;
+    }
+
+    .sac-float-cta a:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 22px rgba(0, 0, 0, 0.32);
+    }
+
+    .sac-float-call {
+      background: #e87722;
+      color: #fff !important;
+    }
+
+    .sac-float-wa {
+      background: #25D366;
+      color: #fff !important;
+    }
+
+    @media (max-width: 768px) {
+      .sac-float-cta {
+        display: none !important;
+      }
+    }
+
+    /* MOBILE CALL BAR */
+    .sac-mob-bar {
+      display: none;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 990;
+      background: #0d1a30;
+      border-top: 2px solid #e87722;
+      padding-bottom: env(safe-area-inset-bottom, 0px);
+    }
+
+    .sac-mob-bar a {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 7px;
+      padding: 14px 10px;
+      font-family: 'Barlow', sans-serif;
+      font-weight: 800;
+      font-size: 15px;
+      text-decoration: none;
+      color: #fff !important;
+    }
+
+    .sac-mob-bar .mob-call {
+      background: #e87722;
+    }
+
+    .sac-mob-bar .mob-wa {
+      background: #25D366;
+    }
+
+    .sac-mob-bar a:active {
+      filter: brightness(0.9);
+    }
+
+    @media (min-width: 769px) {
+      .sac-mob-bar {
+        display: none !important;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .sac-mob-bar {
+        display: flex !important;
+      }
+
+      .page {
+        padding-bottom: 80px;
+      }
+    }
+
+    @keyframes shimmer {
+      0% {
+        background-position: 0% center;
+      }
+
+      100% {
+        background-position: 200% center;
+      }
+    }
+  
+      /* ===== HERO KEN BURNS ANIMATION ===== */
+      .hero {
+        position: relative;
+        overflow: hidden;
+        padding: 120px 24px 100px !important;
+        background: #001428 !important;
+        border-bottom: none !important;
+      }
+      .hero-bg {
+        position: absolute;
+        inset: -8%;
+        z-index: 0;
+        animation: kenburns 22s ease-in-out infinite alternate;
+        will-change: transform;
+      }
+      .hero-bg-img {
+        position: absolute;
+        inset: 0;
+        background-size: cover;
+        background-position: center 30%;
+        transition: opacity 4s ease;
+      }
+      .hero-bg-img.primary {
+        background-image: url('/hero-sydney-bridge.png');
+        opacity: 1;
+      }
+      .hero-bg-img.secondary {
+        background-image: url('/hero-sydney-night.png');
+        opacity: 0;
+      }
+      .hero-bg-overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          160deg,
+          rgba(0,10,30,0.78) 0%,
+          rgba(0,20,55,0.65) 50%,
+          rgba(0,10,30,0.72) 100%
+        );
+        z-index: 1;
+      }
+      @keyframes kenburns {
+        0%   { transform: scale(1.00) translate(0%, 0%); }
+        33%  { transform: scale(1.08) translate(-1.5%, 1%); }
+        66%  { transform: scale(1.12) translate(1%, -0.5%); }
+        100% { transform: scale(1.05) translate(-0.5%, 1.5%); }
+      }
+      .hero .container {
+        position: relative;
+        z-index: 2;
+      }
+      /* Ensure text remains crisp over image */
+      .hero h1 { text-shadow: 0 2px 20px rgba(0,0,0,0.5); }
+      .hero .lead { text-shadow: 0 1px 8px rgba(0,0,0,0.4); }
+    </style>
+  <link rel="stylesheet" href="/index.css">
+</head>
+
+<body>
+  <!-- STICKY TOP CTA BAR -->
+  <div id="sticky-cta-bar" style="
+    position:fixed;top:0;left:0;right:0;z-index:99999;
+    background:linear-gradient(90deg,#0a2240 0%,#1a3a6e 100%);
+    display:flex;align-items:center;justify-content:center;gap:16px;
+    padding:10px 20px;box-shadow:0 2px 12px rgba(0,0,0,0.4);
+    font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  ">
+    <span style="color:#f0c040;font-size:13px;font-weight:600;white-space:nowrap;">
+      ⚡ Same-Day C-Bus &amp; Dynalite Repair — Available Today
+    </span>
+    <a href="tel:0422469739" style="
+      background:#f07020;color:#fff;text-decoration:none;
+      padding:7px 18px;border-radius:4px;font-size:13px;font-weight:700;
+      white-space:nowrap;transition:background 0.2s;
+    " onclick="gtag&&gtag('event','click',{event_category:'CTA',event_label:'sticky-call'})">
+      📞 Call George
+    </a>
+    <a href="/book-service" style="
+      background:#fff;color:#0a2240;text-decoration:none;
+      padding:7px 18px;border-radius:4px;font-size:13px;font-weight:700;
+      white-space:nowrap;border:2px solid #fff;
+    " onclick="gtag&&gtag('event','click',{event_category:'CTA',event_label:'sticky-book'})">
+      Book Online →
+    </a>
+    <button onclick="document.getElementById('sticky-cta-bar').style.display='none'" style="
+      background:none;border:none;color:rgba(255,255,255,0.5);
+      cursor:pointer;font-size:18px;line-height:1;margin-left:8px;padding:0;
+    " aria-label="Close">×</button>
+  </div>
+  <style>
+    /* Push body content below sticky bar */
+    body { padding-top: 44px !important; }
+    @media (max-width: 600px) {
+      #sticky-cta-bar { flex-wrap: wrap; gap: 8px; padding: 8px 12px; }
+      #sticky-cta-bar span { font-size: 11px; }
+      #sticky-cta-bar a { font-size: 12px; padding: 6px 12px; }
+      body { padding-top: 72px !important; }
+      nav { top: 72px !important; }
+    }
+  
+/* Blog visual design */
+.blog-post { line-height: 1.8; font-size: 16px; color: #e2e8f0; }
+.blog-post p { margin-bottom: 1.2em; line-height: 1.8; }
+.blog-post h2 { margin-top: 2em; margin-bottom: 0.5em; font-family: 'Barlow Condensed', sans-serif; font-size: clamp(24px, 3vw, 32px); font-weight: 900; color: #fff; line-height: 1.1; padding-bottom: 8px; border-bottom: 2px solid rgba(240,112,32,0.3); }
+.blog-post h3 { font-family: 'Barlow Condensed', sans-serif; font-size: 20px; font-weight: 800; color: #f0f4ff; margin-top: 1.5em; margin-bottom: 0.5em; }
+.blog-post ul, .blog-post ol { margin-bottom: 1.2em; padding-left: 1.5em; }
+.blog-post li { margin-bottom: 0.6em; line-height: 1.7; }
+.blog-post li strong { color: #f0f4ff; }
+.qa-box { background: linear-gradient(135deg, rgba(240,112,32,0.12), rgba(240,112,32,0.04)); border: 1px solid rgba(240,112,32,0.3); border-left: 4px solid #f07020; border-radius: 12px; padding: 28px 32px; margin: 28px 0; }
+.qa-box .qa-label { font-family: 'Barlow Condensed', sans-serif; font-size: 13px; font-weight: 800; color: #f07020; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 8px; display: block; }
+.qa-box p { margin-bottom: 0; color: #c8d8f0; }
+.icon-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 16px; margin: 24px 0; }
+.icon-card { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 14px; padding: 24px; transition: all 0.3s ease; }
+.icon-card:hover { border-color: rgba(240,112,32,0.3); transform: translateY(-2px); background: rgba(255,255,255,0.05); }
+.icon-card .ic-icon { font-size: 28px; margin-bottom: 10px; display: block; }
+.icon-card h4 { font-family: 'Barlow Condensed', sans-serif; font-size: 16px; font-weight: 800; color: #f0f4ff; margin: 0 0 4px 0; }
+.icon-card p { margin: 0; font-size: 14px; color: #a8c0e0; line-height: 1.5; }
+.trust-callout { background: linear-gradient(135deg, rgba(240,112,32,0.08), rgba(14,31,61,0.5)); border: 1px solid rgba(240,112,32,0.25); border-radius: 16px; padding: 28px 32px; margin: 28px 0; display: flex; gap: 16px; align-items: flex-start; flex-wrap: wrap; }
+.trust-callout .tc-icon { font-size: 40px; flex-shrink: 0; }
+.trust-callout .tc-content { flex: 1; min-width: 200px; }
+.trust-callout h4 { font-family: 'Barlow Condensed', sans-serif; font-size: 18px; font-weight: 800; color: #f07020; margin: 0 0 6px 0; }
+.trust-callout p { margin: 0; font-size: 14px; color: #a8c0e0; line-height: 1.6; }
+.tm-inline { background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.06); border-left: 3px solid #f07020; border-radius: 10px; padding: 20px 24px; margin: 24px 0; font-style: italic; color: #c8d8f0; font-size: 15px; line-height: 1.6; }
+.img-inset { border-radius: 12px; overflow: hidden; margin: 28px 0; width: 100%; aspect-ratio: 16/9; background-size: cover; background-position: center; }
+.blog-post .faq-item { border: 1px solid #2a4a80; border-radius: 12px; margin-bottom: 8px; overflow: hidden; }
+.blog-post .faq-q { padding: 16px 20px; cursor: pointer; font-weight: 600; display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+.blog-post .faq-q:hover { background: rgba(240,112,32,0.08); }
+.blog-post .faq-a { padding: 0 20px 16px; color: #a8c0e0; line-height: 1.7; display: none; }
+.blog-post .faq-item.open .faq-a { display: block; }
+.blog-post .faq-item.open .faq-q { color: #f07020; }
+@media(max-width: 700px) { .icon-grid { grid-template-columns: 1fr; } }
+
+</style>
+  <div class="ambience-glow glow-blue"></div>
+  <div class="ambience-glow glow-orange"></div>
+
+  <!-- PROMO BANNER -->
+  <div id="promo-banner">
+    <span class="pb-text" id="pb-text"></span>
+    <a class="pb-btn" href="tel:+61422469739" id="pb-btn">📞 Call Now</a>
+  </div>
+
+  <!-- NAVIGATION -->
+  <nav>
+    <a class="logo" href="/">
+      <span class="logo-main">Sydney Automation Co.</span>
+      <span class="logo-line"></span>
+      <span class="logo-sub">Lighting Control Specialists</span>
+    </a>
+    <div class="nav-phone-wrap">
+      <span class="nav-phone-label">Direct Service Line</span>
+      <a class="nav-phone" href="tel:+61422469739">0422 469 739</a>
+    </div>
+    <div class="nav-links">
+      <div class="nav-dd" id="dd-services">
+        <button class="nav-dd-trigger">Services</button>
+        <div class="nav-dd-panel mega">
+          <div class="mega-col">
+            <span class="dd-label">C-Bus</span>
+            <a href="/c-bus-programmer-sydney">C-Bus Programming</a>
+            <a href="/cbus-repair-sydney">C-Bus Repairs Sydney</a>
+            <a href="/cbus-upgrade-sydney">C-Bus Upgrades</a>
+            <a href="/cbus-repair-sydney">C-Bus Fault Finding</a>
+            <a href="/cbus-specialist-sydney">C-Bus Specialist</a>
+            <a href="/c-bus-apple-homekit-sydney">C-Bus & Apple HomeKit</a>
+            <div class="dd-divider"></div>
+            <span class="dd-label">Dynalite</span>
+            <a href="/dynalite-programmer-sydney">Dynalite Programming</a>
+            <a href="/dynalite-repair-sydney">Dynalite Repairs</a>
+            <a href="/dynalite-repair-sydney">Dynalite Fault Finding</a>
+            <div class="dd-divider"></div>
+            <span class="dd-label">Lighting Control</span>
+            <a href="/lighting-control-service-sydney">Lighting Control Service</a>
+            <a href="/lighting-control-repair-sydney">Lighting Control Repair</a>
+            <a href="/led-upgrade-carpark-lighting-sydney">LED Upgrades & Car Parks</a>
+            <a href="/carpark-lighting-upgrades-sydney">Car Park Upgrades</a>
+            <a href="/building-lighting-upgrades-sydney">Building Lighting Upgrades</a>
+            <div class="dd-divider"></div>
+            <a href="/services-hub" style="color:#f07020;">★ Service Directory</a>
+          </div>
+          <div class="mega-col">
+            <span class="dd-label">Emergency & Compliance</span>
+            <a href="/emergency-lighting-compliance-afss-sydney">Emergency Lighting AFSS</a>
+            <a href="/rapix-emergency-lighting-sydney">RAPIX Emergency Lighting</a>
+            <a href="/emergency-lighting-hotels-hospitality-sydney">Hotels & Hospitality</a>
+            <a href="/emergency-lighting-train-stations-infrastructure-sydney">Train Stations & Infrastructure</a>
+            <a href="/emergency-repair-sydney">Emergency Repair</a>
+            <div class="dd-divider"></div>
+            <span class="dd-label">DALI & RAPIX</span>
+            <a href="/dali-lighting-repair">DALI Lighting Repair</a>
+            <a href="/dali2-compliance-nsw-commercial">DALI-2 Compliance NSW</a>
+            <a href="/rapix-lighting-control">RAPIX Lighting Control</a>
+            <a href="/what-is-rapix-sydney-buildings">What is RAPIX?</a>
+            <div class="dd-divider"></div>
+            <span class="dd-label">Maintenance & Contracts</span>
+            <a href="/lighting-control-maintenance-sydney">Lighting Control Maintenance</a>
+            <a href="/cbus-maintenance-sydney">C-Bus Maintenance</a>
+            <a href="/dynalite-maintenance-sydney">Dynalite Maintenance</a>
+            <a href="/lighting-control-service-contract-sydney">Service Contracts</a>
+            <a href="/building-automation-maintenance-sydney">Building Automation</a>
+            <a href="/facilities-lighting-maintenance-sydney">Facilities Maintenance</a>
+            <a href="/products">Products</a>
+            <a href="/services">All Services →</a>
+          </div>
+        </div>
+      </div>
+      <div class="nav-dd" id="dd-areas">
+        <button class="nav-dd-trigger">Areas</button>
+        <div class="nav-dd-panel">
+          <span class="dd-label">Sydney Regions</span>
+          <a href="/c-bus-programmer-sutherland-shire">Sutherland Shire</a>
+          <a href="/c-bus-programmer-north-shore">North Shore</a>
+          <a href="/c-bus-programmer-eastern-suburbs">Eastern Suburbs</a>
+          <a href="/c-bus-programmer-inner-west">Inner West</a>
+          <a href="/c-bus-programmer-northern-beaches">Northern Beaches</a>
+          <a href="/c-bus-programmer-hills-district">Hills District</a>
+          <a href="/c-bus-programmer-parramatta">Parramatta</a>
+          <a href="/c-bus-programmer-st-george">St George</a>
+          <a href="/c-bus-programmer-sydney-cbd">Sydney CBD</a>
+          <div class="dd-divider"></div>
+          <a href="/shire">Sutherland Shire Hub</a>
+          <a href="/locations">All Service Areas →</a>
+        </div>
+      </div>
+      <div class="nav-dd" id="dd-clients">
+        <button class="nav-dd-trigger">Clients</button>
+        <div class="nav-dd-panel right">
+          <a href="/strata-managers-lighting-control-sydney">Strata Managers</a>
+          <a href="/building-manager-lighting-support-sydney">Building Managers</a>
+          <a href="/facility-managers-cbus-dynalite-dali-guide">Facility Managers</a>
+          <a href="/real-estate-cbus-audit-sydney">Real Estate Agents</a>
+          <a href="/strata-lighting-compliance-sydney">Strata Compliance</a>
+          <a href="/strata">Strata & FM Hub</a>
+        </div>
+      </div>
+      <div class="nav-dd" id="dd-resources">
+        <button class="nav-dd-trigger">Resources</button>
+        <div class="nav-dd-panel right">
+          <span class="dd-label">Guides & Blog</span>
+          <a href="/tech-library">Tech Library</a>
+          <a href="/blog">Blog</a>
+          <a href="/guides">Guides</a>
+          <a href="/cbus-vs-dynalite">C-Bus vs Dynalite</a>
+          <a href="/dynalite-vs-cbus-sydney">Dynalite vs C-Bus</a>
+          <a href="/how-to-choose-cbus-specialist-sydney">How to Choose a C-Bus Specialist</a>
+          <a href="/cbus-dynalite-upgrade-guide">C-Bus & Dynalite Upgrade Guide</a>
+          <a href="/blog-dali-2-compliance-guide-sydney-building-managers">DALI-2 Compliance Guide</a>
+          <a href="/blog-strata-lighting-energy-savings-sydney">Strata Energy Savings</a>
+          <div class="dd-divider"></div>
+          <span class="dd-label">Company</span>
+          <a href="/projects">Projects</a>
+          <a href="/about">About</a>
+          <a href="/4-years-building-facilities-management-jll-pbmg">George's Background</a>
+        </div>
+      </div>
+      <a href="/products">Products</a>
+      <a href="/contact">Contact</a>
+      <a class="nav-cta" href="tel:0422469739">📞 Call Now</a>
+    </div>
+    <button aria-label="Menu" class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+    
+    
+<div class="hero" style="padding-top:120px; padding-bottom:60px;">
+    <div class="container text-center">
+        <div class="tag">Guide</div>
+        <h1>C-Bus Relay Stuck Closed? Diagnosis & Repair</h1>
+        <p class="subtitle" style="max-width:800px; margin:0 auto;">C-Bus relay stuck on causes and repair Sydney</p>
+    </div>
+</div>
+
+<div class="section">
+    <div class="container-sm blog-post">
+<p>C-Bus lighting control systems are the backbone of automated building management across Sydney, but even the most reliable systems develop issues over time. When dealing with C-Bus Relay Stuck Closed? Diagnosis & Repair, understanding the underlying causes can save you time and money. This guide covers everything you need to know about diagnosing and resolving this specific C-Bus issue.</p>
+
+<h2>Common Symptoms and Root Causes</h2><p>The C-Bus network relies on precise voltage levels and proper termination to function reliably. When symptoms related to C-Bus Relay Stuck Closed? Diagnosis & Repair appear, the cause is often traceable to a specific component or condition. Age-related degradation is the most common factor — electrolytic capacitors in power supplies and dimmer modules typically last 8-12 years before failing. Environmental factors including heat, humidity, and salt spray accelerate this process, particularly in coastal Sydney suburbs like Bondi, Manly, and Cronulla.</p>
+
+<h2>Prevention: Extending the Life of Your C-Bus System</h2><p>Regular maintenance significantly extends the operational life of C-Bus installations. Key preventive measures include annual voltage checks at all power supplies (replace any unit reading below 30V DC), six-monthly visual inspection of dimmer modules for capacitor bulging or discolouration, ensuring adequate ventilation around all control hardware (C-Bus dimmers generate heat that must be dissipated), and keeping firmware updated through C-Bus Toolkit. Properties in coastal areas like the Northern Beaches, Sutherland Shire, and Eastern Suburbs benefit from additional corrosion inspections every six months.</p>
+
+<h2>Why Sydney Property Owners Choose Sydney Automation Co.</h2><p>With over fifteen years of hands-on experience across Sydney's commercial and residential properties, our team brings diagnostic precision that general electricians cannot match. Our technicians hold current certifications from Clipsal (C-Bus), Signify (Dynalite), and multiple DALI-2 control brands. We use the same manufacturer-level software tools — C-Bus Toolkit 2.10+, PICED, Dynalite System Builder 4.x, and Designer — that the manufacturers themselves use. We offer same-day response for urgent faults, fixed-price diagnostics, and a full parts and labour warranty on all repairs. <strong>Call <a href="tel:+61422469739" style="color:#f07020;text-decoration:none;">0422 469 739</a> for expert assistance across Greater Sydney.</strong></p>
+
+<div class="tm-inline">"George explained exactly what was wrong and gave me options. No pressure, just honest advice. The pricing was fair." — <strong>Sarah M.</strong></div>
+
+<h2>Frequently Asked Questions</h2>
+<div style="margin:16px 0;">
+<div class="faq-item"><div class="faq-q">Do you cover all Sydney suburbs? <span>+</span></div><div class="faq-a">Yes. <strong>Sydney Automation Co.</strong> services all of Greater Sydney from the Northern Beaches to Campbelltown and from Parramatta to the Eastern Suburbs. Same-day response is available for urgent faults across most areas.</div></div>
+<div class="faq-item"><div class="faq-q">Can I repair this myself? <span>+</span></div><div class="faq-a">Basic troubleshooting like checking circuit breakers and restarting the system is safe. However, work on C-Bus control modules, power supplies, and the communications bus should only be performed by a qualified technician. Incorrect handling can cause expensive damage to multiple devices across the network.</div></div>
+<div class="faq-item"><div class="faq-q">What parts do you stock? <span>+</span></div><div class="faq-a"><strong>Sydney Automation Co.</strong> carries genuine Clipsal C-Bus parts including 5500PS power supplies, L5504D1A/L5504D2U/L5504D2A dimmers, L5508D1A 8-channel dimmers, L5512RVF 12-channel relay/var load units, L5504RVF and L5508RVF relay/var load dimmers, Saturn and Neo keypads, 5500CN network interfaces, and DALI gateways.</div></div>
+<div class="faq-item"><div class="faq-q">How long does a typical repair take? <span>+</span></div><div class="faq-a">Most common C-Bus faults are diagnosed and repaired within a single visit lasting 1-3 hours. Complex cases requiring parts sourcing or full system reprogramming may need a follow-up visit within 1-2 business days.</div></div>
+</div>
+
+<h2>Common Part Numbers &amp; Technical References</h2>
+<div style="overflow-x:auto;">
+<table class="comp-table">
+<thead><tr><th style="width:140px;">Part/Model</th><th>Description</th></tr></thead>
+<tbody>
+<tr><td><strong>5500PS</strong></td><td style="font-size:13px;">5500PS C-Bus DIN Rail Power Supply – 220-240V AC input, 36V DC output, 350mA, 3.75kV RMS isolation, powers up to 15 C-Bus units (Neo/Saturn), DIN rail 4 modules wide.</td></tr>
+<tr><td><strong>L5504D1A</strong></td><td style="font-size:13px;">L5504D1A C-Bus 4-Channel Leading Edge Dimmer – 1A per channel, 220-240V AC, DIN rail mount, with 200mA inbuilt C-Bus power supply, suitable for incandescent and dimmable LED loads.</td></tr>
+<tr><td><strong>L5504D2U</strong></td><td style="font-size:13px;">L5504D2U C-Bus 4-Channel Universal Dimmer – 2.5A per channel, auto-detecting leading or trailing edge phase control, DIN rail 12M wide, with 200mA inbuilt C-Bus power supply.</td></tr>
+<tr><td><strong>L5504D2A</strong></td><td style="font-size:13px;">L5504D2A C-Bus 4-Channel Leading Edge Dimmer – 2A per channel, 220-240V AC, DIN rail mount, 200mA inbuilt C-Bus power supply, suitable for incandescent, LV and fan motor loads.</td></tr>
+<tr><td><strong>L5508D1A</strong></td><td style="font-size:13px;">L5508D1A C-Bus 8-Channel Leading Edge Dimmer – 1A per channel, 220-240V AC, DIN rail 12M wide, with 200mA inbuilt C-Bus power supply and C-Bus clock generation.</td></tr>
+</tbody>
+</table>
+</div>
+<p style="font-size:13px;color:#6a8cb5;">Reference: <strong>Sydney Automation Co.</strong> — accredited C-Bus (Clipsal), Dynalite (Signify/Philips), DALI-2 &amp; RAPIX specialists. Call <a href="tel:+61422469739" style="color:#f07020;text-decoration:none;">0422 469 739</a> for parts and service.</p>
+
+<div class="trust-callout">
+  <div class="tc-icon">🔗</div>
+  <div class="tc-content">
+    <h4>Related Services from Sydney Automation Co.</h4>
+    <p style="margin-bottom:8px;"><a href="/cbus-repair" style="color:#f07020;text-decoration:none;font-weight:500;">C-Bus Repairs Sydney</a> · <a href="/cbus-programming" style="color:#f07020;text-decoration:none;font-weight:500;">C-Bus Programming</a> · <a href="/cbus-upgrade" style="color:#f07020;text-decoration:none;font-weight:500;">C-Bus Upgrades</a> · <a href="/cbus-specialist" style="color:#f07020;text-decoration:none;font-weight:500;">C-Bus Specialist</a> · <a href="/cbus-maintenance" style="color:#f07020;text-decoration:none;font-weight:500;">C-Bus Maintenance</a></p>
+    <p style="margin:0;font-size:13px;color:#6a8cb5;"><strong>📞 0422 469 739</strong> — Same-day across Greater Sydney. C-Bus · Dynalite · DALI-2 · RAPIX · Emergency Lighting.</p>
+  </div>
+</div>
+
+<p>At <strong>Sydney Automation Co.</strong>, we carry genuine Clipsal C-Bus parts including 5500PS, L5504D1A/L5504D2U/L5504D2A dimmers, L5508D1A, L5512RVF, L5504RVF, L5508RVF relay/var load units, Saturn and Neo keypads. All repairs by manufacturer-trained technicians using <strong>C-Bus Toolkit 2.10+</strong> and <strong>PICED</strong>. <strong>Same-day Sydney — call <a href="tel:+61422469739" style="color:#f07020;text-decoration:none;">0422 469 739</a>.</strong></p>
+<div class="blog-email-cta" style="margin:40px 0;padding:30px;background:linear-gradient(135deg,rgba(240,112,32,0.1),rgba(14,31,61,0.4));border-radius:12px;border:1px solid rgba(240,112,32,0.3);text-align:center;">
+  <h3 style="color:#fff;margin:0 0 8px 0;font-size:18px;">Free Guide: C-Bus Troubleshooting & Fault Codes</h3>
+  <p style="color:#a8c0e0;font-size:14px;margin:0 0 18px 0;">Download our comprehensive reference guide covering C-Bus error codes, 5500/5508 diagnostic procedures, network burden testing, and power supply troubleshooting.</p>
+  <form action="/subscribe" method="POST" style="display:flex;gap:10px;max-width:450px;margin:0 auto;flex-wrap:wrap;justify-content:center;">
+    <input type="email" name="email" placeholder="your@email.com" required style="flex:1;min-width:200px;padding:12px 16px;border-radius:6px;border:1px solid rgba(255,255,255,0.2);background:rgba(255,255,255,0.05);color:#fff;font-size:14px;">
+    <button type="submit" style="padding:12px 24px;background:#f07020;color:#fff;border:none;border-radius:6px;font-weight:700;cursor:pointer;font-size:14px;">📥 Download Free C-Bus Guide</button>
+  </form>
+  <p style="color:#5a7a9a;font-size:11px;margin:12px 0 0 0;">Free download. No spam. Serving Sydney since 2010.</p>
+</div>
+</div>
+<footer>
+    <div class="footer-grid">
+      <div>
+        <h3>Sydney Automation Co.</h3>
+        <p class="dim" style="margin-top: 8px; line-height: 1.6;">Accredited C-Bus Programmer and Dynalite System
+          Designer based in Menai, Sydney. Same-day fault finding, repairs and commissioning across Greater Sydney.</p>
+        <p style="margin-top: 12px; font-size: 14px;"><strong>📞 0422 469 739</strong></p>
+        <p style="margin-top: 4px; font-size: 14px;"><strong>📧 service@sydneyautomationco.com.au</strong></p>
+      </div>
+      <div>
+        <h4 style="margin-bottom: 12px;">Quick Links</h4>
+        <ul style="list-style: none; line-height: 2;">
+          <li><a href="/c-bus-programmer-sydney">C-Bus Programming</a></li>
+          <li><a href="/dynalite-programmer-sydney">Dynalite Services</a></li>
+          <li><a href="/emergency-lighting-compliance-afss-sydney">Emergency Lighting</a></li>
+          <li><a href="/projects">Projects</a></li>
+          <li><a href="/tech-library">Tech Library</a></li>
+          <li><a href="/blog">Blog</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 style="margin-bottom: 12px;">Service Areas</h4>
+        <ul style="list-style: none; line-height: 2;">
+          <li><a href="/c-bus-programmer-sutherland-shire">Sutherland Shire</a></li>
+          <li><a href="/cbus-dynalite-planning-checklist-new-builds-menai">Menai</a></li>
+          <li><a href="/c-bus-programmer-north-shore">North Shore</a></li>
+          <li><a href="/c-bus-programmer-sydney-cbd">Sydney CBD</a></li>
+          <li><a href="/locations">All Areas</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-copy">
+      <div>&copy; 2026 Sydney Automation Co. All rights reserved.</div>
+      <div><a href="/privacy-policy">Privacy Policy</a></div>
+    </div>
+  
+<div <div class="topic-cta" style="margin:32px 0;padding:28px;background:rgba(240,112,32,0.06);border:1px solid rgba(240,112,32,0.2);border-radius:12px;text-align:center;">
+  <h3 style="color:#fff;margin:0 0 8px;font-family:'Barlow Condensed',sans-serif;font-size:20px;">Need C-Bus Repairs?</h3>
+  <p style="color:#a8c0e0;font-size:14px;margin:0 0 16px;">Our accredited C-Bus programmers diagnose and repair all C-Bus hardware — 5500PC, 5508RVF, 5100PS, Saturn, Neo, and legacy models. Same-day service across Sydney.</p>
+  <a href="tel:+61422469739" style="display:inline-block;padding:14px 32px;background:#f07020;color:#fff;border-radius:50px;text-decoration:none;font-weight:800;font-size:15px;">Call 0422 469 739</a>
+</div>
+
+<div class="sac-related-reading" style="margin-top:40px;padding:25px;background:rgba(240,112,32,0.05);border-radius:8px;border-left:4px solid #f07020;">
+  <h3 style="color:#fff;margin:0 0 15px 0;font-size:17px;font-family:'Barlow Condensed',sans-serif;letter-spacing:0.5px;">Related Reading</h3>
+  <ul style="list-style:none;padding:0;margin:0;">
+<li><a href="/strata-buildings-and-apartments-lighting-automation-sydney.html" style="color:#f07020;text-decoration:none;font-weight:500;">Strata Buildings & Apartments</a></li>
+<li><a href="/blog-remote-ip-diagnostics-commercial.html" style="color:#f07020;text-decoration:none;font-weight:500;">Remote IP Diagnostics</a></li>
+<li><a href="/blog-ai-cbus-fault-finding-sydney.html" style="color:#f07020;text-decoration:none;font-weight:500;">AI-Powered C-Bus Fault Finding</a></li>
+<li><a href="/blog-cbus-dynalite-obsolete-hardware-part-replacement.html" style="color:#f07020;text-decoration:none;font-weight:500;">Obsolete C-Bus & Dynalite Hardware</a></li>
+<li><a href="/blog-electricians-vs-smart-home-relays.html" style="color:#f07020;text-decoration:none;font-weight:500;">Electricians vs Smart Home Relay Specialists</a></li>
+  </ul>
+</div>
+
+</footer>
+
+  <!-- MOBILE CALL BAR -->
+  <div class="sac-mob-bar">
+    <a href="tel:0422469739">📞 TAP TO CALL — 0422 469 739</a>
+  </div>
+
+  <!-- FLOATING CTA -->
+  <div class="sac-float-cta">
+    <a class="sac-float-call" href="tel:0422469739">📞 Call</a>
+  </div>
+
+  <!-- SCRIPTS -->
+  <script>
+    // Navigation dropdown
+    document.querySelectorAll('.nav-dd').forEach(function (dd) {
+      var trigger = dd.querySelector('.nav-dd-trigger');
+      if (!trigger) return;
+      trigger.addEventListener('click', function (e) {
+        e.stopPropagation();
+        var isOpen = dd.classList.contains('open');
+        document.querySelectorAll('.nav-dd.open').forEach(function (d) { d.classList.remove('open'); });
+        if (!isOpen) { dd.classList.add('open'); }
+      });
+    });
+    document.addEventListener('click', function () {
+      document.querySelectorAll('.nav-dd.open').forEach(function (d) { d.classList.remove('open'); });
+    });
+
+    // Mobile hamburger
+    var ham = document.getElementById('hamburger');
+    var mob = document.getElementById('mobNav');
+    if (ham && mob) {
+      ham.addEventListener('click', function (e) {
+        e.stopPropagation();
+        var open = mob.classList.toggle('open');
+        ham.classList.toggle('open', open);
+      });
+      mob.querySelectorAll('a').forEach(function (a) {
+        a.addEventListener('click', function () {
+          mob.classList.remove('open');
+          ham.classList.remove('open');
+        });
+      });
+    }
+    document.addEventListener('click', function (e) {
+      if (mob && !mob.contains(e.target) && ham && !ham.contains(e.target)) {
+        mob.classList.remove('open');
+        if (ham) ham.classList.remove('open');
+      }
+    });
+
+    // Promo banner rotation
+    var msgs = [
+      { t: "⚡ Fault Finding Slots Available This Week", btn: "Book Now", href: "/contact" },
+      { t: "Need a C-Bus or Dynalite Technician?", btn: "📞 Call Now", href: "tel:0422469739" },
+      { t: "Is Your C-Bus Not Working?", btn: "📞 Call Now", href: "tel:0422469739" },
+      { t: "Lights Flickering or Not Responding?", btn: "Call Now", href: "tel:0422469739" },
+      { t: "Same-Day Lighting Control Fault Finding", btn: "📞 Call Now", href: "tel:0422469739" },
+      { t: "⭐ 5.0 Google Rating — 14 Reviews", btn: "See Reviews", href: "https://g.page/r/CQK7ChOgqNZ2EBM/review" },
+      { t: "Strata & Commercial Lighting Specialists", btn: "📞 Call Now", href: "tel:0422469739" },
+      { t: "Maintenance & Service Contracts Available", btn: "Find Out More", href: "/lighting-control-service-contract-sydney" },
+      { t: "Emergency Lighting Repairs & Compliance", btn: "Book Service", href: "/emergency-lighting-compliance-afss-sydney" },
+      { t: "System Upgrades & Retrofits — Sydney Wide", btn: "📞 Call Now", href: "tel:0422469739" },
+      { t: "Dynalite & C-Bus Repairs Across Sydney", btn: "📞 Call Now", href: "tel:0422469739" }
+    ];
+    var txt = document.getElementById('pb-text');
+    var btn = document.getElementById('pb-btn');
+    if (txt && btn) {
+      var i = Math.floor(Math.random() * msgs.length);
+      function show(m) {
+        txt.style.opacity = 0;
+        setTimeout(function () {
+          txt.textContent = m.t;
+          btn.textContent = m.btn;
+          btn.href = m.href;
+          txt.style.opacity = 1;
+        }, 400);
+      }
+      show(msgs[i]);
+      setInterval(function () {
+        i = (i + 1) % msgs.length;
+        show(msgs[i]);
+      }, 5000);
+    }
+
+    // FAQ accordion
+    document.querySelectorAll('.faq-q').forEach(function (q) {
+      q.addEventListener('click', function () {
+        var item = this.parentElement;
+        var a = this.nextElementSibling;
+        var span = this.querySelector('span:last-child');
+        if (item.classList.contains('open')) {
+          item.classList.remove('open');
+          span.textContent = '+';
+        } else {
+          document.querySelectorAll('.faq-item.open').forEach(function (x) { x.classList.remove('open'); x.querySelector('.faq-q span:last-child').textContent = '+'; });
+          item.classList.add('open');
+          span.textContent = '−';
+        }
+      });
+    });
+
+    // Testimonial Carousel — true infinite marquee via cloning
+    (function () {
+      const track = document.getElementById('tm-track');
+      if (!track) return;
+
+      // Clone all cards and append so we always have content to scroll into
+      const origCards = Array.from(track.children);
+      origCards.forEach(function(card) {
+        const clone = card.cloneNode(true);
+        clone.setAttribute('aria-hidden', 'true');
+        track.appendChild(clone);
+      });
+
+      let isPaused = false;
+      let scrollSpeed = 0.8;
+      // Start at 0 — original set starts here, clones follow
+      track.scrollLeft = 0;
+
+      function animateScroll() {
+        if (!isPaused) {
+          track.scrollLeft += scrollSpeed;
+          // When we've scrolled past the original set, silently jump back to start
+          const halfWidth = track.scrollWidth / 2;
+          if (track.scrollLeft >= halfWidth) {
+            track.scrollLeft -= halfWidth;
+          }
+        }
+        requestAnimationFrame(animateScroll);
+      }
+
+      requestAnimationFrame(animateScroll);
+
+      track.addEventListener('mouseenter', function() { isPaused = true; });
+      track.addEventListener('mouseleave', function() { isPaused = false; });
+      track.addEventListener('touchstart', function() { isPaused = true; }, { passive: true });
+      track.addEventListener('touchend', function() { isPaused = false; });
+
+      window.tmSlide = function(d) {
+        const card = track.querySelector('.tm-card');
+        if (!card) return;
+        isPaused = true;
+        track.scrollLeft += d * (card.offsetWidth + 24);
+        setTimeout(function() { isPaused = false; }, 800);
+      };
+    })();
+  </script>
+
+
+
+
+  <script src="/chatbot.js"></script>
+
+    <!-- Ken Burns crossfade between hero images -->
+    <script>
+      (function() {
+        var primary = document.getElementById('hero-primary');
+        var secondary = document.getElementById('hero-secondary');
+        if (!primary || !secondary) return;
+        var showSecondary = false;
+        setInterval(function() {
+          showSecondary = !showSecondary;
+          primary.style.opacity = showSecondary ? '0' : '1';
+          secondary.style.opacity = showSecondary ? '1' : '0';
+        }, 10000);
+      })();
+    </script>
+</body>
+
+
+</html>
+
