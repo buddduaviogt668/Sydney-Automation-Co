@@ -54,13 +54,6 @@
   </url>
 
   <url>
-    <loc>https://sydneyautomationco.com.au/aged-care-and-healthcare-lighting-automation-sydney</loc>
-    <lastmod>2026-07-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
     <loc>https://sydneyautomationco.com.au/ai-driven-smart-lighting-energy-management-sydney</loc>
     <lastmod>2026-07-05</lastmod>
     <changefreq>monthly</changefreq>
@@ -824,28 +817,7 @@
   </url>
 
   <url>
-    <loc>https://sydneyautomationco.com.au/cbus-dynalite-programming</loc>
-    <lastmod>2026-07-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
     <loc>https://sydneyautomationco.com.au/childcare-centres-lighting-automation-sydney</loc>
-    <lastmod>2026-07-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://sydneyautomationco.com.au/commercial-lighting-control</loc>
-    <lastmod>2026-07-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://sydneyautomationco.com.au/commercial-strata-lighting-upgrades-nsw</loc>
     <lastmod>2026-07-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -909,13 +881,6 @@
 
   <url>
     <loc>https://sydneyautomationco.com.au/double-bay-lighting-control</loc>
-    <lastmod>2026-07-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://sydneyautomationco.com.au/educational-facilities-lighting-automation-sydney</loc>
     <lastmod>2026-07-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -992,20 +957,6 @@
   </url>
 
   <url>
-    <loc>https://sydneyautomationco.com.au/heritage-and-church-lighting-automation-sydney</loc>
-    <lastmod>2026-07-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://sydneyautomationco.com.au/heritage-lighting-control</loc>
-    <lastmod>2026-07-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
     <loc>https://sydneyautomationco.com.au/hospitality-automation-sydney</loc>
     <lastmod>2026-07-05</lastmod>
     <changefreq>monthly</changefreq>
@@ -1014,13 +965,6 @@
 
   <url>
     <loc>https://sydneyautomationco.com.au/hospitality-facility-management-lighting-sydney</loc>
-    <lastmod>2026-07-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://sydneyautomationco.com.au/hospitality-lighting-control</loc>
     <lastmod>2026-07-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -1052,13 +996,6 @@
     <lastmod>2026-07-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-  </url>
-
-  <url>
-    <loc>https://sydneyautomationco.com.au/industrial-lighting-control</loc>
-    <lastmod>2026-07-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
   </url>
 
   <url>
@@ -1237,13 +1174,6 @@
   </url>
 
   <url>
-    <loc>https://sydneyautomationco.com.au/privacy</loc>
-    <lastmod>2026-07-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
     <loc>https://sydneyautomationco.com.au/privacy-policy</loc>
     <lastmod>2026-07-05</lastmod>
     <changefreq>monthly</changefreq>
@@ -1259,20 +1189,6 @@
 
   <url>
     <loc>https://sydneyautomationco.com.au/projects</loc>
-    <lastmod>2026-07-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://sydneyautomationco.com.au/residential-lighting-control</loc>
-    <lastmod>2026-07-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://sydneyautomationco.com.au/retail-lighting-control</loc>
     <lastmod>2026-07-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -1307,13 +1223,6 @@
   </url>
 
   <url>
-    <loc>https://sydneyautomationco.com.au/schools-lighting-control</loc>
-    <lastmod>2026-07-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
     <loc>https://sydneyautomationco.com.au/service-area-heatmap</loc>
     <lastmod>2026-07-05</lastmod>
     <changefreq>weekly</changefreq>
@@ -1338,6 +1247,13 @@
     <loc>https://sydneyautomationco.com.au/shire</loc>
     <lastmod>2026-07-05</lastmod>
     <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://sydneyautomationco.com.au/sitemap</loc>
+    <lastmod>2026-07-05</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
 
@@ -1391,13 +1307,6 @@
   </url>
 
   <url>
-    <loc>https://sydneyautomationco.com.au/strata-lighting-control</loc>
-    <lastmod>2026-07-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
     <loc>https://sydneyautomationco.com.au/strata-lighting-maintenance-nsw</loc>
     <lastmod>2026-07-05</lastmod>
     <changefreq>monthly</changefreq>
@@ -1413,13 +1322,6 @@
 
   <url>
     <loc>https://sydneyautomationco.com.au/strata-managers-lighting-control-sydney</loc>
-    <lastmod>2026-07-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://sydneyautomationco.com.au/substation-and-plant-room-sydney-lighting-automation</loc>
     <lastmod>2026-07-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -1490,13 +1392,6 @@
 
   <url>
     <loc>https://sydneyautomationco.com.au/universities-and-tafes-lighting-automation-sydney</loc>
-    <lastmod>2026-07-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://sydneyautomationco.com.au/university-and-tafe-lighting-automation</loc>
     <lastmod>2026-07-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
