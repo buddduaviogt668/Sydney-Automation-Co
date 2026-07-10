@@ -313,13 +313,15 @@ a:hover .suburb-link-card .s-arrow{color:#f07020}
     " aria-label="Close">×</button>
   </div>
   <style>
-    /* Push body content below sticky bar */
-    body { padding-top: 44px !important; }
+    /* Push body content below sticky CTA bar + nav */
+    body { padding-top: 110px !important; }
+    .page { padding-top: 0 !important; }
+    nav { top: 44px !important; }
     @media (max-width: 600px) {
       #sticky-cta-bar { flex-wrap: wrap; gap: 8px; padding: 8px 12px; }
       #sticky-cta-bar span { font-size: 11px; }
       #sticky-cta-bar a { font-size: 12px; padding: 6px 12px; }
-      body { padding-top: 72px !important; }
+      body { padding-top: 140px !important; }
       nav { top: 72px !important; }
     }
   </style>
