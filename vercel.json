@@ -3,81 +3,6 @@
   "trailingSlash": false,
   "redirects": [
     {
-      "source": "/c-bus-programmer-sutherland-shire",
-      "destination": "/c-bus-programmer-sydney",
-      "permanent": true
-    },
-    {
-      "source": "/c-bus-programmer-eastern-suburbs",
-      "destination": "/c-bus-programmer-sydney",
-      "permanent": true
-    },
-    {
-      "source": "/c-bus-programmer-north-shore",
-      "destination": "/c-bus-programmer-sydney",
-      "permanent": true
-    },
-    {
-      "source": "/c-bus-programmer-northern-beaches",
-      "destination": "/c-bus-programmer-sydney",
-      "permanent": true
-    },
-    {
-      "source": "/c-bus-programmer-inner-west",
-      "destination": "/c-bus-programmer-sydney",
-      "permanent": true
-    },
-    {
-      "source": "/c-bus-programmer-hills-district",
-      "destination": "/c-bus-programmer-sydney",
-      "permanent": true
-    },
-    {
-      "source": "/c-bus-programmer-st-george",
-      "destination": "/c-bus-programmer-sydney",
-      "permanent": true
-    },
-    {
-      "source": "/c-bus-programmer-parramatta",
-      "destination": "/c-bus-programmer-sydney",
-      "permanent": true
-    },
-    {
-      "source": "/c-bus-programmer-sydney-cbd",
-      "destination": "/c-bus-programmer-sydney",
-      "permanent": true
-    },
-    {
-      "source": "/facility-managers-cbus-dynalite-dali-guide",
-      "destination": "/building-managers-lighting-control-nsw",
-      "permanent": true
-    },
-    {
-      "source": "/cbus-maintenance-sydney",
-      "destination": "/services",
-      "permanent": true
-    },
-    {
-      "source": "/dynalite-maintenance-sydney",
-      "destination": "/services",
-      "permanent": true
-    },
-    {
-      "source": "/rapix-emergency-lighting-sydney",
-      "destination": "/rapix-lighting-control",
-      "permanent": true
-    },
-    {
-      "source": "/emergency-lighting-train-stations-infrastructure-sydney",
-      "destination": "/emergency-lighting-compliance-afss-sydney",
-      "permanent": true
-    },
-    {
-      "source": "/lighting-control-repair-sydney",
-      "destination": "/cbus-repair-sydney",
-      "permanent": true
-    },
-    {
       "source": "/sydney-Automation Specialists-cbus-dynalite-partnership",
       "destination": "/about",
       "permanent": true
@@ -996,33 +921,13 @@
       "permanent": true
     },
     {
-      "source": "/cbus-fault-finding-sydney",
-      "destination": "/cbus-repair-sydney",
-      "permanent": true
-    },
-    {
       "source": "/cbus-fault-finding-sydney.html",
-      "destination": "/cbus-repair-sydney",
-      "permanent": true
-    },
-    {
-      "source": "/c-bus-repairs-sydney",
       "destination": "/cbus-repair-sydney",
       "permanent": true
     },
     {
       "source": "/c-bus-repairs-sydney.html",
       "destination": "/cbus-repair-sydney",
-      "permanent": true
-    },
-    {
-      "source": "/dynalite-not-working-sydney",
-      "destination": "/dynalite-repair-sydney",
-      "permanent": true
-    },
-    {
-      "source": "/dynalite-fault-finding-sydney-common-faults",
-      "destination": "/dynalite-repair-sydney",
       "permanent": true
     },
     {
