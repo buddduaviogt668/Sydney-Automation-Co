@@ -1199,6 +1199,18 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://sydneyautomationco.com.au/cbus-programming-chatswood</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://sydneyautomationco.com.au/cbus-programming-lindfield</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://sydneyautomationco.com.au/cbus-repair-alexandria</loc>
     <lastmod>2026-07-10</lastmod>
     <changefreq>monthly</changefreq>
@@ -1614,6 +1626,12 @@
   </url>
   <url>
     <loc>https://sydneyautomationco.com.au/cbus-upgrade-sydney</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://sydneyautomationco.com.au/cbus-vs-dynalite</loc>
     <lastmod>2026-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -2328,6 +2346,12 @@
   </url>
   <url>
     <loc>https://sydneyautomationco.com.au/dynalite-repair-zetland</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://sydneyautomationco.com.au/dynalite-vs-cbus-sydney</loc>
     <lastmod>2026-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
