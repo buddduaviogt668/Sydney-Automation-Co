@@ -189,8 +189,6 @@
       <li><a href="/services">Services</a></li>
       <li><a href="/services-hub">Services Hub</a></li>
       <li><a href="/shire">Shire</a></li>
-      <li><a href="/smart-home-roi-calculator-property-value-sydney">Smart Home Roi Calculator Property Value Sydney</a></li>
-      <li><a href="/smart-home-roi-calculator-sydney">Smart Home Roi Calculator Sydney</a></li>
       <li><a href="/smart-lighting-energy-management-sydney-hospitality">Smart Lighting Energy Management Sydney Hospitality</a></li>
       <li><a href="/strata">Strata</a></li>
       <li><a href="/strata-carpark-lighting-upgrades-nsw">Strata Carpark Lighting Upgrades Nsw</a></li>
