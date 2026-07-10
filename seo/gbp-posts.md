@@ -29,7 +29,7 @@ Are your strata building's common area lights stuck on overnight? Exorbitant cal
 
 Sydney Automation Co. offers strata management firms across NSW:
 ✅ Fixed-price common area lighting audits
-✅ C-Bus relay replacements from $450 fixed
+✅ C-Bus relay replacements — competitive fixed pricing
 ✅ DALI emergency lighting AFSS compliance
 ✅ Scheduled preventative maintenance contracts
 
@@ -77,7 +77,7 @@ Sydney Automation Co. provides urgent, same-day high-bay relay replacements for 
 **Type:** Offer
 **Title:** Received an Overpriced Automation Quote? Get a Free Second Opinion
 **Body:**
-Have you received a quote for $8,000+ to replace a lighting system that might just need a $450 relay replacement and reprogramming?
+Have you received a quote for $8,000+ to replace a lighting system that might just need a relay replacement and reprogramming?
 
 Sydney Automation Co. offers FREE, confidential second opinion technical audits on all C-Bus and Dynalite quotes.
 

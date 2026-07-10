@@ -7,7 +7,7 @@ with open('book-service.html', 'r', encoding='utf-8') as f:
 pricing_html = """      <p style="color:#a8c0e0; font-size:14px; line-height:1.6;">As highly specialized automation engineers, our time is strictly allocated. The deposit ensures we only dispatch to serious inquiries and eliminates no-shows, allowing us to maintain our rapid response emergency dispatch across Greater Sydney.</p>
       <div style="background:rgba(240,112,32,0.1); border-left:4px solid #f07020; padding:16px; border-radius:4px; margin-top:20px;">
         <h5 style="color:#f0f4ff; margin-bottom:8px; font-size:16px;">Transparent Pricing Policy</h5>
-        <p style="color:#a8c0e0; font-size:14px; line-height:1.6; margin:0;">Our standard diagnostic and repair rate is <strong>$150/hr</strong> (ex GST) with a strict <strong>3-hour minimum callout ($450)</strong>. Your $150 priority deposit securely locks in your dispatch and is fully credited toward your final invoice.</p>
+        <p style="color:#a8c0e0; font-size:14px; line-height:1.6; margin:0;">A <strong>$200 diagnostic fee</strong> (ex GST) applies to all callouts — this covers travel, on-site fault diagnosis, and a written report. It is <strong>not credited back</strong> toward further work. Subsequent repair or programming is <strong>$150/hr</strong> with a <strong>3-hour minimum</strong>.</p>
       </div>"""
 
 # Replace the specific paragraph with the new one containing the pricing box
@@ -49,9 +49,9 @@ terms_content = """
     <h2>2. Rates & Minimum Callout Charges</h2>
     <p>Sydney Automation Co provides highly specialized engineering services. Our standard rates are as follows:</p>
     <ul>
-        <li><strong>Hourly Rate:</strong> $150.00 per hour (excluding GST)</li>
-        <li><strong>Minimum Callout:</strong> 3 hours ($450.00 excluding GST)</li>
-        <li><strong>Priority Dispatch Deposit:</strong> A $150.00 deposit is required to secure priority or emergency bookings. This deposit is fully credited toward the final invoice but is non-refundable in the event of a cancellation within 24 hours of the scheduled arrival.</li>
+        <li><strong>Diagnostic Fee:</strong> $200.00 (excluding GST) — applies to all callouts. Covers travel, on-site fault diagnosis with manufacturer software, and a written report. This fee is <strong>not credited</strong> toward any subsequent repair or programming work.</li>
+        <li><strong>Hourly Rate (post-diagnostic):</strong> $150.00 per hour (excluding GST)</li>
+        <li><strong>Minimum Labour:</strong> 3 hours ($450.00 excluding GST) after the diagnostic fee</li>
     </ul>
     <p>The 3-hour minimum charge applies to all site visits, regardless of whether the fault is resolved in less time. This covers our dispatch, travel, specialized software licensing, and immediate availability.</p>
 

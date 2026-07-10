@@ -513,7 +513,7 @@ Upon practical completion, the accredited specialist contractor shall deliver a 
     <p id="calcScopeText" style="color:#a8c0e0; font-size:15px; line-height:1.7; margin-bottom:16px;">Select options above to calculate your tailored service scope.</p>
     <div style="display:flex; align-items:center; justify-content:space-between; border-top:1px solid #1f3a60; padding-top:16px;">
       <span style="color:#fff; font-weight:bold; font-size:18px;">Estimated Investment Bracket:</span>
-      <span id="calcPriceText" style="color:#f07020; font-weight:900; font-size:24px;">$450 - $850*</span>
+      <span id="calcPriceText" style="color:#f07020; font-weight:900; font-size:24px;">$650 - $1,050*</span>
     </div>
     <span style="color:#6a8cb5; font-size:12px; display:block; margin-top:8px;">*Estimates exclude major hardware replacement costs if required. Fixed-price formal quote provided on site.</span>
   </div>
@@ -539,8 +539,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const urg = urgEl.value;
 
     let scope = "";
-    let basePrice = 450;
-    let maxPrice = 850;
+    let basePrice = 650;
+    let maxPrice = 1050;
 
     // Facility logic
     if (fac === 'comm') {
