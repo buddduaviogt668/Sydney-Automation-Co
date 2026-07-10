@@ -9,7 +9,7 @@ import os
 import glob
 from datetime import datetime
 
-BASE_DIR = r'C:\Users\gaska\Documents\antigravity\lucid-babbage\Sydney-Automation-Co'
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 BASE_URL = 'https://sydneyautomationco.com.au'
 TODAY = datetime.now().strftime('%Y-%m-%d')
 
