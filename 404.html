@@ -264,6 +264,41 @@
 
 
 <script src="/chatbot.js"></script>
+<script>
+// Smart redirect: catch deleted suburb/service pages and send to the right core page
+(function() {
+  var path = window.location.pathname;
+  var dest = null;
+
+  if (/^\/c-bus-programmer-(?!sydney)/.test(path) || /^\/cbus-programmer-(?!sydney)/.test(path)) {
+    dest = '/c-bus-programmer-sydney';
+  } else if (/^\/dynalite-programmer-(?!sydney)/.test(path)) {
+    dest = '/dynalite-programmer-sydney';
+  } else if (/^\/cbus-repair-(?!sydney)/.test(path)) {
+    dest = '/cbus-repair-sydney';
+  } else if (/^\/dynalite-repair-(?!sydney)/.test(path)) {
+    dest = '/dynalite-repair-sydney';
+  } else if (/^\/lighting-control-repair-(?!sydney)/.test(path)) {
+    dest = '/cbus-repair-sydney';
+  } else if (/^\/smart-home-automation-/.test(path) || /^\/smart-home-/.test(path)) {
+    dest = '/services';
+  } else if (/rapix/.test(path)) {
+    dest = '/rapix-lighting-control';
+  } else if (/emergency-lighting/.test(path)) {
+    dest = '/emergency-lighting-compliance-afss-sydney';
+  } else if (/cbus-maintenance/.test(path) || /dynalite-maintenance/.test(path)) {
+    dest = '/services';
+  } else if (/facility-managers-cbus-dynalite-dali-guide/.test(path)) {
+    dest = '/building-managers-lighting-control-nsw';
+  } else if (/cbus-vs-dynalite|dynalite-vs-cbus/.test(path)) {
+    dest = '/cbus-vs-dynalite';
+  }
+
+  if (dest) {
+    window.location.replace(dest);
+  }
+})();
+</script>
 </body>
 
 </html>
