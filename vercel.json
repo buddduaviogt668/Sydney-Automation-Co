@@ -3,6 +3,36 @@
   "trailingSlash": false,
   "redirects": [
     {
+      "source": "/c-bus-programmer-(?!sydney)(.*)",
+      "destination": "/c-bus-programmer-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/cbus-programmer-(?!sydney)(.*)",
+      "destination": "/c-bus-programmer-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/dynalite-programmer-(?!sydney)(.*)",
+      "destination": "/dynalite-programmer-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/cbus-repair-(?!sydney)(.*)",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/dynalite-repair-(?!sydney)(.*)",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/lighting-control-repair-(?!sydney)(.*)",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
       "source": "/sydney-Automation Specialists-cbus-dynalite-partnership",
       "destination": "/about",
       "permanent": true
