@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en"><head>
     <meta charset="UTF-8">
     
@@ -22,10 +22,10 @@ nav{position:fixed;top:40px;left:0;right:0;z-index:1150;background:rgba(14,31,61
 .nav-links{display:flex;align-items:center;gap:2px;flex-wrap:nowrap}
 .nav-links>a,.nav-dd-trigger{font-size:13px;font-weight:600;color:#a8c0e0;padding:6px 10px;border-radius:6px;white-space:nowrap;transition:color 0.2s,background 0.2s;text-decoration:none;cursor:pointer;background:none;border:none;font-family:'Barlow',sans-serif;display:flex;align-items:center;gap:4px}
 .nav-links>a:hover,.nav-dd-trigger:hover,.nav-links>a.active,.nav-dd-trigger.active{color:#f0f4ff;background:rgba(240,112,32,0.15)}
-.nav-cta{background:#f07020!important;color:#fff!important;border-radius:8px;padding:8px 16px!important;font-size:13px;font-weight:700;text-decoration:none;white-space:nowrap}
+.nav-cta{background:#f07020!important;color:#fff!important;border-radius:8px;padding:8px 16px!important;font-size:16px;font-weight:700;text-decoration:none;white-space:nowrap}
 .nav-cta:hover{background:#ff8533!important}
 .nav-dd{position:relative}
-.nav-dd-trigger::after{content:'▾';font-size:10px;opacity:0.6}
+.nav-dd-trigger::after{content:'?';font-size:10px;opacity:0.6}
 .nav-dd-panel{display:none;position:absolute;top:calc(100% + 8px);left:0;min-width:240px;background:#0d1e3c;border:1px solid #2a4a80;border-radius:10px;padding:8px;z-index:2000;box-shadow:0 8px 32px rgba(0,0,0,0.4)}
 .nav-dd-panel.right{left:auto;right:0}
 .nav-dd-panel.wide{min-width:300px}
@@ -123,7 +123,7 @@ footer{background:#132647;border-top:1px solid #2a4a80;padding:48px 24px 32px}
 .hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
 .hamburger.open span:nth-child(2){opacity:0}
 .hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
-/* ── ROTATING PROMO BANNER ── */
+/* -- ROTATING PROMO BANNER -- */
 #promo-banner{position:fixed;top:0;left:0;right:0;z-index:1100;height:40px;background:#f07020;display:flex;align-items:center;justify-content:center;gap:14px;font-family:'Barlow',sans-serif;overflow:hidden}
 #promo-banner .pb-text{font-size:13px;font-weight:700;color:#fff;white-space:nowrap;transition:opacity 0.4s}
 #promo-banner .pb-btn{background:#fff;color:#f07020;border:none;border-radius:5px;padding:5px 14px;font-size:12px;font-weight:800;cursor:pointer;white-space:nowrap;text-decoration:none;font-family:'Barlow',sans-serif;transition:background 0.2s,color 0.2s;flex-shrink:0}
@@ -136,7 +136,7 @@ footer{background:#132647;border-top:1px solid #2a4a80;padding:48px 24px 32px}
 @media(max-width:768px){
   body{padding-bottom:80px}
 }
-/* ── ARTICLE BODY ── */
+/* -- ARTICLE BODY -- */
 .article-body{font-size:16px;line-height:1.9;color:#a8c0e0}
 .article-body p{margin-bottom:1.4em}
 .article-body strong{color:#f0f4ff;font-weight:700}
@@ -146,9 +146,9 @@ footer{background:#132647;border-top:1px solid #2a4a80;padding:48px 24px 32px}
 .article-body a:hover{color:#ff8533}
 .article-body ul,.article-body ol{padding-left:1.5em;margin-bottom:1.4em}
 .article-body li{margin-bottom:0.5em;color:#a8c0e0}
-/* ── GEORGE PHOTO ── */
+/* -- GEORGE PHOTO -- */
 .george-img{width:100%;border-radius:16px;display:block}
-/* ── LOCATION/REGION LAYOUT ── */
+/* -- LOCATION/REGION LAYOUT -- */
 .region-block{margin-bottom:56px}
 .region-header{display:flex;align-items:center;gap:16px;margin-bottom:20px;padding:20px 24px;background:#132647;border:1px solid #2a4a80;border-radius:14px;flex-wrap:wrap}
 .region-emoji{font-size:28px;flex-shrink:0}
@@ -165,64 +165,11 @@ footer{background:#132647;border-top:1px solid #2a4a80;padding:48px 24px 32px}
 a:hover .suburb-link-card .s-arrow{color:#f07020}
 </style>
 <style>
-/* ── Unified floating CTA ── */
-.sac-float-cta {
-  position: fixed;
-  bottom: 100px;
-  right: 24px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  z-index: 990;
-}
-.sac-float-cta a {
-  display: flex;
-  align-items: center;
-  gap: 9px;
-  padding: 13px 20px;
-  border-radius: 50px;
-  font-family: 'Barlow', sans-serif;
-  font-weight: 700;
-  font-size: 14px;
-  text-decoration: none;
-  box-shadow: 0 4px 18px rgba(0,0,0,0.25);
-  transition: transform 0.2s, box-shadow 0.2s;
-  white-space: nowrap;
-}
-.sac-float-cta a:hover { transform: translateY(-2px); box-shadow: 0 6px 22px rgba(0,0,0,0.32); }
-.sac-float-call { background: #e87722; color: #fff !important; }
-.sac-float-wa   { background: #25D366; color: #fff !important; }
-.sac-float-cta svg { flex-shrink: 0; }
-@media (max-width: 768px) {
-  .sac-float-cta { display: none !important; }
-  .sac-mob-bar { display: flex !important; }
-}
-.sac-mob-bar {
-  display: none;
-  position: fixed;
-  bottom: 0; left: 0; right: 0;
-  z-index: 990;
-  background: #0d1a30;
-  border-top: 2px solid #e87722;
-  padding-bottom: env(safe-area-inset-bottom, 0px);
-}
-.sac-mob-bar a {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 7px;
-  padding: 14px 10px;
-  font-family: 'Barlow', sans-serif;
-  font-weight: 800;
-  font-size: 15px;
-  text-decoration: none;
-  color: #fff !important;
-}
-.sac-mob-bar .mob-call { background: #e87722; }
-.sac-mob-bar .mob-wa   { background: #25D366; }
-.sac-mob-bar a:active  { filter: brightness(0.9); }
-@media (min-width: 769px) { .sac-mob-bar { display: none !important; } }
+/* -- Unified floating CTA -- */
+.sac-float-cta { position: fixed; bottom: 0; left: 0; right: 0; z-index: 990; display: flex; background: #0d1a30; border-top: 2px solid #e87722; }
+.sac-float-cta a { flex: 1; display: flex; align-items: center; justify-content: center; gap: 7px; padding: 14px 10px; font-family: 'Barlow', sans-serif; font-weight: 800; font-size: 18px; text-decoration: none; color: #fff !important; }.sac-float-call { background: #e87722; }.sac-float-wa { background: #25D366; }
+
+@media (min-width: 769px) { }
 </style>
 <meta content="Smart Home Automation Miranda | C-Bus &amp; Dynalite Specialists" property="og:title"/>
 <meta content="Accredited C-Bus and Dynalite smart home automation in Miranda. Expert relay repairs, LED upgrades and scene programming. Call 0422 469 739." property="og:description"/>
@@ -269,7 +216,7 @@ a:hover .suburb-link-card .s-arrow{color:#f07020}
       "@type": "Review",
       "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
       "author": { "@type": "Person", "name": "Adam Ziino" },
-      "reviewBody": "Literally a lifesaver… George came out in 24 hours, diagnosed the problem with the CBUS system that two previous ‘specialists’ couldn’t — fixed it — and then checked in two days later to make sure it was still working."
+      "reviewBody": "Literally a lifesaver� George came out in 24 hours, diagnosed the problem with the CBUS system that two previous �specialists� couldn�t � fixed it � and then checked in two days later to make sure it was still working."
     },
     {
       "@type": "Review",
@@ -299,6 +246,10 @@ a:hover .suburb-link-card .s-arrow{color:#f07020}
 <span class="logo-line"></span>
 <span class="logo-sub">Lighting Control Specialists</span>
 </a>
+    <div class="nav-phone-wrap">
+      <span class="nav-phone-label">Direct Service Line</span>
+      <a class="nav-phone" href="tel:+61422469739">0422 469 739</a>
+    </div>
 <div class="nav-links">
 <a href="/">Home</a>
 <!-- SERVICES (mega 2-col) -->
@@ -326,7 +277,7 @@ a:hover .suburb-link-card .s-arrow{color:#f07020}
 <a href="/carpark-lighting-upgrades-sydney">Car Park Upgrades</a>
 <a href="/building-lighting-upgrades-sydney">Building Lighting Upgrades</a>
 <div class="dd-divider"></div>
-<a href="/services-hub" style="color:#f07020;">★ All Services Hub (400+ Pages)</a>
+<a href="/services-hub" style="color:#f07020;">? All Services Hub (400+ Pages)</a>
 </div>
 <div class="mega-col">
 <span class="dd-label">Emergency &amp; Compliance</span>
@@ -349,7 +300,7 @@ a:hover .suburb-link-card .s-arrow{color:#f07020}
 <a href="/lighting-control-service-contract-sydney">Service Contracts</a>
 <a href="/building-automation-maintenance-sydney">Building Automation</a>
 <a href="/facilities-lighting-maintenance-sydney">Facilities Maintenance</a>
-<a href="/services">All Services →</a>
+<a href="/services">All Services ?</a>
 </div>
 </div>
 </div>
@@ -369,7 +320,7 @@ a:hover .suburb-link-card .s-arrow{color:#f07020}
 <a href="/c-bus-programmer-sydney-cbd">Sydney CBD</a>
 <div class="dd-divider"></div>
 <a href="/shire">Sutherland Shire Hub</a>
-<a href="/locations">All Service Areas →</a>
+<a href="/locations">All Service Areas ?</a>
 </div>
 </div>
 <!-- CLIENTS -->
@@ -407,7 +358,7 @@ a:hover .suburb-link-card .s-arrow{color:#f07020}
 </div>
 <a href="/products">Products</a>
       <a href="/contact">Contact</a>
-<a class="nav-cta" href="tel:0422469739">📞 Call Now</a>
+<a class="nav-cta" href="tel:0422469739">?? Call Now</a>
 </div>
 <button aria-label="Menu" class="hamburger" id="hamburger">
 <span></span><span></span><span></span>
@@ -438,7 +389,7 @@ a:hover .suburb-link-card .s-arrow{color:#f07020}
 <a href="/carpark-lighting-upgrades-sydney">Car Park Upgrades</a>
 <a href="/building-lighting-upgrades-sydney">Building Lighting Upgrades</a>
 <div class="dd-divider"></div>
-<a href="/services-hub" style="color:#f07020;">★ All Services Hub (400+ Pages)</a>
+<a href="/services-hub" style="color:#f07020;">? All Services Hub (400+ Pages)</a>
 </div>
 <div class="mob-section">
 <div class="mob-section-title">Emergency &amp; Compliance</div>
@@ -487,15 +438,15 @@ a:hover .suburb-link-card .s-arrow{color:#f07020}
 <a href="/projects">Projects</a>
 <a href="/about">About</a>
 </div>
-<a class="mob-cta" href="tel:0422469739">📞 Call Now — 0422 469 739</a>
+<a class="mob-cta" href="tel:0422469739">?? Call Now � 0422 469 739</a>
 </div>
 <div class="page">
 <div style="padding:80px 24px 0">
 <div class="container-sm">
-<a href="/blog" style="color:#a8c0e0;font-size:14px;display:inline-block;margin-bottom:24px">← All Articles</a>
+<a href="/blog" style="color:#a8c0e0;font-size:14px;display:inline-block;margin-bottom:24px">? All Articles</a>
 <div style="display:flex;gap:12px;flex-wrap:wrap;margin-bottom:20px">
 <span style="background:rgba(240,112,32,0.12);color:#f07020;border:1px solid #f0702040;border-radius:50px;padding:4px 12px;font-size:12px;font-weight:700">Smart Home Automation</span>
-<span style="color:#6a8cb5;font-size:13px">May 2026 · 8 min read</span>
+<span style="color:#6a8cb5;font-size:13px">May 2026 � 8 min read</span>
 </div>
 <h1 style="font-family:'Barlow Condensed',sans-serif;font-size:clamp(32px,5vw,56px);font-weight:900;line-height:1.05;margin-bottom:20px">Smart Home Automation Miranda<br/><span style="color:#f07020">Accredited C-Bus &amp; Dynalite Specialists</span></h1>
 <p style="font-size:18px;color:#a8c0e0;line-height:1.8;margin-bottom:40px;max-width:640px">Accredited Clipsal C-Bus and Dynalite smart home automation specialists serving Miranda and surrounding suburbs. Fixed-price repairs, keypad upgrades, and 2-hour emergency dispatch.</p>
@@ -527,7 +478,7 @@ a:hover .suburb-link-card .s-arrow{color:#f07020}
 <div style="background:#132647;border:1px solid #2a4a80;border-radius:16px;padding:32px;margin-top:48px">
 <h3 style="font-family:'Barlow Condensed',sans-serif;font-size:24px;font-weight:900;margin-bottom:12px">Cut Your Strata Lighting Bills</h3>
 <p style="color:#a8c0e0;margin-bottom:20px">We optimise C-Bus and Dynalite systems for Sydney strata buildings. Get a free energy audit scoping call.</p>
-<a href="tel:0422469739" style="display:inline-flex;align-items:center;gap:8px;background:#f07020;color:#fff;padding:14px 28px;border-radius:10px;font-weight:700;font-size:16px;text-decoration:none">📞 Call 0422 469 739</a>
+<a href="tel:0422469739" style="display:inline-flex;align-items:center;gap:8px;background:#f07020;color:#fff;padding:14px 28px;border-radius:10px;font-weight:700;font-size:16px;text-decoration:none">?? Call 0422 469 739</a>
 </div>
 </div>
 </div>
@@ -542,7 +493,7 @@ a:hover .suburb-link-card .s-arrow{color:#f07020}
 <span class="logo-sub">Lighting Control Specialists</span>
 </div>
 <p style="color:#a8c0e0;font-size:14px;line-height:1.7;max-width:320px">Accredited C-Bus and Dynalite specialists based in Menai, Sutherland Shire. Same-day fault finding and <a href="/cbus-repair-sydney">repairs</a> across Greater Sydney.</p>
-<div style="margin-top:20px"><a href="tel:0422469739" style="color:#f07020;font-weight:700;font-size:15px">📞 0422 469 739</a></div>
+<div style="margin-top:20px"><a href="tel:0422469739" style="color:#f07020;font-weight:700;font-size:15px">?? 0422 469 739</a></div>
 </div>
 <div>
 <h4 style="font-family:'Barlow Condensed',sans-serif;font-weight:800;margin-bottom:16px;font-size:16px;text-transform:uppercase;letter-spacing:1px">Emergency Lighting</h4>
@@ -567,8 +518,8 @@ a:hover .suburb-link-card .s-arrow{color:#f07020}
 </div>
 </div>
 <div class="footer-copy">
-<span>© 2026 Sydney Automation Co. — Menai, Sutherland Shire NSW</span>
-<span>C-Bus Accredited • Dynalite Accredited • DALI Specialists</span>
+<span>� 2026 Sydney Automation Co. � Menai, Sutherland Shire NSW</span>
+<span>C-Bus Accredited � Dynalite Accredited � DALI Specialists</span>
 </div>
 <script>
 (function(){
@@ -618,15 +569,15 @@ a:hover .suburb-link-card .s-arrow{color:#f07020}
 <script>
 (function(){
   var msgs=[
-    {t:"Need a C-Bus or Dynalite Technician?",      btn:"📞 Call Now",          href:"tel:0422469739"},
-    {t:"Is Your C-Bus Not Working?",                 btn:"📞 Call Now", href:"tel:0422469739"},
+    {t:"Need a C-Bus or Dynalite Technician?",      btn:"?? Call Now",          href:"tel:0422469739"},
+    {t:"Is Your C-Bus Not Working?",                 btn:"?? Call Now", href:"tel:0422469739"},
     {t:"Lights Flickering or Not Responding?",       btn:"Call Now",          href:"tel:0422469739"},
-    {t:"Same-Day Lighting Control Fault Finding",    btn:"📞 Call Now",      href:"tel:0422469739"},
-    {t:"Strata & Commercial Lighting Specialists",   btn:"📞 Call Now",     href:"tel:0422469739"},
+    {t:"Same-Day Lighting Control Fault Finding",    btn:"?? Call Now",      href:"tel:0422469739"},
+    {t:"Strata & Commercial Lighting Specialists",   btn:"?? Call Now",     href:"tel:0422469739"},
     {t:"Maintenance & Service Contracts Available",  btn:"Find Out More",     href:"/lighting-control-service-contract-sydney"},
     {t:"Emergency Lighting Repairs & Compliance",    btn:"Book Service",      href:"/emergency-lighting-compliance-afss-sydney"},
-    {t:"System Upgrades & Retrofits — Sydney Wide",  btn:"📞 Call Now",       href:"tel:0422469739"},
-    {t:"Dynalite & C-Bus Repairs Across Sydney",     btn:"📞 Call Now",       href:"tel:0422469739"}
+    {t:"System Upgrades & Retrofits � Sydney Wide",  btn:"?? Call Now",       href:"tel:0422469739"},
+    {t:"Dynalite & C-Bus Repairs Across Sydney",     btn:"?? Call Now",       href:"tel:0422469739"}
   ];
   var txt=document.getElementById('pb-text');
   var btn=document.getElementById('pb-btn');
@@ -649,8 +600,8 @@ a:hover .suburb-link-card .s-arrow{color:#f07020}
 </div>
 <div class="blog-cta" style="margin:48px 0;padding:24px;background:#f8f9fa;border-radius:8px;text-align:center;border:1px solid #dee2e6;">
 <!-- BLOG_CTA_START -->
-<div class="blog-cta" style="margin:48px 0;padding:24px;background:#1a2b4a;border-radius:8px;text-align:center;border-left:4px solid #4da6ff;font-family:Barlow,sans-serif;"><h3 style="margin:0 0 12px;font-size:1.3rem;font-weight:700;color:#f0f4ff;">Need Help With Your C-Bus or Dynalite System?</h3><p style="margin:0 0 20px;color:#c5d1e8;font-size:1.05rem;line-height:1.6;">We don't touch cable — we fix code. Accredited programming, fault finding, and future-proof upgrades for Sydney homes and buildings.</p><div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;"><a href="tel:0422469739" style="background:#4da6ff;color:#0e1f3d;padding:12px 24px;border-radius:6px;text-decoration:none;font-weight:700;display:inline-block;">Call Us: 0422 469 739</a><a href="/contact" style="background:transparent;color:#4da6ff;padding:12px 24px;border-radius:6px;text-decoration:none;font-weight:700;border:2px solid #4da6ff;display:inline-block;">Email Consult</a></div><p style="margin:16px 0 0;font-size:0.9rem;color:#8a9ab6;">Serving Sydney's Eastern Suburbs • North Shore • Sutherland Shire • CBD</p></div>
-<p style="margin: 16px 0 0; font-size: 0.9rem; color: #6c757d;">Serving Sydney's Eastern Suburbs • North Shore • Sutherland Shire • CBD</p>
+<div class="blog-cta" style="margin:48px 0;padding:24px;background:#1a2b4a;border-radius:8px;text-align:center;border-left:4px solid #4da6ff;font-family:Barlow,sans-serif;"><h3 style="margin:0 0 12px;font-size:1.3rem;font-weight:700;color:#f0f4ff;">Need Help With Your C-Bus or Dynalite System?</h3><p style="margin:0 0 20px;color:#c5d1e8;font-size:1.05rem;line-height:1.6;">We don't touch cable � we fix code. Accredited programming, fault finding, and future-proof upgrades for Sydney homes and buildings.</p><div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;"><a href="tel:0422469739" style="background:#4da6ff;color:#0e1f3d;padding:12px 24px;border-radius:6px;text-decoration:none;font-weight:700;display:inline-block;">Call Us: 0422 469 739</a><a href="/contact" style="background:transparent;color:#4da6ff;padding:12px 24px;border-radius:6px;text-decoration:none;font-weight:700;border:2px solid #4da6ff;display:inline-block;">Email Consult</a></div><p style="margin:16px 0 0;font-size:0.9rem;color:#8a9ab6;">Serving Sydney's Eastern Suburbs � North Shore � Sutherland Shire � CBD</p></div>
+<p style="margin: 16px 0 0; font-size: 0.9rem; color: #6c757d;">Serving Sydney's Eastern Suburbs � North Shore � Sutherland Shire � CBD</p>
 </div>
 <!-- BLOG_CTA_END -->
 <!-- ===== PREMIUM TESTIMONIALS CAROUSEL ===== -->
@@ -666,8 +617,8 @@ a:hover .suburb-link-card .s-arrow{color:#f07020}
       <div id="tm-track" style="display:flex;gap:24px;padding:20px 200vw;overflow-x:auto;scroll-behavior:smooth;scroll-snap-type:x mandatory;scrollbar-width:none;-ms-overflow-style:none;">
         
         <div class="tm-card">
-          <div class="tm-stars">★★★★★</div>
-          <p class="tm-text">"Literally a lifesaver… George came out in 24 hours, diagnosed the problem with the CBUS system that two previous 'specialists' couldn't — fixed it — and then checked in two days later to make sure it was still working."</p>
+          <div class="tm-stars">?????</div>
+          <p class="tm-text">"Literally a lifesaver� George came out in 24 hours, diagnosed the problem with the CBUS system that two previous 'specialists' couldn't � fixed it � and then checked in two days later to make sure it was still working."</p>
           <div class="tm-footer">
             <div class="tm-author">Adam Ziino</div>
             <div class="tm-role">C-Bus Repair, Little Bay</div>
@@ -675,16 +626,16 @@ a:hover .suburb-link-card .s-arrow{color:#f07020}
         </div>
 
         <div class="tm-card">
-          <div class="tm-stars">★★★★★</div>
-          <p class="tm-text">"Highly recommended! George was amazing — came out at last notice when all our office lights went on the blink, found the problem in our C-Bus system, rush-ordered the parts, and had everything back up within no time."</p>
+          <div class="tm-stars">?????</div>
+          <p class="tm-text">"Highly recommended! George was amazing � came out at last notice when all our office lights went on the blink, found the problem in our C-Bus system, rush-ordered the parts, and had everything back up within no time."</p>
           <div class="tm-footer">
             <div class="tm-author">Phillipa Brown</div>
-            <div class="tm-role">Winten Property Group — North Sydney</div>
+            <div class="tm-role">Winten Property Group � North Sydney</div>
           </div>
         </div>
 
         <div class="tm-card">
-          <div class="tm-stars">★★★★★</div>
+          <div class="tm-stars">?????</div>
           <p class="tm-text">"Extremely happy with the C-Bus automation services. They helped repair and reprogram our Clipsal C-Bus lighting system which had ongoing faults that previous electricians couldn't resolve. Very responsive."</p>
           <div class="tm-footer">
             <div class="tm-author">Vasilios Tsopanas</div>
@@ -693,17 +644,17 @@ a:hover .suburb-link-card .s-arrow{color:#f07020}
         </div>
 
         <div class="tm-card">
-          <div class="tm-stars">★★★★★</div>
+          <div class="tm-stars">?????</div>
           <p class="tm-text">"Honest and reliable C-Bus installer in Sydney. Extremely knowledgeable and took the time to explain our C-Bus options clearly without rushing us. The quality of the installation was excellent."</p>
           <div class="tm-footer">
             <div class="tm-author">Helen Poulos</div>
-            <div class="tm-role">Ask Allied Health — Earlwood</div>
+            <div class="tm-role">Ask Allied Health � Earlwood</div>
           </div>
         </div>
 
         <div class="tm-card">
-          <div class="tm-stars">★★★★★</div>
-          <p class="tm-text">"Fantastic service. George resolved all issues and reprogrammed our Clipsal C-Bus system with custom options — above and beyond our expectations. Great efficient work with sharp pricing."</p>
+          <div class="tm-stars">?????</div>
+          <p class="tm-text">"Fantastic service. George resolved all issues and reprogrammed our Clipsal C-Bus system with custom options � above and beyond our expectations. Great efficient work with sharp pricing."</p>
           <div class="tm-footer">
             <div class="tm-author">Easyfix Electrics</div>
             <div class="tm-role">Commercial Client, Matraville</div>
@@ -711,7 +662,7 @@ a:hover .suburb-link-card .s-arrow{color:#f07020}
         </div>
 
         <div class="tm-card">
-          <div class="tm-stars">★★★★★</div>
+          <div class="tm-stars">?????</div>
           <p class="tm-text">"I recently hired Sydney Automation to upgrade our home with a fully automated lighting system and the experience was fantastic! Professional, knowledgeable, and customised the system perfectly."</p>
           <div class="tm-footer">
             <div class="tm-author">Tim Reyes</div>
@@ -720,26 +671,26 @@ a:hover .suburb-link-card .s-arrow{color:#f07020}
         </div>
 
         <div class="tm-card">
-          <div class="tm-stars">★★★★★</div>
+          <div class="tm-stars">?????</div>
           <p class="tm-text">"George was really helpful in my system set up. As someone who knew nothing about this space, he guided me to the right programs and got it all installed hassle free. 10/10."</p>
           <div class="tm-footer">
             <div class="tm-author">Imran Hamidi</div>
-            <div class="tm-role">Laing + Simmons East Group — Potts Point</div>
+            <div class="tm-role">Laing + Simmons East Group � Potts Point</div>
           </div>
         </div>
 
         <div class="tm-card">
-          <div class="tm-stars">★★★★★</div>
+          <div class="tm-stars">?????</div>
           <p class="tm-text">"Sydney Automation Co. provides outstanding smart lighting solutions, combining impressive technology with excellent customer service. I highly recommend them for office automation!"</p>
           <div class="tm-footer">
-            <div class="tm-author">Miro Krpelán</div>
-            <div class="tm-role">Katalyst Facilities Management — Bondi Junction</div>
+            <div class="tm-author">Miro Krpel�n</div>
+            <div class="tm-role">Katalyst Facilities Management � Bondi Junction</div>
           </div>
         </div>
 
         <div class="tm-card">
-          <div class="tm-stars">★★★★★</div>
-          <p class="tm-text">"During a recent home renovation George and the team fitted out my media room. We couldn't be happier with the all round service — the lighting set up in particular is incredible!"</p>
+          <div class="tm-stars">?????</div>
+          <p class="tm-text">"During a recent home renovation George and the team fitted out my media room. We couldn't be happier with the all round service � the lighting set up in particular is incredible!"</p>
           <div class="tm-footer">
             <div class="tm-author">Jamie Patterson</div>
             <div class="tm-role">Residential Client, Lugarno</div>
@@ -747,8 +698,8 @@ a:hover .suburb-link-card .s-arrow{color:#f07020}
         </div>
 
         <div class="tm-card">
-          <div class="tm-stars">★★★★★</div>
-          <p class="tm-text">"George was highly professional and prompt in fixing the CBUS issues we had downstairs — very knowledgeable, highly recommended."</p>
+          <div class="tm-stars">?????</div>
+          <p class="tm-text">"George was highly professional and prompt in fixing the CBUS issues we had downstairs � very knowledgeable, highly recommended."</p>
           <div class="tm-footer">
             <div class="tm-author">Robert Alvaro</div>
             <div class="tm-role">C-Bus Fault Finding, Maroubra</div>
@@ -756,7 +707,7 @@ a:hover .suburb-link-card .s-arrow{color:#f07020}
         </div>
 
         <div class="tm-card">
-          <div class="tm-stars">★★★★★</div>
+          <div class="tm-stars">?????</div>
           <p class="tm-text">"George from Sydney Auto did a great job repairing & replacing our a C-Bus electrical relay and would highly recommend him and use him again."</p>
           <div class="tm-footer">
             <div class="tm-author">Jim Vassil</div>
@@ -767,8 +718,8 @@ a:hover .suburb-link-card .s-arrow{color:#f07020}
       </div>
 
       <div class="tm-controls">
-        <button onclick="tmSlide(-1)" class="tm-btn">←</button>
-        <button onclick="tmSlide(1)" class="tm-btn">→</button>
+        <button onclick="tmSlide(-1)" class="tm-btn">?</button>
+        <button onclick="tmSlide(1)" class="tm-btn">?</button>
       </div>
     </div>
 
@@ -780,7 +731,7 @@ a:hover .suburb-link-card .s-arrow{color:#f07020}
   </div>
 </section>
     <div style="background: rgba(240,112,32,0.15); border-left: 4px solid #f07020; padding: 20px; margin: 30px 0; border-radius: 4px;">
-        <p style="color: #fff; margin: 0; font-weight: 700; font-size: 16px;">⚠️ System Emergency? Call Now: <span style="color: #f07020; font-size: 18px;">0422 469 739</span></p>
+        <p style="color: #fff; margin: 0; font-weight: 700; font-size: 16px;">?? System Emergency? Call Now: <span style="color: #f07020; font-size: 18px;">0422 469 739</span></p>
         <p style="color: #a8c0e0; margin: 10px 0 0 0; font-size: 14px;">Available for same-day emergency repairs across Greater Sydney</p>
     </div>
     

@@ -27,7 +27,7 @@ nav{position:fixed;top:40px;left:0;right:0;z-index:1150;background:rgba(14,31,61
 .nav-links{display:flex;align-items:center;gap:2px;flex-wrap:nowrap}
 .nav-links>a,.nav-dd-trigger{font-size:13px;font-weight:600;color:#a8c0e0;padding:6px 10px;border-radius:6px;white-space:nowrap;transition:color 0.2s,background 0.2s;text-decoration:none;cursor:pointer;background:none;border:none;font-family:'Barlow',sans-serif;display:flex;align-items:center;gap:4px}
 .nav-links>a:hover,.nav-dd-trigger:hover,.nav-links>a.active,.nav-dd-trigger.active{color:#f0f4ff;background:rgba(240,112,32,0.15)}
-.nav-cta{background:#f07020!important;color:#fff!important;border-radius:8px;padding:8px 16px!important;font-size:13px;font-weight:700;text-decoration:none;white-space:nowrap}
+.nav-cta{background:#f07020!important;color:#fff!important;border-radius:8px;padding:8px 16px!important;font-size:16px;font-weight:700;text-decoration:none;white-space:nowrap}
 .nav-cta:hover{background:#ff8533!important}
 .nav-dd{position:relative}
 .nav-dd-trigger::after{content:'▾';font-size:10px;opacity:0.6}
@@ -171,63 +171,10 @@ a:hover .suburb-link-card .s-arrow{color:#f07020}
 </style>
 <style>
 /* ── Unified floating CTA ── */
-.sac-float-cta {
-  position: fixed;
-  bottom: 100px;
-  right: 24px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  z-index: 990;
-}
-.sac-float-cta a {
-  display: flex;
-  align-items: center;
-  gap: 9px;
-  padding: 13px 20px;
-  border-radius: 50px;
-  font-family: 'Barlow', sans-serif;
-  font-weight: 700;
-  font-size: 14px;
-  text-decoration: none;
-  box-shadow: 0 4px 18px rgba(0,0,0,0.25);
-  transition: transform 0.2s, box-shadow 0.2s;
-  white-space: nowrap;
-}
-.sac-float-cta a:hover { transform: translateY(-2px); box-shadow: 0 6px 22px rgba(0,0,0,0.32); }
-.sac-float-call { background: #e87722; color: #fff !important; }
-.sac-float-wa   { background: #25D366; color: #fff !important; }
-.sac-float-cta svg { flex-shrink: 0; }
-@media (max-width: 768px) {
-  .sac-float-cta { display: none !important; }
-  .sac-mob-bar { display: flex !important; }
-}
-.sac-mob-bar {
-  display: none;
-  position: fixed;
-  bottom: 0; left: 0; right: 0;
-  z-index: 990;
-  background: #0d1a30;
-  border-top: 2px solid #e87722;
-  padding-bottom: env(safe-area-inset-bottom, 0px);
-}
-.sac-mob-bar a {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 7px;
-  padding: 14px 10px;
-  font-family: 'Barlow', sans-serif;
-  font-weight: 800;
-  font-size: 15px;
-  text-decoration: none;
-  color: #fff !important;
-}
-.sac-mob-bar .mob-call { background: #e87722; }
-.sac-mob-bar .mob-wa   { background: #25D366; }
-.sac-mob-bar a:active  { filter: brightness(0.9); }
-@media (min-width: 769px) { .sac-mob-bar { display: none !important; } }
+.sac-float-cta { position: fixed; bottom: 0; left: 0; right: 0; z-index: 990; display: flex; background: #0d1a30; border-top: 2px solid #e87722; }
+.sac-float-cta a { flex: 1; display: flex; align-items: center; justify-content: center; gap: 7px; padding: 14px 10px; font-family: 'Barlow', sans-serif; font-weight: 800; font-size: 18px; text-decoration: none; color: #fff !important; }.sac-float-call { background: #e87722; }.sac-float-wa { background: #25D366; }
+
+@media (min-width: 769px) { }
 </style>
 <meta content="Sutherland Shire C-Bus Value 2026 | Sydney Automation Co." property="og:title"/>
 <meta content="Sutherland Shire C-Bus Value 2026. C-Bus and Dynalite expert guide for Sydney. Practical advice, real symptoms, manufacturer-accredited tips. Call 0422 469 739." property="og:description"/>
