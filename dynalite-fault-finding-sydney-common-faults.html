@@ -1,5 +1,21 @@
 <!DOCTYPE html>
 <html lang="en"><head>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Dynalite EnvisionProject",
+  "applicationCategory": "DeveloperApplication",
+  "operatingSystem": "Windows",
+  "description": "Official system design, programming and commissioning software for Philips Dynalite DyNet lighting control systems by Signify.",
+  "provider": {
+    "@type": "Organization",
+    "name": "Signify",
+    "url": "https://www.signify.com/"
+  },
+  "url": "https://www.signify.com/en-gb/our-products/brand/dynalite"
+}
+</script>
 <meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
 <meta name="description" content="Dynalite is incredibly reliable — until it’s not. The 5 most common Dynalite faults we sees on Sydney commercial and residential sites."/>
 <link rel="canonical" href="https://sydneyautomationco.com.au/dynalite-fault-finding-sydney-common-faults.html"/>
@@ -142,6 +158,47 @@ footer{background:#132647;border-top:1px solid #2a4a80;padding:48px 24px 32px}
   gtag('js', new Date());
   gtag('config', 'G-7EZFB6GRJ3');
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "How to Diagnose Dynalite Lighting Control Faults",
+  "description": "Step-by-step diagnostic procedure for Signify Dynalite lighting control system faults including DyNet bus checks, processor verification, and address conflict resolution.",
+  "totalTime": "PT30M",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "name": "Check DyNet Bus Voltage",
+      "text": "Measure the voltage between DyNet+ and DyNet- terminals at any keypad or device. Normal operating range is 9.6 to 42V DC. Below 9.6V indicates a bus power fault.",
+      "position": 1
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Inspect Processor Status LEDs",
+      "text": "Check the DDBC1200 or main processor LED indicators. Normal operation shows specific LED patterns. Error LEDs indicate processor fault or communication loss.",
+      "position": 2
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Scan with Dynalite EnvisionProject",
+      "text": "Connect to the processor via Dynalite EnvisionProject software. Scan the DyNet bus to identify all online devices, check for address conflicts, and verify device configuration.",
+      "position": 3
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Power Cycle the Processor",
+      "text": "Disconnect power from the Dynalite processor for 30 seconds. Reconnect and wait 2 minutes for the DyNet bus to re-initialise. Check keypad response after reboot.",
+      "position": 4
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Verify Keypad Communication",
+      "text": "Test each keypad by pressing buttons and observing LED response. Non-responsive keypads may have wiring faults, address conflicts, or hardware failure.",
+      "position": 5
+    }
+  ]
+}
+</script>
 </head><body>
 <nav>
   <a href="/" class="logo">
@@ -197,6 +254,7 @@ document.addEventListener('click',function(e){
   if(q){var item=q.closest('.faq-item');item.classList.toggle('open');}
 });
 </script>
+<div style="background:#132647;border-left:4px solid #f07020;padding:16px 20px;border-radius:0 8px 8px 0;margin:0 0 24px"><strong style="color:#f0c040;font-size:1.05rem">To diagnose Dynalite system faults, you must verify DyNet bus communication voltage (9.6–42V DC), check for address conflicts using Dynalite EnvisionProject software, confirm the DDBC1200 processor is not in fault mode, and inspect all DyNet wiring for loose or corroded connections.</strong></div>
 <div class="page">
   <div style="padding:64px 24px 0">
     <div class="container-sm">
@@ -244,6 +302,19 @@ document.addEventListener('click',function(e){
     </div>
   </div>
 </div>
+
+<section style="background:#0d1e3c;border-top:1px solid #1a2a4a;padding:40px 24px">
+<div class="container" style="max-width:1000px;margin:0 auto;text-align:center">
+<h2 style="color:#fff;font-family:'Barlow Condensed',sans-serif;font-size:1.5rem;margin-bottom:8px">Manufacturer-Accredited Specialist</h2>
+<p style="color:#a8c0e0;font-size:14px;margin-bottom:24px">We are accredited by the original equipment manufacturers. Our certifications are verifiable:</p>
+<div style="display:flex;justify-content:center;gap:32px;flex-wrap:wrap">
+<a href="https://www.se.com/au/" target="_blank" rel="noopener" style="color:#a8c0e0;font-size:13px;text-decoration:none;padding:12px 20px;border:1px solid #2a4a80;border-radius:8px;transition:all 0.2s">Schneider Electric (Clipsal C-Bus) &rarr;</a>
+<a href="https://www.signify.com/" target="_blank" rel="noopener" style="color:#a8c0e0;font-size:13px;text-decoration:none;padding:12px 20px;border:1px solid #2a4a80;border-radius:8px;transition:all 0.2s">Signify (Philips Dynalite) &rarr;</a>
+<a href="https://www.dali-alliance.org/" target="_blank" rel="noopener" style="color:#a8c0e0;font-size:13px;text-decoration:none;padding:12px 20px;border:1px solid #2a4a80;border-radius:8px;transition:all 0.2s">DALI Alliance (DiiA) &rarr;</a>
+<a href="https://www.clipsal.com/" target="_blank" rel="noopener" style="color:#a8c0e0;font-size:13px;text-decoration:none;padding:12px 20px;border:1px solid #2a4a80;border-radius:8px;transition:all 0.2s">Clipsal Product Portal &rarr;</a>
+</div>
+</div>
+</section>
 <footer>
   <div class="footer-grid">
     <div>

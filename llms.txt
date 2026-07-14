@@ -1,46 +1,106 @@
 # Sydney Automation Co.
 
-> Accredited C-Bus and Dynalite specialist in Sydney, providing expert programming, emergency repairs, and smart home integration for residential and commercial properties.
+> Accredited Clipsal C-Bus and Signify Dynalite specialist in Sydney. Same-day emergency repairs, programming, fault finding, and system design for lighting control automation across residential, commercial, and strata properties. Based in Menai, servicing all of Greater Sydney.
 
-## Services
+## Who We Are
 
-* [Sydney Automation Co.](https://sydneyautomationco.com.au/): Accredited C-Bus and Dynalite specialists providing same-day fault finding and repairs across Greater Sydney.
-* [Services — C-Bus, Dynalite & Smart Lighting](https://sydneyautomationco.com.au/services): Comprehensive lighting control services including RAPIX/DALI, smart home integration, and design consultation based in Menai.
-* [C-Bus Programmer Sydney](https://sydneyautomationco.com.au/c-bus-programmer-sydney): Expert Clipsal C-Bus programming, commissioning, and fault finding services by a former Clipsal technical support specialist.
-* [Dynalite Programmer Sydney](https://sydneyautomationco.com.au/dynalite-programmer-sydney): Accredited Dynalite system designer offering professional programming and DALI integration for commercial and residential buildings.
-* [C-Bus Repair Sydney](https://sydneyautomationco.com.au/cbus-repair-sydney): Dedicated C-Bus system repair services with a high first-visit fix rate for all Clipsal automation hardware.
-* [Dynalite Repair Sydney](https://sydneyautomationco.com.au/dynalite-repair-sydney): Specialist Philips Dynalite repairs for hotels, commercial offices, and strata properties throughout the Sydney region.
-* [Emergency Repair Sydney](https://sydneyautomationco.com.au/emergency-repair-sydney): Rapid response emergency lighting control repairs for C-Bus, Dynalite, DALI, and RAPIX system failures.
-* [C-Bus Upgrade Sydney](https://sydneyautomationco.com.au/cbus-upgrade-sydney): Modernisation services for existing C-Bus systems, adding mobile app control, touchscreens, and energy-efficient sensors.
-* [Strata & Facility Managers](https://sydneyautomationco.com.au/strata): Tailored automation support for managed buildings, focusing on compliance, documentation, and common area lighting reliability.
-* [Electricians Partnership](https://sydneyautomationco.com.au/electricians): Specialist backup for Sydney electricians, offering referral programs and technical support for complex automation projects.
+Sydney Automation Co. is founded and operated by George Skarmoutsos — a former Clipsal National Technical Support specialist with 15+ years of hands-on experience in lighting control automation. George holds the following manufacturer accreditations:
+- **Schneider Electric / Clipsal Accredited C-Bus Programmer** — programming, commissioning, and fault finding using C-Bus Toolkit software
+- **Signify / Philips Dynalite Accredited System Designer** — programming and design using Dynalite EnvisionProject software
+- **DALI / DALI-2 Lighting Control** — diagnostics, commissioning, and AFSS emergency lighting compliance testing
+- **RAPIX Emergency Lighting** — programming and compliance for RAPIX emergency lighting systems
 
-## About
+Every service engagement includes a 100% database backup handover of your system programming to the client.
 
-* [About George Skarmoutsos](https://sydneyautomationco.com.au/about): Profile of founder George Skarmoutsos, an accredited lighting control specialist with extensive experience in Schneider and Philips systems.
-* [Projects — Commercial C-Bus Installations](https://sydneyautomationco.com.au/projects): Portfolio of successful automation projects including commercial upgrades and automated blind control systems.
+## Core Services
 
-## Resources
+- **C-Bus Fault Finding & Repair** (https://sydneyautomationco.com.au/cbus-fault-finding-sydney): RS-485 bus voltage analysis, network burden verification, module-level diagnostics, and C-Bus Toolkit connectivity troubleshooting for Clipsal C-Bus systems
+- **C-Bus Programming** (https://sydneyautomationco.com.au/c-bus-programmer-sydney): New system commissioning, scene programming, scheduling, logic engine scripting, and multi-room integration using C-Bus Toolkit
+- **C-Bus Upgrades** (https://sydneyautomationco.com.au/cbus-upgrade-sydney): Modernisation of legacy C-Bus 5000-series hardware, adding mobile app control (C-Bus Home Control), touchscreens, and PIR/daylight sensors
+- **Dynalite Fault Finding** (https://sydneyautomationco.com.au/dynalite-fault-finding-sydney-common-faults): DyNet communication bus diagnostics, address conflict resolution, processor resets, and network topology verification
+- **Dynalite Programming** (https://sydneyautomationco.com.au/dynalite-programmer-sydney): System design and commissioning using Dynalite EnvisionProject software for commercial and residential installations
+- **DALI / DALI-2 Lighting Control** (https://sydneyautomationco.com.au/dali-lighting-control-system-sydney): DALI bus commissioning, emergency lighting AFSS compliance testing, and DALI-2 integration with BMS systems
+- **Emergency Repair** (https://sydneyautomationco.com.au/emergency-repair-sydney): Rapid-response same-day emergency service for total lighting control system failures across C-Bus, Dynalite, DALI, and RAPIX
+- **RAPIX Emergency Lighting** (https://sydneyautomationco.com.au/services): Programming, testing, and compliance verification for RAPIX emergency lighting systems in commercial buildings
+- **AFSS Emergency Lighting Compliance** (https://sydneyautomationco.com.au/afss-emergency-lighting-services): Annual fire safety statement emergency lighting testing, log book maintenance, and compliance documentation
+- **Strata & Facility Management** (https://sydneyautomationco.com.au/strata): Tailored lighting control support for managed buildings, strata committees, and facility managers including compliance documentation and system handover
+- **Electrician Partnership** (https://sydneyautomationco.com.au/electricians): Specialist backup for licensed electricians who encounter complex C-Bus, Dynalite, or DALI automation faults beyond their scope
 
-* [Blog — C-Bus & Dynalite Articles](https://sydneyautomationco.com.au/blog): Technical guides, industry news, and expert tips on maintaining and optimizing lighting control systems.
-* [C-Bus & Dynalite Guides](https://sydneyautomationco.com.au/guides): Knowledge base featuring renovation planning guides and technical comparisons for property owners.
-* [C-Bus vs Dynalite Comparison](https://sydneyautomationco.com.au/cbus-vs-dynalite): An honest technical comparison of leading lighting control platforms to help users choose the right system.
+## Technical Protocols & Systems
 
-## Locations
+Sydney Automation Co. works with the following lighting control protocols and systems:
+- **Clipsal C-Bus (C-Bus 2)** — RS-485 based lighting control protocol by Schneider Electric/Clipsal. Key software: C-Bus Toolkit. Hardware includes 5500PC network interface, 5500PS power supply, 5000-series dimmers/relays, L55-series modules, Saturn/Neo/Element keypads, C-Bus touchscreen interfaces
+- **Signify Dynalite** — DyNet protocol-based system by Signify (formerly Philips). Key software: Dynalite EnvisionProject. Hardware includes DDBC1200 processors, DDMC802 dimmer controllers, DDNG232/485 network gateways, Antumbra keypads, DUS360 occupancy sensors
+- **DALI / DALI-2** — Digital Addressable Lighting Interface standard (IEC 62386). Used for emergency lighting compliance (AFSS), commercial building lighting, and integration with BMS. Brands: Tridonic, Philips, Osram, Meanwell
+- **RAPIX** — Emergency lighting control system by Signify. Used in commercial and institutional buildings for mandatory emergency lighting circuits
+- **Apple HomeKit Integration** — C-Bus to HomeKit bridge solutions for voice control via Siri and Apple Home app
 
-* [Service Areas](https://sydneyautomationco.com.au/locations): Directory of service locations across Greater Sydney, including dedicated support for major residential and commercial hubs.
-* [Sutherland Shire Specialist](https://sydneyautomationco.com.au/shire): Local C-Bus and Dynalite services based in Menai, offering same-day callouts with no travel surcharge for Shire residents.
-* [Eastern Suburbs Specialist](https://sydneyautomationco.com.au/c-bus-programmer-eastern-suburbs): Expert automation support for prestige properties in Bondi, Vaucluse, Double Bay, and surrounding suburbs.
-* [North Shore Specialist](https://sydneyautomationco.com.au/c-bus-programmer-north-shore): Specialized programming and repair services for North Shore suburbs including Mosman, Chatswood, and Pymble.
+## Technical Library
+
+We maintain a library of 500+ model-specific troubleshooting guides at https://sydneyautomationco.com.au/tech-library covering:
+- LED status indicator codes for all C-Bus and Dynalite hardware
+- Buzzing, clicking, and audible noise diagnostics
+- Frozen or unresponsive interface troubleshooting
+- Schedule and timeclock drift repair
+- Surge and storm damage assessment
+- Network communication faults and bus crashes
+
+## Diagnostic Capabilities
+
+George carries specialist diagnostic equipment including:
+- RS-485 bus analyser for C-Bus and DyNet voltage/termination testing
+- C-Bus Toolkit and Dynalite EnvisionProject software on-site laptop
+- DALI bus analyser for DALI-2 emergency lighting compliance
+- Network analyser for Ethernet-based C-Bus/EIB communication faults
+- Infrared thermal camera for identifying overheating modules and loose connections
+
+## Pricing
+
+- $150/hr with a 3-hour minimum call-out (first $150 is a priority deposit credited to your invoice)
+- Fixed diagnosis fee: $450 (covers full system assessment)
+- Transparent pricing with no hidden fees
+- Full pricing details: https://sydneyautomationco.com.au/pricing-sydney
+
+## Service Areas
+
+Based in Menai (Sutherland Shire), we service all of Greater Sydney including:
+- Sutherland Shire (no travel surcharge)
+- Sydney CBD and surrounds
+- Eastern Suburbs (Bondi, Vaucluse, Double Bay, Paddington)
+- North Shore (Mosman, Chatswood, Pymble, North Sydney)
+- Inner West (Balmain, Marrickville, Newtown, Leichhardt)
+- Western Sydney (Parramatta, Castle Hill, Penrith)
+- Northern Beaches (Manly, Mona Vale, Avalon)
+- Cronulla and coastal areas (specialist in salt-humidity corrosion on C-Bus terminations)
 
 ## Key Facts
 
-* George Skarmoutsos (Founder)
-* 10+ years experience
-* Accredited C-Bus/Dynalite
-* Based in Menai
+- George Skarmoutsos, Founder — Former Clipsal National Technical Support
+- 15+ years hands-on experience
+- Schneider Electric / Clipsal Accredited C-Bus Programmer
+- Signify / Philips Dynalite Accredited System Designer
+- Based in Menai, Sutherland Shire, NSW
+- 14+ five-star Google reviews
+- 100% database backup handover on every job
+
+## Projects & Case Studies
+
+- **WSU Parramatta** — University teaching studio C-Bus and Dynalite commissioning
+- **Winten North Sydney** — Commercial office floor C-Bus relay panel replacement
+- **NSW Government Placemaking (The Rocks)** — Heritage building Dynalite touchscreen and office lighting control
+- **Kebia Importex** — Industrial warehouse C-Bus panel installation
+- **Uluru Meeting Place** — Venue lighting automation for events and functions
+
+## Manufacturer References
+
+- Schneider Electric / Clipsal C-Bus: https://www.clipsal.com/
+- Signify / Philips Dynalite: https://www.signify.com/
+- DALI Alliance (DiiA): https://www.dali-alliance.org/
+- Schneider Electric Australia: https://www.se.com/au/
 
 ## Contact
 
-* Phone: 0422 469 739
-* Website: [https://sydneyautomationco.com.au/](https://sydneyautomationco.com.au/)
+- Phone: 0422 469 739
+- Email: service@sydneyautomationco.com.au
+- Website: https://sydneyautomationco.com.au/
+- Book online: https://sydneyautomationco.com.au/book-service

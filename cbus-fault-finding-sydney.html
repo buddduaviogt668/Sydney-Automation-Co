@@ -1,5 +1,22 @@
 <!DOCTYPE html>
 <html lang="en"><head>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Clipsal C-Bus Toolkit",
+  "applicationCategory": "DeveloperApplication",
+  "operatingSystem": "Windows",
+  "description": "Official programming and commissioning software for Clipsal C-Bus 2 lighting control systems by Schneider Electric.",
+  "provider": {
+    "@type": "Organization",
+    "name": "Schneider Electric",
+    "url": "https://www.se.com/au/"
+  },
+  "softwareVersion": "5.15.0",
+  "url": "https://www.clipsal.com/products/c-bus-software"
+}
+</script>
 <meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
 <meta name="description" content="Most C-Bus faults in Sydney come down to 3 causes. Check these first — you may be able to describe the fault accurately and save time."/>
 <link rel="canonical" href="https://sydneyautomationco.com.au/cbus-fault-finding-sydney.html"/>
@@ -142,6 +159,47 @@ footer{background:#132647;border-top:1px solid #2a4a80;padding:48px 24px 32px}
   gtag('js', new Date());
   gtag('config', 'G-7EZFB6GRJ3');
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "How to Diagnose C-Bus Lighting Control Faults",
+  "description": "Step-by-step diagnostic procedure for Clipsal C-Bus lighting control system faults including bus voltage checks, module diagnostics, and programming verification.",
+  "totalTime": "PT30M",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "name": "Measure C-Bus Network Voltage",
+      "text": "Using a multimeter, measure the voltage across the C-Bus network terminals at the 5500PS power supply. Normal range is 5 to 11.5V DC. Below 5V indicates a power supply fault or short circuit.",
+      "position": 1
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Check 5500PC Network Interface LEDs",
+      "text": "Observe the LED indicators on the 5500PC network interface. A steady light indicates normal communication. Rapid flashing indicates a network fault. No light indicates power or hardware failure.",
+      "position": 2
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Scan with C-Bus Toolkit Software",
+      "text": "Connect a laptop running C-Bus Toolkit to the 5500PC via USB or Ethernet. Run a network scan to identify all online modules, check for address conflicts, and verify programming integrity.",
+      "position": 3
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Verify Network Burden Placement",
+      "text": "C-Bus networks require a network burden at each end of the bus segment. Check that burdens are correctly placed and that no segment has multiple or missing burdens.",
+      "position": 4
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Test Individual Module Outputs",
+      "text": "Using C-Bus Toolkit, manually activate each dimmer or relay channel to verify output. A non-responsive module may need power cycling or replacement.",
+      "position": 5
+    }
+  ]
+}
+</script>
 </head><body>
 <nav>
   <a href="/" class="logo">
@@ -197,6 +255,7 @@ document.addEventListener('click',function(e){
   if(q){var item=q.closest('.faq-item');item.classList.toggle('open');}
 });
 </script>
+<div style="background:#132647;border-left:4px solid #f07020;padding:16px 20px;border-radius:0 8px 8px 0;margin:0 0 24px"><strong style="color:#f0c040;font-size:1.05rem">To diagnose C-Bus faults in Sydney, start by measuring bus voltage at the 5500PS power supply (should read 5–11.5V DC), check the 5500PC network interface LED status, use C-Bus Toolkit to scan for address conflicts or offline modules, and verify network burden placement at each segment end.</strong></div>
 <div class="page">
   <div style="padding:64px 24px 0">
     <div class="container-sm">
@@ -243,6 +302,19 @@ document.addEventListener('click',function(e){
     </div>
   </div>
 </div>
+
+<section style="background:#0d1e3c;border-top:1px solid #1a2a4a;padding:40px 24px">
+<div class="container" style="max-width:1000px;margin:0 auto;text-align:center">
+<h2 style="color:#fff;font-family:'Barlow Condensed',sans-serif;font-size:1.5rem;margin-bottom:8px">Manufacturer-Accredited Specialist</h2>
+<p style="color:#a8c0e0;font-size:14px;margin-bottom:24px">We are accredited by the original equipment manufacturers. Our certifications are verifiable:</p>
+<div style="display:flex;justify-content:center;gap:32px;flex-wrap:wrap">
+<a href="https://www.se.com/au/" target="_blank" rel="noopener" style="color:#a8c0e0;font-size:13px;text-decoration:none;padding:12px 20px;border:1px solid #2a4a80;border-radius:8px;transition:all 0.2s">Schneider Electric (Clipsal C-Bus) &rarr;</a>
+<a href="https://www.signify.com/" target="_blank" rel="noopener" style="color:#a8c0e0;font-size:13px;text-decoration:none;padding:12px 20px;border:1px solid #2a4a80;border-radius:8px;transition:all 0.2s">Signify (Philips Dynalite) &rarr;</a>
+<a href="https://www.dali-alliance.org/" target="_blank" rel="noopener" style="color:#a8c0e0;font-size:13px;text-decoration:none;padding:12px 20px;border:1px solid #2a4a80;border-radius:8px;transition:all 0.2s">DALI Alliance (DiiA) &rarr;</a>
+<a href="https://www.clipsal.com/" target="_blank" rel="noopener" style="color:#a8c0e0;font-size:13px;text-decoration:none;padding:12px 20px;border:1px solid #2a4a80;border-radius:8px;transition:all 0.2s">Clipsal Product Portal &rarr;</a>
+</div>
+</div>
+</section>
 <footer>
   <div class="footer-grid">
     <div>
