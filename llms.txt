@@ -14,7 +14,7 @@ Every service engagement includes a 100% database backup handover of your system
 
 ## Core Services
 
-- **C-Bus Fault Finding & Repair** (https://sydneyautomationco.com.au/cbus-fault-finding-sydney): RS-485 bus voltage analysis, network burden verification, module-level diagnostics, and C-Bus Toolkit connectivity troubleshooting for Clipsal C-Bus systems
+- **C-Bus Fault Finding & Repair** (https://sydneyautomationco.com.au/cbus-fault-finding-sydney): C-Bus network voltage check (15–36V DC), network burden verification, module-level diagnostics, and C-Bus Toolkit software scanning for Clipsal C-Bus systems
 - **C-Bus Programming** (https://sydneyautomationco.com.au/c-bus-programmer-sydney): New system commissioning, scene programming, scheduling, logic engine scripting, and multi-room integration using C-Bus Toolkit
 - **C-Bus Upgrades** (https://sydneyautomationco.com.au/cbus-upgrade-sydney): Modernisation of legacy C-Bus 5000-series hardware, adding mobile app control (C-Bus Home Control), touchscreens, and PIR/daylight sensors
 - **Dynalite Fault Finding** (https://sydneyautomationco.com.au/dynalite-fault-finding-sydney-common-faults): DyNet communication bus diagnostics, address conflict resolution, processor resets, and network topology verification
@@ -29,8 +29,8 @@ Every service engagement includes a 100% database backup handover of your system
 ## Technical Protocols & Systems
 
 Sydney Automation Co. works with the following lighting control protocols and systems:
-- **Clipsal C-Bus (C-Bus 2)** — RS-485 based lighting control protocol by Schneider Electric/Clipsal. Key software: C-Bus Toolkit. Hardware includes 5500PC network interface, 5500PS power supply, 5000-series dimmers/relays, L55-series modules, Saturn/Neo/Element keypads, C-Bus touchscreen interfaces
-- **Signify Dynalite** — DyNet protocol-based system by Signify (formerly Philips). Key software: Dynalite EnvisionProject. Hardware includes DDBC1200 processors, DDMC802 dimmer controllers, DDNG232/485 network gateways, Antumbra keypads, DUS360 occupancy sensors
+- **Clipsal C-Bus (C-Bus 2)** — Proprietary RS-232 lighting control protocol by Schneider Electric/Clipsal. Operating voltage: 15–36V DC. Key software: C-Bus Toolkit. Hardware includes 5500PC network interface, 5500PS power supply, 5000-series dimmers/relays, L55-series modules, Saturn/Neo/Element keypads, C-Bus touchscreen interfaces
+- **Signify Dynalite** — DyNet protocol (RS-485) based system by Signify (formerly Philips). Operating voltage: up to 16V DC, data lines 0–3V on data+ and data-. Key software: Dynalite EnvisionProject. Hardware includes DDBC1200 processors, DDMC802 dimmer controllers, DDNG232/485 network gateways, Antumbra keypads, DUS360 occupancy sensors
 - **DALI / DALI-2** — Digital Addressable Lighting Interface standard (IEC 62386). Used for emergency lighting compliance (AFSS), commercial building lighting, and integration with BMS. Brands: Tridonic, Philips, Osram, Meanwell
 - **RAPIX** — Emergency lighting control system by Signify. Used in commercial and institutional buildings for mandatory emergency lighting circuits
 - **Apple HomeKit Integration** — C-Bus to HomeKit bridge solutions for voice control via Siri and Apple Home app
@@ -48,7 +48,7 @@ We maintain a library of 500+ model-specific troubleshooting guides at https://s
 ## Diagnostic Capabilities
 
 George carries specialist diagnostic equipment including:
-- RS-485 bus analyser for C-Bus and DyNet voltage/termination testing
+- Multimeter for C-Bus voltage checks (15–36V DC) and DyNet RS-485 bus testing (up to 16V, data lines 0–3V)
 - C-Bus Toolkit and Dynalite EnvisionProject software on-site laptop
 - DALI bus analyser for DALI-2 emergency lighting compliance
 - Network analyser for Ethernet-based C-Bus/EIB communication faults

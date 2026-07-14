@@ -169,7 +169,7 @@ footer{background:#132647;border-top:1px solid #2a4a80;padding:48px 24px 32px}
     {
       "@type": "HowToStep",
       "name": "Check DyNet Bus Voltage",
-      "text": "Measure the voltage between DyNet+ and DyNet- terminals at any keypad or device. Normal operating range is 9.6 to 42V DC. Below 9.6V indicates a bus power fault.",
+      "text": "Measure the voltage between DyNet+ and DyNet- terminals at any keypad or device. Normal operating range is up to 16V DC (data lines 0–3V). Below Below operating voltage indicates a bus power fault.",
       "position": 1
     },
     {
@@ -254,7 +254,7 @@ document.addEventListener('click',function(e){
   if(q){var item=q.closest('.faq-item');item.classList.toggle('open');}
 });
 </script>
-<div style="background:#132647;border-left:4px solid #f07020;padding:16px 20px;border-radius:0 8px 8px 0;margin:0 0 24px"><strong style="color:#f0c040;font-size:1.05rem">To diagnose Dynalite system faults, you must verify DyNet bus communication voltage (9.6–42V DC), check for address conflicts using Dynalite EnvisionProject software, confirm the DDBC1200 processor is not in fault mode, and inspect all DyNet wiring for loose or corroded connections.</strong></div>
+<div style="background:#132647;border-left:4px solid #f07020;padding:16px 20px;border-radius:0 8px 8px 0;margin:0 0 24px"><strong style="color:#f0c040;font-size:1.05rem">To diagnose Dynalite system faults, you must verify DyNet bus communication voltage (up to 16V DC (data lines 0–3V)), check for address conflicts using Dynalite EnvisionProject software, confirm the DDBC1200 processor is not in fault mode, and inspect all DyNet wiring for loose or corroded connections.</strong></div>
 <div class="page">
   <div style="padding:64px 24px 0">
     <div class="container-sm">

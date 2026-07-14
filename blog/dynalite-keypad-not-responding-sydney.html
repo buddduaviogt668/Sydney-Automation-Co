@@ -45,7 +45,7 @@
       {
         "@type": "HowToStep",
         "name": "Verify DyNet Bus Voltage",
-        "text": "Measure the DyNet communication bus voltage at the keypad terminals. Normal operating voltage is 9.6–42V DC. Below 9.6V indicates a power supply or cable fault.",
+        "text": "Measure the DyNet communication bus voltage at the keypad terminals. Normal operating voltage is up to 16V DC (data lines 0–3V). Below Below operating voltage indicates a power supply or cable fault.",
         "position": 2
       },
       {
@@ -79,7 +79,7 @@
         "name": "Why is my Dynalite keypad not responding?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "A Dynalite keypad typically stops responding due to: DyNet bus communication loss (check bus voltage — should be 9.6–42V DC), address conflict with another device, processor fault, or physical wiring damage. Use Dynalite EnvisionProject software to scan for conflicts."
+          "text": "A Dynalite keypad typically stops responding due to: DyNet bus communication loss (check bus voltage — should be up to 16V DC (data lines 0–3V)), address conflict with another device, processor fault, or physical wiring damage. Use Dynalite EnvisionProject software to scan for conflicts."
         }
       },
       {
@@ -245,7 +245,7 @@
                 <p class="meta">Published: 2026-06-12 | Updated: 2026-07-14 | Author: George Skarmoutsos, Accredited Dynalite System Designer</p>
 
                 <div style="background:#132647;border-left:4px solid #f07020;padding:16px 20px;border-radius:0 8px 8px 0;margin-bottom:32px">
-                <strong style="color:#f0c040;font-size:1.05rem">To fix a Dynalite keypad that is not responding, you must first verify DyNet bus communication voltage (9.6–42V DC at the keypad terminals), check for address conflicts using Dynalite EnvisionProject software, confirm the main processor (e.g., DDBC1200) is not in fault mode, and inspect physical wiring for loose or corroded connections on the DyNet bus cable.</strong>
+                <strong style="color:#f0c040;font-size:1.05rem">To fix a Dynalite keypad that is not responding, you must first verify DyNet bus communication voltage (up to 16V DC (data lines 0–3V) at the keypad terminals), check for address conflicts using Dynalite EnvisionProject software, confirm the main processor (e.g., DDBC1200) is not in fault mode, and inspect physical wiring for loose or corroded connections on the DyNet bus cable.</strong>
                 </div>
 
                 <h2>Why Your Dynalite Keypad Has Stopped Responding</h2>
@@ -274,7 +274,7 @@
                 <h2>Step-by-Step Diagnostic Guide</h2>
                 <ol>
                     <li><strong>Observe the keypad LED</strong> — Note whether it is off, solid, blinking normally, or flashing rapidly. This immediately narrows the fault.</li>
-                    <li><strong>Check DyNet bus voltage</strong> — Measure between the DyNet+ and DyNet- terminals at the keypad. Normal range is 9.6–42V DC. Below 9.6V indicates a bus power fault.</li>
+                    <li><strong>Check DyNet bus voltage</strong> — Measure between the DyNet+ and DyNet- terminals at the keypad. Normal range is up to 16V DC (data lines 0–3V). Below Below operating voltage indicates a bus power fault.</li>
                     <li><strong>Test with Dynalite EnvisionProject</strong> — Connect to the processor and scan the bus. The software will show which devices are online and flag any address conflicts.</li>
                     <li><strong>Check processor status</strong> — Inspect the DDBC1200 or main processor for error LEDs. Refer to the processor's LED status documentation for the specific fault code.</li>
                     <li><strong>Power cycle the processor</strong> — Disconnect power for 30 seconds, reconnect, and wait 2 minutes for re-initialisation. This resolves most transient processor lockups.</li>
@@ -283,7 +283,7 @@
                 </ol>
 
                 <h2>When to Call a Specialist</h2>
-                <p>If power cycling the processor does not restore keypad function, or if the EnvisionProject software shows communication errors, the fault typically requires on-site bus analysis with specialist equipment. George carries Dynalite EnvisionProject software, RS-485 bus analysers, and common replacement Dynalite hardware to resolve most keypad faults in a single visit.</p>
+                <p>If power cycling the processor does not restore keypad function, or if the EnvisionProject software shows communication errors, the fault typically requires on-site bus analysis with specialist equipment. George carries Dynalite EnvisionProject software, a multimeter, and common replacement Dynalite hardware to resolve most keypad faults in a single visit.</p>
 
                 <h2>Serving Dynalite Installations Across Sydney</h2>
                 <p>Sydney Automation Co. services Dynalite systems in commercial offices, hotels, strata buildings, and luxury residences across Greater Sydney — including the Eastern Suburbs, North Shore, Sutherland Shire, Inner West, and Sydney CBD. Call <a href="tel:+61422469739">0422 469 739</a> for same-day Dynalite fault finding.</p>
