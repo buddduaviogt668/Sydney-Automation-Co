@@ -1311,11 +1311,11 @@
         transition: opacity 4s ease;
       }
       .hero-bg-img.primary {
-        background-image: url('/hero-sydney-bridge.png');
+        background-image: url('/hero-sydney-bridge.webp');
         opacity: 1;
       }
       .hero-bg-img.secondary {
-        background-image: url('/hero-sydney-night.png');
+        background-image: url('/hero-sydney-night.webp');
         opacity: 0;
       }
       .hero-bg-overlay {
@@ -1532,6 +1532,82 @@
       <span></span><span></span><span></span>
     </button>
   </nav>
+<div class="mob-nav" id="mobNav">
+<a href="/">Home</a>
+<div class="mob-section">
+<div class="mob-section-title">C-Bus Services</div>
+<a href="/c-bus-programmer-sydney">C-Bus Programming</a>
+<a href="/cbus-repair-sydney">C-Bus Repairs</a>
+<a href="/cbus-upgrade-sydney">C-Bus Upgrades</a>
+<a href="/cbus-repair-sydney">C-Bus Fault Finding</a>
+<a href="/cbus-specialist-sydney">C-Bus Specialist</a>
+<a href="/c-bus-apple-homekit-sydney">C-Bus &amp; Apple HomeKit</a>
+</div>
+<div class="mob-section">
+<div class="mob-section-title">Dynalite Services</div>
+<a href="/dynalite-programmer-sydney">Dynalite Programming</a>
+<a href="/dynalite-repair-sydney">Dynalite Repairs</a>
+<a href="/dynalite-repair-sydney">Dynalite Fault Finding</a>
+</div>
+<div class="mob-section">
+<div class="mob-section-title">Lighting Control</div>
+<a href="/lighting-control-service-sydney">Lighting Control Service</a>
+<a href="/cbus-repair-sydney">Lighting Control Repair</a>
+<a href="/led-upgrade-carpark-lighting-sydney">LED Upgrades</a>
+<a href="/carpark-lighting-upgrades-sydney">Car Park Upgrades</a>
+<a href="/building-lighting-upgrades-sydney">Building Lighting Upgrades</a>
+<div class="dd-divider"></div>
+<a href="/services-hub" style="color:#f07020;">★ Service Directory</a>
+</div>
+<div class="mob-section">
+<div class="mob-section-title">Emergency &amp; Compliance</div>
+<a href="/emergency-lighting-compliance-afss-sydney">AFSS & Compliance Audit</a>
+<a href="/services">RAPIX Emergency Lighting</a>
+<a href="/emergency-lighting-hotels-hospitality-sydney">Hotels &amp; Hospitality</a>
+<a href="/emergency-lighting-compliance-afss-sydney">Train Stations &amp; Infrastructure</a>
+<a href="/emergency-repair-sydney">Emergency Repair</a>
+</div>
+<div class="mob-section">
+<div class="mob-section-title">DALI &amp; RAPIX</div>
+<a href="/dali-lighting-repair">DALI Lighting Repair</a>
+<a href="/dali2-compliance-nsw-commercial">DALI-2 Compliance & ROI</a>
+<a href="/services">RAPIX Lighting Control</a>
+<a href="/what-is-rapix-sydney-buildings">What is RAPIX?</a>
+</div>
+<div class="mob-section">
+<div class="mob-section-title">Maintenance &amp; Contracts</div>
+<a href="/lighting-control-maintenance-sydney">Lighting Control Maintenance</a>
+<a href="/services">C-Bus Maintenance</a>
+<a href="/services">Dynalite Maintenance</a>
+<a href="/lighting-control-service-contract-sydney">Service Contracts</a>
+<a href="/building-automation-maintenance-sydney">Building Automation</a>
+<a href="/facilities-lighting-maintenance-sydney">Facilities Maintenance</a>
+</div>
+<div class="mob-section">
+<div class="mob-section-title">Service Areas</div>
+<a href="/c-bus-programmer-sydney">Sutherland Shire</a>
+<a href="/c-bus-programmer-sydney">North Shore</a>
+<a href="/c-bus-programmer-sydney">Eastern Suburbs</a>
+<a href="/c-bus-programmer-sydney">Northern Beaches</a>
+<a href="/c-bus-programmer-sydney">Sydney CBD</a>
+<a href="/locations">All Service Areas</a>
+</div>
+<div class="mob-section">
+<div class="mob-section-title">Clients</div>
+<a href="/strata-managers-lighting-control-sydney">Strata Managers</a>
+<a href="/building-manager-lighting-support-sydney">Building Managers</a>
+<a href="/building-managers-lighting-control-nsw">Facility Managers</a>
+</div>
+<div class="mob-section">
+<div class="mob-section-title">Resources</div>
+<a href="/tech-library">Tech Library</a>
+<a href="/blog">Blog</a>
+<a href="/guides">Guides</a>
+<a href="/projects">Projects</a>
+<a href="/about">About</a>
+</div>
+<a class="mob-cta" href="tel:0422469739">📞 Call Now — 0422 469 739</a>
+<
             
             <div class="hero" style="padding-top:120px; padding-bottom:60px;">
                 <div class="container text-center">
@@ -1550,11 +1626,11 @@
                         </div>
             
                         <h2>Direct Answer: C-Bus Ethernet Interface (5500CN) — Blinking LED Codes</h2>
-                        <p style="font-size:18px; line-height:1.6;"><strong>A blinking LED indicates a lost network clock or power supply voltage drop. Verify network voltage is above 22V and use toolkit software to re-assign a network clock driver.</strong></p>
+    <p style="font-size:18px; line-height:1.6;"><strong>The 5500CN has three status LEDs: Power, C-Bus, and Ethernet. If the Ethernet LED shows a solid green link with no cable connected, the internal Lantronix XPort is running on undervoltage. Measure the DC input: should be 9-12V AC or DC at minimum 500mA. Below 7.5V, the XPort will show false link status. The 5500CN is effectively a 5500PCI with a Lantronix MSS100 serial-to-Ethernet converter bolted inside.</strong></p>
                         
                         <h3 style="margin-top:40px;">Step-by-Step Diagnostic Steps</h3>
                         <ol style="margin-left:20px; line-height:1.8; font-size:16px;">
-                            <li>Check the system power supply voltage with a multimeter.</li><li>If voltage is below 22V, the power supply module may need replacement.</li><li>Connect using the manufacturer toolkit software.</li><li>Verify that a network clock is enabled on at least one device.</li><li>Re-program if necessary and monitor LED status.</li>
+                            <li>Measure the PSU output voltage under load. The 5500CN needs 9-12V DC or AC at minimum 500mA. If below 7.5V, replace the PSU (Mean Well RS-15-12 is a direct drop-in replacement).</li><li>If the Ethernet LED shows green with no cable, test with a known-good 12V 1A supply directly into the power terminals. If the LED turns red, the original internal regulator was failing.</li><li>For network discovery issues, use the ARP spoofing method: 'arp -s <temp_ip> <mac_address>' with a direct crossover cable, then telnet to port 1.</li><li>Disconnect the C-Bus pink cables. If the C-Bus LED stays off with only the PSU connected, the internal C-Bus transceiver or power regulator has failed.</li>
                         </ol>
                         
                         <div style="margin-top:50px; text-align:center; padding:30px; background:rgba(240, 112, 32, 0.1); border-radius:8px;">

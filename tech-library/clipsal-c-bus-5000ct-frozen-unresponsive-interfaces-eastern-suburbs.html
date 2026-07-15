@@ -1311,11 +1311,11 @@
         transition: opacity 4s ease;
       }
       .hero-bg-img.primary {
-        background-image: url('/hero-sydney-bridge.png');
+        background-image: url('/hero-sydney-bridge.webp');
         opacity: 1;
       }
       .hero-bg-img.secondary {
-        background-image: url('/hero-sydney-night.png');
+        background-image: url('/hero-sydney-night.webp');
         opacity: 0;
       }
       .hero-bg-overlay {
@@ -1532,6 +1532,82 @@
       <span></span><span></span><span></span>
     </button>
   </nav>
+<div class="mob-nav" id="mobNav">
+<a href="/">Home</a>
+<div class="mob-section">
+<div class="mob-section-title">C-Bus Services</div>
+<a href="/c-bus-programmer-sydney">C-Bus Programming</a>
+<a href="/cbus-repair-sydney">C-Bus Repairs</a>
+<a href="/cbus-upgrade-sydney">C-Bus Upgrades</a>
+<a href="/cbus-repair-sydney">C-Bus Fault Finding</a>
+<a href="/cbus-specialist-sydney">C-Bus Specialist</a>
+<a href="/c-bus-apple-homekit-sydney">C-Bus &amp; Apple HomeKit</a>
+</div>
+<div class="mob-section">
+<div class="mob-section-title">Dynalite Services</div>
+<a href="/dynalite-programmer-sydney">Dynalite Programming</a>
+<a href="/dynalite-repair-sydney">Dynalite Repairs</a>
+<a href="/dynalite-repair-sydney">Dynalite Fault Finding</a>
+</div>
+<div class="mob-section">
+<div class="mob-section-title">Lighting Control</div>
+<a href="/lighting-control-service-sydney">Lighting Control Service</a>
+<a href="/cbus-repair-sydney">Lighting Control Repair</a>
+<a href="/led-upgrade-carpark-lighting-sydney">LED Upgrades</a>
+<a href="/carpark-lighting-upgrades-sydney">Car Park Upgrades</a>
+<a href="/building-lighting-upgrades-sydney">Building Lighting Upgrades</a>
+<div class="dd-divider"></div>
+<a href="/services-hub" style="color:#f07020;">★ Service Directory</a>
+</div>
+<div class="mob-section">
+<div class="mob-section-title">Emergency &amp; Compliance</div>
+<a href="/emergency-lighting-compliance-afss-sydney">AFSS & Compliance Audit</a>
+<a href="/services">RAPIX Emergency Lighting</a>
+<a href="/emergency-lighting-hotels-hospitality-sydney">Hotels &amp; Hospitality</a>
+<a href="/emergency-lighting-compliance-afss-sydney">Train Stations &amp; Infrastructure</a>
+<a href="/emergency-repair-sydney">Emergency Repair</a>
+</div>
+<div class="mob-section">
+<div class="mob-section-title">DALI &amp; RAPIX</div>
+<a href="/dali-lighting-repair">DALI Lighting Repair</a>
+<a href="/dali2-compliance-nsw-commercial">DALI-2 Compliance & ROI</a>
+<a href="/services">RAPIX Lighting Control</a>
+<a href="/what-is-rapix-sydney-buildings">What is RAPIX?</a>
+</div>
+<div class="mob-section">
+<div class="mob-section-title">Maintenance &amp; Contracts</div>
+<a href="/lighting-control-maintenance-sydney">Lighting Control Maintenance</a>
+<a href="/services">C-Bus Maintenance</a>
+<a href="/services">Dynalite Maintenance</a>
+<a href="/lighting-control-service-contract-sydney">Service Contracts</a>
+<a href="/building-automation-maintenance-sydney">Building Automation</a>
+<a href="/facilities-lighting-maintenance-sydney">Facilities Maintenance</a>
+</div>
+<div class="mob-section">
+<div class="mob-section-title">Service Areas</div>
+<a href="/c-bus-programmer-sydney">Sutherland Shire</a>
+<a href="/c-bus-programmer-sydney">North Shore</a>
+<a href="/c-bus-programmer-sydney">Eastern Suburbs</a>
+<a href="/c-bus-programmer-sydney">Northern Beaches</a>
+<a href="/c-bus-programmer-sydney">Sydney CBD</a>
+<a href="/locations">All Service Areas</a>
+</div>
+<div class="mob-section">
+<div class="mob-section-title">Clients</div>
+<a href="/strata-managers-lighting-control-sydney">Strata Managers</a>
+<a href="/building-manager-lighting-support-sydney">Building Managers</a>
+<a href="/building-managers-lighting-control-nsw">Facility Managers</a>
+</div>
+<div class="mob-section">
+<div class="mob-section-title">Resources</div>
+<a href="/tech-library">Tech Library</a>
+<a href="/blog">Blog</a>
+<a href="/guides">Guides</a>
+<a href="/projects">Projects</a>
+<a href="/about">About</a>
+</div>
+<a class="mob-cta" href="tel:0422469739">📞 Call Now — 0422 469 739</a>
+<
             
             <div class="hero" style="padding-top:120px; padding-bottom:60px;">
                 <div class="container text-center">
@@ -1551,11 +1627,11 @@
                         </div>
             
                         <h2>Direct Answer: C-Bus 5000CT MKII Touch Screen (Legacy) — Frozen / Unresponsive Interfaces</h2>
-                        <p style="font-size:18px; line-height:1.6;"><strong>Frozen or unresponsive C-Bus touch screens (5000CT B/W series or 5080CTC colour series) and keypads usually point to a software lockup or a network communication drop. A hard reset of the touch screen or network branch is the first step. Do not confuse this with a Wiser 2 Home Controller (5200WHC2) fault, which has different diagnostic steps.</strong></p>
+    <p style="font-size:18px; line-height:1.6;"><strong>A 5000CT that powers on (backlight glows) but the screen is frozen with no touch response typically has a failed touch overlay. The resistive touch overlay degrades after 6-8 years of use. The C-Bus side of the screen still functions (it continues to respond to C-Bus commands and update its display), but the touch layer no longer registers presses.</strong></p>
                         
                         <h3 style="margin-top:40px;">Step-by-Step Diagnostic Steps</h3>
                         <ol style="margin-left:20px; line-height:1.8; font-size:16px;">
-                            <li>Locate the main lighting control switchboard.</li><li>Cycle power to the specific network branch or touch screen (5000CT / 5080CTC).</li><li>Wait 60 seconds for the system to reboot and re-establish network clocks.</li><li>If the touch screen remains frozen, its internal operating system may be corrupt.</li><li>A firmware flash or hardware upgrade to a modern interface may be necessary.</li>
+                            <li>Check if the screen display updates when C-Bus commands are sent (e.g. dimmer levels change). If the display updates, the C-Bus transceiver is working.</li><li>If touch is unresponsive but the display works, the touch overlay or its ribbon cable has failed. JEA Technologies in Nunawading VIC replaces touch overlays for approximately $300-$500 AUD.</li><li>Replacement option: upgrade to a 5080CTC3 colour touch screen (current Clipsal model).</li><li>Alternative: replace the 5000CT with a HomeGate software installation on an iPad running in kiosk mode.</li>
                         </ol>
                         
                         <div style="margin-top:50px; text-align:center; padding:30px; background:rgba(240, 112, 32, 0.1); border-radius:8px;">

@@ -1311,11 +1311,11 @@
         transition: opacity 4s ease;
       }
       .hero-bg-img.primary {
-        background-image: url('/hero-sydney-bridge.png');
+        background-image: url('/hero-sydney-bridge.webp');
         opacity: 1;
       }
       .hero-bg-img.secondary {
-        background-image: url('/hero-sydney-night.png');
+        background-image: url('/hero-sydney-night.webp');
         opacity: 0;
       }
       .hero-bg-overlay {
@@ -1532,6 +1532,82 @@
       <span></span><span></span><span></span>
     </button>
   </nav>
+<div class="mob-nav" id="mobNav">
+<a href="/">Home</a>
+<div class="mob-section">
+<div class="mob-section-title">C-Bus Services</div>
+<a href="/c-bus-programmer-sydney">C-Bus Programming</a>
+<a href="/cbus-repair-sydney">C-Bus Repairs</a>
+<a href="/cbus-upgrade-sydney">C-Bus Upgrades</a>
+<a href="/cbus-repair-sydney">C-Bus Fault Finding</a>
+<a href="/cbus-specialist-sydney">C-Bus Specialist</a>
+<a href="/c-bus-apple-homekit-sydney">C-Bus &amp; Apple HomeKit</a>
+</div>
+<div class="mob-section">
+<div class="mob-section-title">Dynalite Services</div>
+<a href="/dynalite-programmer-sydney">Dynalite Programming</a>
+<a href="/dynalite-repair-sydney">Dynalite Repairs</a>
+<a href="/dynalite-repair-sydney">Dynalite Fault Finding</a>
+</div>
+<div class="mob-section">
+<div class="mob-section-title">Lighting Control</div>
+<a href="/lighting-control-service-sydney">Lighting Control Service</a>
+<a href="/cbus-repair-sydney">Lighting Control Repair</a>
+<a href="/led-upgrade-carpark-lighting-sydney">LED Upgrades</a>
+<a href="/carpark-lighting-upgrades-sydney">Car Park Upgrades</a>
+<a href="/building-lighting-upgrades-sydney">Building Lighting Upgrades</a>
+<div class="dd-divider"></div>
+<a href="/services-hub" style="color:#f07020;">★ Service Directory</a>
+</div>
+<div class="mob-section">
+<div class="mob-section-title">Emergency &amp; Compliance</div>
+<a href="/emergency-lighting-compliance-afss-sydney">AFSS & Compliance Audit</a>
+<a href="/services">RAPIX Emergency Lighting</a>
+<a href="/emergency-lighting-hotels-hospitality-sydney">Hotels &amp; Hospitality</a>
+<a href="/emergency-lighting-compliance-afss-sydney">Train Stations &amp; Infrastructure</a>
+<a href="/emergency-repair-sydney">Emergency Repair</a>
+</div>
+<div class="mob-section">
+<div class="mob-section-title">DALI &amp; RAPIX</div>
+<a href="/dali-lighting-repair">DALI Lighting Repair</a>
+<a href="/dali2-compliance-nsw-commercial">DALI-2 Compliance & ROI</a>
+<a href="/services">RAPIX Lighting Control</a>
+<a href="/what-is-rapix-sydney-buildings">What is RAPIX?</a>
+</div>
+<div class="mob-section">
+<div class="mob-section-title">Maintenance &amp; Contracts</div>
+<a href="/lighting-control-maintenance-sydney">Lighting Control Maintenance</a>
+<a href="/services">C-Bus Maintenance</a>
+<a href="/services">Dynalite Maintenance</a>
+<a href="/lighting-control-service-contract-sydney">Service Contracts</a>
+<a href="/building-automation-maintenance-sydney">Building Automation</a>
+<a href="/facilities-lighting-maintenance-sydney">Facilities Maintenance</a>
+</div>
+<div class="mob-section">
+<div class="mob-section-title">Service Areas</div>
+<a href="/c-bus-programmer-sydney">Sutherland Shire</a>
+<a href="/c-bus-programmer-sydney">North Shore</a>
+<a href="/c-bus-programmer-sydney">Eastern Suburbs</a>
+<a href="/c-bus-programmer-sydney">Northern Beaches</a>
+<a href="/c-bus-programmer-sydney">Sydney CBD</a>
+<a href="/locations">All Service Areas</a>
+</div>
+<div class="mob-section">
+<div class="mob-section-title">Clients</div>
+<a href="/strata-managers-lighting-control-sydney">Strata Managers</a>
+<a href="/building-manager-lighting-support-sydney">Building Managers</a>
+<a href="/building-managers-lighting-control-nsw">Facility Managers</a>
+</div>
+<div class="mob-section">
+<div class="mob-section-title">Resources</div>
+<a href="/tech-library">Tech Library</a>
+<a href="/blog">Blog</a>
+<a href="/guides">Guides</a>
+<a href="/projects">Projects</a>
+<a href="/about">About</a>
+</div>
+<a class="mob-cta" href="tel:0422469739">📞 Call Now — 0422 469 739</a>
+<
             
             <div class="hero" style="padding-top:120px; padding-bottom:60px;">
                 <div class="container text-center">
@@ -1546,11 +1622,11 @@
                     <div style="background:#132647; padding:40px; border-radius:12px; border:1px solid #2a4a80;">
                         
                         <h2>Direct Answer: Clipsal C-Bus 5502DAL — Frozen / Unresponsive Interfaces</h2>
-                        <p style="font-size:18px; line-height:1.6;"><strong>Frozen or unresponsive C-Bus touch screens (5000CT B/W series or 5080CTC colour series) and keypads usually point to a software lockup or a network communication drop. A hard reset of the touch screen or network branch is the first step. Do not confuse this with a Wiser 2 Home Controller (5200WHC2) fault, which has different diagnostic steps.</strong></p>
+    <p style="font-size:18px; line-height:1.6;"><strong>A 5502DAL appears 'frozen' when System Builder cannot discover its DALI devices. This is usually a DALI bus fault, not the gateway itself — the gateway has been designed to continue operating independently even if the DALI line short-circuits. A frozen 5502DAL where the LEDs are all off indicates the internal C-Bus power supply or the 24V external supply has failed.</strong></p>
                         
                         <h3 style="margin-top:40px;">Step-by-Step Diagnostic Steps</h3>
                         <ol style="margin-left:20px; line-height:1.8; font-size:16px;">
-                            <li>Locate the main lighting control switchboard.</li><li>Cycle power to the specific network branch or touch screen (5000CT / 5080CTC).</li><li>Wait 60 seconds for the system to reboot and re-establish network clocks.</li><li>If the touch screen remains frozen, its internal operating system may be corrupt.</li><li>A firmware flash or hardware upgrade to a modern interface may be necessary.</li>
+                            <li>Check the external 24V DC supply (if used). The 5502DAL can be powered from C-Bus (15-36V DC) or external 24V (22-28V DC).</li><li>If C-Bus powered, measure the voltage at the 5502DAL's pink C-Bus input — should be 15-36V DC.</li><li>If using external 24V, measure at the V+ and V- terminals. The 5502DAL draws 50mA from C-Bus or 30mA from external supply.</li><li>Use the service switch to test the DALI bus independently of System Builder. The service switch functions work without any software connection.</li>
                         </ol>
                         
                         <div style="margin-top:50px; text-align:center; padding:30px; background:rgba(240, 112, 32, 0.1); border-radius:8px;">
