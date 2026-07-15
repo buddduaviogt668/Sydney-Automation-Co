@@ -621,404 +621,334 @@ footer{background:#132647;border-top:1px solid #2a4a80;padding:48px 24px 32px}
         <button class="filter-btn active" data-cat="all">All Articles</button>
         <button class="filter-btn" data-cat="Troubleshooting">Troubleshooting</button>
         <button class="filter-btn" data-cat="Compliance">Compliance</button>
+        <button class="filter-btn" data-cat="Comparison">Comparison</button>
         <button class="filter-btn" data-cat="How-To">How-To</button>
-        <button class="filter-btn" data-cat="Commercial">Commercial</button>
       </div>
     </div>
 
-    <div class="blog-grid" id="blogGrid">
+        <div class="blog-grid" id="blogGrid">
 
-      <a href="/blog-blinking-leds-lighting-network" class="blog-card" data-category="Troubleshooting">
+      <!-- C-Bus Ghost Messages -->
+      <a href="/blog/cbus-ghost-messages-sydney.html" class="blog-card" data-category="Troubleshooting">
+        <div class="blog-image" style="background-image: url('https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=800&q=80')"></div>
+        <div class="blog-content">
+          <div class="blog-card-meta">
+            <span class="badge">Troubleshooting</span>
+            <span>Jan 2026</span>
+          </div>
+          <h3 class="blog-card-title">C-Bus Ghost Messages: Why Your Lights Turn On Randomly</h3>
+          <p class="blog-card-excerpt">Ghost messages on the C-Bus network cause lights to activate without input. Learn how to diagnose phantom traffic, corrupted clock signals, and wiring faults.</p>
+          <div class="blog-card-footer">
+            <div class="blog-tech-stack">
+              <span class="tech-tag">C-Bus</span>
+              <span class="tech-tag">Diagnostics</span>
+            </div>
+            <span class="read-more">Read Guide &rarr;</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- C-Bus Keypad Flashing Pink/Red -->
+      <a href="/blog/cbus-keypad-flashing-pink-red-sydney.html" class="blog-card" data-category="Troubleshooting">
         <div class="blog-image" style="background-image: url('https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&q=80')"></div>
         <div class="blog-content">
           <div class="blog-card-meta">
             <span class="badge">Troubleshooting</span>
-            <span>📅 June 2026</span>
+            <span>Jan 2026</span>
           </div>
-          <h3 class="blog-card-title">The Hidden Cost of Ignoring Blinking LEDs on Your Lighting Control Network</h3>
-          <p class="blog-card-excerpt">A blinking LED on a C-Bus or Dynalite module isn't just an annoyance—it's a warning. Learn why ignoring network clock issues leads to hardware failure.</p>
+          <h3 class="blog-card-title">C-Bus Keypad Flashing Pink/Red? Diagnosis &amp; Repair</h3>
+          <p class="blog-card-excerpt">A keypad flashing pink or red indicates communication loss or firmware corruption. Learn what the LED patterns mean and how to restore normal operation.</p>
           <div class="blog-card-footer">
             <div class="blog-tech-stack">
-              <span class="tech-tag">New</span>
+              <span class="tech-tag">C-Bus</span>
+              <span class="tech-tag">Keypads</span>
             </div>
-            <span class="read-more">Read Article →</span>
+            <span class="read-more">Read Guide &rarr;</span>
           </div>
         </div>
       </a>
 
-      <a href="/blog-electricians-vs-smart-home-relays" class="blog-card" data-category="How-To">
-        <div class="blog-image" style="background-image: url('https://images.unsplash.com/photo-1586528116311-ad8ed7fc5180?w=800&q=80')"></div>
-        <div class="blog-content">
-          <div class="blog-card-meta">
-            <span class="badge">How-To</span>
-            <span>📅 June 2026</span>
-          </div>
-          <h3 class="blog-card-title">Why Traditional Electricians Struggle with Modern Smart Home Relays</h3>
-          <p class="blog-card-excerpt">Smart home relays like C-Bus and Dynalite require a programmer, not just an electrician. Learn why standard fault finding techniques fail on automated networks.</p>
-          <div class="blog-card-footer">
-            <div class="blog-tech-stack">
-              <span class="tech-tag">New</span>
-            </div>
-            <span class="read-more">Read Article →</span>
-          </div>
-        </div>
-      </a>
-
-      <a href="/blog-remote-ip-diagnostics-commercial" class="blog-card" data-category="Commercial">
-        <div class="blog-image" style="background-image: url('https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=800&q=80')"></div>
-        <div class="blog-content">
-          <div class="blog-card-meta">
-            <span class="badge">Commercial</span>
-            <span>📅 June 2026</span>
-          </div>
-          <h3 class="blog-card-title">How Remote IP Diagnostics are Changing Commercial Lighting Maintenance</h3>
-          <p class="blog-card-excerpt">Commercial building managers in Brisbane and Melbourne are slashing maintenance costs by utilizing remote IP diagnostics for their lighting systems.</p>
-          <div class="blog-card-footer">
-            <div class="blog-tech-stack">
-              <span class="tech-tag">New</span>
-            </div>
-            <span class="read-more">Read Article →</span>
-          </div>
-        </div>
-      </a>
-
-
-            <a href="/blog-cbus-dynalite-obsolete-hardware-part-replacement" class="blog-card" data-category="Troubleshooting">
-          <div class="blog-card-meta">
-              <span class="badge">Hardware Guide</span>
-          </div>
-          <h3 class="blog-card-title">Obsolete C-Bus &amp; Dynalite Hardware Part Replacements</h3>
-          <p class="blog-card-excerpt">Dealing with a failed legacy C-Bus 5200WHC2 touchscreen, Dynalite DDNG232 gateway, DDBC320 controller, or DUS360CS sensor? Discover modern replacement options.</p>
-          <div class="blog-card-footer">
-              Read Article &rarr;
-          </div>
-      </a>
-
-<a href="/blog-cbus-not-working-repair-guide" class="blog-card" data-category="Troubleshooting">
-        <div class="blog-image" style="background-image: url('https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&q=80')"></div>
+      <!-- C-Bus Lights Stuck On -->
+      <a href="/blog/cbus-lights-stuck-on-emergency-fix-sydney.html" class="blog-card" data-category="Troubleshooting">
+        <div class="blog-image" style="background-image: url('https://images.unsplash.com/photo-1565814329452-e1efe2ba776f?w=800&q=80')"></div>
         <div class="blog-content">
           <div class="blog-card-meta">
             <span class="badge">Troubleshooting</span>
-            <span>📅 May 2026</span>
+            <span>Jan 2026</span>
           </div>
-          <h3 class="blog-card-title">C-Bus Not Working? A Practical Troubleshooting Guide for Sydney Homes</h3>
-          <p class="blog-card-excerpt">When your C-Bus system stops responding, it can be frustrating. Learn the common causes of C-Bus faults and how our Sydney specialists diagnose them.</p>
+          <h3 class="blog-card-title">C-Bus Lights Stuck On? Emergency Fix &amp; Troubleshooting</h3>
+          <p class="blog-card-excerpt">When C-Bus lights won't turn off, it's often a relay failure or bus voltage issue. Learn the emergency reset procedure and when to call a specialist.</p>
           <div class="blog-card-footer">
             <div class="blog-tech-stack">
-              <span class="tech-tag">New</span>
+              <span class="tech-tag">C-Bus</span>
+              <span class="tech-tag">Emergency</span>
             </div>
-            <span class="read-more">Read Article →</span>
+            <span class="read-more">Read Guide &rarr;</span>
           </div>
         </div>
       </a>
 
-      <a href="/blog-dynalite-repairs-electrician-sydney" class="blog-card" data-category="Troubleshooting">
-        <div class="blog-image" style="background-image: url('https://images.unsplash.com/photo-1586528116311-ad8ed7fc5180?w=800&q=80')"></div>
+      <!-- C-Bus Network Burden Failure -->
+      <a href="/blog/cbus-network-burden-failure-sydney.html" class="blog-card" data-category="Troubleshooting">
+        <div class="blog-image" style="background-image: url('https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&q=80')"></div>
         <div class="blog-content">
           <div class="blog-card-meta">
             <span class="badge">Troubleshooting</span>
-            <span>📅 May 2026</span>
+            <span>Jan 2026</span>
           </div>
-          <h3 class="blog-card-title">Dynalite Repairs: Why You Need a Specialist Programmer, Not Just an Electrician</h3>
-          <p class="blog-card-excerpt">Experiencing issues with your Philips Dynalite system? Discover why calling a certified Dynalite system builder is crucial for prompt and effective repairs in Sydney.</p>
+          <h3 class="blog-card-title">C-Bus Network Burden Failure: Symptoms &amp; Solutions</h3>
+          <p class="blog-card-excerpt">Missing or incorrect bus burdens cause signal reflections and intermittent faults. Learn how to test burden settings and restore network stability.</p>
           <div class="blog-card-footer">
             <div class="blog-tech-stack">
-              <span class="tech-tag">New</span>
+              <span class="tech-tag">C-Bus</span>
+              <span class="tech-tag">Network</span>
             </div>
-            <span class="read-more">Read Article →</span>
+            <span class="read-more">Read Guide &rarr;</span>
           </div>
         </div>
       </a>
 
-      <a href="/blog-dali-lighting-control-system-repair" class="blog-card" data-category="Maintenance">
-        <div class="blog-image" style="background-image: url('https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=800&q=80')"></div>
+      <!-- C-Bus Power Supply Faults -->
+      <a href="/blog/cbus-power-supply-faults-sydney.html" class="blog-card" data-category="Troubleshooting">
+        <div class="blog-image" style="background-image: url('https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=800&q=80')"></div>
         <div class="blog-content">
           <div class="blog-card-meta">
-            <span class="badge">Maintenance</span>
-            <span>📅 May 2026</span>
+            <span class="badge">Troubleshooting</span>
+            <span>Jan 2026</span>
           </div>
-          <h3 class="blog-card-title">DALI Lighting Control System Repairs & Maintenance in Sydney</h3>
-          <p class="blog-card-excerpt">DALI systems offer incredible flexibility for commercial lighting, but require specialist knowledge to maintain. Learn about common DALI faults and repair strategies.</p>
+          <h3 class="blog-card-title">C-Bus Power Supply Faults: Diagnosis &amp; Replacement</h3>
+          <p class="blog-card-excerpt">A failing 5500PS power supply can take down your entire C-Bus network. Learn the warning signs, voltage testing procedure, and replacement options.</p>
           <div class="blog-card-footer">
             <div class="blog-tech-stack">
-              <span class="tech-tag">New</span>
+              <span class="tech-tag">C-Bus</span>
+              <span class="tech-tag">Power Supply</span>
             </div>
-            <span class="read-more">Read Article →</span>
+            <span class="read-more">Read Guide &rarr;</span>
           </div>
         </div>
       </a>
 
-      <a href="/blog-smart-home-automation-sydney-installers" class="blog-card" data-category="How-To">
-        <div class="blog-image" style="background-image: url('https://images.unsplash.com/photo-1506953823976-52e1fdc0149a?w=800&q=80')"></div>
+      <!-- C-Bus Toolkit Connection Issues -->
+      <a href="/blog/cbus-toolkit-connection-sydney.html" class="blog-card" data-category="Troubleshooting">
+        <div class="blog-image" style="background-image: url('https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&q=80')"></div>
         <div class="blog-content">
           <div class="blog-card-meta">
-            <span class="badge">How-To</span>
-            <span>📅 May 2026</span>
+            <span class="badge">Troubleshooting</span>
+            <span>Jan 2026</span>
           </div>
-          <h3 class="blog-card-title">Smart Home Automation Troubleshooting: When to Call the Experts</h3>
-          <p class="blog-card-excerpt">From unresponsive apps to failing network bridges, smart home automation can sometimes fail. Here's how to know when it's time to call a professional Sydney integrator.</p>
+          <h3 class="blog-card-title">C-Bus Toolkit Connection Issues: Troubleshooting &amp; Help</h3>
+          <p class="blog-card-excerpt">Can't connect C-Bus Toolkit to your network? Learn about 5500CN interface issues, driver problems, and COM port configuration for successful diagnostics.</p>
           <div class="blog-card-footer">
             <div class="blog-tech-stack">
-              <span class="tech-tag">New</span>
+              <span class="tech-tag">Toolkit</span>
+              <span class="tech-tag">5500CN</span>
             </div>
-            <span class="read-more">Read Article →</span>
+            <span class="read-more">Read Guide &rarr;</span>
           </div>
         </div>
       </a>
 
-      <a href="/blog-car-park-lighting-upgrades-sydney" class="blog-card" data-category="Commercial">
-        <div class="blog-image" style="background-image: url('https://images.unsplash.com/photo-1576495199011-eb94736d05d6?w=800&q=80')"></div>
-        <div class="blog-content">
-          <div class="blog-card-meta">
-            <span class="badge">Commercial</span>
-            <span>📅 May 2026</span>
-          </div>
-          <h3 class="blog-card-title">Car Park Lighting Maintenance & LED Upgrades for Strata</h3>
-          <p class="blog-card-excerpt">Discover how upgrading your strata car park lighting to automated LED systems can drastically reduce energy consumption and improve security.</p>
-          <div class="blog-card-footer">
-            <div class="blog-tech-stack">
-              <span class="tech-tag">New</span>
-            </div>
-            <span class="read-more">Read Article →</span>
-          </div>
-        </div>
-      </a>
-
-      <a href="/blog-smart-light-switch-replacement-sydney" class="blog-card" data-category="How-To">
-        <div class="blog-image" style="background-image: url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&q=80')"></div>
-        <div class="blog-content">
-          <div class="blog-card-meta">
-            <span class="badge">How-To</span>
-            <span>📅 May 2026</span>
-          </div>
-          <h3 class="blog-card-title">Smart Light Switch Replacement: Upgrading Your Broken Keypads</h3>
-          <p class="blog-card-excerpt">Got a broken C-Bus or Dynalite wall switch? Learn what's involved in replacing smart light switches and keypads in your Sydney home.</p>
-          <div class="blog-card-footer">
-            <div class="blog-tech-stack">
-              <span class="tech-tag">New</span>
-            </div>
-            <span class="read-more">Read Article →</span>
-          </div>
-        </div>
-      </a>
-
-
-      <!-- NEW CARD: Strata Lighting Energy Savings -->
-      <a href="/blog-strata-lighting-energy-savings-sydney" class="blog-card" data-category="Commercial">
-        <div class="blog-image" style="background-image: url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80')"></div>
-        <div class="blog-content">
-          <div class="blog-card-meta">
-            <span class="badge">Commercial</span>
-            <span>📅 May 2026</span>
-          </div>
-          <h3 class="blog-card-title">Strata Lighting Energy Savings</h3>
-          <p class="blog-card-excerpt">How strata managers can reduce common area electricity consumption by 30-60%.</p>
-          <div class="blog-card-footer">
-            <div class="blog-tech-stack">
-              <span class="tech-tag">New</span>
-            </div>
-            <span class="read-more">Read Article →</span>
-          </div>
-        </div>
-      </a>
-
-      <!-- NEW CARD: Sydney CBD Tower Automation & NABERS -->
-      <a href="/blog-sydney-cbd-commercial-tower-lighting-nabers" class="blog-card" data-category="Commercial">
-        <div class="blog-image" style="background-image: url('https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=800&q=80')"></div>
-        <div class="blog-content">
-          <div class="blog-card-meta">
-            <span class="badge">Commercial</span>
-            <span>📅 May 2026</span>
-          </div>
-          <h3 class="blog-card-title">Sydney CBD Tower Automation & NABERS</h3>
-          <p class="blog-card-excerpt">How building managers improve NABERS energy ratings using C-Bus and Dynalite.</p>
-          <div class="blog-card-footer">
-            <div class="blog-tech-stack">
-              <span class="tech-tag">New</span>
-            </div>
-            <span class="read-more">Read Article →</span>
-          </div>
-        </div>
-      </a>
-
-      <!-- NEW CARD: Eastern Suburbs Coastal Sensor Maintenance -->
-      <a href="/blog-eastern-suburbs-strata-lighting-automation" class="blog-card" data-category="Maintenance">
-        <div class="blog-image" style="background-image: url('https://images.unsplash.com/photo-1506953823976-52e1fdc0149a?w=800&q=80')"></div>
-        <div class="blog-content">
-          <div class="blog-card-meta">
-            <span class="badge">Maintenance</span>
-            <span>📅 May 2026</span>
-          </div>
-          <h3 class="blog-card-title">Eastern Suburbs Coastal Sensor Maintenance</h3>
-          <p class="blog-card-excerpt">Combatting salt spray corrosion on external DALI sensors in waterfront strata complexes.</p>
-          <div class="blog-card-footer">
-            <div class="blog-tech-stack">
-              <span class="tech-tag">New</span>
-            </div>
-            <span class="read-more">Read Article →</span>
-          </div>
-        </div>
-      </a>
-
-      <!-- NEW CARD: Parramatta Institutional Lighting -->
-      <a href="/blog-parramatta-institutional-lighting-dali-cbus" class="blog-card" data-category="Compliance">
-        <div class="blog-image" style="background-image: url('https://images.unsplash.com/photo-1576495199011-eb94736d05d6?w=800&q=80')"></div>
-        <div class="blog-content">
-          <div class="blog-card-meta">
-            <span class="badge">Compliance</span>
-            <span>📅 May 2026</span>
-          </div>
-          <h3 class="blog-card-title">Parramatta Institutional Lighting</h3>
-          <p class="blog-card-excerpt">DALI emergency lighting compliance and automation for schools and hospitals.</p>
-          <div class="blog-card-footer">
-            <div class="blog-tech-stack">
-              <span class="tech-tag">New</span>
-            </div>
-            <span class="read-more">Read Article →</span>
-          </div>
-        </div>
-      </a>
-
-      <!-- NEW CARD: Regional NSW Hospitality Dynalite -->
-      <a href="/blog-regional-nsw-hospitality-lighting-dynalite" class="blog-card" data-category="Commercial">
-        <div class="blog-image" style="background-image: url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&q=80')"></div>
-        <div class="blog-content">
-          <div class="blog-card-meta">
-            <span class="badge">Commercial</span>
-            <span>📅 May 2026</span>
-          </div>
-          <h3 class="blog-card-title">Regional NSW Hospitality Dynalite</h3>
-          <p class="blog-card-excerpt">Priority Dynalite programming for Southern Highlands and Illawarra luxury venues.</p>
-          <div class="blog-card-footer">
-            <div class="blog-tech-stack">
-              <span class="tech-tag">New</span>
-            </div>
-            <span class="read-more">Read Article →</span>
-          </div>
-        </div>
-      </a>
-
-      <!-- NEW CARD: Electrician Partner Program -->
-      <a href="/blog-how-to-partner-cbus-programmer" class="blog-card" data-category="How-To">
-        <div class="blog-image" style="background-image: url('https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=800&q=80')"></div>
-        <div class="blog-content">
-          <div class="blog-card-meta">
-            <span class="badge">How-To</span>
-            <span>📅 May 2026</span>
-          </div>
-          <h3 class="blog-card-title">Electrician Partner Program</h3>
-          <p class="blog-card-excerpt">How electricians can partner with us for white-label accredited programming.</p>
-          <div class="blog-card-footer">
-            <div class="blog-tech-stack">
-              <span class="tech-tag">New</span>
-            </div>
-            <span class="read-more">Read Article →</span>
-          </div>
-        </div>
-      </a>
-
-      <!-- NEW CARD: Why Consultants Switch from RAPIX to C-Bus -->
-      <a href="/blog-why-consultants-switch-rapix-cbus" class="blog-card" data-category="Comparison">
-        <div class="blog-image" style="background-image: url('https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80')"></div>
+      <!-- C-Bus Repair vs Replacement Cost -->
+      <a href="/blog/cbus-repair-vs-replacement-cost-sydney.html" class="blog-card" data-category="Comparison">
+        <div class="blog-image" style="background-image: url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&q=80')"></div>
         <div class="blog-content">
           <div class="blog-card-meta">
             <span class="badge">Comparison</span>
-            <span>📅 May 2026</span>
+            <span>Jan 2026</span>
           </div>
-          <h3 class="blog-card-title">Why Consultants Switch from RAPIX to C-Bus</h3>
-          <p class="blog-card-excerpt">Comparing commercial DALI lighting control systems for engineering specifications.</p>
+          <h3 class="blog-card-title">Old C-Bus System Repair vs. Replacement Cost in Sydney</h3>
+          <p class="blog-card-excerpt">Is it cheaper to repair your aging C-Bus system or replace it entirely? We break down the costs, risks, and ROI for Sydney property owners.</p>
           <div class="blog-card-footer">
             <div class="blog-tech-stack">
-              <span class="tech-tag">New</span>
+              <span class="tech-tag">C-Bus</span>
+              <span class="tech-tag">Cost Guide</span>
             </div>
-            <span class="read-more">Read Article →</span>
+            <span class="read-more">Read Analysis &rarr;</span>
           </div>
         </div>
       </a>
 
-      
-      <!-- CARD 1: C-Bus Fault Finding -->
-      <a href="/cbus-repair-sydney" class="blog-card" data-category="Troubleshooting">
+      <!-- Dynalite Keypad Not Responding -->
+      <a href="/blog/dynalite-keypad-not-responding-sydney.html" class="blog-card" data-category="Troubleshooting">
+        <div class="blog-image" style="background-image: url('https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&q=80')"></div>
+        <div class="blog-content">
+          <div class="blog-card-meta">
+            <span class="badge">Troubleshooting</span>
+            <span>Jan 2026</span>
+          </div>
+          <h3 class="blog-card-title">Dynalite Keypad Not Responding? What It Means &amp; How to Fix</h3>
+          <p class="blog-card-excerpt">A non-responsive Dynalite keypad can indicate bus communication loss, power issues, or firmware corruption. Learn the diagnostic steps.</p>
+          <div class="blog-card-footer">
+            <div class="blog-tech-stack">
+              <span class="tech-tag">Dynalite</span>
+              <span class="tech-tag">Keypads</span>
+            </div>
+            <span class="read-more">Read Guide &rarr;</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Dynalite Network Burden Failure -->
+      <a href="/blog/dynalite-network-burden-failure-sydney.html" class="blog-card" data-category="Troubleshooting">
+        <div class="blog-image" style="background-image: url('https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&q=80')"></div>
+        <div class="blog-content">
+          <div class="blog-card-meta">
+            <span class="badge">Troubleshooting</span>
+            <span>Jan 2026</span>
+          </div>
+          <h3 class="blog-card-title">Dynalite Network Burden Failure: Symptoms &amp; Solutions</h3>
+          <p class="blog-card-excerpt">Dynalite systems rely on correct termination to prevent signal reflections. Learn how burden failures cause intermittent faults and how to fix them.</p>
+          <div class="blog-card-footer">
+            <div class="blog-tech-stack">
+              <span class="tech-tag">Dynalite</span>
+              <span class="tech-tag">Network</span>
+            </div>
+            <span class="read-more">Read Guide &rarr;</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Dynalite Lost Programming Recovery -->
+      <a href="/blog/dynalite-lost-programming-recovery-sydney.html" class="blog-card" data-category="Troubleshooting">
+        <div class="blog-image" style="background-image: url('https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=800&q=80')"></div>
+        <div class="blog-content">
+          <div class="blog-card-meta">
+            <span class="badge">Troubleshooting</span>
+            <span>Jan 2026</span>
+          </div>
+          <h3 class="blog-card-title">Recovering Lost Dynalite Programming in Sydney</h3>
+          <p class="blog-card-excerpt">Lost your Dynalite programming after a power surge or controller failure? Learn how we recover undocumented systems using System Builder diagnostics.</p>
+          <div class="blog-card-footer">
+            <div class="blog-tech-stack">
+              <span class="tech-tag">Dynalite</span>
+              <span class="tech-tag">System Builder</span>
+            </div>
+            <span class="read-more">Read Guide &rarr;</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Dynalite Troubleshooting Guide -->
+      <a href="/blog/dynalite-troubleshooting-guide-sydney.html" class="blog-card" data-category="Troubleshooting">
         <div class="blog-image" style="background-image: url('https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=800&q=80')"></div>
         <div class="blog-content">
           <div class="blog-card-meta">
             <span class="badge">Troubleshooting</span>
-            <span>📅 12 Feb, 2026</span>
+            <span>Jan 2026</span>
           </div>
-          <h3 class="blog-card-title">C-Bus Fault Finding in Sydney: Toolkit & Network Analysis</h3>
-          <p class="blog-card-excerpt">Most C-Bus faults in Sydney come down to bus voltage, burden issues, or clock collisions. We use C-Bus Toolkit and a dedicated Network Analyser to find the root cause in minutes.</p>
+          <h3 class="blog-card-title">The Ultimate Dynalite Troubleshooting Guide</h3>
+          <p class="blog-card-excerpt">Keypads, dimmers, network issues &mdash; this guide covers the most common Dynalite faults in Sydney and the diagnostic steps to resolve them.</p>
           <div class="blog-card-footer">
             <div class="blog-tech-stack">
-              <span class="tech-tag">Toolkit</span>
-              <span class="tech-tag">Analyser</span>
+              <span class="tech-tag">Dynalite</span>
+              <span class="tech-tag">Diagnostics</span>
             </div>
-            <span class="read-more">Read Technical Guide →</span>
+            <span class="read-more">Read Guide &rarr;</span>
           </div>
         </div>
       </a>
 
-      <!-- CARD 3: DALI-2 Compliance -->
-      <a href="/dali2-compliance-nsw-commercial" class="blog-card" data-category="Compliance">
+      <!-- Dynalite vs C-Bus -->
+      <a href="/blog/dynalite-vs-cbus-sydney.html" class="blog-card" data-category="Comparison">
+        <div class="blog-image" style="background-image: url('https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80')"></div>
+        <div class="blog-content">
+          <div class="blog-card-meta">
+            <span class="badge">Comparison</span>
+            <span>Jan 2026</span>
+          </div>
+          <h3 class="blog-card-title">Dynalite vs. C-Bus: Which System Is Right for Your Property?</h3>
+          <p class="blog-card-excerpt">An honest technical comparison of Philips Dynalite and Clipsal C-Bus &mdash; architecture, scalability, programming, and which suits Sydney commercial fit-outs.</p>
+          <div class="blog-card-footer">
+            <div class="blog-tech-stack">
+              <span class="tech-tag">Dynalite</span>
+              <span class="tech-tag">C-Bus</span>
+            </div>
+            <span class="read-more">Read Comparison &rarr;</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Modernizing Old Dynalite -->
+      <a href="/blog/modernizing-old-dynalite-sydney.html" class="blog-card" data-category="How-To">
+        <div class="blog-image" style="background-image: url('https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=800&q=80')"></div>
+        <div class="blog-content">
+          <div class="blog-card-meta">
+            <span class="badge">How-To</span>
+            <span>Jan 2026</span>
+          </div>
+          <h3 class="blog-card-title">Modernizing Old Dynalite Systems: Smart App Integration</h3>
+          <p class="blog-card-excerpt">Have an older Dynalite system? Learn how to add app control and voice integration without a full replacement &mdash; saving thousands on upgrades.</p>
+          <div class="blog-card-footer">
+            <div class="blog-tech-stack">
+              <span class="tech-tag">Dynalite</span>
+              <span class="tech-tag">Smart Home</span>
+            </div>
+            <span class="read-more">Read Guide &rarr;</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Power Outage Reset -->
+      <a href="/blog/lighting-system-power-outage-reset-sydney.html" class="blog-card" data-category="Troubleshooting">
+        <div class="blog-image" style="background-image: url('https://images.unsplash.com/photo-1565814329452-e1efe2ba776f?w=800&q=80')"></div>
+        <div class="blog-content">
+          <div class="blog-card-meta">
+            <span class="badge">Troubleshooting</span>
+            <span>Jan 2026</span>
+          </div>
+          <h3 class="blog-card-title">Lighting System Crashed After Power Outage? Your Reset Guide</h3>
+          <p class="blog-card-excerpt">Power outage left your C-Bus, Dynalite, or DALI system unresponsive? Follow our step-by-step reset procedure for each protocol.</p>
+          <div class="blog-card-footer">
+            <div class="blog-tech-stack">
+              <span class="tech-tag">C-Bus</span>
+              <span class="tech-tag">Dynalite</span>
+            </div>
+            <span class="read-more">Read Guide &rarr;</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Dynalite Emergency Lighting AFSS -->
+      <a href="/blog/dynalite-emergency-lighting-afss-sydney.html" class="blog-card" data-category="Compliance">
         <div class="blog-image" style="background-image: url('https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=800&q=80')"></div>
         <div class="blog-content">
           <div class="blog-card-meta">
             <span class="badge">Compliance</span>
-            <span>📅 15 Jan, 2026</span>
+            <span>Jan 2026</span>
           </div>
-          <h3 class="blog-card-title">DALI-2 Compliance & ROI: AFSS & NCC 2022 Standards</h3>
-          <p class="blog-card-excerpt">NCC 2022 introduced strict DALI-2 emergency lighting requirements. We break down the commissioning process and mandatory AFSS documentation needed for Sydney buildings.</p>
+          <h3 class="blog-card-title">Dynalite Emergency Lighting Compliance: AFSS Repair &amp; Maintenance</h3>
+          <p class="blog-card-excerpt">Dynalite emergency lighting systems must pass AFSS inspections. Learn common failure points and how to maintain compliance in Sydney buildings.</p>
+          <div class="blog-card-footer">
+            <div class="blog-tech-stack">
+              <span class="tech-tag">Dynalite</span>
+              <span class="tech-tag">AFSS</span>
+            </div>
+            <span class="read-more">Read Guide &rarr;</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- DALI Emergency Lighting AFSS -->
+      <a href="/blog/dali-emergency-lighting-afss-sydney.html" class="blog-card" data-category="Compliance">
+        <div class="blog-image" style="background-image: url('https://images.unsplash.com/photo-1576495199011-eb94736d05d6?w=800&q=80')"></div>
+        <div class="blog-content">
+          <div class="blog-card-meta">
+            <span class="badge">Compliance</span>
+            <span>Jan 2026</span>
+          </div>
+          <h3 class="blog-card-title">DALI Emergency Lighting Failing AFSS? How to Ensure Compliance</h3>
+          <p class="blog-card-excerpt">DALI-2 emergency lighting has strict AFSS requirements. Learn about mandatory testing, common driver failures, and NCC 2022 compliance steps.</p>
           <div class="blog-card-footer">
             <div class="blog-tech-stack">
               <span class="tech-tag">DALI-2</span>
               <span class="tech-tag">AFSS</span>
             </div>
-            <span class="read-more">Read Compliance Guide →</span>
-          </div>
-        </div>
-      </a>
-
-      <!-- CARD 7: Dynalite Common Faults -->
-      <a href="/dynalite-repair-sydney" class="blog-card" data-category="Troubleshooting">
-        <div class="blog-image" style="background-image: url('https://images.unsplash.com/photo-1601524909162-be87252be298?w=800&q=80')"></div>
-        <div class="blog-content">
-          <div class="blog-card-meta">
-            <span class="badge">Troubleshooting</span>
-            <span>📅 12 Mar, 2026</span>
-          </div>
-          <h3 class="blog-card-title">Dynalite Fault Finding: The 5 Most Common Failures</h3>
-          <p class="blog-card-excerpt">From controller firmware crashes to serial port failures, we break down why Dynalite systems stop responding and how to diagnose them with Envision.</p>
-          <div class="blog-card-footer">
-            <div class="blog-tech-stack">
-              <span class="tech-tag">Envision</span>
-              <span class="tech-tag">Firmware</span>
-            </div>
-            <span class="read-more">Diagnose Now →</span>
-          </div>
-        </div>
-      </a>
-
-      <!-- CARD 8: Facility Managers Guide -->
-      <a href="/building-managers-lighting-control-nsw" class="blog-card" data-category="Commercial">
-        <div class="blog-image" style="background-image: url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80')"></div>
-        <div class="blog-content">
-          <div class="blog-card-meta">
-            <span class="badge">Commercial</span>
-            <span>📅 8 Mar, 2026</span>
-          </div>
-          <h3 class="blog-card-title">Facility Managers: A Practical Maintenance Framework</h3>
-          <p class="blog-card-excerpt">Most commercial buildings have systems that are 10+ years old. We provide a maintenance schedule for DALI-2, C-Bus, and Dynalite systems.</p>
-          <div class="blog-card-footer">
-            <div class="blog-tech-stack">
-              <span class="tech-tag">FM Guide</span>
-              <span class="tech-tag">DALI</span>
-            </div>
-            <span class="read-more">Read FM Guide →</span>
+            <span class="read-more">Read Guide &rarr;</span>
           </div>
         </div>
       </a>
 
     </div>
-  </div>
 </div>
 </div>
 <!-- Repair & Emergency Links -->
