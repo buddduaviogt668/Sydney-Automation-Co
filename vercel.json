@@ -1739,6 +1739,76 @@
       "source": "/c-bus-repairs-sydney.html",
       "destination": "/cbus-repair-sydney",
       "permanent": true
+    },
+    {
+      "source": "/cbus-fault-finder",
+      "destination": "/cbus-fault-finding-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/cbus-programmer-wahroonga",
+      "destination": "/c-bus-programmer-wahroonga",
+      "permanent": true
+    },
+    {
+      "source": "/smart-home-roi-calculator-sydney",
+      "destination": "/smart-home-roi-calculator-property-value-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/commercial-tower-lighting-automation-sydney-cbd",
+      "destination": "/c-bus-programmer-sydney-cbd",
+      "permanent": true
+    },
+    {
+      "source": "/c-bus-dynalite-menai",
+      "destination": "/cbus-dynalite-planning-checklist-new-builds-menai",
+      "permanent": true
+    },
+    {
+      "source": "/warehouse-lighting-automation-sydney",
+      "destination": "/industrial-and-warehouse-facilities-hurstville-dynalite-network-communication-and-bus-crashes",
+      "permanent": true
+    },
+    {
+      "source": "/cbus-dynalite-fault-finding-eastern-suburbs",
+      "destination": "/c-bus-programmer-eastern-suburbs",
+      "permanent": true
+    },
+    {
+      "source": "/dynalite-cbus-artarmon",
+      "destination": "/c-bus-programmer-north-shore",
+      "permanent": true
+    },
+    {
+      "source": "/cbus-dynalite-property-value-sutherland-shire",
+      "destination": "/smart-home-roi-calculator-property-value-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/dynalite-dlight-keypad-unresponsive-sydney",
+      "destination": "/dynalite-fault-finding-sydney-common-faults",
+      "permanent": true
+    },
+    {
+      "source": "/cbus-scene-programming-sydney-home",
+      "destination": "/cbus-scene-programming-guide-sutherland-shire",
+      "permanent": true
+    },
+    {
+      "source": "/facility-managers-dynalite-cbus-support-sydney",
+      "destination": "/facility-managers-cbus-dynalite-dali-guide",
+      "permanent": true
+    },
+    {
+      "source": "/industrial-lighting-control-western-sydney",
+      "destination": "/institutional-lighting-control-parramatta-western-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/cbus-dynalite-renovating-building",
+      "destination": "/invisible-automation-heritage-retrofitting-sydney",
+      "permanent": true
     }
   ],
   "headers": [

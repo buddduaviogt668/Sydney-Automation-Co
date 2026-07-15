@@ -124,6 +124,37 @@
 </meta></meta>  <link rel="stylesheet" href="/index.css">
 </head>
 <body>
+<nav>
+  <a href="/" class="logo">
+    <span class="logo-main">Sydney Automation Co.</span>
+    <div class="logo-line"></div>
+    <span class="logo-sub">Lighting Control Specialists</span>
+  </a>
+    <div class="nav-phone-wrap">
+      <span class="nav-phone-label">Direct Service Line</span>
+      <a class="nav-phone" href="tel:+61422469739">0422 469 739</a>
+    </div>
+<div class="nav-links">
+    <a href="/">Home</a>
+<a href="/services.html" class="active">Services</a>
+<a href="/projects.html">Projects</a>
+<a href="/shire.html">Shire</a>
+<a href="/c-bus-programmer-sydney.html">C-Bus</a>
+<a href="/dynalite-programmer-sydney.html">Dynalite</a>
+<a href="/electricians.html">Electricians</a>
+<a href="/strata.html">Strata &amp; FM</a>
+<a href="/about.html">About</a>
+<a href="/locations.html">Areas</a>
+<a href="/blog.html">Blog</a>
+<a href="/guides.html">Guides</a>
+<a href="/contact.html">Contact</a>
+<a href="/contact.html" class="nav-cta">Free Quote</a>
+  </div>
+  <div class="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
   <!-- STICKY TOP CTA BAR -->
   <div id="sticky-cta-bar" style="
     position:fixed;top:0;left:0;right:0;z-index:99999;
@@ -168,8 +199,58 @@
 
 <main>
 <h1>DALI-2 Lighting Control: Implementation &amp; Compliance in Commercial Buildings</h1>
-<p>This is a placeholder page for DALI-2 Lighting Control: Implementation &amp; Compliance in Commercial Buildings. Content will be added soon.</p>
+
+<p>DALI-2 is the current standard for addressable digital lighting control, and it's the backbone of compliant emergency and general lighting systems in most new commercial builds across Sydney. Unlike DALI-1, DALI-2 mandates strict device certification, giving building owners confidence that luminaires, sensors and controllers from different manufacturers will interoperate correctly on the same bus.</p>
+<h2>Where DALI-2 fits in commercial buildings</h2>
+<p>We specify and commission DALI-2 for office fitouts, retail tenancies and mixed-use towers where individual luminaire addressing, daylight harvesting and AFSS-compliant emergency lighting testing are required. Each fitting on the bus is individually addressable, which means dimming curves, scenes and emergency test schedules can be configured and audited per-luminaire rather than per-circuit.</p>
+<h2>Compliance in NSW</h2>
+<p>Emergency lighting on DALI-2 networks needs to meet AS 2293 testing and reporting requirements. We configure automated monthly and annual test cycles, log results for AFSS reporting, and integrate DALI-2 emergency circuits with building management systems where required.</p>
+<h2>Integration with C-Bus and Dynalite</h2>
+<p>DALI-2 is a lighting-layer protocol, not a whole-building automation system on its own — most of our commercial projects bridge DALI-2 luminaire control into a C-Bus or Dynalite network via a DALI gateway, giving facility managers a single interface for scenes, schedules and fault reporting across the whole site.</p>
+<p>Get in touch for a DALI-2 design review, new-build specification, or a compliance audit of an existing installation.</p>
 </main>
   <script src="/nav.js"></script>
+<footer>
+  <div class="footer-grid">
+    <div>
+      <div class="logo" style="margin-bottom:16px">
+        <span class="logo-main">Sydney Automation Co.</span>
+        <div class="logo-line"></div>
+        <span class="logo-sub">Lighting Control Specialists</span>
+      </div>
+      <p style="color:#a8c0e0;font-size:14px;line-height:1.7;max-width:340px">Accredited C-Bus Programmer and Dynalite System Designer. Based in Menai, serving all of Greater Sydney. Same-day fault finding. Fixed-price programming.</p>
+    </div>
+    <div>
+      <h4 style="font-family:'Barlow Condensed',sans-serif;font-weight:800;margin-bottom:16px;font-size:16px;letter-spacing:1px;text-transform:uppercase;color:#a8c0e0">Services</h4>
+      <div style="display:flex;flex-direction:column;gap:8px;font-size:14px">
+        <a href="/cbus-repair-sydney.html" style="color:#a8c0e0" onmouseover="this.style.color='#f07020'" onmouseout="this.style.color='#a8c0e0'">C-Bus Repair Sydney</a>
+        <a href="/dynalite-repair-sydney.html" style="color:#a8c0e0" onmouseover="this.style.color='#f07020'" onmouseout="this.style.color='#a8c0e0'">Dynalite Repair Sydney</a>
+        <a href="/emergency-repair-sydney.html" style="color:#f07020;font-weight:700" onmouseover="this.style.color='#ff8533'" onmouseout="this.style.color='#f07020'">🚨 Emergency Repair</a>
+        <a href="/c-bus-programmer-sydney.html" style="color:#a8c0e0" onmouseover="this.style.color='#f07020'" onmouseout="this.style.color='#a8c0e0'">C-Bus Programming</a>
+        <a href="/dynalite-programmer-sydney.html" style="color:#a8c0e0" onmouseover="this.style.color='#f07020'" onmouseout="this.style.color='#a8c0e0'">Dynalite Programming</a>
+        <a href="/cbus-upgrade-sydney.html" style="color:#a8c0e0" onmouseover="this.style.color='#f07020'" onmouseout="this.style.color='#a8c0e0'">C-Bus Upgrade</a>
+        <a href="/services.html" style="color:#a8c0e0" onmouseover="this.style.color='#f07020'" onmouseout="this.style.color='#a8c0e0'">All Services</a>
+        <a href="/electricians.html" style="color:#a8c0e0" onmouseover="this.style.color='#f07020'" onmouseout="this.style.color='#a8c0e0'">For Electricians</a>
+        <a href="/strata.html" style="color:#a8c0e0" onmouseover="this.style.color='#f07020'" onmouseout="this.style.color='#a8c0e0'">Strata &amp; FM</a>
+      </div>
+    </div>
+    <div>
+      <h4 style="font-family:'Barlow Condensed',sans-serif;font-weight:800;margin-bottom:16px;font-size:16px;letter-spacing:1px;text-transform:uppercase;color:#a8c0e0">Contact</h4>
+      <div style="display:flex;flex-direction:column;gap:10px;font-size:14px;color:#a8c0e0">
+        <a href="tel:0422 469 739" style="color:#f07020;font-weight:700;font-size:16px">📞 0422 469 739</a>
+        <a href="mailto:service@sydneyautomationco.com.au">service@sydneyautomationco.com.au</a>
+        <p>Menai, Sutherland Shire NSW 2234</p>
+        <p>Mon–Fri 7am–6pm, Sat by appointment</p>
+      </div>
+    </div>
+  </div>
+  <div class="footer-copy">
+    <span>© 2025 Sydney Automation Co. ABN 61 136 364 150. All rights reserved.</span>
+    <div style="display:flex;gap:16px">
+      <a href="/privacy-policy.html" style="color:#6a8cb5" onmouseover="this.style.color='#f07020'" onmouseout="this.style.color='#6a8cb5'">Privacy Policy</a>
+      <a href="/sitemap.xml" style="color:#6a8cb5" onmouseover="this.style.color='#f07020'" onmouseout="this.style.color='#6a8cb5'">Sitemap</a>
+    </div>
+  </div>
+</footer>
 </body>
 </html>
