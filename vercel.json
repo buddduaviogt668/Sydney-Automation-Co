@@ -1729,6 +1729,16 @@
       "source": "/tech-library/clipsal-c-bus-5500cn-lost-schedules-&-clock-drift-north-shore.html",
       "destination": "/tech-library/clipsal-c-bus-5500cn-lost-schedules-and-clock-drift-north-shore",
       "permanent": true
+    },
+    {
+      "source": "/c-bus-repairs-sydney",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/c-bus-repairs-sydney.html",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
     }
   ],
   "headers": [
