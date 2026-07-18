@@ -1869,6 +1869,11 @@
       "source": "/cbus-dynalite-renovating-building",
       "destination": "/invisible-automation-heritage-retrofitting-sydney",
       "permanent": true
+    },
+    {
+      "source": "/cbus-5500pc-network-bridge-failure-sydney",
+      "destination": "/cbus-5500cn-network-bridge-failure-sydney",
+      "permanent": true
     }
   ],
   "headers": [
