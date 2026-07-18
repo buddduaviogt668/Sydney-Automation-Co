@@ -1625,9 +1625,7 @@
     <p style="font-size:18px; line-height:1.6;"><strong>A frozen or unresponsive controller typically results from a microcontroller lockup caused by electrical noise, brownout, or corrupted firmware. A full power cycle (remove all power for 2 minutes) resolves approximately 60% of these cases.</strong></p>
                         
                         <h3 style="margin-top:40px;">Step-by-Step Diagnostic Steps</h3>
-                        <ol style="margin-left:20px; line-height:1.8; font-size:16px;">
-                            
-                        </ol>
+                        <ol style="margin-left:20px; line-height:1.8; font-size:16px;"><li>Power cycle the DDMC802 — remove DyNet and mains power simultaneously for 30 seconds, then restore mains first.</li><li>Check for overloaded dimmer channels — a channel driving excessive current causes thermal shutdown which can lock the controller's MCU.</li><li>Inspect load wiring for short circuits — a shorted dimmer channel causes the DDMC802's protection circuit to halt all channel processing.</li><li>Connect via the RS232 port and attempt a remote reset using the Dynalite Configuration Tool — a software reset often recovers a frozen controller.</li><li>Re-upload the dimmer preset and scene data — corrupted preset data can cause the controller to enter a processing loop and become unresponsive.</li><li>Check DyNet bus voltage at the controller terminal — below 12 V prevents the controller from executing DyNet commands even if channels are physically working.</li><li>If specific channels are frozen but others work, the TRIAC or relay on that channel has failed — the channel module requires professional replacement.</li></ol>
                         
                         <div style="margin-top:50px; text-align:center; padding:30px; background:rgba(240, 112, 32, 0.1); border-radius:8px;">
                             <h3>Need professional help in the Sydney CBD?</h3>

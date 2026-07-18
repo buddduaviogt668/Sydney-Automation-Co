@@ -1625,9 +1625,7 @@
     <p style="font-size:18px; line-height:1.6;"><strong>Lost schedules and clock drift are almost always caused by a failed CR2032 coin cell battery on the network's designated Clock Driver device. The battery has a typical lifespan of 5-7 years. When it fails, the real-time clock resets to 1-Jan-2000 on every power cycle.</strong></p>
                         
                         <h3 style="margin-top:40px;">Step-by-Step Diagnostic Steps</h3>
-                        <ol style="margin-left:20px; line-height:1.8; font-size:16px;">
-                            
-                        </ol>
+                        <ol style="margin-left:20px; line-height:1.8; font-size:16px;"><li>The 5504AMP amplifier does not hold schedules — check the C-Bus project and network clock master for schedule accuracy.</li><li>Re-download the C-Bus project to restore the amplifier's group and scene assignments, which control when audio zones activate.</li><li>Verify the C-Bus network clock is accurate — a drifting clock causes audio zone activation events to fire at the wrong time.</li><li>Check the "Enable Timeclock" setting in the amplifier's C-Bus application — if disabled, no timed events will execute.</li><li>Confirm that C-Bus schedules referencing the amplifier's groups are using the correct day and time settings in Toolkit.</li><li>Re-synchronise the C-Bus network time from the PC running C-Bus Toolkit after any daylight saving time transition.</li><li>If zone schedules are lost entirely, the C-Bus network project may have been partially overwritten — restore from the latest backup in C-Bus Toolkit.</li></ol>
                         
                         <div style="margin-top:50px; text-align:center; padding:30px; background:rgba(240, 112, 32, 0.1); border-radius:8px;">
                             <h3>Need professional help in the Eastern Suburbs?</h3>

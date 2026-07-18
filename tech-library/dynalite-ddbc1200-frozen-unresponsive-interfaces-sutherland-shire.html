@@ -1625,9 +1625,7 @@
     <p style="font-size:18px; line-height:1.6;"><strong>A frozen or unresponsive controller typically results from a microcontroller lockup caused by electrical noise, brownout, or corrupted firmware. A full power cycle (remove all power for 2 minutes) resolves approximately 60% of these cases.</strong></p>
                         
                         <h3 style="margin-top:40px;">Step-by-Step Diagnostic Steps</h3>
-                        <ol style="margin-left:20px; line-height:1.8; font-size:16px;">
-                            
-                        </ol>
+                        <ol style="margin-left:20px; line-height:1.8; font-size:16px;"><li>Power cycle the DDBC1200 processor — remove mains power for 2 minutes. The main CPU can enter an unrecoverable state after a sustained overload on the DyNet bus.</li><li>Check DyNet bus termination — the DDBC1200 requires correct bus termination (120 Ω) at each end of the DyNet segment to prevent reflection-induced lockup.</li><li>Connect via Dynalite Configuration Tool over RS232 and perform a CPU reset command — this often recovers a frozen processor without losing configuration.</li><li>Check system logs in the Configuration Tool for the last event before the freeze — a malformed DyNet packet from a faulty device often triggers processor lockup.</li><li>Remove and reconnect DyNet device connections one at a time to isolate a faulty device that is corrupting the bus and causing the processor to halt.</li><li>Re-download the system project to the DDBC1200 — a corrupted database causes the processor to stop executing schedules and respond to commands.</li><li>If the processor remains unresponsive after power cycling and re-programming, the main CPU or flash memory has failed — professional service is required.</li></ol>
                         
                         <div style="margin-top:50px; text-align:center; padding:30px; background:rgba(240, 112, 32, 0.1); border-radius:8px;">
                             <h3>Need professional help in the Sutherland Shire?</h3>

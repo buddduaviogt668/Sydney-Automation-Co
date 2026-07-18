@@ -1625,9 +1625,7 @@
     <p style="font-size:18px; line-height:1.6;"><strong>Blinking LED codes on this device indicate a communication fault or hardware error. The exact blink pattern determines the specific failure mode. Refer to the manufacturer's documentation for blink pattern decoding, or contact our diagnostic service for toolkit analysis.</strong></p>
                         
                         <h3 style="margin-top:40px;">Step-by-Step Diagnostic Steps</h3>
-                        <ol style="margin-left:20px; line-height:1.8; font-size:16px;">
-                            
-                        </ol>
+                        <ol style="margin-left:20px; line-height:1.8; font-size:16px;"><li>A blinking status LED on L-series dimmers indicates a load error — check that the connected LED or resistive load is within the channel's rated wattage.</li><li>Power cycle the dimmer by isolating the circuit breaker for 30 seconds. Many fault states are latched and clear on power restore.</li><li>Check for a leading-edge / trailing-edge mode mismatch — driving LED drivers in leading-edge mode causes the dimmer to blink and fault.</li><li>Measure load current on the blinking channel with a clamp meter. Overloaded channels (>rated amps) will blink and thermally throttle.</li><li>Inspect load wiring for short circuits across the output terminals. A short produces a fast blink and zero output on that channel.</li><li>Use C-Bus Toolkit to review the channel application settings — incorrect dimmer curve or ramp rates can trigger fault indicators.</li><li>If the channel LED blinks on an unloaded output, the internal TRIAC for that channel has failed — the unit requires professional repair.</li></ol>
                         
                         <div style="margin-top:50px; text-align:center; padding:30px; background:rgba(240, 112, 32, 0.1); border-radius:8px;">
                             <h3>Need professional help in the Eastern Suburbs?</h3>

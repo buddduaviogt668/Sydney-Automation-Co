@@ -1625,9 +1625,7 @@
     <p style="font-size:18px; line-height:1.6;"><strong>Channels stuck on full brightness or fully off indicate a failed output component — either a welded relay contact or a shorted triac/diming MOSFET. This is a hardware fault that requires component-level replacement of the affected output device.</strong></p>
                         
                         <h3 style="margin-top:40px;">Step-by-Step Diagnostic Steps</h3>
-                        <ol style="margin-left:20px; line-height:1.8; font-size:16px;">
-                            
-                        </ol>
+                        <ol style="margin-left:20px; line-height:1.8; font-size:16px;"><li>The Antumbra is a keypad and does not directly drive channels — check the downstream dimmer or relay controller for the stuck output.</li><li>Inspect the Antumbra button assignment — a button configured as a "hold" or "toggle on" without a matching "off" condition keeps the scene active.</li><li>Check the Dynalite Configuration Tool for a persistent active preset — an "occupy" or "override" preset from the Antumbra may be holding the scene on.</li><li>Test from a second keypad or from the Configuration Tool — if the channel can be controlled from another source, the issue is the Antumbra's button mapping.</li><li>Re-download the Antumbra project to clear any corrupt button logic — a corrupt toggle state can lock a button in its "pressed" state permanently.</li><li>Power cycle the Antumbra — remove DyNet power for 30 seconds. A latched button state clears on power restore in most firmware versions.</li><li>If re-downloading and power cycling do not resolve the stuck scene, escalate to the downstream dimmer or relay controller as the fault source.</li></ol>
                         
                         <div style="margin-top:50px; text-align:center; padding:30px; background:rgba(240, 112, 32, 0.1); border-radius:8px;">
                             <h3>Need professional help in the Sutherland Shire?</h3>

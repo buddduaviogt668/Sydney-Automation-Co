@@ -1625,9 +1625,7 @@
     <p style="font-size:18px; line-height:1.6;"><strong>A frozen or unresponsive controller typically results from a microcontroller lockup caused by electrical noise, brownout, or corrupted firmware. A full power cycle (remove all power for 2 minutes) resolves approximately 60% of these cases.</strong></p>
                         
                         <h3 style="margin-top:40px;">Step-by-Step Diagnostic Steps</h3>
-                        <ol style="margin-left:20px; line-height:1.8; font-size:16px;">
-                            
-                        </ol>
+                        <ol style="margin-left:20px; line-height:1.8; font-size:16px;"><li>Power cycle the Antumbra keypad — disconnect the DyNet bus wiring for 30 seconds. The touchscreen controller can lock after a power glitch.</li><li>Check DyNet bus voltage at the keypad terminal — below 20 V causes the LCD and touch controller to malfunction.</li><li>Perform a factory reset via the keypad's rear micro-switch (press and hold for 10 seconds while applying power) to clear corrupted configuration.</li><li>Re-upload the keypad project from Dynalite's configuration tool — a corrupted scene map causes the panel to appear frozen on specific screen pages.</li><li>Inspect the touchscreen glass for physical damage — a cracked digitiser causes ghost touches that can freeze the interface in a persistent menu.</li><li>Check the DyNet bus for excessive traffic — a misconfigured schedule firing rapidly causes the Antumbra's command buffer to overflow.</li><li>If the LCD backlight is on but touch is completely unresponsive after a factory reset, the touch controller IC has failed — the unit requires replacement.</li></ol>
                         
                         <div style="margin-top:50px; text-align:center; padding:30px; background:rgba(240, 112, 32, 0.1); border-radius:8px;">
                             <h3>Need professional help in the Sydney CBD?</h3>

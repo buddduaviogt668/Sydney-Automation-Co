@@ -1625,9 +1625,7 @@
     <p style="font-size:18px; line-height:1.6;"><strong>A frozen or unresponsive controller typically results from a microcontroller lockup caused by electrical noise, brownout, or corrupted firmware. A full power cycle (remove all power for 2 minutes) resolves approximately 60% of these cases.</strong></p>
                         
                         <h3 style="margin-top:40px;">Step-by-Step Diagnostic Steps</h3>
-                        <ol style="margin-left:20px; line-height:1.8; font-size:16px;">
-                            
-                        </ol>
+                        <ol style="margin-left:20px; line-height:1.8; font-size:16px;"><li>Power cycle the 5504AMP by isolating the circuit breaker for 30 seconds — the amplifier's MCU recovers from most lockup states on clean power-up.</li><li>Check C-Bus network voltage at the amplifier terminal — below 15 V causes the amplifier to stop responding to C-Bus commands while remaining powered.</li><li>Verify no C-Bus command flood is saturating the amplifier — a logic loop sending rapid group commands can fill the amplifier's command buffer and cause apparent freezing.</li><li>Use C-Bus Toolkit to send a direct group command to the amplifier — if Toolkit shows "accepted" but the amplifier does not respond, the output driver has locked up.</li><li>Inspect load connections — a short circuit on an amplifier output can cause the protection circuit to halt the output stage while the MCU remains active.</li><li>Re-download the amplifier application from C-Bus Toolkit — a corrupt application prevents the amplifier from processing C-Bus commands.</li><li>If the amplifier is warm to touch and unresponsive, thermal shutdown has occurred — allow it to cool, check enclosure ventilation, and reduce connected load.</li></ol>
                         
                         <div style="margin-top:50px; text-align:center; padding:30px; background:rgba(240, 112, 32, 0.1); border-radius:8px;">
                             <h3>Need professional help in the Eastern Suburbs?</h3>

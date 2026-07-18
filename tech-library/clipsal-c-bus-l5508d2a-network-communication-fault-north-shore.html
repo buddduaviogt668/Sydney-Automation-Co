@@ -1625,9 +1625,7 @@
     <p style="font-size:18px; line-height:1.6;"><strong>A Network Communication Fault controller typically results from a microcontroller lockup caused by electrical noise, brownout, or corrupted firmware. A full power cycle (remove all power for 2 minutes) resolves approximately 60% of these cases.</strong></p>
                         
                         <h3 style="margin-top:40px;">Step-by-Step Diagnostic Steps</h3>
-                        <ol style="margin-left:20px; line-height:1.8; font-size:16px;">
-                            
-                        </ol>
+                        <ol style="margin-left:20px; line-height:1.8; font-size:16px;"><li>Remove and reapply C-Bus power to the dimmer — a brown-out during power-up can leave the C-Bus transceiver in a hung state.</li><li>Verify the C-Bus network address is unique using C-Bus Toolkit's "Find Units" scan — duplicate addresses prevent communication.</li><li>Inspect C-Bus cable connections at the dimmer terminal block — loose wires cause intermittent loss of communication.</li><li>Measure C-Bus voltage at the dimmer terminals: 15–36 V DC. Below 15 V causes the C-Bus transceiver to drop off the network.</li><li>Check the total network device count — a single C-Bus segment supports up to 100 units; beyond this, network errors occur.</li><li>Re-upload the dimmer application from C-Bus Toolkit. A corrupt application file causes the dimmer to appear on the network but not respond.</li><li>If the dimmer is absent from all network scans and C-Bus voltage is healthy, the C-Bus transceiver chip has failed — the unit requires repair.</li></ol>
                         
                         <div style="margin-top:50px; text-align:center; padding:30px; background:rgba(240, 112, 32, 0.1); border-radius:8px;">
                             <h3>Need professional help in the North Shore?</h3>

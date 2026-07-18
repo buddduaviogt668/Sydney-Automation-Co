@@ -1625,9 +1625,7 @@
     <p style="font-size:18px; line-height:1.6;"><strong>A Network Communication Fault controller typically results from a microcontroller lockup caused by electrical noise, brownout, or corrupted firmware. A full power cycle (remove all power for 2 minutes) resolves approximately 60% of these cases.</strong></p>
                         
                         <h3 style="margin-top:40px;">Step-by-Step Diagnostic Steps</h3>
-                        <ol style="margin-left:20px; line-height:1.8; font-size:16px;">
-                            
-                        </ol>
+                        <ol style="margin-left:20px; line-height:1.8; font-size:16px;"><li>Check DyNet bus voltage at the DDNG232 terminal — below 12 V prevents the gateway from participating in DyNet network communication.</li><li>Inspect the RS232 cable — verify correct wiring (Tx to Rx crossover) and that the cable length does not exceed 15 metres for RS232.</li><li>Check the RS232 baud rate, parity, and stop bit settings in the Dynalite Configuration Tool — a mismatch causes total serial communication failure.</li><li>Power cycle the DDNG232 and the connected serial device simultaneously — stale handshake states on both devices can prevent communication from re-establishing.</li><li>Verify the DDNG232 DyNet area address is unique — a duplicate address causes the gateway to conflict with another device and stop responding to DyNet commands.</li><li>Check DyNet bus termination — without correct 120 Ω termination at each segment end, bus reflections prevent the gateway from reliably transmitting or receiving.</li><li>If the DDNG232 appears in DyNet device scans but the RS232 device cannot communicate, the RS232 transceiver chip has failed — replace the gateway.</li></ol>
                         
                         <div style="margin-top:50px; text-align:center; padding:30px; background:rgba(240, 112, 32, 0.1); border-radius:8px;">
                             <h3>Need professional help in the Sutherland Shire?</h3>

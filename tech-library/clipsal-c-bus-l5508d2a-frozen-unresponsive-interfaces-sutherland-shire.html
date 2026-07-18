@@ -1625,9 +1625,7 @@
     <p style="font-size:18px; line-height:1.6;"><strong>A frozen or unresponsive controller typically results from a microcontroller lockup caused by electrical noise, brownout, or corrupted firmware. A full power cycle (remove all power for 2 minutes) resolves approximately 60% of these cases.</strong></p>
                         
                         <h3 style="margin-top:40px;">Step-by-Step Diagnostic Steps</h3>
-                        <ol style="margin-left:20px; line-height:1.8; font-size:16px;">
-                            
-                        </ol>
+                        <ol style="margin-left:20px; line-height:1.8; font-size:16px;"><li>Remove C-Bus power from the dimmer for 30 seconds and restore — a microcontroller watchdog reset clears most lockup conditions.</li><li>Check that no C-Bus commands are flooding the network — a misconfigured scene or schedule that fires rapidly can lock up the dimmer's command queue.</li><li>Inspect load wiring for a short circuit — a shorted output can cause the dimmer's protection circuitry to halt the MCU.</li><li>Use C-Bus Toolkit to check for application errors on the unit — an invalid application entry can cause the dimmer to stop responding to commands.</li><li>Test the dimmer with a simple resistive load (incandescent or resistive heater) to isolate whether the issue is load-type incompatibility.</li><li>Re-download the unit application from C-Bus Toolkit — firmware corruption after a power surge causes unresponsiveness that persists across power cycles.</li><li>If the dimmer is warm to touch and unresponsive, thermal shutdown has occurred — ensure adequate ventilation in the enclosure and reduce load density.</li></ol>
                         
                         <div style="margin-top:50px; text-align:center; padding:30px; background:rgba(240, 112, 32, 0.1); border-radius:8px;">
                             <h3>Need professional help in the Sutherland Shire?</h3>

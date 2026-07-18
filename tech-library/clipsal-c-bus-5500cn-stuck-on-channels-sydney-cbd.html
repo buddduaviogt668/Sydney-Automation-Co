@@ -1629,9 +1629,7 @@
     <p style="font-size:18px; line-height:1.6;"><strong>Channels stuck on full brightness or fully off indicate a failed output component — either a welded relay contact or a shorted triac/diming MOSFET. This is a hardware fault that requires component-level replacement of the affected output device.</strong></p>
                         
                         <h3 style="margin-top:40px;">Step-by-Step Diagnostic Steps</h3>
-                        <ol style="margin-left:20px; line-height:1.8; font-size:16px;">
-                            
-                        </ol>
+                        <ol style="margin-left:20px; line-height:1.8; font-size:16px;"><li>The 5500CN is a network interface, not an output device — trace the stuck channel back to the dimmer or relay unit receiving commands through the interface.</li><li>Open C-Bus Toolkit's "Output Monitor" to see which group is holding the stuck channel ON and identify the source command.</li><li>Check for a C-Bus Toolkit schedule or logic block that is repeatedly broadcasting an ON command — disable it and test.</li><li>Verify the 5500CN is not bridging two C-Bus segments and re-sending an ON command from a remote segment indefinitely.</li><li>Disconnect the PC running C-Bus Toolkit and observe whether the stuck channel clears — Toolkit itself may be sending a persistent group command.</li><li>Re-download the C-Bus project to all units through the 5500CN to clear any corrupted group-level data that is holding the channel on.</li><li>If a channel remains stuck with the 5500CN disconnected, the fault is in the downstream dimmer or relay unit — troubleshoot that unit directly.</li></ol>
                         
                         <div style="margin-top:50px; text-align:center; padding:30px; background:rgba(240, 112, 32, 0.1); border-radius:8px;">
                             <h3>Need professional help in the Sydney CBD?</h3>

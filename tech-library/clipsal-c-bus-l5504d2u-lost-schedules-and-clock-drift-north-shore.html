@@ -1625,9 +1625,7 @@
     <p style="font-size:18px; line-height:1.6;"><strong>Lost schedules and clock drift are almost always caused by a failed CR2032 coin cell battery on the network's designated Clock Driver device. The battery has a typical lifespan of 5-7 years. When it fails, the real-time clock resets to 1-Jan-2000 on every power cycle.</strong></p>
                         
                         <h3 style="margin-top:40px;">Step-by-Step Diagnostic Steps</h3>
-                        <ol style="margin-left:20px; line-height:1.8; font-size:16px;">
-                            
-                        </ol>
+                        <ol style="margin-left:20px; line-height:1.8; font-size:16px;"><li>Verify that the network time master (usually the C-Bus PC interface or a dedicated clock unit) is online and synchronising time across the C-Bus network.</li><li>Use C-Bus Toolkit to re-download the project to the unit — schedule data is stored in the unit's application layer and is overwritten if the project is corrupted.</li><li>Check C-Bus Toolkit for time zone and daylight saving settings — incorrect DST configuration causes scheduled events to fire 1 hour early or late.</li><li>Inspect the C-Bus network for power supply interruptions — the L-series dimmer restores schedules from flash on power-up but relies on network time to run them.</li><li>Confirm the unit has a current project downloaded — a factory-reset unit or one with a blank application does not execute any scheduled events.</li><li>Set a C-Bus network time master in Toolkit and enable time broadcast — this prevents clock drift on all units that derive time from the network.</li><li>If schedules run at the wrong time consistently, recalibrate the time source and re-download the project with corrected event times.</li></ol>
                         
                         <div style="margin-top:50px; text-align:center; padding:30px; background:rgba(240, 112, 32, 0.1); border-radius:8px;">
                             <h3>Need professional help in the North Shore?</h3>

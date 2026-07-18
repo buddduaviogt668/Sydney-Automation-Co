@@ -1625,9 +1625,7 @@
     <p style="font-size:18px; line-height:1.6;"><strong>A frozen or unresponsive controller typically results from a microcontroller lockup caused by electrical noise, brownout, or corrupted firmware. A full power cycle (remove all power for 2 minutes) resolves approximately 60% of these cases.</strong></p>
                         
                         <h3 style="margin-top:40px;">Step-by-Step Diagnostic Steps</h3>
-                        <ol style="margin-left:20px; line-height:1.8; font-size:16px;">
-                            
-                        </ol>
+                        <ol style="margin-left:20px; line-height:1.8; font-size:16px;"><li>Power cycle the DMDR12-320 — remove DyNet and mains power for 30 seconds. The main MCU recovers from most lockup states on clean power-up.</li><li>Check for overloaded dimmer channels — driving loads above the channel's rated wattage causes thermal shutdown and MCU halt.</li><li>Inspect TRIAC wiring for short circuits — a shorted output can lock the protection circuit and prevent all channels from responding.</li><li>Use the DIP switch on the unit to set test mode — test mode forces channels to 100% regardless of DyNet commands, isolating whether the fault is DyNet or hardware.</li><li>Re-upload the dimmer configuration via the Dynalite Configuration Tool — a corrupt scene/level table causes the controller to stop responding to preset changes.</li><li>Check DyNet bus voltage at the dimmer terminal — below 12 V prevents DyNet packet processing, making the unit appear frozen while hardware functions normally.</li><li>If the unit is responsive in test mode but ignores DyNet commands, the DyNet transceiver chip has failed — professional repair is required.</li></ol>
                         
                         <div style="margin-top:50px; text-align:center; padding:30px; background:rgba(240, 112, 32, 0.1); border-radius:8px;">
                             <h3>Need professional help in the Eastern Suburbs?</h3>

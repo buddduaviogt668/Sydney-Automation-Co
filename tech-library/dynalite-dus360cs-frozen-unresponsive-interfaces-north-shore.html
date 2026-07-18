@@ -1625,9 +1625,7 @@
     <p style="font-size:18px; line-height:1.6;"><strong>A frozen or unresponsive controller typically results from a microcontroller lockup caused by electrical noise, brownout, or corrupted firmware. A full power cycle (remove all power for 2 minutes) resolves approximately 60% of these cases.</strong></p>
                         
                         <h3 style="margin-top:40px;">Step-by-Step Diagnostic Steps</h3>
-                        <ol style="margin-left:20px; line-height:1.8; font-size:16px;">
-                            
-                        </ol>
+                        <ol style="margin-left:20px; line-height:1.8; font-size:16px;"><li>Power cycle the DUS360CS — remove the DyNet bus connection for 30 seconds then reapply. The switch processor resets on clean power-up.</li><li>Check button mapping in the Dynalite Configuration Tool — a switch with buttons mapped to non-existent scene numbers appears unresponsive.</li><li>Inspect the DyNet bus voltage at the switch terminals — below 12 V prevents scene commands from being transmitted.</li><li>Perform a factory reset: hold button 1 and button 4 simultaneously for 10 seconds until the LED flashes. This clears corrupt button configuration.</li><li>Re-download the button assignment project from the Dynalite Configuration Tool. A corrupted button map causes specific buttons to become non-functional.</li><li>Check DyNet bus termination — without termination resistors at each segment end, reflection causes the switch to transmit commands that never reach the controller.</li><li>If all buttons are unresponsive after a factory reset and project re-download, the switch PCB or DyNet transceiver has failed — replace the unit.</li></ol>
                         
                         <div style="margin-top:50px; text-align:center; padding:30px; background:rgba(240, 112, 32, 0.1); border-radius:8px;">
                             <h3>Need professional help in the North Shore?</h3>

@@ -1625,9 +1625,7 @@
     <p style="font-size:18px; line-height:1.6;"><strong>A Network Communication Fault controller typically results from a microcontroller lockup caused by electrical noise, brownout, or corrupted firmware. A full power cycle (remove all power for 2 minutes) resolves approximately 60% of these cases.</strong></p>
                         
                         <h3 style="margin-top:40px;">Step-by-Step Diagnostic Steps</h3>
-                        <ol style="margin-left:20px; line-height:1.8; font-size:16px;">
-                            
-                        </ol>
+                        <ol style="margin-left:20px; line-height:1.8; font-size:16px;"><li>Check DyNet bus termination — the DDBC1200 requires 120 Ω termination resistors at both ends of each DyNet segment to maintain reliable communication.</li><li>Inspect DyNet bus wiring for open circuits or short circuits — measure resistance across the A and B terminals (normal: 60–120 Ω with termination fitted).</li><li>Power cycle the DDBC1200 and all connected DyNet devices — the processor re-polls all devices on power-up and rebuilds its communication table.</li><li>Connect via the RS232 port using the Dynalite Configuration Tool and check the device list — devices that appear greyed out or absent have communication faults.</li><li>Remove DyNet devices one at a time to identify a faulty device that is corrupting the DyNet bus and preventing all communication.</li><li>Check the DyNet cable run for segments longer than the maximum cable length — the DyNet bus supports up to 1.2 km total; longer runs require a DDNG bus extender.</li><li>Re-download the full project after resolving bus faults — a project re-download re-establishes all device communication associations.</li></ol>
                         
                         <div style="margin-top:50px; text-align:center; padding:30px; background:rgba(240, 112, 32, 0.1); border-radius:8px;">
                             <h3>Need professional help in the Sydney CBD?</h3>

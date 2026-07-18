@@ -1625,9 +1625,7 @@
     <p style="font-size:18px; line-height:1.6;"><strong>A Network Communication Fault controller typically results from a microcontroller lockup caused by electrical noise, brownout, or corrupted firmware. A full power cycle (remove all power for 2 minutes) resolves approximately 60% of these cases.</strong></p>
                         
                         <h3 style="margin-top:40px;">Step-by-Step Diagnostic Steps</h3>
-                        <ol style="margin-left:20px; line-height:1.8; font-size:16px;">
-                            
-                        </ol>
+                        <ol style="margin-left:20px; line-height:1.8; font-size:16px;"><li>Check DyNet bus voltage at the DDMC802 terminal — below 12 V causes the dimmer controller to drop off the DyNet network.</li><li>Inspect the DyNet cable connections at the DDMC802 terminal block — relay energisation causes vibration that loosens small screw terminals over time.</li><li>Power cycle the DDMC802 — remove DyNet and mains power for 30 seconds. The controller re-initialises its DyNet transceiver on clean power-up.</li><li>Verify the DDMC802 DyNet address is unique within its area — duplicate addresses cause both the controller and the conflicting device to fail.</li><li>Check DyNet bus termination — without 120 Ω termination at each segment end, reflections corrupt DyNet packets and cause communication failure.</li><li>Connect via the Dynalite Configuration Tool and use the device scan to verify the DDMC802 is visible on the DyNet bus.</li><li>If the DDMC802 does not appear in device scans after power cycling and checking wiring, the DyNet transceiver chip has failed — the unit requires repair.</li></ol>
                         
                         <div style="margin-top:50px; text-align:center; padding:30px; background:rgba(240, 112, 32, 0.1); border-radius:8px;">
                             <h3>Need professional help in the Sutherland Shire?</h3>

@@ -1625,9 +1625,7 @@
     <p style="font-size:18px; line-height:1.6;"><strong>Lost schedules and clock drift are almost always caused by a failed CR2032 coin cell battery on the network's designated Clock Driver device. The battery has a typical lifespan of 5-7 years. When it fails, the real-time clock resets to 1-Jan-2000 on every power cycle.</strong></p>
                         
                         <h3 style="margin-top:40px;">Step-by-Step Diagnostic Steps</h3>
-                        <ol style="margin-left:20px; line-height:1.8; font-size:16px;">
-                            
-                        </ol>
+                        <ol style="margin-left:20px; line-height:1.8; font-size:16px;"><li>Relay units do not hold independent schedules — check the C-Bus project in C-Bus Toolkit for schedule entries and verify the network clock is accurate.</li><li>Verify the C-Bus network time master (5000CT or dedicated clock unit) has a healthy CMOS battery — a flat battery causes all relay events to stop.</li><li>Re-download the relay unit application from C-Bus Toolkit to restore the unit's event and scene associations.</li><li>Check C-Bus Toolkit's "Enable Timeclock" setting in the unit's application — if timeclock is disabled, timed relay events will not execute.</li><li>Inspect C-Bus network continuity — a relay unit that drops off the bus misses timed commands and will not re-execute them when it reconnects.</li><li>Set up a C-Bus network time broadcast from Toolkit to distribute accurate time to all relay units simultaneously.</li><li>If timed events fire once then stop, check the schedule for "run once" configuration — change to "repeat daily" to restore normal scheduling.</li></ol>
                         
                         <div style="margin-top:50px; text-align:center; padding:30px; background:rgba(240, 112, 32, 0.1); border-radius:8px;">
                             <h3>Need professional help in the Sydney CBD?</h3>

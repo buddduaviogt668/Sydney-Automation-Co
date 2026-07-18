@@ -1625,9 +1625,7 @@
     <p style="font-size:18px; line-height:1.6;"><strong>Audible buzzing or clicking from lighting control equipment indicates either a failing internal power supply or a relay/dimmer component operating outside its design parameters. Do not ignore these sounds — they often precede complete hardware failure.</strong></p>
                         
                         <h3 style="margin-top:40px;">Step-by-Step Diagnostic Steps</h3>
-                        <ol style="margin-left:20px; line-height:1.8; font-size:16px;">
-                            
-                        </ol>
+                        <ol style="margin-left:20px; line-height:1.8; font-size:16px;"><li>A buzzing from the DDNG232 is typically from the DyNet power supply input — check DyNet bus voltage ripple (should be under 500 mV peak-to-peak).</li><li>Inspect the DIN rail mounting — a loose gateway can vibrate at the DyNet bus switching frequency (50 Hz) and produce an audible hum.</li><li>Check the RS232 cable shielding — an unshielded RS232 cable can pick up mains frequency noise that is audible through the gateway's power supply.</li><li>Verify the serial device connected to the DDNG232 is not sending continuous rapid commands that cause high bus activity and associated electronic noise.</li><li>Fit a ferrite core on the RS232 cable near the gateway to suppress high-frequency noise that may be coupling into the DyNet power supply.</li><li>Check that the gateway is not mounted near a large transformer or variable speed drive — electromagnetic interference induces noise into the power supply.</li><li>If buzzing persists after addressing all above points, the gateway's internal power supply capacitor is failing — replace the unit.</li></ol>
                         
                         <div style="margin-top:50px; text-align:center; padding:30px; background:rgba(240, 112, 32, 0.1); border-radius:8px;">
                             <h3>Need professional help in the Sutherland Shire?</h3>

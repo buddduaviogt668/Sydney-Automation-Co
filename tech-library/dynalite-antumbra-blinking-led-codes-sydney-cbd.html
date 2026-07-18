@@ -1625,9 +1625,7 @@
     <p style="font-size:18px; line-height:1.6;"><strong>Blinking LED codes on this device indicate a communication fault or hardware error. The exact blink pattern determines the specific failure mode. Refer to the manufacturer's documentation for blink pattern decoding, or contact our diagnostic service for toolkit analysis.</strong></p>
                         
                         <h3 style="margin-top:40px;">Step-by-Step Diagnostic Steps</h3>
-                        <ol style="margin-left:20px; line-height:1.8; font-size:16px;">
-                            
-                        </ol>
+                        <ol style="margin-left:20px; line-height:1.8; font-size:16px;"><li>Identify the LED pattern on the Antumbra: slow amber blink = DyNet communication lost; fast red blink = configuration error; alternating = firmware update mode.</li><li>Check DyNet bus voltage at the Antumbra — below 18 V causes communication dropouts shown as a blinking status LED.</li><li>Power cycle the Antumbra by removing the DyNet bus connection for 30 seconds — most LED fault states are latched and clear on power restore.</li><li>Inspect DyNet bus wiring at the Antumbra terminal — a loose connection causes intermittent communication that produces a flickering or blinking LED.</li><li>Check for a DyNet address conflict — two Antumbra panels at the same DyNet area address both show a fault LED and neither operates correctly.</li><li>Re-download the Antumbra project from the Dynalite Configuration Tool — a corrupted project causes the keypad to blink a configuration fault code continuously.</li><li>If the LED blinks in a fixed pattern that is not described above, note the exact pattern and contact Sydney Automation Co — it may indicate a specific hardware fault code.</li></ol>
                         
                         <div style="margin-top:50px; text-align:center; padding:30px; background:rgba(240, 112, 32, 0.1); border-radius:8px;">
                             <h3>Need professional help in the Sydney CBD?</h3>

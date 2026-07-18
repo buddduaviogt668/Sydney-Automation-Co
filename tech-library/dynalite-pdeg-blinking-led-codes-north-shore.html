@@ -1625,9 +1625,7 @@
     <p style="font-size:18px; line-height:1.6;"><strong>Blinking LED codes on this device indicate a communication fault or hardware error. The exact blink pattern determines the specific failure mode. Refer to the manufacturer's documentation for blink pattern decoding, or contact our diagnostic service for toolkit analysis.</strong></p>
                         
                         <h3 style="margin-top:40px;">Step-by-Step Diagnostic Steps</h3>
-                        <ol style="margin-left:20px; line-height:1.8; font-size:16px;">
-                            
-                        </ol>
+                        <ol style="margin-left:20px; line-height:1.8; font-size:16px;"><li>Identify the LED pattern: red fast blink = emergency circuit open or test failed; amber = battery fault; green slow = standby; green fast = DyNet active.</li><li>A red LED indicates an emergency circuit fault — inspect emergency luminaire wiring for open circuit, failed lamp, or battery fault in an emergency fitting.</li><li>Check the emergency circuit battery test log — a failed 90-minute duration test causes the PDEG to latch a red fault LED until manually cleared.</li><li>Power cycle the PDEG — remove mains power for 2 minutes. Emergency fault LEDs latch and may require a full power cycle to clear after the fault is resolved.</li><li>Connect via the Dynalite Configuration Tool and read the PDEG fault log to identify the specific circuit number and fault code for the blinking LED.</li><li>Inspect emergency fitting batteries — a battery at end of life causes the PDEG to flag a battery health fault shown as an amber blinking LED.</li><li>If the fault LED persists after resolving all circuit faults and power cycling, the PDEG's emergency monitoring circuit has failed — professional service is required.</li></ol>
                         
                         <div style="margin-top:50px; text-align:center; padding:30px; background:rgba(240, 112, 32, 0.1); border-radius:8px;">
                             <h3>Need professional help in the North Shore?</h3>

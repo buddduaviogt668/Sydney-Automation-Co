@@ -1625,9 +1625,7 @@
     <p style="font-size:18px; line-height:1.6;"><strong>Channels stuck on full brightness or fully off indicate a failed output component — either a welded relay contact or a shorted triac/diming MOSFET. This is a hardware fault that requires component-level replacement of the affected output device.</strong></p>
                         
                         <h3 style="margin-top:40px;">Step-by-Step Diagnostic Steps</h3>
-                        <ol style="margin-left:20px; line-height:1.8; font-size:16px;">
-                            
-                        </ol>
+                        <ol style="margin-left:20px; line-height:1.8; font-size:16px;"><li>Force the stuck channel to level 0 using the Dynalite Configuration Tool's "Override" function to determine whether the fault is software or hardware.</li><li>Check for a welded TRIAC — a TRIAC failed shorted keeps the output permanently ON. Measure output voltage with no DyNet preset active.</li><li>Inspect DyNet schedules for a preset that sets the stuck channel to full level — use the Configuration Tool's event log to identify the last command received.</li><li>Power cycle the dimmer controller — remove mains and DyNet power for 30 seconds. A latched TRIAC fault state often clears on power restore.</li><li>Set the minimum dim level to 0% in the Configuration Tool — a minimum trim set too high keeps outputs on at low level even when commanded to off.</li><li>Re-download the scene and preset data to the dimmer — a corrupt preset table can latch a channel at a high level that ignores DyNet off commands.</li><li>If the output remains ON with mains power but DyNet disconnected, the TRIAC has failed shorted — professional TRIAC replacement or module swap is required.</li></ol>
                         
                         <div style="margin-top:50px; text-align:center; padding:30px; background:rgba(240, 112, 32, 0.1); border-radius:8px;">
                             <h3>Need professional help in the Sydney CBD?</h3>

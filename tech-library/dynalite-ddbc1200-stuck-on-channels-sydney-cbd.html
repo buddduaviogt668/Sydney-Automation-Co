@@ -1625,9 +1625,7 @@
     <p style="font-size:18px; line-height:1.6;"><strong>Channels stuck on full brightness or fully off indicate a failed output component — either a welded relay contact or a shorted triac/diming MOSFET. This is a hardware fault that requires component-level replacement of the affected output device.</strong></p>
                         
                         <h3 style="margin-top:40px;">Step-by-Step Diagnostic Steps</h3>
-                        <ol style="margin-left:20px; line-height:1.8; font-size:16px;">
-                            
-                        </ol>
+                        <ol style="margin-left:20px; line-height:1.8; font-size:16px;"><li>Use the Dynalite Configuration Tool's "Override" command to force all channels OFF and observe which channels do not respond.</li><li>Check the active schedule in the Configuration Tool — a schedule event set to a high preset may be continuously winning over manual override commands.</li><li>Check for a "channel lock" or "disable" flag in the project that is preventing a channel from responding to OFF commands.</li><li>Power cycle the DDBC1200 — remove mains power for 2 minutes. Latched output states in the processor RAM clear on full power cycle.</li><li>Re-download the DDBC1200 project — a corrupt scene or timeline event can latch outputs in an on state that persists across soft resets.</li><li>Identify whether the stuck output is on a dimmer or relay downstream of the processor — if the DDBC1200 is sending OFF correctly, the fault is in the output module.</li><li>If the DDBC1200 cannot be overridden by the Configuration Tool, the output driver logic has failed — professional service is required.</li></ol>
                         
                         <div style="margin-top:50px; text-align:center; padding:30px; background:rgba(240, 112, 32, 0.1); border-radius:8px;">
                             <h3>Need professional help in the Sydney CBD?</h3>

@@ -1625,9 +1625,7 @@
     <p style="font-size:18px; line-height:1.6;"><strong>A Network Communication Fault controller typically results from a microcontroller lockup caused by electrical noise, brownout, or corrupted firmware. A full power cycle (remove all power for 2 minutes) resolves approximately 60% of these cases.</strong></p>
                         
                         <h3 style="margin-top:40px;">Step-by-Step Diagnostic Steps</h3>
-                        <ol style="margin-left:20px; line-height:1.8; font-size:16px;">
-                            
-                        </ol>
+                        <ol style="margin-left:20px; line-height:1.8; font-size:16px;"><li>Check DyNet bus voltage at the DUS360CS terminal — below 18 V prevents the switch from maintaining reliable DyNet communication.</li><li>Inspect the DyNet cable connections at the switch — the DUS360CS uses a 2-wire DyNet connection; verify polarity (A/B) is correct and terminals are tight.</li><li>Power cycle the DUS360CS by removing DyNet bus power for 30 seconds — the switch re-initialises its transceiver on clean power-up.</li><li>Verify the DUS360CS DyNet area address is unique — duplicate addresses prevent both the switch and the conflicting device from communicating.</li><li>Check DyNet bus termination — without 120 Ω termination at each segment end, reflections corrupt DyNet packets reaching the switch.</li><li>Re-download the switch project from the Dynalite Configuration Tool — a project mismatch between the switch and the DDBC1200 causes communication failure.</li><li>If the switch does not appear in device scans after power cycling and verifying wiring, the DyNet transceiver chip has failed — replace the switch unit.</li></ol>
                         
                         <div style="margin-top:50px; text-align:center; padding:30px; background:rgba(240, 112, 32, 0.1); border-radius:8px;">
                             <h3>Need professional help in the Eastern Suburbs?</h3>

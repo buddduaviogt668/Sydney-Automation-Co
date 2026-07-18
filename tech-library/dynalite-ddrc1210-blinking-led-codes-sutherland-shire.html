@@ -1625,9 +1625,7 @@
     <p style="font-size:18px; line-height:1.6;"><strong>Blinking LED codes on this device indicate a communication fault or hardware error. The exact blink pattern determines the specific failure mode. Refer to the manufacturer's documentation for blink pattern decoding, or contact our diagnostic service for toolkit analysis.</strong></p>
                         
                         <h3 style="margin-top:40px;">Step-by-Step Diagnostic Steps</h3>
-                        <ol style="margin-left:20px; line-height:1.8; font-size:16px;">
-                            
-                        </ol>
+                        <ol style="margin-left:20px; line-height:1.8; font-size:16px;"><li>Identify the LED pattern: channel LEDs blinking red = relay fault or overload; amber = address conflict; slow green = standby; fast green = DyNet activity.</li><li>A red LED on a specific relay channel indicates overload or a welded contact — disconnect the load on that channel and test; if the LED clears, the load caused the fault.</li><li>Power cycle the DDRC1210 — remove mains and DyNet power for 30 seconds. Overload fault LEDs latch and require a power cycle to clear.</li><li>Check DyNet bus voltage at the controller terminal — voltage below 12 V causes a bus undervoltage warning shown as an amber blinking LED.</li><li>Connect via the Dynalite Configuration Tool and read the fault log to identify the specific channel and fault code for the blinking LED.</li><li>Re-download the relay preset and scene data to clear any configuration fault causing the amber warning LED.</li><li>If the fault LED persists on an unloaded channel after a power cycle, the relay driver transistor has failed — the channel requires professional repair.</li></ol>
                         
                         <div style="margin-top:50px; text-align:center; padding:30px; background:rgba(240, 112, 32, 0.1); border-radius:8px;">
                             <h3>Need professional help in the Sutherland Shire?</h3>

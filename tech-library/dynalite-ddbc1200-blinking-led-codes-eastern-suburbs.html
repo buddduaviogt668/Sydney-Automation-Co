@@ -1625,9 +1625,7 @@
     <p style="font-size:18px; line-height:1.6;"><strong>Blinking LED codes on this device indicate a communication fault or hardware error. The exact blink pattern determines the specific failure mode. Refer to the manufacturer's documentation for blink pattern decoding, or contact our diagnostic service for toolkit analysis.</strong></p>
                         
                         <h3 style="margin-top:40px;">Step-by-Step Diagnostic Steps</h3>
-                        <ol style="margin-left:20px; line-height:1.8; font-size:16px;">
-                            
-                        </ol>
+                        <ol style="margin-left:20px; line-height:1.8; font-size:16px;"><li>Identify the LED pattern: slow green blink = normal standby; fast green = DyNet bus activity; amber = configuration warning; red = system fault.</li><li>A red fault LED on the DDBC1200 indicates a hardware or database error — connect via the Dynalite Configuration Tool RS232 port to read the fault log.</li><li>Power cycle the DDBC1200 — remove mains power for 2 minutes. A clean power-up clears most transient fault states that cause LED error codes.</li><li>Check DyNet bus voltage at the processor terminal — below 12 V causes a bus undervoltage fault shown as an amber or red blinking LED.</li><li>Re-download the DDBC1200 project — a corrupted database causes the processor to blink a configuration fault code that persists until the project is refreshed.</li><li>Check DyNet bus for a faulty device causing excessive bus traffic — a malfunctioning DyNet device can overload the processor and trigger a bus fault LED.</li><li>If the red fault LED persists after power cycling and project re-download, the main CPU or flash memory has failed — professional repair or unit replacement is required.</li></ol>
                         
                         <div style="margin-top:50px; text-align:center; padding:30px; background:rgba(240, 112, 32, 0.1); border-radius:8px;">
                             <h3>Need professional help in the Eastern Suburbs?</h3>

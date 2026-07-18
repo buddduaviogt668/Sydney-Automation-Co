@@ -1625,9 +1625,7 @@
     <p style="font-size:18px; line-height:1.6;"><strong>Channels stuck on full brightness or fully off indicate a failed output component — either a welded relay contact or a shorted triac/diming MOSFET. This is a hardware fault that requires component-level replacement of the affected output device.</strong></p>
                         
                         <h3 style="margin-top:40px;">Step-by-Step Diagnostic Steps</h3>
-                        <ol style="margin-left:20px; line-height:1.8; font-size:16px;">
-                            
-                        </ol>
+                        <ol style="margin-left:20px; line-height:1.8; font-size:16px;"><li>Confirm whether the PDEG is in normal or emergency mode — during an emergency or test event, all emergency channels are forced ON and cannot be overridden.</li><li>Clear any latched emergency or test fault from the Configuration Tool — a completed test that was not acknowledged latches emergency circuits in ON state.</li><li>Check the DyNet emergency group addressing — a misaddressed PDEG may be receiving emergency ON commands from a test scheduled by another device.</li><li>Power cycle the PDEG — remove mains and DyNet power for 2 minutes. Emergency controllers have a watchdog that forces outputs on during unexpected restarts.</li><li>Inspect emergency circuit wiring for a short between the output and mains live — a wiring fault can maintain circuit continuity regardless of the relay state.</li><li>Re-download the PDEG configuration and re-run a controlled emergency test to verify the system returns to normal after the test completes.</li><li>If the PDEG emergency outputs remain ON after clearing all faults and power cycling, the emergency relay driver has failed — the unit requires factory service.</li></ol>
                         
                         <div style="margin-top:50px; text-align:center; padding:30px; background:rgba(240, 112, 32, 0.1); border-radius:8px;">
                             <h3>Need professional help in the Sydney CBD?</h3>

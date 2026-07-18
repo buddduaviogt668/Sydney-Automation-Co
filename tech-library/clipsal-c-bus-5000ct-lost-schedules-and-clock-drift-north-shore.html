@@ -1630,9 +1630,7 @@
     <p style="font-size:18px; line-height:1.6;"><strong>Lost schedules and clock drift are almost always caused by a failed CR2032 coin cell battery on the network's designated Clock Driver device. The battery has a typical lifespan of 5-7 years. When it fails, the real-time clock resets to 1-Jan-2000 on every power cycle.</strong></p>
                         
                         <h3 style="margin-top:40px;">Step-by-Step Diagnostic Steps</h3>
-                        <ol style="margin-left:20px; line-height:1.8; font-size:16px;">
-                            
-                        </ol>
+                        <ol style="margin-left:20px; line-height:1.8; font-size:16px;"><li>Check the internal battery on the 5000CT motherboard — a flat CMOS battery (CR2032) causes the real-time clock (RTC) to reset to 1 January 2000 on every power cycle.</li><li>Replace the CMOS battery by opening the rear cover. The battery is accessible without full disassembly and costs under </ol> from any electronics supplier.</li><li>After battery replacement, set the correct date and time in PICED and re-download the project to restore all scheduled events.</li><li>Check C-Bus Toolkit's time synchronisation settings — enabling network time sync from a master clock device prevents individual panel clock drift.</li><li>Inspect the CF card for filesystem errors — a corrupted schedule partition on the CF card causes scheduled events to disappear after power cycling.</li><li>Replace the CF card and re-flash with the correct firmware and project — a failing CF card is the most common cause of schedule loss on legacy panels.</li><li>If schedules are lost immediately after programming (within minutes), the CMOS battery is flat and must be replaced before re-programming.</li></ol>
                         
                         <div style="margin-top:50px; text-align:center; padding:30px; background:rgba(240, 112, 32, 0.1); border-radius:8px;">
                             <h3>Need professional help in the North Shore?</h3>

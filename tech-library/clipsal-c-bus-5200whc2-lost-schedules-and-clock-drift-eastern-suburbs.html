@@ -1629,9 +1629,7 @@
     <p style="font-size:18px; line-height:1.6;"><strong>Lost schedules and clock drift are almost always caused by a failed CR2032 coin cell battery on the network's designated Clock Driver device. The battery has a typical lifespan of 5-7 years. When it fails, the real-time clock resets to 1-Jan-2000 on every power cycle.</strong></p>
                         
                         <h3 style="margin-top:40px;">Step-by-Step Diagnostic Steps</h3>
-                        <ol style="margin-left:20px; line-height:1.8; font-size:16px;">
-                            
-                        </ol>
+                        <ol style="margin-left:20px; line-height:1.8; font-size:16px;"><li>The 5200WHC2 wireless hub does not hold schedules — check the C-Bus project in C-Bus Toolkit and the network clock master for time accuracy.</li><li>Verify that the C-Bus network time master is online and synchronising time to all units. Wireless hubs derive time from the C-Bus network clock.</li><li>Re-download the C-Bus project to the hub — a project download restores the hub's area assignments but does not affect schedules held in the network master.</li><li>Check for C-Bus network power interruptions — the hub's wireless devices may report incorrect occupancy after a power outage, disrupting time-based logic.</li><li>Confirm the C-Bus project's timezone and daylight saving settings are correct — an incorrect UTC offset causes all timed C-Bus events to drift.</li><li>Inspect wireless sensor battery levels — a sensor with a flat battery stops reporting, causing occupancy-based time logic to behave unexpectedly.</li><li>If schedules were working and then stopped, check C-Bus Toolkit for a project re-upload that may have wiped the schedule programming.</li></ol>
                         
                         <div style="margin-top:50px; text-align:center; padding:30px; background:rgba(240, 112, 32, 0.1); border-radius:8px;">
                             <h3>Need professional help in the Eastern Suburbs?</h3>

@@ -1625,9 +1625,7 @@
     <p style="font-size:18px; line-height:1.6;"><strong>Channels stuck on full brightness or fully off indicate a failed output component — either a welded relay contact or a shorted triac/diming MOSFET. This is a hardware fault that requires component-level replacement of the affected output device.</strong></p>
                         
                         <h3 style="margin-top:40px;">Step-by-Step Diagnostic Steps</h3>
-                        <ol style="margin-left:20px; line-height:1.8; font-size:16px;">
-                            
-                        </ol>
+                        <ol style="margin-left:20px; line-height:1.8; font-size:16px;"><li>The DDNG gateway is a communication bridge, not a channel output device — if channels are stuck, trace the DyNet commands it is sending to downstream controllers.</li><li>Check the serial command being received by the gateway — a third-party device sending a continuous ON command via RS232/RS485 will keep channels stuck on.</li><li>Use the Dynalite Configuration Tool to monitor DyNet bus traffic and identify which device is repeatedly issuing the stuck-channel command.</li><li>Inspect the serial cable connected to the gateway for a stuck CTS/RTS line that is causing the gateway to loop a command continuously.</li><li>Power cycle the gateway and the connected serial device simultaneously — a stuck handshake line can cause the gateway to repeat the last command indefinitely.</li><li>Re-download the gateway configuration — a corrupt command translation table can cause a specific serial byte to be translated as a continuous ON command.</li><li>If the gateway is confirmed to be sending ON commands continuously with no input from the serial device, the gateway firmware has corrupted — reset to factory defaults.</li></ol>
                         
                         <div style="margin-top:50px; text-align:center; padding:30px; background:rgba(240, 112, 32, 0.1); border-radius:8px;">
                             <h3>Need professional help in the North Shore?</h3>

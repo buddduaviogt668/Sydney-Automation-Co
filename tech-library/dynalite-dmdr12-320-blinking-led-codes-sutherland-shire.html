@@ -1625,9 +1625,7 @@
     <p style="font-size:18px; line-height:1.6;"><strong>Blinking LED codes on this device indicate a communication fault or hardware error. The exact blink pattern determines the specific failure mode. Refer to the manufacturer's documentation for blink pattern decoding, or contact our diagnostic service for toolkit analysis.</strong></p>
                         
                         <h3 style="margin-top:40px;">Step-by-Step Diagnostic Steps</h3>
-                        <ol style="margin-left:20px; line-height:1.8; font-size:16px;">
-                            
-                        </ol>
+                        <ol style="margin-left:20px; line-height:1.8; font-size:16px;"><li>Identify the LED pattern: red channel LED = overload or TRIAC fault; amber = configuration warning; slow green = standby; fast green = DyNet activity.</li><li>A blinking red LED on a specific channel indicates overload — measure load current on that channel; exceeding the rated wattage triggers thermal shutdown.</li><li>Power cycle the DMDR12-320 — remove mains and DyNet power for 30 seconds. Overload fault LEDs latch and require a full power cycle to clear.</li><li>Disconnect the load on the blinking channel and restore power — a clear LED confirms a load fault (overload, short, or incompatible driver).</li><li>Connect via the Dynalite Configuration Tool and check the fault log to identify the specific fault code for the blinking LED pattern.</li><li>Re-download the dimmer scene and preset data to clear any configuration fault that is causing the amber warning LED.</li><li>If the fault LED persists on an unloaded channel after a power cycle, the TRIAC for that channel has failed — professional replacement is required.</li></ol>
                         
                         <div style="margin-top:50px; text-align:center; padding:30px; background:rgba(240, 112, 32, 0.1); border-radius:8px;">
                             <h3>Need professional help in the Sutherland Shire?</h3>

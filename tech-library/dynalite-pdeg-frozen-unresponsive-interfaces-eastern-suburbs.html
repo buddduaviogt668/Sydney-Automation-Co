@@ -1625,9 +1625,7 @@
     <p style="font-size:18px; line-height:1.6;"><strong>A frozen or unresponsive controller typically results from a microcontroller lockup caused by electrical noise, brownout, or corrupted firmware. A full power cycle (remove all power for 2 minutes) resolves approximately 60% of these cases.</strong></p>
                         
                         <h3 style="margin-top:40px;">Step-by-Step Diagnostic Steps</h3>
-                        <ol style="margin-left:20px; line-height:1.8; font-size:16px;">
-                            
-                        </ol>
+                        <ol style="margin-left:20px; line-height:1.8; font-size:16px;"><li>Power cycle the PDEG — remove mains and DyNet power for 2 minutes. Emergency lighting controllers have a latching fault state that requires a cold reset.</li><li>Check for an active emergency lighting test — the PDEG will ignore DyNet scene commands during an emergency or test event.</li><li>Inspect the emergency circuit wiring — a short or open circuit on the emergency output causes the PDEG controller to halt normal operation.</li><li>Use the Dynalite Configuration Tool to clear any latched emergency faults — a latched fault prevents all normal scene control until manually acknowledged.</li><li>Check DyNet bus communication — if the PDEG cannot reach the system processor, it operates in a standalone emergency mode and ignores normal DyNet commands.</li><li>Verify compliance test schedules are not incorrectly configured to run continuously — a continuous test cycle makes the unit appear permanently frozen to normal commands.</li><li>If the PDEG is unresponsive to both DyNet commands and physical reset, the emergency controller firmware has corrupted — the unit requires factory service.</li></ol>
                         
                         <div style="margin-top:50px; text-align:center; padding:30px; background:rgba(240, 112, 32, 0.1); border-radius:8px;">
                             <h3>Need professional help in the Eastern Suburbs?</h3>

@@ -1625,9 +1625,7 @@
     <p style="font-size:18px; line-height:1.6;"><strong>A frozen or unresponsive controller typically results from a microcontroller lockup caused by electrical noise, brownout, or corrupted firmware. A full power cycle (remove all power for 2 minutes) resolves approximately 60% of these cases.</strong></p>
                         
                         <h3 style="margin-top:40px;">Step-by-Step Diagnostic Steps</h3>
-                        <ol style="margin-left:20px; line-height:1.8; font-size:16px;">
-                            
-                        </ol>
+                        <ol style="margin-left:20px; line-height:1.8; font-size:16px;"><li>Power cycle the gateway — remove DyNet bus and serial power simultaneously for 30 seconds, then restore.</li><li>Check the RS232/RS485 baud rate setting — a mismatch between the gateway and the connected device causes the serial buffer to overflow and freeze.</li><li>Inspect the serial cable for correct wiring — a crossed Tx/Rx pair prevents any serial communication and can cause the gateway to loop waiting for acknowledgement.</li><li>Use the Dynalite Configuration Tool to reset the gateway to factory defaults, then re-configure the serial parameters to match the connected device.</li><li>Check the DyNet bus voltage at the gateway terminal — below 12 V prevents the gateway from processing DyNet packets, causing apparent freezing.</li><li>Verify no other device is broadcasting on the same RS485 address — bus address conflicts cause constant collisions that freeze the gateway.</li><li>If the gateway's status LED is lit but serial traffic is absent after reconfiguration, the serial UART has failed — replace the unit.</li></ol>
                         
                         <div style="margin-top:50px; text-align:center; padding:30px; background:rgba(240, 112, 32, 0.1); border-radius:8px;">
                             <h3>Need professional help in the Sutherland Shire?</h3>

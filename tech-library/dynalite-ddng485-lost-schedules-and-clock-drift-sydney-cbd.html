@@ -1625,9 +1625,7 @@
     <p style="font-size:18px; line-height:1.6;"><strong>Lost schedules and clock drift are almost always caused by a failed CR2032 coin cell battery on the network's designated Clock Driver device. The battery has a typical lifespan of 5-7 years. When it fails, the real-time clock resets to 1-Jan-2000 on every power cycle.</strong></p>
                         
                         <h3 style="margin-top:40px;">Step-by-Step Diagnostic Steps</h3>
-                        <ol style="margin-left:20px; line-height:1.8; font-size:16px;">
-                            
-                        </ol>
+                        <ol style="margin-left:20px; line-height:1.8; font-size:16px;"><li>The DDNG gateway does not hold schedules independently — schedules are stored in the DDBC1200 system processor. Check the processor RTC battery first.</li><li>Verify that the serial device connected to the gateway is not sending time commands that overwrite the DyNet system clock with an incorrect value.</li><li>Inspect the gateway's DyNet time synchronisation settings — an incorrectly configured gateway can distribute a wrong timestamp to all DyNet devices.</li><li>Check the RS232/RS485 baud rate and protocol — a communication error can cause the gateway to repeatedly re-initialise and lose its local time state.</li><li>Re-download the gateway configuration from the Dynalite Configuration Tool to restore correct time-sync relay settings.</li><li>If the system clock drifts only when the gateway is connected, the serial device is injecting an incorrect time signal — disconnect it and test.</li><li>Confirm the gateway firmware is current — early firmware had a known bug where a serial timeout caused the gateway to reset the DyNet system clock to zero.</li></ol>
                         
                         <div style="margin-top:50px; text-align:center; padding:30px; background:rgba(240, 112, 32, 0.1); border-radius:8px;">
                             <h3>Need professional help in the Sydney CBD?</h3>

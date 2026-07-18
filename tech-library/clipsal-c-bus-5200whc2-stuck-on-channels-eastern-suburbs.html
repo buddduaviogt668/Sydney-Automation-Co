@@ -1629,9 +1629,7 @@
     <p style="font-size:18px; line-height:1.6;"><strong>Channels stuck on full brightness or fully off indicate a failed output component — either a welded relay contact or a shorted triac/diming MOSFET. This is a hardware fault that requires component-level replacement of the affected output device.</strong></p>
                         
                         <h3 style="margin-top:40px;">Step-by-Step Diagnostic Steps</h3>
-                        <ol style="margin-left:20px; line-height:1.8; font-size:16px;">
-                            
-                        </ol>
+                        <ol style="margin-left:20px; line-height:1.8; font-size:16px;"><li>Identify whether the stuck channel is commanded by a wireless device or by a C-Bus schedule — use C-Bus Toolkit's network monitor to trace the source.</li><li>Check for a stuck PIR or occupancy sensor paired to the hub — a sensor that continuously reports "occupied" keeps the associated channel on.</li><li>Remove wireless sensor pairings one at a time from C-Bus Toolkit to identify which sensor is issuing the stuck ON command.</li><li>Power cycle the 5200WHC2 and all paired wireless devices — a wireless device with a stuck transmit state clears on power cycle.</li><li>Check C-Bus schedules for an "occupied" override that activates when a sensor reports occupied and never times out correctly.</li><li>Re-pair all wireless devices and re-download the C-Bus application — a corrupt wireless event table can latch a channel to ON state.</li><li>If no wireless device is paired and channels are still stuck, the fault is in the downstream C-Bus dimmer or relay, not the hub.</li></ol>
                         
                         <div style="margin-top:50px; text-align:center; padding:30px; background:rgba(240, 112, 32, 0.1); border-radius:8px;">
                             <h3>Need professional help in the Eastern Suburbs?</h3>

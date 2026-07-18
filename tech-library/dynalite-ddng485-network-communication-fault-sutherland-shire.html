@@ -1625,9 +1625,7 @@
     <p style="font-size:18px; line-height:1.6;"><strong>A Network Communication Fault controller typically results from a microcontroller lockup caused by electrical noise, brownout, or corrupted firmware. A full power cycle (remove all power for 2 minutes) resolves approximately 60% of these cases.</strong></p>
                         
                         <h3 style="margin-top:40px;">Step-by-Step Diagnostic Steps</h3>
-                        <ol style="margin-left:20px; line-height:1.8; font-size:16px;">
-                            
-                        </ol>
+                        <ol style="margin-left:20px; line-height:1.8; font-size:16px;"><li>Check DyNet bus voltage at the DDNG485 terminal — below 12 V prevents the gateway from participating in DyNet network communication.</li><li>Inspect RS485 wiring — verify A and B polarity is correct (swapped polarity causes complete RS485 bus failure), and that cable length does not exceed 1.2 km.</li><li>Verify RS485 termination — fit 120 Ω resistors across A and B at both ends of the RS485 segment; missing termination causes reflections and packet loss.</li><li>Check the RS485 bus device count — the DDNG485 supports up to 32 unit loads on a single RS485 segment; beyond this, a repeater is required.</li><li>Power cycle the DDNG485 and all RS485 devices — stale collision states on the bus often clear on a coordinated power cycle.</li><li>Verify the DDNG485 DyNet address is unique — a duplicate address causes the gateway to conflict with another device and drop off both networks.</li><li>If the DDNG485 is visible on DyNet but RS485 devices cannot communicate, the RS485 transceiver has failed — replace the gateway.</li></ol>
                         
                         <div style="margin-top:50px; text-align:center; padding:30px; background:rgba(240, 112, 32, 0.1); border-radius:8px;">
                             <h3>Need professional help in the Sutherland Shire?</h3>

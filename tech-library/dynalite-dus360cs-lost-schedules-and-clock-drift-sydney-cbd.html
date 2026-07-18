@@ -1625,9 +1625,7 @@
     <p style="font-size:18px; line-height:1.6;"><strong>Lost schedules and clock drift are almost always caused by a failed CR2032 coin cell battery on the network's designated Clock Driver device. The battery has a typical lifespan of 5-7 years. When it fails, the real-time clock resets to 1-Jan-2000 on every power cycle.</strong></p>
                         
                         <h3 style="margin-top:40px;">Step-by-Step Diagnostic Steps</h3>
-                        <ol style="margin-left:20px; line-height:1.8; font-size:16px;">
-                            
-                        </ol>
+                        <ol style="margin-left:20px; line-height:1.8; font-size:16px;"><li>The DUS360CS switch does not hold schedules — all timing is controlled by the DDBC1200 system processor. Check the processor's RTC battery.</li><li>Verify the switch is correctly assigned to the area and preset numbers that the schedule uses — a mis-mapped switch does not respond to timed events.</li><li>Check that the Dynalite Configuration Tool project is current — an outdated project may show schedules that have since been deleted from the processor.</li><li>Re-download the DyNet project to synchronise the switch's button labels and area assignments with the scheduled events.</li><li>Inspect DyNet bus continuity — a switch that drops off the bus intermittently will not receive timed scene commands from the system processor.</li><li>If the switch shows scenes correctly but timed events do not trigger, the schedule is disabled in the DDBC1200 — re-enable via the Configuration Tool.</li><li>Confirm daylight saving time settings in the Configuration Tool — incorrect DST causes all timed events to fire 1 hour offset from expected.</li></ol>
                         
                         <div style="margin-top:50px; text-align:center; padding:30px; background:rgba(240, 112, 32, 0.1); border-radius:8px;">
                             <h3>Need professional help in the Sydney CBD?</h3>

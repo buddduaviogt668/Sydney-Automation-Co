@@ -1625,9 +1625,7 @@
     <p style="font-size:18px; line-height:1.6;"><strong>Lost schedules and clock drift are almost always caused by a failed CR2032 coin cell battery on the network's designated Clock Driver device. The battery has a typical lifespan of 5-7 years. When it fails, the real-time clock resets to 1-Jan-2000 on every power cycle.</strong></p>
                         
                         <h3 style="margin-top:40px;">Step-by-Step Diagnostic Steps</h3>
-                        <ol style="margin-left:20px; line-height:1.8; font-size:16px;">
-                            
-                        </ol>
+                        <ol style="margin-left:20px; line-height:1.8; font-size:16px;"><li>Check the real-time clock battery inside the Dynalite controller — a flat RTC battery causes all schedules to reset to default time on every power cycle.</li><li>Replace the RTC battery (typically CR2032 or similar) by opening the controller enclosure. The battery location is marked on the PCB silkscreen.</li><li>After battery replacement, set the correct date and time via the Dynalite Configuration Tool and re-download the project.</li><li>Enable network time synchronisation in the Configuration Tool — designate one DDBC1200 as the master clock and all other devices as time slaves.</li><li>Check for frequent power interruptions — each outage causes a brief clock reset; if the battery is flat, the clock loses minutes to hours per day.</li><li>Back up the full Dynalite project before replacing the battery — some configurations lose settings during the battery swap if power is also removed.</li><li>If drift recurs after battery replacement, the RTC crystal has failed — the controller board requires professional repair or replacement.</li></ol>
                         
                         <div style="margin-top:50px; text-align:center; padding:30px; background:rgba(240, 112, 32, 0.1); border-radius:8px;">
                             <h3>Need professional help in the Sydney CBD?</h3>

@@ -1625,9 +1625,7 @@
     <p style="font-size:18px; line-height:1.6;"><strong>A Network Communication Fault controller typically results from a microcontroller lockup caused by electrical noise, brownout, or corrupted firmware. A full power cycle (remove all power for 2 minutes) resolves approximately 60% of these cases.</strong></p>
                         
                         <h3 style="margin-top:40px;">Step-by-Step Diagnostic Steps</h3>
-                        <ol style="margin-left:20px; line-height:1.8; font-size:16px;">
-                            
-                        </ol>
+                        <ol style="margin-left:20px; line-height:1.8; font-size:16px;"><li>Power cycle the amplifier and verify it appears in a C-Bus Toolkit network scan after restart.</li><li>Check the C-Bus network address for duplicates — the amplifier default address frequently conflicts with other units on older installations.</li><li>Inspect the C-Bus terminal block connections on the amplifier — high vibration environments can loosen the small screw terminals.</li><li>Measure C-Bus voltage at the amplifier terminal: 15–36 V. Underspecified power supplies cause intermittent network dropout.</li><li>Re-download the amplifier application from C-Bus Toolkit. A corrupt application results in the unit appearing on network scans but not responding to commands.</li><li>Check that the C-Bus segment has the correct termination resistor — a missing termination causes reflections that affect high-load units disproportionately.</li><li>If the amplifier drops off the network under load, the C-Bus circuitry is being affected by EMI from the power output stage — fit a ferrite core to the C-Bus cable at the unit.</li></ol>
                         
                         <div style="margin-top:50px; text-align:center; padding:30px; background:rgba(240, 112, 32, 0.1); border-radius:8px;">
                             <h3>Need professional help in the Sydney CBD?</h3>

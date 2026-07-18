@@ -1625,9 +1625,7 @@
     <p style="font-size:18px; line-height:1.6;"><strong>Blinking LED codes on this device indicate a communication fault or hardware error. The exact blink pattern determines the specific failure mode. Refer to the manufacturer's documentation for blink pattern decoding, or contact our diagnostic service for toolkit analysis.</strong></p>
                         
                         <h3 style="margin-top:40px;">Step-by-Step Diagnostic Steps</h3>
-                        <ol style="margin-left:20px; line-height:1.8; font-size:16px;">
-                            
-                        </ol>
+                        <ol style="margin-left:20px; line-height:1.8; font-size:16px;"><li>Identify the LED pattern: fast amber blink = DyNet communication lost; slow red blink = address conflict; alternating blink = firmware update mode.</li><li>A fast amber blink indicates the switch cannot communicate on the DyNet bus — check DyNet bus voltage at the switch terminal (minimum 18 V required).</li><li>Inspect the DyNet cable connection at the switch — a loose or corroded terminal causes intermittent communication shown as a blinking fault LED.</li><li>Power cycle the DUS360CS by removing the DyNet bus connection for 30 seconds — the switch re-initialises its DyNet transceiver on power-up.</li><li>Check for a DyNet address conflict — two switches with the same area address both display a fault LED and neither operates correctly.</li><li>Re-download the switch project from the Dynalite Configuration Tool — a project mismatch causes the switch to blink a configuration fault code continuously.</li><li>If the fault LED persists after addressing wiring and configuration, the DyNet transceiver chip has failed — the switch requires replacement.</li></ol>
                         
                         <div style="margin-top:50px; text-align:center; padding:30px; background:rgba(240, 112, 32, 0.1); border-radius:8px;">
                             <h3>Need professional help in the Sydney CBD?</h3>

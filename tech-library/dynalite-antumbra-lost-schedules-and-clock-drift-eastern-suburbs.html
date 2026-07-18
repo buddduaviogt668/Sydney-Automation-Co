@@ -1625,9 +1625,7 @@
     <p style="font-size:18px; line-height:1.6;"><strong>Lost schedules and clock drift are almost always caused by a failed CR2032 coin cell battery on the network's designated Clock Driver device. The battery has a typical lifespan of 5-7 years. When it fails, the real-time clock resets to 1-Jan-2000 on every power cycle.</strong></p>
                         
                         <h3 style="margin-top:40px;">Step-by-Step Diagnostic Steps</h3>
-                        <ol style="margin-left:20px; line-height:1.8; font-size:16px;">
-                            
-                        </ol>
+                        <ol style="margin-left:20px; line-height:1.8; font-size:16px;"><li>Schedules on the Antumbra are stored in the DDBC1200 system processor, not in the keypad itself — check the processor battery and time settings first.</li><li>Confirm the Antumbra is correctly paired to the Dynalite system processor (DDBC1200) — an unlinked keypad does not receive schedule data.</li><li>Use the Dynalite Configuration Tool to verify all scheduled events are correctly assigned to the Antumbra's area and preset numbers.</li><li>Check whether the Antumbra's display shows the correct time — if the displayed time is wrong, the system clock source requires recalibration.</li><li>Re-download the Antumbra project from the Configuration Tool — a corrupted project file causes the keypad to lose its scene-time association.</li><li>Enable automatic time synchronisation in the Configuration Tool — the Antumbra derives time from the DyNet master clock, not its own RTC.</li><li>If the Antumbra shows schedules but they do not execute, check that the system processor's scheduler is enabled and the processor is online.</li></ol>
                         
                         <div style="margin-top:50px; text-align:center; padding:30px; background:rgba(240, 112, 32, 0.1); border-radius:8px;">
                             <h3>Need professional help in the Eastern Suburbs?</h3>

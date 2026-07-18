@@ -1625,9 +1625,7 @@
     <p style="font-size:18px; line-height:1.6;"><strong>Blinking LED codes on this device indicate a communication fault or hardware error. The exact blink pattern determines the specific failure mode. Refer to the manufacturer's documentation for blink pattern decoding, or contact our diagnostic service for toolkit analysis.</strong></p>
                         
                         <h3 style="margin-top:40px;">Step-by-Step Diagnostic Steps</h3>
-                        <ol style="margin-left:20px; line-height:1.8; font-size:16px;">
-                            
-                        </ol>
+                        <ol style="margin-left:20px; line-height:1.8; font-size:16px;"><li>Identify the LED pattern: slow green = standby; fast green = DyNet/RS485 activity; amber = bus warning; red = RS485 fault.</li><li>A red fault LED indicates RS485 bus errors — check for correct RS485 termination (120 Ω across A and B at both ends of the RS485 segment).</li><li>Check RS485 wiring polarity — swapped A/B terminals cause bus collisions that produce a continuous red fault LED.</li><li>Power cycle the DDNG485 by removing DyNet bus power for 30 seconds — most serial fault states clear on clean power-up.</li><li>Verify RS485 bus address — the DDNG485 must have a unique bus address; duplicate addresses cause both devices to flag a collision error LED.</li><li>Re-download the DDNG485 configuration from the Dynalite Configuration Tool to correct any RS485 protocol or address settings causing the fault LED.</li><li>If the red fault LED persists with correct wiring, termination, and configuration, the RS485 transceiver has failed — replace the gateway unit.</li></ol>
                         
                         <div style="margin-top:50px; text-align:center; padding:30px; background:rgba(240, 112, 32, 0.1); border-radius:8px;">
                             <h3>Need professional help in the Eastern Suburbs?</h3>

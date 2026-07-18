@@ -1625,9 +1625,7 @@
     <p style="font-size:18px; line-height:1.6;"><strong>Channels stuck on full brightness or fully off indicate a failed output component — either a welded relay contact or a shorted triac/diming MOSFET. This is a hardware fault that requires component-level replacement of the affected output device.</strong></p>
                         
                         <h3 style="margin-top:40px;">Step-by-Step Diagnostic Steps</h3>
-                        <ol style="margin-left:20px; line-height:1.8; font-size:16px;">
-                            
-                        </ol>
+                        <ol style="margin-left:20px; line-height:1.8; font-size:16px;"><li>Use C-Bus Toolkit to send an explicit level-0 command to the stuck amplifier group — if the output does not drop, the output driver has failed.</li><li>Check for a C-Bus group or scene that is continuously commanding the amplifier channel ON — use Toolkit's network monitor to identify the source.</li><li>Power cycle the amplifier by isolating its circuit breaker for 30 seconds — a latched output driver state often clears on power restore.</li><li>Inspect the amplifier's output wiring for a fault that is maintaining the circuit — a short across the output terminals keeps the load energised regardless of the amplifier state.</li><li>Re-download the amplifier C-Bus application to clear any corrupted group or level data that is holding the channel at full output.</li><li>Test with the amplifier load disconnected — if the output voltage drops to 0 V with no load, the issue is in the load wiring, not the amplifier.</li><li>If the amplifier output stage is permanently energised with no C-Bus command and no load fault, the output transistor has failed shorted — professional repair is required.</li></ol>
                         
                         <div style="margin-top:50px; text-align:center; padding:30px; background:rgba(240, 112, 32, 0.1); border-radius:8px;">
                             <h3>Need professional help in the Sydney CBD?</h3>

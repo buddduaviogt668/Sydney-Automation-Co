@@ -1625,9 +1625,7 @@
     <p style="font-size:18px; line-height:1.6;"><strong>Channels stuck on full brightness or fully off indicate a failed output component — either a welded relay contact or a shorted triac/diming MOSFET. This is a hardware fault that requires component-level replacement of the affected output device.</strong></p>
                         
                         <h3 style="margin-top:40px;">Step-by-Step Diagnostic Steps</h3>
-                        <ol style="margin-left:20px; line-height:1.8; font-size:16px;">
-                            
-                        </ol>
+                        <ol style="margin-left:20px; line-height:1.8; font-size:16px;"><li>Check C-Bus Toolkit for an active ramp or scene that has set the channel to 100% — use the "Output" control to manually set it to 0% and observe whether it holds.</li><li>Power cycle the dimmer by isolating the circuit breaker for 30 seconds. A stuck output is often a latched fault state that clears on power restore.</li><li>Inspect for a failed TRIAC — a TRIAC that has shorted gate-to-anode remains permanently ON regardless of control signal. Measure output voltage with no C-Bus command.</li><li>Check for a stuck-at-high C-Bus command loop — use Toolkit's network monitor to see if a repeating scene or group command is forcing the channel on.</li><li>Test the dimmer in manual override mode (if fitted) — if the output drops to 0% manually but C-Bus still reports it high, the application is the issue, not the hardware.</li><li>Re-download the unit application from C-Bus Toolkit. A corrupt scene or level table can cause a channel to latch at full level permanently.</li><li>If the channel output is permanently ON even with C-Bus disconnected, the TRIAC has failed shorted — professional TRIAC replacement is required.</li></ol>
                         
                         <div style="margin-top:50px; text-align:center; padding:30px; background:rgba(240, 112, 32, 0.1); border-radius:8px;">
                             <h3>Need professional help in the Eastern Suburbs?</h3>

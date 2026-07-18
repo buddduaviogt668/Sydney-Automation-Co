@@ -1625,9 +1625,7 @@
     <p style="font-size:18px; line-height:1.6;"><strong>A frozen or unresponsive controller typically results from a microcontroller lockup caused by electrical noise, brownout, or corrupted firmware. A full power cycle (remove all power for 2 minutes) resolves approximately 60% of these cases.</strong></p>
                         
                         <h3 style="margin-top:40px;">Step-by-Step Diagnostic Steps</h3>
-                        <ol style="margin-left:20px; line-height:1.8; font-size:16px;">
-                            
-                        </ol>
+                        <ol style="margin-left:20px; line-height:1.8; font-size:16px;"><li>Power cycle the relay controller — remove DyNet and mains power for 30 seconds. Relay coil back-EMF can corrupt the MCU state.</li><li>Check for welded relay contacts — a relay stuck closed will not respond to DyNet OFF commands. Listen for the relay click on each command.</li><li>Inspect the DyNet bus wiring at the relay controller — loose connections cause voltage drop that prevents the controller from processing commands.</li><li>Use the Dynalite Configuration Tool to force reset the channel preset table — corrupted presets cause the controller to ignore incoming DyNet scene commands.</li><li>Check the mains supply voltage — relay controllers require stable mains for relay coil operation; brownout causes random relay lockup.</li><li>Manually operate each relay using the DIP switch test mode (if fitted) to determine whether the issue is DyNet communication or mechanical relay failure.</li><li>If individual channel relays are frozen, the relay on that channel has seized — the relay module requires physical replacement.</li></ol>
                         
                         <div style="margin-top:50px; text-align:center; padding:30px; background:rgba(240, 112, 32, 0.1); border-radius:8px;">
                             <h3>Need professional help in the North Shore?</h3>

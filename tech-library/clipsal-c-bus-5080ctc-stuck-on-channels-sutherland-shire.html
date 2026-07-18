@@ -1630,9 +1630,7 @@
     <p style="font-size:18px; line-height:1.6;"><strong>Channels stuck on full brightness or fully off indicate a failed output component — either a welded relay contact or a shorted triac/diming MOSFET. This is a hardware fault that requires component-level replacement of the affected output device.</strong></p>
                         
                         <h3 style="margin-top:40px;">Step-by-Step Diagnostic Steps</h3>
-                        <ol style="margin-left:20px; line-height:1.8; font-size:16px;">
-                            
-                        </ol>
+                        <ol style="margin-left:20px; line-height:1.8; font-size:16px;"><li>Check whether the stuck channel is on the 5000CT itself or a downstream dimmer/relay unit — the touch panel is a controller, not a dimmer.</li><li>From the 5000CT touchscreen, navigate to the specific group and manually set the level to 0%. If the downstream unit does not respond, check that unit directly.</li><li>Check PICED for a scene that is overriding the channel to ON — a "soft on" command locked in a scene will override manual control from the keypad.</li><li>Verify no "Enable/Disable" logic is locking a channel into a forced-on state through a C-Bus logic gate in the project.</li><li>Use C-Bus Toolkit's "Output Monitor" to watch which C-Bus groups are receiving ON commands and identify the source of the stuck command.</li><li>Re-download the PICED project to the 5000CT — a corrupted logic block can create a loop that permanently forces a channel on.</li><li>If the keypad shows the channel as OFF but the output is physically ON, the issue is with the downstream dimmer or relay unit, not the touch panel.</li></ol>
                         
                         <div style="margin-top:50px; text-align:center; padding:30px; background:rgba(240, 112, 32, 0.1); border-radius:8px;">
                             <h3>Need professional help in the Sutherland Shire?</h3>

@@ -1625,9 +1625,7 @@
     <p style="font-size:18px; line-height:1.6;"><strong>Channels stuck on full brightness or fully off indicate a failed output component — either a welded relay contact or a shorted triac/diming MOSFET. This is a hardware fault that requires component-level replacement of the affected output device.</strong></p>
                         
                         <h3 style="margin-top:40px;">Step-by-Step Diagnostic Steps</h3>
-                        <ol style="margin-left:20px; line-height:1.8; font-size:16px;">
-                            
-                        </ol>
+                        <ol style="margin-left:20px; line-height:1.8; font-size:16px;"><li>Check whether a button on the DUS360CS is physically stuck in the pressed position — a jammed button continuously sends DyNet ON commands.</li><li>Inspect the DyNet bus for a repeated DyNet packet from this switch address — use the Dynalite Configuration Tool's bus monitor to identify a looping command.</li><li>Power cycle the DUS360CS — remove DyNet bus power for 30 seconds. A stuck button state that is software-latched (not mechanical) clears on restart.</li><li>Perform a factory reset on the DUS360CS (hold buttons 1 and 4 for 10 seconds) to clear any corrupt toggle state.</li><li>Re-download the button assignment project — a corrupt "hold ON" button action without a release event keeps the scene active indefinitely.</li><li>If the button is physically stuck, inspect for debris under the rocker or damage to the button mechanism — clean or replace the switch fascia.</li><li>If the DUS360CS is sending continuous ON commands with no button pressed, the button contact has failed closed — the switch requires replacement.</li></ol>
                         
                         <div style="margin-top:50px; text-align:center; padding:30px; background:rgba(240, 112, 32, 0.1); border-radius:8px;">
                             <h3>Need professional help in the Eastern Suburbs?</h3>

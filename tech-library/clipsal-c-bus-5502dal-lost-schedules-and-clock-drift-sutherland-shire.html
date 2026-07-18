@@ -1625,9 +1625,7 @@
     <p style="font-size:18px; line-height:1.6;"><strong>Lost schedules and clock drift are almost always caused by a failed CR2032 coin cell battery on the network's designated Clock Driver device. The battery has a typical lifespan of 5-7 years. When it fails, the real-time clock resets to 1-Jan-2000 on every power cycle.</strong></p>
                         
                         <h3 style="margin-top:40px;">Step-by-Step Diagnostic Steps</h3>
-                        <ol style="margin-left:20px; line-height:1.8; font-size:16px;">
-                            
-                        </ol>
+                        <ol style="margin-left:20px; line-height:1.8; font-size:16px;"><li>The 5502DAL DALI gateway does not manage schedules independently — all scheduling is done at the C-Bus level via C-Bus Toolkit.</li><li>Verify C-Bus project schedules are re-downloaded after any project reset — a project restore from backup will overwrite gateway-related event timings.</li><li>Check the C-Bus network time master — DALI schedule execution depends on the C-Bus clock being accurate.</li><li>If DALI scenes fire at wrong times, inspect the C-Bus logic for a time offset caused by incorrect timezone settings in Toolkit.</li><li>Confirm C-Bus Toolkit's daylight saving settings match the current local time rules — incorrect DST configuration causes scheduled events to drift by 1 hour.</li><li>Re-download the full project including time settings to all C-Bus units after any major network change or hardware replacement.</li><li>If DALI group scenes are lost (not timing issues), re-commission DALI devices and reassign them to C-Bus groups in C-Bus Toolkit.</li></ol>
                         
                         <div style="margin-top:50px; text-align:center; padding:30px; background:rgba(240, 112, 32, 0.1); border-radius:8px;">
                             <h3>Need professional help in the Sutherland Shire?</h3>

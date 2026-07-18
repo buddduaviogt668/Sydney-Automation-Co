@@ -1625,9 +1625,7 @@
     <p style="font-size:18px; line-height:1.6;"><strong>Lost schedules and clock drift are almost always caused by a failed CR2032 coin cell battery on the network's designated Clock Driver device. The battery has a typical lifespan of 5-7 years. When it fails, the real-time clock resets to 1-Jan-2000 on every power cycle.</strong></p>
                         
                         <h3 style="margin-top:40px;">Step-by-Step Diagnostic Steps</h3>
-                        <ol style="margin-left:20px; line-height:1.8; font-size:16px;">
-                            
-                        </ol>
+                        <ol style="margin-left:20px; line-height:1.8; font-size:16px;"><li>Emergency lighting test schedules are stored in the PDEG flash memory — check that a power interruption did not corrupt the schedule partition.</li><li>Re-download the PDEG configuration and test schedule from the Dynalite Configuration Tool to restore all scheduled tests.</li><li>Verify the PDEG is synchronising time from the DyNet network clock — a PDEG with a drifting clock will run annual and 6-monthly tests at the wrong time.</li><li>Replace the PDEG's internal RTC battery if the device loses the date and time on every power cycle — flat batteries are the leading cause of schedule loss.</li><li>After battery replacement, reprogram the test schedule to comply with AS 2293 requirements (6-monthly function test, annual duration test).</li><li>Check that no manual test was accidentally initiated that overwrote the scheduled test record — manual tests must be logged separately.</li><li>If the PDEG clock drifts by more than 5 minutes per month, the RTC crystal has failed — replace the crystal or the controller board.</li></ol>
                         
                         <div style="margin-top:50px; text-align:center; padding:30px; background:rgba(240, 112, 32, 0.1); border-radius:8px;">
                             <h3>Need professional help in the Eastern Suburbs?</h3>

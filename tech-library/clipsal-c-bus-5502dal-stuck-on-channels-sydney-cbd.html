@@ -1625,9 +1625,7 @@
     <p style="font-size:18px; line-height:1.6;"><strong>Channels stuck on full brightness or fully off indicate a failed output component — either a welded relay contact or a shorted triac/diming MOSFET. This is a hardware fault that requires component-level replacement of the affected output device.</strong></p>
                         
                         <h3 style="margin-top:40px;">Step-by-Step Diagnostic Steps</h3>
-                        <ol style="margin-left:20px; line-height:1.8; font-size:16px;">
-                            
-                        </ol>
+                        <ol style="margin-left:20px; line-height:1.8; font-size:16px;"><li>Identify whether the stuck channel is on the DALI bus (a specific ballast/fitting) or the C-Bus group — test both from C-Bus Toolkit.</li><li>Send a DALI broadcast off command (level 0 to group 0) from C-Bus Toolkit to override any stuck DALI ballast preset.</li><li>Re-commission the DALI bus from scratch — a DALI device with a corrupted scene memory may ignore OFF commands from the gateway.</li><li>Check for a DALI ballast that has locked to maximum output after a power surge — this is a ballast fault, not a gateway fault.</li><li>Inspect the C-Bus application mapped to the DALI gateway for a logic block or schedule that is continuously commanding the DALI group ON.</li><li>Re-download the 5502DAL application from C-Bus Toolkit to clear any corrupted group or scene data.</li><li>If a specific ballast remains at full output regardless of DALI commands, that ballast's internal driver has failed — replace the ballast or driver.</li></ol>
                         
                         <div style="margin-top:50px; text-align:center; padding:30px; background:rgba(240, 112, 32, 0.1); border-radius:8px;">
                             <h3>Need professional help in the Sydney CBD?</h3>

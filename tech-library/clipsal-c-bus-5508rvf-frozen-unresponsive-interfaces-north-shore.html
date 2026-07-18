@@ -1625,9 +1625,7 @@
     <p style="font-size:18px; line-height:1.6;"><strong>A frozen or unresponsive controller typically results from a microcontroller lockup caused by electrical noise, brownout, or corrupted firmware. A full power cycle (remove all power for 2 minutes) resolves approximately 60% of these cases.</strong></p>
                         
                         <h3 style="margin-top:40px;">Step-by-Step Diagnostic Steps</h3>
-                        <ol style="margin-left:20px; line-height:1.8; font-size:16px;">
-                            
-                        </ol>
+                        <ol style="margin-left:20px; line-height:1.8; font-size:16px;"><li>Power cycle the relay unit — remove C-Bus power for 30 seconds. Relay units can lock up after a surge or brownout event.</li><li>Manually trigger a relay using the C-Bus Toolkit's "Output" controls to determine whether the unit is locked at the hardware or software level.</li><li>Check for welded relay contacts — a relay that has welded closed will not respond to OFF commands, appearing frozen. Listen for the relay click when commanded.</li><li>Re-download the relay application from C-Bus Toolkit — a corrupt application prevents the unit from executing any commands.</li><li>Check C-Bus network voltage at the terminal — voltage below 15 V may allow the unit to appear on the network but prevent relay operation.</li><li>Inspect the output terminal wiring for a dead short — a short on an output channel can lock the relay driver and cause the MCU to halt.</li><li>If individual channels are frozen while others work, the relay on that specific channel has mechanically seized — it requires physical replacement.</li></ol>
                         
                         <div style="margin-top:50px; text-align:center; padding:30px; background:rgba(240, 112, 32, 0.1); border-radius:8px;">
                             <h3>Need professional help in the North Shore?</h3>

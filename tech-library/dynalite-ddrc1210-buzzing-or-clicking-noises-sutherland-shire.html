@@ -1625,9 +1625,7 @@
     <p style="font-size:18px; line-height:1.6;"><strong>Audible buzzing or clicking from lighting control equipment indicates either a failing internal power supply or a relay/dimmer component operating outside its design parameters. Do not ignore these sounds — they often precede complete hardware failure.</strong></p>
                         
                         <h3 style="margin-top:40px;">Step-by-Step Diagnostic Steps</h3>
-                        <ol style="margin-left:20px; line-height:1.8; font-size:16px;">
-                            
-                        </ol>
+                        <ol style="margin-left:20px; line-height:1.8; font-size:16px;"><li>Clicking from a relay controller is expected during switching — continuous clicking indicates a DyNet command loop or schedule error.</li><li>Check the Dynalite Configuration Tool for any schedule or event that is toggling the relay at a high frequency — correct the timing to eliminate constant clicking.</li><li>Inspect relay contacts for wear — measure contact resistance on a closed relay; above 0.1 Ω indicates worn contacts that need replacement.</li><li>Check the connected load — motors and transformer primaries produce back-EMF that causes relay contacts to chatter. Fit a snubber across inductive loads.</li><li>A buzzing sound (not a click) from the relay coil indicates partial energisation — check mains supply voltage and the coil driver circuit.</li><li>Verify the relay's rated load current is not exceeded — overloading causes the contacts to arc and produce a crackling noise during switching.</li><li>If the relay controller produces noise with no DyNet commands and no load, the relay driver transistor is oscillating — professional repair is required.</li></ol>
                         
                         <div style="margin-top:50px; text-align:center; padding:30px; background:rgba(240, 112, 32, 0.1); border-radius:8px;">
                             <h3>Need professional help in the Sutherland Shire?</h3>

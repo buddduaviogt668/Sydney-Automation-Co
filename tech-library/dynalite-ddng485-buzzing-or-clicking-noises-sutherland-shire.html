@@ -1625,9 +1625,7 @@
     <p style="font-size:18px; line-height:1.6;"><strong>Audible buzzing or clicking from lighting control equipment indicates either a failing internal power supply or a relay/dimmer component operating outside its design parameters. Do not ignore these sounds — they often precede complete hardware failure.</strong></p>
                         
                         <h3 style="margin-top:40px;">Step-by-Step Diagnostic Steps</h3>
-                        <ol style="margin-left:20px; line-height:1.8; font-size:16px;">
-                            
-                        </ol>
+                        <ol style="margin-left:20px; line-height:1.8; font-size:16px;"><li>A buzzing from the DDNG485 typically originates from the DyNet power supply or the RS485 bus termination resistors under high bus activity.</li><li>Inspect the DIN rail mounting — a loose gateway vibrates at 50 Hz and produces an audible hum; tighten all mounting clips.</li><li>Check DyNet bus voltage and ripple — excessive ripple above 500 mV causes the gateway's internal regulator to buzz.</li><li>Inspect RS485 bus termination — incorrect termination causes signal reflections and high-frequency oscillation that can be audible as a high-pitched whine.</li><li>Verify the RS485 bus is not excessively loaded (too many devices) — an overloaded RS485 bus causes the gateway's RS485 driver to run hot and buzz.</li><li>Fit a ferrite core on the RS485 cable where it enters the gateway to suppress high-frequency emissions from the bus that couple into the power supply.</li><li>If buzzing correlates with RS485 traffic, the RS485 transceiver is running at its current limit — check bus load and reduce device count or add a repeater.</li></ol>
                         
                         <div style="margin-top:50px; text-align:center; padding:30px; background:rgba(240, 112, 32, 0.1); border-radius:8px;">
                             <h3>Need professional help in the Sutherland Shire?</h3>

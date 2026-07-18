@@ -1625,9 +1625,7 @@
     <p style="font-size:18px; line-height:1.6;"><strong>Channels stuck on full brightness or fully off indicate a failed output component — either a welded relay contact or a shorted triac/diming MOSFET. This is a hardware fault that requires component-level replacement of the affected output device.</strong></p>
                         
                         <h3 style="margin-top:40px;">Step-by-Step Diagnostic Steps</h3>
-                        <ol style="margin-left:20px; line-height:1.8; font-size:16px;">
-                            
-                        </ol>
+                        <ol style="margin-left:20px; line-height:1.8; font-size:16px;"><li>Use the Dynalite Configuration Tool to force a specific relay OFF — if it responds, the fault is in the DyNet command logic, not the hardware.</li><li>Inspect for welded relay contacts — apply an OFF command and listen for the relay click. No click with output still ON indicates welded contacts.</li><li>Check DyNet schedule for a continuous ON event — use the Configuration Tool's schedule view to identify any event that keeps the channel on.</li><li>Power cycle the relay controller — remove mains and DyNet power for 30 seconds to clear any latched driver state.</li><li>Test the relay coil circuit — if the coil is de-energised (measure 0 V across coil terminals) but the output is still ON, the contacts are welded.</li><li>Re-download the scene data to the relay controller — a corrupt preset can force a channel to remain at ON state regardless of DyNet commands.</li><li>Physically replace the relay module for the stuck channel — welded contacts require hardware replacement and cannot be cleared by software.</li></ol>
                         
                         <div style="margin-top:50px; text-align:center; padding:30px; background:rgba(240, 112, 32, 0.1); border-radius:8px;">
                             <h3>Need professional help in the Sutherland Shire?</h3>

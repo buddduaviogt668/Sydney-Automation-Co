@@ -1625,9 +1625,7 @@
     <p style="font-size:18px; line-height:1.6;"><strong>A Network Communication Fault controller typically results from a microcontroller lockup caused by electrical noise, brownout, or corrupted firmware. A full power cycle (remove all power for 2 minutes) resolves approximately 60% of these cases.</strong></p>
                         
                         <h3 style="margin-top:40px;">Step-by-Step Diagnostic Steps</h3>
-                        <ol style="margin-left:20px; line-height:1.8; font-size:16px;">
-                            
-                        </ol>
+                        <ol style="margin-left:20px; line-height:1.8; font-size:16px;"><li>Check DyNet bus voltage at the Antumbra terminal — below 18 V prevents the keypad from maintaining a reliable DyNet connection.</li><li>Inspect the DyNet cable at the Antumbra connection point for loose or corroded terminals — the Antumbra uses a 4-pin RJ11 or screw terminal connection.</li><li>Verify the Antumbra DyNet address is unique within its area — a duplicate area address prevents both panels from communicating correctly.</li><li>Power cycle the Antumbra by removing the DyNet bus power for 30 seconds — the keypad re-initialises its DyNet transceiver on power-up.</li><li>Check DyNet bus termination — without correct termination (120 Ω) at each segment end, reflections cause communication errors that prevent the Antumbra from reaching the system processor.</li><li>Re-download the Antumbra project from the Dynalite Configuration Tool — a project mismatch between the keypad and the DDBC1200 causes the keypad to fail communication.</li><li>If the Antumbra has no DyNet activity (confirmed by bus monitor) after all above checks, the DyNet transceiver chip inside the keypad has failed — the unit requires repair.</li></ol>
                         
                         <div style="margin-top:50px; text-align:center; padding:30px; background:rgba(240, 112, 32, 0.1); border-radius:8px;">
                             <h3>Need professional help in the Sydney CBD?</h3>

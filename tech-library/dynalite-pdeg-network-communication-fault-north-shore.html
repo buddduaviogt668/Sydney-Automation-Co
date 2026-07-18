@@ -1625,9 +1625,7 @@
     <p style="font-size:18px; line-height:1.6;"><strong>A Network Communication Fault controller typically results from a microcontroller lockup caused by electrical noise, brownout, or corrupted firmware. A full power cycle (remove all power for 2 minutes) resolves approximately 60% of these cases.</strong></p>
                         
                         <h3 style="margin-top:40px;">Step-by-Step Diagnostic Steps</h3>
-                        <ol style="margin-left:20px; line-height:1.8; font-size:16px;">
-                            
-                        </ol>
+                        <ol style="margin-left:20px; line-height:1.8; font-size:16px;"><li>Check DyNet bus voltage at the PDEG terminal — the PDEG requires stable DyNet voltage (18–30 V) to participate in network communication.</li><li>Inspect the DyNet cable connection at the PDEG — the unit uses a 2-wire DyNet connection; verify A/B polarity is correct and terminals are tight.</li><li>Power cycle the PDEG by removing DyNet bus power for 30 seconds — the PDEG re-initialises its DyNet transceiver on power-up.</li><li>Verify the PDEG DyNet area address is unique — a duplicate address prevents the PDEG from communicating and may cause it to enter emergency standby mode.</li><li>Check DyNet bus termination — without correct termination at each segment end, reflections disrupt PDEG communication.</li><li>Note: the PDEG operates independently during a network communication fault for safety — it continues to monitor emergency circuits even when DyNet is unavailable.</li><li>Re-download the PDEG configuration from the Dynalite Configuration Tool to restore the correct DyNet address and communication settings.</li></ol>
                         
                         <div style="margin-top:50px; text-align:center; padding:30px; background:rgba(240, 112, 32, 0.1); border-radius:8px;">
                             <h3>Need professional help in the North Shore?</h3>

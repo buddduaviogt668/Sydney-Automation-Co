@@ -1625,9 +1625,7 @@
     <p style="font-size:18px; line-height:1.6;"><strong>Blinking LED codes on this device indicate a communication fault or hardware error. The exact blink pattern determines the specific failure mode. Refer to the manufacturer's documentation for blink pattern decoding, or contact our diagnostic service for toolkit analysis.</strong></p>
                         
                         <h3 style="margin-top:40px;">Step-by-Step Diagnostic Steps</h3>
-                        <ol style="margin-left:20px; line-height:1.8; font-size:16px;">
-                            
-                        </ol>
+                        <ol style="margin-left:20px; line-height:1.8; font-size:16px;"><li>Identify the LED pattern: slow green = standby; fast green = DyNet/serial activity; amber = configuration mismatch; red = serial communication error.</li><li>A red fault LED indicates no valid serial data is being received — check the RS232 baud rate, parity, and data bits match the connected device.</li><li>Check the RS232 cable — a standard straight-through cable may need to be a null-modem cable depending on whether the connected device is DTE or DCE.</li><li>Power cycle the DDNG232 — remove DyNet bus power for 30 seconds to clear any serial buffer overflow that is causing the fault LED.</li><li>Check the connected serial device is powered and transmitting — a gateway with no serial input blinks an error LED until valid data is received.</li><li>Re-download the DDNG232 configuration from the Dynalite Configuration Tool to correct any baud rate or protocol mismatch causing the amber warning LED.</li><li>If the fault LED persists after verifying all serial settings and power cycling, the RS232 transceiver chip has failed — replace the gateway.</li></ol>
                         
                         <div style="margin-top:50px; text-align:center; padding:30px; background:rgba(240, 112, 32, 0.1); border-radius:8px;">
                             <h3>Need professional help in the Sydney CBD?</h3>
