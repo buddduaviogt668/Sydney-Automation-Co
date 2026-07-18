@@ -3,6 +3,66 @@
   "trailingSlash": false,
   "redirects": [
     {
+      "source": "/contact.html",
+      "destination": "/contact",
+      "permanent": true
+    },
+    {
+      "source": "/blog.html",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/guides.html",
+      "destination": "/guides",
+      "permanent": true
+    },
+    {
+      "source": "/about.html",
+      "destination": "/about",
+      "permanent": true
+    },
+    {
+      "source": "/projects.html",
+      "destination": "/projects",
+      "permanent": true
+    },
+    {
+      "source": "/strata.html",
+      "destination": "/strata",
+      "permanent": true
+    },
+    {
+      "source": "/services.html",
+      "destination": "/services",
+      "permanent": true
+    },
+    {
+      "source": "/locations.html",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/book-service.html",
+      "destination": "/book-service",
+      "permanent": true
+    },
+    {
+      "source": "/privacy-policy.html",
+      "destination": "/privacy-policy",
+      "permanent": true
+    },
+    {
+      "source": "/terms-of-service.html",
+      "destination": "/terms-of-service",
+      "permanent": true
+    },
+    {
+      "source": "/accessibility.html",
+      "destination": "/accessibility",
+      "permanent": true
+    },
+    {
       "source": "/sydney-Automation Specialists-cbus-dynalite-partnership",
       "destination": "/about",
       "permanent": true
