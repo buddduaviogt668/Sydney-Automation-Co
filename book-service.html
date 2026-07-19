@@ -231,47 +231,6 @@ nav{position:fixed;top:40px;left:0;right:0;z-index:1150;background:rgba(14,31,61
   <link rel="stylesheet" href="/index.css">
 </head>
 <body>
-  <!-- STICKY TOP CTA BAR -->
-  <div id="sticky-cta-bar" style="
-    position:fixed;top:0;left:0;right:0;z-index:99999;
-    background:linear-gradient(90deg,#0a2240 0%,#1a3a6e 100%);
-    display:flex;align-items:center;justify-content:center;gap:16px;
-    padding:10px 20px;box-shadow:0 2px 12px rgba(0,0,0,0.4);
-    font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
-  ">
-    <span style="color:#f0c040;font-size:13px;font-weight:600;white-space:nowrap;">
-      ⚡ Same-Day C-Bus &amp; Dynalite Repair — Available Today
-    </span>
-    <a href="tel:0422469739" style="
-      background:#e8330a;color:#fff;text-decoration:none;
-      padding:7px 18px;border-radius:4px;font-size:13px;font-weight:700;
-      white-space:nowrap;transition:background 0.2s;
-    " onclick="gtag&&gtag('event','click',{event_category:'CTA',event_label:'sticky-call'})">
-      📞 Call George
-    </a>
-    <a href="/book-service" style="
-      background:#fff;color:#0a2240;text-decoration:none;
-      padding:7px 18px;border-radius:4px;font-size:13px;font-weight:700;
-      white-space:nowrap;border:2px solid #fff;
-    " onclick="gtag&&gtag('event','click',{event_category:'CTA',event_label:'sticky-book'})">
-      Book Online →
-    </a>
-    <button onclick="document.getElementById('sticky-cta-bar').style.display='none'" style="
-      background:none;border:none;color:rgba(255,255,255,0.5);
-      cursor:pointer;font-size:18px;line-height:1;margin-left:8px;padding:0;
-    " aria-label="Close">×</button>
-  </div>
-  <style>
-    /* Push body content below sticky bar */
-    body { padding-top: 44px !important; }
-    @media (max-width: 600px) {
-      #sticky-cta-bar { flex-wrap: wrap; gap: 8px; padding: 8px 12px; }
-      #sticky-cta-bar span { font-size: 11px; }
-      #sticky-cta-bar a { font-size: 12px; padding: 6px 12px; }
-      body { padding-top: 72px !important; }
-      nav { top: 72px !important; }
-    }
-  </style>
 
 
 <!-- PROMO BANNER -->
@@ -480,12 +439,13 @@ nav{position:fixed;top:40px;left:0;right:0;z-index:1150;background:rgba(14,31,61
     <div class="hero-overlay"></div>
     <div class="hero-content">
       <h1>Book Your <span class="accent">Service Call</span></h1>
-      <p>Lock in a same-day slot with George — C-Bus, Dynalite, DALI &amp; RAPIX specialist. $200 diagnostic fee (not credited back).</p>
+      <p>Lock in a same-day slot with George — C-Bus, Dynalite, DALI &amp; RAPIX specialist. $200 site fee covers on-site manufacturer diagnosis &amp; written fault report.</p>
       <div class="trust-pills">
         <span class="trust-pill">⚡ Same-Day Available</span>
         <span class="trust-pill">★★★★★ 14 Google Reviews</span>
         <span class="trust-pill">✓ Clipsal Accredited</span>
         <span class="trust-pill">✓ Signify Certified</span>
+        <span class="trust-pill">🏢 Winten · WSU · JLL</span>
       </div>
     </div>
   </div>
@@ -503,8 +463,8 @@ nav{position:fixed;top:40px;left:0;right:0;z-index:1150;background:rgba(14,31,61
       <div class="step">
         <div class="step-num">1</div>
         <div class="step-body">
-          <h3>Pay Diagnostic Fee via Stripe</h3>
-          <p>Pay a <strong style="color:#f0f4ff;">$200 diagnostic fee</strong> via Stripe. This is a fixed, non-refundable fee that covers travel, on-site fault diagnosis with manufacturer software, and a written report. It is <strong style="color:#f0f4ff;">not credited</strong> toward further repair work.</p>
+          <h3>Pay $200 Site Fee via Stripe</h3>
+          <p>A fixed <strong style="color:#f0f4ff;">$200 site fee</strong> covers George's travel, a full on-site fault diagnosis using manufacturer software (C-Bus Toolkit / Dynalite System Builder), and a written fault report — regardless of outcome. Repair or programming costs are quoted separately before any work begins.</p>
         </div>
       </div>
 
@@ -527,13 +487,13 @@ nav{position:fixed;top:40px;left:0;right:0;z-index:1150;background:rgba(14,31,61
       <!-- STRIPE PAYMENT CARD -->
       <div class="pay-card">
         <div class="secure-badge">🔒 SECURE CHECKOUT — STRIPE</div>
-        <div class="pay-title">Diagnostic Fee</div>
+        <div class="pay-title">Site Fee</div>
         <div class="pay-price">$200</div>
-        <p class="pay-sub">Fixed fee — covers travel, on-site diagnosis &amp; written report. Not credited toward further work.</p>
+        <p class="pay-sub">Covers travel, manufacturer-software fault diagnosis &amp; written fault report. Repair costs quoted separately before any work starts.</p>
         <a class="pay-btn" href="https://buy.stripe.com/bJeeVcfQB17w5YNaS600001"
            onmouseover="this.style.background='#4f46e5';this.style.transform='translateY(-2px)'"
            onmouseout="this.style.background='#635BFF';this.style.transform='none'">
-          💳 &nbsp;Pay Diagnostic Fee via Stripe
+          💳 &nbsp;Book &amp; Pay Site Fee via Stripe
         </a>
         <div class="pay-icons">
           <span>🔒</span>
@@ -543,13 +503,13 @@ nav{position:fixed;top:40px;left:0;right:0;z-index:1150;background:rgba(14,31,61
         <p class="pay-fine">Visa, Mastercard, Amex &amp; Apple Pay accepted. Stripe-secured.</p>
       </div>
 
-      <!-- WHY A DEPOSIT -->
+      <!-- WHY A SITE FEE -->
       <div class="why-box">
-        <h4>Why a diagnostic fee?</h4>
-        <p>As a specialist (not a generalist electrician), George's time is strictly allocated. The $200 diagnostic fee ensures serious enquiries only, covers the full on-site assessment, and lets George maintain rapid same-day response across Greater Sydney.</p>
+        <h4>Why a $200 site fee?</h4>
+        <p>George is a Clipsal-accredited C-Bus programmer and certified Dynalite system designer — not a generalist electrician. Every visit includes a full manufacturer-software diagnosis (C-Bus Toolkit or Dynalite System Builder) and a written fault report, regardless of outcome. The $200 site fee covers that work and locks in your same-day slot. Most faults are diagnosed and resolved in a single visit.</p>
         <div class="why-inner">
-          <h5>Transparent Pricing</h5>
-          <p>Diagnostic fee: <strong style="color:#f0f4ff;">$200 (not credited back)</strong>. Subsequent repair or programming: <strong style="color:#f0f4ff;">$150/hr, 3-hour minimum ($450)</strong> — quoted before work begins.</p>
+          <h5>Full Pricing — No Surprises</h5>
+          <p>Site fee: <strong style="color:#f0f4ff;">$200</strong>. If repair or programming is needed, that's quoted on-site before any work begins: <strong style="color:#f0f4ff;">$150/hr, 3-hour minimum ($450)</strong>. You decide whether to proceed.</p>
         </div>
       </div>
 
@@ -597,11 +557,11 @@ nav{position:fixed;top:40px;left:0;right:0;z-index:1150;background:rgba(14,31,61
       <div class="info-card">
         <h3>What happens next</h3>
         <ul class="check-list">
-          <li>Stripe payment confirms your priority booking</li>
+          <li>Stripe payment locks in your priority slot</li>
           <li>You're redirected to George's live calendar</li>
-          <li>Pick your same-day or next-day slot</li>
-          <li>$200 diagnostic fee (not credited back toward further work)</li>
-          <li>George arrives with the right tools &amp; parts</li>
+          <li>Pick your same-day or next-day arrival window</li>
+          <li>George arrives equipped with manufacturer diagnostic tools &amp; common parts</li>
+          <li>Written fault report provided — repair costs quoted before any work starts</li>
         </ul>
       </div>
 

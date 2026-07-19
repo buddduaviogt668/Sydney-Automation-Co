@@ -1294,47 +1294,6 @@
 </head>
 
 <body>
-  <!-- STICKY TOP CTA BAR -->
-  <div id="sticky-cta-bar" style="
-    position:fixed;top:0;left:0;right:0;z-index:99999;
-    background:linear-gradient(90deg,#0a2240 0%,#1a3a6e 100%);
-    display:flex;align-items:center;justify-content:center;gap:16px;
-    padding:10px 20px;box-shadow:0 2px 12px rgba(0,0,0,0.4);
-    font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
-  ">
-    <span style="color:#f0c040;font-size:13px;font-weight:600;white-space:nowrap;">
-      ⚡ Same-Day C-Bus &amp; Dynalite Repair — Available Today
-    </span>
-    <a href="tel:0422469739" style="
-      background:#e8330a;color:#fff;text-decoration:none;
-      padding:7px 18px;border-radius:4px;font-size:13px;font-weight:700;
-      white-space:nowrap;transition:background 0.2s;
-    " onclick="gtag&&gtag('event','click',{event_category:'CTA',event_label:'sticky-call'})">
-      📞 Call George
-    </a>
-    <a href="/book-service" style="
-      background:#fff;color:#0a2240;text-decoration:none;
-      padding:7px 18px;border-radius:4px;font-size:13px;font-weight:700;
-      white-space:nowrap;border:2px solid #fff;
-    " onclick="gtag&&gtag('event','click',{event_category:'CTA',event_label:'sticky-book'})">
-      Book Online →
-    </a>
-    <button onclick="document.getElementById('sticky-cta-bar').style.display='none'" style="
-      background:none;border:none;color:rgba(255,255,255,0.5);
-      cursor:pointer;font-size:18px;line-height:1;margin-left:8px;padding:0;
-    " aria-label="Close">×</button>
-  </div>
-  <style>
-    /* Push body content below sticky bar */
-    body { padding-top: 44px !important; }
-    @media (max-width: 600px) {
-      #sticky-cta-bar { flex-wrap: wrap; gap: 8px; padding: 8px 12px; }
-      #sticky-cta-bar span { font-size: 11px; }
-      #sticky-cta-bar a { font-size: 12px; padding: 6px 12px; }
-      body { padding-top: 72px !important; }
-      nav { top: 72px !important; }
-    }
-  </style>
   <div class="ambience-glow glow-blue"></div>
   <div class="ambience-glow glow-orange"></div>
 
@@ -1584,7 +1543,7 @@
                style="color:rgba(255,255,255,0.6);font-size:14px;font-weight:600;text-decoration:none;border-bottom:1px solid rgba(255,255,255,0.3);padding-bottom:2px;"
                onmouseover="this.style.color='rgba(255,255,255,0.9)'"
                onmouseout="this.style.color='rgba(255,255,255,0.6)'">
-              Or book online &amp; pay $200 diagnostic fee →
+              Or book online — $200 site fee incl. on-site diagnosis &amp; written report →
             </a>
           </div>
           <!-- PARTNER LOGOS -->
@@ -1611,6 +1570,28 @@
           </div>
       </div>
     </div>
+
+    <!-- ===== COMMERCIAL CLIENT TRUST STRIP ===== -->
+    <div style="background:#001020;border-bottom:1px solid rgba(255,255,255,0.07);padding:18px 24px;">
+      <div style="max-width:1100px;margin:0 auto;display:flex;align-items:center;gap:20px;flex-wrap:wrap;justify-content:center;">
+        <span style="font-size:11px;font-weight:700;letter-spacing:2px;color:rgba(255,255,255,0.35);text-transform:uppercase;white-space:nowrap;flex-shrink:0;">Trusted by</span>
+        <div style="display:flex;align-items:center;gap:28px;flex-wrap:wrap;justify-content:center;">
+          <span style="font-size:13px;font-weight:700;color:rgba(255,255,255,0.55);white-space:nowrap;">Winten Property Group</span>
+          <span style="color:rgba(255,255,255,0.15);font-size:10px;">·</span>
+          <span style="font-size:13px;font-weight:700;color:rgba(255,255,255,0.55);white-space:nowrap;">Western Sydney University</span>
+          <span style="color:rgba(255,255,255,0.15);font-size:10px;">·</span>
+          <span style="font-size:13px;font-weight:700;color:rgba(255,255,255,0.55);white-space:nowrap;">JLL</span>
+          <span style="color:rgba(255,255,255,0.15);font-size:10px;">·</span>
+          <span style="font-size:13px;font-weight:700;color:rgba(255,255,255,0.55);white-space:nowrap;">PBMG</span>
+          <span style="color:rgba(255,255,255,0.15);font-size:10px;">·</span>
+          <span style="font-size:13px;font-weight:700;color:rgba(255,255,255,0.55);white-space:nowrap;">Kebia</span>
+          <span style="color:rgba(255,255,255,0.15);font-size:10px;">·</span>
+          <span style="font-size:13px;font-weight:700;color:rgba(255,255,255,0.55);white-space:nowrap;">66 Harrington, The Rocks</span>
+        </div>
+        <span style="font-size:11px;font-weight:600;color:rgba(240,112,32,0.7);white-space:nowrap;flex-shrink:0;">+ 100s of Sydney homes &amp; buildings</span>
+      </div>
+    </div>
+    <!-- ===== /COMMERCIAL CLIENT TRUST STRIP ===== -->
 
     <!-- ===== PERMANENT BOOKING CTA BAND ===== -->
     <div style="background:linear-gradient(135deg,#0a1628 0%,#0d1e3c 100%);border-top:4px solid #f07020;border-bottom:1px solid rgba(240,112,32,0.2);padding:48px 24px;">
@@ -1863,6 +1844,60 @@
     </div>
   </div>
 
+
+  <!-- ===== COMPETITOR WEDGE ===== -->
+  <style>
+    @media(max-width:680px){.competitor-grid{grid-template-columns:1fr !important;}.competitor-grid>div:first-child{border-right:none !important;border-bottom:1px solid rgba(255,255,255,0.08)}}
+  </style>
+  <section style="padding:72px 0;background:linear-gradient(180deg,#00111f 0%,#000d18 100%);border-bottom:2px solid rgba(240,112,32,0.25);">
+    <div style="max-width:960px;margin:0 auto;padding:0 24px;">
+      <div style="text-align:center;margin-bottom:44px;">
+        <span style="font-size:11px;font-weight:800;letter-spacing:3px;color:#f07020;text-transform:uppercase;display:block;margin-bottom:12px;">Why it matters who you call</span>
+        <h2 style="font-family:'Barlow Condensed',sans-serif;font-size:clamp(28px,4.5vw,46px);font-weight:900;color:#fff;margin:0;line-height:1.1;">A general electrician <span style="color:#f07020;">cannot fix this.</span></h2>
+        <p style="color:#a8c0e0;font-size:16px;max-width:600px;margin:16px auto 0;line-height:1.7;">C-Bus and Dynalite faults are software and network issues — not wiring faults. You need Clipsal Toolkit and Dynalite System Builder access, plus the accreditation to use them.</p>
+      </div>
+      <div class="competitor-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid rgba(255,255,255,0.08);border-radius:16px;overflow:hidden;">
+
+        <!-- General Electrician column -->
+        <div style="background:rgba(255,255,255,0.02);padding:36px 32px;border-right:1px solid rgba(255,255,255,0.08);">
+          <div style="font-family:'Barlow Condensed',sans-serif;font-size:18px;font-weight:900;color:rgba(255,255,255,0.4);letter-spacing:1px;text-transform:uppercase;margin-bottom:24px;">General Electrician</div>
+          <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:14px;">
+            <li style="display:flex;gap:12px;align-items:flex-start;font-size:14px;color:rgba(255,255,255,0.45);">
+              <span style="color:#e8330a;font-size:16px;flex-shrink:0;margin-top:1px;">✕</span> No access to C-Bus Toolkit or Dynalite System Builder</li>
+            <li style="display:flex;gap:12px;align-items:flex-start;font-size:14px;color:rgba(255,255,255,0.45);">
+              <span style="color:#e8330a;font-size:16px;flex-shrink:0;margin-top:1px;">✕</span> Cannot diagnose DyNet RS485 bus faults</li>
+            <li style="display:flex;gap:12px;align-items:flex-start;font-size:14px;color:rgba(255,255,255,0.45);">
+              <span style="color:#e8330a;font-size:16px;flex-shrink:0;margin-top:1px;">✕</span> Cannot recover lost C-Bus or Dynalite programming</li>
+            <li style="display:flex;gap:12px;align-items:flex-start;font-size:14px;color:rgba(255,255,255,0.45);">
+              <span style="color:#e8330a;font-size:16px;flex-shrink:0;margin-top:1px;">✕</span> No Clipsal or Signify accreditation</li>
+            <li style="display:flex;gap:12px;align-items:flex-start;font-size:14px;color:rgba(255,255,255,0.45);">
+              <span style="color:#e8330a;font-size:16px;flex-shrink:0;margin-top:1px;">✕</span> Typically replaces hardware unnecessarily — fault is usually software</li>
+          </ul>
+        </div>
+
+        <!-- George column -->
+        <div style="background:linear-gradient(135deg,rgba(240,112,32,0.07) 0%,rgba(240,112,32,0.03) 100%);padding:36px 32px;border-left:2px solid rgba(240,112,32,0.35);">
+          <div style="font-family:'Barlow Condensed',sans-serif;font-size:18px;font-weight:900;color:#f07020;letter-spacing:1px;text-transform:uppercase;margin-bottom:24px;">George — C-Bus &amp; Dynalite Specialist</div>
+          <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:14px;">
+            <li style="display:flex;gap:12px;align-items:flex-start;font-size:14px;color:rgba(255,255,255,0.85);">
+              <span style="color:#2ecc71;font-size:16px;flex-shrink:0;margin-top:1px;">✓</span> Clipsal-accredited C-Bus Programmer — one of Sydney's only independents</li>
+            <li style="display:flex;gap:12px;align-items:flex-start;font-size:14px;color:rgba(255,255,255,0.85);">
+              <span style="color:#2ecc71;font-size:16px;flex-shrink:0;margin-top:1px;">✓</span> Certified Signify Dynalite System Designer</li>
+            <li style="display:flex;gap:12px;align-items:flex-start;font-size:14px;color:rgba(255,255,255,0.85);">
+              <span style="color:#2ecc71;font-size:16px;flex-shrink:0;margin-top:1px;">✓</span> Diagnoses at network level with manufacturer software</li>
+            <li style="display:flex;gap:12px;align-items:flex-start;font-size:14px;color:rgba(255,255,255,0.85);">
+              <span style="color:#2ecc71;font-size:16px;flex-shrink:0;margin-top:1px;">✓</span> Former Clipsal National Technical Support — 15 years experience</li>
+            <li style="display:flex;gap:12px;align-items:flex-start;font-size:14px;color:rgba(255,255,255,0.85);">
+              <span style="color:#2ecc71;font-size:16px;flex-shrink:0;margin-top:1px;">✓</span> Same-day across Greater Sydney — most faults resolved in one visit</li>
+          </ul>
+          <a href="tel:0422469739" style="display:inline-flex;align-items:center;gap:10px;margin-top:28px;background:#e8330a;color:#fff;text-decoration:none;padding:14px 28px;border-radius:8px;font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:17px;letter-spacing:.5px;">📞 Call George — 0422 469 739</a>
+        </div>
+
+      </div>
+      <p style="text-align:center;margin-top:20px;font-size:13px;color:rgba(255,255,255,0.25);">"Literally a lifesaver… George diagnosed the problem that two previous 'specialists' couldn't." — Adam Ziino, verified Google review</p>
+    </div>
+  </section>
+  <!-- ===== /COMPETITOR WEDGE ===== -->
 
   <!-- INTERACTIVE TOOL WEDGE -->
   <div class="section" style="background: #001f3d; padding: 60px 0; border-bottom: 2px solid #f07020;">
