@@ -1,0 +1,27 @@
+kind = "web"
+previewPath = "/"
+title = "Sydney Automation Co."
+version = "1.0.0"
+id = "artifacts/sydney-automation"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 18973
+
+[services.development]
+run = "pnpm --filter @workspace/sydney-automation run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/sydney-automation", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/sydney-automation/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "18973"
+BASE_PATH = "/"
