@@ -429,19 +429,19 @@
           <p style="margin-bottom:32px;">In an industrial environment, lighting downtime is more than inconvenient. It creates safety issues, disrupts operations, and raises compliance questions. The client needed a fast, accurate diagnosis — not speculation.</p>
 
           <h2 style="color:#f07020;font-size:1.9rem;margin-bottom:20px;font-family:'Barlow Condensed',sans-serif;text-transform:uppercase;">The Diagnosis: Internal PSU Failure — 12-Channel Relay</h2>
-          <p style="margin-bottom:20px;">On-site fault finding confirmed the root cause immediately: internal power supply failure in a single 12-channel C-Bus relay module. The relay appeared to be powered but had failed internally — unable to switch its output circuits or respond reliably to the C-Bus network.</p>
-          <p style="margin-bottom:20px;">This is the same failure mechanism seen at the <a href="/case-study-winten-property-group" style="color:#f07020;border-bottom:1px solid rgba(240,112,32,0.4);">Winten Property Group job in North Sydney</a> — internal PSU degradation in C-Bus relay hardware, producing the same recognisable symptom sequence:</p>
+          <p style="margin-bottom:20px;">On-site fault finding with the C-Bus toolkit pointed straight to the problem: internal power supply failure inside a single 12-channel relay module. The unit was still drawing power and visible on the network, but had failed internally — it could no longer reliably switch its output circuits or respond to commands.</p>
+          <p style="margin-bottom:20px;">This kind of failure is easy to misread without the right diagnostic equipment. The relay looks like it's working — it's present, it's powered — but the PSU has degraded past the point where it can drive the output under any real load. The result is a zone that behaves unpredictably before going dark entirely.</p>
+          <p style="margin-bottom:20px;">At Kebia, the fault had progressed to full zone failure by the time the call came in. The affected circuit was completely unresponsive — no switching, no network acknowledgement under load. With the fault isolated to a single 12-channel relay, the path to resolution was clean and straightforward.</p>
           <ul style="margin:0 0 24px 24px;line-height:2;color:#c8d8ec;">
-            <li>Lights in the affected zone intermittently flickering or failing to respond</li>
-            <li>Switches appearing dead — no response to keypad commands</li>
-            <li>The relay module present on the network but faulting under any load</li>
-            <li>Symptom progresses to complete zone failure as the PSU degrades fully</li>
+            <li>Relay present on the C-Bus network but unable to switch outputs reliably</li>
+            <li>Affected zone switches completely unresponsive</li>
+            <li>No load-bearing output — full circuit dark</li>
+            <li>Fault isolated to the relay hardware, not the cabling or programming</li>
           </ul>
-          <p style="margin-bottom:32px;">In the Kebia case, the fault was contained to a single 12-channel relay — which kept the scope clean and the resolution fast.</p>
 
-          <h2 style="color:#f07020;font-size:1.9rem;margin-bottom:20px;font-family:'Barlow Condensed',sans-serif;text-transform:uppercase;">The Fix: Relay Replaced, System Recommissioned</h2>
-          <p style="margin-bottom:20px;">The faulty 12-channel relay was replaced with a compatible modern unit. Following the hardware swap, the replacement module was configured and recommissioned on the C-Bus network — all 12 output channels verified, logic confirmed, and the full zone tested under normal operating conditions.</p>
-          <p style="margin-bottom:32px;">No guesswork, no return visits — the fault was identified, resolved, and signed off in a single engagement.</p>
+          <h2 style="color:#f07020;font-size:1.9rem;margin-bottom:20px;font-family:'Barlow Condensed',sans-serif;text-transform:uppercase;">The Fix: Relay Out, New Unit In, Zone Verified</h2>
+          <p style="margin-bottom:20px;">The faulty 12-channel relay was pulled and replaced with a compatible modern unit. Once the new hardware was seated, it was configured on the C-Bus network, all 12 output channels were commissioned and tested under load, and the full zone was walked through to confirm everything was responding correctly before sign-off.</p>
+          <p style="margin-bottom:32px;">One visit. Fault found, hardware replaced, system verified. No parts ordered and waited on, no follow-up call required — the relay was on hand and the job was closed out in a single engagement.</p>
 
           <div style="background:rgba(14,31,61,0.5);border:1px solid #2a4a80;padding:28px;border-radius:14px;margin-bottom:36px;">
             <h3 style="color:#fff;margin-bottom:14px;font-weight:700;font-size:1.3rem;">Result</h3>
@@ -472,13 +472,6 @@
             <p style="color:#c8d8ec;line-height:1.8;">If your warehouse or factory is running C-Bus and you're seeing non-responsive zones, flickering under load, or intermittent outages — there's a strong chance it's hardware rather than cabling or programming. A single on-site visit with the right diagnostic tools resolves it.</p>
           </div>
 
-          <!-- RELATED CASE -->
-          <div style="background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.08);border-radius:14px;padding:24px;margin-bottom:40px;">
-            <div style="font-size:11px;font-weight:800;letter-spacing:2px;color:#f07020;text-transform:uppercase;margin-bottom:8px;">Related Case Study</div>
-            <h4 style="margin-bottom:8px;">Same fault pattern — Winten Property Group, North Sydney</h4>
-            <p style="color:#a8c0e0;font-size:14px;line-height:1.7;margin-bottom:14px;">Internal PSU failure across multiple C-Bus relays caused flickering and full-floor outages at a commercial office in North Sydney. Same root cause, same diagnostic approach — SpaceLogic relays installed, entire floor restored.</p>
-            <a href="/case-study-winten-property-group" style="color:#f07020;font-weight:700;font-size:14px;">Read Winten Case Study →</a>
-          </div>
 
         </div>
 
