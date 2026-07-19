@@ -1,0 +1,19 @@
+name: Regenerate sitemap with www URLs
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  sitemap:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run sitemap script
+        run: python fix-sitemap.py
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add sitemap.xml
+          git diff --staged --quiet || git commit -m "seo: regenerate sitemap with www canonical URLs"
+          git push

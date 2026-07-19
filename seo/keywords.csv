@@ -1,0 +1,11 @@
+service,keyword,search_volume,difficulty,intent
+C-Bus,c-bus installation,1200,45,transactional
+C-Bus,c-bus programming,800,40,informational
+C-Bus,c-bus troubleshooting,500,35,informational
+Dynalite,dynalite lighting control,1000,42,transactional
+Dynalite,dynalite programmer,700,38,informational
+Dynalite,dynalite installation sydney,600,40,transactional
+Emergency Repair,emergency lighting repair sydney,400,50,transactional
+Emergency Repair,c-bus emergency repair,300,48,transactional
+AFSS,afss fire alarm service,350,44,transactional
+AFSS,afss maintenance sydney,250,42,informational

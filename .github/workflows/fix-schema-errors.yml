@@ -1,0 +1,272 @@
+name: Fix JSON-LD schema errors
+
+on:
+  workflow_dispatch:
+
+jobs:
+  fix-schema:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Run schema fix script
+        run: |
+          python3 << 'PYEOF'
+          import os, re, json
+          from pathlib import Path
+
+          REPO = Path('.')
+          BASE_URL = 'https://sydneyautomationco.com.au'
+
+          def make_breadcrumb_2level(page_url, page_name):
+              return {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":BASE_URL},{"@type":"ListItem","position":2,"name":page_name,"item":f"{BASE_URL}/{page_url}"}]}
+
+          def make_breadcrumb_3level(page_url, page_name, parent_name, parent_url):
+              return {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":BASE_URL},{"@type":"ListItem","position":2,"name":parent_name,"item":f"{BASE_URL}/{parent_url}"},{"@type":"ListItem","position":3,"name":page_name,"item":f"{BASE_URL}/{page_url}"}]}
+
+          def json_to_script(data):
+              return f'<script type="application/ld+json">\n{json.dumps(data, indent=2, ensure_ascii=False)}\n</script>'
+
+          def replace_block(html, old_block_text, new_data):
+              old = f'<script type="application/ld+json">{old_block_text}</script>'
+              new = json_to_script(new_data)
+              if old in html:
+                  return html.replace(old, new, 1)
+              return None
+
+          def remove_block(html, block_text):
+              old = f'<script type="application/ld+json">{block_text}</script>'
+              if old in html:
+                  return html.replace(old, '', 1)
+              return None
+
+          def get_blocks(html):
+              return re.findall(r'<script type="application/ld\+json">(.*?)</script>', html, re.DOTALL)
+
+          fixed = 0
+
+          # ── GROUP A: Truncated BreadcrumbList ──────────────────────────────
+          GROUP_A = {
+              'c-bus-programmer-eastern-suburbs.html':  ('C-Bus Programmer Eastern Suburbs', 'C-Bus Programming', 'c-bus-programmer-sydney.html'),
+              'c-bus-programmer-hills-district.html':   ('C-Bus Programmer Hills District', 'C-Bus Programming', 'c-bus-programmer-sydney.html'),
+              'c-bus-programmer-inner-west.html':       ('C-Bus Programmer Inner West', 'C-Bus Programming', 'c-bus-programmer-sydney.html'),
+              'c-bus-programmer-north-shore.html':      ('C-Bus Programmer North Shore', 'C-Bus Programming', 'c-bus-programmer-sydney.html'),
+              'c-bus-programmer-northern-beaches.html': ('C-Bus Programmer Northern Beaches', 'C-Bus Programming', 'c-bus-programmer-sydney.html'),
+              'c-bus-programmer-parramatta.html':       ('C-Bus Programmer Parramatta', 'C-Bus Programming', 'c-bus-programmer-sydney.html'),
+              'c-bus-programmer-st-george.html':        ('C-Bus Programmer St George', 'C-Bus Programming', 'c-bus-programmer-sydney.html'),
+              'c-bus-programmer-sutherland-shire.html': ('C-Bus Programmer Sutherland Shire', 'C-Bus Programming', 'c-bus-programmer-sydney.html'),
+              'c-bus-programmer-sydney-cbd.html':       ('C-Bus Programmer Sydney CBD', 'C-Bus Programming', 'c-bus-programmer-sydney.html'),
+              'c-bus-repairs-sydney.html':              ('C-Bus Repairs Sydney', None, None),
+              'cbus-fault-finding-sutherland-shire.html': ('C-Bus Fault Finding Sutherland Shire', 'C-Bus Fault Finding', 'cbus-fault-finding-sydney.html'),
+              'cbus-vs-dynalite.html':                  ('C-Bus vs Dynalite', None, None),
+              'cbus-automation-north-shore-sydney.html': ('C-Bus Automation North Shore', 'C-Bus Programming', 'c-bus-programmer-sydney.html'),
+              'cbus-dynalite-fault-finding-eastern-suburbs.html': ('C-Bus & Dynalite Fault Finding Eastern Suburbs', None, None),
+              'cbus-scene-programming-guide-sutherland-shire.html': ('C-Bus Scene Programming Guide Sutherland Shire', None, None),
+              'dynalite-cbus-specialists-sydney-cbd.html': ('Dynalite & C-Bus Specialists Sydney CBD', None, None),
+              'dynalite-fault-finding-sydney-common-faults.html': ('Dynalite Fault Finding Sydney', 'Dynalite Programming', 'dynalite-programmer-sydney.html'),
+              'electricians.html':                      ('For Electricians', None, None),
+              'facility-managers-cbus-dynalite-dali-guide.html': ('Facility Managers Guide', None, None),
+              'how-to-choose-cbus-specialist-sydney.html': ('How to Choose a C-Bus Specialist', None, None),
+              'lighting-control-eastern-suburbs-strata.html': ('Lighting Control Eastern Suburbs Strata', None, None),
+              'projects.html':                          ('Projects', None, None),
+          }
+
+          for fname, (page_name, parent_name, parent_url) in GROUP_A.items():
+              fpath = REPO / fname
+              if not fpath.exists(): continue
+              html = fpath.read_text(encoding='utf-8', errors='ignore')
+              blocks = get_blocks(html)
+              for block in blocks:
+                  try: json.loads(block.strip())
+                  except json.JSONDecodeError:
+                      if '"BreadcrumbList"' in block or ('"ListItem"' in block and '"Home"' in block):
+                          new_data = make_breadcrumb_3level(fname, page_name, parent_name, parent_url) if parent_name else make_breadcrumb_2level(fname, page_name)
+                          new_html = replace_block(html, block, new_data)
+                          if new_html:
+                              fpath.write_text(new_html, encoding='utf-8')
+                              html = new_html
+                              fixed += 1
+                              print(f'  A ✅ {fname}')
+                              break
+
+          # ── GROUP B: Ghost schema blocks (remove) ─────────────────────────
+          GROUP_B = [
+              ('c-bus-programmer-sydney.html', 3),
+              ('dynalite-programmer-sydney.html', 3),
+              ('cbus-specialist-sydney.html', 2),
+          ]
+          for fname, idx in GROUP_B:
+              fpath = REPO / fname
+              if not fpath.exists(): continue
+              html = fpath.read_text(encoding='utf-8', errors='ignore')
+              blocks = get_blocks(html)
+              if idx < len(blocks):
+                  block = blocks[idx]
+                  try: json.loads(block.strip())
+                  except:
+                      new_html = remove_block(html, block)
+                      if new_html:
+                          fpath.write_text(new_html, encoding='utf-8')
+                          fixed += 1
+                          print(f'  B ✅ {fname} block{idx+1} removed')
+
+          # ── GROUP C: Malformed OHS cbus-repair pages ──────────────────────
+          GROUP_C = [
+              'cbus-repair-avalon-beach.html','cbus-repair-avoca-beach.html',
+              'cbus-repair-bayview.html','cbus-repair-bronte.html',
+              'cbus-repair-coogee.html','cbus-repair-leura.html',
+              'cbus-repair-manly.html','cbus-repair-palm-beach.html',
+              'cbus-repair-point-piper.html','cbus-repair-tamarama.html',
+              'cbus-repair-terrigal.html','cbus-repair-wentworth-falls.html',
+              'cbus-repair-whale-beach.html',
+          ]
+          GOOD_OHS = (
+              '"openingHoursSpecification": [\n'
+              '    {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "07:00", "closes": "17:00"},\n'
+              '    {"@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "08:00", "closes": "17:00"}\n'
+              '  ]'
+          )
+          for fname in GROUP_C:
+              fpath = REPO / fname
+              if not fpath.exists(): continue
+              html = fpath.read_text(encoding='utf-8', errors='ignore')
+              blocks = get_blocks(html)
+              for block in blocks:
+                  try: json.loads(block.strip())
+                  except json.JSONDecodeError:
+                      if '"openingHoursSpecification"' in block and 'Saturday' in block:
+                          fixed_block = re.sub(
+                              r'"openingHoursSpecification":\s*\[.*?\]\s*,\s*"opens"[^}]*\}[^,]*,\s*(\{[^}]*"Saturday"[^}]*\})\s*\]',
+                              GOOD_OHS, block, flags=re.DOTALL)
+                          try:
+                              json.loads(fixed_block.strip())
+                              new_html = html.replace(f'<script type="application/ld+json">{block}</script>',
+                                                      f'<script type="application/ld+json">{fixed_block}</script>', 1)
+                              if new_html != html:
+                                  fpath.write_text(new_html, encoding='utf-8')
+                                  html = new_html
+                                  fixed += 1
+                                  print(f'  C ✅ {fname}')
+                                  break
+                          except: pass
+
+          # ── GROUP D: c-bus-apple-homekit block1 OHS fix ───────────────────
+          fname = 'c-bus-apple-homekit-sydney.html'
+          fpath = REPO / fname
+          if fpath.exists():
+              html = fpath.read_text(encoding='utf-8', errors='ignore')
+              blocks = get_blocks(html)
+              b = blocks[0]
+              try:
+                  json.loads(b.strip())
+              except:
+                  fixed_b = re.sub(
+                      r'(\"Friday\"\s*\]\s*,\s*\"opens\":\s*\"[^\"]+\",\s*\"closes\":\s*\"[^\"]+\")\s*\]\s*,(\s*\"sameAs\")',
+                      r'\1\n      }\n    ],\2', b)
+                  try:
+                      json.loads(fixed_b.strip())
+                      new_html = html.replace(f'<script type="application/ld+json">{b}</script>',
+                                              f'<script type="application/ld+json">{fixed_b}</script>', 1)
+                      if new_html != html:
+                          fpath.write_text(new_html, encoding='utf-8')
+                          html = new_html
+                          fixed += 1
+                          print(f'  D ✅ {fname} block1')
+                  except: pass
+
+          # ── GROUP E: Truncated FAQ blocks → remove ────────────────────────
+          GROUP_E = [('about.html', 2), ('c-bus-apple-homekit-sydney.html', 2)]
+          for fname, idx in GROUP_E:
+              fpath = REPO / fname
+              if not fpath.exists(): continue
+              html = fpath.read_text(encoding='utf-8', errors='ignore')
+              blocks = get_blocks(html)
+              if idx < len(blocks):
+                  block = blocks[idx]
+                  try: json.loads(block.strip())
+                  except:
+                      new_html = remove_block(html, block)
+                      if new_html:
+                          fpath.write_text(new_html, encoding='utf-8')
+                          fixed += 1
+                          print(f'  E ✅ {fname} block{idx+1} removed')
+
+          # ── GROUP F: Structural breadcrumb fixes ──────────────────────────
+          GROUP_F = [
+              ('dali2-compliance-nsw-commercial.html', 1, make_breadcrumb_2level('dali2-compliance-nsw-commercial.html', 'DALI-2 Compliance NSW Commercial')),
+              ('dynalite-vs-cbus-sydney.html', 1, make_breadcrumb_3level('dynalite-vs-cbus-sydney.html', 'Dynalite vs C-Bus', 'Dynalite Programming', 'dynalite-programmer-sydney.html')),
+              ('shire.html', 1, make_breadcrumb_2level('shire.html', 'Sutherland Shire Lighting Control')),
+          ]
+          for fname, idx, new_data in GROUP_F:
+              fpath = REPO / fname
+              if not fpath.exists(): continue
+              html = fpath.read_text(encoding='utf-8', errors='ignore')
+              blocks = get_blocks(html)
+              if idx < len(blocks):
+                  block = blocks[idx]
+                  try: json.loads(block.strip())
+                  except:
+                      new_html = replace_block(html, block, new_data)
+                      if new_html:
+                          fpath.write_text(new_html, encoding='utf-8')
+                          fixed += 1
+                          print(f'  F ✅ {fname}')
+
+          # cbus-fault-finding-sydney block3
+          fname = 'cbus-fault-finding-sydney.html'
+          fpath = REPO / fname
+          if fpath.exists():
+              html = fpath.read_text(encoding='utf-8', errors='ignore')
+              blocks = get_blocks(html)
+              if len(blocks) >= 3:
+                  b = blocks[2]
+                  try: json.loads(b.strip())
+                  except:
+                      new_data = make_breadcrumb_2level(fname, 'C-Bus Fault Finding Sydney')
+                      new_html = replace_block(html, b, new_data)
+                      if new_html:
+                          fpath.write_text(new_html, encoding='utf-8')
+                          fixed += 1
+                          print(f'  F ✅ {fname} block3')
+
+          # ── VALIDATION ────────────────────────────────────────────────────
+          still_broken = []
+          for f in sorted(REPO.glob('*.html')):
+              if f.name == 'favicon-head-tags.html': continue
+              html = f.read_text(encoding='utf-8', errors='ignore')
+              for i, block in enumerate(get_blocks(html)):
+                  try: json.loads(block.strip())
+                  except json.JSONDecodeError as e:
+                      still_broken.append(f'{f.name} block{i+1}: {str(e)[:60]}')
+
+          print(f'\nFixes applied: {fixed}')
+          if still_broken:
+              print(f'STILL BROKEN ({len(still_broken)}):')
+              for s in still_broken: print(f'  {s}')
+              exit(1)
+          else:
+              print('ALL SCHEMA VALID ✅')
+          PYEOF
+
+      - name: Commit and push fixes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No changes to commit — schema already clean"
+          else
+            git commit -m "Fix JSON-LD schema errors across 44 pages
+
+          - Rebuild 22 truncated BreadcrumbList blocks (item URL cut off)
+          - Remove 3 ghost schema stub blocks
+          - Fix 13 malformed openingHoursSpecification (cbus-repair pages)
+          - Fix c-bus-apple-homekit WebPage OHS structure
+          - Remove 2 truncated FAQPage blocks (about, apple-homekit)
+          - Fix 4 individual structural breadcrumb issues"
+            git push
+          fi
