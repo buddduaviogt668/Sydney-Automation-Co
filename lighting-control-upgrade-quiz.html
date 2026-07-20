@@ -1,348 +1,348 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-  <meta name="description" content="Find out if your C-Bus or Dynalite system is due for an upgrade. Take the 2-minute quiz — get a personalised health score and recommended next steps. Sydney specialists."/>
-  <link rel="canonical" href="https://sydneyautomationco.com.au/lighting-control-upgrade-quiz" />
-    <meta property="og:title" content="Should I Upgrade My C-Bus or Dynalite System? | Free Quiz | Sydney Automation Co.">
-    <meta property="og:description" content="Find out if your C-Bus or Dynalite system is due for an upgrade. Take the 2-minute quiz — get a personalised health score and recommended next steps. Sydney specialists.">
-    <meta property="og:url" content="https://sydneyautomationco.com.au/lighting-control-upgrade-quiz.html">
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Sydney Automation Co">
-  <title>Should I Upgrade My C-Bus or Dynalite System? | Free Quiz | Sydney Automation Co.</title>
-  <link href="/favicon.png" rel="icon" type="image/png"/>
-  <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600&family=Barlow+Condensed:wght@700;800&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="/index.css">
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-7EZFB6GRJ3"></script>
-  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-7EZFB6GRJ3');</script>
-  <style>
-    body{background:#0e1f3d}
-    .quiz-wrap{max-width:780px;margin:0 auto;padding:48px 24px 80px}
-    .progress-wrap{margin-bottom:32px}
-    .progress-text{display:flex;justify-content:space-between;font-size:12px;color:#4a6a9a;font-family:'Barlow',sans-serif;margin-bottom:8px}
-    .progress-track{background:rgba(255,255,255,0.07);border-radius:4px;height:6px;overflow:hidden}
-    .progress-fill{height:100%;border-radius:4px;background:linear-gradient(90deg,#f07020,#f0c040);transition:width 0.5s cubic-bezier(0.4,0,0.2,1)}
-    .q-card{background:#132647;border:1px solid #2a4a80;border-radius:18px;padding:38px 42px;animation:slideIn 0.35s ease}
-    @keyframes slideIn{from{opacity:0;transform:translateX(20px)}to{opacity:1;transform:translateX(0)}}
-    @media(max-width:600px){.q-card{padding:24px 20px}}
-    .q-num{color:#f0c040;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:10px;font-family:'Barlow Condensed',sans-serif}
-    .q-text{color:#fff;font-size:1.45rem;font-weight:800;line-height:1.25;margin-bottom:24px;font-family:'Barlow Condensed',sans-serif}
-    .answers{display:flex;flex-direction:column;gap:10px}
-    .ans{display:flex;align-items:center;gap:16px;padding:16px 20px;border:2px solid #2a4a80;border-radius:12px;cursor:pointer;transition:all 0.18s;font-family:'Barlow',sans-serif}
-    .ans:hover{border-color:#f07020;background:rgba(240,112,32,0.07)}
-    .ans.chosen{border-color:#f07020;background:rgba(240,112,32,0.12)}
-    .ans-dot{width:20px;height:20px;border-radius:50%;border:2px solid #2a4a80;flex-shrink:0;transition:all 0.18s;position:relative}
-    .ans.chosen .ans-dot{border-color:#f07020;background:#f07020}
-    .ans.chosen .ans-dot::after{content:'✓';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);color:#fff;font-size:11px;font-weight:900}
-    .ans-label{font-weight:600;color:#f0f4ff;font-size:0.95rem}
-    .ans-sub{font-size:0.8rem;color:#6a8cb5;margin-top:2px}
-    .q-nav{display:flex;gap:12px;margin-top:24px;align-items:center;flex-wrap:wrap}
-    .btn-fwd{background:#f07020;color:#fff;border:none;border-radius:8px;padding:12px 26px;font-weight:700;font-size:0.95rem;cursor:pointer;font-family:'Barlow Condensed',sans-serif;letter-spacing:0.5px;transition:background 0.2s}
-    .btn-fwd:hover{background:#ff8533}
-    .btn-fwd:disabled{background:#2a4a80;color:#4a6a9a;cursor:not-allowed}
-    .btn-bk{background:transparent;color:#6a8cb5;border:1px solid #2a4a80;border-radius:8px;padding:11px 18px;font-weight:600;font-size:0.9rem;cursor:pointer;font-family:'Barlow',sans-serif;transition:all 0.2s}
-    .btn-bk:hover{border-color:#a8c0e0;color:#a8c0e0}
-    /* Result */
-    .result-card{background:#132647;border:1px solid #2a4a80;border-radius:18px;padding:38px 42px;animation:slideIn 0.4s ease}
-    @media(max-width:600px){.result-card{padding:24px 20px}}
-    .score-ring-wrap{display:flex;justify-content:center;margin-bottom:32px}
-    .score-ring{position:relative;width:160px;height:160px}
-    .score-ring svg{transform:rotate(-90deg)}
-    .score-ring-num{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);text-align:center}
-    .score-big{font-family:'Barlow Condensed',sans-serif;font-size:3rem;font-weight:900;line-height:1}
-    .score-lbl{font-size:0.75rem;color:#a8c0e0;font-family:'Barlow',sans-serif}
-    .verdict-badge{display:inline-block;padding:6px 18px;border-radius:20px;font-size:13px;font-weight:700;font-family:'Barlow Condensed',sans-serif;letter-spacing:1px;text-transform:uppercase;margin-bottom:16px}
-    .verdict-title{color:#fff;font-family:'Barlow Condensed',sans-serif;font-size:2rem;font-weight:900;margin-bottom:10px}
-    .verdict-body{color:#a8c0e0;font-family:'Barlow',sans-serif;line-height:1.75;font-size:0.95rem;margin-bottom:28px}
-    .findings{display:grid;gap:10px;margin-bottom:28px}
-    .finding{display:flex;gap:14px;align-items:flex-start;padding:14px 18px;border-radius:10px;font-family:'Barlow',sans-serif}
-    .finding-icon{font-size:1.2rem;flex-shrink:0;margin-top:2px}
-    .finding-text{font-size:0.88rem;color:#a8c0e0;line-height:1.6}
-    .finding-text strong{color:#f0f4ff;display:block;margin-bottom:2px}
-    .rec-ctas{display:flex;gap:12px;flex-wrap:wrap}
-    .rc1{background:#f07020;color:#fff;padding:14px 28px;border-radius:10px;font-weight:700;text-decoration:none;font-family:'Barlow Condensed',sans-serif;font-size:1rem;letter-spacing:0.5px}
-    .rc2{background:transparent;border:2px solid #2a4a80;color:#a8c0e0;padding:13px 22px;border-radius:10px;font-weight:700;text-decoration:none;font-family:'Barlow Condensed',sans-serif;font-size:1rem}
-    .rc2:hover{border-color:#f07020;color:#f07020}
-  </style>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+ <meta name="description" content="Find out if your C-Bus or Dynalite system is due for an upgrade. Take the 2-minute quiz — get a personalised health score and recommended next steps. Sydney specialists."/>
+ <link rel="canonical" href="https://sydneyautomationco.com.au/lighting-control-upgrade-quiz" />
+  <meta property="og:title" content="Should I Upgrade My C-Bus or Dynalite System? | Free Quiz | Sydney Automation Co.">
+  <meta property="og:description" content="Find out if your C-Bus or Dynalite system is due for an upgrade. Take the 2-minute quiz — get a personalised health score and recommended next steps. Sydney specialists.">
+  <meta property="og:url" content="https://sydneyautomationco.com.au/lighting-control-upgrade-quiz.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Sydney Automation Co">
+ <title>Should I Upgrade My C-Bus or Dynalite System? | Free Quiz | Sydney Automation Co.</title>
+ <link href="/favicon.png" rel="icon" type="image/png"/>
+ <link rel="preconnect" href="https://fonts.googleapis.com"/>
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+ <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600&family=Barlow+Condensed:wght@700;800&display=swap" rel="stylesheet"/>
+ <link rel="stylesheet" href="/index.css">
+ <script async src="https://www.googletagmanager.com/gtag/js?id=G-7EZFB6GRJ3"></script>
+ <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-7EZFB6GRJ3');</script>
+ <style>
+  body{background:#0e1f3d}
+  .quiz-wrap{max-width:780px;margin:0 auto;padding:48px 24px 80px}
+  .progress-wrap{margin-bottom:32px}
+  .progress-text{display:flex;justify-content:space-between;font-size:12px;color:#4a6a9a;font-family:'Barlow',sans-serif;margin-bottom:8px}
+  .progress-track{background:rgba(255,255,255,0.07);border-radius:4px;height:6px;overflow:hidden}
+  .progress-fill{height:100%;border-radius:4px;background:linear-gradient(90deg,#f07020,#f0c040);transition:width 0.5s cubic-bezier(0.4,0,0.2,1)}
+  .q-card{background:#132647;border:1px solid #2a4a80;border-radius:18px;padding:38px 42px;animation:slideIn 0.35s ease}
+  @keyframes slideIn{from{opacity:0;transform:translateX(20px)}to{opacity:1;transform:translateX(0)}}
+  @media(max-width:600px){.q-card{padding:24px 20px}}
+  .q-num{color:#f0c040;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:10px;font-family:'Barlow Condensed',sans-serif}
+  .q-text{color:#fff;font-size:1.45rem;font-weight:800;line-height:1.25;margin-bottom:24px;font-family:'Barlow Condensed',sans-serif}
+  .answers{display:flex;flex-direction:column;gap:10px}
+  .ans{display:flex;align-items:center;gap:16px;padding:16px 20px;border:2px solid #2a4a80;border-radius:12px;cursor:pointer;transition:all 0.18s;font-family:'Barlow',sans-serif}
+  .ans:hover{border-color:#f07020;background:rgba(240,112,32,0.07)}
+  .ans.chosen{border-color:#f07020;background:rgba(240,112,32,0.12)}
+  .ans-dot{width:20px;height:20px;border-radius:50%;border:2px solid #2a4a80;flex-shrink:0;transition:all 0.18s;position:relative}
+  .ans.chosen .ans-dot{border-color:#f07020;background:#f07020}
+  .ans.chosen .ans-dot::after{content:'✓';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);color:#fff;font-size:11px;font-weight:900}
+  .ans-label{font-weight:600;color:#f0f4ff;font-size:0.95rem}
+  .ans-sub{font-size:0.8rem;color:#6a8cb5;margin-top:2px}
+  .q-nav{display:flex;gap:12px;margin-top:24px;align-items:center;flex-wrap:wrap}
+  .btn-fwd{background:#f07020;color:#fff;border:none;border-radius:8px;padding:12px 26px;font-weight:700;font-size:0.95rem;cursor:pointer;font-family:'Barlow Condensed',sans-serif;letter-spacing:0.5px;transition:background 0.2s}
+  .btn-fwd:hover{background:#ff8533}
+  .btn-fwd:disabled{background:#2a4a80;color:#4a6a9a;cursor:not-allowed}
+  .btn-bk{background:transparent;color:#6a8cb5;border:1px solid #2a4a80;border-radius:8px;padding:11px 18px;font-weight:600;font-size:0.9rem;cursor:pointer;font-family:'Barlow',sans-serif;transition:all 0.2s}
+  .btn-bk:hover{border-color:#a8c0e0;color:#a8c0e0}
+  /* Result */
+  .result-card{background:#132647;border:1px solid #2a4a80;border-radius:18px;padding:38px 42px;animation:slideIn 0.4s ease}
+  @media(max-width:600px){.result-card{padding:24px 20px}}
+  .score-ring-wrap{display:flex;justify-content:center;margin-bottom:32px}
+  .score-ring{position:relative;width:160px;height:160px}
+  .score-ring svg{transform:rotate(-90deg)}
+  .score-ring-num{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);text-align:center}
+  .score-big{font-family:'Barlow Condensed',sans-serif;font-size:3rem;font-weight:900;line-height:1}
+  .score-lbl{font-size:0.75rem;color:#a8c0e0;font-family:'Barlow',sans-serif}
+  .verdict-badge{display:inline-block;padding:6px 18px;border-radius:20px;font-size:13px;font-weight:700;font-family:'Barlow Condensed',sans-serif;letter-spacing:1px;text-transform:uppercase;margin-bottom:16px}
+  .verdict-title{color:#fff;font-family:'Barlow Condensed',sans-serif;font-size:2rem;font-weight:900;margin-bottom:10px}
+  .verdict-body{color:#a8c0e0;font-family:'Barlow',sans-serif;line-height:1.75;font-size:0.95rem;margin-bottom:28px}
+  .findings{display:grid;gap:10px;margin-bottom:28px}
+  .finding{display:flex;gap:14px;align-items:flex-start;padding:14px 18px;border-radius:10px;font-family:'Barlow',sans-serif}
+  .finding-icon{font-size:1.2rem;flex-shrink:0;margin-top:2px}
+  .finding-text{font-size:0.88rem;color:#a8c0e0;line-height:1.6}
+  .finding-text strong{color:#f0f4ff;display:block;margin-bottom:2px}
+  .rec-ctas{display:flex;gap:12px;flex-wrap:wrap}
+  .rc1{background:#f07020;color:#fff;padding:14px 28px;border-radius:10px;font-weight:700;text-decoration:none;font-family:'Barlow Condensed',sans-serif;font-size:1rem;letter-spacing:0.5px}
+  .rc2{background:transparent;border:2px solid #2a4a80;color:#a8c0e0;padding:13px 22px;border-radius:10px;font-weight:700;text-decoration:none;font-family:'Barlow Condensed',sans-serif;font-size:1rem}
+  .rc2:hover{border-color:#f07020;color:#f07020}
+ </style>
 </head>
 <body>
-  <div id="sticky-cta-bar" style="position:fixed;top:0;left:0;right:0;z-index:99999;background:linear-gradient(90deg,#0a2240 0%,#1a3a6e 100%);display:flex;align-items:center;justify-content:center;gap:16px;padding:10px 20px;box-shadow:0 2px 12px rgba(0,0,0,0.4);font-family:'Barlow',sans-serif;">
-    <span style="color:#f0c040;font-size:13px;font-weight:600;white-space:nowrap;">⚡ Free System Assessment — Call George</span>
-    <a href="tel:0422469739" style="background:#e8330a;color:#fff;text-decoration:none;padding:7px 18px;border-radius:4px;font-size:13px;font-weight:700;white-space:nowrap;">📞 Call George</a>
-    <a href="/book-service" style="background:#fff;color:#0a2240;text-decoration:none;padding:7px 18px;border-radius:4px;font-size:13px;font-weight:700;white-space:nowrap;border:2px solid #fff;">Book Online →</a>
-    <button onclick="document.getElementById('sticky-cta-bar').style.display='none'" style="background:none;border:none;color:rgba(255,255,255,0.5);cursor:pointer;font-size:18px;line-height:1;margin-left:8px;padding:0;">×</button>
+ <div id="sticky-cta-bar" style="position:fixed;top:0;left:0;right:0;z-index:99999;background:linear-gradient(90deg,#0a2240 0%,#1a3a6e 100%);display:flex;align-items:center;justify-content:center;gap:16px;padding:10px 20px;box-shadow:0 2px 12px rgba(0,0,0,0.4);font-family:'Barlow',sans-serif;">
+  <span style="color:#f0c040;font-size:13px;font-weight:600;white-space:nowrap;">⚡ Free System Assessment — Call George</span>
+  <a href="tel:0422469739" style="background:#e8330a;color:#fff;text-decoration:none;padding:7px 18px;border-radius:4px;font-size:13px;font-weight:700;white-space:nowrap;">📞 Call George</a>
+  <a href="/book-service" style="background:#fff;color:#0a2240;text-decoration:none;padding:7px 18px;border-radius:4px;font-size:13px;font-weight:700;white-space:nowrap;border:2px solid #fff;">Book Online →</a>
+  <button onclick="document.getElementById('sticky-cta-bar').style.display='none'" style="background:none;border:none;color:rgba(255,255,255,0.5);cursor:pointer;font-size:18px;line-height:1;margin-left:8px;padding:0;">×</button>
+ </div>
+ <style>body{padding-top:44px!important}@media(max-width:600px){#sticky-cta-bar{flex-wrap:wrap;gap:8px;padding:8px 12px}#sticky-cta-bar span{font-size:11px}#sticky-cta-bar a{font-size:12px;padding:6px 12px}body{padding-top:72px!important}}</style>
+
+ <nav>
+  <a class="logo" href="/"><span class="logo-main">Sydney Automation Co.</span><span class="logo-line"></span><span class="logo-sub">Lighting Control Specialists</span></a>
+  <div class="nav-phone-wrap"><span class="nav-phone-label">Direct Service Line</span><a class="nav-phone" href="tel:+61422469739">0422 469 739</a></div>
+  <div class="nav-links">
+   <a href="/">Home</a><a href="/cbus-repair-sydney">C-Bus</a><a href="/dynalite-repair-sydney">Dynalite</a><a href="/guides">Guides</a><a href="/contact">Contact</a>
+   <a class="nav-cta" href="tel:0422469739">📞 Call Now</a>
   </div>
-  <style>body{padding-top:44px!important}@media(max-width:600px){#sticky-cta-bar{flex-wrap:wrap;gap:8px;padding:8px 12px}#sticky-cta-bar span{font-size:11px}#sticky-cta-bar a{font-size:12px;padding:6px 12px}body{padding-top:72px!important}}</style>
+  <button aria-label="Menu" class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+ </nav>
+ <div id="mobNav" class="mob-nav">
+  <div class="mob-section"><div class="mob-section-title">Services</div><a href="/cbus-repair-sydney">C-Bus Repairs</a><a href="/dynalite-repair-sydney">Dynalite Repairs</a><a href="/emergency-repair-sydney">Emergency Repair</a></div>
+  <a href="tel:0422469739" class="mob-cta">📞 0422 469 739</a>
+ </div>
 
-  <nav>
-    <a class="logo" href="/"><span class="logo-main">Sydney Automation Co.</span><span class="logo-line"></span><span class="logo-sub">Lighting Control Specialists</span></a>
-    <div class="nav-phone-wrap"><span class="nav-phone-label">Direct Service Line</span><a class="nav-phone" href="tel:+61422469739">0422 469 739</a></div>
-    <div class="nav-links">
-      <a href="/">Home</a><a href="/cbus-repair-sydney">C-Bus</a><a href="/dynalite-repair-sydney">Dynalite</a><a href="/guides">Guides</a><a href="/contact">Contact</a>
-      <a class="nav-cta" href="tel:0422469739">📞 Call Now</a>
-    </div>
-    <button aria-label="Menu" class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
-  </nav>
-  <div id="mobNav" class="mob-nav">
-    <div class="mob-section"><div class="mob-section-title">Services</div><a href="/cbus-repair-sydney">C-Bus Repairs</a><a href="/dynalite-repair-sydney">Dynalite Repairs</a><a href="/emergency-repair-sydney">Emergency Repair</a></div>
-    <a href="tel:0422469739" class="mob-cta">📞 0422 469 739</a>
+ <section style="background:linear-gradient(135deg,#0a2240 0%,#1a3a6e 100%);padding:64px 24px 48px;text-align:center">
+  <p style="color:#f0c040;font-size:11px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;margin-bottom:10px;font-family:'Barlow Condensed',sans-serif;">2-MINUTE ASSESSMENT</p>
+  <h1 style="color:#fff;font-size:clamp(1.8rem,5vw,2.8rem);font-weight:800;margin-bottom:14px;line-height:1.2;font-family:'Barlow Condensed',sans-serif;">Is Your C-Bus or Dynalite<br>System Due for an Upgrade?</h1>
+  <p style="color:#a8c0e0;font-size:1rem;line-height:1.7;max-width:600px;margin:0 auto;font-family:'Barlow',sans-serif;">Answer 8 questions and get a personalised system health score with specific findings and recommendations — written from 10+ years of hands-on Sydney experience.</p>
+ </section>
+
+ <div class="quiz-wrap">
+  <div class="progress-wrap" id="progress-wrap">
+   <div class="progress-text"><span id="prog-label">Question 1 of 8</span><span id="prog-pct">0%</span></div>
+   <div class="progress-track"><div class="progress-fill" id="prog-fill" style="width:0%"></div></div>
   </div>
+  <div id="quiz-body"></div>
+ </div>
 
-  <section style="background:linear-gradient(135deg,#0a2240 0%,#1a3a6e 100%);padding:64px 24px 48px;text-align:center">
-    <p style="color:#f0c040;font-size:11px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;margin-bottom:10px;font-family:'Barlow Condensed',sans-serif;">2-MINUTE ASSESSMENT</p>
-    <h1 style="color:#fff;font-size:clamp(1.8rem,5vw,2.8rem);font-weight:800;margin-bottom:14px;line-height:1.2;font-family:'Barlow Condensed',sans-serif;">Is Your C-Bus or Dynalite<br>System Due for an Upgrade?</h1>
-    <p style="color:#a8c0e0;font-size:1rem;line-height:1.7;max-width:600px;margin:0 auto;font-family:'Barlow',sans-serif;">Answer 8 questions and get a personalised system health score with specific findings and recommendations — written from 10+ years of hands-on Sydney experience.</p>
-  </section>
-
-  <div class="quiz-wrap">
-    <div class="progress-wrap" id="progress-wrap">
-      <div class="progress-text"><span id="prog-label">Question 1 of 8</span><span id="prog-pct">0%</span></div>
-      <div class="progress-track"><div class="progress-fill" id="prog-fill" style="width:0%"></div></div>
-    </div>
-    <div id="quiz-body"></div>
-  </div>
-
-  <!-- PRICING & CALL-OUT GUARANTEE -->
+ <!-- PRICING & CALL-OUT GUARANTEE -->
 <div class="section" style="background:#0a1828; border-top:1px solid #2a4a80;">
-  <div class="container">
-    <div class="section-header">
-      <div class="tag">Transparent Pricing</div>
-      <h2>Pricing &amp; Call-Out <span class="accent">Guarantee</span></h2>
-      <p class="dim" style="max-width:540px;margin:0 auto">We believe the prestige market deserves transparent, upfront pricing. No hidden fees, no open-ended hourly rates without approval.</p>
-    </div>
-    
-    <div class="grid-2" style="gap:32px; align-items: stretch;">
-      <div class="card" style="background:#0e1f3d;">
-        <h3 style="margin-bottom:16px;">Rate Card</h3>
-        <ul class="check-list">
-          <li> <strong style="color:#f0f4ff;">Diagnostic Call-Out Fee:</strong> $200 (not credited back)</li>
-          <li><strong style="color:#f0f4ff;">C-Bus &amp; Dynalite Programming:</strong> $150/hr + GST</li>
-          <li><strong style="color:#f0f4ff;">Re-commissioning / Integration:</strong> $150/hr + GST</li>
-          <li><strong style="color:#f0f4ff;">Emergency / AFSS Compliance:</strong> $150/hr + GST + 15% premium</li>
-          <li> <strong style="color:#f0f4ff;">Minimum Labour Charge:</strong> 3-hour minimum ($450 + GST)</li>
-        </ul>
-        <div style="margin-top:24px; padding:16px; background:rgba(240,112,32,0.1); border-left:3px solid #f07020; border-radius:4px;">
-          <h4 style="color:#f07020; font-size:14px; margin-bottom:8px;">Prestige Market Premium</h4>
-          <p style="font-size:13px; color:#a8c0e0; line-height:1.5;">For harbourside residential (Double Bay, Mosman, Point Piper, etc): 15% risk-loading may apply for high-value home automation failure scenarios or multi-building coordination.</p>
-        </div>
-      </div>
-      
-      <div class="card" style="background:#0e1f3d;">
-        <h3 style="margin-bottom:16px;">Our Call-Out Guarantee</h3>
-        <p class="dim" style="font-size:15px; line-height:1.7; margin-bottom:16px;">We arrive on-site fully equipped with the manufacturer diagnostic toolkit and most common replacement modules.</p>
-        <p class="dim" style="font-size:15px; line-height:1.7; margin-bottom:24px;">A $200 diagnostic fee applies to all callouts (not credited back). If the subsequent work requires less than 3 hours to fix, you still pay the 3-hour minimum ($450 + GST). If it requires more, we bill hourly at $150/hr + GST. <strong>No work proceeds without your approval.</strong></p>
-        
-        <div class="btns">
-          <a href="/book-service" class="btn btn-primary">Book &amp; Pay $200 + GST Site Fee</a>
-          <a href="tel:0422469739" class="btn btn-outline">Call 0422 469 739</a>
-        </div>
-      </div>
-    </div>
+ <div class="container">
+  <div class="section-header">
+   <div class="tag">Transparent Pricing</div>
+   <h2>Pricing &amp; Call-Out <span class="accent">Guarantee</span></h2>
+   <p class="dim" style="max-width:540px;margin:0 auto">We believe the prestige market deserves transparent, upfront pricing. No hidden fees, no open-ended hourly rates without approval.</p>
   </div>
+  
+  <div class="grid-2" style="gap:32px; align-items: stretch;">
+   <div class="card" style="background:#0e1f3d;">
+    <h3 style="margin-bottom:16px;">Rate Card</h3>
+    <ul class="check-list">
+     <li> <strong style="color:#f0f4ff;">Diagnostic Call-Out Fee:</strong> $200 </li>
+     <li><strong style="color:#f0f4ff;">C-Bus &amp; Dynalite Programming:</strong> $150/hr + GST</li>
+     <li><strong style="color:#f0f4ff;">Re-commissioning / Integration:</strong> $150/hr + GST</li>
+     <li><strong style="color:#f0f4ff;">Emergency / AFSS Compliance:</strong> $150/hr + GST + 15% premium</li>
+     <li> <strong style="color:#f0f4ff;">Minimum Labour Charge:</strong> 3-hour minimum ($450 + GST)</li>
+    </ul>
+    <div style="margin-top:24px; padding:16px; background:rgba(240,112,32,0.1); border-left:3px solid #f07020; border-radius:4px;">
+     <h4 style="color:#f07020; font-size:14px; margin-bottom:8px;">Prestige Market Premium</h4>
+     <p style="font-size:13px; color:#a8c0e0; line-height:1.5;">For harbourside residential (Double Bay, Mosman, Point Piper, etc): 15% risk-loading may apply for high-value home automation failure scenarios or multi-building coordination.</p>
+    </div>
+   </div>
+   
+   <div class="card" style="background:#0e1f3d;">
+    <h3 style="margin-bottom:16px;">Our Call-Out Guarantee</h3>
+    <p class="dim" style="font-size:15px; line-height:1.7; margin-bottom:16px;">We arrive on-site fully equipped with the manufacturer diagnostic toolkit and most common replacement modules.</p>
+    <p class="dim" style="font-size:15px; line-height:1.7; margin-bottom:24px;">A $200 diagnostic fee applies to all callouts . If the subsequent work requires less than 3 hours to fix, you still pay the 3-hour minimum ($450 + GST). If it requires more, we bill hourly at $150/hr + GST. <strong>No work proceeds without your approval.</strong></p>
+    
+    <div class="btns">
+     <a href="/book-service" class="btn btn-primary">Book &amp; Pay $200 + GST Site Fee</a>
+     <a href="tel:0422469739" class="btn btn-outline">Call 0422 469 739</a>
+    </div>
+   </div>
+  </div>
+ </div>
 </div>
 
 <footer>
-    <div class="footer-grid">
-      <div><div class="logo" style="margin-bottom:16px"><span class="logo-main">Sydney Automation Co.</span><div class="logo-line"></div><span class="logo-sub">Lighting Control Specialists</span></div><p style="color:#a8c0e0;font-size:14px;line-height:1.7;max-width:340px">Accredited C-Bus and Dynalite specialists. Same-day repairs and fixed-price upgrades across all of Sydney.</p></div>
-      <div><h4 style="font-family:'Barlow Condensed',sans-serif;font-weight:800;margin-bottom:16px;font-size:16px;letter-spacing:1px;text-transform:uppercase;color:#a8c0e0">Free Tools</h4><div style="display:flex;flex-direction:column;gap:8px;font-size:14px"><a href="/services" style="color:#a8c0e0">Cost Calculator</a><a href="/service-area-heatmap" style="color:#a8c0e0">Area Heat Map</a><a href="/services" style="color:#a8c0e0">Fault Finder</a><a href="/guides" style="color:#a8c0e0">Guides</a></div></div>
-      <div><h4 style="font-family:'Barlow Condensed',sans-serif;font-weight:800;margin-bottom:16px;font-size:16px;letter-spacing:1px;text-transform:uppercase;color:#a8c0e0">Contact</h4><div style="display:flex;flex-direction:column;gap:10px;font-size:14px;color:#a8c0e0"><a href="tel:0422469739" style="color:#f07020;font-weight:700;font-size:16px">📞 0422 469 739</a><a href="mailto:service@sydneyautomationco.com.au" style="color:#a8c0e0">service@sydneyautomationco.com.au</a></div></div>
+  <div class="footer-grid">
+   <div><div class="logo" style="margin-bottom:16px"><span class="logo-main">Sydney Automation Co.</span><div class="logo-line"></div><span class="logo-sub">Lighting Control Specialists</span></div><p style="color:#a8c0e0;font-size:14px;line-height:1.7;max-width:340px">Accredited C-Bus and Dynalite specialists. Same-day repairs and fixed-price upgrades across all of Sydney.</p></div>
+   <div><h4 style="font-family:'Barlow Condensed',sans-serif;font-weight:800;margin-bottom:16px;font-size:16px;letter-spacing:1px;text-transform:uppercase;color:#a8c0e0">Free Tools</h4><div style="display:flex;flex-direction:column;gap:8px;font-size:14px"><a href="/services" style="color:#a8c0e0">Cost Calculator</a><a href="/service-area-heatmap" style="color:#a8c0e0">Area Heat Map</a><a href="/services" style="color:#a8c0e0">Fault Finder</a><a href="/guides" style="color:#a8c0e0">Guides</a></div></div>
+   <div><h4 style="font-family:'Barlow Condensed',sans-serif;font-weight:800;margin-bottom:16px;font-size:16px;letter-spacing:1px;text-transform:uppercase;color:#a8c0e0">Contact</h4><div style="display:flex;flex-direction:column;gap:10px;font-size:14px;color:#a8c0e0"><a href="tel:0422469739" style="color:#f07020;font-weight:700;font-size:16px">📞 0422 469 739</a><a href="mailto:service@sydneyautomationco.com.au" style="color:#a8c0e0">service@sydneyautomationco.com.au</a></div></div>
+  </div>
+  <div class="footer-copy"><span>© 2026 Sydney Automation Co. ABN 61 136 364 150.</span></div>
+ </footer>
+
+ <script src="/nav.js"></script>
+ <script>
+ const QUESTIONS = [
+  { id:'age', text:'How old is your current system?', sub:'C-Bus and Dynalite systems have a typical useful life of 15–20 years before components begin failing at higher rates.',
+   answers:[{t:'Less than 5 years',s:0},{t:'5–10 years',s:1},{t:'10–15 years',s:2},{t:'15–20 years',s:4},{t:'Over 20 years',s:6},{t:"Don't know",s:3}]},
+  { id:'faults', text:'How often do faults occur in your system?', sub:'Fault frequency is the strongest single predictor of whether a system needs attention.',
+   answers:[{t:'Never — runs perfectly',s:0},{t:'Occasional minor issues',s:1},{t:'Monthly faults or glitches',s:3},{t:'Weekly problems',s:5},{t:'Constant issues',s:7}]},
+  { id:'keypads', text:'What is the condition of your keypads and panels?', sub:'Keypad condition indicates the overall age and health of the installed hardware.',
+   answers:[{t:'Like new — all functioning',s:0},{t:'Minor wear, all working',s:1},{t:'Some faulty or unresponsive',s:3},{t:'Several failed or stuck',s:5},{t:'Most non-functional',s:7}]},
+  { id:'software', text:'When was your system last professionally programmed or serviced?', sub:'Outdated programming is a common cause of scenes and schedules misbehaving over time.',
+   answers:[{t:'Within the last 12 months',s:0},{t:'1–3 years ago',s:1},{t:'3–7 years ago',s:3},{t:'Over 7 years ago',s:4},{t:'Never — original programming only',s:5}]},
+  { id:'features', text:'Which features are you currently missing or wanting to add?', sub:'These are the most requested upgrade capabilities for Sydney properties in 2026.',
+   answers:[{t:'Happy with everything',s:0},{t:'Smarter scheduling / automation',s:2},{t:'Smartphone or remote control',s:2},{t:'Energy monitoring',s:2},{t:'Multiple of the above',s:4}]},
+  { id:'compliance', text:'Are you aware of your emergency lighting compliance status?', sub:'AFSS (Annual Fire Safety Statement) requires emergency lighting to be tested and certified annually in NSW.',
+   answers:[{t:'Fully compliant — recent AFSS',s:0},{t:'Compliant but overdue for check',s:2},{t:'Unsure of current status',s:3},{t:'Non-compliant or expired',s:5}]},
+  { id:'energy', text:'Have you noticed energy bills increasing or lighting wasting power?', sub:'Older lighting control systems often lose their energy-saving effectiveness as schedules drift or sensors fail.',
+   answers:[{t:'No — energy use seems normal',s:0},{t:'Slight increase, unsure why',s:2},{t:'Noticeable increase',s:3},{t:'Significant waste — lights left on',s:5}]},
+  { id:'plans', text:'Do you have any upcoming renovations, tenancy changes, or compliance deadlines?', sub:'Proactive upgrades during renos cost significantly less than reactive repairs after fit-out is complete.',
+   answers:[{t:'No plans in the next 12 months',s:0},{t:'Minor works planned',s:1},{t:'Significant reno or refit',s:3},{t:'Compliance deadline approaching',s:4},{t:'New tenant or change of use',s:3}]},
+ ];
+
+ let answers = new Array(QUESTIONS.length).fill(null);
+ let current = 0;
+ let scores = new Array(QUESTIONS.length).fill(0);
+
+ function renderProgress() {
+  const pct = Math.round((current / QUESTIONS.length) * 100);
+  document.getElementById('prog-label').textContent = `Question ${current+1} of ${QUESTIONS.length}`;
+  document.getElementById('prog-pct').textContent = pct + '%';
+  document.getElementById('prog-fill').style.width = pct + '%';
+ }
+
+ function renderQ() {
+  renderProgress();
+  const q = QUESTIONS[current];
+  const chosen = answers[current];
+  document.getElementById('quiz-body').innerHTML = `
+   <div class="q-card">
+    <div class="q-num">Question ${current+1} of ${QUESTIONS.length}</div>
+    <div class="q-text">${q.text}</div>
+    ${q.sub ? `<p style="color:#6a8cb5;font-size:0.85rem;font-family:'Barlow',sans-serif;margin-bottom:20px;line-height:1.6">${q.sub}</p>` : ''}
+    <div class="answers">
+     ${q.answers.map((a,i)=>`
+      <div class="ans${chosen===i?' chosen':''}" onclick="pick(${i})">
+       <div class="ans-dot"></div>
+       <div><div class="ans-label">${a.t}</div></div>
+      </div>
+     `).join('')}
     </div>
-    <div class="footer-copy"><span>© 2026 Sydney Automation Co. ABN 61 136 364 150.</span></div>
-  </footer>
+    <div class="q-nav">
+     ${current>0?`<button class="btn-bk" onclick="goBack()">← Back</button>`:''}
+     <button class="btn-fwd" id="btn-fwd" onclick="goNext()" ${chosen===null?'disabled':''}>
+      ${current===QUESTIONS.length-1?'Get My Score →':'Next →'}
+     </button>
+    </div>
+   </div>
+  `;
+ }
 
-  <script src="/nav.js"></script>
-  <script>
-  const QUESTIONS = [
-    { id:'age', text:'How old is your current system?', sub:'C-Bus and Dynalite systems have a typical useful life of 15–20 years before components begin failing at higher rates.',
-      answers:[{t:'Less than 5 years',s:0},{t:'5–10 years',s:1},{t:'10–15 years',s:2},{t:'15–20 years',s:4},{t:'Over 20 years',s:6},{t:"Don't know",s:3}]},
-    { id:'faults', text:'How often do faults occur in your system?', sub:'Fault frequency is the strongest single predictor of whether a system needs attention.',
-      answers:[{t:'Never — runs perfectly',s:0},{t:'Occasional minor issues',s:1},{t:'Monthly faults or glitches',s:3},{t:'Weekly problems',s:5},{t:'Constant issues',s:7}]},
-    { id:'keypads', text:'What is the condition of your keypads and panels?', sub:'Keypad condition indicates the overall age and health of the installed hardware.',
-      answers:[{t:'Like new — all functioning',s:0},{t:'Minor wear, all working',s:1},{t:'Some faulty or unresponsive',s:3},{t:'Several failed or stuck',s:5},{t:'Most non-functional',s:7}]},
-    { id:'software', text:'When was your system last professionally programmed or serviced?', sub:'Outdated programming is a common cause of scenes and schedules misbehaving over time.',
-      answers:[{t:'Within the last 12 months',s:0},{t:'1–3 years ago',s:1},{t:'3–7 years ago',s:3},{t:'Over 7 years ago',s:4},{t:'Never — original programming only',s:5}]},
-    { id:'features', text:'Which features are you currently missing or wanting to add?', sub:'These are the most requested upgrade capabilities for Sydney properties in 2026.',
-      answers:[{t:'Happy with everything',s:0},{t:'Smarter scheduling / automation',s:2},{t:'Smartphone or remote control',s:2},{t:'Energy monitoring',s:2},{t:'Multiple of the above',s:4}]},
-    { id:'compliance', text:'Are you aware of your emergency lighting compliance status?', sub:'AFSS (Annual Fire Safety Statement) requires emergency lighting to be tested and certified annually in NSW.',
-      answers:[{t:'Fully compliant — recent AFSS',s:0},{t:'Compliant but overdue for check',s:2},{t:'Unsure of current status',s:3},{t:'Non-compliant or expired',s:5}]},
-    { id:'energy', text:'Have you noticed energy bills increasing or lighting wasting power?', sub:'Older lighting control systems often lose their energy-saving effectiveness as schedules drift or sensors fail.',
-      answers:[{t:'No — energy use seems normal',s:0},{t:'Slight increase, unsure why',s:2},{t:'Noticeable increase',s:3},{t:'Significant waste — lights left on',s:5}]},
-    { id:'plans', text:'Do you have any upcoming renovations, tenancy changes, or compliance deadlines?', sub:'Proactive upgrades during renos cost significantly less than reactive repairs after fit-out is complete.',
-      answers:[{t:'No plans in the next 12 months',s:0},{t:'Minor works planned',s:1},{t:'Significant reno or refit',s:3},{t:'Compliance deadline approaching',s:4},{t:'New tenant or change of use',s:3}]},
-  ];
-
-  let answers = new Array(QUESTIONS.length).fill(null);
-  let current = 0;
-  let scores = new Array(QUESTIONS.length).fill(0);
-
-  function renderProgress() {
-    const pct = Math.round((current / QUESTIONS.length) * 100);
-    document.getElementById('prog-label').textContent = `Question ${current+1} of ${QUESTIONS.length}`;
-    document.getElementById('prog-pct').textContent = pct + '%';
-    document.getElementById('prog-fill').style.width = pct + '%';
-  }
-
-  function renderQ() {
-    renderProgress();
-    const q = QUESTIONS[current];
-    const chosen = answers[current];
-    document.getElementById('quiz-body').innerHTML = `
-      <div class="q-card">
-        <div class="q-num">Question ${current+1} of ${QUESTIONS.length}</div>
-        <div class="q-text">${q.text}</div>
-        ${q.sub ? `<p style="color:#6a8cb5;font-size:0.85rem;font-family:'Barlow',sans-serif;margin-bottom:20px;line-height:1.6">${q.sub}</p>` : ''}
-        <div class="answers">
-          ${q.answers.map((a,i)=>`
-            <div class="ans${chosen===i?' chosen':''}" onclick="pick(${i})">
-              <div class="ans-dot"></div>
-              <div><div class="ans-label">${a.t}</div></div>
-            </div>
-          `).join('')}
-        </div>
-        <div class="q-nav">
-          ${current>0?`<button class="btn-bk" onclick="goBack()">← Back</button>`:''}
-          <button class="btn-fwd" id="btn-fwd" onclick="goNext()" ${chosen===null?'disabled':''}>
-            ${current===QUESTIONS.length-1?'Get My Score →':'Next →'}
-          </button>
-        </div>
-      </div>
-    `;
-  }
-
-  window.pick = function(i) {
-    answers[current] = i;
-    scores[current] = QUESTIONS[current].answers[i].s;
-    renderQ();
-  };
-
-  window.goNext = function() {
-    if (current < QUESTIONS.length-1) { current++; renderQ(); }
-    else showResult();
-  };
-
-  window.goBack = function() {
-    if (current > 0) { current--; renderQ(); }
-  };
-
-  function showResult() {
-    document.getElementById('progress-wrap').innerHTML = `
-      <div class="progress-text"><span>Assessment complete</span><span style="color:#f07020">100%</span></div>
-      <div class="progress-track"><div class="progress-fill" style="width:100%"></div></div>
-    `;
-    const total = scores.reduce((a,b)=>a+b,0);
-    const maxScore = QUESTIONS.reduce((a,q)=>a+Math.max(...q.answers.map(x=>x.s)),0);
-    const pct = Math.round((total / maxScore) * 100);
-
-    // Verdict
-    let verdict, vColour, vBg, recommendation, urgency;
-    if (pct <= 15) {
-      verdict = 'System Healthy'; vColour = '#64b464'; vBg = 'rgba(100,180,100,0.15)';
-      recommendation = 'Your system is in good shape. Schedule a routine health check in the next 12 months to stay ahead of any age-related issues, and ask George about any automation features you might be missing.';
-      urgency = 'low';
-    } else if (pct <= 35) {
-      verdict = 'Minor Attention Needed'; vColour = '#50a0f0'; vBg = 'rgba(80,160,240,0.15)';
-      recommendation = 'Your system is generally working but showing early signs of ageing or has some gaps that should be addressed. A service visit to inspect keypads, check programming, and audit the network health would be worthwhile this year.';
-      urgency = 'medium-low';
-    } else if (pct <= 55) {
-      verdict = 'Upgrade Recommended'; vColour = '#f0c040'; vBg = 'rgba(240,192,64,0.15)';
-      recommendation = 'Your system has multiple indicators suggesting it would benefit significantly from a professional assessment and likely partial upgrade. Older components, infrequent servicing, and fault history are costing you in reliability and energy efficiency.';
-      urgency = 'medium';
-    } else if (pct <= 75) {
-      verdict = 'Upgrade Strongly Advised'; vColour = '#f07020'; vBg = 'rgba(240,112,32,0.15)';
-      recommendation = 'Your responses indicate a system under significant stress — likely aging hardware, deferred maintenance, and functionality gaps that are affecting daily operations. A full assessment should be booked promptly to prevent total failure and avoid reactive emergency costs.';
-      urgency = 'high';
-    } else {
-      verdict = 'Immediate Action Required'; vColour = '#f03020'; vBg = 'rgba(240,48,32,0.15)';
-      recommendation = 'Your system shows critical warning signs. The combination of age, fault frequency, compliance concerns, and component condition suggests you are at high risk of total system failure. Call George today — the cost of a controlled upgrade is far lower than emergency reactive repair across a failed building.';
-      urgency = 'critical';
-    }
-
-    // Build findings from specific answers
-    const findings = [];
-    if (scores[0] >= 4) findings.push({icon:'⏱️',title:'System Age',body:'Your system is beyond the typical reliable lifecycle. Hardware failures become significantly more frequent after 15 years on C-Bus and Dynalite platforms.'});
-    if (scores[1] >= 3) findings.push({icon:'⚠️',title:'Fault Frequency',body:'Regular faults indicate either failing hardware components, corrupted programming, or bus network issues that will worsen without intervention.'});
-    if (scores[2] >= 3) findings.push({icon:'🔲',title:'Keypad Condition',body:'Failed keypads are often symptomatic of broader network or power supply issues, not just cosmetic wear. George checks the root cause, not just the symptom.'});
-    if (scores[3] >= 3) findings.push({icon:'💻',title:'Outdated Programming',body:'Systems that haven\'t been serviced in 3+ years often have drifted schedules, broken scenes, and group address corruption that is hard to notice without specialist diagnostics.'});
-    if (scores[4] >= 2) findings.push({icon:'📱',title:'Missing Functionality',body:'Modern C-Bus and Dynalite systems support remote access, smart scheduling, and energy monitoring that your current setup may not be delivering.'});
-    if (scores[5] >= 2) findings.push({icon:'🚨',title:'Compliance Risk',body:'NSW AFSS compliance is a legal requirement for commercial and strata properties. Non-compliance carries significant liability for building owners and managers.'});
-    if (scores[6] >= 2) findings.push({icon:'⚡',title:'Energy Waste',body:'Lighting control systems that have drifted from original programming are often the hidden cause of energy bill increases in commercial buildings.'});
-    if (scores[7] >= 3) findings.push({icon:'📅',title:'Upcoming Changes',body:'Proactive upgrades planned ahead of renos or tenancy changes cost 30–50% less than reactive work done after fit-out is complete. Planning now saves significantly.'});
-
-    if (!findings.length) findings.push({icon:'✅',title:'No Critical Issues Detected',body:'Your system appears to be well-maintained. Continue with annual check-ups to stay ahead of any age-related issues.'});
-
-    // Ring SVG
-    const r = 65, circ = 2 * Math.PI * r;
-    const dash = circ * (pct / 100);
-    const ringColour = pct <= 15 ? '#64b464' : pct <= 35 ? '#50a0f0' : pct <= 55 ? '#f0c040' : pct <= 75 ? '#f07020' : '#f03020';
-
-    document.getElementById('quiz-body').innerHTML = `
-      <div class="result-card">
-        <div class="q-num" style="text-align:center">YOUR SYSTEM HEALTH SCORE</div>
-        <div class="score-ring-wrap">
-          <div class="score-ring">
-            <svg width="160" height="160" viewBox="0 0 160 160">
-              <circle cx="80" cy="80" r="${r}" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="12"/>
-              <circle id="score-arc" cx="80" cy="80" r="${r}" fill="none" stroke="${ringColour}" stroke-width="12"
-                stroke-dasharray="${dash} ${circ}" stroke-linecap="round" style="transition:stroke-dasharray 1.2s cubic-bezier(0.4,0,0.2,1)"/>
-            </svg>
-            <div class="score-ring-num">
-              <div class="score-big" style="color:${ringColour}" id="score-counter">0</div>
-              <div class="score-lbl">/ 100</div>
-            </div>
-          </div>
-        </div>
-        <div style="text-align:center;margin-bottom:28px">
-          <div class="verdict-badge" style="background:${vBg};color:${vColour};border:1px solid ${vColour}40">${verdict}</div>
-          <div class="verdict-body" style="max-width:600px;margin:0 auto">${recommendation}</div>
-        </div>
-        ${findings.length ? `
-          <div style="margin-bottom:24px">
-            <p style="color:#f0c040;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:14px;font-family:'Barlow Condensed',sans-serif;">KEY FINDINGS</p>
-            <div class="findings">
-              ${findings.map(f=>`
-                <div class="finding" style="background:rgba(255,255,255,0.03);border:1px solid rgba(42,74,128,0.5)">
-                  <div class="finding-icon">${f.icon}</div>
-                  <div class="finding-text"><strong>${f.title}</strong>${f.body}</div>
-                </div>
-              `).join('')}
-            </div>
-          </div>
-        `:''}
-        <div style="background:rgba(240,112,32,0.08);border:1px solid rgba(240,112,32,0.2);border-radius:12px;padding:20px 24px;margin-bottom:24px;text-align:center">
-          <p style="color:#f0c040;font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:6px;font-family:'Barlow Condensed',sans-serif;">Want a Professional Assessment?</p>
-          <p style="color:#a8c0e0;font-size:0.9rem;line-height:1.6;font-family:'Barlow',sans-serif;margin-bottom:0">George offers free phone consultations and will give you an honest opinion on whether your system needs work — before you spend anything.</p>
-        </div>
-        <div class="rec-ctas" style="justify-content:center">
-          <a href="tel:0422469739" class="rc1" onclick="gtag&&gtag('event','quiz_complete',{score:${pct},verdict:'${urgency}'})">📞 Talk to George — 0422 469 739</a>
-          <a href="/services" class="rc2">Get a Cost Estimate →</a>
-        </div>
-        <div style="margin-top:20px;text-align:center"><button onclick="restartQuiz()" style="background:none;border:none;color:#4a6a9a;font-size:13px;cursor:pointer;font-family:'Barlow',sans-serif;text-decoration:underline">↺ Retake quiz</button></div>
-      </div>
-    `;
-
-    // Animate counter
-    let count = 0;
-    const target = pct;
-    const interval = setInterval(()=>{
-      count = Math.min(count + 2, target);
-      document.getElementById('score-counter').textContent = count;
-      if (count >= target) clearInterval(interval);
-    }, 20);
-
-    gtag && gtag('event', 'quiz_complete', { score: pct, verdict: urgency });
-  }
-
-  window.restartQuiz = function() {
-    answers = new Array(QUESTIONS.length).fill(null);
-    scores = new Array(QUESTIONS.length).fill(0);
-    current = 0;
-    renderQ();
-  };
-
+ window.pick = function(i) {
+  answers[current] = i;
+  scores[current] = QUESTIONS[current].answers[i].s;
   renderQ();
-  </script>
+ };
+
+ window.goNext = function() {
+  if (current < QUESTIONS.length-1) { current++; renderQ(); }
+  else showResult();
+ };
+
+ window.goBack = function() {
+  if (current > 0) { current--; renderQ(); }
+ };
+
+ function showResult() {
+  document.getElementById('progress-wrap').innerHTML = `
+   <div class="progress-text"><span>Assessment complete</span><span style="color:#f07020">100%</span></div>
+   <div class="progress-track"><div class="progress-fill" style="width:100%"></div></div>
+  `;
+  const total = scores.reduce((a,b)=>a+b,0);
+  const maxScore = QUESTIONS.reduce((a,q)=>a+Math.max(...q.answers.map(x=>x.s)),0);
+  const pct = Math.round((total / maxScore) * 100);
+
+  // Verdict
+  let verdict, vColour, vBg, recommendation, urgency;
+  if (pct <= 15) {
+   verdict = 'System Healthy'; vColour = '#64b464'; vBg = 'rgba(100,180,100,0.15)';
+   recommendation = 'Your system is in good shape. Schedule a routine health check in the next 12 months to stay ahead of any age-related issues, and ask George about any automation features you might be missing.';
+   urgency = 'low';
+  } else if (pct <= 35) {
+   verdict = 'Minor Attention Needed'; vColour = '#50a0f0'; vBg = 'rgba(80,160,240,0.15)';
+   recommendation = 'Your system is generally working but showing early signs of ageing or has some gaps that should be addressed. A service visit to inspect keypads, check programming, and audit the network health would be worthwhile this year.';
+   urgency = 'medium-low';
+  } else if (pct <= 55) {
+   verdict = 'Upgrade Recommended'; vColour = '#f0c040'; vBg = 'rgba(240,192,64,0.15)';
+   recommendation = 'Your system has multiple indicators suggesting it would benefit significantly from a professional assessment and likely partial upgrade. Older components, infrequent servicing, and fault history are costing you in reliability and energy efficiency.';
+   urgency = 'medium';
+  } else if (pct <= 75) {
+   verdict = 'Upgrade Strongly Advised'; vColour = '#f07020'; vBg = 'rgba(240,112,32,0.15)';
+   recommendation = 'Your responses indicate a system under significant stress — likely aging hardware, deferred maintenance, and functionality gaps that are affecting daily operations. A full assessment should be booked promptly to prevent total failure and avoid reactive emergency costs.';
+   urgency = 'high';
+  } else {
+   verdict = 'Immediate Action Required'; vColour = '#f03020'; vBg = 'rgba(240,48,32,0.15)';
+   recommendation = 'Your system shows critical warning signs. The combination of age, fault frequency, compliance concerns, and component condition suggests you are at high risk of total system failure. Call George today — the cost of a controlled upgrade is far lower than emergency reactive repair across a failed building.';
+   urgency = 'critical';
+  }
+
+  // Build findings from specific answers
+  const findings = [];
+  if (scores[0] >= 4) findings.push({icon:'⏱️',title:'System Age',body:'Your system is beyond the typical reliable lifecycle. Hardware failures become significantly more frequent after 15 years on C-Bus and Dynalite platforms.'});
+  if (scores[1] >= 3) findings.push({icon:'⚠️',title:'Fault Frequency',body:'Regular faults indicate either failing hardware components, corrupted programming, or bus network issues that will worsen without intervention.'});
+  if (scores[2] >= 3) findings.push({icon:'🔲',title:'Keypad Condition',body:'Failed keypads are often symptomatic of broader network or power supply issues, not just cosmetic wear. George checks the root cause, not just the symptom.'});
+  if (scores[3] >= 3) findings.push({icon:'💻',title:'Outdated Programming',body:'Systems that haven\'t been serviced in 3+ years often have drifted schedules, broken scenes, and group address corruption that is hard to notice without specialist diagnostics.'});
+  if (scores[4] >= 2) findings.push({icon:'📱',title:'Missing Functionality',body:'Modern C-Bus and Dynalite systems support remote access, smart scheduling, and energy monitoring that your current setup may not be delivering.'});
+  if (scores[5] >= 2) findings.push({icon:'🚨',title:'Compliance Risk',body:'NSW AFSS compliance is a legal requirement for commercial and strata properties. Non-compliance carries significant liability for building owners and managers.'});
+  if (scores[6] >= 2) findings.push({icon:'⚡',title:'Energy Waste',body:'Lighting control systems that have drifted from original programming are often the hidden cause of energy bill increases in commercial buildings.'});
+  if (scores[7] >= 3) findings.push({icon:'📅',title:'Upcoming Changes',body:'Proactive upgrades planned ahead of renos or tenancy changes cost 30–50% less than reactive work done after fit-out is complete. Planning now saves significantly.'});
+
+  if (!findings.length) findings.push({icon:'✅',title:'No Critical Issues Detected',body:'Your system appears to be well-maintained. Continue with annual check-ups to stay ahead of any age-related issues.'});
+
+  // Ring SVG
+  const r = 65, circ = 2 * Math.PI * r;
+  const dash = circ * (pct / 100);
+  const ringColour = pct <= 15 ? '#64b464' : pct <= 35 ? '#50a0f0' : pct <= 55 ? '#f0c040' : pct <= 75 ? '#f07020' : '#f03020';
+
+  document.getElementById('quiz-body').innerHTML = `
+   <div class="result-card">
+    <div class="q-num" style="text-align:center">YOUR SYSTEM HEALTH SCORE</div>
+    <div class="score-ring-wrap">
+     <div class="score-ring">
+      <svg width="160" height="160" viewBox="0 0 160 160">
+       <circle cx="80" cy="80" r="${r}" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="12"/>
+       <circle id="score-arc" cx="80" cy="80" r="${r}" fill="none" stroke="${ringColour}" stroke-width="12"
+        stroke-dasharray="${dash} ${circ}" stroke-linecap="round" style="transition:stroke-dasharray 1.2s cubic-bezier(0.4,0,0.2,1)"/>
+      </svg>
+      <div class="score-ring-num">
+       <div class="score-big" style="color:${ringColour}" id="score-counter">0</div>
+       <div class="score-lbl">/ 100</div>
+      </div>
+     </div>
+    </div>
+    <div style="text-align:center;margin-bottom:28px">
+     <div class="verdict-badge" style="background:${vBg};color:${vColour};border:1px solid ${vColour}40">${verdict}</div>
+     <div class="verdict-body" style="max-width:600px;margin:0 auto">${recommendation}</div>
+    </div>
+    ${findings.length ? `
+     <div style="margin-bottom:24px">
+      <p style="color:#f0c040;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:14px;font-family:'Barlow Condensed',sans-serif;">KEY FINDINGS</p>
+      <div class="findings">
+       ${findings.map(f=>`
+        <div class="finding" style="background:rgba(255,255,255,0.03);border:1px solid rgba(42,74,128,0.5)">
+         <div class="finding-icon">${f.icon}</div>
+         <div class="finding-text"><strong>${f.title}</strong>${f.body}</div>
+        </div>
+       `).join('')}
+      </div>
+     </div>
+    `:''}
+    <div style="background:rgba(240,112,32,0.08);border:1px solid rgba(240,112,32,0.2);border-radius:12px;padding:20px 24px;margin-bottom:24px;text-align:center">
+     <p style="color:#f0c040;font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:6px;font-family:'Barlow Condensed',sans-serif;">Want a Professional Assessment?</p>
+     <p style="color:#a8c0e0;font-size:0.9rem;line-height:1.6;font-family:'Barlow',sans-serif;margin-bottom:0">George offers free phone consultations and will give you an honest opinion on whether your system needs work — before you spend anything.</p>
+    </div>
+    <div class="rec-ctas" style="justify-content:center">
+     <a href="tel:0422469739" class="rc1" onclick="gtag&&gtag('event','quiz_complete',{score:${pct},verdict:'${urgency}'})">📞 Talk to George — 0422 469 739</a>
+     <a href="/services" class="rc2">Get a Cost Estimate →</a>
+    </div>
+    <div style="margin-top:20px;text-align:center"><button onclick="restartQuiz()" style="background:none;border:none;color:#4a6a9a;font-size:13px;cursor:pointer;font-family:'Barlow',sans-serif;text-decoration:underline">↺ Retake quiz</button></div>
+   </div>
+  `;
+
+  // Animate counter
+  let count = 0;
+  const target = pct;
+  const interval = setInterval(()=>{
+   count = Math.min(count + 2, target);
+   document.getElementById('score-counter').textContent = count;
+   if (count >= target) clearInterval(interval);
+  }, 20);
+
+  gtag && gtag('event', 'quiz_complete', { score: pct, verdict: urgency });
+ }
+
+ window.restartQuiz = function() {
+  answers = new Array(QUESTIONS.length).fill(null);
+  scores = new Array(QUESTIONS.length).fill(0);
+  current = 0;
+  renderQ();
+ };
+
+ renderQ();
+ </script>
 </body>
 </html>
