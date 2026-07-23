@@ -2573,12 +2573,6 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://sydneyautomationco.com.au/tech-library</loc>
-    <lastmod>2026-07-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://sydneyautomationco.com.au/terms-of-service</loc>
     <lastmod>2026-07-10</lastmod>
     <changefreq>monthly</changefreq>
@@ -5516,12 +5510,6 @@
 
   <url>
     <loc>https://sydneyautomationco.com.au/sydney-lighting-automation-contractor-comparison.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://sydneyautomationco.com.au/tech-library.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
