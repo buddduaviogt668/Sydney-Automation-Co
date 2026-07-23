@@ -1,0 +1,1931 @@
+{
+  "buildCommand": "",
+  "outputDirectory": ".",
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/contact.html",
+      "destination": "/contact",
+      "permanent": true
+    },
+    {
+      "source": "/blog.html",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/guides.html",
+      "destination": "/guides",
+      "permanent": true
+    },
+    {
+      "source": "/about.html",
+      "destination": "/about",
+      "permanent": true
+    },
+    {
+      "source": "/projects.html",
+      "destination": "/projects",
+      "permanent": true
+    },
+    {
+      "source": "/strata.html",
+      "destination": "/strata",
+      "permanent": true
+    },
+    {
+      "source": "/services.html",
+      "destination": "/services",
+      "permanent": true
+    },
+    {
+      "source": "/locations.html",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/book-service.html",
+      "destination": "/book-service",
+      "permanent": true
+    },
+    {
+      "source": "/privacy-policy.html",
+      "destination": "/privacy-policy",
+      "permanent": true
+    },
+    {
+      "source": "/terms-of-service.html",
+      "destination": "/terms-of-service",
+      "permanent": true
+    },
+    {
+      "source": "/accessibility.html",
+      "destination": "/accessibility",
+      "permanent": true
+    },
+    {
+      "source": "/sydney-Automation Specialists-cbus-dynalite-partnership",
+      "destination": "/about",
+      "permanent": true
+    },
+    {
+      "source": "/sydney-automation-specialists-cbus-dynalite-partnership",
+      "destination": "/about",
+      "permanent": true
+    },
+    {
+      "source": "/sydney-Automation%20Specialists-cbus-dynalite-partnership",
+      "destination": "/about",
+      "permanent": true
+    },
+    {
+      "source": "/c-bus-programmer-shire.html",
+      "destination": "/shire",
+      "permanent": true
+    },
+    {
+      "source": "/c-bus-programmer-shire",
+      "destination": "/shire",
+      "permanent": true
+    },
+    {
+      "source": "/blog/",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/contact/",
+      "destination": "/contact",
+      "permanent": true
+    },
+    {
+      "source": "/Service",
+      "destination": "/services",
+      "permanent": true
+    },
+    {
+      "source": "/:path*/amp",
+      "destination": "/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/:path*/amp/",
+      "destination": "/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/services/lighting-control/:rest*",
+      "destination": "/lighting-control-service-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/c-bus-programming-sydney",
+      "destination": "/c-bus-programmer-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/cbus-programming-sydney",
+      "destination": "/c-bus-programmer-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/cbus-programming-sydney.html",
+      "destination": "/c-bus-programmer-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/c-bus-fault-finding-sydney",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/c-bus-fault-finding-sydney.html",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/dynalite-programming-sydney",
+      "destination": "/dynalite-programmer-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/dynalite-programming-sydney.html",
+      "destination": "/dynalite-programmer-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/dali-lighting-control-sydney",
+      "destination": "/dali-lighting-repair",
+      "permanent": true
+    },
+    {
+      "source": "/dali-lighting-control-sydney.html",
+      "destination": "/dali-lighting-repair",
+      "permanent": true
+    },
+    {
+      "source": "/home-automation-sydney",
+      "destination": "/c-bus-programmer-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/home-automation-sydney.html",
+      "destination": "/c-bus-programmer-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/smart-home-sydney",
+      "destination": "/c-bus-programmer-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/smart-home-sydney.html",
+      "destination": "/c-bus-programmer-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/lighting-control-sydney",
+      "destination": "/lighting-control-service-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/lighting-control-sydney.html",
+      "destination": "/lighting-control-service-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/building-automation-sydney",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/building-automation-sydney.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/portfolio",
+      "destination": "/projects",
+      "permanent": true
+    },
+    {
+      "source": "/portfolio/",
+      "destination": "/projects",
+      "permanent": true
+    },
+    {
+      "source": "/news",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/news/",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/gallery",
+      "destination": "/about",
+      "permanent": true
+    },
+    {
+      "source": "/gallery/",
+      "destination": "/about",
+      "permanent": true
+    },
+    {
+      "source": "/product/cbus",
+      "destination": "/products",
+      "permanent": true
+    },
+    {
+      "source": "/product/dynalite",
+      "destination": "/products",
+      "permanent": true
+    },
+    {
+      "source": "/product/:slug",
+      "destination": "/products",
+      "permanent": true
+    },
+    {
+      "source": "/cbus-sydney",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/cbus-sydney.html",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/dynalite-sydney",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/dynalite-sydney.html",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/get-quote",
+      "destination": "/book-service",
+      "permanent": true
+    },
+    {
+      "source": "/get-quote/",
+      "destination": "/book-service",
+      "permanent": true
+    },
+    {
+      "source": "/free-quote",
+      "destination": "/book-service",
+      "permanent": true
+    },
+    {
+      "source": "/free-quote/",
+      "destination": "/book-service",
+      "permanent": true
+    },
+    {
+      "source": "/quote",
+      "destination": "/book-service",
+      "permanent": true
+    },
+    {
+      "source": "/quote/",
+      "destination": "/book-service",
+      "permanent": true
+    },
+    {
+      "source": "/enquire",
+      "destination": "/book-service",
+      "permanent": true
+    },
+    {
+      "source": "/enquiry",
+      "destination": "/book-service",
+      "permanent": true
+    },
+    {
+      "source": "/request-quote",
+      "destination": "/book-service",
+      "permanent": true
+    },
+    {
+      "source": "/support",
+      "destination": "/contact",
+      "permanent": true
+    },
+    {
+      "source": "/support/",
+      "destination": "/contact",
+      "permanent": true
+    },
+    {
+      "source": "/faq",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/faq/",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/C-Bus-Repairs-Sydney",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/CBUS",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/Dynalite",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/c-bus-service-sydney",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/cbus-service-sydney",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/dynalite-service-sydney",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/automation-service-sydney",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.sydneyautomationco.online"
+        }
+      ],
+      "destination": "https://sydneyautomationco.com.au/$1",
+      "permanent": true
+    },
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "sydneyautomationco.online"
+        }
+      ],
+      "destination": "https://sydneyautomationco.com.au/$1",
+      "permanent": true
+    },
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.sydneyautomationco.com.au"
+        }
+      ],
+      "destination": "https://sydneyautomationco.com.au/$1",
+      "permanent": true
+    },
+    {
+      "source": "/shop",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/shop/",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/shop/:path*",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/cart",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/cart/",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/checkout",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/checkout/",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/my-account",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/my-account/",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/my-account/:path*",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/products/clipsal-c-bus",
+      "destination": "/c-bus-programmer-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/products/clipsal-c-bus/",
+      "destination": "/c-bus-programmer-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/products/clipsal-c-bus/amp",
+      "destination": "/c-bus-programmer-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/products/clipsal-c-bus/amp/",
+      "destination": "/c-bus-programmer-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/products/dynalite",
+      "destination": "/dynalite-programmer-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/products/dynalite/",
+      "destination": "/dynalite-programmer-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/products/dynalite/amp",
+      "destination": "/dynalite-programmer-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/products/dynalite/amp/",
+      "destination": "/dynalite-programmer-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/products/dali-lighting-control",
+      "destination": "/dali-lighting-repair",
+      "permanent": true
+    },
+    {
+      "source": "/products/dali-lighting-control/",
+      "destination": "/dali-lighting-repair",
+      "permanent": true
+    },
+    {
+      "source": "/products/dali-lighting-control/amp",
+      "destination": "/dali-lighting-repair",
+      "permanent": true
+    },
+    {
+      "source": "/products/dali-lighting-control/amp/",
+      "destination": "/dali-lighting-repair",
+      "permanent": true
+    },
+    {
+      "source": "/products/rapix-lighting-control",
+      "destination": "/rapix-lighting-control",
+      "permanent": true
+    },
+    {
+      "source": "/products/rapix-lighting-control/",
+      "destination": "/rapix-lighting-control",
+      "permanent": true
+    },
+    {
+      "source": "/products/rapix-lighting-control/amp",
+      "destination": "/rapix-lighting-control",
+      "permanent": true
+    },
+    {
+      "source": "/products/rapix-lighting-control/amp/",
+      "destination": "/rapix-lighting-control",
+      "permanent": true
+    },
+    {
+      "source": "/products/amp",
+      "destination": "/services",
+      "permanent": true
+    },
+    {
+      "source": "/products/amp/",
+      "destination": "/services",
+      "permanent": true
+    },
+    {
+      "source": "/products/:path+",
+      "destination": "/products",
+      "permanent": true
+    },
+    {
+      "source": "/services/lighting-control",
+      "destination": "/lighting-control-service-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/services/lighting-control/",
+      "destination": "/lighting-control-service-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/services/lighting-control/amp",
+      "destination": "/lighting-control-service-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/services/lighting-control/amp/",
+      "destination": "/lighting-control-service-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/services/smart-buildings",
+      "destination": "/services",
+      "permanent": true
+    },
+    {
+      "source": "/services/smart-buildings/",
+      "destination": "/services",
+      "permanent": true
+    },
+    {
+      "source": "/services/smart-buildings/amp",
+      "destination": "/services",
+      "permanent": true
+    },
+    {
+      "source": "/services/smart-buildings/amp/",
+      "destination": "/services",
+      "permanent": true
+    },
+    {
+      "source": "/services/amp",
+      "destination": "/services",
+      "permanent": true
+    },
+    {
+      "source": "/services/amp/",
+      "destination": "/services",
+      "permanent": true
+    },
+    {
+      "source": "/Service/",
+      "destination": "/services",
+      "permanent": true
+    },
+    {
+      "source": "/Service/:path*",
+      "destination": "/services",
+      "permanent": true
+    },
+    {
+      "source": "/service/amp",
+      "destination": "/services",
+      "permanent": true
+    },
+    {
+      "source": "/service/amp/",
+      "destination": "/services",
+      "permanent": true
+    },
+    {
+      "source": "/about-us",
+      "destination": "/about",
+      "permanent": true
+    },
+    {
+      "source": "/about-us/",
+      "destination": "/about",
+      "permanent": true
+    },
+    {
+      "source": "/about-us/amp",
+      "destination": "/about",
+      "permanent": true
+    },
+    {
+      "source": "/about-us/amp/",
+      "destination": "/about",
+      "permanent": true
+    },
+    {
+      "source": "/contact-us",
+      "destination": "/contact",
+      "permanent": true
+    },
+    {
+      "source": "/contact-us/",
+      "destination": "/contact",
+      "permanent": true
+    },
+    {
+      "source": "/contact-us/amp",
+      "destination": "/contact",
+      "permanent": true
+    },
+    {
+      "source": "/contact-us/amp/",
+      "destination": "/contact",
+      "permanent": true
+    },
+    {
+      "source": "/5-reasons-sydney-homes-need-smart-lighting-in-2025",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/5-reasons-sydney-homes-need-smart-lighting-in-2025/",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/5-reasons-sydney-homes-need-smart-lighting-in-2025/amp",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/5-reasons-sydney-homes-need-smart-lighting-in-2025/amp/",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/why-dynalite-is-the-best-choice-for-building-automation",
+      "destination": "/dynalite-programmer-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/why-dynalite-is-the-best-choice-for-building-automation/",
+      "destination": "/dynalite-programmer-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/why-dynalite-is-the-best-choice-for-building-automation/amp",
+      "destination": "/dynalite-programmer-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/why-dynalite-is-the-best-choice-for-building-automation/amp/",
+      "destination": "/dynalite-programmer-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/how-lighting-automation-is-changing-industries-in-australia",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/how-lighting-automation-is-changing-industries-in-australia/",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/how-lighting-automation-is-changing-industries-in-australia/amp",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/how-lighting-automation-is-changing-industries-in-australia/amp/",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/post-1",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/post-1/",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/post-1/amp",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/post-1/amp/",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/cbus",
+      "destination": "/c-bus-programmer-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/cbus/",
+      "destination": "/c-bus-programmer-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/cbus-repairs-sydney",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/cbus-repairs-sydney/",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/cbus-repairs-sydney.html",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/dynalite",
+      "destination": "/dynalite-programmer-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/dynalite/",
+      "destination": "/dynalite-programmer-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/smart-buildings",
+      "destination": "/services",
+      "permanent": true
+    },
+    {
+      "source": "/smart-buildings/",
+      "destination": "/services",
+      "permanent": true
+    },
+    {
+      "source": "/Lighting-Control",
+      "destination": "/lighting-control-service-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/Lighting-Control/",
+      "destination": "/lighting-control-service-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/blog/amp",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/blog/amp/",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/energy-efficiency",
+      "destination": "/services",
+      "permanent": true
+    },
+    {
+      "source": "/energy-efficiency/",
+      "destination": "/services",
+      "permanent": true
+    },
+    {
+      "source": "/amp",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/amp/",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/home",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/home/",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/Home-Automation",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/Home-Automation/",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/home-automation",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/home-automation/",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/smart-home-automation-sydney",
+      "destination": "/services",
+      "permanent": true
+    },
+    {
+      "source": "/smart-home-automation-sydney/",
+      "destination": "/services",
+      "permanent": true
+    },
+    {
+      "source": "/lighting-control",
+      "destination": "/lighting-control-service-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/lighting-control/",
+      "destination": "/lighting-control-service-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/wp-admin",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/wp-admin/",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/wp-admin/:path*",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/wp-login.php",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/wp-content/:path*",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/wp-includes/:path*",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/wp-json/:path*",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/xmlrpc.php",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/category/:path*",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/tag/:path*",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/author/:path*",
+      "destination": "/about",
+      "permanent": true
+    },
+    {
+      "source": "/feed",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/feed/",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/feed/:path*",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/rss",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/rss/",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/sitemap_index.xml",
+      "destination": "/sitemap.xml",
+      "permanent": true
+    },
+    {
+      "source": "/page-sitemap.xml",
+      "destination": "/sitemap.xml",
+      "permanent": true
+    },
+    {
+      "source": "/post-sitemap.xml",
+      "destination": "/sitemap.xml",
+      "permanent": true
+    },
+    {
+      "source": "/page/:path*",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/cbus-not-working-sydney",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/cbus-not-working-sydney.html",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/cbus-fault-finding-sydney.html",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/c-bus-repairs-sydney.html",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/clipsal-c-bus-l5508d1a-lost-schedules-&-clock-drift-eastern-suburbs",
+      "destination": "/tech-library/clipsal-c-bus-l5508d1a-lost-schedules-and-clock-drift-eastern-suburbs",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/clipsal-c-bus-l5508d1a-lost-schedules-&-clock-drift-eastern-suburbs.html",
+      "destination": "/tech-library/clipsal-c-bus-l5508d1a-lost-schedules-and-clock-drift-eastern-suburbs",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/dynalite-antumbra-lost-schedules-&-clock-drift-sydney-cbd",
+      "destination": "/tech-library/dynalite-antumbra-lost-schedules-and-clock-drift-sydney-cbd",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/dynalite-antumbra-lost-schedules-&-clock-drift-sydney-cbd.html",
+      "destination": "/tech-library/dynalite-antumbra-lost-schedules-and-clock-drift-sydney-cbd",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/clipsal-c-bus-5508rvf-lost-schedules-&-clock-drift-sydney-cbd",
+      "destination": "/tech-library/clipsal-c-bus-5508rvf-lost-schedules-and-clock-drift-sydney-cbd",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/clipsal-c-bus-5508rvf-lost-schedules-&-clock-drift-sydney-cbd.html",
+      "destination": "/tech-library/clipsal-c-bus-5508rvf-lost-schedules-and-clock-drift-sydney-cbd",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/clipsal-c-bus-l5508d2a-lost-schedules-&-clock-drift-north-shore",
+      "destination": "/tech-library/clipsal-c-bus-l5508d2a-lost-schedules-and-clock-drift-north-shore",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/clipsal-c-bus-l5508d2a-lost-schedules-&-clock-drift-north-shore.html",
+      "destination": "/tech-library/clipsal-c-bus-l5508d2a-lost-schedules-and-clock-drift-north-shore",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/dynalite-dus360cs-lost-schedules-&-clock-drift-sydney-cbd",
+      "destination": "/tech-library/dynalite-dus360cs-lost-schedules-and-clock-drift-sydney-cbd",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/dynalite-dus360cs-lost-schedules-&-clock-drift-sydney-cbd.html",
+      "destination": "/tech-library/dynalite-dus360cs-lost-schedules-and-clock-drift-sydney-cbd",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/dynalite-antumbra-lost-schedules-&-clock-drift-eastern-suburbs",
+      "destination": "/tech-library/dynalite-antumbra-lost-schedules-and-clock-drift-eastern-suburbs",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/dynalite-antumbra-lost-schedules-&-clock-drift-eastern-suburbs.html",
+      "destination": "/tech-library/dynalite-antumbra-lost-schedules-and-clock-drift-eastern-suburbs",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/dynalite-ddrc1220-lost-schedules-&-clock-drift-sutherland-shire",
+      "destination": "/tech-library/dynalite-ddrc1220-lost-schedules-and-clock-drift-sutherland-shire",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/dynalite-ddrc1220-lost-schedules-&-clock-drift-sutherland-shire.html",
+      "destination": "/tech-library/dynalite-ddrc1220-lost-schedules-and-clock-drift-sutherland-shire",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/dynalite-ddmc802-lost-schedules-&-clock-drift-eastern-suburbs",
+      "destination": "/tech-library/dynalite-ddmc802-lost-schedules-and-clock-drift-eastern-suburbs",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/dynalite-ddmc802-lost-schedules-&-clock-drift-eastern-suburbs.html",
+      "destination": "/tech-library/dynalite-ddmc802-lost-schedules-and-clock-drift-eastern-suburbs",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/dynalite-ddng232-lost-schedules-&-clock-drift-eastern-suburbs",
+      "destination": "/tech-library/dynalite-ddng232-lost-schedules-and-clock-drift-eastern-suburbs",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/dynalite-ddng232-lost-schedules-&-clock-drift-eastern-suburbs.html",
+      "destination": "/tech-library/dynalite-ddng232-lost-schedules-and-clock-drift-eastern-suburbs",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/dynalite-ddmc802-lost-schedules-&-clock-drift-north-shore",
+      "destination": "/tech-library/dynalite-ddmc802-lost-schedules-and-clock-drift-north-shore",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/dynalite-ddmc802-lost-schedules-&-clock-drift-north-shore.html",
+      "destination": "/tech-library/dynalite-ddmc802-lost-schedules-and-clock-drift-north-shore",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/dynalite-dmdr12-320-lost-schedules-&-clock-drift-north-shore",
+      "destination": "/tech-library/dynalite-dmdr12-320-lost-schedules-and-clock-drift-north-shore",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/dynalite-dmdr12-320-lost-schedules-&-clock-drift-north-shore.html",
+      "destination": "/tech-library/dynalite-dmdr12-320-lost-schedules-and-clock-drift-north-shore",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/dynalite-dmdr12-320-lost-schedules-&-clock-drift-sutherland-shire",
+      "destination": "/tech-library/dynalite-dmdr12-320-lost-schedules-and-clock-drift-sutherland-shire",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/dynalite-dmdr12-320-lost-schedules-&-clock-drift-sutherland-shire.html",
+      "destination": "/tech-library/dynalite-dmdr12-320-lost-schedules-and-clock-drift-sutherland-shire",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/clipsal-c-bus-5502dal-lost-schedules-&-clock-drift-sutherland-shire",
+      "destination": "/tech-library/clipsal-c-bus-5502dal-lost-schedules-and-clock-drift-sutherland-shire",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/clipsal-c-bus-5502dal-lost-schedules-&-clock-drift-sutherland-shire.html",
+      "destination": "/tech-library/clipsal-c-bus-5502dal-lost-schedules-and-clock-drift-sutherland-shire",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/dynalite-pdeg-lost-schedules-&-clock-drift-sydney-cbd",
+      "destination": "/tech-library/dynalite-pdeg-lost-schedules-and-clock-drift-sydney-cbd",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/dynalite-pdeg-lost-schedules-&-clock-drift-sydney-cbd.html",
+      "destination": "/tech-library/dynalite-pdeg-lost-schedules-and-clock-drift-sydney-cbd",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/dynalite-ddrc1220-lost-schedules-&-clock-drift-eastern-suburbs",
+      "destination": "/tech-library/dynalite-ddrc1220-lost-schedules-and-clock-drift-eastern-suburbs",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/dynalite-ddrc1220-lost-schedules-&-clock-drift-eastern-suburbs.html",
+      "destination": "/tech-library/dynalite-ddrc1220-lost-schedules-and-clock-drift-eastern-suburbs",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/clipsal-c-bus-5200whc2-lost-schedules-&-clock-drift-eastern-suburbs",
+      "destination": "/tech-library/clipsal-c-bus-5200whc2-lost-schedules-and-clock-drift-eastern-suburbs",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/clipsal-c-bus-5200whc2-lost-schedules-&-clock-drift-eastern-suburbs.html",
+      "destination": "/tech-library/clipsal-c-bus-5200whc2-lost-schedules-and-clock-drift-eastern-suburbs",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/dynalite-ddrc1220-lost-schedules-&-clock-drift-north-shore",
+      "destination": "/tech-library/dynalite-ddrc1220-lost-schedules-and-clock-drift-north-shore",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/dynalite-ddrc1220-lost-schedules-&-clock-drift-north-shore.html",
+      "destination": "/tech-library/dynalite-ddrc1220-lost-schedules-and-clock-drift-north-shore",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/dynalite-ddng485-lost-schedules-&-clock-drift-eastern-suburbs",
+      "destination": "/tech-library/dynalite-ddng485-lost-schedules-and-clock-drift-eastern-suburbs",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/dynalite-ddng485-lost-schedules-&-clock-drift-eastern-suburbs.html",
+      "destination": "/tech-library/dynalite-ddng485-lost-schedules-and-clock-drift-eastern-suburbs",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/dynalite-dus360cs-lost-schedules-&-clock-drift-sutherland-shire",
+      "destination": "/tech-library/dynalite-dus360cs-lost-schedules-and-clock-drift-sutherland-shire",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/dynalite-dus360cs-lost-schedules-&-clock-drift-sutherland-shire.html",
+      "destination": "/tech-library/dynalite-dus360cs-lost-schedules-and-clock-drift-sutherland-shire",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/dynalite-ddng485-lost-schedules-&-clock-drift-sydney-cbd",
+      "destination": "/tech-library/dynalite-ddng485-lost-schedules-and-clock-drift-sydney-cbd",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/dynalite-ddng485-lost-schedules-&-clock-drift-sydney-cbd.html",
+      "destination": "/tech-library/dynalite-ddng485-lost-schedules-and-clock-drift-sydney-cbd",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/clipsal-c-bus-5508rvf-lost-schedules-&-clock-drift-north-shore",
+      "destination": "/tech-library/clipsal-c-bus-5508rvf-lost-schedules-and-clock-drift-north-shore",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/clipsal-c-bus-5508rvf-lost-schedules-&-clock-drift-north-shore.html",
+      "destination": "/tech-library/clipsal-c-bus-5508rvf-lost-schedules-and-clock-drift-north-shore",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/clipsal-c-bus-5200whc2-lost-schedules-&-clock-drift-sutherland-shire",
+      "destination": "/tech-library/clipsal-c-bus-5200whc2-lost-schedules-and-clock-drift-sutherland-shire",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/clipsal-c-bus-5200whc2-lost-schedules-&-clock-drift-sutherland-shire.html",
+      "destination": "/tech-library/clipsal-c-bus-5200whc2-lost-schedules-and-clock-drift-sutherland-shire",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/dynalite-ddmc802-lost-schedules-&-clock-drift-sydney-cbd",
+      "destination": "/tech-library/dynalite-ddmc802-lost-schedules-and-clock-drift-sydney-cbd",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/dynalite-ddmc802-lost-schedules-&-clock-drift-sydney-cbd.html",
+      "destination": "/tech-library/dynalite-ddmc802-lost-schedules-and-clock-drift-sydney-cbd",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/clipsal-c-bus-l5512rvf-lost-schedules-&-clock-drift-north-shore",
+      "destination": "/tech-library/clipsal-c-bus-l5512rvf-lost-schedules-and-clock-drift-north-shore",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/clipsal-c-bus-l5512rvf-lost-schedules-&-clock-drift-north-shore.html",
+      "destination": "/tech-library/clipsal-c-bus-l5512rvf-lost-schedules-and-clock-drift-north-shore",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/clipsal-c-bus-l5508d2a-lost-schedules-&-clock-drift-eastern-suburbs",
+      "destination": "/tech-library/clipsal-c-bus-l5508d2a-lost-schedules-and-clock-drift-eastern-suburbs",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/clipsal-c-bus-l5508d2a-lost-schedules-&-clock-drift-eastern-suburbs.html",
+      "destination": "/tech-library/clipsal-c-bus-l5508d2a-lost-schedules-and-clock-drift-eastern-suburbs",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/clipsal-c-bus-l5512rvf-lost-schedules-&-clock-drift-sydney-cbd",
+      "destination": "/tech-library/clipsal-c-bus-l5512rvf-lost-schedules-and-clock-drift-sydney-cbd",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/clipsal-c-bus-l5512rvf-lost-schedules-&-clock-drift-sydney-cbd.html",
+      "destination": "/tech-library/clipsal-c-bus-l5512rvf-lost-schedules-and-clock-drift-sydney-cbd",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/dynalite-ddrc1210-lost-schedules-&-clock-drift-eastern-suburbs",
+      "destination": "/tech-library/dynalite-ddrc1210-lost-schedules-and-clock-drift-eastern-suburbs",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/dynalite-ddrc1210-lost-schedules-&-clock-drift-eastern-suburbs.html",
+      "destination": "/tech-library/dynalite-ddrc1210-lost-schedules-and-clock-drift-eastern-suburbs",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/dynalite-antumbra-lost-schedules-&-clock-drift-north-shore",
+      "destination": "/tech-library/dynalite-antumbra-lost-schedules-and-clock-drift-north-shore",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/dynalite-antumbra-lost-schedules-&-clock-drift-north-shore.html",
+      "destination": "/tech-library/dynalite-antumbra-lost-schedules-and-clock-drift-north-shore",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/dynalite-pdeg-lost-schedules-&-clock-drift-north-shore",
+      "destination": "/tech-library/dynalite-pdeg-lost-schedules-and-clock-drift-north-shore",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/dynalite-pdeg-lost-schedules-&-clock-drift-north-shore.html",
+      "destination": "/tech-library/dynalite-pdeg-lost-schedules-and-clock-drift-north-shore",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/clipsal-c-bus-5084txp-lost-schedules-&-clock-drift-eastern-suburbs",
+      "destination": "/tech-library/clipsal-c-bus-5084txp-lost-schedules-and-clock-drift-eastern-suburbs",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/clipsal-c-bus-5084txp-lost-schedules-&-clock-drift-eastern-suburbs.html",
+      "destination": "/tech-library/clipsal-c-bus-5084txp-lost-schedules-and-clock-drift-eastern-suburbs",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/dynalite-ddbc1200-lost-schedules-&-clock-drift-eastern-suburbs",
+      "destination": "/tech-library/dynalite-ddbc1200-lost-schedules-and-clock-drift-eastern-suburbs",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/dynalite-ddbc1200-lost-schedules-&-clock-drift-eastern-suburbs.html",
+      "destination": "/tech-library/dynalite-ddbc1200-lost-schedules-and-clock-drift-eastern-suburbs",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/dynalite-ddbc1200-lost-schedules-&-clock-drift-sutherland-shire",
+      "destination": "/tech-library/dynalite-ddbc1200-lost-schedules-and-clock-drift-sutherland-shire",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/dynalite-ddbc1200-lost-schedules-&-clock-drift-sutherland-shire.html",
+      "destination": "/tech-library/dynalite-ddbc1200-lost-schedules-and-clock-drift-sutherland-shire",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/dynalite-dmdr12-320-lost-schedules-&-clock-drift-sydney-cbd",
+      "destination": "/tech-library/dynalite-dmdr12-320-lost-schedules-and-clock-drift-sydney-cbd",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/dynalite-dmdr12-320-lost-schedules-&-clock-drift-sydney-cbd.html",
+      "destination": "/tech-library/dynalite-dmdr12-320-lost-schedules-and-clock-drift-sydney-cbd",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/clipsal-c-bus-5500cn-lost-schedules-&-clock-drift-sutherland-shire",
+      "destination": "/tech-library/clipsal-c-bus-5500cn-lost-schedules-and-clock-drift-sutherland-shire",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/clipsal-c-bus-5500cn-lost-schedules-&-clock-drift-sutherland-shire.html",
+      "destination": "/tech-library/clipsal-c-bus-5500cn-lost-schedules-and-clock-drift-sutherland-shire",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/clipsal-c-bus-5500cn-lost-schedules-&-clock-drift-eastern-suburbs",
+      "destination": "/tech-library/clipsal-c-bus-5500cn-lost-schedules-and-clock-drift-eastern-suburbs",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/clipsal-c-bus-5500cn-lost-schedules-&-clock-drift-eastern-suburbs.html",
+      "destination": "/tech-library/clipsal-c-bus-5500cn-lost-schedules-and-clock-drift-eastern-suburbs",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/dynalite-ddrc1210-lost-schedules-&-clock-drift-north-shore",
+      "destination": "/tech-library/dynalite-ddrc1210-lost-schedules-and-clock-drift-north-shore",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/dynalite-ddrc1210-lost-schedules-&-clock-drift-north-shore.html",
+      "destination": "/tech-library/dynalite-ddrc1210-lost-schedules-and-clock-drift-north-shore",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/dynalite-dus360cs-lost-schedules-&-clock-drift-eastern-suburbs",
+      "destination": "/tech-library/dynalite-dus360cs-lost-schedules-and-clock-drift-eastern-suburbs",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/dynalite-dus360cs-lost-schedules-&-clock-drift-eastern-suburbs.html",
+      "destination": "/tech-library/dynalite-dus360cs-lost-schedules-and-clock-drift-eastern-suburbs",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/clipsal-c-bus-5084txp-lost-schedules-&-clock-drift-north-shore",
+      "destination": "/tech-library/clipsal-c-bus-5084txp-lost-schedules-and-clock-drift-north-shore",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/clipsal-c-bus-5084txp-lost-schedules-&-clock-drift-north-shore.html",
+      "destination": "/tech-library/clipsal-c-bus-5084txp-lost-schedules-and-clock-drift-north-shore",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/clipsal-c-bus-5504amp-lost-schedules-&-clock-drift-eastern-suburbs",
+      "destination": "/tech-library/clipsal-c-bus-5504amp-lost-schedules-and-clock-drift-eastern-suburbs",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/clipsal-c-bus-5504amp-lost-schedules-&-clock-drift-eastern-suburbs.html",
+      "destination": "/tech-library/clipsal-c-bus-5504amp-lost-schedules-and-clock-drift-eastern-suburbs",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/dynalite-ddbc1200-lost-schedules-&-clock-drift-sydney-cbd",
+      "destination": "/tech-library/dynalite-ddbc1200-lost-schedules-and-clock-drift-sydney-cbd",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/dynalite-ddbc1200-lost-schedules-&-clock-drift-sydney-cbd.html",
+      "destination": "/tech-library/dynalite-ddbc1200-lost-schedules-and-clock-drift-sydney-cbd",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/clipsal-c-bus-5502dal-lost-schedules-&-clock-drift-eastern-suburbs",
+      "destination": "/tech-library/clipsal-c-bus-5502dal-lost-schedules-and-clock-drift-eastern-suburbs",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/clipsal-c-bus-5502dal-lost-schedules-&-clock-drift-eastern-suburbs.html",
+      "destination": "/tech-library/clipsal-c-bus-5502dal-lost-schedules-and-clock-drift-eastern-suburbs",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/clipsal-c-bus-5504amp-lost-schedules-&-clock-drift-sutherland-shire",
+      "destination": "/tech-library/clipsal-c-bus-5504amp-lost-schedules-and-clock-drift-sutherland-shire",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/clipsal-c-bus-5504amp-lost-schedules-&-clock-drift-sutherland-shire.html",
+      "destination": "/tech-library/clipsal-c-bus-5504amp-lost-schedules-and-clock-drift-sutherland-shire",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/dynalite-pdeg-lost-schedules-&-clock-drift-eastern-suburbs",
+      "destination": "/tech-library/dynalite-pdeg-lost-schedules-and-clock-drift-eastern-suburbs",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/dynalite-pdeg-lost-schedules-&-clock-drift-eastern-suburbs.html",
+      "destination": "/tech-library/dynalite-pdeg-lost-schedules-and-clock-drift-eastern-suburbs",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/clipsal-c-bus-l5508d1a-lost-schedules-&-clock-drift-north-shore",
+      "destination": "/tech-library/clipsal-c-bus-l5508d1a-lost-schedules-and-clock-drift-north-shore",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/clipsal-c-bus-l5508d1a-lost-schedules-&-clock-drift-north-shore.html",
+      "destination": "/tech-library/clipsal-c-bus-l5508d1a-lost-schedules-and-clock-drift-north-shore",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/dynalite-ddmc802-lost-schedules-&-clock-drift-sutherland-shire",
+      "destination": "/tech-library/dynalite-ddmc802-lost-schedules-and-clock-drift-sutherland-shire",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/dynalite-ddmc802-lost-schedules-&-clock-drift-sutherland-shire.html",
+      "destination": "/tech-library/dynalite-ddmc802-lost-schedules-and-clock-drift-sutherland-shire",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/dynalite-ddrc1220-lost-schedules-&-clock-drift-sydney-cbd",
+      "destination": "/tech-library/dynalite-ddrc1220-lost-schedules-and-clock-drift-sydney-cbd",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/dynalite-ddrc1220-lost-schedules-&-clock-drift-sydney-cbd.html",
+      "destination": "/tech-library/dynalite-ddrc1220-lost-schedules-and-clock-drift-sydney-cbd",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/dynalite-ddrc1210-lost-schedules-&-clock-drift-sydney-cbd",
+      "destination": "/tech-library/dynalite-ddrc1210-lost-schedules-and-clock-drift-sydney-cbd",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/dynalite-ddrc1210-lost-schedules-&-clock-drift-sydney-cbd.html",
+      "destination": "/tech-library/dynalite-ddrc1210-lost-schedules-and-clock-drift-sydney-cbd",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/clipsal-c-bus-5500pc-lost-schedules-&-clock-drift-sutherland-shire",
+      "destination": "/tech-library/clipsal-c-bus-5500pc-lost-schedules-and-clock-drift-sutherland-shire",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/clipsal-c-bus-5500pc-lost-schedules-&-clock-drift-sutherland-shire.html",
+      "destination": "/tech-library/clipsal-c-bus-5500pc-lost-schedules-and-clock-drift-sutherland-shire",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/clipsal-c-bus-5508rvf-lost-schedules-&-clock-drift-sutherland-shire",
+      "destination": "/tech-library/clipsal-c-bus-5508rvf-lost-schedules-and-clock-drift-sutherland-shire",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/clipsal-c-bus-5508rvf-lost-schedules-&-clock-drift-sutherland-shire.html",
+      "destination": "/tech-library/clipsal-c-bus-5508rvf-lost-schedules-and-clock-drift-sutherland-shire",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/clipsal-c-bus-5500cn-lost-schedules-&-clock-drift-sydney-cbd",
+      "destination": "/tech-library/clipsal-c-bus-5500cn-lost-schedules-and-clock-drift-sydney-cbd",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/clipsal-c-bus-5500cn-lost-schedules-&-clock-drift-sydney-cbd.html",
+      "destination": "/tech-library/clipsal-c-bus-5500cn-lost-schedules-and-clock-drift-sydney-cbd",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/clipsal-c-bus-5502dal-lost-schedules-&-clock-drift-north-shore",
+      "destination": "/tech-library/clipsal-c-bus-5502dal-lost-schedules-and-clock-drift-north-shore",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/clipsal-c-bus-5502dal-lost-schedules-&-clock-drift-north-shore.html",
+      "destination": "/tech-library/clipsal-c-bus-5502dal-lost-schedules-and-clock-drift-north-shore",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/clipsal-c-bus-l5508d2a-lost-schedules-&-clock-drift-sutherland-shire",
+      "destination": "/tech-library/clipsal-c-bus-l5508d2a-lost-schedules-and-clock-drift-sutherland-shire",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/clipsal-c-bus-l5508d2a-lost-schedules-&-clock-drift-sutherland-shire.html",
+      "destination": "/tech-library/clipsal-c-bus-l5508d2a-lost-schedules-and-clock-drift-sutherland-shire",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/dynalite-dmdr12-320-lost-schedules-&-clock-drift-eastern-suburbs",
+      "destination": "/tech-library/dynalite-dmdr12-320-lost-schedules-and-clock-drift-eastern-suburbs",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/dynalite-dmdr12-320-lost-schedules-&-clock-drift-eastern-suburbs.html",
+      "destination": "/tech-library/dynalite-dmdr12-320-lost-schedules-and-clock-drift-eastern-suburbs",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/clipsal-c-bus-5504amp-lost-schedules-&-clock-drift-sydney-cbd",
+      "destination": "/tech-library/clipsal-c-bus-5504amp-lost-schedules-and-clock-drift-sydney-cbd",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/clipsal-c-bus-5504amp-lost-schedules-&-clock-drift-sydney-cbd.html",
+      "destination": "/tech-library/clipsal-c-bus-5504amp-lost-schedules-and-clock-drift-sydney-cbd",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/clipsal-c-bus-5200whc2-lost-schedules-&-clock-drift-sydney-cbd",
+      "destination": "/tech-library/clipsal-c-bus-5200whc2-lost-schedules-and-clock-drift-sydney-cbd",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/clipsal-c-bus-5200whc2-lost-schedules-&-clock-drift-sydney-cbd.html",
+      "destination": "/tech-library/clipsal-c-bus-5200whc2-lost-schedules-and-clock-drift-sydney-cbd",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/clipsal-c-bus-5084txp-lost-schedules-&-clock-drift-sutherland-shire",
+      "destination": "/tech-library/clipsal-c-bus-5084txp-lost-schedules-and-clock-drift-sutherland-shire",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/clipsal-c-bus-5084txp-lost-schedules-&-clock-drift-sutherland-shire.html",
+      "destination": "/tech-library/clipsal-c-bus-5084txp-lost-schedules-and-clock-drift-sutherland-shire",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/clipsal-c-bus-5502dal-lost-schedules-&-clock-drift-sydney-cbd",
+      "destination": "/tech-library/clipsal-c-bus-5502dal-lost-schedules-and-clock-drift-sydney-cbd",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/clipsal-c-bus-5502dal-lost-schedules-&-clock-drift-sydney-cbd.html",
+      "destination": "/tech-library/clipsal-c-bus-5502dal-lost-schedules-and-clock-drift-sydney-cbd",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/clipsal-c-bus-5500pc-lost-schedules-&-clock-drift-eastern-suburbs",
+      "destination": "/tech-library/clipsal-c-bus-5500pc-lost-schedules-and-clock-drift-eastern-suburbs",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/clipsal-c-bus-5500pc-lost-schedules-&-clock-drift-eastern-suburbs.html",
+      "destination": "/tech-library/clipsal-c-bus-5500pc-lost-schedules-and-clock-drift-eastern-suburbs",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/dynalite-ddrc1210-lost-schedules-&-clock-drift-sutherland-shire",
+      "destination": "/tech-library/dynalite-ddrc1210-lost-schedules-and-clock-drift-sutherland-shire",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/dynalite-ddrc1210-lost-schedules-&-clock-drift-sutherland-shire.html",
+      "destination": "/tech-library/dynalite-ddrc1210-lost-schedules-and-clock-drift-sutherland-shire",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/dynalite-ddng232-lost-schedules-&-clock-drift-sydney-cbd",
+      "destination": "/tech-library/dynalite-ddng232-lost-schedules-and-clock-drift-sydney-cbd",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/dynalite-ddng232-lost-schedules-&-clock-drift-sydney-cbd.html",
+      "destination": "/tech-library/dynalite-ddng232-lost-schedules-and-clock-drift-sydney-cbd",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/clipsal-c-bus-5084txp-lost-schedules-&-clock-drift-sydney-cbd",
+      "destination": "/tech-library/clipsal-c-bus-5084txp-lost-schedules-and-clock-drift-sydney-cbd",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/clipsal-c-bus-5084txp-lost-schedules-&-clock-drift-sydney-cbd.html",
+      "destination": "/tech-library/clipsal-c-bus-5084txp-lost-schedules-and-clock-drift-sydney-cbd",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/dynalite-ddng232-lost-schedules-&-clock-drift-north-shore",
+      "destination": "/tech-library/dynalite-ddng232-lost-schedules-and-clock-drift-north-shore",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/dynalite-ddng232-lost-schedules-&-clock-drift-north-shore.html",
+      "destination": "/tech-library/dynalite-ddng232-lost-schedules-and-clock-drift-north-shore",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/dynalite-ddng485-lost-schedules-&-clock-drift-north-shore",
+      "destination": "/tech-library/dynalite-ddng485-lost-schedules-and-clock-drift-north-shore",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/dynalite-ddng485-lost-schedules-&-clock-drift-north-shore.html",
+      "destination": "/tech-library/dynalite-ddng485-lost-schedules-and-clock-drift-north-shore",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/clipsal-c-bus-5500pc-lost-schedules-&-clock-drift-sydney-cbd",
+      "destination": "/tech-library/clipsal-c-bus-5500pc-lost-schedules-and-clock-drift-sydney-cbd",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/clipsal-c-bus-5500pc-lost-schedules-&-clock-drift-sydney-cbd.html",
+      "destination": "/tech-library/clipsal-c-bus-5500pc-lost-schedules-and-clock-drift-sydney-cbd",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/clipsal-c-bus-5500pc-lost-schedules-&-clock-drift-north-shore",
+      "destination": "/tech-library/clipsal-c-bus-5500pc-lost-schedules-and-clock-drift-north-shore",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/clipsal-c-bus-5500pc-lost-schedules-&-clock-drift-north-shore.html",
+      "destination": "/tech-library/clipsal-c-bus-5500pc-lost-schedules-and-clock-drift-north-shore",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/clipsal-c-bus-5508rvf-lost-schedules-&-clock-drift-eastern-suburbs",
+      "destination": "/tech-library/clipsal-c-bus-5508rvf-lost-schedules-and-clock-drift-eastern-suburbs",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/clipsal-c-bus-5508rvf-lost-schedules-&-clock-drift-eastern-suburbs.html",
+      "destination": "/tech-library/clipsal-c-bus-5508rvf-lost-schedules-and-clock-drift-eastern-suburbs",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/clipsal-c-bus-5200whc2-lost-schedules-&-clock-drift-north-shore",
+      "destination": "/tech-library/clipsal-c-bus-5200whc2-lost-schedules-and-clock-drift-north-shore",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/clipsal-c-bus-5200whc2-lost-schedules-&-clock-drift-north-shore.html",
+      "destination": "/tech-library/clipsal-c-bus-5200whc2-lost-schedules-and-clock-drift-north-shore",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/dynalite-antumbra-lost-schedules-&-clock-drift-sutherland-shire",
+      "destination": "/tech-library/dynalite-antumbra-lost-schedules-and-clock-drift-sutherland-shire",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/dynalite-antumbra-lost-schedules-&-clock-drift-sutherland-shire.html",
+      "destination": "/tech-library/dynalite-antumbra-lost-schedules-and-clock-drift-sutherland-shire",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/dynalite-dus360cs-lost-schedules-&-clock-drift-north-shore",
+      "destination": "/tech-library/dynalite-dus360cs-lost-schedules-and-clock-drift-north-shore",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/dynalite-dus360cs-lost-schedules-&-clock-drift-north-shore.html",
+      "destination": "/tech-library/dynalite-dus360cs-lost-schedules-and-clock-drift-north-shore",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/dynalite-ddng485-lost-schedules-&-clock-drift-sutherland-shire",
+      "destination": "/tech-library/dynalite-ddng485-lost-schedules-and-clock-drift-sutherland-shire",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/dynalite-ddng485-lost-schedules-&-clock-drift-sutherland-shire.html",
+      "destination": "/tech-library/dynalite-ddng485-lost-schedules-and-clock-drift-sutherland-shire",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/clipsal-c-bus-l5512rvf-lost-schedules-&-clock-drift-sutherland-shire",
+      "destination": "/tech-library/clipsal-c-bus-l5512rvf-lost-schedules-and-clock-drift-sutherland-shire",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/clipsal-c-bus-l5512rvf-lost-schedules-&-clock-drift-sutherland-shire.html",
+      "destination": "/tech-library/clipsal-c-bus-l5512rvf-lost-schedules-and-clock-drift-sutherland-shire",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/dynalite-ddbc1200-lost-schedules-&-clock-drift-north-shore",
+      "destination": "/tech-library/dynalite-ddbc1200-lost-schedules-and-clock-drift-north-shore",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/dynalite-ddbc1200-lost-schedules-&-clock-drift-north-shore.html",
+      "destination": "/tech-library/dynalite-ddbc1200-lost-schedules-and-clock-drift-north-shore",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/dynalite-ddng232-lost-schedules-&-clock-drift-sutherland-shire",
+      "destination": "/tech-library/dynalite-ddng232-lost-schedules-and-clock-drift-sutherland-shire",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/dynalite-ddng232-lost-schedules-&-clock-drift-sutherland-shire.html",
+      "destination": "/tech-library/dynalite-ddng232-lost-schedules-and-clock-drift-sutherland-shire",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/clipsal-c-bus-l5508d1a-lost-schedules-&-clock-drift-sutherland-shire",
+      "destination": "/tech-library/clipsal-c-bus-l5508d1a-lost-schedules-and-clock-drift-sutherland-shire",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/clipsal-c-bus-l5508d1a-lost-schedules-&-clock-drift-sutherland-shire.html",
+      "destination": "/tech-library/clipsal-c-bus-l5508d1a-lost-schedules-and-clock-drift-sutherland-shire",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/dynalite-pdeg-lost-schedules-&-clock-drift-sutherland-shire",
+      "destination": "/tech-library/dynalite-pdeg-lost-schedules-and-clock-drift-sutherland-shire",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/dynalite-pdeg-lost-schedules-&-clock-drift-sutherland-shire.html",
+      "destination": "/tech-library/dynalite-pdeg-lost-schedules-and-clock-drift-sutherland-shire",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/clipsal-c-bus-5504amp-lost-schedules-&-clock-drift-north-shore",
+      "destination": "/tech-library/clipsal-c-bus-5504amp-lost-schedules-and-clock-drift-north-shore",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/clipsal-c-bus-5504amp-lost-schedules-&-clock-drift-north-shore.html",
+      "destination": "/tech-library/clipsal-c-bus-5504amp-lost-schedules-and-clock-drift-north-shore",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/clipsal-c-bus-l5512rvf-lost-schedules-&-clock-drift-eastern-suburbs",
+      "destination": "/tech-library/clipsal-c-bus-l5512rvf-lost-schedules-and-clock-drift-eastern-suburbs",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/clipsal-c-bus-l5512rvf-lost-schedules-&-clock-drift-eastern-suburbs.html",
+      "destination": "/tech-library/clipsal-c-bus-l5512rvf-lost-schedules-and-clock-drift-eastern-suburbs",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/clipsal-c-bus-l5508d2a-lost-schedules-&-clock-drift-sydney-cbd",
+      "destination": "/tech-library/clipsal-c-bus-l5508d2a-lost-schedules-and-clock-drift-sydney-cbd",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/clipsal-c-bus-l5508d2a-lost-schedules-&-clock-drift-sydney-cbd.html",
+      "destination": "/tech-library/clipsal-c-bus-l5508d2a-lost-schedules-and-clock-drift-sydney-cbd",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/clipsal-c-bus-l5508d1a-lost-schedules-&-clock-drift-sydney-cbd",
+      "destination": "/tech-library/clipsal-c-bus-l5508d1a-lost-schedules-and-clock-drift-sydney-cbd",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/clipsal-c-bus-l5508d1a-lost-schedules-&-clock-drift-sydney-cbd.html",
+      "destination": "/tech-library/clipsal-c-bus-l5508d1a-lost-schedules-and-clock-drift-sydney-cbd",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/clipsal-c-bus-5500cn-lost-schedules-&-clock-drift-north-shore",
+      "destination": "/tech-library/clipsal-c-bus-5500cn-lost-schedules-and-clock-drift-north-shore",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/clipsal-c-bus-5500cn-lost-schedules-&-clock-drift-north-shore.html",
+      "destination": "/tech-library/clipsal-c-bus-5500cn-lost-schedules-and-clock-drift-north-shore",
+      "permanent": true
+    },
+    {
+      "source": "/c-bus-repairs-sydney",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/c-bus-repairs-sydney.html",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/cbus-fault-finder",
+      "destination": "/cbus-fault-finding-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/cbus-programmer-wahroonga",
+      "destination": "/c-bus-programmer-wahroonga",
+      "permanent": true
+    },
+    {
+      "source": "/smart-home-roi-calculator-sydney",
+      "destination": "/smart-home-roi-calculator-property-value-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/commercial-tower-lighting-automation-sydney-cbd",
+      "destination": "/c-bus-programmer-sydney-cbd",
+      "permanent": true
+    },
+    {
+      "source": "/c-bus-dynalite-menai",
+      "destination": "/cbus-dynalite-planning-checklist-new-builds-menai",
+      "permanent": true
+    },
+    {
+      "source": "/warehouse-lighting-automation-sydney",
+      "destination": "/industrial-and-warehouse-facilities-hurstville-dynalite-network-communication-and-bus-crashes",
+      "permanent": true
+    },
+    {
+      "source": "/cbus-dynalite-fault-finding-eastern-suburbs",
+      "destination": "/c-bus-programmer-eastern-suburbs",
+      "permanent": true
+    },
+    {
+      "source": "/dynalite-cbus-artarmon",
+      "destination": "/c-bus-programmer-north-shore",
+      "permanent": true
+    },
+    {
+      "source": "/cbus-dynalite-property-value-sutherland-shire",
+      "destination": "/smart-home-roi-calculator-property-value-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/dynalite-dlight-keypad-unresponsive-sydney",
+      "destination": "/dynalite-fault-finding-sydney-common-faults",
+      "permanent": true
+    },
+    {
+      "source": "/cbus-scene-programming-sydney-home",
+      "destination": "/cbus-scene-programming-guide-sutherland-shire",
+      "permanent": true
+    },
+    {
+      "source": "/facility-managers-dynalite-cbus-support-sydney",
+      "destination": "/facility-managers-cbus-dynalite-dali-guide",
+      "permanent": true
+    },
+    {
+      "source": "/industrial-lighting-control-western-sydney",
+      "destination": "/institutional-lighting-control-parramatta-western-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/cbus-dynalite-renovating-building",
+      "destination": "/invisible-automation-heritage-retrofitting-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/cbus-5500pc-network-bridge-failure-sydney",
+      "destination": "/cbus-5500cn-network-bridge-failure-sydney",
+      "permanent": true
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*\\.(?:js|css|woff2|woff|ttf|otf|eot|ico|svg|webp|avif|jpg|jpeg|png|gif|mp4|webm))",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/((?:[a-z-]+)-(?:cbus-dynalite|dynalite|cbus)-repair-sydney)",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, follow"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600, stale-while-revalidate=86400"
+        }
+      ]
+    },
+    {
+      "source": "/(.*\\.html)?",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600, stale-while-revalidate=86400"
+        },
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "SAMEORIGIN"
+        }
+      ]
+    },
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact"
+  ],
+  "eslint.useFlatConfig": true,
+  "codaro.compliance.workspaceHash": "50ebd388abe0a16cdfe1e7794d251b70"
+}

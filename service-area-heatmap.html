@@ -1,0 +1,562 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+ <meta name="description" content="See where C-Bus and Dynalite upgrades are happening right now across Sydney. Search your suburb to find out how active your area is for lighting control work."/>
+ <link rel="canonical" href="https://sydneyautomationco.com.au/service-area-heatmap" />
+  <meta property="og:title" content="Sydney C-Bus & Dynalite Activity Map | Sydney Automation Co.">
+  <meta property="og:description" content="See where C-Bus and Dynalite upgrades are happening right now across Sydney. Search your suburb to find out how active your area is for lighting control work.">
+  <meta property="og:url" content="https://sydneyautomationco.com.au/service-area-heatmap.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Sydney Automation Co">
+ <title>Sydney C-Bus & Dynalite Activity Map | Sydney Automation Co.</title>
+ <link href="/favicon.png" rel="icon" type="image/png"/>
+ <link href="/favicon.png" rel="apple-touch-icon"/>
+ <link rel="preconnect" href="https://fonts.googleapis.com"/>
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+ <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600&family=Barlow+Condensed:wght@700;800&display=swap" rel="stylesheet"/>
+ <link rel="stylesheet" href="/index.css">
+ <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+ <script async src="https://www.googletagmanager.com/gtag/js?id=G-7EZFB6GRJ3"></script>
+ <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-7EZFB6GRJ3');</script>
+ <style>
+  body { background: #0e1f3d; }
+
+  /* ── SEARCH BAR ── */
+  .search-wrap { position: relative; max-width: 560px; margin: 0 auto; }
+  .search-input {
+   width: 100%; padding: 16px 56px 16px 20px;
+   border-radius: 10px; border: 2px solid #2a4a80;
+   background: #132647; color: #f0f4ff;
+   font-family: 'Barlow', sans-serif; font-size: 1rem;
+   outline: none; transition: border-color 0.2s;
+  }
+  .search-input:focus { border-color: #f07020; }
+  .search-input::placeholder { color: #4a6a9a; }
+  .search-btn {
+   position: absolute; right: 8px; top: 50%; transform: translateY(-50%);
+   background: #f07020; border: none; border-radius: 7px;
+   color: #fff; font-size: 18px; width: 40px; height: 40px;
+   cursor: pointer; display: flex; align-items: center; justify-content: center;
+  }
+  .search-results {
+   position: absolute; top: calc(100% + 6px); left: 0; right: 0;
+   background: #132647; border: 1px solid #2a4a80; border-radius: 10px;
+   z-index: 9999; overflow: hidden; display: none; box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+  }
+  .search-results.show { display: block; }
+  .sr-item {
+   padding: 14px 20px; cursor: pointer; border-bottom: 1px solid rgba(42,74,128,0.4);
+   transition: background 0.15s;
+  }
+  .sr-item:last-child { border-bottom: none; }
+  .sr-item:hover { background: rgba(240,112,32,0.1); }
+  .sr-name { font-weight: 700; color: #f0f4ff; font-size: 0.95rem; font-family: 'Barlow', sans-serif; }
+  .sr-heat { font-size: 0.8rem; color: #a8c0e0; margin-top: 2px; font-family: 'Barlow', sans-serif; }
+  .sr-badge {
+   display: inline-block; padding: 2px 10px; border-radius: 20px;
+   font-size: 11px; font-weight: 700; margin-left: 8px; vertical-align: middle;
+  }
+  .badge-hot { background: rgba(240,80,32,0.2); color: #f05020; border: 1px solid rgba(240,80,32,0.4); }
+  .badge-high { background: rgba(240,160,32,0.2); color: #f0a020; border: 1px solid rgba(240,160,32,0.4); }
+  .badge-active { background: rgba(80,160,240,0.2); color: #50a0f0; border: 1px solid rgba(80,160,240,0.4); }
+  .badge-available { background: rgba(100,180,100,0.2); color: #64b464; border: 1px solid rgba(100,180,100,0.4); }
+
+  /* ── RESULT CARD ── */
+  #result-card {
+   display: none; max-width: 700px; margin: 32px auto 0;
+   background: #132647; border: 1px solid #2a4a80; border-radius: 16px;
+   padding: 28px 32px; animation: fadeUp 0.3s ease;
+  }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+  #result-card.show { display: block; }
+  .rc-suburb { font-family: 'Barlow Condensed', sans-serif; font-size: 2rem; font-weight: 900; color: #fff; margin-bottom: 4px; }
+  .rc-heat-label { font-size: 0.85rem; color: #a8c0e0; margin-bottom: 20px; font-family: 'Barlow', sans-serif; }
+  .rc-bar-wrap { background: rgba(255,255,255,0.06); border-radius: 8px; height: 14px; margin-bottom: 24px; overflow: hidden; }
+  .rc-bar { height: 100%; border-radius: 8px; transition: width 1s cubic-bezier(0.4,0,0.2,1); }
+  .rc-services { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 20px; }
+  .rc-service { background: rgba(255,255,255,0.04); border: 1px solid #2a4a80; border-radius: 10px; padding: 14px 16px; font-family: 'Barlow', sans-serif; }
+  .rc-service-name { font-weight: 700; font-size: 0.9rem; color: #f0f4ff; }
+  .rc-service-detail { font-size: 0.8rem; color: #a8c0e0; margin-top: 3px; line-height: 1.5; }
+  .rc-cta { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 20px; }
+  @media(max-width:600px){ .rc-services { grid-template-columns: 1fr; } }
+
+  /* ── MAP ── */
+  #map {
+   width: 100%; height: 520px; border-radius: 16px;
+   border: 1px solid #2a4a80; overflow: hidden;
+   position: relative; z-index: 1;
+  }
+  @media(max-width:600px){ #map { height: 360px; } }
+
+  /* ── LEGEND ── */
+  .legend {
+   display: flex; gap: 20px; flex-wrap: wrap; align-items: center;
+   margin-top: 20px; padding: 16px 20px;
+   background: #132647; border: 1px solid #2a4a80; border-radius: 10px;
+   font-family: 'Barlow', sans-serif; font-size: 13px; color: #a8c0e0;
+  }
+  .legend-dot { width: 14px; height: 14px; border-radius: 50%; flex-shrink: 0; }
+  .legend-item { display: flex; align-items: center; gap: 8px; }
+
+  /* ── HOT AREA CARDS ── */
+  .hot-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 16px; }
+  .hot-card {
+   background: #132647; border: 1px solid #2a4a80; border-radius: 14px;
+   padding: 20px; cursor: pointer; transition: all 0.2s;
+   border-top: 3px solid transparent;
+  }
+  .hot-card:hover { border-color: rgba(240,112,32,0.5); transform: translateY(-2px); }
+  .hot-card.tier-1 { border-top-color: #f05020; }
+  .hot-card.tier-2 { border-top-color: #f0a020; }
+  .hot-card.tier-3 { border-top-color: #50a0f0; }
+  .hot-card-name { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 1.15rem; color: #fff; margin-bottom: 4px; }
+  .hot-card-trend { font-size: 0.8rem; color: #a8c0e0; font-family: 'Barlow', sans-serif; margin-bottom: 12px; }
+  .hot-card-bar { background: rgba(255,255,255,0.07); border-radius: 4px; height: 6px; overflow: hidden; }
+  .hot-card-fill { height: 100%; border-radius: 4px; }
+ </style>
+</head>
+<body>
+
+ <nav>
+  <a class="logo" href="/"><span class="logo-main">Sydney Automation Co.</span><span class="logo-line"></span><span class="logo-sub">Lighting Control Specialists</span></a>
+  <div class="nav-phone-wrap"><span class="nav-phone-label">Direct Service Line</span><a class="nav-phone" href="tel:+61422469739">0422 469 739</a></div>
+  <div class="nav-links">
+   <a href="/">Home</a>
+   <div class="nav-dd" id="dd-services">
+    <button class="nav-dd-trigger">Services</button>
+    <div class="nav-dd-panel mega">
+     <div class="mega-col">
+      <span class="dd-label">C-Bus</span>
+      <a href="/c-bus-programmer-sydney">C-Bus Programming</a>
+      <a href="/cbus-repair-sydney">C-Bus Repairs</a>
+      <a href="/cbus-upgrade-sydney">C-Bus Upgrades</a>
+      <a href="/cbus-specialist-sydney">C-Bus Specialist</a>
+      <div class="dd-divider"></div>
+      <span class="dd-label">Dynalite</span>
+      <a href="/dynalite-programmer-sydney">Dynalite Programming</a>
+      <a href="/dynalite-repair-sydney">Dynalite Repairs</a>
+      <div class="dd-divider"></div>
+      <a href="/services-hub" style="color:#f07020;">★ All Services Hub</a>
+     </div>
+     <div class="mega-col">
+      <span class="dd-label">Emergency &amp; Compliance</span>
+      <a href="/emergency-lighting-compliance-afss-sydney">AFSS &amp; Compliance</a>
+      <a href="/emergency-repair-sydney">Emergency Repair</a>
+      <div class="dd-divider"></div>
+      <span class="dd-label">DALI &amp; RAPIX</span>
+      <a href="/dali-lighting-repair">DALI Lighting Repair</a>
+      <a href="/services">RAPIX Lighting Control</a>
+      <div class="dd-divider"></div>
+      <a href="/services">All Services →</a>
+     </div>
+    </div>
+   </div>
+   <div class="nav-dd" id="dd-areas">
+    <button class="nav-dd-trigger">Areas</button>
+    <div class="nav-dd-panel">
+     <span class="dd-label">Sydney Regions</span>
+     <a href="/c-bus-programmer-sutherland-shire">Sutherland Shire</a>
+     <a href="/c-bus-programmer-north-shore">North Shore</a>
+     <a href="/c-bus-programmer-eastern-suburbs">Eastern Suburbs</a>
+     <a href="/c-bus-programmer-inner-west">Inner West</a>
+     <a href="/c-bus-programmer-northern-beaches">Northern Beaches</a>
+     <a href="/c-bus-programmer-hills-district">Hills District</a>
+     <a href="/locations">All Service Areas →</a>
+    </div>
+   </div>
+   <a href="/guides">Guides</a>
+   <a href="/contact">Contact</a>
+   <a class="nav-cta" href="tel:0422469739">📞 Call Now</a>
+  </div>
+  <button aria-label="Menu" class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+ </nav>
+
+ <div id="mobNav" class="mob-nav">
+  <div class="mob-section">
+   <div class="mob-section-title">Services</div>
+   <a href="/c-bus-programmer-sydney">C-Bus Programming</a>
+   <a href="/cbus-repair-sydney">C-Bus Repairs</a>
+   <a href="/dynalite-programmer-sydney">Dynalite Programming</a>
+   <a href="/dynalite-repair-sydney">Dynalite Repairs</a>
+   <a href="/emergency-repair-sydney">Emergency Repair</a>
+   <a href="/services">All Services →</a>
+  </div>
+  <div class="mob-section">
+   <div class="mob-section-title">Locations</div>
+   <a href="/c-bus-programmer-north-shore">North Shore</a>
+   <a href="/c-bus-programmer-eastern-suburbs">Eastern Suburbs</a>
+   <a href="/c-bus-programmer-inner-west">Inner West</a>
+   <a href="/locations">All Areas →</a>
+  </div>
+  <a href="/guides" class="mob-section" style="padding:14px 20px;font-size:15px;font-weight:600;color:#a8c0e0;border-bottom:1px solid rgba(42,74,128,0.3);display:block;">Guides</a>
+  <a href="/contact" class="mob-section" style="padding:14px 20px;font-size:15px;font-weight:600;color:#a8c0e0;border-bottom:1px solid rgba(42,74,128,0.3);display:block;">Contact</a>
+  <a href="tel:0422469739" class="mob-cta">📞 Call George — 0422 469 739</a>
+ </div>
+
+ <!-- HERO -->
+ <section style="background:linear-gradient(135deg,#0a2240 0%,#1a3a6e 100%);padding:72px 24px 56px;text-align:center;">
+  <div style="max-width:760px;margin:0 auto;">
+   <p style="color:#f0c040;font-size:12px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;margin-bottom:12px;font-family:'Barlow Condensed',sans-serif;">LIVE SERVICE ACTIVITY — SYDNEY 2026</p>
+   <h1 style="color:#fff;font-size:clamp(1.9rem,5vw,3rem);font-weight:800;margin-bottom:18px;line-height:1.15;font-family:'Barlow Condensed',sans-serif;">Where Is C-Bus &amp; Dynalite Work Happening Right Now?</h1>
+   <p style="color:#a8c0e0;font-size:1.05rem;line-height:1.75;max-width:640px;margin:0 auto 36px;font-family:'Barlow',sans-serif;">Search your suburb below or explore the map to see how active your area is for lighting control upgrades, repairs, and commissioning work — then get in touch if you want to be next.</p>
+
+   <!-- SEARCH -->
+   <div class="search-wrap">
+    <input type="text" class="search-input" id="suburb-search" placeholder="Type your suburb — e.g. Mosman, Balmain, Rose Bay…" autocomplete="off"/>
+    <button class="search-btn" onclick="doSearch()">→</button>
+    <div class="search-results" id="search-results"></div>
+   </div>
+  </div>
+ </section>
+
+ <!-- RESULT CARD -->
+ <div style="padding:0 24px;">
+  <div id="result-card">
+   <div style="display:flex;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-bottom:6px;">
+    <div>
+     <div class="rc-suburb" id="rc-suburb-name"></div>
+     <div class="rc-heat-label" id="rc-heat-label"></div>
+    </div>
+    <span class="sr-badge" id="rc-badge" style="font-size:13px;padding:5px 14px;"></span>
+   </div>
+   <div class="rc-bar-wrap"><div class="rc-bar" id="rc-bar" style="width:0%"></div></div>
+   <div class="rc-services" id="rc-services"></div>
+   <div class="rc-cta">
+    <a href="tel:0422469739" style="background:#f07020;color:#fff;padding:12px 24px;border-radius:8px;font-weight:700;text-decoration:none;font-family:'Barlow Condensed',sans-serif;font-size:1rem;">📞 Get a Quote for <span id="rc-cta-suburb"></span></a>
+    <a href="/book-service" style="background:transparent;border:2px solid #2a4a80;color:#a8c0e0;padding:12px 24px;border-radius:8px;font-weight:700;text-decoration:none;font-family:'Barlow Condensed',sans-serif;font-size:1rem;">Book Online →</a>
+   </div>
+  </div>
+ </div>
+
+ <!-- MAP SECTION -->
+ <section style="padding:48px 24px 32px;">
+  <div style="max-width:1100px;margin:0 auto;">
+   <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-bottom:20px;">
+    <div>
+     <p style="color:#f0c040;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:6px;font-family:'Barlow Condensed',sans-serif;">SERVICE HEAT MAP</p>
+     <h2 style="color:#fff;font-size:1.6rem;font-weight:800;margin:0;font-family:'Barlow Condensed',sans-serif;">Sydney Lighting Control Activity</h2>
+    </div>
+    <div style="display:flex;align-items:center;gap:8px;background:rgba(240,112,32,0.1);border:1px solid rgba(240,112,32,0.25);border-radius:8px;padding:8px 14px;">
+     <span style="width:8px;height:8px;background:#f07020;border-radius:50%;display:inline-block;animation:pulse 2s infinite;"></span>
+     <span style="color:#f07020;font-size:12px;font-weight:700;font-family:'Barlow',sans-serif;">Updated June 2026</span>
+    </div>
+   </div>
+   <style>@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:0.6;transform:scale(1.3)}}</style>
+
+   <div id="map"></div>
+
+   <div class="legend">
+    <span style="font-weight:700;color:#f0f4ff;">Activity level:</span>
+    <div class="legend-item"><div class="legend-dot" style="background:#f03010;"></div> Very High</div>
+    <div class="legend-item"><div class="legend-dot" style="background:#f09020;"></div> High</div>
+    <div class="legend-item"><div class="legend-dot" style="background:#f0d040;"></div> Moderate</div>
+    <div class="legend-item"><div class="legend-dot" style="background:#50b0f0;"></div> Active</div>
+    <div class="legend-item" style="margin-left:auto;font-size:12px;">Heat = volume of recent C-Bus &amp; Dynalite jobs</div>
+   </div>
+  </div>
+ </section>
+
+ <!-- HOT AREAS GRID -->
+ <section style="padding:32px 24px 64px;">
+  <div style="max-width:1100px;margin:0 auto;">
+   <p style="color:#f0c040;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:8px;font-family:'Barlow Condensed',sans-serif;">CURRENT HOT SPOTS</p>
+   <h2 style="color:#fff;font-size:1.6rem;font-weight:800;margin-bottom:28px;font-family:'Barlow Condensed',sans-serif;">Most Active Areas Right Now</h2>
+   <div class="hot-grid" id="hot-grid"></div>
+
+   <div style="margin-top:48px;background:rgba(240,112,32,0.07);border:1px solid rgba(240,112,32,0.22);border-radius:14px;padding:32px 36px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:24px;">
+    <div>
+     <p style="color:#f0c040;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:8px;font-family:'Barlow Condensed',sans-serif;">DON'T SEE YOUR AREA?</p>
+     <h3 style="color:#fff;font-size:1.4rem;font-weight:800;margin-bottom:8px;font-family:'Barlow Condensed',sans-serif;">George Services All of Greater Sydney</h3>
+     <p style="color:#a8c0e0;font-size:0.95rem;line-height:1.7;font-family:'Barlow',sans-serif;max-width:520px;">The heat map shows where current demand is highest — but George takes on jobs across all of Sydney. If your suburb isn't on the map, you're not missing out. Call and he'll come to you.</p>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:12px;">
+     <a href="tel:0422469739" style="background:#f07020;color:#fff;padding:14px 28px;border-radius:8px;font-weight:700;text-decoration:none;font-family:'Barlow Condensed',sans-serif;font-size:1.05rem;text-align:center;white-space:nowrap;">📞 0422 469 739</a>
+     <a href="/book-service" style="background:transparent;border:2px solid rgba(255,255,255,0.2);color:#a8c0e0;padding:12px 28px;border-radius:8px;font-weight:700;text-decoration:none;font-family:'Barlow Condensed',sans-serif;font-size:1rem;text-align:center;">Book Online →</a>
+    </div>
+   </div>
+  </div>
+ </section>
+
+ <!-- PRICING & CALL-OUT GUARANTEE -->
+<div class="section" style="background:#0a1828; border-top:1px solid #2a4a80;">
+ <div class="container">
+  <div class="section-header">
+   <div class="tag">Transparent Pricing</div>
+   <h2>Pricing &amp; Call-Out <span class="accent">Guarantee</span></h2>
+   <p class="dim" style="max-width:540px;margin:0 auto">We believe the prestige market deserves transparent, upfront pricing. No hidden fees, no open-ended hourly rates without approval.</p>
+  </div>
+  
+  <div class="grid-2" style="gap:32px; align-items: stretch;">
+   <div class="card" style="background:#0e1f3d;">
+    <h3 style="margin-bottom:16px;">Rate Card</h3>
+    <ul class="check-list">
+     <li> <strong style="color:#f0f4ff;">Diagnostic Call-Out Fee:</strong> $200 </li>
+     <li><strong style="color:#f0f4ff;">C-Bus &amp; Dynalite Programming:</strong> $150/hr + GST</li>
+     <li><strong style="color:#f0f4ff;">Re-commissioning / Integration:</strong> $150/hr + GST</li>
+     <li><strong style="color:#f0f4ff;">Emergency / AFSS Compliance:</strong> $150/hr + GST + 15% premium</li>
+     <li> <strong style="color:#f0f4ff;">Minimum Labour Charge:</strong> 3-hour minimum ($450 + GST)</li>
+    </ul>
+    <div style="margin-top:24px; padding:16px; background:rgba(240,112,32,0.1); border-left:3px solid #f07020; border-radius:4px;">
+     <h4 style="color:#f07020; font-size:14px; margin-bottom:8px;">Prestige Market Premium</h4>
+     <p style="font-size:13px; color:#a8c0e0; line-height:1.5;">For harbourside residential (Double Bay, Mosman, Point Piper, etc): 15% risk-loading may apply for high-value home automation failure scenarios or multi-building coordination.</p>
+    </div>
+   </div>
+   
+   <div class="card" style="background:#0e1f3d;">
+    <h3 style="margin-bottom:16px;">Our Call-Out Guarantee</h3>
+    <p class="dim" style="font-size:15px; line-height:1.7; margin-bottom:16px;">We arrive on-site fully equipped with the manufacturer diagnostic toolkit and most common replacement modules.</p>
+    <p class="dim" style="font-size:15px; line-height:1.7; margin-bottom:24px;">Your $200 initial callout fee guarantees priority dispatch and a comprehensive on-site diagnostic assessment by a certified automation specialist, ensuring you get exactly what you pay for—expert insight and a clear path forward. For ongoing quality service, our premium repair and programming rate is $150/hr + GST (standard 3-hour minimum applies for initial visits). We pride ourselves on absolute transparency: <strong>no work proceeds without your full approval.</strong></p>
+    
+    <div class="btns">
+     <a href="/book-service" class="btn btn-primary">Book &amp; Pay $200 + GST Site Fee</a>
+     <a href="tel:0422469739" class="btn btn-outline">Call 0422 469 739</a>
+    </div>
+   </div>
+  </div>
+ </div>
+</div>
+
+<!-- FOOTER -->
+ <footer>
+  <div class="footer-grid">
+   <div>
+    <div class="logo" style="margin-bottom:16px"><span class="logo-main">Sydney Automation Co.</span><div class="logo-line"></div><span class="logo-sub">Lighting Control Specialists</span></div>
+    <p style="color:#a8c0e0;font-size:14px;line-height:1.7;max-width:340px">Accredited C-Bus Programmer and Dynalite System Designer. Based in Menai, serving all of Greater Sydney. Same-day fault finding. Fixed-price programming.</p>
+   </div>
+   <div>
+    <h4 style="font-family:'Barlow Condensed',sans-serif;font-weight:800;margin-bottom:16px;font-size:16px;letter-spacing:1px;text-transform:uppercase;color:#a8c0e0">Services</h4>
+    <div style="display:flex;flex-direction:column;gap:8px;font-size:14px">
+     <a href="/cbus-repair-sydney" style="color:#a8c0e0">C-Bus Repair Sydney</a>
+     <a href="/dynalite-repair-sydney" style="color:#a8c0e0">Dynalite Repair Sydney</a>
+     <a href="/emergency-repair-sydney" style="color:#f07020;font-weight:700">🚨 Emergency Repair</a>
+     <a href="/c-bus-programmer-sydney" style="color:#a8c0e0">C-Bus Programming</a>
+     <a href="/services" style="color:#a8c0e0">All Services</a>
+    </div>
+   </div>
+   <div>
+    <h4 style="font-family:'Barlow Condensed',sans-serif;font-weight:800;margin-bottom:16px;font-size:16px;letter-spacing:1px;text-transform:uppercase;color:#a8c0e0">Contact</h4>
+    <div style="display:flex;flex-direction:column;gap:10px;font-size:14px;color:#a8c0e0">
+     <a href="tel:0422469739" style="color:#f07020;font-weight:700;font-size:16px">📞 0422 469 739</a>
+     <a href="mailto:service@sydneyautomationco.com.au" style="color:#a8c0e0">service@sydneyautomationco.com.au</a>
+     <p>Menai, Sutherland Shire NSW 2234</p>
+     <p>Mon–Fri 7am–5pm</p>
+    </div>
+   </div>
+  </div>
+  <div class="footer-copy">
+   <span>© 2026 Sydney Automation Co. ABN 61 136 364 150. All rights reserved.</span>
+   <div style="display:flex;gap:16px">
+    <a href="/privacy-policy" style="color:#6a8cb5">Privacy Policy</a>
+    <a href="/sitemap.xml" style="color:#6a8cb5">Sitemap</a>
+   </div>
+  </div>
+ </footer>
+
+ <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+ <script src="https://unpkg.com/leaflet.heat@0.2.0/dist/leaflet-heat.js"></script>
+ <script src="/nav.js"></script>
+ <script>
+ // ── AREA DATA ──────────────────────────────────────────────────────────
+ const AREAS = [
+  // Tier 1 — Very High (current hot spots)
+  { name:'Lower North Shore', suburb:'Lower North Shore', lat:-33.831, lng:151.217, heat:98, tier:1,
+   trend:'🔥 Highest activity in Sydney right now', services:['C-Bus upgrade', 'Dynalite commissioning', 'DALI retrofit', 'Scene reprogramming'],
+   detail:'Strata buildings across Mosman, Neutral Bay, Cremorne and Kirribilli are undergoing major lighting control upgrades. High demand for C-Bus Toolkit reprogramming and Dynalite DyNet fault resolution.' },
+  { name:'North Sydney', suburb:'North Sydney', lat:-33.838, lng:151.207, heat:96, tier:1,
+   trend:'🔥 Commercial tower demand surging', services:['DALI-2 compliance', 'C-Bus fault finding', 'Emergency lighting', 'BMS integration'],
+   detail:'Commercial towers along Miller Street and Pacific Highway requesting DALI-2 compliance audits and C-Bus network upgrades to meet current building standards.' },
+  { name:'Sydney CBD', suburb:'Sydney CBD', lat:-33.868, lng:151.209, heat:95, tier:1,
+   trend:'🔥 High-rise strata and commercial active', services:['C-Bus programming', 'Dynalite upgrade', 'RAPIX installation', 'AFSS compliance'],
+   detail:'CBD strata managers and commercial building owners accelerating lighting control upgrades and emergency lighting compliance ahead of end-of-year audits.' },
+  { name:'The Rocks', suburb:'The Rocks', lat:-33.860, lng:151.209, heat:91, tier:1,
+   trend:'🔥 Heritage & hospitality upgrades', services:['Atmospheric lighting', 'Dynalite scenes', 'C-Bus upgrade', 'Hotel systems'],
+   detail:'Heritage hotels and hospitality venues in The Rocks precinct upgrading atmospheric lighting control systems. Significant Dynalite scene programming and C-Bus touchscreen replacement work.' },
+
+  // Tier 2 — High
+  { name:'Henley', suburb:'Henley', lat:-33.848, lng:151.134, heat:87, tier:2,
+   trend:'📈 Residential premium upgrades', services:['C-Bus home upgrade', 'Dynalite installation', 'Scene programming', 'Touchscreen panels'],
+   detail:'Premium residential properties in Henley completing full C-Bus and Dynalite home automation upgrades. High demand for touchscreen keypad replacement and scene reprogramming.' },
+  { name:'Balmain', suburb:'Balmain', lat:-33.860, lng:151.181, heat:85, tier:2,
+   trend:'📈 Terrace & apartment renovation wave', services:['C-Bus upgrade', 'Legacy system repair', 'Scene reprogramming', 'Keypad upgrade'],
+   detail:'Balmain terrace renovations driving high volume of legacy C-Bus system upgrades and Dynalite installations in newly converted apartments and strata buildings.' },
+  { name:'Lindfield', suburb:'Lindfield', lat:-33.773, lng:151.168, heat:83, tier:2,
+   trend:'📈 Upper North Shore residential active', services:['C-Bus home system', 'Dynalite whole-home', 'DALI downlight', 'Automation upgrade'],
+   detail:'Upper North Shore residential market seeing strong demand for whole-home C-Bus automation and Dynalite system upgrades in established family homes and new builds.' },
+  { name:'Rose Bay', suburb:'Rose Bay', lat:-33.873, lng:151.266, heat:80, tier:2,
+   trend:'📈 Waterfront property upgrades', services:['C-Bus premium upgrade', 'Dynalite scenes', 'Outdoor lighting', 'Smart integration'],
+   detail:'Waterfront and prestige properties in Rose Bay upgrading to current C-Bus and Dynalite systems. High demand for outdoor zone control and energy management programming.' },
+
+  // Tier 3 — Active (will appear in search, lower heat on map)
+  { name:'Mosman', suburb:'Mosman', lat:-33.827, lng:151.245, heat:72, tier:3, trend:'Active', services:['C-Bus repair', 'Dynalite scenes', 'Keypad upgrade', 'Fault finding'], detail:'Consistent demand for C-Bus fault finding and Dynalite scene reprogramming across Mosman's strata and prestige residential market.' },
+  { name:'Neutral Bay', suburb:'Neutral Bay', lat:-33.835, lng:151.221, heat:70, tier:3, trend:'Active', services:['C-Bus programming', 'Dynalite repair', 'Strata systems', 'LED upgrade'], detail:'Strata buildings in Neutral Bay requesting ongoing C-Bus maintenance and Dynalite upgrades.' },
+  { name:'Cremorne', suburb:'Cremorne', lat:-33.830, lng:151.228, heat:68, tier:3, trend:'Active', services:['C-Bus upgrade', 'Dynalite commissioning', 'LED retrofit'], detail:'Residential apartment blocks undergoing C-Bus network health checks and Dynalite upgrades.' },
+  { name:'Kirribilli', suburb:'Kirribilli', lat:-33.851, lng:151.213, heat:66, tier:3, trend:'Active', services:['C-Bus repair', 'Dynalite fault', 'Strata lighting'], detail:'Kirribilli strata blocks with aging C-Bus systems requesting fault-finding and upgrade assessments.' },
+  { name:'Milsons Point', suburb:'Milsons Point', lat:-33.846, lng:151.210, heat:62, tier:3, trend:'Active', services:['C-Bus programming', 'DALI systems'], detail:'High-rise residential towers requesting C-Bus and DALI system health audits.' },
+  { name:'Darlinghurst', suburb:'Darlinghurst', lat:-33.877, lng:151.221, heat:60, tier:3, trend:'Active', services:['Dynalite lighting', 'C-Bus repair', 'Bar & restaurant'], detail:'Hospitality venues and boutique apartments with Dynalite atmospheric lighting systems.' },
+  { name:'Surry Hills', suburb:'Surry Hills', lat:-33.884, lng:151.212, heat:58, tier:3, trend:'Active', services:['C-Bus repair', 'Dynalite scenes', 'Commercial lighting'], detail:'Commercial and residential lighting control work across converted terrace buildings.' },
+  { name:'Woollahra', suburb:'Woollahra', lat:-33.886, lng:151.247, heat:56, tier:3, trend:'Active', services:['C-Bus upgrade', 'Dynalite install', 'Prestige homes'], detail:'Prestige residential properties requesting C-Bus and Dynalite whole-home upgrades.' },
+  { name:'Paddington', suburb:'Paddington', lat:-33.884, lng:151.229, heat:54, tier:3, trend:'Active', services:['C-Bus programming', 'Dynalite repair', 'Terrace lighting'], detail:'Terrace conversions and boutique commercial spaces upgrading to C-Bus and Dynalite systems.' },
+  { name:'Double Bay', suburb:'Double Bay', lat:-33.876, lng:151.244, heat:60, tier:3, trend:'Active', services:['Dynalite luxury', 'C-Bus smart home', 'Retail lighting'], detail:'Luxury retail and prestige residential upgrading to high-end Dynalite atmospheric systems.' },
+  { name:'Glebe', suburb:'Glebe', lat:-33.878, lng:151.186, heat:52, tier:3, trend:'Active', services:['C-Bus repair', 'Legacy Dynalite', 'Terrace upgrade'], detail:'Terrace and strata buildings with legacy C-Bus systems requesting fault finding and upgrade.' },
+  { name:'Leichhardt', suburb:'Leichhardt', lat:-33.882, lng:151.157, heat:50, tier:3, trend:'Active', services:['C-Bus upgrade', 'Dynalite scenes', 'Strata lighting'], detail:'Inner west strata requesting C-Bus upgrades and Dynalite scene programming.' },
+  { name:'Marrickville', suburb:'Marrickville', lat:-33.910, lng:151.156, heat:48, tier:3, trend:'Active', services:['C-Bus repair', 'DALI retrofit', 'Commercial lighting'], detail:'Commercial and mixed-use buildings with C-Bus and DALI lighting control upgrades.' },
+  { name:'Newtown', suburb:'Newtown', lat:-33.897, lng:151.178, heat:46, tier:3, trend:'Active', services:['C-Bus fault finding', 'Dynalite repair', 'Cafe lighting'], detail:'Retail and hospitality venues upgrading atmospheric lighting control systems.' },
+  { name:'Chatswood', suburb:'Chatswood', lat:-33.798, lng:151.182, heat:58, tier:3, trend:'Active', services:['C-Bus commercial', 'DALI systems', 'Office tower'], detail:'Chatswood commercial towers requesting C-Bus and DALI lighting control upgrades.' },
+  { name:'Lane Cove', suburb:'Lane Cove', lat:-33.815, lng:151.168, heat:54, tier:3, trend:'Active', services:['C-Bus home', 'Dynalite upgrade', 'Residential'], detail:'Residential and strata buildings with C-Bus upgrade activity.' },
+  { name:'St Leonards', suburb:'St Leonards', lat:-33.822, lng:151.195, heat:56, tier:3, trend:'Active', services:['Commercial C-Bus', 'DALI compliance', 'Medical precinct'], detail:'Medical and commercial buildings in St Leonards completing DALI-2 compliance upgrades.' },
+  { name:'Crows Nest', suburb:'Crows Nest', lat:-33.828, lng:151.201, heat:62, tier:3, trend:'Active', services:['C-Bus programming', 'Dynalite restaurant', 'Retail lighting'], detail:'Restaurant strip and mixed-use buildings with Dynalite atmospheric lighting upgrades.' },
+  { name:'Pymble', suburb:'Pymble', lat:-33.745, lng:151.143, heat:48, tier:3, trend:'Active', services:['C-Bus home', 'Dynalite whole-home', 'Prestige residential'], detail:'Upper North Shore prestige homes requesting whole-home C-Bus and Dynalite systems.' },
+  { name:'Gordon', suburb:'Gordon', lat:-33.756, lng:151.153, heat:46, tier:3, trend:'Active', services:['C-Bus upgrade', 'Dynalite install', 'Residential'], detail:'Residential market with consistent C-Bus and Dynalite upgrade demand.' },
+  { name:'Turramurra', suburb:'Turramurra', lat:-33.730, lng:151.133, heat:44, tier:3, trend:'Active', services:['C-Bus home system', 'Dynalite lighting', 'Large homes'], detail:'Large residential properties upgrading to full C-Bus home automation.' },
+  { name:'Killara', suburb:'Killara', lat:-33.762, lng:151.158, heat:48, tier:3, trend:'Active', services:['C-Bus programming', 'Dynalite scenes', 'Prestige home'], detail:'Prestige residential market with C-Bus and Dynalite upgrade activity.' },
+  { name:'Wahroonga', suburb:'Wahroonga', lat:-33.719, lng:151.119, heat:44, tier:3, trend:'Active', services:['C-Bus home', 'Dynalite install', 'Residential upgrade'], detail:'Upper North Shore residential C-Bus and Dynalite demand.' },
+  { name:'Manly', suburb:'Manly', lat:-33.797, lng:151.285, heat:52, tier:3, trend:'Active', services:['C-Bus repair', 'Dynalite hospitality', 'Coastal strata'], detail:'Northern beaches hospitality and strata with Dynalite and C-Bus repair demand.' },
+  { name:'Dee Why', suburb:'Dee Why', lat:-33.750, lng:151.286, heat:46, tier:3, trend:'Active', services:['C-Bus strata', 'Dynalite repair', 'Coastal building'], detail:'Northern beaches strata with C-Bus and Dynalite system maintenance.' },
+  { name:'Parramatta', suburb:'Parramatta', lat:-33.814, lng:151.001, heat:54, tier:3, trend:'Active', services:['Commercial C-Bus', 'DALI systems', 'High-rise'], detail:'Western Sydney commercial and high-rise residential with C-Bus and DALI upgrade demand.' },
+  { name:'Strathfield', suburb:'Strathfield', lat:-33.876, lng:151.084, heat:46, tier:3, trend:'Active', services:['C-Bus home', 'Dynalite install', 'Strata'], detail:'Strathfield strata and residential C-Bus and Dynalite activity.' },
+  { name:'Sutherland', suburb:'Sutherland', lat:-34.031, lng:151.057, heat:44, tier:3, trend:'Active', services:['C-Bus home', 'Dynalite scenes', 'Residential'], detail:'Sutherland Shire residential and strata with C-Bus programming demand.' },
+  { name:'Miranda', suburb:'Miranda', lat:-34.034, lng:151.104, heat:42, tier:3, trend:'Active', services:['C-Bus repair', 'Dynalite fix', 'Retail lighting'], detail:'Miranda commercial and retail lighting control repairs and upgrades.' },
+  { name:'Cronulla', suburb:'Cronulla', lat:-34.056, lng:151.152, heat:46, tier:3, trend:'Active', services:['C-Bus coastal', 'Dynalite hospitality', 'Strata'], detail:'Cronulla waterfront hospitality and strata with C-Bus and Dynalite activity.' },
+  { name:'Bondi', suburb:'Bondi', lat:-33.889, lng:151.274, heat:58, tier:3, trend:'Active', services:['C-Bus repair', 'Dynalite hospitality', 'Coastal strata'], detail:'Bondi hospitality strip and beachfront strata with strong Dynalite and C-Bus demand.' },
+  { name:'Bondi Junction', suburb:'Bondi Junction', lat:-33.891, lng:151.251, heat:56, tier:3, trend:'Active', services:['Commercial C-Bus', 'Dynalite retail', 'DALI systems'], detail:'Bondi Junction commercial and retail lighting control upgrades.' },
+  { name:'Randwick', suburb:'Randwick', lat:-33.913, lng:151.240, heat:50, tier:3, trend:'Active', services:['C-Bus strata', 'Dynalite install', 'Medical precinct'], detail:'Randwick hospital precinct and strata with C-Bus and DALI demand.' },
+  { name:'Kingsford', suburb:'Kingsford', lat:-33.923, lng:151.224, heat:44, tier:3, trend:'Active', services:['C-Bus repair', 'Dynalite scenes', 'Strata lighting'], detail:'Kingsford strata and residential C-Bus upgrade activity.' },
+ ];
+
+ // ── MAP INIT ───────────────────────────────────────────────────────────
+ const map = L.map('map', { center: [-33.855, 151.215], zoom: 12, zoomControl: true });
+
+ L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+  attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/">CARTO</a>',
+  subdomains: 'abcd', maxZoom: 19
+ }).addTo(map);
+
+ // Build heat data (lat, lng, intensity 0-1)
+ const heatData = AREAS.map(a => [a.lat, a.lng, a.heat / 100]);
+
+ const heat = L.heatLayer(heatData, {
+  radius: 38, blur: 30, maxZoom: 14,
+  gradient: { 0.2: '#50a0f0', 0.4: '#f0d040', 0.65: '#f09020', 0.85: '#f05020', 1.0: '#ff1a00' }
+ }).addTo(map);
+
+ // Add markers for top areas
+ const hotAreas = AREAS.filter(a => a.tier <= 2);
+ hotAreas.forEach(a => {
+  const colour = a.tier === 1 ? '#f05020' : '#f0a020';
+  const icon = L.divIcon({
+   className: '',
+   html: `<div style="
+    background:${colour};color:#fff;border-radius:50%;
+    width:${a.tier===1?'44px':'36px'};height:${a.tier===1?'44px':'36px'};
+    display:flex;align-items:center;justify-content:center;
+    font-family:'Barlow Condensed',sans-serif;font-weight:900;
+    font-size:${a.tier===1?'11px':'10px'};text-align:center;line-height:1.1;
+    box-shadow:0 0 0 3px rgba(255,255,255,0.15),0 4px 12px rgba(0,0,0,0.4);
+    border:2px solid rgba(255,255,255,0.3);
+    cursor:pointer;
+   ">${a.name.replace(' ','\n')}</div>`,
+   iconSize: a.tier===1 ? [44,44] : [36,36],
+   iconAnchor: a.tier===1 ? [22,22] : [18,18]
+  });
+  L.marker([a.lat, a.lng], { icon })
+   .addTo(map)
+   .bindPopup(`
+    <div style="font-family:'Barlow',sans-serif;min-width:200px;">
+     <strong style="font-family:'Barlow Condensed',sans-serif;font-size:1.1rem;">${a.name}</strong><br>
+     <span style="font-size:12px;color:#888;">${a.trend}</span><br><br>
+     <em style="font-size:12px;">${a.detail.substring(0,120)}…</em><br><br>
+     <a href="tel:0422469739" style="background:#f07020;color:#fff;padding:6px 14px;border-radius:6px;text-decoration:none;font-size:12px;font-weight:700;">📞 Call George</a>
+    </div>
+   `, { maxWidth: 260 });
+ });
+
+ // ── SEARCH ─────────────────────────────────────────────────────────────
+ const searchInput = document.getElementById('suburb-search');
+ const searchResults = document.getElementById('search-results');
+
+ function getHeatLevel(heat) {
+  if (heat >= 90) return { label:'Very High Activity', cls:'badge-hot', bar:'linear-gradient(90deg,#f03010,#f07020)' };
+  if (heat >= 75) return { label:'High Activity', cls:'badge-high', bar:'linear-gradient(90deg,#f07020,#f0a020)' };
+  if (heat >= 50) return { label:'Active Area', cls:'badge-active', bar:'linear-gradient(90deg,#50a0f0,#4080d0)' };
+  return { label:'Available — Book Now', cls:'badge-available', bar:'linear-gradient(90deg,#64b464,#4a9a4a)' };
+ }
+
+ searchInput.addEventListener('input', function() {
+  const q = this.value.trim().toLowerCase();
+  if (q.length < 2) { searchResults.classList.remove('show'); return; }
+  const matches = AREAS.filter(a => a.name.toLowerCase().includes(q) || a.suburb.toLowerCase().includes(q));
+  if (!matches.length) { searchResults.innerHTML = '<div class="sr-item"><div class="sr-name" style="color:#a8c0e0;">No exact match — George still services your area!</div><div class="sr-heat">Call 0422 469 739 to book.</div></div>'; searchResults.classList.add('show'); return; }
+  searchResults.innerHTML = matches.slice(0, 6).map(a => {
+   const h = getHeatLevel(a.heat);
+   return `<div class="sr-item" onclick="showResult('${a.name}')">
+    <div class="sr-name">${a.name} <span class="sr-badge ${h.cls}">${h.label}</span></div>
+    <div class="sr-heat">${a.trend}</div>
+   </div>`;
+  }).join('');
+  searchResults.classList.add('show');
+ });
+
+ document.addEventListener('click', function(e) {
+  if (!e.target.closest('.search-wrap')) searchResults.classList.remove('show');
+ });
+
+ searchInput.addEventListener('keydown', function(e) {
+  if (e.key === 'Enter') { doSearch(); }
+ });
+
+ window.doSearch = function() {
+  const q = searchInput.value.trim().toLowerCase();
+  const match = AREAS.find(a => a.name.toLowerCase().includes(q) || a.suburb.toLowerCase().includes(q));
+  if (match) showResult(match.name);
+  else {
+   searchResults.innerHTML = '<div class="sr-item"><div class="sr-name" style="color:#a8c0e0;">No exact match found</div><div class="sr-heat">George services all of Sydney — call 0422 469 739</div></div>';
+   searchResults.classList.add('show');
+  }
+ };
+
+ window.showResult = function(name) {
+  const a = AREAS.find(x => x.name === name);
+  if (!a) return;
+  searchResults.classList.remove('show');
+  searchInput.value = a.name;
+  const h = getHeatLevel(a.heat);
+  document.getElementById('rc-suburb-name').textContent = a.name;
+  document.getElementById('rc-heat-label').textContent = a.detail;
+  const badge = document.getElementById('rc-badge');
+  badge.textContent = h.label; badge.className = 'sr-badge ' + h.cls;
+  badge.style.cssText = 'font-size:13px;padding:5px 14px;';
+  const bar = document.getElementById('rc-bar');
+  bar.style.width = '0%'; bar.style.background = h.bar;
+  setTimeout(() => { bar.style.width = a.heat + '%'; }, 80);
+  const svcs = document.getElementById('rc-services');
+  svcs.innerHTML = a.services.map(s => `
+   <div class="rc-service"><div class="rc-service-name">✓ ${s}</div><div class="rc-service-detail">Currently in high demand in ${a.name}</div></div>
+  `).join('');
+  document.getElementById('rc-cta-suburb').textContent = a.name;
+  const card = document.getElementById('result-card');
+  card.classList.add('show');
+  setTimeout(() => { card.scrollIntoView({ behavior:'smooth', block:'center' }); }, 100);
+  map.flyTo([a.lat, a.lng], 14, { duration: 1.2 });
+ };
+
+ // ── HOT GRID ───────────────────────────────────────────────────────────
+ const topAreas = AREAS.filter(a => a.tier <= 2).sort((a,b) => b.heat - a.heat);
+ document.getElementById('hot-grid').innerHTML = topAreas.map(a => {
+  const barColour = a.tier === 1 ? '#f05020' : '#f0a020';
+  return `<div class="hot-card tier-${a.tier}" onclick="showResult('${a.name}');document.getElementById('suburb-search').value='${a.name}'">
+   <div class="hot-card-name">${a.name}</div>
+   <div class="hot-card-trend">${a.trend}</div>
+   <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px;">
+    ${a.services.slice(0,2).map(s=>`<span style="font-size:11px;color:#a8c0e0;background:rgba(255,255,255,0.05);padding:3px 8px;border-radius:4px;font-family:'Barlow',sans-serif;">${s}</span>`).join('')}
+   </div>
+   <div class="hot-card-bar"><div class="hot-card-fill" style="width:${a.heat}%;background:${barColour};"></div></div>
+   <div style="display:flex;justify-content:space-between;margin-top:6px;font-size:11px;color:#4a6a9a;font-family:'Barlow',sans-serif;">
+    <span>Activity</span><span style="color:${barColour};font-weight:700;">${a.heat}%</span>
+   </div>
+  </div>`;
+ }).join('');
+ </script>
+</body>
+</html>

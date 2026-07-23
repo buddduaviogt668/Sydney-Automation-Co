@@ -27,6 +27,12 @@ node_modules
 !.vscode/launch.json
 !.vscode/extensions.json
 
+# Cursor AI Editor
+.cursor/
+.cursorrules
+.cursorignore
+.cursorindexingignore
+
 # misc
 /.sass-cache
 /connect.lock
@@ -41,8 +47,19 @@ testem.log
 .DS_Store
 Thumbs.db
 
-.cursor/rules/nx-rules.mdc
-.github/instructions/nx.instructions.md
+# Python
+__pycache__/
+*.pyc
+
+# Build/Deploy
+.vercel/
+auth.json
+
+# Logs
+*.log
+.lesshst
+.node_repl_history
+.ollama/
 
 # Replit
 .cache/
