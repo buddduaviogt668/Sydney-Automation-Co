@@ -1,6 +1,5 @@
 openapi: 3.1.0
 info:
-  # Do not change the title, if the title changes, the import paths will be broken
   title: Api
   version: 0.1.0
   description: API specification
@@ -10,6 +9,14 @@ servers:
 tags:
   - name: health
     description: Health operations
+  - name: chat
+    description: AI chat operations
+  - name: bookings
+    description: Booking operations
+  - name: leads
+    description: Lead capture operations
+  - name: stripe
+    description: Stripe checkout operations
 paths:
   /healthz:
     get:
@@ -24,6 +31,115 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/HealthStatus"
+  /chat:
+    post:
+      operationId: sendChatMessage
+      tags: [chat]
+      summary: Send chat message
+      description: Send a message to the AI assistant and get a response
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ChatRequest"
+      responses:
+        "200":
+          description: AI response
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ChatResponse"
+  /bookings:
+    post:
+      operationId: createBooking
+      tags: [bookings]
+      summary: Create booking
+      description: Create a new service booking
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/CreateBookingInput"
+      responses:
+        "201":
+          description: Booking created
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Booking"
+    get:
+      operationId: listBookings
+      tags: [bookings]
+      summary: List bookings
+      description: List all bookings
+      responses:
+        "200":
+          description: List of bookings
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Booking"
+  /bookings/{id}:
+    get:
+      operationId: getBooking
+      tags: [bookings]
+      summary: Get booking
+      description: Get a booking by ID
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Booking details
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Booking"
+  /checkout-sessions:
+    post:
+      operationId: createCheckoutSession
+      tags: [stripe]
+      summary: Create Stripe checkout session
+      description: Create a Stripe checkout session for a booking deposit
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/CheckoutSessionInput"
+      responses:
+        "200":
+          description: Checkout session created
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/CheckoutSession"
+  /leads:
+    post:
+      operationId: captureLead
+      tags: [leads]
+      summary: Capture lead
+      description: Capture an email lead from the exit-intent popup
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/CaptureLeadInput"
+      responses:
+        "201":
+          description: Lead captured
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Lead"
 components:
   schemas:
     HealthStatus:
@@ -33,4 +149,146 @@ components:
           type: string
       required:
         - status
-
+    ChatMessage:
+      type: object
+      properties:
+        role:
+          type: string
+          enum: [user, assistant]
+        content:
+          type: string
+      required:
+        - role
+        - content
+    ChatRequest:
+      type: object
+      properties:
+        messages:
+          type: array
+          items:
+            $ref: "#/components/schemas/ChatMessage"
+        serviceContext:
+          type: string
+      required:
+        - messages
+    ChatResponse:
+      type: object
+      properties:
+        message:
+          type: string
+        role:
+          type: string
+      required:
+        - message
+        - role
+    CreateBookingInput:
+      type: object
+      properties:
+        name:
+          type: string
+        email:
+          type: string
+        phone:
+          type: string
+        address:
+          type: string
+        suburb:
+          type: string
+        serviceType:
+          type: string
+        description:
+          type: string
+        preferredDate:
+          type: string
+      required:
+        - name
+        - email
+        - phone
+        - address
+        - suburb
+        - serviceType
+        - preferredDate
+    Booking:
+      type: object
+      properties:
+        id:
+          type: number
+        name:
+          type: string
+        email:
+          type: string
+        phone:
+          type: string
+        address:
+          type: string
+        suburb:
+          type: string
+        serviceType:
+          type: string
+        description:
+          type: string
+        preferredDate:
+          type: string
+        depositAmount:
+          type: number
+        stripeSessionId:
+          type: string
+        status:
+          type: string
+        createdAt:
+          type: string
+          format: date-time
+      required:
+        - id
+        - name
+        - email
+        - phone
+        - address
+        - suburb
+        - serviceType
+        - preferredDate
+        - depositAmount
+        - status
+        - createdAt
+    CheckoutSessionInput:
+      type: object
+      properties:
+        bookingId:
+          type: string
+      required:
+        - bookingId
+    CheckoutSession:
+      type: object
+      properties:
+        url:
+          type: string
+        sessionId:
+          type: string
+      required:
+        - url
+        - sessionId
+    CaptureLeadInput:
+      type: object
+      properties:
+        email:
+          type: string
+        source:
+          type: string
+      required:
+        - email
+    Lead:
+      type: object
+      properties:
+        id:
+          type: number
+        email:
+          type: string
+        source:
+          type: string
+        createdAt:
+          type: string
+          format: date-time
+      required:
+        - id
+        - email
+        - createdAt
