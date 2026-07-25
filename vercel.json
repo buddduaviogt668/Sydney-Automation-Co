@@ -1850,28 +1850,13 @@
       "permanent": true
     },
     {
-      "source": "/smart-home-automation-:suburb",
-      "destination": "/services",
-      "permanent": true
-    },
-    {
-      "source": "/c-bus-programmer-:suburb",
+      "source": "/c-bus-programmer-north-sydney",
       "destination": "/c-bus-programmer-sydney",
       "permanent": true
     },
     {
-      "source": "/cbus-repair-:suburb",
-      "destination": "/cbus-repair-sydney",
-      "permanent": true
-    },
-    {
-      "source": "/dynalite-programmer-:suburb",
+      "source": "/dynalite-programmer-north-sydney",
       "destination": "/dynalite-programmer-sydney",
-      "permanent": true
-    },
-    {
-      "source": "/dynalite-repair-:suburb",
-      "destination": "/dynalite-repair-sydney",
       "permanent": true
     },
     {
