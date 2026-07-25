@@ -1961,6 +1961,11 @@
       "source": "/tech-library/:slug",
       "destination": "/tech-library",
       "permanent": true
+    },
+    {
+      "source": "/services-hub",
+      "destination": "/services",
+      "permanent": true
     }
   ],
   "headers": [
