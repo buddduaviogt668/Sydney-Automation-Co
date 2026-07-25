@@ -1876,6 +1876,91 @@
       "source": "/cbus-5500pc-network-bridge-failure-sydney",
       "destination": "/cbus-5500cn-network-bridge-failure-sydney",
       "permanent": true
+    },
+    {
+      "source": "/tech-library/:path*",
+      "destination": "/tech-library",
+      "permanent": true
+    },
+    {
+      "source": "^/c-bus-programmer-(abbotsford|avalon-beach|balmain|bella-vista|bellevue-hill|birchgrove|bondi|bronte|burraneer|cabarita|caringbah|caringbah-south|castle-hill|chatswood|clovelly|collaroy|coogee|cremorne|cronulla|curl-curl|double-bay|drummoyne|dural|eastern-suburbs|engadine|freshwater|gordon|gymea-bay|haberfield|hills-district|hunters-hill|illawong|inner-west|killara|kurraba-point|lilli-pilli|lindfield|manly|miranda|mona-vale|mosman|neutral-bay|newport|northern-beaches|north-shore|north-sydney|paddington|palm-beach|parramatta|penrith|point-piper|potts-point|pymble|queenscliff|rose-bay|roseville|st-george|st-ives|strathfield|sutherland-shire|sydney-cbd|sylvania|turramurra|vaucluse|wahroonga|whale-beach|woollahra)$",
+      "destination": "/c-bus-programmer-sydney",
+      "permanent": true
+    },
+    {
+      "source": "^/dynalite-programmer-(annandale|avalon-beach|balmain|bayview|bella-vista|bellevue-hill|birchgrove|bondi|bronte|burraneer|caringbah|caringbah-south|castle-hill|chatswood|clovelly|collaroy|coogee|cremorne|cronulla|darling-point|double-bay|drummoyne|dural|eastern-suburbs|engadine|freshwater|gordon|gymea-bay|haberfield|hills-district|hunters-hill|illawong|inner-west|killara|kirribilli|lilli-pilli|lindfield|manly|mona-vale|mosman|neutral-bay|newport|northern-beaches|north-shore|north-sydney|paddington|palm-beach|parramatta|penrith|point-piper|pymble|rose-bay|roseville|st-george|st-ives|strathfield|sutherland-shire|sydney-cbd|sylvania|tamarama|turramurra|vaucluse|wahroonga|whale-beach|woollahra)$",
+      "destination": "/dynalite-programmer-sydney",
+      "permanent": true
+    },
+    {
+      "source": "^/cbus-repair-(alexandria|annandale|avalon-beach|avoca-beach|balgownie|balmain|bayview|bellevue-hill|berrima|berry|bowral|bronte|bundanoon|burradoo|burwood|concord|coogee|cremorne|cronulla|darlinghurst|double-bay|drummoyne|earlwood|edgecliff|exeter|five-dock|gerringong|glebe|haberfield|haymarket|kiama|killara|kirribilli|lane-cove|leichhardt|leura|lilyfield|manly|maroubra|marrickville|mittagong|mosman|moss-vale|mount-keira|newtown|paddington|palm-beach|point-piper|potts-point|pymble|pyrmont|redfern|roseville|rozelle|strathfield|surry-hills|sydney-cbd|tamarama|terrigal|the-rocks|thirroul|ultimo|waterloo|wentworth-falls|wetherill-park-industrial|whale-beach|woolloomooloo|zetland)$",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "^/dynalite-repair-(alexandria|annandale|avoca-beach|balmain|bowral|burradoo|burwood|concord|darlinghurst|drummoyne|five-dock|glebe|haberfield|haymarket|kiama|leichhardt|leura|lilyfield|marrickville|mittagong|neutral-bay|newtown|paddington|potts-point|pyrmont|redfern|rozelle|silverwater|strathfield|surry-hills|sydney-cbd|terrigal|thirroul|turramurra|ultimo|waterloo|wollongong|woollahra|woolloomooloo|zetland)$",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/smart-home-automation-:suburb",
+      "destination": "/services",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/(.*)",
+      "destination": "/tech-library",
+      "permanent": true
+    },
+    {
+      "source": "/c-bus-programmer-(?!sydney)(.*)",
+      "destination": "/c-bus-programmer-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/cbus-repair-(?!sydney)(.*)",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/dynalite-programmer-(?!sydney)(.*)",
+      "destination": "/dynalite-programmer-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/dynalite-repair-(?!sydney)(.*)",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/smart-home-automation-(?!sydney)(.*)",
+      "destination": "/smart-home-automation-companies-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/c-bus-programmer-:suburb",
+      "destination": "/c-bus-programmer-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/cbus-repair-:suburb",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/dynalite-programmer-:suburb",
+      "destination": "/dynalite-programmer-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/dynalite-repair-:suburb",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/:slug",
+      "destination": "/tech-library",
+      "permanent": true
     }
   ],
   "headers": [
