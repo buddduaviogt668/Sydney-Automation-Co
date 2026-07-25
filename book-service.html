@@ -465,12 +465,12 @@ nav{position:fixed;top:40px;left:0;right:0;z-index:1150;background:rgba(14,31,61
       <!-- QUOTE REQUEST FORM -->
       <div id="quote-form" style="background:#132647;border:1px solid #2a4a80;border-radius:16px;padding:32px;margin-top:28px">
         <h3 style="font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:900;color:#f0f4ff;margin-bottom:20px">Send a Quote Request</h3>
-        <form action="mailto:service@sydneyautomationco.com.au" method="post" enctype="text/plain" style="display:flex;flex-direction:column;gap:14px">
-          <div><input type="text" name="Name" placeholder="Your Name" required style="width:100%;padding:12px 16px;background:#0e1f3d;border:1px solid #2a4a80;border-radius:10px;color:#f0f4ff;font-size:15px;font-family:Barlow,sans-serif;outline:none"></div>
-          <div><input type="tel" name="Phone" placeholder="Phone Number" required style="width:100%;padding:12px 16px;background:#0e1f3d;border:1px solid #2a4a80;border-radius:10px;color:#f0f4ff;font-size:15px;font-family:Barlow,sans-serif;outline:none"></div>
-          <div><input type="email" name="Email" placeholder="Email Address" style="width:100%;padding:12px 16px;background:#0e1f3d;border:1px solid #2a4a80;border-radius:10px;color:#f0f4ff;font-size:15px;font-family:Barlow,sans-serif;outline:none"></div>
-          <div><input type="text" name="Suburb" placeholder="Suburb (e.g. Menai, Bondi, Parramatta)" style="width:100%;padding:12px 16px;background:#0e1f3d;border:1px solid #2a4a80;border-radius:10px;color:#f0f4ff;font-size:15px;font-family:Barlow,sans-serif;outline:none"></div>
-          <div><select name="Service" style="width:100%;padding:12px 16px;background:#0e1f3d;border:1px solid #2a4a80;border-radius:10px;color:#f0f4ff;font-size:15px;font-family:Barlow,sans-serif;outline:none">
+        <form id="bookQuoteForm" style="display:flex;flex-direction:column;gap:14px">
+          <div><input id="bq-name" type="text" placeholder="Your Name" required style="width:100%;padding:12px 16px;background:#0e1f3d;border:1px solid #2a4a80;border-radius:10px;color:#f0f4ff;font-size:15px;font-family:Barlow,sans-serif;outline:none"></div>
+          <div><input id="bq-phone" type="tel" placeholder="Phone Number" required style="width:100%;padding:12px 16px;background:#0e1f3d;border:1px solid #2a4a80;border-radius:10px;color:#f0f4ff;font-size:15px;font-family:Barlow,sans-serif;outline:none"></div>
+          <div><input id="bq-email" type="email" placeholder="Email Address" style="width:100%;padding:12px 16px;background:#0e1f3d;border:1px solid #2a4a80;border-radius:10px;color:#f0f4ff;font-size:15px;font-family:Barlow,sans-serif;outline:none"></div>
+          <div><input id="bq-suburb" type="text" placeholder="Suburb (e.g. Menai, Bondi, Parramatta)" style="width:100%;padding:12px 16px;background:#0e1f3d;border:1px solid #2a4a80;border-radius:10px;color:#f0f4ff;font-size:15px;font-family:Barlow,sans-serif;outline:none"></div>
+          <div><select id="bq-service" style="width:100%;padding:12px 16px;background:#0e1f3d;border:1px solid #2a4a80;border-radius:10px;color:#f0f4ff;font-size:15px;font-family:Barlow,sans-serif;outline:none">
             <option value="">Select a service...</option>
             <option>C-Bus Fault Finding</option>
             <option>C-Bus Programming</option>
@@ -483,9 +483,23 @@ nav{position:fixed;top:40px;left:0;right:0;z-index:1150;background:rgba(14,31,61
             <option>Emergency Lighting Compliance</option>
             <option>Other</option>
           </select></div>
-          <div><textarea name="Message" placeholder="Describe your system and the issue. Include any error lights, model numbers, or previous work done." rows="5" style="width:100%;padding:12px 16px;background:#0e1f3d;border:1px solid #2a4a80;border-radius:10px;color:#f0f4ff;font-size:15px;font-family:Barlow,sans-serif;outline:none;resize:vertical"></textarea></div>
-          <button class="btn btn-primary" type="submit" style="font-size:16px;padding:16px 32px;background:#f07020;color:#fff;border:none;border-radius:10px;font-weight:800;cursor:pointer">Send Quote Request</button>
+          <div><textarea id="bq-message" placeholder="Describe your system and the issue. Include any error lights, model numbers, or previous work done." rows="5" style="width:100%;padding:12px 16px;background:#0e1f3d;border:1px solid #2a4a80;border-radius:10px;color:#f0f4ff;font-size:15px;font-family:Barlow,sans-serif;outline:none;resize:vertical"></textarea></div>
+          <button class="btn btn-primary" type="button" onclick="submitBookQuote(event)" style="font-size:16px;padding:16px 32px;background:#f07020;color:#fff;border:none;border-radius:10px;font-weight:800;cursor:pointer">Send Quote Request</button>
         </form>
+        <script>
+        function submitBookQuote(e){
+          e.preventDefault();
+          var name = document.getElementById('bq-name').value;
+          var phone = document.getElementById('bq-phone').value;
+          var email = document.getElementById('bq-email').value;
+          var suburb = document.getElementById('bq-suburb').value;
+          var service = document.getElementById('bq-service').value;
+          var message = document.getElementById('bq-message').value;
+          var sub = encodeURIComponent('Quote Request - '+(service||'General')+' | '+(suburb||'Sydney'));
+          var body = encodeURIComponent('Name: '+name+'\nPhone: '+phone+'\nEmail: '+email+'\nSuburb: '+suburb+'\nService: '+service+'\n\nMessage:\n'+message);
+          window.open('mailto:service@sydneyautomationco.com.au?subject='+sub+'&body='+body);
+        }
+        </script>
       </div>
 
       <!-- CALL CTA -->
