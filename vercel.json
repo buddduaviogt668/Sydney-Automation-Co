@@ -5,6 +5,1991 @@
   "trailingSlash": false,
   "redirects": [
     {
+      "source": "/aged-care-and-healthcare-facilities-bondi-junction-dali-2-network-communication-and-bus-crashes",
+      "destination": "/dali-lighting-repair",
+      "permanent": true
+    },
+    {
+      "source": "/aged-care-and-healthcare-facilities-campbelltown-dynalite-daylight-harvesting-and-sensor-failure",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/aged-care-and-healthcare-facilities-castle-hill-c-bus-network-communication-and-bus-crashes",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/aged-care-and-healthcare-facilities-hornsby-c-bus-automated-schedule-and-timeclock-drift",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/aged-care-and-healthcare-facilities-hornsby-dynalite-afss-emergency-lighting-compliance",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/aged-care-and-healthcare-facilities-hornsby-dynalite-automated-schedule-and-timeclock-drift",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/aged-care-and-healthcare-facilities-liverpool-dali-2-afss-emergency-lighting-compliance",
+      "destination": "/dali-lighting-repair",
+      "permanent": true
+    },
+    {
+      "source": "/aged-care-and-healthcare-facilities-liverpool-dynalite-automated-schedule-and-timeclock-drift",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/aged-care-and-healthcare-facilities-macquarie-park-dali-2-network-communication-and-bus-crashes",
+      "destination": "/dali-lighting-repair",
+      "permanent": true
+    },
+    {
+      "source": "/aged-care-and-healthcare-facilities-manly-c-bus-automated-schedule-and-timeclock-drift",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/aged-care-and-healthcare-facilities-newtown-dali-2-afss-emergency-lighting-compliance",
+      "destination": "/dali-lighting-repair",
+      "permanent": true
+    },
+    {
+      "source": "/aged-care-and-healthcare-facilities-north-sydney-dali-2-automated-schedule-and-timeclock-drift",
+      "destination": "/dali-lighting-repair",
+      "permanent": true
+    },
+    {
+      "source": "/aged-care-and-healthcare-facilities-parramatta-c-bus-automated-schedule-and-timeclock-drift",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/aged-care-and-healthcare-facilities-parramatta-dynalite-automated-schedule-and-timeclock-drift",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/aged-care-and-healthcare-facilities-parramatta-dynalite-network-communication-and-bus-crashes",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/aged-care-and-healthcare-facilities-rhodes-dynalite-automated-schedule-and-timeclock-drift",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/aged-care-and-healthcare-facilities-strathfield-dali-2-automated-schedule-and-timeclock-drift",
+      "destination": "/dali-lighting-repair",
+      "permanent": true
+    },
+    {
+      "source": "/alexandria-c-bus-5504amp-lost-schedules-and-clock-drift",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/alexandria-dynalite-ddmc802-buzzing-or-clicking-noises",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/aquatic-centres-and-indoor-pools-box-hill-dynalite-network-communication-and-bus-crashes",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/aquatic-centres-and-indoor-pools-greystanes-c-bus-daylight-harvesting-and-sensor-failure",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/aquatic-centres-and-indoor-pools-kogarah-c-bus-network-communication-and-bus-crashes",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/aquatic-centres-and-indoor-pools-peakhurst-dali-2-afss-emergency-lighting-compliance",
+      "destination": "/dali-lighting-repair",
+      "permanent": true
+    },
+    {
+      "source": "/aquatic-centres-and-indoor-pools-quakers-hill-dali-2-automated-schedule-and-timeclock-drift",
+      "destination": "/dali-lighting-repair",
+      "permanent": true
+    },
+    {
+      "source": "/aquatic-centres-and-indoor-pools-ramsgate-dali-2-network-communication-and-bus-crashes",
+      "destination": "/dali-lighting-repair",
+      "permanent": true
+    },
+    {
+      "source": "/aquatic-centres-and-indoor-pools-riverstone-dali-2-network-communication-and-bus-crashes",
+      "destination": "/dali-lighting-repair",
+      "permanent": true
+    },
+    {
+      "source": "/aquatic-centres-and-indoor-pools-schofields-dali-2-afss-emergency-lighting-compliance",
+      "destination": "/dali-lighting-repair",
+      "permanent": true
+    },
+    {
+      "source": "/aquatic-centres-and-indoor-pools-schofields-dali-2-network-communication-and-bus-crashes",
+      "destination": "/dali-lighting-repair",
+      "permanent": true
+    },
+    {
+      "source": "/balgowlah-cbus-dynalite-repair-sydney",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/balgowlah-dynalite-ddmc802-frozen-or-unresponsive-interfaces",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/balmain-c-bus-5504amp-lost-schedules-and-clock-drift",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/balmain-c-bus-5508rvf-frozen-or-unresponsive-interfaces",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/balmoral-c-bus-5504amp-lost-schedules-and-clock-drift",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/balmoral-c-bus-5504amp-stuck-on-channels",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/baulkham-hills-dynalite-ddbc1200-frozen-or-unresponsive-interfaces",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/baulkham-hills-dynalite-ddmc802-blinking-or-flashing-led-codes",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/blog-dali-2-compliance-guide-sydney-building-managers.html",
+      "destination": "/dali-lighting-repair",
+      "permanent": true
+    },
+    {
+      "source": "/blog-eastern-suburbs-strata-lighting-automation.html",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/blog-future-automation-sydney-2026.html",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/blog-sutherland-shire-cbus-value-2026.html",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/blog-sutherland-shire-coastal-cbus-maintenance.html",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/boutique-retailers-and-showrooms-blacktown-dynalite-daylight-harvesting-and-sensor-failure",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/boutique-retailers-and-showrooms-hurstville-c-bus-emergency-lighting-afss-non-compliance",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/boutique-retailers-and-showrooms-penrith-c-bus-emergency-lighting-afss-non-compliance",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/boutique-retailers-and-showrooms-penrith-dynalite-network-burden-and-communication-crashes",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/boutique-retailers-and-showrooms-ryde-c-bus-daylight-harvesting-and-sensor-failure",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/boutique-retailers-and-showrooms-surry-hills-c-bus-emergency-lighting-afss-non-compliance",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/boutique-retailers-and-showrooms-surry-hills-c-bus-network-burden-and-communication-crashes",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/boutique-retailers-and-showrooms-sydney-cbd-dynalite-network-burden-and-communication-crashes",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/bundeena-cbus-dynalite-repair-sydney.html",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/bundeena-dynalite-repair-sydney",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/cammeray-cbus-dynalite-repair-sydney",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/car-dealerships-castle-hill-dynalite-automated-schedule-and-timeclock-drift",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/car-dealerships-epping-dynalite-afss-emergency-lighting-compliance",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/car-dealerships-north-sydney-dynalite-automated-schedule-and-timeclock-drift",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/car-dealerships-strathfield-dali-2-network-communication-and-bus-crashes",
+      "destination": "/dali-lighting-repair",
+      "permanent": true
+    },
+    {
+      "source": "/car-parks-and-transport-hubs-drummoyne-dynalite-afss-emergency-lighting-compliance",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/car-parks-and-transport-hubs-glebe-dali-2-network-communication-and-bus-crashes",
+      "destination": "/dali-lighting-repair",
+      "permanent": true
+    },
+    {
+      "source": "/car-parks-and-transport-hubs-gordon-dynalite-afss-emergency-lighting-compliance",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/car-parks-and-transport-hubs-kirribilli-c-bus-network-communication-and-bus-crashes",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/car-parks-and-transport-hubs-mosman-dali-2-afss-emergency-lighting-compliance",
+      "destination": "/dali-lighting-repair",
+      "permanent": true
+    },
+    {
+      "source": "/car-parks-and-transport-hubs-neutral-bay-dynalite-network-communication-and-bus-crashes",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/car-parks-and-transport-hubs-paddington-dali-2-automated-schedule-and-timeclock-drift",
+      "destination": "/dali-lighting-repair",
+      "permanent": true
+    },
+    {
+      "source": "/car-parks-and-transport-hubs-pyrmont-dynalite-network-communication-and-bus-crashes",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/car-parks-and-transport-hubs-st-ives-dali-2-daylight-harvesting-and-sensor-failure",
+      "destination": "/dali-lighting-repair",
+      "permanent": true
+    },
+    {
+      "source": "/car-parks-and-transport-hubs-surry-hills-c-bus-afss-emergency-lighting-compliance",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/car-parks-and-transport-hubs-turramurra-dynalite-automated-schedule-and-timeclock-drift",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/car-parks-and-transport-hubs-waterloo-dynalite-afss-emergency-lighting-compliance",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/casula-dynalite-repair-sydney.html",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/cbus-ipad-tablet-touch-screen-upgrade-sydney",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/cbus-programmer-electrician-darlinghurst.html",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/cbus-programmer-electrician-drummoyne.html",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/cbus-programmer-electrician-potts-point.html",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/cbus-programmer-electrician-pyrmont.html",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/childcare-centres-campbelltown-dynalite-network-communication-and-bus-crashes",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/childcare-centres-castle-hill-c-bus-daylight-harvesting-and-sensor-failure",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/childcare-centres-newtown-c-bus-daylight-harvesting-and-sensor-failure",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/childcare-centres-north-sydney-c-bus-afss-emergency-lighting-compliance",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/childcare-centres-rhodes-dynalite-automated-schedule-and-timeclock-drift",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/churches-and-places-of-worship-drummoyne-dynalite-automated-schedule-and-timeclock-drift",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/churches-and-places-of-worship-glebe-c-bus-network-communication-and-bus-crashes",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/churches-and-places-of-worship-glebe-dynalite-automated-schedule-and-timeclock-drift",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/churches-and-places-of-worship-gymea-c-bus-network-communication-and-bus-crashes",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/churches-and-places-of-worship-pyrmont-dynalite-network-communication-and-bus-crashes",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/cinemas-and-entertainment-venues-cremorne-c-bus-afss-emergency-lighting-compliance",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/cinemas-and-entertainment-venues-glebe-dynalite-afss-emergency-lighting-compliance",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/cinemas-and-entertainment-venues-gymea-c-bus-afss-emergency-lighting-compliance",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/cinemas-and-entertainment-venues-kirribilli-dali-2-afss-emergency-lighting-compliance",
+      "destination": "/dali-lighting-repair",
+      "permanent": true
+    },
+    {
+      "source": "/cinemas-and-entertainment-venues-leichhardt-dali-2-afss-emergency-lighting-compliance",
+      "destination": "/dali-lighting-repair",
+      "permanent": true
+    },
+    {
+      "source": "/cinemas-and-entertainment-venues-milsons-point-c-bus-daylight-harvesting-and-sensor-failure",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/cinemas-and-entertainment-venues-neutral-bay-dynalite-network-communication-and-bus-crashes",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/cinemas-and-entertainment-venues-pymble-c-bus-automated-schedule-and-timeclock-drift",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/cinemas-and-entertainment-venues-pyrmont-dynalite-daylight-harvesting-and-sensor-failure",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/clipsal-c-bus-5200whc2-surge-storm-damage-sutherland-shire.html",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/clipsal-c-bus-5500cn-surge-storm-damage-sydney-cbd.html",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/clipsal-c-bus-5500pc-buzzing-or-clicking-noises-north-shore.html",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/clipsal-c-bus-5504amp-surge-storm-damage-north-shore.html",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/clipsal-c-bus-5508rvf-stuck-on-channels-north-shore.html",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/clipsal-c-bus-l5508d2a-frozen-unresponsive-interfaces-north-shore.html",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/clipsal-c-bus-l5512rvf-lost-schedules-and-clock-drift-north-shore.html",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/clovelly-dynalite-ddbc1200-stuck-on-channels",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/clovelly-dynalite-ddmc802-stuck-on-channels",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/collaroy-dynalite-ddbc1200-blinking-or-flashing-led-codes",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/community-halls-and-neighbourhood-centres-beverly-hills-dynalite-afss-emergency-lighting-compliance",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/community-halls-and-neighbourhood-centres-collaroy-c-bus-automated-schedule-and-timeclock-drift",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/community-halls-and-neighbourhood-centres-dee-why-dali-2-automated-schedule-and-timeclock-drift",
+      "destination": "/dali-lighting-repair",
+      "permanent": true
+    },
+    {
+      "source": "/community-halls-and-neighbourhood-centres-kellyville-dynalite-daylight-harvesting-and-sensor-failure",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/community-halls-and-neighbourhood-centres-marsden-park-dali-2-afss-emergency-lighting-compliance",
+      "destination": "/dali-lighting-repair",
+      "permanent": true
+    },
+    {
+      "source": "/community-halls-and-neighbourhood-centres-peakhurst-dali-2-automated-schedule-and-timeclock-drift",
+      "destination": "/dali-lighting-repair",
+      "permanent": true
+    },
+    {
+      "source": "/community-halls-and-neighbourhood-centres-penshurst-c-bus-daylight-harvesting-and-sensor-failure",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/como-cbus-dynalite-repair-sydney.html",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/coogee-dynalite-ddmc802-blinking-or-flashing-led-codes",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/corporate-offices-and-boardrooms-north-sydney-network-burden-and-dynet-bus-crashes",
+      "destination": "/services",
+      "permanent": true
+    },
+    {
+      "source": "/corporate-offices-and-towers-bankstown-dali-2-network-burden-and-communication-crashes",
+      "destination": "/dali-lighting-repair",
+      "permanent": true
+    },
+    {
+      "source": "/corporate-offices-and-towers-blacktown-c-bus-emergency-lighting-afss-non-compliance",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/corporate-offices-and-towers-blacktown-dali-2-network-burden-and-communication-crashes",
+      "destination": "/dali-lighting-repair",
+      "permanent": true
+    },
+    {
+      "source": "/corporate-offices-and-towers-bondi-junction-dynalite-daylight-harvesting-and-sensor-failure",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/corporate-offices-and-towers-castle-hill-dynalite-automated-schedule-and-timeclock-drift",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/corporate-offices-and-towers-castle-hill-dynalite-network-burden-and-communication-crashes",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/corporate-offices-and-towers-cronulla-c-bus-emergency-lighting-afss-non-compliance",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/corporate-offices-and-towers-hurstville-c-bus-automated-schedule-and-timeclock-drift",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/corporate-offices-and-towers-macquarie-park-dali-2-daylight-harvesting-and-sensor-failure",
+      "destination": "/dali-lighting-repair",
+      "permanent": true
+    },
+    {
+      "source": "/corporate-offices-and-towers-mascot-dali-2-emergency-lighting-afss-non-compliance",
+      "destination": "/dali-lighting-repair",
+      "permanent": true
+    },
+    {
+      "source": "/corporate-offices-and-towers-newtown-dali-2-daylight-harvesting-and-sensor-failure",
+      "destination": "/dali-lighting-repair",
+      "permanent": true
+    },
+    {
+      "source": "/corporate-offices-and-towers-newtown-dynalite-emergency-lighting-afss-non-compliance",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/corporate-offices-and-towers-parramatta-dali-2-daylight-harvesting-and-sensor-failure",
+      "destination": "/dali-lighting-repair",
+      "permanent": true
+    },
+    {
+      "source": "/corporate-offices-and-towers-ryde-dynalite-daylight-harvesting-and-sensor-failure",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/corporate-offices-and-towers-sydney-cbd-dali-2-network-burden-and-communication-crashes",
+      "destination": "/dali-lighting-repair",
+      "permanent": true
+    },
+    {
+      "source": "/corporate-offices-and-towers-sydney-cbd-dynalite-network-burden-and-communication-crashes",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/coworking-spaces-and-serviced-offices-glebe-dynalite-network-communication-and-bus-crashes",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/coworking-spaces-and-serviced-offices-kirribilli-dynalite-afss-emergency-lighting-compliance",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/coworking-spaces-and-serviced-offices-st-ives-c-bus-daylight-harvesting-and-sensor-failure",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/coworking-spaces-and-serviced-offices-turramurra-dynalite-daylight-harvesting-and-sensor-failure",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/coworking-spaces-and-serviced-offices-zetland-c-bus-daylight-harvesting-and-sensor-failure",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/cremorne-c-bus-5508rvf-blinking-or-flashing-led-codes",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/cremorne-c-bus-5508rvf-frozen-or-unresponsive-interfaces",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/cremorne-dynalite-ddmc802-blinking-or-flashing-led-codes",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/crestron-vs-cbus-sydney-commercial-lighting",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/cronulla-c-bus-5508rvf-buzzing-or-clicking-noises",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/cronulla-dynalite-ddmc802-lost-schedules-and-clock-drift",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/curl-curl-dynalite-ddmc802-frozen-or-unresponsive-interfaces",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/darling-point-c-bus-5508rvf-frozen-or-unresponsive-interfaces",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/darling-point-dynalite-ddbc1200-blinking-or-flashing-led-codes",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/data-centres-and-it-facilities-blacktown-dali-2-automated-schedule-and-timeclock-drift",
+      "destination": "/dali-lighting-repair",
+      "permanent": true
+    },
+    {
+      "source": "/data-centres-and-it-facilities-campbelltown-dali-2-network-communication-and-bus-crashes",
+      "destination": "/dali-lighting-repair",
+      "permanent": true
+    },
+    {
+      "source": "/data-centres-and-it-facilities-castle-hill-dali-2-automated-schedule-and-timeclock-drift",
+      "destination": "/dali-lighting-repair",
+      "permanent": true
+    },
+    {
+      "source": "/data-centres-and-it-facilities-castle-hill-dynalite-network-communication-and-bus-crashes",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/data-centres-and-it-facilities-chatswood-c-bus-automated-schedule-and-timeclock-drift",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/data-centres-and-it-facilities-chatswood-c-bus-network-communication-and-bus-crashes",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/data-centres-and-it-facilities-hurstville-c-bus-afss-emergency-lighting-compliance",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/data-centres-and-it-facilities-liverpool-dynalite-daylight-harvesting-and-sensor-failure",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/data-centres-and-it-facilities-manly-dali-2-daylight-harvesting-and-sensor-failure",
+      "destination": "/dali-lighting-repair",
+      "permanent": true
+    },
+    {
+      "source": "/data-centres-and-it-facilities-rhodes-c-bus-network-communication-and-bus-crashes",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/data-centres-and-it-facilities-rhodes-dali-2-automated-schedule-and-timeclock-drift",
+      "destination": "/dali-lighting-repair",
+      "permanent": true
+    },
+    {
+      "source": "/data-centres-and-it-facilities-strathfield-dali-2-afss-emergency-lighting-compliance",
+      "destination": "/dali-lighting-repair",
+      "permanent": true
+    },
+    {
+      "source": "/data-centres-and-it-facilities-strathfield-dynalite-network-communication-and-bus-crashes",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/data-centres-and-tech-hubs-bondi-junction-c-bus-daylight-harvesting-and-sensor-failure",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/data-centres-and-tech-hubs-castle-hill-dali-2-daylight-harvesting-and-sensor-failure",
+      "destination": "/dali-lighting-repair",
+      "permanent": true
+    },
+    {
+      "source": "/data-centres-and-tech-hubs-cronulla-c-bus-automated-schedule-and-timeclock-drift",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/data-centres-and-tech-hubs-liverpool-dali-2-network-burden-and-communication-crashes",
+      "destination": "/dali-lighting-repair",
+      "permanent": true
+    },
+    {
+      "source": "/data-centres-and-tech-hubs-liverpool-dynalite-network-burden-and-communication-crashes",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/data-centres-and-tech-hubs-manly-dynalite-daylight-harvesting-and-sensor-failure",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/data-centres-and-tech-hubs-ryde-c-bus-network-burden-and-communication-crashes",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/data-centres-and-tech-hubs-ryde-dali-2-network-burden-and-communication-crashes",
+      "destination": "/dali-lighting-repair",
+      "permanent": true
+    },
+    {
+      "source": "/data-centres-and-tech-hubs-sydney-cbd-c-bus-automated-schedule-and-timeclock-drift",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/data-centres-and-tech-hubs-sydney-cbd-dynalite-emergency-lighting-afss-non-compliance",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/double-bay-c-bus-5508rvf-stuck-on-channels",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/dural-c-bus-5504amp-stuck-on-channels",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/dynalite-ddbc1200-surge-storm-damage-sutherland-shire.html",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/dynalite-ddmc802-surge-storm-damage-eastern-suburbs.html",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/dynalite-ddrc1220-buzzing-or-clicking-noises-sydney-cbd.html",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/dynalite-ddrc1220-lost-schedules-and-clock-drift-eastern-suburbs.html",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/dynalite-ddrc1220-lost-schedules-and-clock-drift-sutherland-shire.html",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/dynalite-dmdr12-320-surge-storm-damage-sydney-cbd.html",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/engadine-c-bus-5508rvf-frozen-or-unresponsive-interfaces",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/engadine-c-bus-5508rvf-stuck-on-channels",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/epping-dynalite-ddmc802-frozen-or-unresponsive-interfaces",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/freshwater-c-bus-5504amp-lost-schedules-and-clock-drift",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/function-and-event-centres-beverley-park-c-bus-daylight-harvesting-and-sensor-failure",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/function-and-event-centres-box-hill-c-bus-network-communication-and-bus-crashes",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/function-and-event-centres-greystanes-dynalite-afss-emergency-lighting-compliance",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/function-and-event-centres-merrylands-c-bus-daylight-harvesting-and-sensor-failure",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/function-and-event-centres-narrabeen-dali-2-network-communication-and-bus-crashes",
+      "destination": "/dali-lighting-repair",
+      "permanent": true
+    },
+    {
+      "source": "/function-and-event-centres-peakhurst-c-bus-daylight-harvesting-and-sensor-failure",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/function-and-event-centres-riverstone-c-bus-automated-schedule-and-timeclock-drift",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/funeral-homes-and-memorial-chapels-beverley-park-c-bus-afss-emergency-lighting-compliance",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/funeral-homes-and-memorial-chapels-beverly-hills-dynalite-daylight-harvesting-and-sensor-failure",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/funeral-homes-and-memorial-chapels-forestville-dynalite-daylight-harvesting-and-sensor-failure",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/funeral-homes-and-memorial-chapels-kogarah-dali-2-afss-emergency-lighting-compliance",
+      "destination": "/dali-lighting-repair",
+      "permanent": true
+    },
+    {
+      "source": "/funeral-homes-and-memorial-chapels-mona-vale-c-bus-automated-schedule-and-timeclock-drift",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/funeral-homes-and-memorial-chapels-schofields-dali-2-afss-emergency-lighting-compliance",
+      "destination": "/dali-lighting-repair",
+      "permanent": true
+    },
+    {
+      "source": "/funeral-homes-and-memorial-chapels-woolooware-c-bus-network-communication-and-bus-crashes",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/government-and-heritage-buildings-bankstown-c-bus-network-burden-and-communication-crashes",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/government-and-heritage-buildings-cronulla-dali-2-daylight-harvesting-and-sensor-failure",
+      "destination": "/dali-lighting-repair",
+      "permanent": true
+    },
+    {
+      "source": "/government-and-heritage-buildings-macquarie-park-dali-2-automated-schedule-and-timeclock-drift",
+      "destination": "/dali-lighting-repair",
+      "permanent": true
+    },
+    {
+      "source": "/government-and-heritage-buildings-macquarie-park-dynalite-daylight-harvesting-and-sensor-failure",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/government-and-heritage-buildings-manly-dynalite-emergency-lighting-afss-non-compliance",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/government-and-heritage-buildings-north-sydney-c-bus-emergency-lighting-afss-non-compliance",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/government-and-heritage-buildings-ryde-dali-2-automated-schedule-and-timeclock-drift",
+      "destination": "/dali-lighting-repair",
+      "permanent": true
+    },
+    {
+      "source": "/government-and-heritage-buildings-ryde-dali-2-network-burden-and-communication-crashes",
+      "destination": "/dali-lighting-repair",
+      "permanent": true
+    },
+    {
+      "source": "/government-and-heritage-buildings-ryde-dynalite-automated-schedule-and-timeclock-drift",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/government-buildings-and-councils-campbelltown-c-bus-network-communication-and-bus-crashes",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/government-buildings-and-councils-campbelltown-dynalite-daylight-harvesting-and-sensor-failure",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/government-buildings-and-councils-hurstville-dynalite-automated-schedule-and-timeclock-drift",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/government-buildings-and-councils-liverpool-dynalite-network-communication-and-bus-crashes",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/government-buildings-and-councils-manly-dynalite-daylight-harvesting-and-sensor-failure",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/government-buildings-and-councils-newtown-dali-2-automated-schedule-and-timeclock-drift",
+      "destination": "/dali-lighting-repair",
+      "permanent": true
+    },
+    {
+      "source": "/government-buildings-and-councils-north-sydney-dynalite-automated-schedule-and-timeclock-drift",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/gymea-c-bus-5508rvf-buzzing-or-clicking-noises",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/gyms-and-fitness-centres-blacktown-dynalite-automated-schedule-and-timeclock-drift",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/gyms-and-fitness-centres-bondi-junction-dynalite-afss-emergency-lighting-compliance",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/gyms-and-fitness-centres-chatswood-c-bus-afss-emergency-lighting-compliance",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/gyms-and-fitness-centres-chatswood-c-bus-network-communication-and-bus-crashes",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/gyms-and-fitness-centres-manly-dynalite-network-communication-and-bus-crashes",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/gyms-and-fitness-centres-newtown-c-bus-network-communication-and-bus-crashes",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/gyms-and-fitness-centres-newtown-dynalite-network-communication-and-bus-crashes",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/haberfield-dynalite-ddbc1200-buzzing-or-clicking-noises",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/haberfield-dynalite-ddmc802-blinking-or-flashing-led-codes",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/high-rise-strata-and-luxury-apartments-bondi-junction-dynalite-automated-schedule-and-timeclock-drift",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/high-rise-strata-and-luxury-apartments-campbelltown-dynalite-emergency-lighting-afss-non-compliance",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/high-rise-strata-and-luxury-apartments-castle-hill-c-bus-network-burden-and-communication-crashes",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/high-rise-strata-and-luxury-apartments-chatswood-c-bus-network-burden-and-communication-crashes",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/high-rise-strata-and-luxury-apartments-macquarie-park-dynalite-network-burden-and-communication-crashes",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/high-rise-strata-and-luxury-apartments-mascot-c-bus-daylight-harvesting-and-sensor-failure",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/high-rise-strata-and-luxury-apartments-ryde-c-bus-daylight-harvesting-and-sensor-failure",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/holsworthy-dynalite-repair-sydney.html",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/hospitality-hotels-and-venues-north-sydney-timeclock-and-schedule-overrides",
+      "destination": "/services",
+      "permanent": true
+    },
+    {
+      "source": "/hospitals-and-medical-centres-alexandria-dynalite-daylight-harvesting-and-sensor-failure",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/hospitals-and-medical-centres-bondi-junction-dynalite-automated-schedule-and-timeclock-drift",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/hospitals-and-medical-centres-liverpool-dynalite-network-burden-and-communication-crashes",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/hospitals-and-medical-centres-mascot-c-bus-automated-schedule-and-timeclock-drift",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/hospitals-and-medical-centres-north-sydney-dynalite-daylight-harvesting-and-sensor-failure",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/hospitals-and-medical-centres-parramatta-c-bus-daylight-harvesting-and-sensor-failure",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/hospitals-and-medical-centres-penrith-dynalite-emergency-lighting-afss-non-compliance",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/hospitals-and-medical-centres-surry-hills-dali-2-emergency-lighting-afss-non-compliance",
+      "destination": "/dali-lighting-repair",
+      "permanent": true
+    },
+    {
+      "source": "/hotels-and-serviced-apartments-lighting-automation-sydney",
+      "destination": "/services",
+      "permanent": true
+    },
+    {
+      "source": "/hotels-and-serviced-apartments-rhodes-dynalite-automated-schedule-and-timeclock-drift",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/hotels-and-serviced-apartments-strathfield-dynalite-afss-emergency-lighting-compliance",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/industrial-and-warehouse-facilities-blacktown-dynalite-automated-schedule-and-timeclock-drift",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/industrial-and-warehouse-facilities-castle-hill-c-bus-automated-schedule-and-timeclock-drift",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/industrial-and-warehouse-facilities-chatswood-dynalite-afss-emergency-lighting-compliance",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/industrial-and-warehouse-facilities-hornsby-dali-2-daylight-harvesting-and-sensor-failure",
+      "destination": "/dali-lighting-repair",
+      "permanent": true
+    },
+    {
+      "source": "/industrial-and-warehouse-facilities-macquarie-park-c-bus-afss-emergency-lighting-compliance",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/industrial-and-warehouse-facilities-strathfield-dali-2-automated-schedule-and-timeclock-drift",
+      "destination": "/dali-lighting-repair",
+      "permanent": true
+    },
+    {
+      "source": "/industrial-automation-high-bay-lighting-western-sydney.html",
+      "destination": "/services",
+      "permanent": true
+    },
+    {
+      "source": "/industrial-logistics-and-warehousing-alexandria-dali-2-daylight-harvesting-and-sensor-failure",
+      "destination": "/dali-lighting-repair",
+      "permanent": true
+    },
+    {
+      "source": "/industrial-logistics-and-warehousing-campbelltown-dynalite-automated-schedule-and-timeclock-drift",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/industrial-logistics-and-warehousing-castle-hill-c-bus-emergency-lighting-afss-non-compliance",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/industrial-logistics-and-warehousing-hurstville-dali-2-network-burden-and-communication-crashes",
+      "destination": "/dali-lighting-repair",
+      "permanent": true
+    },
+    {
+      "source": "/industrial-logistics-and-warehousing-manly-c-bus-automated-schedule-and-timeclock-drift",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/industrial-logistics-and-warehousing-manly-dali-2-network-burden-and-communication-crashes",
+      "destination": "/dali-lighting-repair",
+      "permanent": true
+    },
+    {
+      "source": "/industrial-logistics-and-warehousing-penrith-c-bus-automated-schedule-and-timeclock-drift",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/invisible-automation-heritage-retrofitting-paddington-glebe",
+      "destination": "/services",
+      "permanent": true
+    },
+    {
+      "source": "/jannali-cbus-dynalite-repair-sydney.html",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/kareela-dynalite-repair-sydney.html",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/kellyville-dynalite-ddmc802-stuck-on-channels",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/killara-cbus-dynalite-repair-sydney",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/kingsford-cbus-dynalite-repair-sydney.html",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/lane-cove-dynalite-ddmc802-blinking-or-flashing-led-codes",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/lane-cove-dynalite-ddmc802-buzzing-or-clicking-noises",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/leichhardt-c-bus-5508rvf-lost-schedules-and-clock-drift",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/leichhardt-dynalite-ddmc802-stuck-on-channels",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/libraries-and-cultural-institutions-beverley-park-dynalite-automated-schedule-and-timeclock-drift",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/libraries-and-cultural-institutions-beverly-hills-dynalite-automated-schedule-and-timeclock-drift",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/libraries-and-cultural-institutions-dee-why-c-bus-afss-emergency-lighting-compliance",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/libraries-and-cultural-institutions-kingsgrove-dali-2-afss-emergency-lighting-compliance",
+      "destination": "/dali-lighting-repair",
+      "permanent": true
+    },
+    {
+      "source": "/libraries-and-cultural-institutions-warriewood-dali-2-network-communication-and-bus-crashes",
+      "destination": "/dali-lighting-repair",
+      "permanent": true
+    },
+    {
+      "source": "/little-bay-cbus-dynalite-repair-sydney",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/lugarno-dynalite-ddmc802-frozen-or-unresponsive-interfaces",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/lugarno-dynalite-ddmc802-stuck-on-channels",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/marrickville-c-bus-5504amp-lost-schedules-and-clock-drift",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/medical-centres-and-clinics-cremorne-c-bus-network-communication-and-bus-crashes",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/medical-centres-and-clinics-milsons-point-dali-2-daylight-harvesting-and-sensor-failure",
+      "destination": "/dali-lighting-repair",
+      "permanent": true
+    },
+    {
+      "source": "/medical-centres-and-clinics-mosman-c-bus-automated-schedule-and-timeclock-drift",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/medical-centres-and-clinics-mosman-c-bus-daylight-harvesting-and-sensor-failure",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/medical-centres-and-clinics-pymble-dali-2-network-communication-and-bus-crashes",
+      "destination": "/dali-lighting-repair",
+      "permanent": true
+    },
+    {
+      "source": "/medical-centres-and-clinics-pymble-dynalite-daylight-harvesting-and-sensor-failure",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/medical-centres-and-clinics-zetland-c-bus-daylight-harvesting-and-sensor-failure",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/mona-vale-c-bus-5508rvf-blinking-or-flashing-led-codes",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/mosman-c-bus-5504amp-lost-schedules-and-clock-drift",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/mosman-dynalite-ddbc1200-stuck-on-channels",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/neutral-bay-c-bus-5504amp-blinking-or-flashing-led-codes",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/neutral-bay-dynalite-ddmc802-frozen-or-unresponsive-interfaces",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/newport-dynalite-ddmc802-stuck-on-channels",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/newtown-c-bus-5504amp-stuck-on-channels",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/newtown-dynalite-ddmc802-blinking-or-flashing-led-codes",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/nightclubs-and-late-night-venues-frenchs-forest-dynalite-afss-emergency-lighting-compliance",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/nightclubs-and-late-night-venues-peakhurst-dynalite-afss-emergency-lighting-compliance",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/northbridge-c-bus-5504amp-frozen-or-unresponsive-interfaces",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/northbridge-c-bus-5508rvf-blinking-or-flashing-led-codes",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/northbridge-c-bus-repair",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/northbridge-dynalite-ddmc802-blinking-or-flashing-led-codes",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/northbridge-emergency-lighting",
+      "destination": "/services",
+      "permanent": true
+    },
+    {
+      "source": "/oatlands-c-bus-5508rvf-buzzing-or-clicking-noises",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/oatley-c-bus-5504amp-frozen-or-unresponsive-interfaces",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/oatley-dynalite-ddbc1200-frozen-or-unresponsive-interfaces",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/oatley-dynalite-ddbc1200-lost-schedules-and-clock-drift",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/paddington-c-bus-5504amp-frozen-or-unresponsive-interfaces",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/paddington-c-bus-5504amp-lost-schedules-and-clock-drift",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/palm-beach-c-bus-5504amp-blinking-or-flashing-led-codes",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/parramatta-dynalite-ddmc802-frozen-or-unresponsive-inter",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/point-piper-dynalite-ddbc1200-blinking-or-flashing-led-codes",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/private-schools-and-colleges-beverley-park-c-bus-afss-emergency-lighting-compliance",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/private-schools-and-colleges-beverly-hills-dali-2-afss-emergency-lighting-compliance",
+      "destination": "/dali-lighting-repair",
+      "permanent": true
+    },
+    {
+      "source": "/private-schools-and-colleges-marsden-park-dynalite-automated-schedule-and-timeclock-drift",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/private-schools-and-colleges-peakhurst-dynalite-daylight-harvesting-and-sensor-failure",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/private-schools-and-colleges-penshurst-dali-2-network-communication-and-bus-crashes",
+      "destination": "/dali-lighting-repair",
+      "permanent": true
+    },
+    {
+      "source": "/pubs-clubs-and-rsls-campbelltown-dynalite-daylight-harvesting-and-sensor-failure",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/pubs-clubs-and-rsls-castle-hill-c-bus-daylight-harvesting-and-sensor-failure",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/pubs-clubs-and-rsls-castle-hill-dynalite-daylight-harvesting-and-sensor-failure",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/pubs-clubs-and-rsls-chatswood-c-bus-daylight-harvesting-and-sensor-failure",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/pubs-clubs-and-rsls-cronulla-dali-2-automated-schedule-and-timeclock-drift",
+      "destination": "/dali-lighting-repair",
+      "permanent": true
+    },
+    {
+      "source": "/pubs-clubs-and-rsls-hurstville-dali-2-daylight-harvesting-and-sensor-failure",
+      "destination": "/dali-lighting-repair",
+      "permanent": true
+    },
+    {
+      "source": "/pubs-clubs-and-rsls-newtown-dynalite-emergency-lighting-afss-non-compliance",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/pubs-clubs-and-rsls-parramatta-dali-2-automated-schedule-and-timeclock-drift",
+      "destination": "/dali-lighting-repair",
+      "permanent": true
+    },
+    {
+      "source": "/pubs-clubs-and-rsls-ryde-dynalite-automated-schedule-and-timeclock-drift",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/pubs-clubs-and-rsls-ryde-dynalite-daylight-harvesting-and-sensor-failure",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/pubs-clubs-and-rsls-ryde-dynalite-network-burden-and-communication-crashes",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/pubs-clubs-and-rsls-surry-hills-dali-2-network-burden-and-communication-crashes",
+      "destination": "/dali-lighting-repair",
+      "permanent": true
+    },
+    {
+      "source": "/pymble-cbus-dynalite-repair-sydney.html",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/pyrmont-c-bus-5504amp-frozen-or-unresponsive-interfaces",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/pyrmont-cbus-dynalite-repair-sydney",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/pyrmont-dynalite-ddmc802-frozen-or-unresponsive-interfaces",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/pyrmont-dynalite-ddmc802-lost-schedules-and-clock-drift",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/queenscliff-c-bus-5508rvf-frozen-or-unresponsive-interfaces",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/redfern-c-bus-5504amp-buzzing-or-clicking-noises",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/redfern-dynalite-ddbc1200-lost-schedules-and-clock-drift",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/residential-dynalite-servicing",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/restaurants-and-cafes-engadine-dynalite-daylight-harvesting-and-sensor-failure",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/restaurants-and-cafes-zetland-dali-2-network-communication-and-bus-crashes",
+      "destination": "/dali-lighting-repair",
+      "permanent": true
+    },
+    {
+      "source": "/retail-and-high-end-showrooms-parramatta-sensor-timeouts-and-daylight-harvesting-faults",
+      "destination": "/services",
+      "permanent": true
+    },
+    {
+      "source": "/retirement-villages-caringbah-dali-2-network-communication-and-bus-crashes",
+      "destination": "/dali-lighting-repair",
+      "permanent": true
+    },
+    {
+      "source": "/retirement-villages-gordon-dynalite-automated-schedule-and-timeclock-drift",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/retirement-villages-woollahra-dali-2-network-communication-and-bus-crashes",
+      "destination": "/dali-lighting-repair",
+      "permanent": true
+    },
+    {
+      "source": "/retirement-villages-zetland-dali-2-automated-schedule-and-timeclock-drift",
+      "destination": "/dali-lighting-repair",
+      "permanent": true
+    },
+    {
+      "source": "/rose-bay-dynalite-ddmc802-blinking-or-flashing-led-codes",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/rosebery-dynalite-ddbc1200-stuck-on-channels",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/schools-and-learning-hubs-blacktown-c-bus-daylight-harvesting-and-sensor-failure",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/schools-and-learning-hubs-bondi-junction-dali-2-daylight-harvesting-and-sensor-failure",
+      "destination": "/dali-lighting-repair",
+      "permanent": true
+    },
+    {
+      "source": "/schools-and-learning-hubs-campbelltown-dynalite-daylight-harvesting-and-sensor-failure",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/schools-and-learning-hubs-cronulla-dynalite-network-burden-and-communication-crashes",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/schools-and-learning-hubs-liverpool-dali-2-automated-schedule-and-timeclock-drift",
+      "destination": "/dali-lighting-repair",
+      "permanent": true
+    },
+    {
+      "source": "/schools-and-learning-hubs-manly-dynalite-network-burden-and-communication-crashes",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/schools-and-learning-hubs-mascot-c-bus-automated-schedule-and-timeclock-drift",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/schools-and-learning-hubs-parramatta-c-bus-network-burden-and-communication-crashes",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/seaforth-c-bus-5508rvf-buzzing-or-clicking-noises",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/shopping-centre-food-courts-beverley-park-c-bus-afss-emergency-lighting-compliance",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/shopping-centre-food-courts-collaroy-dynalite-daylight-harvesting-and-sensor-failure",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/shopping-centre-food-courts-kingsgrove-dali-2-daylight-harvesting-and-sensor-failure",
+      "destination": "/dali-lighting-repair",
+      "permanent": true
+    },
+    {
+      "source": "/shopping-centres-and-malls-alexandria-c-bus-automated-schedule-and-timeclock-drift",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/shopping-centres-and-malls-castle-hill-dynalite-network-burden-and-communication-crashes",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/shopping-centres-and-malls-cronulla-dali-2-automated-schedule-and-timeclock-drift",
+      "destination": "/dali-lighting-repair",
+      "permanent": true
+    },
+    {
+      "source": "/shopping-centres-and-malls-macquarie-park-c-bus-automated-schedule-and-timeclock-drift",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/shopping-centres-and-malls-mascot-dynalite-daylight-harvesting-and-sensor-failure",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/shopping-centres-and-malls-newtown-dali-2-automated-schedule-and-timeclock-drift",
+      "destination": "/dali-lighting-repair",
+      "permanent": true
+    },
+    {
+      "source": "/shopping-centres-and-malls-newtown-dynalite-network-burden-and-communication-crashes",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/shopping-centres-and-malls-surry-hills-dali-2-automated-schedule-and-timeclock-drift",
+      "destination": "/dali-lighting-repair",
+      "permanent": true
+    },
+    {
+      "source": "/shopping-centres-and-malls-sydney-cbd-c-bus-automated-schedule-and-timeclock-drift",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/sporting-venues-and-stadiums-bondi-junction-dali-2-automated-schedule-and-timeclock-drift",
+      "destination": "/dali-lighting-repair",
+      "permanent": true
+    },
+    {
+      "source": "/sporting-venues-and-stadiums-campbelltown-dali-2-automated-schedule-and-timeclock-drift",
+      "destination": "/dali-lighting-repair",
+      "permanent": true
+    },
+    {
+      "source": "/sporting-venues-and-stadiums-chatswood-dali-2-automated-schedule-and-timeclock-drift",
+      "destination": "/dali-lighting-repair",
+      "permanent": true
+    },
+    {
+      "source": "/sporting-venues-and-stadiums-hornsby-dynalite-automated-schedule-and-timeclock-drift",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/sporting-venues-and-stadiums-hurstville-c-bus-afss-emergency-lighting-compliance",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/sporting-venues-and-stadiums-hurstville-dali-2-daylight-harvesting-and-sensor-failure",
+      "destination": "/dali-lighting-repair",
+      "permanent": true
+    },
+    {
+      "source": "/sporting-venues-and-stadiums-liverpool-dynalite-network-communication-and-bus-crashes",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/sporting-venues-and-stadiums-macquarie-park-dynalite-automated-schedule-and-timeclock-drift",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/sporting-venues-and-stadiums-manly-dynalite-automated-schedule-and-timeclock-drift",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/sporting-venues-and-stadiums-mascot-dynalite-network-communication-and-bus-crashes",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/strata-and-building-management-north-sydney-sensor-timeouts-and-daylight-harvesting-faults",
+      "destination": "/services",
+      "permanent": true
+    },
+    {
+      "source": "/strathfield-dynalite-ddbc1200-stuck-on-channels",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/suburbs/bangor/",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/suburbs/menai/",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/surry-hills-c-bus-5508rvf-stuck-on-channels",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/clipsal-c-bus-5084txp-blinking-led-codes-sydney-cbd",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/clipsal-c-bus-5084txp-buzzing-or-clicking-noises-eastern-suburbs.html",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/clipsal-c-bus-5084txp-stuck-on-channels-sutherland-shire",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/clipsal-c-bus-5084txp-surge-storm-damage-eastern-suburbs.html",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/tech-library/clipsal-c-bus-L5504D2U-frozen-unresponsive-interfaces-north-shore",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/universities-and-tafes-blacktown-c-bus-afss-emergency-lighting-compliance",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/universities-and-tafes-campbelltown-dali-2-network-communication-and-bus-crashes",
+      "destination": "/dali-lighting-repair",
+      "permanent": true
+    },
+    {
+      "source": "/universities-and-tafes-hurstville-c-bus-afss-emergency-lighting-compliance",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/universities-and-tafes-liverpool-dali-2-daylight-harvesting-and-sensor-failure",
+      "destination": "/dali-lighting-repair",
+      "permanent": true
+    },
+    {
+      "source": "/universities-and-tafes-macquarie-park-dali-2-automated-schedule-and-timeclock-drift",
+      "destination": "/dali-lighting-repair",
+      "permanent": true
+    },
+    {
+      "source": "/universities-and-tafes-mascot-c-bus-automated-schedule-and-timeclock-drift",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/universities-and-tafes-north-sydney-c-bus-automated-schedule-and-timeclock-drift",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/universities-and-tafes-parramatta-dali-2-automated-schedule-and-timeclock-drift",
+      "destination": "/dali-lighting-repair",
+      "permanent": true
+    },
+    {
+      "source": "/universities-and-tafes-rhodes-dynalite-automated-schedule-and-timeclock-drift",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/vaucluse-c-bus-repair",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/warehouse-lighting-control-eastern-creek",
+      "destination": "/services",
+      "permanent": true
+    },
+    {
+      "source": "/warehouse-lighting-control-western-sydney",
+      "destination": "/services",
+      "permanent": true
+    },
+    {
+      "source": "/waterloo-c-bus-5504amp-stuck-on-channels",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/waterloo-cbus-dynalite-repair-sydney.html",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/waterloo-dynalite-ddmc802-frozen-or-unresponsive-interfaces",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/winston-hills-c-bus-5508rvf-stuck-on-channels",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/wollstonecraft-cbus-dynalite-repair-sydney.html",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/woollahra-dynalite-ddbc1200-buzzing-or-clicking-noises",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/zetland-c-bus-5504amp-stuck-on-channels",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
       "source": "/contact.html",
       "destination": "/contact",
       "permanent": true
