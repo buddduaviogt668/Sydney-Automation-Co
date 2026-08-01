@@ -269,7 +269,7 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://sydneyautomationco.com.au/c-bus-programmer-eastern-suburbs</loc>
+    <loc>https://sydneyautomationco.com.au/lighting-control-eastern-suburbs-strata</loc>
     <lastmod>2026-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -305,7 +305,7 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://sydneyautomationco.com.au/c-bus-programmer-hills-district</loc>
+    <loc>https://sydneyautomationco.com.au/locations</loc>
     <lastmod>2026-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -323,7 +323,7 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://sydneyautomationco.com.au/c-bus-programmer-inner-west</loc>
+    <loc>https://sydneyautomationco.com.au/locations</loc>
     <lastmod>2026-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -389,7 +389,7 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://sydneyautomationco.com.au/c-bus-programmer-north-shore</loc>
+    <loc>https://sydneyautomationco.com.au/cbus-automation-north-shore-sydney</loc>
     <lastmod>2026-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -401,7 +401,7 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://sydneyautomationco.com.au/c-bus-programmer-northern-beaches</loc>
+    <loc>https://sydneyautomationco.com.au/locations</loc>
     <lastmod>2026-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -419,7 +419,7 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://sydneyautomationco.com.au/c-bus-programmer-parramatta</loc>
+    <loc>https://sydneyautomationco.com.au/institutional-lighting-control-parramatta-western-sydney</loc>
     <lastmod>2026-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -467,7 +467,7 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://sydneyautomationco.com.au/c-bus-programmer-st-george</loc>
+    <loc>https://sydneyautomationco.com.au/locations</loc>
     <lastmod>2026-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -485,13 +485,13 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://sydneyautomationco.com.au/c-bus-programmer-sutherland-shire</loc>
+    <loc>https://sydneyautomationco.com.au/shire</loc>
     <lastmod>2026-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://sydneyautomationco.com.au/c-bus-programmer-sydney-cbd</loc>
+    <loc>https://sydneyautomationco.com.au/smart-home-sydney-cbd</loc>
     <lastmod>2026-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -3007,7 +3007,7 @@
   </url>
 
   <url>
-    <loc>https://sydneyautomationco.com.au/c-bus-programmer-eastern-suburbs.html</loc>
+    <loc>https://sydneyautomationco.com.au/lighting-control-eastern-suburbs-strata</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -3043,7 +3043,7 @@
   </url>
 
   <url>
-    <loc>https://sydneyautomationco.com.au/c-bus-programmer-hills-district.html</loc>
+    <loc>https://sydneyautomationco.com.au/locations</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -3061,7 +3061,7 @@
   </url>
 
   <url>
-    <loc>https://sydneyautomationco.com.au/c-bus-programmer-inner-west.html</loc>
+    <loc>https://sydneyautomationco.com.au/locations</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -3127,7 +3127,7 @@
   </url>
 
   <url>
-    <loc>https://sydneyautomationco.com.au/c-bus-programmer-north-shore.html</loc>
+    <loc>https://sydneyautomationco.com.au/cbus-automation-north-shore-sydney</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -3139,7 +3139,7 @@
   </url>
 
   <url>
-    <loc>https://sydneyautomationco.com.au/c-bus-programmer-northern-beaches.html</loc>
+    <loc>https://sydneyautomationco.com.au/locations</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -3157,7 +3157,7 @@
   </url>
 
   <url>
-    <loc>https://sydneyautomationco.com.au/c-bus-programmer-parramatta.html</loc>
+    <loc>https://sydneyautomationco.com.au/institutional-lighting-control-parramatta-western-sydney</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -3205,7 +3205,7 @@
   </url>
 
   <url>
-    <loc>https://sydneyautomationco.com.au/c-bus-programmer-st-george.html</loc>
+    <loc>https://sydneyautomationco.com.au/locations</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -3223,13 +3223,13 @@
   </url>
 
   <url>
-    <loc>https://sydneyautomationco.com.au/c-bus-programmer-sutherland-shire.html</loc>
+    <loc>https://sydneyautomationco.com.au/shire</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://sydneyautomationco.com.au/c-bus-programmer-sydney-cbd.html</loc>
+    <loc>https://sydneyautomationco.com.au/smart-home-sydney-cbd</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

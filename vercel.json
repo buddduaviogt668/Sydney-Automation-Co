@@ -3771,7 +3771,7 @@
     },
     {
       "source": "/commercial-tower-lighting-automation-sydney-cbd",
-      "destination": "/c-bus-programmer-sydney-cbd",
+      "destination": "/smart-home-sydney-cbd",
       "permanent": true
     },
     {
@@ -3786,12 +3786,12 @@
     },
     {
       "source": "/cbus-dynalite-fault-finding-eastern-suburbs",
-      "destination": "/c-bus-programmer-eastern-suburbs",
+      "destination": "/lighting-control-eastern-suburbs-strata",
       "permanent": true
     },
     {
       "source": "/dynalite-cbus-artarmon",
-      "destination": "/c-bus-programmer-north-shore",
+      "destination": "/cbus-automation-north-shore-sydney",
       "permanent": true
     },
     {
@@ -3852,6 +3852,96 @@
     {
       "source": "/services-hub",
       "destination": "/services",
+      "permanent": true
+    },
+    {
+      "source": "/c-bus-programmer-sutherland-shire",
+      "destination": "/shire",
+      "permanent": true
+    },
+    {
+      "source": "/c-bus-programmer-sutherland-shire.html",
+      "destination": "/shire",
+      "permanent": true
+    },
+    {
+      "source": "/c-bus-programmer-north-shore",
+      "destination": "/cbus-automation-north-shore-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/c-bus-programmer-north-shore.html",
+      "destination": "/cbus-automation-north-shore-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/c-bus-programmer-eastern-suburbs",
+      "destination": "/lighting-control-eastern-suburbs-strata",
+      "permanent": true
+    },
+    {
+      "source": "/c-bus-programmer-eastern-suburbs.html",
+      "destination": "/lighting-control-eastern-suburbs-strata",
+      "permanent": true
+    },
+    {
+      "source": "/c-bus-programmer-inner-west",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/c-bus-programmer-inner-west.html",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/c-bus-programmer-northern-beaches",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/c-bus-programmer-northern-beaches.html",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/c-bus-programmer-hills-district",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/c-bus-programmer-hills-district.html",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/c-bus-programmer-parramatta",
+      "destination": "/institutional-lighting-control-parramatta-western-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/c-bus-programmer-parramatta.html",
+      "destination": "/institutional-lighting-control-parramatta-western-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/c-bus-programmer-st-george",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/c-bus-programmer-st-george.html",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/c-bus-programmer-sydney-cbd",
+      "destination": "/smart-home-sydney-cbd",
+      "permanent": true
+    },
+    {
+      "source": "/c-bus-programmer-sydney-cbd.html",
+      "destination": "/smart-home-sydney-cbd",
       "permanent": true
     }
   ],
