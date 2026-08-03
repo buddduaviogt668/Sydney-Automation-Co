@@ -118,6 +118,15 @@
     }
     </script>
     <link rel="canonical" href="https://sydneyautomationco.com.au/automation-company-sydney" />
+
+    <!-- Google Analytics GA4 -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-7EZFB6GRJ3"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-7EZFB6GRJ3');
+    </script>
 </head>
 <body>
     <!-- PROMO BANNER -->
@@ -646,6 +655,18 @@
                     track.scrollBy({ left: 360, behavior: 'smooth' });
                 });
             }
+
+            // Call Click Tracking
+            document.addEventListener('click', function(e){
+                var link = e.target.closest ? e.target.closest('a[href^="tel:"]') : null;
+                if(link && typeof gtag === 'function'){
+                    gtag('event', 'call_click', {
+                        'event_category': 'engagement',
+                        'event_label': link.getAttribute('href'),
+                        'page_location': window.location.pathname
+                    });
+                }
+            });
         })();
     </script>
     <script defer src="/perf-init.js"></script>
