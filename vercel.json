@@ -5,6 +5,366 @@
   "trailingSlash": false,
   "redirects": [
     {
+      "source": "/industrial-logistics-and-warehousing-liverpool-dali-2-daylight-harvesting-and-sensor-failure.html",
+      "destination": "/dali-lighting-repair",
+      "permanent": true
+    },
+    {
+      "source": "/industrial-logistics-and-warehousing-liverpool-dali-2-daylight-harvesting-and-sensor-failure",
+      "destination": "/dali-lighting-repair",
+      "permanent": true
+    },
+    {
+      "source": "/corporate-offices-and-towers-hurstville-dynalite-network-burden-and-communication-crashes.html",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/corporate-offices-and-towers-hurstville-dynalite-network-burden-and-communication-crashes",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/hospitals-and-medical-centres-ryde-dali-2-network-burden-and-communication-crashes.html",
+      "destination": "/dali-lighting-repair",
+      "permanent": true
+    },
+    {
+      "source": "/hospitals-and-medical-centres-ryde-dali-2-network-burden-and-communication-crashes",
+      "destination": "/dali-lighting-repair",
+      "permanent": true
+    },
+    {
+      "source": "/schools-and-learning-hubs-cronulla-dynalite-emergency-lighting-afss-non-compliance.html",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/schools-and-learning-hubs-cronulla-dynalite-emergency-lighting-afss-non-compliance",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/data-centres-and-it-facilities-blacktown-dali-2-daylight-harvesting-and-sensor-failure.html",
+      "destination": "/dali-lighting-repair",
+      "permanent": true
+    },
+    {
+      "source": "/data-centres-and-it-facilities-blacktown-dali-2-daylight-harvesting-and-sensor-failure",
+      "destination": "/dali-lighting-repair",
+      "permanent": true
+    },
+    {
+      "source": "/pubs-clubs-and-rsls-mascot-c-bus-network-burden-and-communication-crashes.html",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/pubs-clubs-and-rsls-mascot-c-bus-network-burden-and-communication-crashes",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/aged-care-and-healthcare-facilities-newtown-dali-2-network-communication-and-bus-crashes.html",
+      "destination": "/dali-lighting-repair",
+      "permanent": true
+    },
+    {
+      "source": "/aged-care-and-healthcare-facilities-newtown-dali-2-network-communication-and-bus-crashes",
+      "destination": "/dali-lighting-repair",
+      "permanent": true
+    },
+    {
+      "source": "/car-dealerships-hurstville-dali-2-daylight-harvesting-and-sensor-failure.html",
+      "destination": "/dali-lighting-repair",
+      "permanent": true
+    },
+    {
+      "source": "/car-dealerships-hurstville-dali-2-daylight-harvesting-and-sensor-failure",
+      "destination": "/dali-lighting-repair",
+      "permanent": true
+    },
+    {
+      "source": "/hotels-and-serviced-apartments-campbelltown-dali-2-afss-emergency-lighting-compliance.html",
+      "destination": "/dali-lighting-repair",
+      "permanent": true
+    },
+    {
+      "source": "/hotels-and-serviced-apartments-campbelltown-dali-2-afss-emergency-lighting-compliance",
+      "destination": "/dali-lighting-repair",
+      "permanent": true
+    },
+    {
+      "source": "/hotels-and-serviced-apartments-campbelltown-c-bus-network-communication-and-bus-crashes.html",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/hotels-and-serviced-apartments-campbelltown-c-bus-network-communication-and-bus-crashes",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/melbourne-dali-lighting-control-compliance.html",
+      "destination": "/dali-lighting-repair",
+      "permanent": true
+    },
+    {
+      "source": "/melbourne-dali-lighting-control-compliance",
+      "destination": "/dali-lighting-repair",
+      "permanent": true
+    },
+    {
+      "source": "/dynalite-repair-avoca-beach.html",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/dynalite-repair-avoca-beach",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/dynalite-repair-terrigal.html",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/dynalite-repair-terrigal",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/dynalite-repair-mittagong.html",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/dynalite-repair-mittagong",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/dynalite-repair-leura.html",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/dynalite-repair-leura",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/dynalite-repair-bowral.html",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/dynalite-repair-bowral",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/cbus-repair-mount-keira.html",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/cbus-repair-mount-keira",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/cbus-repair-balgownie.html",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/cbus-repair-balgownie",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/cbus-repair-terrigal.html",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/cbus-repair-terrigal",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/cbus-repair-wentworth-falls.html",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/cbus-repair-wentworth-falls",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/cbus-repair-leura.html",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/cbus-repair-leura",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/cbus-repair-moss-vale.html",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/cbus-repair-moss-vale",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/cbus-repair-mittagong.html",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/cbus-repair-mittagong",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/cbus-repair-kiama.html",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/cbus-repair-kiama",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/cbus-repair-gerringong.html",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/cbus-repair-gerringong",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/cbus-repair-bundanoon.html",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/cbus-repair-bundanoon",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/cbus-repair-bowral.html",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/cbus-repair-bowral",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/cbus-repair-berry.html",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/cbus-repair-berry",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/cbus-repair-berrima.html",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/cbus-repair-berrima",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/dynalite-programmer-caringbah-south.html",
+      "destination": "/dynalite-programmer-caringbah-south",
+      "permanent": true
+    },
+    {
+      "source": "/dynalite-programmer-burraneer.html",
+      "destination": "/dynalite-programmer-burraneer",
+      "permanent": true
+    },
+    {
+      "source": "/dynalite-programmer-birchgrove.html",
+      "destination": "/dynalite-programmer-birchgrove",
+      "permanent": true
+    },
+    {
+      "source": "/dynalite-programmer-bellevue-hill.html",
+      "destination": "/dynalite-programmer-bellevue-hill",
+      "permanent": true
+    },
+    {
+      "source": "/c-bus-programmer-whale-beach.html",
+      "destination": "/c-bus-programmer-whale-beach",
+      "permanent": true
+    },
+    {
+      "source": "/c-bus-programmer-roseville.html",
+      "destination": "/c-bus-programmer-roseville",
+      "permanent": true
+    },
+    {
+      "source": "/c-bus-programmer-potts-point.html",
+      "destination": "/c-bus-programmer-potts-point",
+      "permanent": true
+    },
+    {
+      "source": "/c-bus-programmer-double-bay.html",
+      "destination": "/c-bus-programmer-double-bay",
+      "permanent": true
+    },
+    {
+      "source": "/dynalite-repair-wollongong.html",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/dynalite-repair-wollongong",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/dynalite-repair-kiama.html",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/dynalite-repair-kiama",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/dynalite-repair-burradoo",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/dynalite-repair-burradoo.html",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
       "source": "/aged-care-and-healthcare-facilities-bondi-junction-dali-2-network-communication-and-bus-crashes",
       "destination": "/dali-lighting-repair",
       "permanent": true
@@ -3942,6 +4302,81 @@
     {
       "source": "/c-bus-programmer-sydney-cbd.html",
       "destination": "/smart-home-sydney-cbd",
+      "permanent": true
+    },
+    {
+      "source": "/c-bus-programmer-sydney.html",
+      "destination": "/c-bus-programmer-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/cbus-repair-sydney.html",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/cbus-automation-north-shore-sydney.html",
+      "destination": "/cbus-automation-north-shore-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/c-bus-programmer-bronte.html",
+      "destination": "/c-bus-programmer-bronte",
+      "permanent": true
+    },
+    {
+      "source": "/c-bus-programmer-burraneer.html",
+      "destination": "/c-bus-programmer-burraneer",
+      "permanent": true
+    },
+    {
+      "source": "/c-bus-programmer-lindfield.html",
+      "destination": "/c-bus-programmer-lindfield",
+      "permanent": true
+    },
+    {
+      "source": "/c-bus-programmer-manly.html",
+      "destination": "/c-bus-programmer-manly",
+      "permanent": true
+    },
+    {
+      "source": "/c-bus-programmer-neutral-bay.html",
+      "destination": "/c-bus-programmer-neutral-bay",
+      "permanent": true
+    },
+    {
+      "source": "/c-bus-programmer-vaucluse.html",
+      "destination": "/c-bus-programmer-vaucluse",
+      "permanent": true
+    },
+    {
+      "source": "/c-bus-programmer-wahroonga.html",
+      "destination": "/c-bus-programmer-wahroonga",
+      "permanent": true
+    },
+    {
+      "source": "/dynalite-programmer-cremorne.html",
+      "destination": "/dynalite-programmer-cremorne",
+      "permanent": true
+    },
+    {
+      "source": "/dynalite-programmer-eastern-suburbs.html",
+      "destination": "/dynalite-programmer-eastern-suburbs",
+      "permanent": true
+    },
+    {
+      "source": "/dynalite-programmer-gordon.html",
+      "destination": "/dynalite-programmer-gordon",
+      "permanent": true
+    },
+    {
+      "source": "/dynalite-programmer-gymea-bay.html",
+      "destination": "/dynalite-programmer-gymea-bay",
+      "permanent": true
+    },
+    {
+      "source": "/dynalite-programmer-st-ives.html",
+      "destination": "/dynalite-programmer-st-ives",
       "permanent": true
     }
   ],
