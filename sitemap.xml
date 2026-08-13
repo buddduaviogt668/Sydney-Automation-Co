@@ -163,10 +163,22 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://sydneyautomationco.com.au/c-bus-programmer-north-sydney</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://sydneyautomationco.com.au/c-bus-programmer-sydney</loc>
     <lastmod>2026-08-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://sydneyautomationco.com.au/c-bus-programming-sydney</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://sydneyautomationco.com.au/c-bus-vs-dynalite-vs-knx-comparison-sydney</loc>
@@ -277,14 +289,50 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://sydneyautomationco.com.au/cbus-fault-finding-sydney</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://sydneyautomationco.com.au/cbus-ghost-messages-sydney</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://sydneyautomationco.com.au/cbus-keypad-flashing-pink-red-sydney</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://sydneyautomationco.com.au/cbus-lights-stuck-on-emergency-fix-sydney</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://sydneyautomationco.com.au/cbus-maintenance-sydney</loc>
     <lastmod>2026-08-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://sydneyautomationco.com.au/cbus-network-burden-failure-sydney</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://sydneyautomationco.com.au/cbus-pci-interface-blinking-red-sydney</loc>
     <lastmod>2026-08-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://sydneyautomationco.com.au/cbus-power-supply-faults-sydney</loc>
+    <lastmod>2026-08-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -319,6 +367,12 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://sydneyautomationco.com.au/cbus-repair-vs-replacement-cost-sydney</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://sydneyautomationco.com.au/cbus-scene-programming-guide-sutherland-shire</loc>
     <lastmod>2026-08-01</lastmod>
     <changefreq>monthly</changefreq>
@@ -345,6 +399,12 @@
   <url>
     <loc>https://sydneyautomationco.com.au/cbus-specialist-sydney</loc>
     <lastmod>2026-08-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://sydneyautomationco.com.au/cbus-toolkit-connection-sydney</loc>
+    <lastmod>2026-08-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -421,6 +481,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://sydneyautomationco.com.au/dali-emergency-lighting-afss-sydney</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://sydneyautomationco.com.au/dali-lighting-control-system-sydney</loc>
     <lastmod>2026-08-01</lastmod>
     <changefreq>monthly</changefreq>
@@ -463,8 +529,26 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://sydneyautomationco.com.au/dynalite-emergency-lighting-afss-sydney</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://sydneyautomationco.com.au/dynalite-fault-finding-sydney-common-faults</loc>
     <lastmod>2026-08-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://sydneyautomationco.com.au/dynalite-keypad-not-responding-sydney</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://sydneyautomationco.com.au/dynalite-lost-programming-recovery-sydney</loc>
+    <lastmod>2026-08-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -475,8 +559,20 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://sydneyautomationco.com.au/dynalite-network-burden-failure-sydney</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://sydneyautomationco.com.au/dynalite-not-working-sydney</loc>
     <lastmod>2026-08-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://sydneyautomationco.com.au/dynalite-programmer-north-sydney</loc>
+    <lastmod>2026-08-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -495,6 +591,12 @@
   <url>
     <loc>https://sydneyautomationco.com.au/dynalite-service-contract-sydney</loc>
     <lastmod>2026-08-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://sydneyautomationco.com.au/dynalite-troubleshooting-guide-sydney</loc>
+    <lastmod>2026-08-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -757,6 +859,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://sydneyautomationco.com.au/lighting-system-power-outage-reset-sydney</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://sydneyautomationco.com.au/locations</loc>
     <lastmod>2026-08-01</lastmod>
     <changefreq>monthly</changefreq>
@@ -771,6 +879,12 @@
   <url>
     <loc>https://sydneyautomationco.com.au/luxury-strata-automation-eastern-suburbs</loc>
     <lastmod>2026-08-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://sydneyautomationco.com.au/modernizing-old-dynalite-sydney</loc>
+    <lastmod>2026-08-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1115,12 +1229,6 @@
     <lastmod>2026-08-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://sydneyautomationco.com.au/tech-library</loc>
-    <lastmod>2026-08-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://sydneyautomationco.com.au/terms-of-service</loc>
