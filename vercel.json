@@ -3593,6 +3593,51 @@
       "source": "/privacy.html",
       "destination": "/privacy-policy",
       "permanent": true
+    },
+    {
+      "source": "/dali-lighting-control-system-sydney.html",
+      "destination": "/dali-lighting-control-system-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/smart-home-automation-pymble.html",
+      "destination": "/smart-home-automation-pymble",
+      "permanent": true
+    },
+    {
+      "source": "/smart-home-automation-neutral-bay.html",
+      "destination": "/smart-home-automation-neutral-bay",
+      "permanent": true
+    },
+    {
+      "source": "/smart-home-automation-st-ives.html",
+      "destination": "/smart-home-automation-st-ives",
+      "permanent": true
+    },
+    {
+      "source": "/smart-home-installation-bellevue-hill.html",
+      "destination": "/smart-home-installation-bellevue-hill",
+      "permanent": true
+    },
+    {
+      "source": "/lighting-control-service-sydney.html",
+      "destination": "/lighting-control-service-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/dynalite-repair-neutral-bay.html",
+      "destination": "/dynalite-repair-neutral-bay",
+      "permanent": true
+    },
+    {
+      "source": "/smart-home-automation-companies-sydney.html",
+      "destination": "/smart-home-automation-companies-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/electricians.html",
+      "destination": "/electricians",
+      "permanent": true
     }
   ],
   "headers": [
