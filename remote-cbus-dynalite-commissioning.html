@@ -166,7 +166,7 @@
 <button class="btn btn-primary" type="submit">Send project details →</button>
 </form>
 <script>
-        function submitRemoteAssessment(e){e.preventDefault();var body='Name/company: '+document.getElementById('remote-name').value+'%0D%0AEmail: '+document.getElementById('remote-email').value+'%0D%0ALocation: '+document.getElementById('remote-location').value+'%0D%0APlatform: '+document.getElementById('remote-platform').value+'%0D%0ARemote access: '+document.getElementById('remote-access').value+'%0D%0AScope: '+document.getElementById('remote-details').value;window.location.href='mailto:service@sydneyautomationco.com.au?subject=National remote project assessment&body='+encodeURIComponent(body);}
+        function submitRemoteAssessment(e){e.preventDefault();var body='Name/company: '+document.getElementById('remote-name').value+'\nEmail: '+document.getElementById('remote-email').value+'\nLocation: '+document.getElementById('remote-location').value+'\nPlatform: '+document.getElementById('remote-platform').value+'\nRemote access: '+document.getElementById('remote-access').value+'\nScope: '+document.getElementById('remote-details').value;if(typeof gtag==='function'){gtag('event','generate_lead',{event_category:'national_remote',event_label:document.getElementById('remote-platform').value+' - '+document.getElementById('remote-location').value});}window.location.href='mailto:service@sydneyautomationco.com.au?subject=National remote project assessment&body='+encodeURIComponent(body);}
         </script>
 </div>
 </div>
