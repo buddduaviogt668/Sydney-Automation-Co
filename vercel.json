@@ -121,7 +121,7 @@
     },
     {
       "source": "/melbourne-dali-lighting-control-compliance",
-      "destination": "/dali-lighting-repair",
+      "destination": "/dali2-compliance-nsw-commercial",
       "permanent": true
     },
     {
@@ -3295,11 +3295,6 @@
       "permanent": true
     },
     {
-      "source": "/c-bus-repairs-sydney.html",
-      "destination": "/cbus-repair-sydney",
-      "permanent": true
-    },
-    {
       "source": "/cbus-fault-finder",
       "destination": "/cbus-fault-finding-sydney",
       "permanent": true
@@ -3552,6 +3547,51 @@
     {
       "source": "/dynalite-programmer-st-ives.html",
       "destination": "/dynalite-programmer-st-ives",
+      "permanent": true
+    },
+    {
+      "source": "/services-hub.html",
+      "destination": "/services",
+      "permanent": true
+    },
+    {
+      "source": "/dynalite-programmer-kirribilli",
+      "destination": "/dynalite-programmer-north-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/c-bus-programmer-neutral-bay",
+      "destination": "/c-bus-programmer-north-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/dynalite-programmer-sydney-cbd",
+      "destination": "/dynalite-programmer-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/dynalite-programmer-north-shore",
+      "destination": "/dynalite-programmer-north-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/dali-2-lighting-control-commercial-buildings",
+      "destination": "/dali-2-lighting-control-implementation-compliance",
+      "permanent": true
+    },
+    {
+      "source": "/dali-2-lighting-control-commercial-buildings.html",
+      "destination": "/dali-2-lighting-control-implementation-compliance",
+      "permanent": true
+    },
+    {
+      "source": "/privacy",
+      "destination": "/privacy-policy",
+      "permanent": true
+    },
+    {
+      "source": "/privacy.html",
+      "destination": "/privacy-policy",
       "permanent": true
     }
   ],
