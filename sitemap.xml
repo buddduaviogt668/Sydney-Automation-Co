@@ -523,12 +523,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://sydneyautomationco.com.au/dali-2-lighting-control-commercial-buildings</loc>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://sydneyautomationco.com.au/dali-2-lighting-control-implementation-compliance</loc>
     <lastmod>2026-08-01</lastmod>
     <changefreq>monthly</changefreq>
@@ -931,12 +925,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://sydneyautomationco.com.au/privacy</loc>
-    <lastmod>2026-08-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://sydneyautomationco.com.au/privacy-policy</loc>
     <lastmod>2026-08-01</lastmod>
     <changefreq>monthly</changefreq>
@@ -1277,5 +1265,35 @@
     <lastmod>2026-08-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://sydneyautomationco.com.au/remote-cbus-programming-australia</loc>
+    <lastmod>2026-08-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://sydneyautomationco.com.au/remote-dynalite-programming-australia</loc>
+    <lastmod>2026-08-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://sydneyautomationco.com.au/cbus-trade-partner-support-australia</loc>
+    <lastmod>2026-08-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://sydneyautomationco.com.au/remote-cbus-fault-diagnosis-australia</loc>
+    <lastmod>2026-08-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://sydneyautomationco.com.au/cbus-project-file-recovery-australia</loc>
+    <lastmod>2026-08-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
   </url>
 </urlset>
