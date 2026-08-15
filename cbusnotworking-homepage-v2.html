@@ -1666,5 +1666,62 @@ document.querySelectorAll('a[href^="tel:"],a[href^="sms:"],a[href*="wa.me"]').fo
   });
 })();
 </script>
+
+<!-- Consent-based exit callback prompt. No personal details are collected until the visitor submits. -->
+<div class="exit-modal" id="exit-callback-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="exit-callback-title">
+  <div class="exit-modal-backdrop" data-exit-close></div>
+  <div class="exit-modal-card">
+    <button class="exit-modal-close" type="button" aria-label="Close callback form" data-exit-close>×</button>
+    <div class="section-label">Before You Go</div>
+    <h2 id="exit-callback-title">Want us to call you about the fault?</h2>
+    <p>Leave your name and phone number and the Sydney Automation Co service team will call you back. For a system that is down now, call <a href="tel:0422469739">0422 469 739</a>.</p>
+    <form class="exit-callback-form" id="exit-callback-form" action="https://formsubmit.co/service@sydneyautomationco.com.au" method="POST">
+      <input type="hidden" name="_subject" value="C-Bus callback request — exit capture">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="https://cbusnotworking.com.au/#contact">
+      <input type="hidden" name="source" value="cbusnotworking.com.au-exit-callback">
+      <input type="hidden" name="page_intent" value="C-Bus callback request">
+      <label for="exit-name">Your name</label>
+      <input id="exit-name" name="name" type="text" autocomplete="name" required>
+      <label for="exit-phone">Phone number</label>
+      <input id="exit-phone" name="phone" type="tel" autocomplete="tel" required>
+      <label class="exit-consent"><input type="checkbox" name="callback_consent" value="I consent to being contacted about this enquiry" required> <span>I agree to be contacted about this enquiry. We do not sell your details.</span></label>
+      <button type="submit" class="btn-primary">Request a callback</button>
+    </form>
+    <button type="button" class="exit-no-thanks" data-exit-close>No thanks</button>
+  </div>
+</div>
+
+<style id="cnw-exit-capture-styles">
+.exit-modal{display:none;position:fixed;inset:0;z-index:3000;align-items:center;justify-content:center;padding:1rem}
+.exit-modal.is-open{display:flex}
+.exit-modal-backdrop{position:absolute;inset:0;background:rgba(2,8,17,.82);backdrop-filter:blur(5px)}
+.exit-modal-card{position:relative;z-index:1;width:min(100%,30rem);max-width:30rem;background:#0D1A2D;border:1px solid rgba(255,122,61,.45);border-radius:14px;padding:2rem;box-shadow:0 25px 80px rgba(0,0,0,.45)}
+.exit-modal-card h2{font-family:'Barlow Condensed',sans-serif;font-size:clamp(2rem,6vw,3rem);line-height:1;margin:.5rem 0 .8rem;text-transform:uppercase}
+.exit-modal-card p{color:#B9C7D9;line-height:1.6;margin-bottom:1.2rem}.exit-modal-card p a{color:#FF9A6C;font-weight:700}
+.exit-modal-close{position:absolute;top:.65rem;right:.8rem;border:0;background:transparent;color:#CBD7E7;font-size:2rem;line-height:1;cursor:pointer}.exit-modal-close:hover{color:#fff}
+.exit-callback-form{display:grid;gap:.55rem}.exit-callback-form label{font-size:.85rem;color:#D8E2EF;font-weight:600}.exit-callback-form input[type=text],.exit-callback-form input[type=tel]{width:100%;padding:.75rem .85rem;border-radius:5px;border:1px solid rgba(255,255,255,.18);background:#07111F;color:#fff;font:inherit}.exit-callback-form input:focus{outline:3px solid #FFD3BD;outline-offset:2px}.exit-callback-form .btn-primary{margin-top:.55rem;border:0;cursor:pointer;padding:.85rem 1.1rem;font:inherit;font-weight:700}.exit-consent{display:flex!important;align-items:flex-start;gap:.5rem;margin-top:.5rem;font-size:.76rem!important;font-weight:400!important;color:#AFC0D8!important;line-height:1.45}.exit-consent input{margin-top:.2rem;accent-color:#E85C1A}.exit-no-thanks{display:block;margin:.9rem auto 0;border:0;background:transparent;color:#93A6BF;text-decoration:underline;cursor:pointer;font:inherit;font-size:.85rem}
+@media(max-width:600px){.exit-modal-card{padding:1.5rem}.exit-modal-card h2{font-size:2.3rem}}
+</style>
+
+<script id="cnw-arrival-exit-capture">
+(function(){
+  var arrivalKey='cnw_arrival_recorded';
+  var params=new URLSearchParams(window.location.search);
+  var arrival={source:params.get('utm_source')||'direct',medium:params.get('utm_medium')||'',campaign:params.get('utm_campaign')||'',gclid:params.get('gclid')||'',referrer:document.referrer||'',landing_path:location.pathname,first_seen:new Date().toISOString()};
+  try{if(!sessionStorage.getItem(arrivalKey)){sessionStorage.setItem(arrivalKey,JSON.stringify(arrival));if(typeof window.gtag==='function')window.gtag('event','landing_arrival',arrival);if(Array.isArray(window.dataLayer))window.dataLayer.push(Object.assign({event:'landing_arrival'},arrival));}}catch(e){}
+  var modal=document.getElementById('exit-callback-modal');
+  var form=document.getElementById('exit-callback-form');
+  if(!modal||!form)return;
+  var closedKey='cnw_exit_prompt_closed';
+  var opened=false;
+  function openModal(){if(opened)return;try{if(sessionStorage.getItem(closedKey))return;}catch(e){}opened=true;modal.classList.add('is-open');modal.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';var first=document.getElementById('exit-name');if(first)first.focus();if(typeof window.gtag==='function')window.gtag('event','exit_callback_prompt_view',{event_category:'lead_generation'});}
+  function closeModal(){modal.classList.remove('is-open');modal.setAttribute('aria-hidden','true');document.body.style.overflow='';try{sessionStorage.setItem(closedKey,'1')}catch(e){}}
+  document.querySelectorAll('[data-exit-close]').forEach(function(el){el.addEventListener('click',closeModal)});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&modal.classList.contains('is-open'))closeModal()});
+  document.addEventListener('mouseout',function(e){if(e.clientY<=0)openModal()});
+  form.addEventListener('submit',function(){if(typeof window.gtag==='function')window.gtag('event','generate_lead',{event_category:'lead_generation',event_label:'exit_callback_form'});if(Array.isArray(window.dataLayer))window.dataLayer.push({event:'exit_callback_submit',event_category:'lead_generation'});});
+})();
+</script>
 </body>
 </html>
