@@ -21,3 +21,9 @@ Sydney Automation Co. now loads `/sac-event-tracking.js` on the homepage, compar
 In Google Analytics, open **Admin → Data display → Events**, search for the events above, and mark `phone_click`, `quote_click`, `booking_click`, `form_submit`, and `generate_lead` as key events. For page-by-page reporting, open **Reports → Engagement → Events** or create an Explore report using `Event name` as the row and `Landing page + query string` or `Page path and screen class` as the dimension.
 
 The most useful first comparison is a 28-day report grouped by page path and event name for `/`, `/cbus-repair-sydney`, `/dynalite-repair-sydney`, `/cbus-upgrade-sydney`, and `/cbus-vs-dynalite`.
+
+## Expanded coverage
+
+The shared tracker was added to 195 previously untracked root-level HTML pages. Combined with the five pages already tracked, 200 root-level pages now load the tracker. Four utility/legal pages were intentionally excluded: `404.html`, `accessibility.html`, `privacy-policy.html`, and `terms-of-service.html`.
+
+Every tracked root page contains the existing GA4 property ID, exactly one reference to `/sac-event-tracking.js`, and `git diff --check` passes. The tracker continues to use the same private event names documented above.
