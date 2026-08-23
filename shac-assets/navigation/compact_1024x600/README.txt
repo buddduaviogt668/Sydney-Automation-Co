@@ -1,1 +1,1 @@
-Compact 1024 x 600 SHAC Studio navigation controls. HOME is 85 x 44 px, BACK is 74 x 43 px, and NEXT is 100 x 50 px, matching the measured small button placements on the Home background. Labels are exactly HOME, BACK, and NEXT.
+Compact 1024 x 600 SHAC Studio navigation controls. SVG sizes match the small Home-background placements: HOME 85 x 44 px, BACK 74 x 43 px, NEXT 100 x 50 px. Import the SVGs first. If the 5500AC2 renders them blank, import the matching files in png_fallback instead; those are rasterized RGBA PNGs and require no SVG text or vector rendering.
