@@ -1,0 +1,1 @@
+Compact 1024 x 600 SHAC Studio navigation controls. HOME is 85 x 44 px, BACK is 74 x 43 px, and NEXT is 100 x 50 px, matching the measured small button placements on the Home background. Labels are exactly HOME, BACK, and NEXT.
