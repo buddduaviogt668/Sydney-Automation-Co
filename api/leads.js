@@ -85,6 +85,7 @@ module.exports = async function handler(req, res) {
   ].join('\\n');
 
   try {
+    let jobDelivered = false;
     const jobSystemUrl = process.env.JOB_SYSTEM_URL;
     const jobSystemToken = process.env.JOB_SYSTEM_INGEST_TOKEN;
     if (jobSystemUrl && jobSystemToken) {
@@ -94,8 +95,11 @@ module.exports = async function handler(req, res) {
         body: JSON.stringify({ path, name, phone, email, location, contactPreference, system, urgency, service, message, sourcePage, submissionId: clean(body.submissionId, 120) }),
       });
       const jobResult = await jobResponse.json().catch(() => ({}));
-      if (jobResponse.ok && jobResult.ok) return json(res, 200, { ok: true, id: jobResult.id, provider: 'job-system' });
-      console.error('Job-system lead delivery failed', jobResponse.status, jobResult);
+      if (jobResponse.ok && jobResult.ok) {
+        jobDelivered = true;
+      } else {
+        console.error('Job-system lead delivery failed', jobResponse.status, jobResult);
+      }
     }
 
     if (apiKey && from) {
@@ -109,7 +113,7 @@ module.exports = async function handler(req, res) {
         console.error('Resend lead delivery failed', response.status, result);
         return json(res, 502, { ok: false, error: 'lead_delivery_failed' });
       }
-      return json(res, 200, { ok: true, id: result.id || 'accepted', provider: 'resend' });
+      return json(res, 200, { ok: true, id: result.id || 'accepted', provider: jobDelivered ? 'job-system+resend' : 'resend' });
     }
 
     const formSubmit = await fetch(`https://formsubmit.co/ajax/${encodeURIComponent(to)}`, {
@@ -137,7 +141,7 @@ module.exports = async function handler(req, res) {
       console.error('FormSubmit lead delivery failed', formSubmit.status, formResult);
       return json(res, 502, { ok: false, error: 'lead_delivery_failed' });
     }
-    return json(res, 200, { ok: true, id: 'accepted', provider: 'formsubmit' });
+    return json(res, 200, { ok: true, id: 'accepted', provider: jobDelivered ? 'job-system+formsubmit' : 'formsubmit' });
   } catch (error) {
     console.error('Lead delivery exception', error);
     return json(res, 502, { ok: false, error: 'lead_delivery_failed' });
