@@ -428,7 +428,7 @@ nav{position:fixed;top:40px;left:0;right:0;z-index:1150;background:rgba(14,31,61
     <div class="hero-overlay"></div>
     <div class="hero-content">
       <h1>Request a <span class="accent">Service Call</span></h1>
-      <p>Same-day C-Bus, Dynalite, DALI &amp; RAPIX fault finding with George. We assess your system, deliver a fault report, then scope and quote any work. No guesswork.</p>
+      <p>Same-day C-Bus, Dynalite, DALI &amp; RAPIX fault finding with George. We assess your system, deliver a fault report, then scope and quote any work. No guesswork. We specialise in lighting-control systems—not industrial PLC automation or general BMS installation.</p>
       <div class="trust-pills">
         <span class="trust-pill">⚡ Same-Day Available</span>
         <span class="trust-pill">★★★★★ 14 Google Reviews</span>
@@ -481,35 +481,22 @@ nav{position:fixed;top:40px;left:0;right:0;z-index:1150;background:rgba(14,31,61
           <div><input id="bq-phone" type="tel" placeholder="Phone Number" required style="width:100%;padding:12px 16px;background:#0e1f3d;border:1px solid #2a4a80;border-radius:10px;color:#f0f4ff;font-size:15px;font-family:Barlow,sans-serif;outline:none"></div>
           <div><input id="bq-email" type="email" placeholder="Email Address" style="width:100%;padding:12px 16px;background:#0e1f3d;border:1px solid #2a4a80;border-radius:10px;color:#f0f4ff;font-size:15px;font-family:Barlow,sans-serif;outline:none"></div>
           <div><input id="bq-suburb" type="text" placeholder="Suburb (e.g. Menai, Bondi, Parramatta)" style="width:100%;padding:12px 16px;background:#0e1f3d;border:1px solid #2a4a80;border-radius:10px;color:#f0f4ff;font-size:15px;font-family:Barlow,sans-serif;outline:none"></div>
-          <div><select id="bq-service" style="width:100%;padding:12px 16px;background:#0e1f3d;border:1px solid #2a4a80;border-radius:10px;color:#f0f4ff;font-size:15px;font-family:Barlow,sans-serif;outline:none">
-            <option value="">Select a service...</option>
-            <option>C-Bus Fault Finding</option>
-            <option>C-Bus Programming</option>
-            <option>C-Bus Commissioning</option>
-            <option>Dynalite Fault Finding</option>
-            <option>Dynalite Programming</option>
-            <option>Dynalite Commissioning</option>
-            <option>RAPIX / DALI</option>
-            <option>System Design &amp; Consultation</option>
-            <option>Emergency Lighting Compliance</option>
-            <option>Other</option>
-          </select></div>
-          <div><textarea id="bq-message" placeholder="Describe your system and the issue. Include any error lights, model numbers, or previous work done." rows="5" style="width:100%;padding:12px 16px;background:#0e1f3d;border:1px solid #2a4a80;border-radius:10px;color:#f0f4ff;font-size:15px;font-family:Barlow,sans-serif;outline:none;resize:vertical"></textarea></div>
-          <button class="btn btn-primary" type="button" onclick="submitBookQuote(event)" style="font-size:16px;padding:16px 32px;background:#f07020;color:#fff;border:none;border-radius:10px;font-weight:800;cursor:pointer">Send Quote Request</button>
+          <div><select id="bq-system" required style="width:100%;padding:12px 16px;background:#0e1f3d;border:1px solid #2a4a80;border-radius:10px;color:#f0f4ff;font-size:15px;font-family:Barlow,sans-serif;outline:none"><option value="">What system do you have?</option><option>Clipsal C-Bus</option><option>Signify Dynalite</option><option>RAPIX / DALI</option><option>KNX</option><option>BMS / building management</option><option>Industrial / PLC</option><option>Not sure</option></select></div>
+          <div><select id="bq-service" required style="width:100%;padding:12px 16px;background:#0e1f3d;border:1px solid #2a4a80;border-radius:10px;color:#f0f4ff;font-size:15px;font-family:Barlow,sans-serif;outline:none"><option value="">What do you need?</option><option>C-Bus Fault Finding</option><option>C-Bus Programming</option><option>C-Bus Upgrade</option><option>Dynalite Fault Finding</option><option>Dynalite Programming</option><option>Dynalite Upgrade</option><option>RAPIX / DALI</option><option>System Design &amp; Consultation</option><option>Emergency Lighting Compliance</option><option>Other</option></select></div>
+          <div><select id="bq-urgency" style="width:100%;padding:12px 16px;background:#0e1f3d;border:1px solid #2a4a80;border-radius:10px;color:#f0f4ff;font-size:15px;font-family:Barlow,sans-serif;outline:none"><option value="">When do you need help?</option><option>System currently down</option><option>This week</option><option>Planning / quote</option><option>Not sure</option></select></div>
+          <div><textarea id="bq-message" placeholder="Describe your system and the issue. Include error lights, model numbers, or previous work done." rows="5" style="width:100%;padding:12px 16px;background:#0e1f3d;border:1px solid #2a4a80;border-radius:10px;color:#f0f4ff;font-size:15px;font-family:Barlow,sans-serif;outline:none;resize:vertical"></textarea></div>
+          <div id="bq-result" role="status" style="min-height:20px"></div>
+          <button id="bq-submit" class="btn btn-primary" type="submit" style="font-size:16px;padding:16px 32px;background:#f07020;color:#fff;border:none;border-radius:10px;font-weight:800;cursor:pointer">Send Quote Request</button>
         </form>
         <script>
-        function submitBookQuote(e){
-          e.preventDefault();
-          var name = document.getElementById('bq-name').value;
-          var phone = document.getElementById('bq-phone').value;
-          var email = document.getElementById('bq-email').value;
-          var suburb = document.getElementById('bq-suburb').value;
-          var service = document.getElementById('bq-service').value;
-          var message = document.getElementById('bq-message').value;
-          var sub = encodeURIComponent('Quote Request - '+(service||'General')+' | '+(suburb||'Sydney'));
-          var body = encodeURIComponent('Name: '+name+'\nPhone: '+phone+'\nEmail: '+email+'\nSuburb: '+suburb+'\nService: '+service+'\n\nMessage:\n'+message);
-          window.open('mailto:service@sydneyautomationco.com.au?subject='+sub+'&body='+body);
-        }
+        document.getElementById('bookQuoteForm').addEventListener('submit', async function(event){
+          event.preventDefault();
+          var form = event.currentTarget, button = document.getElementById('bq-submit'), result = document.getElementById('bq-result');
+          var data = {path:'booking', name:document.getElementById('bq-name').value.trim(), phone:document.getElementById('bq-phone').value.trim(), email:document.getElementById('bq-email').value.trim(), location:document.getElementById('bq-suburb').value.trim(), system:document.getElementById('bq-system').value, service:document.getElementById('bq-service').value, urgency:document.getElementById('bq-urgency').value, message:document.getElementById('bq-message').value.trim(), contactPreference:'Phone call', sourcePage:location.href};
+          if(!data.phone && !data.email){ result.innerHTML='<p style="color:#ffb4a5">Please provide a phone number or email.</p>'; return; }
+          button.disabled=true; button.textContent='Sending securely…'; result.textContent='';
+          try { var response=await fetch('/api/leads',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)}); var payload=await response.json().catch(function(){return {};}); if(!response.ok||!payload.ok) throw new Error(payload.error||'submission_failed'); if(typeof window.gtag==='function') window.gtag('event','generate_lead',{lead_path:'booking',system:data.system,service:data.service,urgency:data.urgency}); result.innerHTML='<p style="color:#b7f7ce"><strong>Details received.</strong> George will review the system and get back to you. For urgent faults, call <a href="tel:0422469739" style="color:#fff;font-weight:800">0422 469 739</a>.</p>'; form.reset(); button.textContent='Sent'; } catch(error) { if(typeof window.gtag==='function') window.gtag('event','lead_form_error',{lead_path:'booking',error:String(error.message||error)}); result.innerHTML='<p style="color:#ffb4a5">We could not send this just now. Please call <a href="tel:0422469739" style="color:#fff;font-weight:800">0422 469 739</a>.</p>'; button.disabled=false; button.textContent='Try again'; }
+        });
         </script>
       </div>
 

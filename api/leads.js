@@ -6,6 +6,7 @@ const PATH_LABELS = {
   commercial: 'Commercial DALI, RAPIX or emergency lighting',
   facilities: 'Car-park, strata or facilities lighting',
   smart_home: 'Premium Smart Home Package',
+  booking: 'Website service booking',
 };
 
 function clean(value, max = 2000) {
@@ -51,6 +52,9 @@ module.exports = async function handler(req, res) {
   const message = clean(body.message, 3000);
   const sourcePage = clean(body.sourcePage, 500);
   const contactPreference = clean(body.contactPreference, 40);
+  const system = clean(body.system, 80);
+  const urgency = clean(body.urgency, 40);
+  const service = clean(body.service, 120);
 
   if (!PATH_LABELS[path] || !name || (!phone && !email)) {
     return json(res, 400, { ok: false, error: 'missing_required_details' });
@@ -72,6 +76,9 @@ module.exports = async function handler(req, res) {
     `Email: ${email || 'Not supplied'}`,
     `Location: ${location || 'Not supplied'}`,
     `Preferred contact: ${contactPreference || 'Not supplied'}`,
+    `System: ${system || 'Not supplied'}`,
+    `Urgency: ${urgency || 'Not supplied'}`,
+    `Requested service: ${service || 'Not supplied'}`,
     `Details: ${message || 'Not supplied'}`,
     `Source page: ${sourcePage || 'Not supplied'}`,
     `Received: ${new Date().toISOString()}`,
@@ -84,7 +91,7 @@ module.exports = async function handler(req, res) {
       const jobResponse = await fetch(`${jobSystemUrl.replace(/\/$/, '')}/api/leads`, {
         method: 'POST',
         headers: { Authorization: `Bearer ${jobSystemToken}`, 'Content-Type': 'application/json' },
-        body: JSON.stringify({ path, name, phone, email, location, contactPreference, message, sourcePage, submissionId: clean(body.submissionId, 120) }),
+        body: JSON.stringify({ path, name, phone, email, location, contactPreference, system, urgency, service, message, sourcePage, submissionId: clean(body.submissionId, 120) }),
       });
       const jobResult = await jobResponse.json().catch(() => ({}));
       if (jobResponse.ok && jobResult.ok) return json(res, 200, { ok: true, id: jobResult.id, provider: 'job-system' });
@@ -115,6 +122,9 @@ module.exports = async function handler(req, res) {
         location,
         path: PATH_LABELS[path],
         contactPreference,
+        system,
+        urgency,
+        service,
         message,
         sourcePage,
         _subject: subject,
