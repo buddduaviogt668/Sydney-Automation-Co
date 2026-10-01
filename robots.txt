@@ -10,11 +10,40 @@ Disallow: /test.html
 # Specific rules for search engines
 User-agent: Googlebot
 Allow: /
-Crawl-delay: 0
 
 User-agent: Bingbot
 Allow: /
-Crawl-delay: 1
+
+# AI search and answer-engine crawlers (explicitly allowed)
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
 
 # Sitemap location
 Sitemap: https://sydneyautomationco.com.au/sitemap.xml

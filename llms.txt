@@ -98,6 +98,36 @@ Based in Menai (Sutherland Shire), we service all of Greater Sydney including:
 - DALI Alliance (DiiA): https://www.dali-alliance.org/
 - Schneider Electric Australia: https://www.se.com/au/
 
+## Guides & Articles
+
+- [C-Bus Ghost Messages: Why Your Lights Turn On Randomly & How to Stop Them in Sydney](https://sydneyautomationco.com.au/blog/cbus-ghost-messages-sydney): Expert C-Bus, Dynalite and DALI lighting control articles from Sydney Automation Co.
+- [C-Bus Keypad Flashing Pink/Red? Diagnosis & Repair in Sydney](https://sydneyautomationco.com.au/blog/cbus-keypad-flashing-pink-red-sydney): Expert C-Bus, Dynalite and DALI lighting control articles from Sydney Automation Co.
+- [C-Bus Lights Stuck On? Emergency Fix & Troubleshooting Guide for Sydney](https://sydneyautomationco.com.au/blog/cbus-lights-stuck-on-emergency-fix-sydney): Expert C-Bus, Dynalite and DALI lighting control articles from Sydney Automation Co.
+- [C-Bus Network Burden Failure: Symptoms, Causes & Solutions in Sydney](https://sydneyautomationco.com.au/blog/cbus-network-burden-failure-sydney): Expert C-Bus, Dynalite and DALI lighting control articles from Sydney Automation Co.
+- [C-Bus Power Supply Faults: Diagnosis & Replacement in Sydney](https://sydneyautomationco.com.au/blog/cbus-power-supply-faults-sydney): Expert C-Bus, Dynalite and DALI lighting control articles from Sydney Automation Co.
+- [Old C-Bus System Repair vs. Replacement Cost in Sydney: What"s Best for You?](https://sydneyautomationco.com.au/blog/cbus-repair-vs-replacement-cost-sydney): Expert C-Bus, Dynalite and DALI lighting control articles from Sydney Automation Co.
+- [C-Bus Toolkit Connection Issues: Troubleshooting & Expert Help in Sydney](https://sydneyautomationco.com.au/blog/cbus-toolkit-connection-sydney): Expert C-Bus, Dynalite and DALI lighting control articles from Sydney Automation Co.
+- [DALI Emergency Lighting Failing AFSS in Sydney? How to Ensure Compliance](https://sydneyautomationco.com.au/blog/dali-emergency-lighting-afss-sydney): DALI Emergency Lighting Failing AFSS in Sydney? How to Ensure Compliance - Expert fault finding and emergency repair services for C-Bus, Dynalite, and DALI…
+- [Dynalite Emergency Lighting Compliance in Sydney: AFSS Repair & Maintenance](https://sydneyautomationco.com.au/blog/dynalite-emergency-lighting-afss-sydney): Dynalite Emergency Lighting Compliance in Sydney: AFSS Repair & Maintenance - Expert fault finding and emergency repair services for Philips Dynalite…
+- [Dynalite Keypad Not Responding in Sydney? What It Means & How to Fix It](https://sydneyautomationco.com.au/blog/dynalite-keypad-not-responding-sydney): Dynalite keypad not responding in Sydney? Diagnose DyNet bus faults, address conflicts, and processor failures.
+- [Recovering Lost Dynalite Programming in Sydney: Expert Solutions for Undocumented Systems](https://sydneyautomationco.com.au/blog/dynalite-lost-programming-recovery-sydney): Recovering Lost Dynalite Programming in Sydney: Expert Solutions for Undocumented Systems - Expert fault finding and emergency repair services for Philips…
+- [Understanding Dynalite Network Burden Failure: Symptoms & Solutions in Sydney](https://sydneyautomationco.com.au/blog/dynalite-network-burden-failure-sydney): Understanding Dynalite Network Burden Failure: Symptoms & Solutions in Sydney - Expert fault finding and emergency repair services for Philips Dynalite…
+- [The Ultimate Dynalite Troubleshooting Guide: Keypads, Dimmers & Network Issues in Sydney](https://sydneyautomationco.com.au/blog/dynalite-troubleshooting-guide-sydney): The Ultimate Dynalite Troubleshooting Guide: Keypads, Dimmers & Network Issues in Sydney - Expert fault finding and emergency repair services for Philips…
+- [Dynalite vs. C-Bus: Which Lighting Control System is Right for Your Sydney Property?](https://sydneyautomationco.com.au/blog/dynalite-vs-cbus-sydney): Dynalite vs. C-Bus: Which Lighting Control System is Right for Your Sydney Property? - Expert fault finding and emergency repair services for Philips…
+- [Lighting System Crashed After Power Outage in Sydney? Your Reset Guide](https://sydneyautomationco.com.au/blog/lighting-system-power-outage-reset-sydney): C-Bus or Dynalite lights not working after a power outage? Step-by-step reset guide for C-Bus, Dynalite, and DALI systems.
+- [Modernizing Old Dynalite Systems in Sydney: Smart App Integration Without Full Replacement](https://sydneyautomationco.com.au/blog/modernizing-old-dynalite-sydney): Modernizing Old Dynalite Systems in Sydney: Smart App Integration Without Full Replacement - Expert fault finding and emergency repair services for Philips…
+
+## Key Hubs
+
+- [Service areas](https://sydneyautomationco.com.au/locations)
+- [Glossary](https://sydneyautomationco.com.au/glossary)
+- [Pricing](https://sydneyautomationco.com.au/pricing-sydney)
+- [Case studies & projects](https://sydneyautomationco.com.au/projects)
+
+## Last updated
+
+2026-10-02
+
 ## Contact
 
 - Phone: 0422 469 739
