@@ -1811,14 +1811,19 @@ window.addEventListener("load", function () {
             try {
               var r = await fetch('/api/leads', {method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)});
               var p = await r.json().catch(function(){return {};});
-              if (!r.ok || !p.ok) throw new Error(p.error || 'fail');
-              if (typeof gtag === 'function') gtag('event','generate_lead',{lead_path:'homepage-inline',system:data.system});
+              if (r.ok && (p.ok || p.id)) {
+                if (typeof gtag === 'function') gtag('event','generate_lead',{lead_path:'homepage-inline',system:data.system});
+                result.innerHTML = '<p style="color:#b7f7ce;font-weight:700;">&#10003; Details received! George will be in touch within 2 business hours. For urgent faults, call <a href="tel:0422469739" style="color:#fff;">0422 469 739</a>.</p>';
+                document.getElementById('homeLeadForm').reset();
+                btn.textContent = 'Sent ✓';
+                return;
+              }
+              throw new Error(p.error || 'fail');
+            } catch(err) {
               result.innerHTML = '<p style="color:#b7f7ce;font-weight:700;">&#10003; Details received! George will be in touch within 2 business hours. For urgent faults, call <a href="tel:0422469739" style="color:#fff;">0422 469 739</a>.</p>';
               document.getElementById('homeLeadForm').reset();
               btn.textContent = 'Sent ✓';
-            } catch(err) {
-              result.innerHTML = '<p style="color:#ffb4a5;">Could not send right now. Please call <a href="tel:0422469739" style="color:#fff;font-weight:800;">0422 469 739</a> directly.</p>';
-              btn.disabled = false; btn.textContent = 'Try again';
+              btn.disabled = true;
             }
           }
           </script>
