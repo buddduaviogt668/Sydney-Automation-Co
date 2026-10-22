@@ -7,6 +7,9 @@ const PATH_LABELS = {
   facilities: 'Car-park, strata or facilities lighting',
   smart_home: 'Premium Smart Home Package',
   booking: 'Website service booking',
+  'homepage-inline': 'Homepage inline quote request',
+  contact: 'Contact page enquiry',
+  quote: 'Website quote request',
 };
 
 function clean(value, max = 2000) {
