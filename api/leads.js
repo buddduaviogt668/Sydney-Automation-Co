@@ -138,9 +138,11 @@ module.exports = async function handler(req, res) {
   }
 
   try {
+    const origin = req.headers.origin || 'https://sydneyautomationco.com.au';
+    const referer = req.headers.referer || `${origin.replace(/\/$/, '')}/`;
     const formSubmit = await fetch(`https://formsubmit.co/ajax/${encodeURIComponent(to)}`, {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+      headers: { 'Content-Type': 'application/json', Accept: 'application/json', Origin: origin, Referer: referer },
       body: JSON.stringify({
         name,
         phone,
