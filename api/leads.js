@@ -69,6 +69,7 @@ module.exports = async function handler(req, res) {
   const apiKey = process.env.RESEND_API_KEY;
   const from = process.env.LEAD_FROM_EMAIL;
   const to = process.env.LEAD_TO_EMAIL || 'service@sydneyautomationco.com.au';
+  const submissionId = clean(body.submissionId, 120);
   const subject = `SAC lead — ${PATH_LABELS[path]} — ${name}`;
   const text = [
     'New Sydney Automation Co. website enquiry',
@@ -84,99 +85,110 @@ module.exports = async function handler(req, res) {
     `Requested service: ${service || 'Not supplied'}`,
     `Details: ${message || 'Not supplied'}`,
     `Source page: ${sourcePage || 'Not supplied'}`,
+    `Submission ID: ${submissionId || 'Not supplied'}`,
     `Received: ${new Date().toISOString()}`,
-  ].join('\\n');
+  ].join('\n');
+
+  const timeout = () => {
+    try {
+      return AbortSignal.timeout(8000);
+    } catch (error) {
+      return undefined;
+    }
+  };
+
+  let jobDelivered = false;
+  const jobSystemUrl = process.env.JOB_SYSTEM_URL;
+  const jobSystemToken = process.env.JOB_SYSTEM_INGEST_TOKEN;
+  if (jobSystemUrl && jobSystemToken) {
+    try {
+      const jobResponse = await fetch(`${jobSystemUrl.replace(/\/$/, '')}/api/leads`, {
+        method: 'POST',
+        headers: { Authorization: `Bearer ${jobSystemToken}`, 'Content-Type': 'application/json' },
+        body: JSON.stringify({ path, name, phone, email, location, contactPreference, system, urgency, service, message, sourcePage, submissionId }),
+        signal: timeout(),
+      });
+      const jobResult = await jobResponse.json().catch(() => ({}));
+      if (jobResponse.ok && jobResult.ok) {
+        jobDelivered = true;
+      } else {
+        console.error('Job-system lead delivery failed', jobResponse.status);
+      }
+    } catch (err) {
+      console.error('Job-system lead delivery exception', err.message || err);
+    }
+  }
+
+  if (apiKey && from) {
+    try {
+      const response = await fetch('https://api.resend.com/emails', {
+        method: 'POST',
+        headers: { Authorization: `Bearer ${apiKey}`, 'Content-Type': 'application/json' },
+        body: JSON.stringify({ from, to: [to], reply_to: email || undefined, subject, text }),
+        signal: timeout(),
+      });
+      const result = await response.json().catch(() => ({}));
+      if (response.ok) {
+        return json(res, 200, { ok: true, id: result.id || 'accepted', provider: jobDelivered ? 'job-system+resend' : 'resend' });
+      }
+      console.error('Resend lead delivery failed', response.status);
+    } catch (err) {
+      console.error('Resend lead delivery exception', err.message || err);
+    }
+  }
 
   try {
-    let jobDelivered = false;
-    const jobSystemUrl = process.env.JOB_SYSTEM_URL;
-    const jobSystemToken = process.env.JOB_SYSTEM_INGEST_TOKEN;
-    if (jobSystemUrl && jobSystemToken) {
-      try {
-        const jobResponse = await fetch(`${jobSystemUrl.replace(/\/$/, '')}/api/leads`, {
-          method: 'POST',
-          headers: { Authorization: `Bearer ${jobSystemToken}`, 'Content-Type': 'application/json' },
-          body: JSON.stringify({ path, name, phone, email, location, contactPreference, system, urgency, service, message, sourcePage, submissionId: clean(body.submissionId, 120) }),
-        });
-        const jobResult = await jobResponse.json().catch(() => ({}));
-        if (jobResponse.ok && jobResult.ok) {
-          jobDelivered = true;
-        } else {
-          console.error('Job-system lead delivery failed', jobResponse.status, jobResult);
-        }
-      } catch (err) {
-        console.error('Job-system lead delivery exception', err);
-      }
+    const formSubmit = await fetch(`https://formsubmit.co/ajax/${encodeURIComponent(to)}`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+      body: JSON.stringify({
+        name,
+        phone,
+        email,
+        location,
+        path: PATH_LABELS[path],
+        contactPreference,
+        system,
+        urgency,
+        service,
+        message,
+        sourcePage,
+        submissionId,
+        _subject: subject,
+        _template: 'table',
+        _replyto: email || undefined,
+        _captcha: 'false',
+        _honey: clean(body.website, 200),
+      }),
+      signal: timeout(),
+    });
+    const formResult = await formSubmit.json().catch(() => ({}));
+    if (formSubmit.ok && String(formResult.success) === 'true') {
+      return json(res, 200, { ok: true, id: 'accepted', provider: jobDelivered ? 'job-system+formsubmit' : 'formsubmit' });
     }
-
-    if (apiKey && from) {
-      try {
-        const response = await fetch('https://api.resend.com/emails', {
-          method: 'POST',
-          headers: { Authorization: `Bearer ${apiKey}`, 'Content-Type': 'application/json' },
-          body: JSON.stringify({ from, to: [to], reply_to: email || undefined, subject, text }),
-        });
-        const result = await response.json().catch(() => ({}));
-        if (response.ok) {
-          return json(res, 200, { ok: true, id: result.id || 'accepted', provider: jobDelivered ? 'job-system+resend' : 'resend' });
-        }
-        console.error('Resend lead delivery failed', response.status, result);
-        if (jobDelivered) {
-          return json(res, 200, { ok: true, id: 'accepted', provider: 'job-system' });
-        }
-        return json(res, 502, { ok: false, error: 'lead_delivery_failed' });
-      } catch (err) {
-        console.error('Resend lead delivery exception', err);
-        if (jobDelivered) {
-          return json(res, 200, { ok: true, id: 'accepted', provider: 'job-system' });
-        }
-      }
-    }
-
-    try {
-      const formSubmit = await fetch(`https://formsubmit.co/ajax/${encodeURIComponent(to)}`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-        body: JSON.stringify({
-          name,
-          phone,
-          email,
-          location,
-          path: PATH_LABELS[path],
-          contactPreference,
-          system,
-          urgency,
-          service,
-          message,
-          sourcePage,
-          _subject: subject,
-          _template: 'table',
-          _honey: clean(body.website, 200),
-        }),
-      });
-      const formResult = await formSubmit.json().catch(() => ({}));
-      if (formSubmit.ok && formResult.success !== false) {
-        return json(res, 200, { ok: true, id: 'accepted', provider: jobDelivered ? 'job-system+formsubmit' : 'formsubmit' });
-      }
-      console.error('FormSubmit lead delivery failed', formSubmit.status, formResult);
-      if (jobDelivered) {
-        return json(res, 200, { ok: true, id: 'accepted', provider: 'job-system' });
-      }
-      return json(res, 502, { ok: false, error: 'lead_delivery_failed' });
-    } catch (err) {
-      console.error('FormSubmit lead delivery exception', err);
-      if (jobDelivered) {
-        return json(res, 200, { ok: true, id: 'accepted', provider: 'job-system' });
-      }
-    }
-    if (jobDelivered) {
-      return json(res, 200, { ok: true, id: 'accepted', provider: 'job-system' });
-    }
-    // Fallback: accept lead even if delivery fails to prevent form breakage
-    return json(res, 200, { ok: true, id: 'accepted', provider: 'fallback' });
-  } catch (error) {
-    console.error('Lead delivery exception', error);
-    // Still accept the lead
-    return json(res, 200, { ok: true, id: 'accepted', provider: 'fallback' });
+    console.error('FormSubmit lead delivery failed', formSubmit.status, formResult.message || '');
+  } catch (err) {
+    console.error('FormSubmit lead delivery exception', err.message || err);
   }
+
+  if (jobDelivered) {
+    return json(res, 200, { ok: true, id: 'accepted', provider: 'job-system' });
+  }
+
+  console.error('LEAD_DELIVERY_FAILED', JSON.stringify({
+    path,
+    name,
+    phone,
+    email,
+    location,
+    contactPreference,
+    system,
+    urgency,
+    service,
+    message,
+    sourcePage,
+    submissionId,
+    received: new Date().toISOString(),
+  }));
+  return json(res, 502, { ok: false, error: 'lead_delivery_failed' });
 };

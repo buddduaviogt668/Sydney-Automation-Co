@@ -44,8 +44,7 @@
   <meta content="99c59ffacd177339" name="google-site-verification" />
 
   <!-- LocalBusiness Schema -->
-  <script>window.addEventListener("load", function () {
-window.addEventListener("load", function () {
+  <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
@@ -210,8 +209,7 @@ window.addEventListener("load", function () {
       t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
       y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
     })(window, document, "clarity", "script", "w5e5flrwbd");
-
-}, { once: true });</script>
+  </script>
 
   <!-- Meta Pixel -->
   <script>
@@ -226,8 +224,7 @@ window.addEventListener("load", function () {
       document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
     fbq('init', '1836885369871029');
     fbq('track', 'PageView');
-
-}, { once: true });</script>
+  </script>
   <noscript><img alt="Facebook Pixel" height="1" loading="lazy"
       src="https://www.facebook.com/tr?id=1836885369871029&ev=PageView&noscript=1" style="display:none"
       width="1" /></noscript>
@@ -2165,11 +2162,17 @@ window.addEventListener("load", function () {
         </div>
         <div style="background:#0d1e3c;border:1px solid #2a4a80;border-radius:20px;padding:36px;">
           <form id="homeLeadForm" style="display:grid;grid-template-columns:1fr 1fr;gap:16px;" onsubmit="handleHomeLead(event)">
+            <div style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden;" aria-hidden="true">
+              <input id="hl-website" type="text" tabindex="-1" autocomplete="off" placeholder="Website">
+            </div>
             <div>
               <input id="hl-name" type="text" placeholder="Your Name *" required style="width:100%;padding:13px 16px;background:#071426;border:1px solid #2a4a80;border-radius:10px;color:#f0f4ff;font-size:15px;font-family:Barlow,sans-serif;outline:none;transition:border-color 0.2s;" onfocus="this.style.borderColor='#f07020'" onblur="this.style.borderColor='#2a4a80'">
             </div>
             <div>
               <input id="hl-phone" type="tel" placeholder="Phone Number *" required style="width:100%;padding:13px 16px;background:#071426;border:1px solid #2a4a80;border-radius:10px;color:#f0f4ff;font-size:15px;font-family:Barlow,sans-serif;outline:none;transition:border-color 0.2s;" onfocus="this.style.borderColor='#f07020'" onblur="this.style.borderColor='#2a4a80'">
+            </div>
+            <div style="grid-column:1/-1;">
+              <input id="hl-email" type="email" autocomplete="email" placeholder="Email (optional)" style="width:100%;padding:13px 16px;background:#071426;border:1px solid #2a4a80;border-radius:10px;color:#f0f4ff;font-size:15px;font-family:Barlow,sans-serif;outline:none;transition:border-color 0.2s;" onfocus="this.style.borderColor='#f07020'" onblur="this.style.borderColor='#2a4a80'">
             </div>
             <div>
               <select id="hl-system" required style="width:100%;padding:13px 16px;background:#071426;border:1px solid #2a4a80;border-radius:10px;color:#f0f4ff;font-size:15px;font-family:Barlow,sans-serif;outline:none;appearance:none;">
@@ -2187,7 +2190,7 @@ window.addEventListener("load", function () {
             <div style="grid-column:1/-1;">
               <textarea id="hl-message" placeholder="Briefly describe the issue — e.g. 'C-Bus keypads dead after power outage', 'Dynalite scenes lost'..." rows="3" style="width:100%;padding:13px 16px;background:#071426;border:1px solid #2a4a80;border-radius:10px;color:#f0f4ff;font-size:15px;font-family:Barlow,sans-serif;outline:none;resize:vertical;transition:border-color 0.2s;" onfocus="this.style.borderColor='#f07020'" onblur="this.style.borderColor='#2a4a80'"></textarea>
             </div>
-            <div id="hl-result" style="grid-column:1/-1;min-height:20px;"></div>
+            <div id="hl-result" role="status" aria-live="polite" style="grid-column:1/-1;min-height:20px;"></div>
             <div style="grid-column:1/-1;display:flex;gap:16px;align-items:center;flex-wrap:wrap;">
               <button id="hl-submit" type="submit" style="flex:1;min-width:200px;padding:16px 32px;background:#f07020;color:#fff;border:none;border-radius:10px;font-family:'Barlow Condensed',sans-serif;font-size:18px;font-weight:900;cursor:pointer;letter-spacing:0.5px;transition:background 0.2s;" onmouseover="this.style.background='#ff8533'" onmouseout="this.style.background='#f07020'">Send Quote Request →</button>
               <span style="font-size:13px;color:#6a8cb5;">Responds within 2 business hours · No spam</span>
@@ -2202,28 +2205,26 @@ window.addEventListener("load", function () {
               path: 'homepage-inline',
               name: document.getElementById('hl-name').value.trim(),
               phone: document.getElementById('hl-phone').value.trim(),
+              email: document.getElementById('hl-email').value.trim(),
               system: document.getElementById('hl-system').value,
               location: document.getElementById('hl-suburb').value.trim(),
               message: document.getElementById('hl-message').value.trim(),
-              sourcePage: location.href
+              website: document.getElementById('hl-website').value.trim(),
+              sourcePage: location.href,
+              submissionId: (window.crypto && crypto.randomUUID) ? crypto.randomUUID() : String(Date.now()) + Math.random().toString(36).slice(2)
             };
-            btn.disabled = true; btn.textContent = 'Sending...';
+            btn.disabled = true; btn.textContent = 'Sending...'; result.innerHTML = '';
             try {
               var r = await fetch('/api/leads', {method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)});
               var p = await r.json().catch(function(){return {};});
-              if (r.ok && (p.ok || p.id)) {
-                if (typeof gtag === 'function') gtag('event','generate_lead',{lead_path:'homepage-inline',system:data.system});
-                result.innerHTML = '<p style="color:#b7f7ce;font-weight:700;">&#10003; Details received! George will be in touch within 2 business hours. For urgent faults, call <a href="tel:0422469739" style="color:#fff;">0422 469 739</a>.</p>';
-                document.getElementById('homeLeadForm').reset();
-                btn.textContent = 'Sent ✓';
-                return;
-              }
-              throw new Error(p.error || 'fail');
-            } catch(err) {
+              if (!r.ok || !p.ok || !p.id || p.provider === 'fallback') throw new Error(p.error || 'submission_failed');
+              if (typeof gtag === 'function') gtag('event','generate_lead',{lead_path:'homepage-inline',system:data.system});
               result.innerHTML = '<p style="color:#b7f7ce;font-weight:700;">&#10003; Details received! George will be in touch within 2 business hours. For urgent faults, call <a href="tel:0422469739" style="color:#fff;">0422 469 739</a>.</p>';
               document.getElementById('homeLeadForm').reset();
               btn.textContent = 'Sent ✓';
-              btn.disabled = true;
+            } catch(err) {
+              result.innerHTML = '<p style="color:#ffb4a5;font-weight:700;">We could not send your details just now. Please call <a href="tel:0422469739" style="color:#fff;">0422 469 739</a> or email <a href="mailto:service@sydneyautomationco.com.au" style="color:#fff;">service@sydneyautomationco.com.au</a>.</p>';
+              btn.disabled = false; btn.textContent = 'Try again';
             }
           }
           </script>
@@ -3834,8 +3835,6 @@ window.addEventListener("load", function () {
     </div>
   </div>
 
-  </div>
-
   <!-- ===== PREMIUM TESTIMONIALS CAROUSEL ===== -->
   <style>
     .tm-section {
@@ -4404,9 +4403,11 @@ window.addEventListener("load", function () {
             </div>
           </div>
 
-        <div class="tm-card"><div class="tm-badge-google" aria-label="Google review"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg></div><div class="tm-stars">★★★★★</div><p class="tm-text">"I’ve used George from Sydney Automation Company for C-Bus programming a few times now, and he’s always been spot on. Knows the C-Bus system inside out, is easy to deal with, and gets things sorted quickly without any fuss. As an electrician, it’s great having someone reliable to call when a job needs programming. Highly recommend."</p><div class="tm-footer"><div class="tm-info"><div class="tm-author">Julian Lydement</div><div class="tm-role">Electrician, JL Electrical</div></div><div class="tm-platform"><div class="tm-verified"><svg class="tm-google-logo" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-1 .67-2.26 1.07-3.71 1.07-2.87 0-5.3-1.94-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.11c-.22-.67-.35-1.39-.35-2.11s.13-1.44.35-2.11V7.05H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.95l3.66-2.84z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.05l3.66 2.84c.86-2.59 3.3-4.51 6.16-4.51z"/></svg>Verified</div></div></div></div></div></div>
+        <div class="tm-card"><div class="tm-badge-google" aria-label="Google review"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg></div><div class="tm-stars">★★★★★</div><p class="tm-text">"I’ve used George from Sydney Automation Company for C-Bus programming a few times now, and he’s always been spot on. Knows the C-Bus system inside out, is easy to deal with, and gets things sorted quickly without any fuss. As an electrician, it’s great having someone reliable to call when a job needs programming. Highly recommend."</p><div class="tm-footer"><div class="tm-info"><div class="tm-author">Julian Lydement</div><div class="tm-role">Electrician, JL Electrical</div></div><div class="tm-platform"><div class="tm-verified"><svg class="tm-google-logo" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-1 .67-2.26 1.07-3.71 1.07-2.87 0-5.3-1.94-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.11c-.22-.67-.35-1.39-.35-2.11s.13-1.44.35-2.11V7.05H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.95l3.66-2.84z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.05l3.66 2.84c.86-2.59 3.3-4.51 6.16-4.51z"/></svg>Verified</div></div></div></div>
 
         <div class="tm-card"><div class="tm-badge-google" aria-label="Google review"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg></div><div class="tm-stars">★★★★★</div><p class="tm-text">"George at Sydney Automation Co. was called to help resolve the problem of having lost lighting and other automated functionality in part of the house following a storm. George assessed the problem and replaced the C-Bus relay on a control panel that restored all automation functions. George upgraded the C-Bus application controller transitioning our automation from an outdated module to a modern application driven control via iPhone, iPad and MacBook. George was responsive to the service call, offered a prompt quotation and arrived on site to perform the works on agreed dates, and arrived on time. I highly recommend Sydney Automation Co. for a reliable and friendly service with expertise in dealing in C-Bus environments."</p><div class="tm-footer"><div class="tm-info"><div class="tm-author">Michael Crismale</div><div class="tm-role">Castle Hill Home Owner</div></div><div class="tm-platform"><div class="tm-verified"><svg class="tm-google-logo" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-1 .67-2.26 1.07-3.71 1.07-2.87 0-5.3-1.94-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.11c-.22-.67-.35-1.39-.35-2.11s.13-1.44.35-2.11V7.05H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.95l3.66-2.84z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.05l3.66 2.84c.86-2.59 3.3-4.51 6.16-4.51z"/></svg>Verified</div></div></div></div>
+
+      </div>
 
         <div class="tm-controls">
           <button onclick="tmSlide(-1)" class="tm-btn">←</button>
