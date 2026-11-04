@@ -1264,42 +1264,71 @@
     }
 
     @media (max-width: 960px) {
+      nav {
+        padding: 0 16px;
+      }
+
+      .logo {
+        flex-shrink: 0;
+      }
+
+      .logo-main {
+        font-size: 20px;
+      }
+
+      .logo-sub {
+        font-size: 9px;
+        letter-spacing: 1.5px;
+      }
+
       .nav-mob-call {
         display: inline-flex;
         align-items: center;
-        gap: 6px;
+        gap: 5px;
         background: #e8330a;
         color: #fff !important;
-        padding: 7px 14px;
+        padding: 6px 12px;
         border-radius: 6px;
         font-family: 'Barlow Condensed', sans-serif;
-        font-size: 15px;
+        font-size: 14px;
         font-weight: 800;
         letter-spacing: 0.5px;
         text-decoration: none;
         white-space: nowrap;
         box-shadow: 0 2px 10px rgba(232, 51, 10, 0.4);
         margin-left: auto;
-        margin-right: 12px;
+        margin-right: 6px;
+        flex-shrink: 0;
       }
 
       .nav-mob-call:hover {
         background: #c42800;
       }
+
+      .hamburger {
+        flex-shrink: 0;
+        padding: 6px;
+      }
     }
 
     @media (max-width: 480px) {
+      nav {
+        padding: 0 12px;
+      }
+
       .logo-main {
-        font-size: 19px;
+        font-size: 17.5px;
       }
+
       .logo-sub {
-        font-size: 9px;
-        letter-spacing: 2px;
+        font-size: 8px;
+        letter-spacing: 1px;
       }
+
       .nav-mob-call {
-        font-size: 13px;
-        padding: 6px 10px;
-        margin-right: 8px;
+        font-size: 12.5px;
+        padding: 5px 9px;
+        margin-right: 4px;
       }
     }
 
