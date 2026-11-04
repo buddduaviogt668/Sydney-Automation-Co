@@ -1196,66 +1196,8 @@
       color: #f07020;
     }
 
-    /* FLOATING MOBILE CTA BAR */
-    .sac-float-cta {
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      z-index: 99999;
-      display: flex;
-      background: #0d1a30;
-      border-top: 2px solid #e87722;
-      box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.5);
-    }
-
-    .sac-float-cta a {
-      flex: 1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      padding: 14px 10px;
-      font-family: 'Barlow Condensed', sans-serif;
-      font-weight: 800;
-      font-size: 17px;
-      letter-spacing: 0.5px;
-      text-decoration: none;
-      color: #fff !important;
-      text-align: center;
-      box-shadow: none;
-      border-radius: 0;
-    }
-
-    .sac-float-call {
-      background: #e8330a;
-    }
-
-    .sac-float-call:hover {
-      background: #c42800;
-    }
-
-    .sac-float-wa {
-      background: #25D366;
-    }
-
-    .sac-float-wa:hover {
-      background: #1ebc57;
-    }
-
-    @media (min-width: 769px) {
-      .sac-float-cta {
-        display: none !important;
-      }
-    }
-
-    @media (max-width: 768px) {
-      body {
-        padding-bottom: 70px !important;
-      }
-      .page {
-        padding-bottom: 80px;
-      }
+    .sac-float-cta, .sac-mob-bar {
+      display: none !important;
     }
 
     /* MOBILE NAV CALL BUTTON */
@@ -1265,39 +1207,46 @@
 
     @media (max-width: 960px) {
       nav {
-        padding: 0 16px;
+        padding: 0 12px !important;
       }
 
       .logo {
+        max-width: 145px;
         flex-shrink: 0;
       }
 
       .logo-main {
-        font-size: 20px;
+        font-size: 17px !important;
+        letter-spacing: 0.5px !important;
+      }
+
+      .logo-line {
+        height: 2px !important;
+        margin: 2px 0 !important;
       }
 
       .logo-sub {
-        font-size: 9px;
-        letter-spacing: 1.5px;
+        font-size: 8px !important;
+        letter-spacing: 0.5px !important;
       }
 
       .nav-mob-call {
-        display: inline-flex;
+        display: inline-flex !important;
         align-items: center;
-        gap: 5px;
+        gap: 4px;
         background: #e8330a;
         color: #fff !important;
-        padding: 6px 12px;
+        padding: 6px 10px;
         border-radius: 6px;
         font-family: 'Barlow Condensed', sans-serif;
-        font-size: 14px;
+        font-size: 13px;
         font-weight: 800;
         letter-spacing: 0.5px;
         text-decoration: none;
         white-space: nowrap;
         box-shadow: 0 2px 10px rgba(232, 51, 10, 0.4);
-        margin-left: auto;
-        margin-right: 6px;
+        margin-left: auto !important;
+        margin-right: 8px !important;
         flex-shrink: 0;
       }
 
@@ -1307,28 +1256,33 @@
 
       .hamburger {
         flex-shrink: 0;
-        padding: 6px;
+        padding: 6px 2px !important;
       }
     }
 
     @media (max-width: 480px) {
       nav {
-        padding: 0 12px;
+        padding: 0 8px !important;
+      }
+
+      .logo {
+        max-width: 135px;
       }
 
       .logo-main {
-        font-size: 17.5px;
+        font-size: 16px !important;
+        letter-spacing: 0.3px !important;
       }
 
       .logo-sub {
-        font-size: 8px;
-        letter-spacing: 1px;
+        font-size: 7.5px !important;
+        letter-spacing: 0.3px !important;
       }
 
       .nav-mob-call {
-        font-size: 12.5px;
-        padding: 5px 9px;
-        margin-right: 4px;
+        font-size: 12px;
+        padding: 5px 8px;
+        margin-right: 6px !important;
       }
     }
 
@@ -4686,16 +4640,7 @@
     </div>
   </footer>
 
-  <!-- MOBILE CALL BAR -->
-  <div class="sac-mob-bar">
-    <a href="tel:0422469739">📞 TAP TO CALL — 0422 469 739</a>
-  </div>
 
-  <!-- FLOATING CTA -->
-  <div class="sac-float-cta">
-    <a class="sac-float-call" href="tel:0422469739">📞 Call George — 0422 469 739</a>
-    <a class="sac-float-wa" href="https://wa.me/61422469739" target="_blank" rel="noopener">💬 WhatsApp</a>
-  </div>
 
   <!-- SCRIPTS -->
   <script>
