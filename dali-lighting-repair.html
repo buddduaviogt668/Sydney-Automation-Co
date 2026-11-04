@@ -417,6 +417,38 @@ footer{background:#132647;border-top:1px solid #2a4a80;padding:48px 24px 32px}
  "datePublished": "2026-03-11"
 }
   </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do you find a short circuit on a commercial DALI lighting line?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A DALI bus operates at nominal 16V DC (between 9.5V and 22.5V). When a short circuit occurs, voltage drops to near 0V DC and all 64 connected ballasts stop responding. We use binary half-split physical isolation and specialized protocol testers to locate the crushed wire, corroded luminaire terminal, or flooded fitting within hours rather than days."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What causes DALI lights to stay on at 100% full brightness?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "By design, DALI drivers default to 'System Failure Level' (usually 100% full brightness) whenever bus voltage drops or communication is interrupted. This ensures life safety. If entire floors are stuck at full brightness, the DALI bus power supply has failed, a cable is severed, or the line controller has frozen."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can you commission replacement DALI-2 drivers without rewriting system software?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. When an individual DALI ballast or LED driver dies, a new replacement must be assigned the exact short address (0 to 63) of the failed unit. We scan the bus, identify the missing address, and commission the replacement driver directly via DALI-2 software so scene levels and group bindings function immediately."
+      }
+    }
+  ]
+}
+</script>
 </head><body>
 <nav>
 <a class="logo" href="/">
@@ -778,6 +810,28 @@ footer{background:#132647;border-top:1px solid #2a4a80;padding:48px 24px 32px}
 </div></div>
 </section>
 <p class="page-updated" style="color:#6a8cb5;font-size:13px;margin:0 0 24px">Last updated: 1 August 2026</p>
+<section class="section" style="background:#0c1c36;border-top:1px solid #2a4a80;padding:48px 0">
+  <div class="container">
+    <div class="section-header" style="text-align:center;margin-bottom:32px">
+      <div class="tag">Technical FAQ</div>
+      <h2>DALI-2 Fault Finding &amp; Bus Repair FAQ</h2>
+    </div>
+    <div style="max-width:860px;margin:0 auto">
+      <div class="card" style="margin-bottom:16px;padding:24px">
+        <h3 style="font-size:18px;color:#f07020;margin-bottom:8px">How do you find a short circuit on a commercial DALI lighting line?</h3>
+        <p style="color:#a8c0e0;line-height:1.7;font-size:14px">A DALI bus operates at nominal 16V DC (between 9.5V and 22.5V). When a short circuit occurs, voltage drops to near 0V DC and all 64 connected ballasts stop responding. We use binary half-split physical isolation and specialized protocol testers to locate the crushed wire, corroded luminaire terminal, or flooded fitting within hours rather than days.</p>
+      </div>
+      <div class="card" style="margin-bottom:16px;padding:24px">
+        <h3 style="font-size:18px;color:#f07020;margin-bottom:8px">What causes DALI lights to stay on at 100% full brightness?</h3>
+        <p style="color:#a8c0e0;line-height:1.7;font-size:14px">By design, DALI drivers default to 'System Failure Level' (usually 100% full brightness) whenever bus voltage drops or communication is interrupted. This ensures life safety. If entire floors are stuck at full brightness, the DALI bus power supply has failed, a cable is severed, or the line controller has frozen.</p>
+      </div>
+      <div class="card" style="margin-bottom:16px;padding:24px">
+        <h3 style="font-size:18px;color:#f07020;margin-bottom:8px">Can you commission replacement DALI-2 drivers without rewriting system software?</h3>
+        <p style="color:#a8c0e0;line-height:1.7;font-size:14px">Yes. When an individual DALI ballast or LED driver dies, a new replacement must be assigned the exact short address (0 to 63) of the failed unit. We scan the bus, identify the missing address, and commission the replacement driver directly via DALI-2 software so scene levels and group bindings function immediately.</p>
+      </div>
+    </div>
+  </div>
+</section>
 <footer>
 <div class="footer-grid">
 <div>

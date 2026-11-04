@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1.0" name="viewport"/>
+<meta name="description" content="Diagnose C-Bus dimmer module failures, buzzing switchboards, flickering LEDs and dead channels. Same-day diagnostic callouts across Sydney. Call 0422 469 739."/>
+<meta content="C-Bus Dimmer Module Failure &amp; Channel Fault Diagnostic Guide" property="og:title"/>
+<meta content="Step-by-step C-Bus troubleshooting guide by former Clipsal Technical Support. Diagnose power supply failures, network burdens and frozen relays. Call 0422 469 739." property="og:description"/>
+<meta content="https://sydneyautomationco.com.au/blog-cbus-dimmer-module-failure-sydney" property="og:url"/>
+<meta content="article" property="og:type"/>
+<meta content="Sydney Automation Co." property="og:site_name"/>
+<meta content="https://sydneyautomationco.com.au/og-image.jpg" property="og:image"/>
+<meta content="en_AU" property="og:locale"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="C-Bus Dimmer Module Failure &amp; Channel Fault Diagnostic Guide" name="twitter:title"/>
+<meta content="Clipsal C-Bus troubleshooting guide. Fault finding, voltage checks, LED blink codes and repairs." name="twitter:description"/>
+<meta content="https://sydneyautomationco.com.au/og-image.jpg" name="twitter:image"/>
+<title>C-Bus Dimmer Module Failure &amp; Buzzing Diagnostic Guide | Sydney Specialist</title>
+<meta name="geo.region" content="AU-NSW"/>
+<meta name="geo.placename" content="Sydney"/>
+<meta name="geo.position" content="-34.0167;151.0333"/>
+<meta name="ICBM" content="-34.0167, 151.0333"/>
+<meta content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" name="robots"/>
+<meta content="99c59ffacd177339" name="google-site-verification"/>
+<link href="/favicon.png" rel="icon" type="image/png"/>
+<link href="/favicon.png" rel="apple-touch-icon"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600&amp;family=Barlow+Condensed:wght@700;800&amp;display=swap" onload="this.onload=null;this.rel='stylesheet'" rel="preload"/>
+<noscript><link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600&amp;family=Barlow+Condensed:wght@700;800&amp;display=swap" rel="stylesheet"/></noscript>
+<link rel="canonical" href="https://sydneyautomationco.com.au/blog-cbus-dimmer-module-failure-sydney"/>
+<script defer src="https://www.googletagmanager.com/gtag/js?id=G-7EZFB6GRJ3"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-7EZFB6GRJ3');</script>
+<script defer src="/sac-event-tracking.js"></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "C-Bus Not Working? Emergency DIY Diagnostic Checklist & Repair Guide",
+  "description": "Step-by-step diagnostic checklist for troubleshooting Clipsal C-Bus system outages, network burden issues, clock failures, and relay lockups.",
+  "author": {
+    "@type": "Person",
+    "name": "George Skarmoutsos",
+    "jobTitle": "Ex-Clipsal Technical Support Specialist & Accredited C-Bus Programmer"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Sydney Automation Co.",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://sydneyautomationco.com.au/favicon.png"
+    }
+  },
+  "mainEntityOfPage": "https://sydneyautomationco.com.au/blog-cbus-dimmer-module-failure-sydney",
+  "datePublished": "2026-05-15",
+  "dateModified": "2026-11-04"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question","name": "Why did my entire C-Bus lighting system suddenly stop responding?","acceptedAnswer":{"@type": "Answer","text": "When an entire C-Bus network goes unresponsive simultaneously, it is almost always due to one of three issues: 1) The main C-Bus power supply (5500PS or module internal PSU) has failed, dropping DC voltage below 15V. 2) The network clock generator has dropped off or there is a clock collision. 3) A physical cable short or bad burden on the pink Category 5 cable has pulled down data communication."}},
+    {"@type": "Question","name": "How do I test if my C-Bus power supply is working?","acceptedAnswer":{"@type": "Answer","text": "Check the 'Unit' and 'C-Bus' indicator LEDs on your DIN-rail modules in the switchboard. If the C-Bus LED is off or blinking amber/red, the DC bus voltage is compromised. With a digital multimeter set to DC volts, measure across the pink pair (+ and -). You should read between 28V and 36V DC. If it reads below 15V DC, the network cannot communicate."}},
+    {"@type": "Question","name": "Can I manually turn on my lights if C-Bus programming crashes?","acceptedAnswer":{"@type": "Answer","text": "Yes. Most C-Bus DIN-rail relay modules (like L5512RVF, L5508RVF) have physical manual toggle buttons directly on the front fascia of the module in your electrical switchboard. Pressing these buttons mechanically overrides the relay channel to turn lights on or off in an emergency."}},
+    {"@type": "Question","name": "Can a general electrician fix my C-Bus system?","acceptedAnswer":{"@type": "Answer","text": "General electricians can check 240V breakers and swap hardware, but without proprietary Clipsal C-Bus Toolkit software and RS232/PCI/CNI interface connections, they cannot diagnose software-level bus errors, clock sync, burdening, or unit ID collisions. This often leads them to recommend unnecessary $30,000+ system replacements."}}
+  ]
+}
+</script>
+<link href="/index.css" rel="stylesheet"/>
+</head>
+<body>
+<!-- Promo Banner -->
+<div id="promo-banner" style="position:fixed;top:0;left:0;right:0;z-index:1100;height:40px;background:#f07020;display:flex;align-items:center;justify-content:center;gap:14px;font-family:'Barlow',sans-serif;">
+  <span class="pb-text" style="font-size:13px;font-weight:700;color:#fff;white-space:nowrap;">🚨 C-Bus Lights Down? Speak Directly to Ex-Clipsal Support Specialist</span>
+  <a class="pb-btn" href="tel:0422469739" style="background:#fff;color:#f07020;border:none;border-radius:5px;padding:5px 14px;font-size:12px;font-weight:800;cursor:pointer;white-space:nowrap;text-decoration:none;">Call George</a>
+</div>
+
+<nav> <a class="logo" href="/"> <span class="logo-main">Sydney Automation Co.</span> <span class="logo-line"></span> <span class="logo-sub">Lighting Control Specialists</span> </a> <div class="nav-phone-wrap"> <span class="nav-phone-label">Direct Service Line</span> <a class="nav-phone" href="tel:+61422469739">0422 469 739</a> </div> <div class="nav-links"> <a href="/">Home</a>
+<a href="/products">Products</a> <div class="nav-dd" id="dd-services"> <button class="nav-dd-trigger">Services</button> <div class="nav-dd-panel mega"> <div class="mega-col"> <span class="dd-label">C-Bus</span> <a href="/c-bus-programmer-sydney">C-Bus Programming</a> <a href="/cbus-repair-sydney">C-Bus Repairs Sydney</a> <a href="/cbus-upgrade-sydney">C-Bus Upgrades</a> <a href="/cbus-specialist-sydney">C-Bus Specialist</a> <a href="/cbus-relay-power-supply-replacement-sydney">C-Bus Relay Replacement</a> <a href="/c-bus-apple-homekit-sydney">C-Bus &amp; Apple HomeKit</a> <div class="dd-divider"></div> <span class="dd-label">Dynalite</span> <a href="/dynalite-programmer-sydney">Dynalite Programming</a> <a href="/dynalite-repair-sydney">Dynalite Repairs</a> <a href="/residential-dynalite-lighting-control-sydney">Residential Dynalite</a> <a href="/remote-cbus-dynalite-commissioning">Remote C-Bus &amp; Dynalite — Australia</a> <div class="dd-divider"></div> <span class="dd-label">Lighting Control</span> <a href="/lighting-control-service-sydney">Lighting Control Service</a> <a href="/carpark-lighting-upgrades-sydney">Car Park Upgrades</a> <a href="/building-lighting-upgrades-sydney">Building Lighting Upgrades</a> </div> <div class="mega-col"> <span class="dd-label">Emergency &amp; Compliance</span> <a href="/emergency-lighting-compliance-afss-sydney">AFSS &amp; Compliance Audit</a> <a href="/emergency-repair-sydney">Emergency Repair</a> <div class="dd-divider"></div> <span class="dd-label">DALI &amp; RAPIX</span> <a href="/dali-lighting-repair">DALI Lighting Repair</a> <a href="/dali2-compliance-nsw-commercial">DALI-2 Compliance</a> <a href="/what-is-rapix-sydney-buildings">What is RAPIX?</a> <div class="dd-divider"></div> <span class="dd-label">Maintenance &amp; Contracts</span> <a href="/lighting-control-maintenance-sydney">Lighting Control Maintenance</a> <a href="/cbus-maintenance-sydney">C-Bus Maintenance</a> <a href="/dynalite-maintenance-sydney">Dynalite Maintenance</a> </div> </div> </div> <div class="nav-dd" id="dd-areas"> <button class="nav-dd-trigger">Areas</button> <div class="nav-dd-panel"> <span class="dd-label">Sydney Regions</span> <a href="/shire">Sutherland Shire</a> <a href="/cbus-automation-north-shore-sydney">North Shore</a> <a href="/lighting-control-eastern-suburbs-strata">Eastern Suburbs</a> <a href="/smart-home-sydney-cbd">Sydney CBD</a> <div class="dd-divider"></div> <a href="/locations">All Service Areas &rarr;</a> </div> </div> <div class="nav-dd" id="dd-resources"> <button class="nav-dd-trigger">Resources</button> <div class="nav-dd-panel right"> <span class="dd-label">Guides &amp; Blog</span><a href="/blog">Blog</a> <a href="/cbus-vs-dynalite">C-Bus vs Dynalite</a> <a href="/cbus-repair-second-opinion-sydney">Second Opinion &amp; Rescue</a> <a href="/how-to-choose-cbus-specialist-sydney">How to Choose a Specialist</a> <div class="dd-divider"></div> <span class="dd-label">Company</span> <a href="/about">About</a> <a href="/4-years-building-facilities-management-jll-pbmg">George's Background</a> </div> </div> <a href="/contact">Contact</a> <a class="nav-cta" href="tel:0422469739">&#128222; Call Now</a> </div> <button aria-label="Menu" class="hamburger" id="hamburger"> <span></span><span></span><span></span> </button> </nav>
+
+<div class="page">
+  <!-- Hero -->
+  <div class="hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/blog">Blog &amp; Guides</a> &rsaquo; C-Bus Not Working Troubleshooting</div>
+      <div class="tag">TECHNICAL REPAIR GUIDE &bull; EX-CLIPSAL SUPPORT</div>
+      <h1>C-Bus Dimmer Module Failure?<br/><span class="accent">Buzzing, Dead Channels &amp; Diagnostic Guide</span></h1>
+      <p class="lead">When a Clipsal C-Bus system goes down, entire homes or commercial floors can be plunged into darkness or stuck with lights locked on. Here is the exact diagnostic sequence we use to locate the root cause in minutes — before touching hardware or spending thousands on guesswork parts.</p>
+      <div class="btns">
+        <a class="btn btn-primary" href="tel:0422469739">&#128222; Call George on 0422 469 739</a>
+        <a class="btn btn-outline" href="/cbus-repair-second-opinion-sydney">Get a Second Opinion on a $30k Quote &rarr;</a>
+      </div>
+      <div style="margin-top:28px;display:flex;flex-wrap:wrap;gap:16px;">
+        <span class="badge">&#10003; 5-Step Diagnostic Protocol</span>
+        <span class="badge">&#10003; Live Packet Analysis</span>
+        <span class="badge">&#10003; No Guesswork Replacements</span>
+        <span class="badge">&#10003; Sydney-Wide Same-Day Dispatch</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Trust Bar -->
+  <div class="trust-bar">
+    <div class="trust-bar-inner">
+      <div class="trust-item"><span class="dot">&#10003;</span> Ex-Clipsal National Technical Support</div>
+      <div class="trust-item"><span class="dot">&#10003;</span> Accredited C-Bus Programmer</div>
+      <div class="trust-item"><span class="dot">&#10003;</span> Diagnostic Assessment $280 + GST</div>
+      <div class="trust-item"><span class="dot">&#10003;</span> 15+ Years Commercial &amp; Residential</div>
+    </div>
+  </div>
+
+  <!-- Diagnostic Steps Article Body -->
+  <section class="section">
+    <div class="container-sm" style="max-width:860px;">
+      
+      <!-- Alert Box -->
+      <div style="background:rgba(240,112,32,0.15);border-left:4px solid #f07020;padding:20px;border-radius:8px;margin-bottom:36px;">
+        <h3 style="color:#fff;font-size:18px;margin-bottom:6px;">⚡ First Rule of C-Bus: Do Not Replace Modules on a Guess</h3>
+        <p class="dim" style="font-size:14px;line-height:1.7;margin:0;">General electricians frequently charge $1,500+ to replace DIN-rail relay or dimmer modules because a channel isn't responding. In over 80% of outages, the module is mechanically sound — the fault is a corrupted network clock, a missing burden, or an upstream power supply brownout.</p>
+      </div>
+
+      <h2 style="font-size:32px;margin-bottom:20px;">The 5-Step C-Bus Diagnostic Sequence</h2>
+
+      <!-- Step 1 -->
+      <div class="card" style="margin-bottom:24px;border-left:4px solid #00e676;">
+        <div style="font-size:12px;font-weight:800;color:#00e676;letter-spacing:2px;text-transform:uppercase;margin-bottom:6px;">STEP 1: INSPECT SWITCHBOARD STATUS LEDS</div>
+        <h3 style="font-size:22px;margin-bottom:12px;">What are the Unit &amp; C-Bus indicator lights doing?</h3>
+        <p class="dim" style="font-size:15px;line-height:1.8;">Open your distribution board. Every C-Bus DIN-rail module has two critical diagnostic LEDs labeled <strong>Unit</strong> and <strong>C-Bus</strong>:</p>
+        <ul class="check-list" style="margin-top:12px;">
+          <li><strong>Unit LED Solid Green:</strong> 240V mains power is reaching the module and the internal processor is running.</li>
+          <li><strong>Unit LED Off:</strong> The 240V circuit breaker supplying the module is tripped, or the internal module power supply has died.</li>
+          <li><strong>C-Bus LED Solid Green:</strong> The module is receiving healthy DC communication voltage (28V–36V DC) from the pink data bus.</li>
+          <li><strong>C-Bus LED Blinking or Flashing:</strong> Indicates packet collision, data corruption, clock sync errors, or a voltage drop below 15V DC.</li>
+          <li><strong>C-Bus LED Off:</strong> Complete bus failure. Either the pink data cable is cut, shorted, or the central C-Bus Power Supply (5500PS) is dead.</li>
+        </ul>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="card" style="margin-bottom:24px;border-left:4px solid #00e676;">
+        <div style="font-size:12px;font-weight:800;color:#00e676;letter-spacing:2px;text-transform:uppercase;margin-bottom:6px;">STEP 2: TEST BUS DC VOLTAGE ACROSS THE PINK CABLE</div>
+        <h3 style="font-size:22px;margin-bottom:12px;">Is your bus voltage between 28V and 36V DC?</h3>
+        <p class="dim" style="font-size:15px;line-height:1.8;">C-Bus requires extra-low voltage (SELV) direct current to power the microprocessors inside every light switch, sensor, and relay unit across the network:</p>
+        <ul class="check-list" style="margin-top:12px;">
+          <li><strong>Healthy Range:</strong> 28V to 36V DC. Optimal is typically ~30V to 32V DC.</li>
+          <li><strong>Degraded Range (15V to 24V DC):</strong> Switches may light up dimly, but button presses will drop packets intermittently. Scenes will trigger partially.</li>
+          <li><strong>Critical Drop (&lt; 15V DC):</strong> Complete communication failure. The entire system will freeze. This is almost always caused by an aged 5500PS power supply losing capacitance.</li>
+        </ul>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="card" style="margin-bottom:24px;border-left:4px solid #00e676;">
+        <div style="font-size:12px;font-weight:800;color:#00e676;letter-spacing:2px;text-transform:uppercase;margin-bottom:6px;">STEP 3: CHECK CLOCK GENERATORS &amp; NETWORK BURDENS</div>
+        <h3 style="font-size:22px;margin-bottom:12px;">The #1 invisible cause of sudden system lockups</h3>
+        <p class="dim" style="font-size:15px;line-height:1.8;">C-Bus communication runs on a synchronized digital clock signal and requires a single resistive network burden to prevent signal reflection on the cable:</p>
+        <ul class="check-list" style="margin-top:12px;">
+          <li>Every C-Bus network must have <strong>exactly ONE clock generator enabled</strong>. If two units generate clock, or zero units generate clock, communication collapses.</li>
+          <li>Every C-Bus network must have <strong>exactly ONE burden enabled</strong>. If an electrician unknowingly swapped a module and left the hardware burden in the wrong position, packets reflect and corrupt the data stream.</li>
+          <li>This is invisible to multimeters — it requires connecting via Clipsal C-Bus Toolkit to inspect the network topology.</li>
+        </ul>
+      </div>
+
+      <!-- Step 4 -->
+      <div class="card" style="margin-bottom:24px;border-left:4px solid #00e676;">
+        <div style="font-size:12px;font-weight:800;color:#00e676;letter-spacing:2px;text-transform:uppercase;margin-bottom:6px;">STEP 4: EMERGENCY MANUAL RELAY OVERRIDE</div>
+        <h3 style="font-size:22px;margin-bottom:12px;">Need lights on right now while waiting for repair?</h3>
+        <p class="dim" style="font-size:15px;line-height:1.8;">If your keypads are dead and you are stuck in the dark, locate your C-Bus relay units (L5504RVF, L5508RVF, L5512RVF) in the switchboard:</p>
+        <ul class="check-list" style="margin-top:12px;">
+          <li>Each channel has a mechanical push-button on the unit’s front face.</li>
+          <li>Pressing this button toggles the internal contact mechanically, turning the circuit ON or OFF independently of software.</li>
+          <li>This provides immediate lighting relief while awaiting professional fault finding.</li>
+        </ul>
+      </div>
+
+      <!-- Step 5 -->
+      <div class="card" style="margin-bottom:36px;border-left:4px solid #f07020;">
+        <div style="font-size:12px;font-weight:800;color:#f07020;letter-spacing:2px;text-transform:uppercase;margin-bottom:6px;">STEP 5: PROFESSIONAL DIAGNOSTICS &amp; REPAIR</div>
+        <h3 style="font-size:22px;margin-bottom:12px;">When to Call an Ex-Clipsal Specialist</h3>
+        <p class="dim" style="font-size:15px;line-height:1.8;">If checking the circuit breaker and power supply doesn't resolve the fault, the issue is at the digital protocol level. George connects directly into the bus via Clipsal C-Bus Toolkit and Commission SpaceLogic:</p>
+        <ul class="check-list" style="margin-top:12px;">
+          <li>Reads live network packet traffic and locates faulty unit IDs in under 15 minutes.</li>
+          <li>Carries genuine replacement power supplies (5500PS), relays, and dimmers on the van.</li>
+          <li>Restores corrupted scene databases without rewiring or replacing healthy hardware.</li>
+          <li>Coordinates directly with his trusted subcontracted licensed electrician for physical switchboard replacements.</li>
+        </ul>
+      </div>
+
+      <!-- Big CTA Banner -->
+      <div style="background:linear-gradient(135deg,rgba(240,112,32,0.18),rgba(14,31,61,0.6));border:1.5px solid rgba(240,112,32,0.45);border-radius:16px;padding:36px;text-align:center;margin:40px 0;">
+        <div style="font-size:13px;font-weight:800;color:#f07020;letter-spacing:2px;text-transform:uppercase;margin-bottom:12px;">EX-CLIPSAL NATIONAL TECHNICAL SUPPORT</div>
+        <h3 style="font-size:28px;font-family:'Barlow Condensed',sans-serif;font-weight:900;margin-bottom:12px;">Don't let a sparky guess with your C-Bus system.</h3>
+        <p style="color:#a8c0e0;margin-bottom:24px;font-size:16px;">Diagnostic Assessment: $280 + GST. We identify the exact failed component in software first. Zero guesswork. Sydney-wide response.</p>
+        <div class="btns" style="justify-content:center;">
+          <a href="tel:0422469739" class="btn btn-primary" style="font-size:17px;padding:16px 36px;">📞 Call George — 0422 469 739</a>
+          <a href="/cbus-repair-second-opinion-sydney" class="btn btn-outline">Second Opinion on $30k Quote →</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Real Reviews -->
+  <section class="section" style="background:#001428;">
+    <div class="container">
+      <div style="text-align:center;margin-bottom:40px;">
+        <div class="tag">VERIFIED GOOGLE REVIEWS</div>
+        <h2>What Real Clients Say</h2>
+      </div>
+      <div class="grid-2">
+        <div class="card">
+          <div style="color:#f07020;font-size:18px;margin-bottom:12px;">⭐⭐⭐⭐⭐</div>
+          <p class="dim" style="font-size:15px;line-height:1.8;margin-bottom:16px;">“Literally a lifesaver… George came out in 24 hours, diagnosed the problem with the CBUS system that two previous 'specialists' couldn't — fixed it — and then checked in two days later to make sure it was still working.”</p>
+          <div style="font-weight:700;color:#f0f4ff;">Adam Ziino</div>
+          <div class="dim" style="font-size:13px;">Google Review ✓ Verified</div>
+        </div>
+        <div class="card">
+          <div style="color:#f07020;font-size:18px;margin-bottom:12px;">⭐⭐⭐⭐⭐</div>
+          <p class="dim" style="font-size:15px;line-height:1.8;margin-bottom:16px;">“Highly recommend George for any C-Bus programming needs! He is exceptionally professional, knowledgeable, and efficient. He completed the programming flawlessly and took the time to ensure everything was running perfectly.”</p>
+          <div style="font-weight:700;color:#f0f4ff;">Liao Calvin</div>
+          <div class="dim" style="font-size:13px;">Google Review ✓ Verified</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <div class="tag">FAQ</div>
+        <h2>Frequently Asked <span class="accent">C-Bus Repair Questions</span></h2>
+      </div>
+      <div class="container-sm">
+        <div class="faq-item"><div class="faq-q">Why did my entire C-Bus lighting system suddenly stop responding? <span>+</span></div><div class="faq-a">When an entire C-Bus network goes unresponsive simultaneously, it is almost always due to one of three issues: 1) The main C-Bus power supply (5500PS or module internal PSU) has failed, dropping DC voltage below 15V. 2) The network clock generator has dropped off or there is a clock collision. 3) A physical cable short or bad burden on the pink Category 5 cable has pulled down data communication.</div></div>
+        <div class="faq-item"><div class="faq-q">How do I test if my C-Bus power supply is working? <span>+</span></div><div class="faq-a">Check the 'Unit' and 'C-Bus' indicator LEDs on your DIN-rail modules in the switchboard. If the C-Bus LED is off or blinking amber/red, the DC bus voltage is compromised. With a digital multimeter set to DC volts, measure across the pink pair (+ and -). You should read between 28V and 36V DC. If it reads below 15V DC, the network cannot communicate.</div></div>
+        <div class="faq-item"><div class="faq-q">Can I manually turn on my lights if C-Bus programming crashes? <span>+</span></div><div class="faq-a">Yes. Most C-Bus DIN-rail relay modules (like L5512RVF, L5508RVF) have physical manual toggle buttons directly on the front fascia of the module in your electrical switchboard. Pressing these buttons mechanically overrides the relay channel to turn lights on or off in an emergency.</div></div>
+        <div class="faq-item"><div class="faq-q">Can a general electrician fix my C-Bus system? <span>+</span></div><div class="faq-a">General electricians can check 240V breakers and swap hardware, but without proprietary Clipsal C-Bus Toolkit software and RS232/PCI/CNI interface connections, they cannot diagnose software-level bus errors, clock sync, burdening, or unit ID collisions. This often leads them to recommend unnecessary $30,000+ system replacements.</div></div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- Floating CTA -->
+<div class="sac-float-cta">
+  <a class="sac-float-call" href="tel:0422469739">📞 Call George</a>
+  <a class="sac-float-wa" href="https://wa.me/61422469739" target="_blank" rel="noopener">💬 WhatsApp</a>
+</div>
+
+<footer>
+  <div class="footer-grid">
+    <div>
+      <a class="logo" href="/"><span class="logo-main">Sydney Automation Co.</span><span class="logo-line"></span><span class="logo-sub">Lighting Control Specialists</span></a>
+      <p class="dim" style="font-size:14px;line-height:1.7;margin-top:16px;">Ex-Clipsal National Technical Support. Accredited C-Bus Programmer (Schneider Electric). Accredited Signify Dynalite System Designer. Based in Menai, servicing Greater Sydney.</p>
+      <p style="margin-top:16px;"><a href="tel:0422469739" style="color:#f07020;font-weight:700;font-size:16px;">0422 469 739</a></p>
+      <p><a href="mailto:service@sydneyautomationco.com.au" style="color:#a8c0e0;font-size:14px;">service@sydneyautomationco.com.au</a></p>
+    </div>
+    <div>
+      <h4 style="font-size:13px;font-weight:700;color:#f07020;letter-spacing:2px;text-transform:uppercase;margin-bottom:16px;">Troubleshooting Guides</h4>
+      <a href="/blog-cbus-not-working-repair-guide" style="display:block;color:#a8c0e0;font-size:14px;padding:4px 0;">C-Bus Not Working Guide</a>
+      <a href="/cbus-fault-finding-sydney" style="display:block;color:#a8c0e0;font-size:14px;padding:4px 0;">C-Bus Fault Finding</a>
+      <a href="/dynalite-fault-finding-sydney-common-faults" style="display:block;color:#a8c0e0;font-size:14px;padding:4px 0;">Dynalite Common Faults</a>
+      <a href="/cbus-relay-power-supply-replacement-sydney" style="display:block;color:#a8c0e0;font-size:14px;padding:4px 0;">PSU &amp; Relay Replacement</a>
+    </div>
+    <div>
+      <h4 style="font-size:13px;font-weight:700;color:#f07020;letter-spacing:2px;text-transform:uppercase;margin-bottom:16px;">Specialist Services</h4>
+      <a href="/c-bus-programmer-sydney" style="display:block;color:#a8c0e0;font-size:14px;padding:4px 0;">C-Bus Programming</a>
+      <a href="/cbus-repair-sydney" style="display:block;color:#a8c0e0;font-size:14px;padding:4px 0;">C-Bus Repairs</a>
+      <a href="/c-bus-apple-homekit-sydney" style="display:block;color:#a8c0e0;font-size:14px;padding:4px 0;">C-Bus &amp; Apple HomeKit</a>
+      <a href="/cbus-repair-second-opinion-sydney" style="display:block;color:#a8c0e0;font-size:14px;padding:4px 0;">Second Opinion &amp; Rescue</a>
+    </div>
+  </div>
+  <div class="footer-copy">
+    <span>&copy; 2026 Sydney Automation Co. All rights reserved.</span>
+    <span>Menai NSW 2234 &bull; <a href="/privacy-policy" style="color:#6a8cb5;">Privacy</a> &bull; <a href="/terms-of-service" style="color:#6a8cb5;">Terms</a></span>
+  </div>
+</footer>
+
+<script>
+// Nav dropdowns
+document.querySelectorAll('.nav-dd').forEach(dd=>{
+  const trigger=dd.querySelector('.nav-dd-trigger');
+  const panel=dd.querySelector('.nav-dd-panel');
+  if(!trigger||!panel)return;
+  trigger.addEventListener('click',e=>{e.stopPropagation();const open=dd.classList.contains('open');document.querySelectorAll('.nav-dd').forEach(d=>d.classList.remove('open'));if(!open)dd.classList.add('open');});
+});
+document.addEventListener('click',()=>document.querySelectorAll('.nav-dd').forEach(d=>d.classList.remove('open')));
+// Hamburger
+const ham=document.getElementById('hamburger'),mob=document.getElementById('mobNav');
+if(ham&&mob)ham.addEventListener('click',()=>{ham.classList.toggle('open');mob.classList.toggle('open');});
+// FAQ accordion
+document.querySelectorAll('.faq-item').forEach(item=>{
+  item.querySelector('.faq-q').addEventListener('click',()=>{
+    const open=item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('open'));
+    if(!open)item.classList.add('open');
+  });
+});
+// Floating CTA show on scroll
+const floatCta=document.querySelector('.sac-float-cta');
+if(floatCta){window.addEventListener('scroll',()=>{floatCta.style.display=window.scrollY>300?'flex':'none';});}
+</script>
+</body>
+</html>

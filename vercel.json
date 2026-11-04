@@ -5,13 +5,263 @@
   "trailingSlash": false,
   "redirects": [
     {
+      "source": "/blog-airport-lighting-sydney.html",
+      "destination": "/blog-cbus-not-working-repair-guide",
+      "permanent": true
+    },
+    {
+      "source": "/blog-airport-lighting-sydney",
+      "destination": "/blog-cbus-not-working-repair-guide",
+      "permanent": true
+    },
+    {
+      "source": "/blog-aged-care-emergency-lighting-sydney.html",
+      "destination": "/emergency-lighting-compliance-afss-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/blog-aged-care-emergency-lighting-sydney",
+      "destination": "/emergency-lighting-compliance-afss-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/blog-afss-inspection-checklist-sydney.html",
+      "destination": "/emergency-lighting-compliance-afss-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/blog-afss-inspection-checklist-sydney",
+      "destination": "/emergency-lighting-compliance-afss-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/blog-afss-emergency-log-book-app-sydney.html",
+      "destination": "/emergency-lighting-compliance-afss-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/blog-afss-emergency-log-book-app-sydney",
+      "destination": "/emergency-lighting-compliance-afss-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/blog-cbus-voltage-drop-diagnosis-sydney.html",
+      "destination": "/blog-cbus-not-working-repair-guide",
+      "permanent": true
+    },
+    {
+      "source": "/blog-cbus-voltage-drop-diagnosis-sydney",
+      "destination": "/blog-cbus-not-working-repair-guide",
+      "permanent": true
+    },
+    {
+      "source": "/blog-cbus-scene-controller-setup-sydney.html",
+      "destination": "/blog-cbus-not-working-repair-guide",
+      "permanent": true
+    },
+    {
+      "source": "/blog-cbus-scene-controller-setup-sydney",
+      "destination": "/blog-cbus-not-working-repair-guide",
+      "permanent": true
+    },
+    {
+      "source": "/blog-cbus-relay-stuck-closed-sydney.html",
+      "destination": "/blog-cbus-not-working-repair-guide",
+      "permanent": true
+    },
+    {
+      "source": "/blog-cbus-relay-stuck-closed-sydney",
+      "destination": "/blog-cbus-not-working-repair-guide",
+      "permanent": true
+    },
+    {
+      "source": "/blog-cbus-power-supply-overheating-sydney.html",
+      "destination": "/blog-cbus-not-working-repair-guide",
+      "permanent": true
+    },
+    {
+      "source": "/blog-cbus-power-supply-overheating-sydney",
+      "destination": "/blog-cbus-not-working-repair-guide",
+      "permanent": true
+    },
+    {
+      "source": "/blog-cbus-pir-sensor-adjustment-sydney.html",
+      "destination": "/blog-cbus-not-working-repair-guide",
+      "permanent": true
+    },
+    {
+      "source": "/blog-cbus-pir-sensor-adjustment-sydney",
+      "destination": "/blog-cbus-not-working-repair-guide",
+      "permanent": true
+    },
+    {
+      "source": "/blog-cbus-network-noise-interference-sydney.html",
+      "destination": "/blog-cbus-not-working-repair-guide",
+      "permanent": true
+    },
+    {
+      "source": "/blog-cbus-network-noise-interference-sydney",
+      "destination": "/blog-cbus-not-working-repair-guide",
+      "permanent": true
+    },
+    {
+      "source": "/blog-cbus-neo-light-switch-setup-sydney.html",
+      "destination": "/blog-cbus-not-working-repair-guide",
+      "permanent": true
+    },
+    {
+      "source": "/blog-cbus-neo-light-switch-setup-sydney",
+      "destination": "/blog-cbus-not-working-repair-guide",
+      "permanent": true
+    },
+    {
+      "source": "/blog-cbus-multi-room-audio-integration-sydney.html",
+      "destination": "/blog-cbus-not-working-repair-guide",
+      "permanent": true
+    },
+    {
+      "source": "/blog-cbus-multi-room-audio-integration-sydney",
+      "destination": "/blog-cbus-not-working-repair-guide",
+      "permanent": true
+    },
+    {
+      "source": "/blog-cbus-lighting-group-reconfiguration-sydney.html",
+      "destination": "/blog-cbus-not-working-repair-guide",
+      "permanent": true
+    },
+    {
+      "source": "/blog-cbus-lighting-group-reconfiguration-sydney",
+      "destination": "/blog-cbus-not-working-repair-guide",
+      "permanent": true
+    },
+    {
+      "source": "/blog-cbus-l5508d1a-dimmer-programming-sydney.html",
+      "destination": "/blog-cbus-not-working-repair-guide",
+      "permanent": true
+    },
+    {
+      "source": "/blog-cbus-l5508d1a-dimmer-programming-sydney",
+      "destination": "/blog-cbus-not-working-repair-guide",
+      "permanent": true
+    },
+    {
+      "source": "/blog-cbus-l5504d2u-led-status-indicators-sydney.html",
+      "destination": "/blog-cbus-not-working-repair-guide",
+      "permanent": true
+    },
+    {
+      "source": "/blog-cbus-l5504d2u-led-status-indicators-sydney",
+      "destination": "/blog-cbus-not-working-repair-guide",
+      "permanent": true
+    },
+    {
+      "source": "/blog-cbus-keypad-buttons-sticking-sydney.html",
+      "destination": "/blog-cbus-not-working-repair-guide",
+      "permanent": true
+    },
+    {
+      "source": "/blog-cbus-keypad-buttons-sticking-sydney",
+      "destination": "/blog-cbus-not-working-repair-guide",
+      "permanent": true
+    },
+    {
+      "source": "/blog-cbus-ethernet-interface-offline-sydney.html",
+      "destination": "/blog-cbus-not-working-repair-guide",
+      "permanent": true
+    },
+    {
+      "source": "/blog-cbus-ethernet-interface-offline-sydney",
+      "destination": "/blog-cbus-not-working-repair-guide",
+      "permanent": true
+    },
+    {
+      "source": "/blog-cbus-dynalite-obsolete-hardware-part-replacement.html",
+      "destination": "/blog-cbus-not-working-repair-guide",
+      "permanent": true
+    },
+    {
+      "source": "/blog-cbus-dynalite-obsolete-hardware-part-replacement",
+      "destination": "/blog-cbus-not-working-repair-guide",
+      "permanent": true
+    },
+    {
+      "source": "/blog-cbus-daylight-harvesting-calibration-sydney.html",
+      "destination": "/blog-cbus-not-working-repair-guide",
+      "permanent": true
+    },
+    {
+      "source": "/blog-cbus-daylight-harvesting-calibration-sydney",
+      "destination": "/blog-cbus-not-working-repair-guide",
+      "permanent": true
+    },
+    {
+      "source": "/blog-cbus-dali-gateway-config-guide-sydney.html",
+      "destination": "/blog-cbus-not-working-repair-guide",
+      "permanent": true
+    },
+    {
+      "source": "/blog-cbus-dali-gateway-config-guide-sydney",
+      "destination": "/blog-cbus-not-working-repair-guide",
+      "permanent": true
+    },
+    {
+      "source": "/blog-cbus-5508rvf-blinking-red-led-sydney.html",
+      "destination": "/blog-cbus-not-working-repair-guide",
+      "permanent": true
+    },
+    {
+      "source": "/blog-cbus-5508rvf-blinking-red-led-sydney",
+      "destination": "/blog-cbus-not-working-repair-guide",
+      "permanent": true
+    },
+    {
+      "source": "/blog-cbus-5500ps-power-supply-humming-sydney.html",
+      "destination": "/blog-cbus-not-working-repair-guide",
+      "permanent": true
+    },
+    {
+      "source": "/blog-cbus-5500ps-power-supply-humming-sydney",
+      "destination": "/blog-cbus-not-working-repair-guide",
+      "permanent": true
+    },
+    {
+      "source": "/blog-cbus-5500pc-software-crash-sydney.html",
+      "destination": "/blog-cbus-not-working-repair-guide",
+      "permanent": true
+    },
+    {
+      "source": "/blog-cbus-5500pc-software-crash-sydney",
+      "destination": "/blog-cbus-not-working-repair-guide",
+      "permanent": true
+    },
+    {
+      "source": "/blog-cbus-5100ps-power-supply-test-sydney.html",
+      "destination": "/blog-cbus-not-working-repair-guide",
+      "permanent": true
+    },
+    {
+      "source": "/blog-cbus-5100ps-power-supply-test-sydney",
+      "destination": "/blog-cbus-not-working-repair-guide",
+      "permanent": true
+    },
+    {
+      "source": "/blog-cbus-5050l-led-driver-faults-sydney.html",
+      "destination": "/blog-cbus-not-working-repair-guide",
+      "permanent": true
+    },
+    {
+      "source": "/blog-cbus-5050l-led-driver-faults-sydney",
+      "destination": "/blog-cbus-not-working-repair-guide",
+      "permanent": true
+    },
+    {
       "source": "/tech-library",
-      "destination": "/products",
+      "destination": "/blog-cbus-not-working-repair-guide",
       "permanent": true
     },
     {
       "source": "/tech-library/:path*",
-      "destination": "/products",
+      "destination": "/blog-cbus-not-working-repair-guide",
       "permanent": true
     },
     {
