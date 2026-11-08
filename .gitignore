@@ -64,3 +64,5 @@ auth.json
 # Replit
 .cache/
 .local/
+
+scratch/
