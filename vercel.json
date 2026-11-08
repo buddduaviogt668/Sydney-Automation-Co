@@ -5,6 +5,101 @@
   "trailingSlash": false,
   "redirects": [
     {
+      "source": "/cbus-fault-finding-sydney",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/cbus-specialist-sydney.html",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/cbus-specialist-sydney",
+      "destination": "/cbus-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/dynalite-not-working-sydney.html",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/dynalite-not-working-sydney",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/dynalite-fault-finding-sydney-common-faults.html",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/dynalite-fault-finding-sydney-common-faults",
+      "destination": "/dynalite-repair-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/cbus-maintenance-sydney.html",
+      "destination": "/building-automation-maintenance-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/cbus-maintenance-sydney",
+      "destination": "/building-automation-maintenance-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/dynalite-maintenance-sydney.html",
+      "destination": "/building-automation-maintenance-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/dynalite-maintenance-sydney",
+      "destination": "/building-automation-maintenance-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/facilities-lighting-maintenance-sydney.html",
+      "destination": "/building-automation-maintenance-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/facilities-lighting-maintenance-sydney",
+      "destination": "/building-automation-maintenance-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/lighting-control-maintenance-sydney.html",
+      "destination": "/building-automation-maintenance-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/lighting-control-maintenance-sydney",
+      "destination": "/building-automation-maintenance-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/cbus-vs-dynalite.html",
+      "destination": "/c-bus-vs-dynalite-vs-knx-comparison-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/cbus-vs-dynalite",
+      "destination": "/c-bus-vs-dynalite-vs-knx-comparison-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/dynalite-vs-cbus-sydney.html",
+      "destination": "/c-bus-vs-dynalite-vs-knx-comparison-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/dynalite-vs-cbus-sydney",
+      "destination": "/c-bus-vs-dynalite-vs-knx-comparison-sydney",
+      "permanent": true
+    },
+    {
       "source": "/blog-airport-lighting-sydney.html",
       "destination": "/blog-cbus-not-working-repair-guide",
       "permanent": true
