@@ -5,6 +5,196 @@
   "trailingSlash": false,
   "redirects": [
     {
+      "source": "/bellevue-hill-lighting-control.html",
+      "destination": "/smart-home-installation-bellevue-hill",
+      "permanent": true
+    },
+    {
+      "source": "/bellevue-hill-lighting-control",
+      "destination": "/smart-home-installation-bellevue-hill",
+      "permanent": true
+    },
+    {
+      "source": "/darling-point-lighting-control.html",
+      "destination": "/smart-home-darling-point",
+      "permanent": true
+    },
+    {
+      "source": "/darling-point-lighting-control",
+      "destination": "/smart-home-darling-point",
+      "permanent": true
+    },
+    {
+      "source": "/double-bay-lighting-control.html",
+      "destination": "/smart-home-automation-vaucluse",
+      "permanent": true
+    },
+    {
+      "source": "/double-bay-lighting-control",
+      "destination": "/smart-home-automation-vaucluse",
+      "permanent": true
+    },
+    {
+      "source": "/hunters-hill-lighting-control.html",
+      "destination": "/smart-home-automation-lane-cove",
+      "permanent": true
+    },
+    {
+      "source": "/hunters-hill-lighting-control",
+      "destination": "/smart-home-automation-lane-cove",
+      "permanent": true
+    },
+    {
+      "source": "/lane-cove-lighting-control.html",
+      "destination": "/smart-home-automation-lane-cove",
+      "permanent": true
+    },
+    {
+      "source": "/lane-cove-lighting-control",
+      "destination": "/smart-home-automation-lane-cove",
+      "permanent": true
+    },
+    {
+      "source": "/neutral-bay-lighting-control.html",
+      "destination": "/smart-home-automation-neutral-bay",
+      "permanent": true
+    },
+    {
+      "source": "/neutral-bay-lighting-control",
+      "destination": "/smart-home-automation-neutral-bay",
+      "permanent": true
+    },
+    {
+      "source": "/point-piper-lighting-control.html",
+      "destination": "/smart-home-automation-vaucluse",
+      "permanent": true
+    },
+    {
+      "source": "/point-piper-lighting-control",
+      "destination": "/smart-home-automation-vaucluse",
+      "permanent": true
+    },
+    {
+      "source": "/rose-bay-lighting-control.html",
+      "destination": "/lighting-control-rose-bay",
+      "permanent": true
+    },
+    {
+      "source": "/rose-bay-lighting-control",
+      "destination": "/lighting-control-rose-bay",
+      "permanent": true
+    },
+    {
+      "source": "/surry-hills-lighting-control.html",
+      "destination": "/smart-home-sydney-cbd",
+      "permanent": true
+    },
+    {
+      "source": "/surry-hills-lighting-control",
+      "destination": "/smart-home-sydney-cbd",
+      "permanent": true
+    },
+    {
+      "source": "/bellevue-hill-emergency-lighting.html",
+      "destination": "/emergency-lighting-compliance-afss-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/bellevue-hill-emergency-lighting",
+      "destination": "/emergency-lighting-compliance-afss-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/darling-point-emergency-lighting.html",
+      "destination": "/emergency-lighting-compliance-afss-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/darling-point-emergency-lighting",
+      "destination": "/emergency-lighting-compliance-afss-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/double-bay-emergency-lighting.html",
+      "destination": "/emergency-lighting-compliance-afss-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/double-bay-emergency-lighting",
+      "destination": "/emergency-lighting-compliance-afss-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/hunters-hill-emergency-lighting.html",
+      "destination": "/emergency-lighting-compliance-afss-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/hunters-hill-emergency-lighting",
+      "destination": "/emergency-lighting-compliance-afss-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/lane-cove-emergency-lighting.html",
+      "destination": "/emergency-lighting-compliance-afss-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/lane-cove-emergency-lighting",
+      "destination": "/emergency-lighting-compliance-afss-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/neutral-bay-emergency-lighting.html",
+      "destination": "/emergency-lighting-compliance-afss-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/neutral-bay-emergency-lighting",
+      "destination": "/emergency-lighting-compliance-afss-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/point-piper-emergency-lighting.html",
+      "destination": "/emergency-lighting-compliance-afss-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/point-piper-emergency-lighting",
+      "destination": "/emergency-lighting-compliance-afss-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/rose-bay-emergency-lighting.html",
+      "destination": "/emergency-lighting-compliance-afss-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/rose-bay-emergency-lighting",
+      "destination": "/emergency-lighting-compliance-afss-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/surry-hills-emergency-lighting.html",
+      "destination": "/emergency-lighting-compliance-afss-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/surry-hills-emergency-lighting",
+      "destination": "/emergency-lighting-compliance-afss-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/afss-emergency-lighting.html",
+      "destination": "/emergency-lighting-compliance-afss-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/afss-emergency-lighting",
+      "destination": "/emergency-lighting-compliance-afss-sydney",
+      "permanent": true
+    },
+    {
       "source": "/cbus-fault-finding-sydney",
       "destination": "/cbus-repair-sydney",
       "permanent": true
