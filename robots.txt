@@ -14,7 +14,7 @@ Allow: /
 User-agent: Bingbot
 Allow: /
 
-# AI search and answer-engine crawlers (explicitly allowed)
+# AI search and answer-engine crawlers (explicitly allowed for GEO & AEO)
 User-agent: GPTBot
 Allow: /
 
@@ -44,6 +44,11 @@ Allow: /
 
 User-agent: CCBot
 Allow: /
+
+# AI and LLM Knowledge Bases
+# llms.txt standard: https://llmstxt.org/
+# Authoritative summary: https://sydneyautomationco.com.au/llms.txt
+# Full technical reference: https://sydneyautomationco.com.au/llms-full.txt
 
 # Sitemap location
 Sitemap: https://sydneyautomationco.com.au/sitemap.xml
