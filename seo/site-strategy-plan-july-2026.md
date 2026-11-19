@@ -63,7 +63,7 @@ Three channels drive ~55% of revenue but the website barely serves them:
 - C-Bus and Dynalite capabilities (Toolkit, System Builder)
 - 4-step process
 - Target audiences: regional electricians, AV integrators, building managers, trade partners
-- Pricing: $150/hr, no minimum, no travel
+- Pricing: quoted per project, no travel surcharge
 
 ### Phase 6 — Internal Links (Low Effort)
 **Goal:** Link from ranking pages → case studies to improve case study visibility and distribute authority.
