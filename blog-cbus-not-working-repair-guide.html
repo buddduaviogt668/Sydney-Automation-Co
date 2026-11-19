@@ -64,7 +64,7 @@
     {"@type": "Question","name": "Why did my entire C-Bus lighting system suddenly stop responding?","acceptedAnswer":{"@type": "Answer","text": "When an entire C-Bus network goes unresponsive simultaneously, it is almost always due to one of three issues: 1) The main C-Bus power supply (5500PS or module internal PSU) has failed, dropping DC voltage below 15V. 2) The network clock generator has dropped off or there is a clock collision. 3) A physical cable short or bad burden on the pink Category 5 cable has pulled down data communication."}},
     {"@type": "Question","name": "How do I test if my C-Bus power supply is working?","acceptedAnswer":{"@type": "Answer","text": "Check the 'Unit' and 'C-Bus' indicator LEDs on your DIN-rail modules in the switchboard. If the C-Bus LED is off or blinking amber/red, the DC bus voltage is compromised. With a digital multimeter set to DC volts, measure across the pink pair (+ and -). You should read between 28V and 36V DC. If it reads below 15V DC, the network cannot communicate."}},
     {"@type": "Question","name": "Can I manually turn on my lights if C-Bus programming crashes?","acceptedAnswer":{"@type": "Answer","text": "Yes. Most C-Bus DIN-rail relay modules (like L5512RVF, L5508RVF) have physical manual toggle buttons directly on the front fascia of the module in your electrical switchboard. Pressing these buttons mechanically overrides the relay channel to turn lights on or off in an emergency."}},
-    {"@type": "Question","name": "Can a general electrician fix my C-Bus system?","acceptedAnswer":{"@type": "Answer","text": "General electricians can check 240V breakers and swap hardware, but without proprietary Clipsal C-Bus Toolkit software and RS232/PCI/CNI interface connections, they cannot diagnose software-level bus errors, clock sync, burdening, or unit ID collisions. This often leads them to recommend unnecessary $30,000+ system replacements."}}
+    {"@type": "Question","name": "Can a general electrician fix my C-Bus system?","acceptedAnswer":{"@type": "Answer","text": "General electricians can check 240V breakers and swap hardware, but without proprietary Clipsal C-Bus Toolkit software and RS232/PCI/CNI interface connections, they cannot diagnose software-level bus errors, clock sync, burdening, or unit ID collisions. This often leads them to recommend unnecessary tens of thousands+ system replacements."}}
   ]
 }
 </script>
@@ -124,7 +124,7 @@
       <p class="lead">When a Clipsal C-Bus system goes down, entire homes or commercial floors can be plunged into darkness or stuck with lights locked on. Here is the exact diagnostic sequence we use to locate the root cause in minutes — before touching hardware or spending thousands on guesswork parts.</p>
       <div class="btns">
         <a class="btn btn-primary" href="tel:0422469739">&#128222; Call George on 0422 469 739</a>
-        <a class="btn btn-outline" href="/cbus-repair-second-opinion-sydney">Get a Second Opinion on a $30k Quote &rarr;</a>
+        <a class="btn btn-outline" href="/cbus-repair-second-opinion-sydney">Get a Second Opinion on a Full Rewire Quote &rarr;</a>
       </div>
       <div style="margin-top:28px;display:flex;flex-wrap:wrap;gap:16px;">
         <span class="badge">&#10003; 5-Step Diagnostic Protocol</span>
@@ -140,7 +140,7 @@
     <div class="trust-bar-inner">
       <div class="trust-item"><span class="dot">&#10003;</span> Ex-Clipsal National Technical Support</div>
       <div class="trust-item"><span class="dot">&#10003;</span> Accredited C-Bus Programmer</div>
-      <div class="trust-item"><span class="dot">&#10003;</span> Diagnostic Assessment $280 + GST</div>
+      <div class="trust-item"><span class="dot">&#10003;</span> Diagnostic Assessment & Fixed Quote</div>
       <div class="trust-item"><span class="dot">&#10003;</span> 15+ Years Commercial &amp; Residential</div>
     </div>
   </div>
@@ -152,7 +152,7 @@
       <!-- Alert Box -->
       <div style="background:rgba(240,112,32,0.15);border-left:4px solid #f07020;padding:20px;border-radius:8px;margin-bottom:36px;">
         <h3 style="color:#fff;font-size:18px;margin-bottom:6px;">⚡ First Rule of C-Bus: Do Not Replace Modules on a Guess</h3>
-        <p class="dim" style="font-size:14px;line-height:1.7;margin:0;">General electricians frequently charge $1,500+ to replace DIN-rail relay or dimmer modules because a channel isn't responding. In over 80% of outages, the module is mechanically sound — the fault is a corrupted network clock, a missing burden, or an upstream power supply brownout.</p>
+        <p class="dim" style="font-size:14px;line-height:1.7;margin:0;">General electricians frequently charge exorbitant rates to replace DIN-rail relay or dimmer modules because a channel isn't responding. In over 80% of outages, the module is mechanically sound — the fault is a corrupted network clock, a missing burden, or an upstream power supply brownout.</p>
       </div>
 
       <h2 style="font-size:32px;margin-bottom:20px;">The 5-Step C-Bus Diagnostic Sequence</h2>
@@ -224,10 +224,10 @@
       <div style="background:linear-gradient(135deg,rgba(240,112,32,0.18),rgba(14,31,61,0.6));border:1.5px solid rgba(240,112,32,0.45);border-radius:16px;padding:36px;text-align:center;margin:40px 0;">
         <div style="font-size:13px;font-weight:800;color:#f07020;letter-spacing:2px;text-transform:uppercase;margin-bottom:12px;">EX-CLIPSAL NATIONAL TECHNICAL SUPPORT</div>
         <h3 style="font-size:28px;font-family:'Barlow Condensed',sans-serif;font-weight:900;margin-bottom:12px;">Don't let a sparky guess with your C-Bus system.</h3>
-        <p style="color:#a8c0e0;margin-bottom:24px;font-size:16px;">Diagnostic Assessment: $280 + GST. We identify the exact failed component in software first. Zero guesswork. Sydney-wide response.</p>
+        <p style="color:#a8c0e0;margin-bottom:24px;font-size:16px;">Diagnostic Assessment: Fixed quote after diagnosis — no work proceeds without your approval. We identify the exact failed component in software first. Zero guesswork. Sydney-wide response.</p>
         <div class="btns" style="justify-content:center;">
           <a href="tel:0422469739" class="btn btn-primary" style="font-size:17px;padding:16px 36px;">📞 Call George — 0422 469 739</a>
-          <a href="/cbus-repair-second-opinion-sydney" class="btn btn-outline">Second Opinion on $30k Quote →</a>
+          <a href="/cbus-repair-second-opinion-sydney" class="btn btn-outline">Second Opinion on Full Rewire Quote →</a>
         </div>
       </div>
 
@@ -269,7 +269,7 @@
         <div class="faq-item"><div class="faq-q">Why did my entire C-Bus lighting system suddenly stop responding? <span>+</span></div><div class="faq-a">When an entire C-Bus network goes unresponsive simultaneously, it is almost always due to one of three issues: 1) The main C-Bus power supply (5500PS or module internal PSU) has failed, dropping DC voltage below 15V. 2) The network clock generator has dropped off or there is a clock collision. 3) A physical cable short or bad burden on the pink Category 5 cable has pulled down data communication.</div></div>
         <div class="faq-item"><div class="faq-q">How do I test if my C-Bus power supply is working? <span>+</span></div><div class="faq-a">Check the 'Unit' and 'C-Bus' indicator LEDs on your DIN-rail modules in the switchboard. If the C-Bus LED is off or blinking amber/red, the DC bus voltage is compromised. With a digital multimeter set to DC volts, measure across the pink pair (+ and -). You should read between 28V and 36V DC. If it reads below 15V DC, the network cannot communicate.</div></div>
         <div class="faq-item"><div class="faq-q">Can I manually turn on my lights if C-Bus programming crashes? <span>+</span></div><div class="faq-a">Yes. Most C-Bus DIN-rail relay modules (like L5512RVF, L5508RVF) have physical manual toggle buttons directly on the front fascia of the module in your electrical switchboard. Pressing these buttons mechanically overrides the relay channel to turn lights on or off in an emergency.</div></div>
-        <div class="faq-item"><div class="faq-q">Can a general electrician fix my C-Bus system? <span>+</span></div><div class="faq-a">General electricians can check 240V breakers and swap hardware, but without proprietary Clipsal C-Bus Toolkit software and RS232/PCI/CNI interface connections, they cannot diagnose software-level bus errors, clock sync, burdening, or unit ID collisions. This often leads them to recommend unnecessary $30,000+ system replacements.</div></div>
+        <div class="faq-item"><div class="faq-q">Can a general electrician fix my C-Bus system? <span>+</span></div><div class="faq-a">General electricians can check 240V breakers and swap hardware, but without proprietary Clipsal C-Bus Toolkit software and RS232/PCI/CNI interface connections, they cannot diagnose software-level bus errors, clock sync, burdening, or unit ID collisions. This often leads them to recommend unnecessary tens of thousands+ system replacements.</div></div>
       </div>
     </div>
   </section>
