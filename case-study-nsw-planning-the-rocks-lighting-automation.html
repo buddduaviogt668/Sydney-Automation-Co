@@ -72,8 +72,16 @@ window.addEventListener("load", function () {
       "@type": "OpeningHoursSpecification",
       "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
       "opens": "07:00",
-      "closes": "18:00"
+      "closes": "18:00",
     }
+
+    {
+      "@type": "Review",
+      "itemReviewed": {"@type": "LocalBusiness", "name": "Sydney Automation Co."}, "reviewRating": { "@type": "Rating", "ratingValue": 5, "bestRating": 5 },
+      "author": { "@type": "Person", "name": "Emma Jane" },
+      "reviewBody": "George was absolutely amazing, helpful and knowledgeable with my Clovelly home and extremely experienced with cbus and the electricals throughout the house and pool. very lucky to have found his business, he was also very organised and tidy. I highly recommend him, as he went over and beyond for me. Emma"
+    }
+
   ],
   "priceRange": "$$",
   "areaServed": "Sydney",
@@ -94,7 +102,7 @@ window.addEventListener("load", function () {
   "aggregateRating": {
     "@type": "AggregateRating",
     "ratingValue": 5.0,
-    "reviewCount": 17
+    "reviewCount": 18
   },
   "review": {
     "@type": "Review",

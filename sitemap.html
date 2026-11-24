@@ -70,7 +70,14 @@
 
   "@type": "LocalBusiness",
 
-  "name": "Sydney Automation Co.",
+  "name": "Sydney Automation Co."
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": 5.0,
+    "reviewCount": 18,
+    "bestRating": 5
+  },
+,
 
   "url": "https://sydneyautomationco.com.au/about",
 
@@ -116,9 +123,14 @@
 
       "closes": "18:00"
 
-    }
+    },
 
-  ],
+    {
+      "@type": "Review",
+      "itemReviewed": {"@type": "LocalBusiness", "name": "Sydney Automation Co."}, "reviewRating": { "@type": "Rating", "ratingValue": 5, "bestRating": 5 },
+      "author": { "@type": "Person", "name": "Emma Jane" },
+      "reviewBody": "George was absolutely amazing, helpful and knowledgeable with my Clovelly home and extremely experienced with cbus and the electricals throughout the house and pool. very lucky to have found his business, he was also very organised and tidy. I highly recommend him, as he went over and beyond for me. Emma"
+    }  ],
 
   "priceRange": "$$",
 
@@ -1765,7 +1777,23 @@ document.querySelectorAll('.faq-q').forEach(function(q){
 
 
 
-      <div class="tm-controls">
+      
+        <div class="tm-card">
+
+          <div class="tm-stars">★★★★★</div>
+
+          <p class="tm-text">"George was absolutely amazing, helpful and knowledgeable with my Clovelly home and extremely experienced with cbus and the electricals throughout the house and pool. very lucky to have found his business, he was also very organised and tidy. I highly recommend him, as he went over and beyond for me. Emma"</p>
+
+          <div class="tm-footer">
+
+            <div class="tm-author">Emma Jane</div>
+
+            <div class="tm-role">C-Bus Upgrade, Clovelly</div>
+
+          </div>
+
+        </div>
+<div class="tm-controls">
 
         <button onclick="tmSlide(-1)" class="tm-btn">‹</button>
 
