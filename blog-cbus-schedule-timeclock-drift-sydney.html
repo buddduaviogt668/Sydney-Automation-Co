@@ -32,98 +32,11 @@
 <script defer src="https://www.googletagmanager.com/gtag/js?id=G-7EZFB6GRJ3"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-7EZFB6GRJ3');</script>
 <script defer src="/sac-event-tracking.js"></script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "TechArticle",
-  "headline": "C-Bus Not Working? Emergency DIY Diagnostic Checklist & Repair Guide",
-  "description": "Step-by-step diagnostic checklist for troubleshooting Clipsal C-Bus system outages, network burden issues, clock failures, and relay lockups.",
-  "author": {
-    "@type": "Person",
-    "name": "George Skarmoutsos",
-    "jobTitle": "Ex-Clipsal Technical Support Specialist & Accredited C-Bus Programmer"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "Sydney Automation Co.",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://sydneyautomationco.com.au/favicon.png"
-    }
-  },
-  "mainEntityOfPage": "https://sydneyautomationco.com.au/blog-cbus-schedule-timeclock-drift-sydney",
-  "datePublished": "2026-05-15",
-  "dateModified": "2026-11-04"
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {"@type": "Question","name": "Why did my entire C-Bus lighting system suddenly stop responding?","acceptedAnswer":{"@type": "Answer","text": "When an entire C-Bus network goes unresponsive simultaneously, it is almost always due to one of three issues: 1) The main C-Bus power supply (5500PS or module internal PSU) has failed, dropping DC voltage below 15V. 2) The network clock generator has dropped off or there is a clock collision. 3) A physical cable short or bad burden on the pink Category 5 cable has pulled down data communication."}},
-    {"@type": "Question","name": "How do I test if my C-Bus power supply is working?","acceptedAnswer":{"@type": "Answer","text": "Check the 'Unit' and 'C-Bus' indicator LEDs on your DIN-rail modules in the switchboard. If the C-Bus LED is off or blinking amber/red, the DC bus voltage is compromised. With a digital multimeter set to DC volts, measure across the pink pair (+ and -). You should read between 28V and 36V DC. If it reads below 15V DC, the network cannot communicate."}},
-    {"@type": "Question","name": "Can I manually turn on my lights if C-Bus programming crashes?","acceptedAnswer":{"@type": "Answer","text": "Yes. Most C-Bus DIN-rail relay modules (like L5512RVF, L5508RVF) have physical manual toggle buttons directly on the front fascia of the module in your electrical switchboard. Pressing these buttons mechanically overrides the relay channel to turn lights on or off in an emergency."}},
-    {"@type": "Question","name": "Can a general electrician fix my C-Bus system?","acceptedAnswer":{"@type": "Answer","text": "General electricians can check 240V breakers and swap hardware, but without proprietary Clipsal C-Bus Toolkit software and RS232/PCI/CNI interface connections, they cannot diagnose software-level bus errors, clock sync, burdening, or unit ID collisions. This often leads them to recommend unnecessary tens of thousands+ system replacements."}}
-  ]
-}
-</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "TechArticle", "headline": "C-Bus Not Working? Emergency DIY Diagnostic Checklist & Repair Guide", "description": "Step-by-step diagnostic checklist for troubleshooting Clipsal C-Bus system outages, network burden issues, clock failures, and relay lockups.", "author": {"@type": "Person", "name": "George Skarmoutsos", "jobTitle": "Ex-Clipsal Technical Support Specialist & Accredited C-Bus Programmer"}, "publisher": {"@type": "Organization", "name": "Sydney Automation Co.", "logo": {"@type": "ImageObject", "url": "https://sydneyautomationco.com.au/favicon.png"}}, "mainEntityOfPage": "https://sydneyautomationco.com.au/blog-cbus-schedule-timeclock-drift-sydney", "datePublished": "2026-05-15", "dateModified": "2026-11-04"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Why did my entire C-Bus lighting system suddenly stop responding?", "acceptedAnswer": {"@type": "Answer", "text": "When an entire C-Bus network goes unresponsive simultaneously, it is almost always due to one of three issues: 1) The main C-Bus power supply (5500PS or module internal PSU) has failed, dropping DC voltage below 15V. 2) The network clock generator has dropped off or there is a clock collision. 3) A physical cable short or bad burden on the pink Category 5 cable has pulled down data communication."}}, {"@type": "Question", "name": "How do I test if my C-Bus power supply is working?", "acceptedAnswer": {"@type": "Answer", "text": "Check the 'Unit' and 'C-Bus' indicator LEDs on your DIN-rail modules in the switchboard. If the C-Bus LED is off or blinking amber/red, the DC bus voltage is compromised. With a digital multimeter set to DC volts, measure across the pink pair (+ and -). You should read between 28V and 36V DC. If it reads below 15V DC, the network cannot communicate."}}, {"@type": "Question", "name": "Can I manually turn on my lights if C-Bus programming crashes?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Most C-Bus DIN-rail relay modules (like L5512RVF, L5508RVF) have physical manual toggle buttons directly on the front fascia of the module in your electrical switchboard. Pressing these buttons mechanically overrides the relay channel to turn lights on or off in an emergency."}}, {"@type": "Question", "name": "Can a general electrician fix my C-Bus system?", "acceptedAnswer": {"@type": "Answer", "text": "General electricians can check 240V breakers and swap hardware, but without proprietary Clipsal C-Bus Toolkit software and RS232/PCI/CNI interface connections, they cannot diagnose software-level bus errors, clock sync, burdening, or unit ID collisions. This often leads them to recommend unnecessary tens of thousands+ system replacements."}}]}</script>
 <link href="/index.css" rel="stylesheet"/>
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "name": "Sydney Automation Co.",
-  "url": "https://sydneyautomationco.com.au/blog-cbus-schedule-timeclock-drift-sydney",
-  "telephone": "+61422469739",
-  "email": "service@sydneyautomationco.com.au",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Menai",
-    "addressLocality": "Menai",
-    "addressRegion": "NSW",
-    "postalCode": "2234",
-    "addressCountry": "AU"
-  },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": -34.0167,
-    "longitude": 151.0167
-  },
-  "priceRange": "$$",
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": 5.0,
-    "reviewCount": 18,
-    "bestRating": 5
-  },
-
-  "review": [
-    {
-      "@type": "Review",
-      "itemReviewed": {"@type": "LocalBusiness", "name": "Sydney Automation Co."}, "reviewRating": { "@type": "Rating", "ratingValue": 5, "bestRating": 5 },
-      "author": { "@type": "Person", "name": "Adam Ziino" },
-      "reviewBody": "Literally a lifesaver… George came out in 24 hours, diagnosed the problem with the CBUS system that two previous ‘specialists’ couldn’t — fixed it — and then checked in two days later to make sure it was still working."
-    },
-
-    {
-      "@type": "Review",
-      "itemReviewed": {"@type": "LocalBusiness", "name": "Sydney Automation Co."}, "reviewRating": { "@type": "Rating", "ratingValue": 5, "bestRating": 5 },
-      "author": { "@type": "Person", "name": "Liao Calvin" },
-      "reviewBody": "Highly recommend George for any C-Bus programming needs! He is exceptionally professional, knowledgeable, and efficient. He completed the programming flawlessly and took the time to ensure everything was running perfectly. If you want the job done right the first time, George is the person to go to. Exceptional service!"
-    },
-
-    {
-      "@type": "Review",
-      "itemReviewed": {"@type": "LocalBusiness", "name": "Sydney Automation Co."}, "reviewRating": { "@type": "Rating", "ratingValue": 5, "bestRating": 5 },
-      "author": { "@type": "Person", "name": "Emma Jane" },
-      "reviewBody": "George was absolutely amazing, helpful and knowledgeable with my Clovelly home and extremely experienced with cbus and the electricals throughout the house and pool. very lucky to have found his business, he was also very organised and tidy. I highly recommend him, as he went over and beyond for me. Emma"
-    }
-  ],
-  "areaServed": "Sydney"
-}
-</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "LocalBusiness", "name": "Sydney Automation Co.", "url": "https://sydneyautomationco.com.au/blog-cbus-schedule-timeclock-drift-sydney", "telephone": "+61422469739", "email": "service@sydneyautomationco.com.au", "address": {"@type": "PostalAddress", "streetAddress": "Menai", "addressLocality": "Menai", "addressRegion": "NSW", "postalCode": "2234", "addressCountry": "AU"}, "geo": {"@type": "GeoCoordinates", "latitude": -34.0167, "longitude": 151.0167}, "priceRange": "$$", "aggregateRating": {"@type": "AggregateRating", "ratingValue": 5.0, "reviewCount": 18, "bestRating": 5}, "review": [{"@type": "Review", "itemReviewed": {"@type": "LocalBusiness", "name": "Sydney Automation Co."}, "reviewRating": {"@type": "Rating", "ratingValue": 5, "bestRating": 5}, "author": {"@type": "Person", "name": "Adam Ziino"}, "reviewBody": "Literally a lifesaver… George came out in 24 hours, diagnosed the problem with the CBUS system that two previous ‘specialists’ couldn’t — fixed it — and then checked in two days later to make sure it was still working."}, {"@type": "Review", "itemReviewed": {"@type": "LocalBusiness", "name": "Sydney Automation Co."}, "reviewRating": {"@type": "Rating", "ratingValue": 5, "bestRating": 5}, "author": {"@type": "Person", "name": "Liao Calvin"}, "reviewBody": "Highly recommend George for any C-Bus programming needs! He is exceptionally professional, knowledgeable, and efficient. He completed the programming flawlessly and took the time to ensure everything was running perfectly. If you want the job done right the first time, George is the person to go to. Exceptional service!"}, {"@type": "Review", "itemReviewed": {"@type": "LocalBusiness", "name": "Sydney Automation Co."}, "reviewRating": {"@type": "Rating", "ratingValue": 5, "bestRating": 5}, "author": {"@type": "Person", "name": "Emma Jane"}, "reviewBody": "George was absolutely amazing, helpful and knowledgeable with my Clovelly home and extremely experienced with cbus and the electricals throughout the house and pool. very lucky to have found his business, he was also very organised and tidy. I highly recommend him, as he went over and beyond for me. Emma"}], "areaServed": "Sydney"}</script>
 
 </head>
 <body>
