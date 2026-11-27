@@ -3831,7 +3831,7 @@
     },
     {
       "source": "/cbus-fault-finder",
-      "destination": "/cbus-fault-finding-sydney",
+      "destination": "/cbus-repair-sydney",
       "permanent": true
     },
     {
@@ -3876,7 +3876,7 @@
     },
     {
       "source": "/dynalite-dlight-keypad-unresponsive-sydney",
-      "destination": "/dynalite-fault-finding-sydney-common-faults",
+      "destination": "/dynalite-repair-sydney",
       "permanent": true
     },
     {
@@ -4046,7 +4046,7 @@
     },
     {
       "source": "/c-bus-programmer-neutral-bay.html",
-      "destination": "/c-bus-programmer-neutral-bay",
+      "destination": "/c-bus-programmer-sydney",
       "permanent": true
     },
     {
@@ -4091,12 +4091,12 @@
     },
     {
       "source": "/dynalite-programmer-kirribilli",
-      "destination": "/dynalite-programmer-north-sydney",
+      "destination": "/dynalite-programmer-sydney",
       "permanent": true
     },
     {
       "source": "/c-bus-programmer-neutral-bay",
-      "destination": "/c-bus-programmer-north-sydney",
+      "destination": "/c-bus-programmer-sydney",
       "permanent": true
     },
     {
@@ -4106,7 +4106,7 @@
     },
     {
       "source": "/dynalite-programmer-north-shore",
-      "destination": "/dynalite-programmer-north-sydney",
+      "destination": "/dynalite-programmer-sydney",
       "permanent": true
     },
     {
